@@ -203,13 +203,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      if (!global.BMap) {
 	        return new Promise(function (resolve, reject) {
-	          var $script = document.createElement('script');
-	          $script.onload = function () {
+	          global._initBaiduMap = function () {
 	            resolve();
 	            global.document.body.removeChild($script);
+	            global._initBaiduMap = null;
 	          };
+	          var $script = document.createElement('script');
 	          global.document.body.appendChild($script);
-	          $script.src = '//api.map.baidu.com/getscript?v=2.0&ak=' + _this.ak;
+	          $script.src = '//api.map.baidu.com/api?v=2.0&ak=' + _this.ak + '&callback=_initBaiduMap';
 	        });
 	      }
 	      return Promise.resolve();

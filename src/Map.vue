@@ -90,15 +90,15 @@ export default {
     getMapScript () {
       if (!global.BMap) {
         return new Promise((resolve, reject) => {
-          const $script = document.createElement('script')
-          $script.onload = () => {
+          global._initBaiduMap = function () {
             resolve()
             global.document.body.removeChild($script)
+            global._initBaiduMap = null
           }
+          const $script = document.createElement('script')
           global.document.body.appendChild($script)
-          $script.src = `//api.map.baidu.com/getscript?v=2.0&ak=${this.ak}`
+          $script.src = `//api.map.baidu.com/api?v=2.0&ak=${this.ak}&callback=_initBaiduMap`;
         })
-
       }
       return Promise.resolve()
     },
