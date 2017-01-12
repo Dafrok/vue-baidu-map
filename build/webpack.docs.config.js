@@ -18,6 +18,15 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel',
         exclude: /node_modules/
+      },
+      {
+        test: /\.md$/,
+        loader: 'vue-markdown',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        loader: 'style!css'
       }
     ]
   },
