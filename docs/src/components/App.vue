@@ -2,8 +2,8 @@
 div.app
   nav.nav
     router-link(to="/start") 开始使用
-    router-link(to="/map") 地图
-    router-link(to="/") 地图控件
+    router-link(to="/map") 基础地图
+    router-link(to="/controls") 地图控件
     router-link(to="/") 覆盖物
     router-link(to="/") 信息窗口
     router-link(to="/") 右键菜单

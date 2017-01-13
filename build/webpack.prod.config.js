@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/Map.vue',
   output: {
     path: path.resolve(__dirname, './'),
-    filename: 'index.js',
+    filename: '../index.js',
     library: 'VueBaiduMap',
     libraryTarget: 'umd'
   },
