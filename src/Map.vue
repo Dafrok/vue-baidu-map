@@ -4,12 +4,22 @@ div
 </template>
 
 <script>
+import Vue from 'vue'
 export default {
   props: {
     // baidu app key
     ak: {
       type: String,
       default: ''
+    },
+    value: {
+      type: Object,
+      default () {
+        return {
+          longitude: 0,
+          latitude: 0
+        }
+      }
     },
     // position
     position: {
@@ -73,16 +83,16 @@ export default {
     }
   },
   watch: {
-    'position.latitude' (val) {
-      const {map, position} = this
-      map.setCenter(new BMap.Point(+position.longitude, +val))
+    'value.latitude' (val) {
+      const {map, value} = this
+      map.setCenter(new this.BMap.Point(+value.longitude, +val))
     },
-    'position.longitude' (val) {
-      const {map, position} = this
-      map.setCenter(new BMap.Point(+val, +position.latitude))
+    'value.longitude' (val) {
+      const {map, value} = this
+      map.setCenter(new this.BMap.Point(+val, +value.latitude))
     },
-    'position.zoom' (val) {
-      const {map, position} = this
+    'value.zoom' (val) {
+      const {map} = this
       map.setZoom(+val)
     }
   },
@@ -91,7 +101,7 @@ export default {
       if (!global.BMap) {
         return new Promise((resolve, reject) => {
           global._initBaiduMap = function () {
-            resolve()
+            resolve(global.BMap)
             global.document.body.removeChild($script)
             global._initBaiduMap = null
           }
@@ -116,61 +126,63 @@ export default {
       pinchToZoom ? map.enablePinchToZoom() : map.disablePinchToZoom()
       autoResize ? map.enableAutoResize() : map.disableAutoResize()
     },
-    updatePosition () {
+    updateModel () {
       const point = this.map.getCenter()
       const zoom = this.map.getZoom()
-      this.$emit('change', {
+      this.$emit('input', {
         longitude: point.lng,
         latitude: point.lat,
         zoom: zoom
       })
     },
     bindEvents () {
-      const {map, updatePosition} = this
+      const {map, updateModel} = this
       map.addEventListener('moving', (e) => {
-        updatePosition()
+        updateModel()
       })
       map.addEventListener('moveend', (e) => {
-        updatePosition()
-      })
-
-      /*map.addEventListener('touchstart', (e) => {
-        updatePosition()
-      })
-      map.addEventListener('touchmove', (e) => {
-        updatePosition()
-      })
-      map.addEventListener('touchend', (e) => {
-        updatePosition()
-      })
-      map.addEventListener('resize', (e) => {
-        updatePosition()
-      })
-      map.addEventListener('load', (e) => {
-        updatePosition()
-      })
-      map.addEventListener('dragstart', (e) => {
-        updatePosition()
-      })
-      map.addEventListener('dragging', (e) => {
-        updatePosition()
-      })
-      map.addEventListener('dragend', (e) => {
-        updatePosition()
+        updateModel()
       })
       map.addEventListener('zoomstart', (e) => {
-        updatePosition()
+        updateModel()
       })
       map.addEventListener('zoomend', (e) => {
-        updatePosition()
-      })*/
+        updateModel()
+      })
+      /*map.addEventListener('touchstart', (e) => {
+        updateModel()
+      })
+      map.addEventListener('touchmove', (e) => {
+        updateModel()
+      })
+      map.addEventListener('touchend', (e) => {
+        updateModel()
+      })
+      map.addEventListener('resize', (e) => {
+        updateModel()
+      })
+      map.addEventListener('load', (e) => {
+        updateModel()
+      })
+      map.addEventListener('dragstart', (e) => {
+        updateModel()
+      })
+      map.addEventListener('dragging', (e) => {
+        updateModel()
+      })
+      map.addEventListener('dragend', (e) => {
+        updateModel()
+      })
+      */
     },
-    initMap () {
-      this.map = new BMap.Map(this.$el, {enableHighResolution: this.highResolution, enableMapClick: this.mapClick})
-      const {map, position, setMapOptions, bindEvents, maxZoom} = this
+    initMap (BMap) {
+      this.BMap = BMap
+      this.map = new this.BMap.Map(this.$el, {enableHighResolution: this.highResolution, enableMapClick: this.mapClick})
+      const {map, value, setMapOptions, bindEvents, maxZoom} = this
       setMapOptions()
       bindEvents()
-      map.centerAndZoom(new BMap.Point(position.longitude, position.latitude), maxZoom || position.zoom || 3)
+      this.$emit('ready', this.BMap, this.map)
+      map.centerAndZoom(new this.BMap.Point(value.longitude, value.latitude), maxZoom || value.zoom || 3)
     }
   },
   mounted () {
