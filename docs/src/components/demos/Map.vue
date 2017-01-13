@@ -12,7 +12,7 @@
       p.control
         input.input.is-small(v-model="position.zoom")
   .column.is-9
-    baidu-map.map(:scroll-wheel-zoom="true", :position="position", ak="C6bKwIcQvm2gPPUIPjpSQpVD", @change="syncPosition")
+    baidu-map.map(:scroll-wheel-zoom="true", v-model="position", ak="C6bKwIcQvm2gPPUIPjpSQpVD", @change="syncPosition")
 </template>
 
 <script>
