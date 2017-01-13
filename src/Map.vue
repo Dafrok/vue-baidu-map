@@ -110,7 +110,7 @@ export default {
           $script.src = `//api.map.baidu.com/api?v=2.0&ak=${this.ak}&callback=_initBaiduMap`;
         })
       }
-      return Promise.resolve()
+      return Promise.resolve(global.BMap)
     },
     setMapOptions () {
       const {map, minZoom, maxZoom, mapType, dragging, scrollWheelZoom, doubleClickZoom, keyboard, inertialDragging, continuousZoom, pinchToZoom, autoResize} = this

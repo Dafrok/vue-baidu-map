@@ -9559,7 +9559,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/.cache/map-2.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/.cache/map-3.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -9570,12 +9570,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-48c6bbdb", __vue_options__)
+	    hotAPI.createRecord("data-v-48d4d35c", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-48c6bbdb", __vue_options__)
+	    hotAPI.reload("data-v-48d4d35c", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] map-2.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] map-3.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -9999,7 +9999,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-48c6bbdb", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-48d4d35c", module.exports)
 	  }
 	}
 
@@ -10029,7 +10029,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/.cache/controls-3.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/.cache/controls-2.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -10040,12 +10040,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-29f076f2", __vue_options__)
+	    hotAPI.createRecord("data-v-29e25f71", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-29f076f2", __vue_options__)
+	    hotAPI.reload("data-v-29e25f71", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] controls-3.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] controls-2.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -10156,7 +10156,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-29f076f2", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-29e25f71", module.exports)
 	  }
 	}
 
@@ -10356,7 +10356,7 @@
 	          $script.src = '//api.map.baidu.com/api?v=2.0&ak=' + _this.ak + '&callback=_initBaiduMap';
 	        });
 	      }
-	      return Promise.resolve();
+	      return Promise.resolve(global.BMap);
 	    },
 	    setMapOptions: function setMapOptions() {
 	      var map = this.map,
