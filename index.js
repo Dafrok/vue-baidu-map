@@ -177,6 +177,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	      default: true
 	    }
 	  },
+	  watch: {
+	    'position.latitude': function positionLatitude(val) {
+	      var map = this.map,
+	          position = this.position;
+
+	      map.setCenter(new BMap.Point(+position.longitude, +val));
+	    },
+	    'position.longitude': function positionLongitude(val) {
+	      var map = this.map,
+	          position = this.position;
+
+	      map.setCenter(new BMap.Point(+val, +position.latitude));
+	    },
+	    'position.zoom': function positionZoom(val) {
+	      var map = this.map,
+	          position = this.position;
+
+	      map.setZoom(+val);
+	    }
+	  },
 	  methods: {
 	    getMapScript: function getMapScript() {
 	      var _this = this;
@@ -233,21 +253,43 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var map = this.map,
 	          updatePosition = this.updatePosition;
 
-	      map.addEventListener('dragstart', function (e) {
+	      map.addEventListener('moving', function (e) {
 	        updatePosition();
 	      });
-	      map.addEventListener('dragging', function (e) {
+	      map.addEventListener('moveend', function (e) {
 	        updatePosition();
 	      });
-	      map.addEventListener('dragend', function (e) {
-	        updatePosition();
-	      });
-	      map.addEventListener('zoomstart', function (e) {
-	        updatePosition();
-	      });
-	      map.addEventListener('zoomend', function (e) {
-	        updatePosition();
-	      });
+
+	      /*map.addEventListener('touchstart', (e) => {
+	        updatePosition()
+	      })
+	      map.addEventListener('touchmove', (e) => {
+	        updatePosition()
+	      })
+	      map.addEventListener('touchend', (e) => {
+	        updatePosition()
+	      })
+	      map.addEventListener('resize', (e) => {
+	        updatePosition()
+	      })
+	      map.addEventListener('load', (e) => {
+	        updatePosition()
+	      })
+	      map.addEventListener('dragstart', (e) => {
+	        updatePosition()
+	      })
+	      map.addEventListener('dragging', (e) => {
+	        updatePosition()
+	      })
+	      map.addEventListener('dragend', (e) => {
+	        updatePosition()
+	      })
+	      map.addEventListener('zoomstart', (e) => {
+	        updatePosition()
+	      })
+	      map.addEventListener('zoomend', (e) => {
+	        updatePosition()
+	      })*/
 	    },
 	    initMap: function initMap() {
 	      this.map = new BMap.Map(this.$el, { enableHighResolution: this.highResolution, enableMapClick: this.mapClick });
@@ -259,7 +301,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      setMapOptions();
 	      bindEvents();
-	      map.centerAndZoom(new BMap.Point(position.longitude, position.latitude), maxZoom || position.zoom);
+	      map.centerAndZoom(new BMap.Point(position.longitude, position.latitude), maxZoom || position.zoom || 3);
 	    }
 	  },
 	  mounted: function mounted() {

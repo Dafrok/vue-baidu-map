@@ -27,8 +27,15 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style!css'
+      },
+      {
+        test: /\.sass$/,
+        loader: 'style!css!sass'
       }
     ]
+  },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, "../node_modules/bulma")]
   },
   plugins: [
     new HtmlWebpackPlugin({
