@@ -21,7 +21,7 @@ export default {
       map.addControl(this.control)
     })
   },
-  beforeMount () {
+  beforeDestroy () {
     this.$nextTick(() => {
       const {BMap, map} = this.$parent
       BMap.removeControl(this.control)
