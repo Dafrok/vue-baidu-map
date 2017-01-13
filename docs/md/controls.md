@@ -96,25 +96,25 @@ export default {
 
 ### 示例
 
-加入地图类型控件
+在地图左上角加入地图类型控件
 
 #### 代码
 
 ```html
 <template>
   <baidu-map ak="YOUR_APP_KEY">
-    <map-type-control :map-types="[BMAP_NORMAL_MAP,BMAP_HYBRID_MAP]"/>
+    <map-type-control :map-types="[BMAP_NORMAL_MAP,BMAP_HYBRID_MAP]" anchor="BMAP_ANCHOR_TOP_LEFT"/>
   </baidu-map>
 </template>
 
 <script>
 import BaiduMap from 'vue-baidu-map'
-import {ScaleControl} from 'vue-baidu-map'
+import {MapTypeControl} from 'vue-baidu-map'
 
 export default {
   components: {
     BaiduMap,
-    ScaleControl
+    MapTypeControl
   }
 }
 </script>
@@ -123,4 +123,46 @@ export default {
 #### 预览
 <baidu-map class="map" ak="C6bKwIcQvm2gPPUIPjpSQpVD">
   <map-type-control :map-types="['BMAP_NORMAL_MAP', 'BMAP_HYBRID_MAP']" anchor="BMAP_ANCHOR_TOP_LEFT"/>
+</baidu-map>
+
+## 缩略图控件
+
+### 属性
+
+|属性名|类型|默认值|描述|
+|------|:---:|:---:|----|
+|anchor|ControlAnchor|undefined|控件停靠位置|
+|offset|Size|undefined|控件偏移值|
+|size|Size|undefined|缩略地图控件的大小|
+|isOpen|Boolean|false|缩略地图添加到地图后的开合状态|
+
+### 示例
+
+在地图右下角加入缩略图控件
+
+#### 代码
+
+```html
+<template>
+  <baidu-map ak="YOUR_APP_KEY">
+    <overview-map-control  anchor="BMAP_ANCHOR_BOTTOM_RIGHT" v-model="{isOpen: true}"/>
+  </baidu-map>
+</template>
+
+<script>
+import BaiduMap from 'vue-baidu-map'
+import {OverviewMapControl} from 'vue-baidu-map'
+
+export default {
+  components: {
+    BaiduMap,
+    OverviewMapControl
+  }
+}
+</script>
+```
+
+#### 预览
+<baidu-map class="map" ak="C6bKwIcQvm2gPPUIPjpSQpVD">
+  <overview-map-control anchor="BMAP_ANCHOR_BOTTM_RIGHT" :value="{isOpen: true}"/>
 </baidu-map>
