@@ -1,6 +1,6 @@
-import DocStart from './components/docs/start.md'
-import DocMap from './components/docs/map.md'
-import DocControls from './components/docs/controls.md'
+import DocStart from '../md/start.md'
+import DocMap from '../md/map.md'
+import DocControls from '../md/controls.md'
 
 export default [
   {

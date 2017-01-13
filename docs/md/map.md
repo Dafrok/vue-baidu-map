@@ -27,13 +27,13 @@
 
 ```html
 <template>
-  <baidu-map ak="YOUR_APP_KEY" :position="{longitude: 116.404, latitude: 39.915, zoom: 15}">
+  <baidu-map ak="YOUR_APP_KEY" v-model="{longitude: 116.404, latitude: 39.915, zoom: 15}">
   </baidu-map>
 </template>
 ```
 
 #### 预览
-<baidu-map ak="C6bKwIcQvm2gPPUIPjpSQpVD" :position="{longitude: 116.404, latitude: 39.915, zoom: 15}" class="map">
+<baidu-map ak="C6bKwIcQvm2gPPUIPjpSQpVD" :value="{longitude: 116.404, latitude: 39.915, zoom: 15}" class="map">
 </baidu-map>
 
 ### 开启滚轮缩放
@@ -42,13 +42,13 @@
 
 ```html
 <template>
-  <baidu-map ak="YOUR_APP_KEY" :scroll-wheel-zoom="true" :position="{longitude: 116.404, latitude: 39.915, zoom: 15}">
+  <baidu-map ak="YOUR_APP_KEY" :scroll-wheel-zoom="true" v-model="{longitude: 116.404, latitude: 39.915, zoom: 15}">
   </baidu-map>
 </template>
 ```
 
 #### 预览
-<baidu-map ak="C6bKwIcQvm2gPPUIPjpSQpVD" :scroll-wheel-zoom="true" :position="{longitude: 116.404, latitude: 39.915, zoom: 15}" class="map">
+<baidu-map ak="C6bKwIcQvm2gPPUIPjpSQpVD" :scroll-wheel-zoom="true" :value="{longitude: 116.404, latitude: 39.915, zoom: 15}" class="map">
 </baidu-map>
 
 ### 设置缩放等级限制
@@ -57,13 +57,13 @@
 
 ```html
 <template>
-  <baidu-map ak="YOUR_APP_KEY" :position="{longitude: 116.404, latitude: 39.915}" :scroll-wheel-zoom="true" :min-zoom="5" :max-zoom="10">
+  <baidu-map ak="YOUR_APP_KEY" v-model="{longitude: 116.404, latitude: 39.915}" :scroll-wheel-zoom="true" :min-zoom="5" :max-zoom="10">
   </baidu-map>
 </template>
 ```
 
 #### 预览
-<baidu-map ak="C6bKwIcQvm2gPPUIPjpSQpVD" :scroll-wheel-zoom="true" :position="{longitude: 116.404, latitude: 39.915}" :min-zoom="5" :max-zoom="10" class="map">
+<baidu-map ak="C6bKwIcQvm2gPPUIPjpSQpVD" :scroll-wheel-zoom="true" :value="{longitude: 116.404, latitude: 39.915}" :min-zoom="5" :max-zoom="10" class="map">
 </baidu-map>
 
 ### 设置地图类型
@@ -72,16 +72,16 @@
 
 ```html
 <template>
-  <baidu-map ak="YOUR_APP_KEY" :position="{longitude: 116.404, latitude: 39.915, zoom: 15}" mapType="BMAP_SATELLITE_MAP">
+  <baidu-map ak="YOUR_APP_KEY" v-model="{longitude: 116.404, latitude: 39.915, zoom: 15}" mapType="BMAP_SATELLITE_MAP">
   </baidu-map>
 </template>
 ```
 
 #### 预览
-<baidu-map ak="C6bKwIcQvm2gPPUIPjpSQpVD" :position="{longitude: 116.404, latitude: 39.915, zoom: 15}" mapType="BMAP_SATELLITE_MAP" class="map">
+<baidu-map ak="C6bKwIcQvm2gPPUIPjpSQpVD" :value="{longitude: 116.404, latitude: 39.915, zoom: 15}" mapType="BMAP_SATELLITE_MAP" class="map">
 </baidu-map>
 
-### 交互
+### 双向绑定
 
 #### 代码
 
@@ -91,7 +91,7 @@
     <input v-model="position.longitude">
     <input v-model="position.latitude">
     <input v-model="position.zoom">
-    <baidu-map class="map" :scroll-wheel-zoom="true" :position="position" ak="C6bKwIcQvm2gPPUIPjpSQpVD" @change="syncPosition">
+    <baidu-map class="map" :scroll-wheel-zoom="true" v-model="position" ak="C6bKwIcQvm2gPPUIPjpSQpVD">
     </baidu-map>
   <div>
 </template>
@@ -105,11 +105,6 @@ export default {
         latitude: 39.915,
         zoom: 15
       }
-    }
-  },
-  methods: {
-    syncPosition (position) {
-      this.position = position
     }
   }
 }

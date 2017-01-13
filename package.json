@@ -9,8 +9,7 @@
   "scripts": {
     "build:docs": "webpack --config ./build/webpack.docs.config.js",
     "build": "webpack --config ./build/webpack.prod.config.js",
-    "dev": "webpack-dev-server --content-base docs --config ./build/webpack.docs.config.js --hot --inline ",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --content-base docs --config ./build/webpack.docs.config.js --hot --inline "
   },
   "repository": {
     "type": "git",
