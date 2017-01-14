@@ -4,6 +4,11 @@ import DocControls from './components/docs/controls.md'
 
 export default [
   {
+    // 首页
+    path: '/',
+    redirect: '/start'
+  },
+  {
     // 开始
     path: '/start',
     component: DocStart

@@ -1,15 +1,18 @@
 <template lang="pug">
-div
-  label
-    span 经度：
-    input(v-model="position.longitude")
-  label
-    span 纬度：
-    input(v-model="position.latitude")
-  label
-    span 缩放级别：
-    input(v-model="position.zoom")
-  baidu-map.map(:scroll-wheel-zoom="true", :position="position", ak="C6bKwIcQvm2gPPUIPjpSQpVD", @change="syncPosition")
+.columns
+  .column.is-3
+    .box
+      label.label 经度
+      p.control
+        input.input.is-small(v-model="position.longitude")
+      label.label 纬度
+      p.control
+        input.input.is-small(v-model="position.latitude")
+      label.label 缩放级别
+      p.control
+        input.input.is-small(v-model="position.zoom")
+  .column.is-9
+    baidu-map.map(:scroll-wheel-zoom="true", :position="position", ak="C6bKwIcQvm2gPPUIPjpSQpVD", @change="syncPosition")
 </template>
 
 <script>

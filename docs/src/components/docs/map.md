@@ -25,7 +25,7 @@
 
 #### 代码
 
-```vue
+```html
 <template>
   <baidu-map ak="YOUR_APP_KEY" :position="{longitude: 116.404, latitude: 39.915, zoom: 15}">
   </baidu-map>
@@ -40,7 +40,7 @@
 
 #### 代码
 
-```vue
+```html
 <template>
   <baidu-map ak="YOUR_APP_KEY" :scroll-wheel-zoom="true" :position="{longitude: 116.404, latitude: 39.915, zoom: 15}">
   </baidu-map>
@@ -55,7 +55,7 @@
 
 #### 代码
 
-```vue
+```html
 <template>
   <baidu-map ak="YOUR_APP_KEY" :position="{longitude: 116.404, latitude: 39.915}" :scroll-wheel-zoom="true" :min-zoom="5" :max-zoom="10">
   </baidu-map>
@@ -70,7 +70,7 @@
 
 #### 代码
 
-```vue
+```html
 <template>
   <baidu-map ak="YOUR_APP_KEY" :position="{longitude: 116.404, latitude: 39.915, zoom: 15}" mapType="BMAP_SATELLITE_MAP">
   </baidu-map>
@@ -82,7 +82,10 @@
 </baidu-map>
 
 ### 交互
-```javascript
+
+#### 代码
+
+```html
 <template>
   <div>
     <input v-model="position.longitude">
@@ -112,4 +115,7 @@ export default {
 }
 </script>
 ```
+
+#### 示例
+
 <demo-map />

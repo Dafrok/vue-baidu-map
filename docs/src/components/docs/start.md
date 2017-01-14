@@ -23,7 +23,7 @@ Vue.component('baidu-map', BaiduMap)
 
 在 vue 组件中挂载局部 vue-baidu-map 组件
 
-```vue
+```html
 <script>
 import BaiduMap from 'vue-baidu-map'
 export default {
@@ -35,7 +35,7 @@ export default {
 
 #### 代码
 
-```vue
+```html
 <template>
   <baidu-map ak="YOUR_APP_KEY"> /* YOUR_APP_KEY 是在百度地图开发者平台申请的密钥 详见 http://lbsyun.baidu.com/apiconsole/key */
   </baidu-map>
