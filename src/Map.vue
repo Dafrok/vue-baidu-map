@@ -96,7 +96,7 @@ export default {
             global.document.body.removeChild($script)
           }
           global.document.body.appendChild($script)
-          $script.src = `http://api.map.baidu.com/getscript?v=2.0&ak=${this.ak}`
+          $script.src = `//api.map.baidu.com/getscript?v=2.0&ak=${this.ak}`
         })
 
       }
