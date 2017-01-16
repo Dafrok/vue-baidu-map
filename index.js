@@ -54,14 +54,53 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.OverviewMapControl = exports.MapTypeControl = exports.NavigationControl = exports.ScaleControl = undefined;
+
+	var _Map = __webpack_require__(1);
+
+	var _Map2 = _interopRequireDefault(_Map);
+
+	var _ScaleControl = __webpack_require__(6);
+
+	var _ScaleControl2 = _interopRequireDefault(_ScaleControl);
+
+	var _NavigationControl = __webpack_require__(8);
+
+	var _NavigationControl2 = _interopRequireDefault(_NavigationControl);
+
+	var _MapTypeControl = __webpack_require__(10);
+
+	var _MapTypeControl2 = _interopRequireDefault(_MapTypeControl);
+
+	var _OverviewMapControl = __webpack_require__(12);
+
+	var _OverviewMapControl2 = _interopRequireDefault(_OverviewMapControl);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _Map2.default;
+	exports.ScaleControl = _ScaleControl2.default;
+	exports.NavigationControl = _NavigationControl2.default;
+	exports.MapTypeControl = _MapTypeControl2.default;
+	exports.OverviewMapControl = _OverviewMapControl2.default;
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(1)
+	__vue_exports__ = __webpack_require__(2)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(4)
+	var __vue_template__ = __webpack_require__(5)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -95,7 +134,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 1 */
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -104,7 +143,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _vue = __webpack_require__(2);
+	var _vue = __webpack_require__(3);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
@@ -330,7 +369,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 2 */
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process, global) {/*!
@@ -6470,10 +6509,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = Vue$2;
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), (function() { return this; }())))
 
 /***/ },
-/* 3 */
+/* 4 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -6659,7 +6698,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 4 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -6672,6 +6711,518 @@ return /******/ (function(modules) { // webpackBootstrap
 	     require("vue-hot-reload-api").rerender("data-v-0729313c", module.exports)
 	  }
 	}
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(7)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/ScaleControl.vue"
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-50d1758c", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-50d1758c", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] ScaleControl.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  render: function render(h) {
+	    return;
+	  },
+
+	  props: {
+	    anchor: {
+	      type: String
+	    },
+	    offset: {
+	      type: Object
+	    }
+	  },
+	  watch: {
+	    anchor: function anchor() {
+	      this.reloadControl();
+	    },
+	    offset: function offset() {
+	      this.reloadControl();
+	    }
+	  },
+	  methods: {
+	    addControl: function addControl() {
+	      var _$parent = this.$parent,
+	          BMap = _$parent.BMap,
+	          map = _$parent.map;
+
+	      this.control = new BMap.ScaleControl({
+	        anchor: global[this.anchor],
+	        offset: this.offset
+	      });
+	      map.addControl(this.control);
+	    },
+	    removeControl: function removeControl() {
+	      var _this = this;
+
+	      this.$nextTick(function () {
+	        var _$parent2 = _this.$parent,
+	            BMap = _$parent2.BMap,
+	            map = _$parent2.map;
+
+	        map.removeControl(_this.control);
+	      });
+	    },
+	    reloadControl: function reloadControl() {
+	      var _this2 = this;
+
+	      this.$nextTick(function () {
+	        _this2.removeControl();
+	        _this2.addControl();
+	      });
+	    }
+	  },
+	  mounted: function mounted() {
+	    var _this3 = this;
+
+	    this.$parent.$on('ready', function () {
+	      _this3.addControl();
+	    });
+	  },
+	  beforeDestroy: function beforeDestroy() {
+	    this.removeControl();
+	  }
+	};
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(9)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/NavigationControl.vue"
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-431193a0", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-431193a0", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] NavigationControl.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  render: function render(h) {
+	    return;
+	  },
+
+	  props: {
+	    anchor: {
+	      type: String
+	    },
+	    offset: {
+	      type: Object
+	    },
+	    type: {
+	      type: Object
+	    },
+	    showZoomInfo: {
+	      type: Boolean
+	    },
+	    enableGeolocation: {
+	      type: Boolean,
+	      default: false
+	    }
+	  },
+	  watch: {
+	    anchor: function anchor() {
+	      this.reloadControl();
+	    },
+	    offset: function offset() {
+	      this.reloadControl();
+	    },
+	    type: function type() {
+	      this.reloadControl();
+	    },
+	    showZoomInfo: function showZoomInfo() {
+	      this.reloadControl();
+	    }
+	  },
+	  methods: {
+	    addControl: function addControl() {
+	      var _$parent = this.$parent,
+	          BMap = _$parent.BMap,
+	          map = _$parent.map;
+
+	      this.control = new BMap.NavigationControl({
+	        anchor: global[this.anchor],
+	        offset: this.offset,
+	        type: this.type,
+	        showZoomInfo: this.showZoomInfo,
+	        enableGeolocation: this.enableGeolocation
+	      });
+	      map.addControl(this.control);
+	    },
+	    removeControl: function removeControl() {
+	      var _this = this;
+
+	      this.$nextTick(function () {
+	        var _$parent2 = _this.$parent,
+	            BMap = _$parent2.BMap,
+	            map = _$parent2.map;
+
+	        map.removeControl(_this.control);
+	      });
+	    },
+	    reloadControl: function reloadControl() {
+	      var _this2 = this;
+
+	      this.$nextTick(function () {
+	        _this2.removeControl();
+	        _this2.addControl();
+	      });
+	    }
+	  },
+	  mounted: function mounted() {
+	    var _this3 = this;
+
+	    this.$parent.$on('ready', function () {
+	      _this3.addControl();
+	    });
+	  },
+	  beforeDestroy: function beforeDestroy() {
+	    this.removeControl();
+	  }
+	};
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(11)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/MapTypeControl.vue"
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-5fe1c740", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-5fe1c740", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] MapTypeControl.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 11 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  render: function render(h) {
+	    return;
+	  },
+
+	  props: ['type', 'mapTypes', 'anchor', 'offset'],
+	  watch: {
+	    anchor: function anchor() {
+	      this.reloadControl();
+	    },
+	    offset: function offset() {
+	      this.reloadControl();
+	    },
+	    type: function type() {
+	      this.reloadControl();
+	    },
+	    mapTypes: function mapTypes() {
+	      this.reloadControl();
+	    }
+	  },
+	  methods: {
+	    addControl: function addControl() {
+	      var _$parent = this.$parent,
+	          BMap = _$parent.BMap,
+	          map = _$parent.map;
+
+	      var mapTypes = [];
+	      this.mapTypes && this.mapTypes.forEach(function (item) {
+	        mapTypes.push(global[item]);
+	      });
+	      this.control = new BMap.MapTypeControl({
+	        anchor: global[this.anchor],
+	        offset: this.offset,
+	        type: global[this.type],
+	        mapTypes: mapTypes
+	      });
+	      map.addControl(this.control);
+	    },
+	    removeControl: function removeControl() {
+	      var _this = this;
+
+	      this.$nextTick(function () {
+	        var _$parent2 = _this.$parent,
+	            BMap = _$parent2.BMap,
+	            map = _$parent2.map;
+
+	        map.removeControl(_this.control);
+	      });
+	    },
+	    reloadControl: function reloadControl() {
+	      var _this2 = this;
+
+	      this.$nextTick(function () {
+	        _this2.removeControl();
+	        _this2.addControl();
+	      });
+	    }
+	  },
+	  mounted: function mounted() {
+	    var _this3 = this;
+
+	    this.$parent.$on('ready', function () {
+	      _this3.addControl();
+	    });
+	  },
+	  beforeDestroy: function beforeDestroy() {
+	    this.removeControl();
+	  }
+	};
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(13)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/OverviewMapControl.vue"
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-47cad15a", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-47cad15a", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] OverviewMapControl.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 13 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  render: function render(h) {
+	    return;
+	  },
+
+	  props: {
+	    anchor: {
+	      type: String
+	    },
+	    offset: {
+	      type: Object
+	    },
+	    size: {
+	      type: Object
+	    },
+	    value: {
+	      type: Object,
+	      default: function _default() {
+	        return {
+	          isOpen: false
+	        };
+	      }
+	    }
+	  },
+	  watch: {
+	    anchor: function anchor() {
+	      this.reloadControl();
+	    },
+	    offset: function offset() {
+	      this.reloadControl();
+	    },
+	    size: function size() {
+	      this.reloadControl();
+	    },
+	    'value.isOpen': function valueIsOpen() {
+	      this.reloadControl();
+	    }
+	  },
+	  methods: {
+	    addControl: function addControl() {
+	      var _this = this;
+
+	      var _$parent = this.$parent,
+	          BMap = _$parent.BMap,
+	          map = _$parent.map;
+
+	      var mapTypes = [];
+	      this.mapTypes && this.mapTypes.forEach(function (item) {
+	        mapTypes.push(global[item]);
+	      });
+	      this.control = new BMap.OverviewMapControl({
+	        anchor: global[this.anchor],
+	        offset: this.offset,
+	        size: this.size,
+	        isOpen: this.value.isOpen
+	      });
+	      this.control.addEventListener('viewchanged', function (_ref) {
+	        var type = _ref.type,
+	            target = _ref.target,
+	            isOpen = _ref.isOpen;
+
+	        _this.$emit('input', { isOpen: isOpen });
+	      });
+	      map.addControl(this.control);
+	    },
+	    removeControl: function removeControl() {
+	      var _this2 = this;
+
+	      this.$nextTick(function () {
+	        var _$parent2 = _this2.$parent,
+	            BMap = _$parent2.BMap,
+	            map = _$parent2.map;
+
+	        map.removeControl(_this2.control);
+	      });
+	    },
+	    reloadControl: function reloadControl() {
+	      var _this3 = this;
+
+	      this.$nextTick(function () {
+	        _this3.removeControl();
+	        _this3.addControl();
+	      });
+	    }
+	  },
+	  mounted: function mounted() {
+	    var _this4 = this;
+
+	    this.$parent.$on('ready', function () {
+	      _this4.addControl();
+	    });
+	  },
+	  beforeDestroy: function beforeDestroy() {
+	    this.removeControl();
+	  }
+	};
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }
 /******/ ])

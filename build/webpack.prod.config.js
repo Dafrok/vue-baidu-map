@@ -2,7 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 
 module.exports = {
-  entry: './src/Map.vue',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './'),
     filename: '../index.js',
