@@ -6,21 +6,25 @@ export default [
   {
     // 首页
     path: '/',
-    redirect: '/start'
+    redirect: '/start',
+    name:  '首页'
   },
   {
     // 开始
     path: '/start',
-    component: DocStart
+    component: DocStart,
+    name: '开始使用'
   },
   {
     // 地图
     path: '/map',
-    component: DocMap
+    component: DocMap,
+    name: '基础地图'
   },
   {
     // 控件
     path: '/controls',
-    component: DocControls
+    component: DocControls,
+    name: '地图控件'
   }
 ]

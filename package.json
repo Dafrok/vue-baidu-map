@@ -43,6 +43,7 @@
     "pug": "^2.0.0-beta6",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
     "vue": "^2.1.8",
     "vue-loader": "^10.0.2",
     "vue-markdown-loader": "^0.6.1",

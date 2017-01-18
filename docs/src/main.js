@@ -21,7 +21,12 @@ Vue.component('demo-controls', DemoControls);
 const router = new VueRouter({
     routes,
     linkActiveClass: 'is-active',
-});
+})
+
+router.beforeEach(function (to, from, next) {
+  global.scrollTo(0, 0)
+  next()
+})
 
 router.afterEach(route => {
   let blocks = document.querySelectorAll('pre code');
