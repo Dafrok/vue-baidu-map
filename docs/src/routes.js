@@ -16,15 +16,15 @@ export default [
     name: '开始使用'
   },
   {
-    // 地图
+    // 地图组件
     path: '/map',
     component: DocMap,
-    name: '基础地图'
+    name: '地图组件'
   },
   {
-    // 控件
+    // 控件组件
     path: '/controls',
     component: DocControls,
-    name: '地图控件'
+    name: '控件组件'
   }
 ]

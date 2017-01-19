@@ -30,9 +30,7 @@ div(:style="rootStyle")
       .container
         .nav-left
           a.nav-item.is-tab(v-for="item in subMenu", v-text="item.name", @click="scrollTo(item.$el)")
-  .container.is-fluid
-    .hero.is-primary
-  .container.is-fluid
+  .container
     section.section
       router-view.doc.markdown-body
 </template>
@@ -72,7 +70,7 @@ export default {
     },
     loadSubMenu () {
       this.$nextTick(() => {
-        this.subMenu = []
+        this.subMenu.splice(0, this.subMenu.length)
         const $doc = document.querySelector('.doc')
         const $subDocs = $doc.querySelectorAll('h2')
         $subDocs.forEach(item => {

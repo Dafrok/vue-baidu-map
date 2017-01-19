@@ -3,17 +3,15 @@ import VueRouter from 'vue-router'
 import App from './components/App.vue'
 import routes from './routes'
 import BaiduMap from '../../src/index.js'
-import {ScaleControl, NavigationControl, MapTypeControl, OverviewMapControl} from '../../src/index.js'
+
 import DemoMap from './components/demos/Map.vue'
 import DemoControls from './components/demos/Controls.vue'
 import Hljs from 'highlight.js'
 
 Vue.use(VueRouter);
-Vue.component('baidu-map', BaiduMap);
-Vue.component('scale-control', ScaleControl);
-Vue.component('navigation-control', NavigationControl);
-Vue.component('map-type-control', MapTypeControl);
-Vue.component('overview-map-control', OverviewMapControl);
+Vue.use(BaiduMap, {
+  ak: 'oW2UEhdth2tRbEE4FUpF9E5YVDCIPYih'
+})
 
 Vue.component('demo-map', DemoMap);
 Vue.component('demo-controls', DemoControls);

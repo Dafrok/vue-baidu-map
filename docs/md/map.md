@@ -1,10 +1,25 @@
-# 基础地图
+# 地图组件
 
-## 实例属性
+## BaiduMap
+
+地图容器，用于控制其它组件实例，是所有地图组件的根节点。
+
+###实例属性
+
 |属性名|类型|默认值|描述|
 |------|:----:|:---:|---|
 |ak|String|undefined|于[百度地图开发者平台](http://lbsyun.baidu.com/apiconsole/key)申请的密钥，该属性仅在初始化时生效，为必填项。|
-|position|Object|undefined|定位|
+
+## MapView
+
+百度地图实例容器，是地图的可视化操作区域，每一个 baidu-map 组件应对应唯一一个 bmap-view 组件。
+
+### 实例属性
+
+|属性名|类型|默认值|描述|
+|------|:----:|:---:|---|
+|center|Array|undefined|定位|
+|zoom|Object|undefined|缩放等级|
 |min-zoom|Number|undefined|最小缩放级别|
 |max-zoom|Number|undefined|最大缩放级别|
 |high-resolution|Boolean|true|高分屏模式 该项仅在地图组件挂载时加载一次|
@@ -19,7 +34,44 @@
 |pinch-to-zoom|Boolean|true|允许双指缩放|
 |auto-resize|Boolean|true|允许自适应容器尺寸|
 
-## 示例
+### 事件
+|事件名|参数|描述|
+|---|:----:|---|
+|click|{type, target, point, pixel, overlay}|左键单击地图时触发此事件。 当双击时，产生的事件序列为： click click dblclick|
+|dblclick|{type, target, pixel, point}|鼠标双击地图时会触发此事件|
+|rightclick|{type, target, point, pixel, overlay}|右键单击地图时触发此事件。 当双击时，产生的事件序列为： rightclick rightclick rightdblclick|
+|rightdblclick|{type, target, point, pixel, overlay}|右键双击地图时触发此事件|
+|maptypechange|{type, target}|地图类型发生变化时触发此事件|
+|mousemove|{type, target, point, pixel, overlay}|鼠标在地图区域移动过程中触发此事件|
+|mouseover|{type, target}|鼠标移入地图区域时触发此事件|
+|mouseout|{type, target}|鼠标移出地图区域时触发此事件|
+|movestart|{type, target}|地图移动开始时触发此事件|
+|moving|{type, target}|地图移动过程中触发此事件|
+|moveend|{type, target}|地图移动结束时触发此事件|
+|zoomstart|{type, target}|地图更改缩放级别开始时触发触发此事件|
+|zoomend|{type, target}|地图更改缩放级别结束时触发触发此事件|
+|addoverlay|{type, target}|当使用Map.addOverlay()方法向地图中添加单个覆盖物时会触发此事件|
+|addcontrol|{type, target}|当使用Map.addControl()方法向地图中添加单个控件时会触发此事件|
+|removecontrol|{type, target}|当使用Map.removeControl()方法移除单个控件时会触发此事件|
+|removeoverlay|{type, target}|当使用Map.removeOverlay()方法移除单个覆盖物时会触发此事件|
+|clearoverlays|{type, target}|当使用Map.clearOverlays()方法一次性移除全部覆盖物时会触发此事件|
+|dragstart|{type, target, pixel, point}|开始拖拽地图时触发|
+|dragging|{type, target, pixel, point}|拖拽地图过程中触发|
+|dragend|{type, target, pixel, point}|停止拖拽地图时触发|
+|addtilelayer|{type, target}|添加一个自定义地图图层时触发此事件|
+|removetilelayer|{type, target}|移除一个自定义地图图层时触发此事件|
+|load|{type, target, pixel, point, zoom}|调用Map.centerAndZoom()方法时会触发此事件。这表示位置、缩放层级已经确定，但可能还在载入地图图块|
+|resize|{type, target, size}|地图可视区域大小发生变化时会触发此事件|
+|hotspotclick|{type, target, spots}|点击热区时触发此事件|
+|hotspotover|{type, target, spots}|鼠标移至热区时触发此事件|
+|hotspotout|{type, target, spots}|鼠标移出热区时触发此事件|
+|tilesloaded|{type, target}|当地图所有图块完成加载时触发此事件|
+|touchstart|{type, target, point,pixel}|触摸开始时触发此事件，仅适用移动设备|
+|touchmove|{type, target, point,pixel}|触摸移动时触发此事件，仅适用移动设备|
+|touchend|{type, target, point,pixel}|触摸结束时触发此事件，仅适用移动设备|
+|longpress|{type, target, point,pixel}|长按事件，仅适用移动设备|
+
+### 示例
 
 ### 设置经纬度和缩放等级
 
@@ -27,13 +79,14 @@
 
 ```html
 <template>
-  <baidu-map ak="YOUR_APP_KEY" v-model="{longitude: 116.404, latitude: 39.915, zoom: 15}">
+  <baidu-map ak="YOUR_APP_KEY" :center="{longitude: 116.404, latitude: 39.915}" :zoom="15">
   </baidu-map>
 </template>
 ```
 
 #### 预览
-<baidu-map ak="C6bKwIcQvm2gPPUIPjpSQpVD" :value="{longitude: 116.404, latitude: 39.915, zoom: 15}" class="map">
+<baidu-map>
+  <map-view class="map" :center="{longitude: 116.404, latitude: 39.915}" :zoom="15">
 </baidu-map>
 
 ### 开启滚轮缩放
@@ -42,29 +95,18 @@
 
 ```html
 <template>
-  <baidu-map ak="YOUR_APP_KEY" :scroll-wheel-zoom="true" v-model="{longitude: 116.404, latitude: 39.915, zoom: 15}">
+  <baidu-map>
+    <map-view :center="{longitude: 116.404, latitude: 39.915}" :zoom="15" :scroll-wheel-zoom="true">
   </baidu-map>
 </template>
 ```
 
 #### 预览
-<baidu-map ak="C6bKwIcQvm2gPPUIPjpSQpVD" :scroll-wheel-zoom="true" :value="{longitude: 116.404, latitude: 39.915, zoom: 15}" class="map">
-</baidu-map>
-
-### 设置缩放等级限制
-
-#### 代码
-
-```html
 <template>
-  <baidu-map ak="YOUR_APP_KEY" v-model="{longitude: 116.404, latitude: 39.915}" :scroll-wheel-zoom="true" :min-zoom="5" :max-zoom="10">
+  <baidu-map>
+    <map-view class="map" :center="{longitude: 116.404, latitude: 39.915}" :zoom="15" :scroll-wheel-zoom="true">
   </baidu-map>
 </template>
-```
-
-#### 预览
-<baidu-map ak="C6bKwIcQvm2gPPUIPjpSQpVD" :scroll-wheel-zoom="true" :value="{longitude: 116.404, latitude: 39.915}" :min-zoom="5" :max-zoom="10" class="map">
-</baidu-map>
 
 ### 设置地图类型
 
@@ -72,14 +114,18 @@
 
 ```html
 <template>
-  <baidu-map ak="YOUR_APP_KEY" v-model="{longitude: 116.404, latitude: 39.915, zoom: 15}" mapType="BMAP_SATELLITE_MAP">
+  <baidu-map>
+    <map-view :center="{longitude: 116.404, latitude: 39.915}" :zoom="15" mapType="BMAP_SATELLITE_MAP">
   </baidu-map>
 </template>
 ```
 
 #### 预览
-<baidu-map ak="C6bKwIcQvm2gPPUIPjpSQpVD" :value="{longitude: 116.404, latitude: 39.915, zoom: 15}" mapType="BMAP_SATELLITE_MAP" class="map">
-</baidu-map>
+<template>
+  <baidu-map>
+    <map-view class="map" :center="{longitude: 116.404, latitude: 39.915}" :zoom="15" mapType="BMAP_SATELLITE_MAP">
+  </baidu-map>
+</template>
 
 ### 双向绑定
 
@@ -88,10 +134,18 @@
 ```html
 <template>
   <div>
-    <input v-model="position.longitude">
-    <input v-model="position.latitude">
-    <input v-model="position.zoom">
-    <baidu-map class="map" :scroll-wheel-zoom="true" v-model="position" ak="C6bKwIcQvm2gPPUIPjpSQpVD">
+    <input v-model.number="center.longitude">
+    <input v-model.number="center.latitude">
+    <input v-model.number="zoom">
+    <baidu-map>
+      <map-view
+        class="map"
+        :scroll-wheel-zoom="true"
+        :center="center"
+        :zoom="zoom"
+        @moving="syncCenter"
+        @moveend="syncCenter"
+        @zoomend="syncZoom">
     </baidu-map>
   <div>
 </template>
@@ -100,11 +154,21 @@
 export default {
   data () {
     return {
-      position: {
+      center: {
         longitude: 116.404,
-        latitude: 39.915,
-        zoom: 15
-      }
+        latitude: 39.915
+      },
+      zoom: 15
+    }
+  },
+  methods: {
+    syncCenter (e) {
+      const {lng, lat} = e.target.getCenter()
+      this.center.longitude = lng
+      this.center.latitude = lat
+    },
+    syncZoom (e) {
+      this.zoom = e.target.getZoom()
     }
   }
 }
