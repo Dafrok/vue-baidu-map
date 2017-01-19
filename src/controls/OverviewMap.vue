@@ -1,5 +1,11 @@
 <script>
+const events = [
+  'viewchanged',
+  'viewchanging'
+]
+
 export default {
+  name: 'map-control-overview-map',
   render (h) {
     return
   },
@@ -13,13 +19,8 @@ export default {
     size: {
       type: Object
     },
-    value: {
-      type: Object,
-      default () {
-        return {
-          isOpen: false
-        }
-      }
+    isOpen: {
+      type: Boolean
     }
   },
   watch: {
@@ -32,7 +33,7 @@ export default {
     size () {
       this.reloadControl()
     },
-    'value.isOpen' () {
+    isOpen () {
       this.reloadControl()
     }
   },
@@ -47,17 +48,23 @@ export default {
         anchor: global[this.anchor],
         offset: this.offset,
         size: this.size,
-        isOpen: this.value.isOpen
+        isOpen: this.isOpen
       })
-      this.control.addEventListener('viewchanged', ({type, target, isOpen}) => {
-        this.$emit('input', {isOpen})
-      })
+      this.bindEvents()
       map.addControl(this.control)
+    },
+    bindEvents () {
+      const {control} = this
+      events.forEach(event => {
+        control.addEventListener(event, (arg) => {
+          this.$emit(event, arg)
+        })
+      })
     },
     removeControl () {
       this.$nextTick(() => {
         const {BMap, map} = this.$parent
-        map.removeControl(this.control)
+        map && map.removeControl(this.control)
       })
     },
     reloadControl () {

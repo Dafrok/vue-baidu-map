@@ -1,9 +1,27 @@
 <script>
 export default {
+  name: 'map-control-navigation',
   render (h) {
     return
   },
-  props: ['type', 'mapTypes', 'anchor', 'offset'],
+  props: {
+    anchor: {
+      type: String,
+    },
+    offset: {
+      type: Object
+    },
+    type: {
+      type: Object
+    },
+    showZoomInfo: {
+      type: Boolean,
+    },
+    enableGeolocation: {
+      type: Boolean,
+      default: false
+    }
+  },
   watch: {
     anchor () {
       this.reloadControl()
@@ -14,29 +32,26 @@ export default {
     type () {
       this.reloadControl()
     },
-    mapTypes () {
+    showZoomInfo () {
       this.reloadControl()
     }
   },
   methods: {
     addControl () {
       const {BMap, map} = this.$parent
-      const mapTypes = []
-      this.mapTypes && this.mapTypes.forEach(item => {
-        mapTypes.push(global[item])
-      })
-      this.control = new BMap.MapTypeControl({
+      this.control = new BMap.NavigationControl({
         anchor: global[this.anchor],
         offset: this.offset,
-        type: global[this.type],
-        mapTypes: mapTypes
+        type: this.type,
+        showZoomInfo: this.showZoomInfo,
+        enableGeolocation: this.enableGeolocation
       })
       map.addControl(this.control)
     },
     removeControl () {
       this.$nextTick(() => {
         const {BMap, map} = this.$parent
-        map.removeControl(this.control)
+        map && map.removeControl(this.control)
       })
     },
     reloadControl () {

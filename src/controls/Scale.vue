@@ -1,5 +1,6 @@
 <script>
 export default {
+  name: 'map-control-scale',
   render (h) {
     return
   },
@@ -31,7 +32,7 @@ export default {
     removeControl () {
       this.$nextTick(() => {
         const {BMap, map} = this.$parent
-        map.removeControl(this.control)
+        map && map.removeControl(this.control)
       })
     },
     reloadControl () {
