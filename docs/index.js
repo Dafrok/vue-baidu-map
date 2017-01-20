@@ -66,26 +66,24 @@
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _Map = __webpack_require__(39);
+	var _Map = __webpack_require__(42);
 
 	var _Map2 = _interopRequireDefault(_Map);
 
-	var _Controls = __webpack_require__(42);
+	var _Controls = __webpack_require__(45);
 
 	var _Controls2 = _interopRequireDefault(_Controls);
 
-	var _highlight = __webpack_require__(43);
+	var _highlight = __webpack_require__(46);
 
 	var _highlight2 = _interopRequireDefault(_highlight);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	_vue2.default.use(_vueRouter2.default);
-	_vue2.default.component('baidu-map', _index2.default);
-	_vue2.default.component('scale-control', _index.ScaleControl);
-	_vue2.default.component('navigation-control', _index.NavigationControl);
-	_vue2.default.component('map-type-control', _index.MapTypeControl);
-	_vue2.default.component('overview-map-control', _index.OverviewMapControl);
+	_vue2.default.use(_index2.default, {
+	  ak: 'oW2UEhdth2tRbEE4FUpF9E5YVDCIPYih'
+	});
 
 	_vue2.default.component('demo-map', _Map2.default);
 	_vue2.default.component('demo-controls', _Controls2.default);
@@ -8951,7 +8949,7 @@
 	      var _this = this;
 
 	      this.$nextTick(function () {
-	        _this.subMenu = [];
+	        _this.subMenu.splice(0, _this.subMenu.length);
 	        var $doc = document.querySelector('.doc');
 	        var $subDocs = $doc.querySelectorAll('h2');
 	        $subDocs.forEach(function (item) {
@@ -8986,8 +8984,6 @@
 	    });
 	  }
 	}; //
-	//
-	//
 	//
 	//
 	//
@@ -9393,15 +9389,15 @@
 	  component: _start2.default,
 	  name: '开始使用'
 	}, {
-	  // 地图
+	  // 地图组件
 	  path: '/map',
 	  component: _map2.default,
-	  name: '基础地图'
+	  name: '地图组件'
 	}, {
-	  // 控件
+	  // 控件组件
 	  path: '/controls',
 	  component: _controls2.default,
-	  name: '地图控件'
+	  name: '控件组件'
 	}];
 
 /***/ },
@@ -9456,12 +9452,9 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('section', [_c('h1', [_vm._v("开始使用")]), _vm._v(" "), _c('h2', [_vm._v("安装")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h2', [_vm._v("组件挂载")]), _vm._v(" "), _c('h3', [_vm._v("全局挂载")]), _vm._v(" "), _c('p', [_vm._v("在入口文件中挂载全局 vue-baidu-map 组件")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h3', [_vm._v("局部挂载")]), _vm._v(" "), _c('p', [_vm._v("在 vue 组件中挂载局部 vue-baidu-map 组件")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('h2', [_vm._v("示例")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', {
-	    staticClass: "map",
-	    attrs: {
-	      "ak": "C6bKwIcQvm2gPPUIPjpSQpVD"
-	    }
-	  })], 1)
+	  return _c('section', [_c('h1', [_vm._v("开始使用")]), _vm._v(" "), _c('h2', [_vm._v("安装")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h2', [_vm._v("组件挂载")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h2', [_vm._v("快速上手")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	    staticClass: "map"
+	  })], 1)], 1)
 	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('pre', [_c('code', {
 	    staticClass: "language-shell"
@@ -9481,33 +9474,11 @@
 	    staticClass: "hljs-keyword"
 	  }, [_vm._v("from")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("'vue-baidu-map'")]), _vm._v("\n\nVue.component("), _c('span', {
+	  }, [_vm._v("'vue-baidu-map'")]), _vm._v("\n\nVue.use(BaiduMap, {\n  "), _c('span', {
+	    staticClass: "hljs-comment"
+	  }, [_vm._v("// ak 是在百度地图开发者平台申请的密钥 详见 http://lbsyun.baidu.com/apiconsole/key */")]), _vm._v("\n  ak: "), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("'baidu-map'")]), _vm._v(", BaiduMap)\n")])])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('pre', [_c('code', {
-	    staticClass: "language-html"
-	  }, [_c('span', {
-	    staticClass: "hljs-tag"
-	  }, [_vm._v("<"), _c('span', {
-	    staticClass: "hljs-name"
-	  }, [_vm._v("script")]), _vm._v(">")]), _c('span', {
-	    staticClass: "javascript"
-	  }, [_vm._v("\n"), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("import")]), _vm._v(" BaiduMap "), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("from")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("'vue-baidu-map'")]), _vm._v("\n"), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("export")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("default")]), _vm._v(" {\n  BaiduMap\n}\n")]), _c('span', {
-	    staticClass: "hljs-tag"
-	  }, [_vm._v("</"), _c('span', {
-	    staticClass: "hljs-name"
-	  }, [_vm._v("script")]), _vm._v(">")]), _vm._v("\n")])])
+	  }, [_vm._v("'YOUR_APP_KEY'")]), _vm._v("\n})\n")])])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('pre', [_c('code', {
 	    staticClass: "language-html"
@@ -9519,11 +9490,15 @@
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("<"), _c('span', {
 	    staticClass: "hljs-name"
-	  }, [_vm._v("baidu-map")]), _vm._v(" "), _c('span', {
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
-	  }, [_vm._v("ak")]), _vm._v("="), _c('span', {
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"YOUR_APP_KEY\"")]), _vm._v(">")]), _vm._v(" /* YOUR_APP_KEY 是在百度地图开发者平台申请的密钥 详见 http://lbsyun.baidu.com/apiconsole/key */\n  "), _c('span', {
+	  }, [_vm._v("\"map-view\"")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("</"), _c('span', {
 	    staticClass: "hljs-name"
@@ -9531,7 +9506,27 @@
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("</"), _c('span', {
 	    staticClass: "hljs-name"
-	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("style")]), _vm._v(">")]), _c('span', {
+	    staticClass: "css"
+	  }, [_vm._v("\n"), _c('span', {
+	    staticClass: "hljs-selector-class"
+	  }, [_vm._v(".map-view")]), _vm._v(" {\n  "), _c('span', {
+	    staticClass: "hljs-attribute"
+	  }, [_vm._v("width")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("400px")]), _vm._v(";\n  "), _c('span', {
+	    staticClass: "hljs-attribute"
+	  }, [_vm._v("height")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("300px")]), _vm._v(";\n}\n")]), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("style")]), _vm._v(">")]), _vm._v("\n")])])
 	}]}
 	module.exports.render._withStripped = true
 	if (false) {
@@ -9593,51 +9588,36 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('section', [_c('h1', [_vm._v("基础地图")]), _vm._v(" "), _c('h2', [_vm._v("实例属性")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h2', [_vm._v("示例")]), _vm._v(" "), _c('h3', [_vm._v("设置经纬度和缩放等级")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', {
+	  return _c('section', [_c('h1', [_vm._v("地图组件")]), _vm._v(" "), _c('h2', [_vm._v("BaiduMap")]), _vm._v(" "), _c('p', [_vm._v("地图容器，用于控制其它组件实例，是所有地图组件的根节点。")]), _vm._v(" "), _c('p', [_vm._v("###实例属性")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h2', [_vm._v("MapView")]), _vm._v(" "), _c('p', [_vm._v("百度地图实例容器，是地图的可视化操作区域，每一个 baidu-map 组件应对应唯一一个 bmap-view 组件。")]), _vm._v(" "), _c('h3', [_vm._v("实例属性")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('h3', [_vm._v("设置经纬度和缩放等级")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
 	    staticClass: "map",
 	    attrs: {
-	      "ak": "C6bKwIcQvm2gPPUIPjpSQpVD",
-	      "value": {
-	        longitude: 116.404,
-	        latitude: 39.915,
-	        zoom: 15
-	      }
-	    }
-	  }), _vm._v(" "), _c('h3', [_vm._v("开启滚轮缩放")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', {
-	    staticClass: "map",
-	    attrs: {
-	      "ak": "C6bKwIcQvm2gPPUIPjpSQpVD",
-	      "scroll-wheel-zoom": true,
-	      "value": {
-	        longitude: 116.404,
-	        latitude: 39.915,
-	        zoom: 15
-	      }
-	    }
-	  }), _vm._v(" "), _c('h3', [_vm._v("设置缩放等级限制")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', {
-	    staticClass: "map",
-	    attrs: {
-	      "ak": "C6bKwIcQvm2gPPUIPjpSQpVD",
-	      "scroll-wheel-zoom": true,
-	      "value": {
+	      "center": {
 	        longitude: 116.404,
 	        latitude: 39.915
 	      },
-	      "min-zoom": 5,
-	      "max-zoom": 10
+	      "zoom": 15
 	    }
-	  }), _vm._v(" "), _c('h3', [_vm._v("设置地图类型")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(4), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', {
+	  })], 1), _vm._v(" "), _c('h3', [_vm._v("开启滚轮缩放")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(4), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), [_c('baidu-map', [_c('map-view', {
 	    staticClass: "map",
 	    attrs: {
-	      "ak": "C6bKwIcQvm2gPPUIPjpSQpVD",
-	      "value": {
+	      "center": {
 	        longitude: 116.404,
-	        latitude: 39.915,
-	        zoom: 15
+	        latitude: 39.915
 	      },
+	      "zoom": 15,
+	      "scroll-wheel-zoom": true
+	    }
+	  })], 1)], _vm._v(" "), _c('h3', [_vm._v("设置地图类型")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(5), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), [_c('baidu-map', [_c('map-view', {
+	    staticClass: "map",
+	    attrs: {
+	      "center": {
+	        longitude: 116.404,
+	        latitude: 39.915
+	      },
+	      "zoom": 15,
 	      "mapType": "BMAP_SATELLITE_MAP"
 	    }
-	  }), _vm._v(" "), _c('h3', [_vm._v("双向绑定")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(5), _vm._v(" "), _c('h4', [_vm._v("示例")]), _vm._v(" "), _c('demo-map')], 1)
+	  })], 1)], _vm._v(" "), _c('h3', [_vm._v("双向绑定")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(6), _vm._v(" "), _c('h4', [_vm._v("示例")]), _vm._v(" "), _c('demo-map')], 2)
 	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
 	    staticStyle: {
@@ -9659,7 +9639,25 @@
 	    attrs: {
 	      "href": "http://lbsyun.baidu.com/apiconsole/key"
 	    }
-	  }, [_vm._v("百度地图开发者平台")]), _vm._v("申请的密钥，该属性仅在初始化时生效，为必填项。")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("position")]), _vm._v(" "), _c('td', {
+	  }, [_vm._v("百度地图开发者平台")]), _vm._v("申请的密钥，该属性仅在初始化时生效，为必填项。")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("类型")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("默认值")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("center")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Array")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("定位")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("zoom")]), _vm._v(" "), _c('td', {
 	    staticStyle: {
 	      "text-align": "center"
 	    }
@@ -9667,7 +9665,7 @@
 	    staticStyle: {
 	      "text-align": "center"
 	    }
-	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("定位")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("min-zoom")]), _vm._v(" "), _c('td', {
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("缩放等级")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("min-zoom")]), _vm._v(" "), _c('td', {
 	    staticStyle: {
 	      "text-align": "center"
 	    }
@@ -9773,33 +9771,143 @@
 	    }
 	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("允许自适应容器尺寸")])])])])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('pre', [_c('code', {
-	    staticClass: "language-html"
-	  }, [_c('span', {
-	    staticClass: "hljs-tag"
-	  }, [_vm._v("<"), _c('span', {
-	    staticClass: "hljs-name"
-	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
-	    staticClass: "hljs-tag"
-	  }, [_vm._v("<"), _c('span', {
-	    staticClass: "hljs-name"
-	  }, [_vm._v("baidu-map")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("ak")]), _vm._v("="), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("\"YOUR_APP_KEY\"")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("v-model")]), _vm._v("="), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("\"{longitude: 116.404, latitude: 39.915, zoom: 15}\"")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
-	    staticClass: "hljs-tag"
-	  }, [_vm._v("</"), _c('span', {
-	    staticClass: "hljs-name"
-	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
-	    staticClass: "hljs-tag"
-	  }, [_vm._v("</"), _c('span', {
-	    staticClass: "hljs-name"
-	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("事件名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("参数")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("click")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, point, pixel, overlay}")]), _vm._v(" "), _c('td', [_vm._v("左键单击地图时触发此事件。 当双击时，产生的事件序列为： click click dblclick")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dblclick")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, pixel, point}")]), _vm._v(" "), _c('td', [_vm._v("鼠标双击地图时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("rightclick")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, point, pixel, overlay}")]), _vm._v(" "), _c('td', [_vm._v("右键单击地图时触发此事件。 当双击时，产生的事件序列为： rightclick rightclick rightdblclick")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("rightdblclick")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, point, pixel, overlay}")]), _vm._v(" "), _c('td', [_vm._v("右键双击地图时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("maptypechange")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("地图类型发生变化时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mousemove")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, point, pixel, overlay}")]), _vm._v(" "), _c('td', [_vm._v("鼠标在地图区域移动过程中触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseover")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("鼠标移入地图区域时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseout")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("鼠标移出地图区域时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("movestart")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("地图移动开始时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("moving")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("地图移动过程中触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("moveend")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("地图移动结束时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("zoomstart")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("地图更改缩放级别开始时触发触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("zoomend")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("地图更改缩放级别结束时触发触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("addoverlay")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("当使用Map.addOverlay()方法向地图中添加单个覆盖物时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("addcontrol")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("当使用Map.addControl()方法向地图中添加单个控件时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("removecontrol")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("当使用Map.removeControl()方法移除单个控件时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("removeoverlay")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("当使用Map.removeOverlay()方法移除单个覆盖物时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("clearoverlays")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("当使用Map.clearOverlays()方法一次性移除全部覆盖物时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dragstart")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, pixel, point}")]), _vm._v(" "), _c('td', [_vm._v("开始拖拽地图时触发")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dragging")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, pixel, point}")]), _vm._v(" "), _c('td', [_vm._v("拖拽地图过程中触发")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dragend")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, pixel, point}")]), _vm._v(" "), _c('td', [_vm._v("停止拖拽地图时触发")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("addtilelayer")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("添加一个自定义地图图层时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("removetilelayer")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("移除一个自定义地图图层时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("load")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, pixel, point, zoom}")]), _vm._v(" "), _c('td', [_vm._v("调用Map.centerAndZoom()方法时会触发此事件。这表示位置、缩放层级已经确定，但可能还在载入地图图块")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("resize")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, size}")]), _vm._v(" "), _c('td', [_vm._v("地图可视区域大小发生变化时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("hotspotclick")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, spots}")]), _vm._v(" "), _c('td', [_vm._v("点击热区时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("hotspotover")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, spots}")]), _vm._v(" "), _c('td', [_vm._v("鼠标移至热区时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("hotspotout")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, spots}")]), _vm._v(" "), _c('td', [_vm._v("鼠标移出热区时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("tilesloaded")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("当地图所有图块完成加载时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("touchstart")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, point,pixel}")]), _vm._v(" "), _c('td', [_vm._v("触摸开始时触发此事件，仅适用移动设备")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("touchmove")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, point,pixel}")]), _vm._v(" "), _c('td', [_vm._v("触摸移动时触发此事件，仅适用移动设备")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("touchend")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, point,pixel}")]), _vm._v(" "), _c('td', [_vm._v("触摸结束时触发此事件，仅适用移动设备")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("longpress")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, point,pixel}")]), _vm._v(" "), _c('td', [_vm._v("长按事件，仅适用移动设备")])])])])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('pre', [_c('code', {
 	    staticClass: "language-html"
@@ -9817,53 +9925,13 @@
 	    staticClass: "hljs-string"
 	  }, [_vm._v("\"YOUR_APP_KEY\"")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
-	  }, [_vm._v(":scroll-wheel-zoom")]), _vm._v("="), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("\"true\"")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("v-model")]), _vm._v("="), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("\"{longitude: 116.404, latitude: 39.915, zoom: 15}\"")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
-	    staticClass: "hljs-tag"
-	  }, [_vm._v("</"), _c('span', {
-	    staticClass: "hljs-name"
-	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
-	    staticClass: "hljs-tag"
-	  }, [_vm._v("</"), _c('span', {
-	    staticClass: "hljs-name"
-	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('pre', [_c('code', {
-	    staticClass: "language-html"
-	  }, [_c('span', {
-	    staticClass: "hljs-tag"
-	  }, [_vm._v("<"), _c('span', {
-	    staticClass: "hljs-name"
-	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
-	    staticClass: "hljs-tag"
-	  }, [_vm._v("<"), _c('span', {
-	    staticClass: "hljs-name"
-	  }, [_vm._v("baidu-map")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("ak")]), _vm._v("="), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("\"YOUR_APP_KEY\"")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("v-model")]), _vm._v("="), _c('span', {
+	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
 	  }, [_vm._v("\"{longitude: 116.404, latitude: 39.915}\"")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
-	  }, [_vm._v(":scroll-wheel-zoom")]), _vm._v("="), _c('span', {
+	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"true\"")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v(":min-zoom")]), _vm._v("="), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("\"5\"")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v(":max-zoom")]), _vm._v("="), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("\"10\"")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	  }, [_vm._v("\"15\"")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("</"), _c('span', {
 	    staticClass: "hljs-name"
@@ -9883,15 +9951,55 @@
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("<"), _c('span', {
 	    staticClass: "hljs-name"
-	  }, [_vm._v("baidu-map")]), _vm._v(" "), _c('span', {
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
-	  }, [_vm._v("ak")]), _vm._v("="), _c('span', {
+	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"YOUR_APP_KEY\"")]), _vm._v(" "), _c('span', {
+	  }, [_vm._v("\"{longitude: 116.404, latitude: 39.915}\"")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
-	  }, [_vm._v("v-model")]), _vm._v("="), _c('span', {
+	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"{longitude: 116.404, latitude: 39.915, zoom: 15}\"")]), _vm._v(" "), _c('span', {
+	  }, [_vm._v("\"15\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":scroll-wheel-zoom")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"true\"")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"{longitude: 116.404, latitude: 39.915}\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"15\"")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
 	  }, [_vm._v("mapType")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
@@ -9921,45 +10029,61 @@
 	    staticClass: "hljs-name"
 	  }, [_vm._v("input")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
-	  }, [_vm._v("v-model")]), _vm._v("="), _c('span', {
+	  }, [_vm._v("v-model.number")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"position.longitude\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	  }, [_vm._v("\"center.longitude\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("<"), _c('span', {
 	    staticClass: "hljs-name"
 	  }, [_vm._v("input")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
-	  }, [_vm._v("v-model")]), _vm._v("="), _c('span', {
+	  }, [_vm._v("v-model.number")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"position.latitude\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	  }, [_vm._v("\"center.latitude\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("<"), _c('span', {
 	    staticClass: "hljs-name"
 	  }, [_vm._v("input")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
-	  }, [_vm._v("v-model")]), _vm._v("="), _c('span', {
+	  }, [_vm._v("v-model.number")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"position.zoom\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	  }, [_vm._v("\"zoom\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("<"), _c('span', {
 	    staticClass: "hljs-name"
-	  }, [_vm._v("baidu-map")]), _vm._v(" "), _c('span', {
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v("\n        "), _c('span', {
 	    staticClass: "hljs-attr"
 	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"map\"")]), _vm._v(" "), _c('span', {
+	  }, [_vm._v("\"map\"")]), _vm._v("\n        "), _c('span', {
 	    staticClass: "hljs-attr"
 	  }, [_vm._v(":scroll-wheel-zoom")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"true\"")]), _vm._v(" "), _c('span', {
+	  }, [_vm._v("\"true\"")]), _vm._v("\n        "), _c('span', {
 	    staticClass: "hljs-attr"
-	  }, [_vm._v("v-model")]), _vm._v("="), _c('span', {
+	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"position\"")]), _vm._v(" "), _c('span', {
+	  }, [_vm._v("\"center\"")]), _vm._v("\n        "), _c('span', {
 	    staticClass: "hljs-attr"
-	  }, [_vm._v("ak")]), _vm._v("="), _c('span', {
+	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"C6bKwIcQvm2gPPUIPjpSQpVD\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	  }, [_vm._v("\"zoom\"")]), _vm._v("\n        "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("@moving")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"syncCenter\"")]), _vm._v("\n        "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("@moveend")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"syncCenter\"")]), _vm._v("\n        "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("@zoomend")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"syncZoom\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("</"), _c('span', {
 	    staticClass: "hljs-name"
@@ -9985,7 +10109,7 @@
 	    staticClass: "hljs-keyword"
 	  }, [_vm._v("return")]), _vm._v(" {\n      "), _c('span', {
 	    staticClass: "hljs-attr"
-	  }, [_vm._v("position")]), _vm._v(": {\n        "), _c('span', {
+	  }, [_vm._v("center")]), _vm._v(": {\n        "), _c('span', {
 	    staticClass: "hljs-attr"
 	  }, [_vm._v("longitude")]), _vm._v(": "), _c('span', {
 	    staticClass: "hljs-number"
@@ -9993,11 +10117,21 @@
 	    staticClass: "hljs-attr"
 	  }, [_vm._v("latitude")]), _vm._v(": "), _c('span', {
 	    staticClass: "hljs-number"
-	  }, [_vm._v("39.915")]), _vm._v(",\n        "), _c('span', {
+	  }, [_vm._v("39.915")]), _vm._v("\n      },\n      "), _c('span', {
 	    staticClass: "hljs-attr"
 	  }, [_vm._v("zoom")]), _vm._v(": "), _c('span', {
 	    staticClass: "hljs-number"
-	  }, [_vm._v("15")]), _vm._v("\n      }\n    }\n  }\n}\n")]), _c('span', {
+	  }, [_vm._v("15")]), _vm._v("\n    }\n  },\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("methods")]), _vm._v(": {\n    syncCenter (e) {\n      "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("const")]), _vm._v(" {lng, lat} = e.target.getCenter()\n      "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("this")]), _vm._v(".center.longitude = lng\n      "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("this")]), _vm._v(".center.latitude = lat\n    },\n    syncZoom (e) {\n      "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("this")]), _vm._v(".zoom = e.target.getZoom()\n    }\n  }\n}\n")]), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("</"), _c('span', {
 	    staticClass: "hljs-name"
@@ -10063,47 +10197,32 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('section', [_c('h1', [_vm._v("地图控件")]), _vm._v(" "), _c('h2', [_vm._v("比例尺控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在右上角加入比例尺控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', {
-	    staticClass: "map",
-	    attrs: {
-	      "ak": "C6bKwIcQvm2gPPUIPjpSQpVD"
-	    }
-	  }, [_c('scale-control', {
+	  return _c('section', [_c('h1', [_vm._v("控件组件")]), _vm._v(" "), _c('p', [_vm._v("控件组件是属于 MapView 组件的子组件，通过声明这些在 MapView 上增加地图的控件。")]), _vm._v(" "), _c('h2', [_vm._v("比例尺控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在右上角加入比例尺控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	    staticClass: "map"
+	  }, [_c('map-control-scale', {
 	    attrs: {
 	      "anchor": "BMAP_ANCHOR_TOP_RIGHT"
 	    }
-	  })], 1), _vm._v(" "), _c('h2', [_vm._v("缩放控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在右上角加入缩放控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', {
-	    staticClass: "map",
-	    attrs: {
-	      "ak": "C6bKwIcQvm2gPPUIPjpSQpVD"
-	    }
-	  }, [_c('navigation-control', {
+	  }, [_c('map-view')], 1)], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("缩放控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在右上角加入缩放控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	    staticClass: "map"
+	  }, [_c('map-control-navigation', {
 	    attrs: {
 	      "anchor": "BMAP_ANCHOR_TOP_RIGHT"
 	    }
-	  })], 1), _vm._v(" "), _c('h2', [_vm._v("地图类型控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(4), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图左上角加入地图类型控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(5), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', {
-	    staticClass: "map",
-	    attrs: {
-	      "ak": "C6bKwIcQvm2gPPUIPjpSQpVD"
-	    }
-	  }, [_c('map-type-control', {
+	  }, [_c('map-view')], 1)], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("地图类型控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(4), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图左上角加入地图类型控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(5), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	    staticClass: "map"
+	  }, [_c('map-control-map-type', {
 	    attrs: {
 	      "map-types": ['BMAP_NORMAL_MAP', 'BMAP_HYBRID_MAP'],
 	      "anchor": "BMAP_ANCHOR_TOP_LEFT"
 	    }
-	  })], 1), _vm._v(" "), _c('h2', [_vm._v("缩略图控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(6), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图右下角加入缩略图控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(7), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', {
-	    staticClass: "map",
+	  }, [_c('map-view')], 1)], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("缩略图控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(6), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(7), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图右下角加入缩略图控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(8), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	    staticClass: "map"
+	  }, [_c('map-control-overview-map', {
 	    attrs: {
-	      "ak": "C6bKwIcQvm2gPPUIPjpSQpVD"
+	      "anchor": "BMAP_ANCHOR_BOTTM_RIGHT"
 	    }
-	  }, [_c('overview-map-control', {
-	    attrs: {
-	      "anchor": "BMAP_ANCHOR_BOTTM_RIGHT",
-	      "value": {
-	        isOpen: true
-	      }
-	    }
-	  })], 1)], 1)
+	  }, [_c('map-view')], 1)], 1)], 1)], 1)
 	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
 	    staticStyle: {
@@ -10141,19 +10260,27 @@
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("<"), _c('span', {
 	    staticClass: "hljs-name"
-	  }, [_vm._v("baidu-map")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("ak")]), _vm._v("="), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("\"YOUR_APP_KEY\"")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("anchor")]), _vm._v("="), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("\"BMAP_ANCHOR_TOP_LEFT\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("<"), _c('span', {
 	    staticClass: "hljs-name"
-	  }, [_vm._v("scale-control")]), _vm._v("/>")]), _vm._v("\n  "), _c('span', {
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-control-scale")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("anchor")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"BMAP_ANCHOR_TOP_RIGHT\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v("/>")]), _vm._v("\n  "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("</"), _c('span', {
 	    staticClass: "hljs-name"
@@ -10161,35 +10288,7 @@
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("</"), _c('span', {
 	    staticClass: "hljs-name"
-	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n\n"), _c('span', {
-	    staticClass: "hljs-tag"
-	  }, [_vm._v("<"), _c('span', {
-	    staticClass: "hljs-name"
-	  }, [_vm._v("script")]), _vm._v(">")]), _c('span', {
-	    staticClass: "javascript"
-	  }, [_vm._v("\n"), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("import")]), _vm._v(" BaiduMap "), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("from")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("'vue-baidu-map'")]), _vm._v("\n"), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("import")]), _vm._v(" {ScaleControl} "), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("from")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("'vue-baidu-map'")]), _vm._v("\n\n"), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("export")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("default")]), _vm._v(" {\n  "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("components")]), _vm._v(": {\n    BaiduMap,\n    ScaleControl\n  }\n}\n")]), _c('span', {
-	    staticClass: "hljs-tag"
-	  }, [_vm._v("</"), _c('span', {
-	    staticClass: "hljs-name"
-	  }, [_vm._v("script")]), _vm._v(">")]), _vm._v("\n")])])
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
 	    staticStyle: {
@@ -10251,19 +10350,27 @@
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("<"), _c('span', {
 	    staticClass: "hljs-name"
-	  }, [_vm._v("baidu-map")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("ak")]), _vm._v("="), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("\"YOUR_APP_KEY\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("<"), _c('span', {
 	    staticClass: "hljs-name"
-	  }, [_vm._v("navigation-control")]), _vm._v(" "), _c('span', {
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-control-navigation")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
 	  }, [_vm._v("anchor")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"BMAP_ANCHOR_TOP_RIGHT\"")]), _vm._v("/>")]), _vm._v("\n  "), _c('span', {
+	  }, [_vm._v("\"BMAP_ANCHOR_TOP_RIGHT\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v("/>")]), _vm._v("\n  "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("</"), _c('span', {
 	    staticClass: "hljs-name"
@@ -10271,35 +10378,7 @@
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("</"), _c('span', {
 	    staticClass: "hljs-name"
-	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n\n"), _c('span', {
-	    staticClass: "hljs-tag"
-	  }, [_vm._v("<"), _c('span', {
-	    staticClass: "hljs-name"
-	  }, [_vm._v("script")]), _vm._v(">")]), _c('span', {
-	    staticClass: "javascript"
-	  }, [_vm._v("\n"), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("import")]), _vm._v(" BaiduMap "), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("from")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("'vue-baidu-map'")]), _vm._v("\n"), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("import")]), _vm._v(" {NavigationControl} "), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("from")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("'vue-baidu-map'")]), _vm._v("\n\n"), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("export")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("default")]), _vm._v(" {\n  "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("components")]), _vm._v(": {\n    BaiduMap,\n    NavigationControl\n  }\n}\n")]), _c('span', {
-	    staticClass: "hljs-tag"
-	  }, [_vm._v("</"), _c('span', {
-	    staticClass: "hljs-name"
-	  }, [_vm._v("script")]), _vm._v(">")]), _vm._v("\n")])])
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
 	    staticStyle: {
@@ -10353,23 +10432,31 @@
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("<"), _c('span', {
 	    staticClass: "hljs-name"
-	  }, [_vm._v("baidu-map")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("ak")]), _vm._v("="), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("\"YOUR_APP_KEY\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("<"), _c('span', {
 	    staticClass: "hljs-name"
-	  }, [_vm._v("map-type-control")]), _vm._v(" "), _c('span', {
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-control-map-type")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
 	  }, [_vm._v(":map-types")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"[BMAP_NORMAL_MAP,BMAP_HYBRID_MAP]\"")]), _vm._v(" "), _c('span', {
+	  }, [_vm._v("\"['BMAP_NORMAL_MAP', 'BMAP_HYBRID_MAP']\"")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
 	  }, [_vm._v("anchor")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"BMAP_ANCHOR_TOP_LEFT\"")]), _vm._v("/>")]), _vm._v("\n  "), _c('span', {
+	  }, [_vm._v("\"BMAP_ANCHOR_TOP_LEFT\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v("/>")]), _vm._v("\n  "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("</"), _c('span', {
 	    staticClass: "hljs-name"
@@ -10377,35 +10464,7 @@
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("</"), _c('span', {
 	    staticClass: "hljs-name"
-	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n\n"), _c('span', {
-	    staticClass: "hljs-tag"
-	  }, [_vm._v("<"), _c('span', {
-	    staticClass: "hljs-name"
-	  }, [_vm._v("script")]), _vm._v(">")]), _c('span', {
-	    staticClass: "javascript"
-	  }, [_vm._v("\n"), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("import")]), _vm._v(" BaiduMap "), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("from")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("'vue-baidu-map'")]), _vm._v("\n"), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("import")]), _vm._v(" {MapTypeControl} "), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("from")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("'vue-baidu-map'")]), _vm._v("\n\n"), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("export")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("default")]), _vm._v(" {\n  "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("components")]), _vm._v(": {\n    BaiduMap,\n    MapTypeControl\n  }\n}\n")]), _c('span', {
-	    staticClass: "hljs-tag"
-	  }, [_vm._v("</"), _c('span', {
-	    staticClass: "hljs-name"
-	  }, [_vm._v("script")]), _vm._v(">")]), _vm._v("\n")])])
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
 	    staticStyle: {
@@ -10449,6 +10508,20 @@
 	    }
 	  }, [_vm._v("false")]), _vm._v(" "), _c('td', [_vm._v("缩略地图添加到地图后的开合状态")])])])])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("事件名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("参数")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("viewchanged")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, isOpen}")]), _vm._v(" "), _c('td', [_vm._v("缩略地图开合状态发生变化后触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("viewchanging")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("缩略地图开合状态发生变化过程中触发此事件")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('pre', [_c('code', {
 	    staticClass: "language-html"
 	  }, [_c('span', {
@@ -10459,23 +10532,27 @@
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("<"), _c('span', {
 	    staticClass: "hljs-name"
-	  }, [_vm._v("baidu-map")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("ak")]), _vm._v("="), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("\"YOUR_APP_KEY\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("<"), _c('span', {
 	    staticClass: "hljs-name"
-	  }, [_vm._v("overview-map-control")]), _vm._v("  "), _c('span', {
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-control-overview-map")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
 	  }, [_vm._v("anchor")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"BMAP_ANCHOR_BOTTOM_RIGHT\"")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("v-model")]), _vm._v("="), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("\"{isOpen: true}\"")]), _vm._v("/>")]), _vm._v("\n  "), _c('span', {
+	  }, [_vm._v("\"BMAP_ANCHOR_BOTTM_RIGHT\"")]), _vm._v("//>")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v("/>")]), _vm._v("\n  "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("</"), _c('span', {
 	    staticClass: "hljs-name"
@@ -10483,35 +10560,7 @@
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("</"), _c('span', {
 	    staticClass: "hljs-name"
-	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n\n"), _c('span', {
-	    staticClass: "hljs-tag"
-	  }, [_vm._v("<"), _c('span', {
-	    staticClass: "hljs-name"
-	  }, [_vm._v("script")]), _vm._v(">")]), _c('span', {
-	    staticClass: "javascript"
-	  }, [_vm._v("\n"), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("import")]), _vm._v(" BaiduMap "), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("from")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("'vue-baidu-map'")]), _vm._v("\n"), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("import")]), _vm._v(" {OverviewMapControl} "), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("from")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("'vue-baidu-map'")]), _vm._v("\n\n"), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("export")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-keyword"
-	  }, [_vm._v("default")]), _vm._v(" {\n  "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("components")]), _vm._v(": {\n    BaiduMap,\n    OverviewMapControl\n  }\n}\n")]), _c('span', {
-	    staticClass: "hljs-tag"
-	  }, [_vm._v("</"), _c('span', {
-	    staticClass: "hljs-name"
-	  }, [_vm._v("script")]), _vm._v(">")]), _vm._v("\n")])])
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
 	}]}
 	module.exports.render._withStripped = true
 	if (false) {
@@ -10578,8 +10627,8 @@
 	        }
 	      }
 	    })
-	  }))])])]), _vm._m(1), _c('div', {
-	    staticClass: "container is-fluid"
+	  }))])])]), _c('div', {
+	    staticClass: "container"
 	  }, [_c('section', {
 	    staticClass: "section"
 	  }, [_c('router-view', {
@@ -10620,12 +10669,6 @@
 	  })]), _c('strong', [_vm._v(" Fork")])])])]), _c('h2', {
 	    staticClass: "subtitle"
 	  }, [_c('span', [_vm._v("Baidu Map component for Vue 2.0")])])])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "container is-fluid"
-	  }, [_c('div', {
-	    staticClass: "hero is-primary"
-	  })])
 	}]}
 	module.exports.render._withStripped = true
 	if (false) {
@@ -10650,35 +10693,50 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.OverviewMapControl = exports.MapTypeControl = exports.NavigationControl = exports.ScaleControl = undefined;
 
 	var _Map = __webpack_require__(28);
 
 	var _Map2 = _interopRequireDefault(_Map);
 
-	var _ScaleControl = __webpack_require__(31);
+	var _MapView = __webpack_require__(31);
 
-	var _ScaleControl2 = _interopRequireDefault(_ScaleControl);
+	var _MapView2 = _interopRequireDefault(_MapView);
 
-	var _NavigationControl = __webpack_require__(33);
+	var _Scale = __webpack_require__(34);
 
-	var _NavigationControl2 = _interopRequireDefault(_NavigationControl);
+	var _Scale2 = _interopRequireDefault(_Scale);
 
-	var _MapTypeControl = __webpack_require__(35);
+	var _Navigation = __webpack_require__(36);
 
-	var _MapTypeControl2 = _interopRequireDefault(_MapTypeControl);
+	var _Navigation2 = _interopRequireDefault(_Navigation);
 
-	var _OverviewMapControl = __webpack_require__(37);
+	var _MapType = __webpack_require__(38);
 
-	var _OverviewMapControl2 = _interopRequireDefault(_OverviewMapControl);
+	var _MapType2 = _interopRequireDefault(_MapType);
+
+	var _OverviewMap = __webpack_require__(40);
+
+	var _OverviewMap2 = _interopRequireDefault(_OverviewMap);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	exports.default = _Map2.default;
-	exports.ScaleControl = _ScaleControl2.default;
-	exports.NavigationControl = _NavigationControl2.default;
-	exports.MapTypeControl = _MapTypeControl2.default;
-	exports.OverviewMapControl = _OverviewMapControl2.default;
+	exports.default = {
+	  install: function install(Vue, options) {
+	    var ak = options.ak;
+
+	    Vue.prototype._BMap = function () {
+	      return {
+	        ak: ak
+	      };
+	    };
+	    Vue.component('baidu-map', _Map2.default);
+	    Vue.component('map-view', _MapView2.default);
+	    Vue.component('map-control-scale', _Scale2.default);
+	    Vue.component('map-control-navigation', _Navigation2.default);
+	    Vue.component('map-control-map-type', _MapType2.default);
+	    Vue.component('map-control-overview-map', _OverviewMap2.default);
+	  }
+	};
 
 /***/ },
 /* 28 */
@@ -10703,7 +10761,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/Map.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/map/Map.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -10714,9 +10772,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-0729313c", __vue_options__)
+	    hotAPI.createRecord("data-v-6a9f0389", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-0729313c", __vue_options__)
+	    hotAPI.reload("data-v-6a9f0389", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] Map.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -10726,47 +10784,137 @@
 
 /***/ },
 /* 29 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
-	var _vue = __webpack_require__(1);
-
-	var _vue2 = _interopRequireDefault(_vue);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	//
+	//
+	//
+	//
+	//
 
 	exports.default = {
+	  name: 'baidu-map',
+	  methods: {
+	    initMap: function initMap(BMap) {
+	      this.$BMap = BMap;
+	      this.$emit('ready', BMap);
+	    },
+	    getMapScript: function getMapScript() {
+	      var ak = this._BMap().ak;
+	      if (!global.BMap) {
+	        return new Promise(function (resolve, reject) {
+	          global._initBaiduMap = function () {
+	            resolve(global.BMap);
+	            global.document.body.removeChild($script);
+	            global._initBaiduMap = null;
+	          };
+	          var $script = document.createElement('script');
+	          global.document.body.appendChild($script);
+	          $script.src = '//api.map.baidu.com/api?v=2.0&ak=' + ak + '&callback=_initBaiduMap';
+	        });
+	      }
+	      return Promise.resolve(global.BMap);
+	    }
+	  },
+	  created: function created() {
+	    var getMapScript = this.getMapScript,
+	        initMap = this.initMap;
+
+	    getMapScript().then(initMap);
+	  }
+	};
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', [_vm._t("default")], 2)
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-6a9f0389", module.exports)
+	  }
+	}
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(32)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(33)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/map/MapView.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-b3963164", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-b3963164", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] MapView.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 32 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	//
+	//
+	//
+	//
+	//
+
+	var mapViewEvents = ['click', 'dblclick', 'rightclick', 'rightdblclick', 'maptypechange', 'mousemove', 'mouseover', 'mouseout', 'movestart', 'moving', 'moveend', 'zoomstart', 'zoomend', 'addoverlay', 'addcontrol', 'removecontrol', 'removeoverlay', 'clearoverlays', 'dragstart', 'dragging', 'dragend', 'addtilelayer', 'removetilelayer', 'load', 'resize', 'hotspotclick', 'hotspotover', 'hotspotout', 'tilesloaded', 'touchstart', 'touchmove', 'touchend', 'longpress'];
+
+	exports.default = {
+	  name: 'map-view',
 	  props: {
-	    // baidu app key
-	    ak: {
-	      type: String,
-	      default: ''
+	    center: {
+	      type: [Object, String]
 	    },
-	    value: {
-	      type: Object,
-	      default: function _default() {
-	        return {
-	          longitude: 0,
-	          latitude: 0
-	        };
-	      }
+	    zoom: {
+	      // type: Number
 	    },
-	    // position
-	    position: {
-	      type: Object,
-	      default: function _default() {
-	        return {
-	          longitude: 0,
-	          latitude: 0
-	        };
-	      }
-	    },
-	    // behavior switch
 	    minZoom: {
 	      type: Number
 	    },
@@ -10818,45 +10966,80 @@
 	    }
 	  },
 	  watch: {
-	    'value.latitude': function valueLatitude(val) {
-	      var map = this.map,
-	          value = this.value;
+	    'center.longitude': function centerLongitude(val, oldVal) {
+	      var _$parent = this.$parent,
+	          $BMap = _$parent.$BMap,
+	          map = _$parent.map;
 
-	      map.setCenter(new this.BMap.Point(+value.longitude, +val));
+	      var longitude = parseFloat(val);
+	      if (val.toString() !== oldVal.toString() && longitude >= -180 && longitude <= 180) {
+	        map.setCenter(new $BMap.Point(longitude, this.center.latitude));
+	      }
 	    },
-	    'value.longitude': function valueLongitude(val) {
-	      var map = this.map,
-	          value = this.value;
+	    'center.latitude': function centerLatitude(val, oldVal) {
+	      var _$parent2 = this.$parent,
+	          $BMap = _$parent2.$BMap,
+	          map = _$parent2.map;
 
-	      map.setCenter(new this.BMap.Point(+val, +value.latitude));
+	      var latitude = parseFloat(val);
+	      if (val.toString() !== oldVal.toString() && latitude >= -74 && latitude <= 74) {
+	        map.setCenter(new $BMap.Point(this.center.longitude, latitude));
+	      }
 	    },
-	    'value.zoom': function valueZoom(val) {
-	      var map = this.map;
+	    zoom: function zoom(val, oldVal) {
+	      var _$parent3 = this.$parent,
+	          $BMap = _$parent3.$BMap,
+	          map = _$parent3.map;
 
-	      map.setZoom(+val);
+	      var zoom = parseFloat(val);
+	      if (val.toString() !== oldVal.toString() && zoom >= 3 && zoom <= 19) {
+	        map.setZoom(zoom);
+	      }
+	    },
+	    minZoom: function minZoom(val) {
+	      map.setMinZoom(val);
+	    },
+	    maxZoom: function maxZoom(val) {
+	      map.setMaxZoom(val);
+	    },
+	    highResolution: function highResolution() {
+	      // Require remount component
+	    },
+	    mapClick: function mapClick() {
+	      // Require remount component
+	    },
+	    mapType: function mapType(val) {
+	      map.setMapType(global[val]);
+	    },
+	    dragging: function dragging(val) {
+	      val ? map.enableDragging() : map.disableDragging();
+	    },
+	    scrollWheelZoom: function scrollWheelZoom(val) {
+	      val ? map.enableScrollWheelZoom() : map.disableScrollWheelZoom();
+	    },
+	    doubleClickZoom: function doubleClickZoom(val) {
+	      val ? map.enableDoubleClickZoom() : map.disableDoubleClickZoom();
+	    },
+	    keyboard: function keyboard(val) {
+	      val ? map.enableKeyboard() : map.disableKeyboard();
+	    },
+	    inertialDragging: function inertialDragging(val) {
+	      val ? map.enableInertialDragging() : map.disableInertialDragging();
+	    },
+	    continuousZoom: function continuousZoom(val) {
+	      val ? map.enableContinuousZoom() : map.disableContinuousZoom();
+	    },
+	    pinchToZoom: function pinchToZoom(val) {
+	      val ? map.enablePinchToZoom() : map.disablePinchToZoom();
+	    },
+	    autoResize: function autoResize(val) {
+	      val ? map.enableAutoResize() : map.disableAutoResize();
 	    }
 	  },
 	  methods: {
-	    getMapScript: function getMapScript() {
-	      var _this = this;
-
-	      if (!global.BMap) {
-	        return new Promise(function (resolve, reject) {
-	          global._initBaiduMap = function () {
-	            resolve(global.BMap);
-	            global.document.body.removeChild($script);
-	            global._initBaiduMap = null;
-	          };
-	          var $script = document.createElement('script');
-	          global.document.body.appendChild($script);
-	          $script.src = '//api.map.baidu.com/api?v=2.0&ak=' + _this.ak + '&callback=_initBaiduMap';
-	        });
-	      }
-	      return Promise.resolve(global.BMap);
-	    },
 	    setMapOptions: function setMapOptions() {
-	      var map = this.map,
-	          minZoom = this.minZoom,
+	      var map = this.$parent.map;
+	      var minZoom = this.minZoom,
 	          maxZoom = this.maxZoom,
 	          mapType = this.mapType,
 	          dragging = this.dragging,
@@ -10880,87 +11063,63 @@
 	      pinchToZoom ? map.enablePinchToZoom() : map.disablePinchToZoom();
 	      autoResize ? map.enableAutoResize() : map.disableAutoResize();
 	    },
-	    updateModel: function updateModel() {
-	      var point = this.map.getCenter();
-	      var zoom = this.map.getZoom();
-	      this.$emit('input', {
-	        longitude: point.lng,
-	        latitude: point.lat,
-	        zoom: zoom
-	      });
-	    },
 	    bindEvents: function bindEvents() {
-	      var map = this.map,
-	          updateModel = this.updateModel;
+	      var _this = this;
 
-	      map.addEventListener('moving', function (e) {
-	        updateModel();
+	      var map = this.$parent.map;
+
+	      mapViewEvents.forEach(function (event) {
+	        map.addEventListener(event, function (arg) {
+	          _this.$emit(event, arg);
+	        });
 	      });
-	      map.addEventListener('moveend', function (e) {
-	        updateModel();
-	      });
-	      map.addEventListener('zoomstart', function (e) {
-	        updateModel();
-	      });
-	      map.addEventListener('zoomend', function (e) {
-	        updateModel();
-	      });
-	      /*map.addEventListener('touchstart', (e) => {
-	        updateModel()
-	      })
-	      map.addEventListener('touchmove', (e) => {
-	        updateModel()
-	      })
-	      map.addEventListener('touchend', (e) => {
-	        updateModel()
-	      })
-	      map.addEventListener('resize', (e) => {
-	        updateModel()
-	      })
-	      map.addEventListener('load', (e) => {
-	        updateModel()
-	      })
-	      map.addEventListener('dragstart', (e) => {
-	        updateModel()
-	      })
-	      map.addEventListener('dragging', (e) => {
-	        updateModel()
-	      })
-	      map.addEventListener('dragend', (e) => {
-	        updateModel()
-	      })
-	      */
 	    },
 	    initMap: function initMap(BMap) {
-	      this.BMap = BMap;
-	      this.map = new this.BMap.Map(this.$el, { enableHighResolution: this.highResolution, enableMapClick: this.mapClick });
-	      var map = this.map,
-	          value = this.value,
-	          setMapOptions = this.setMapOptions,
+	      var map = this.$parent.map = new BMap.Map(this.$el, { enableHighResolution: this.highResolution, enableMapClick: this.mapClick });
+	      var setMapOptions = this.setMapOptions,
 	          bindEvents = this.bindEvents,
-	          maxZoom = this.maxZoom;
+	          maxZoom = this.maxZoom,
+	          zoom = this.zoom,
+	          center = this.center,
+	          getCenterPoint = this.getCenterPoint;
 
 	      setMapOptions();
 	      bindEvents();
-	      this.$emit('ready', this.BMap, this.map);
-	      map.centerAndZoom(new this.BMap.Point(value.longitude, value.latitude), maxZoom || value.zoom || 3);
+	      map.centerAndZoom(getCenterPoint(center), maxZoom || zoom || 3);
+	      this.BMap = BMap;
+	      this.map = map;
+	      this.$emit('ready');
+	    },
+	    checkType: function checkType(val) {
+	      return Object.prototype.toString.call(val).slice(8, -1);
+	    },
+	    getCenterPoint: function getCenterPoint() {
+	      var center = this.center,
+	          checkType = this.checkType;
+	      var $BMap = this.$parent.$BMap;
+
+	      switch (checkType(center)) {
+	        case 'String':
+	          return new $BMap.Point(center);
+	        case 'Object':
+	          return new $BMap.Point(parseFloat(center.longitude), parseFloat(center.latitude));
+	        default:
+	          return new $BMap.Point();
+	      }
 	    }
 	  },
 	  mounted: function mounted() {
-	    var getMapScript = this.getMapScript,
-	        initMap = this.initMap;
+	    var _this2 = this;
 
-	    getMapScript().then(initMap);
+	    this.$parent.$on('ready', function (BMap) {
+	      _this2.initMap(BMap);
+	    });
 	  }
-	}; //
-	//
-	//
-	//
-	//
+	};
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 30 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -10970,19 +11129,19 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-0729313c", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-b3963164", module.exports)
 	  }
 	}
 
 /***/ },
-/* 31 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(32)
+	__vue_exports__ = __webpack_require__(35)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -10994,7 +11153,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/ScaleControl.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/Scale.vue"
 
 	/* hot reload */
 	if (false) {(function () {
@@ -11003,18 +11162,18 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-50d1758c", __vue_options__)
+	    hotAPI.createRecord("data-v-49a7737e", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-50d1758c", __vue_options__)
+	    hotAPI.reload("data-v-49a7737e", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] ScaleControl.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] Scale.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
 
 /***/ },
-/* 32 */
+/* 35 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -11023,6 +11182,7 @@
 	  value: true
 	});
 	exports.default = {
+	  name: 'map-control-scale',
 	  render: function render(h) {
 	    return;
 	  },
@@ -11063,7 +11223,7 @@
 	            BMap = _$parent2.BMap,
 	            map = _$parent2.map;
 
-	        map.removeControl(_this.control);
+	        map && map.removeControl(_this.control);
 	      });
 	    },
 	    reloadControl: function reloadControl() {
@@ -11089,14 +11249,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 33 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(34)
+	__vue_exports__ = __webpack_require__(37)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -11108,7 +11268,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/NavigationControl.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/Navigation.vue"
 
 	/* hot reload */
 	if (false) {(function () {
@@ -11117,18 +11277,18 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-431193a0", __vue_options__)
+	    hotAPI.createRecord("data-v-043dd2a6", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-431193a0", __vue_options__)
+	    hotAPI.reload("data-v-043dd2a6", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] NavigationControl.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] Navigation.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
 
 /***/ },
-/* 34 */
+/* 37 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -11137,6 +11297,7 @@
 	  value: true
 	});
 	exports.default = {
+	  name: 'map-control-navigation',
 	  render: function render(h) {
 	    return;
 	  },
@@ -11196,7 +11357,7 @@
 	            BMap = _$parent2.BMap,
 	            map = _$parent2.map;
 
-	        map.removeControl(_this.control);
+	        map && map.removeControl(_this.control);
 	      });
 	    },
 	    reloadControl: function reloadControl() {
@@ -11222,14 +11383,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 35 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(36)
+	__vue_exports__ = __webpack_require__(39)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -11241,7 +11402,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/MapTypeControl.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/MapType.vue"
 
 	/* hot reload */
 	if (false) {(function () {
@@ -11250,18 +11411,18 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-5fe1c740", __vue_options__)
+	    hotAPI.createRecord("data-v-40903426", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-5fe1c740", __vue_options__)
+	    hotAPI.reload("data-v-40903426", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] MapTypeControl.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] MapType.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
 
 /***/ },
-/* 36 */
+/* 39 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -11270,6 +11431,7 @@
 	  value: true
 	});
 	exports.default = {
+	  name: 'map-control-map-type',
 	  render: function render(h) {
 	    return;
 	  },
@@ -11315,7 +11477,7 @@
 	            BMap = _$parent2.BMap,
 	            map = _$parent2.map;
 
-	        map.removeControl(_this.control);
+	        map && map.removeControl(_this.control);
 	      });
 	    },
 	    reloadControl: function reloadControl() {
@@ -11341,14 +11503,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 37 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(38)
+	__vue_exports__ = __webpack_require__(41)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -11360,7 +11522,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/OverviewMapControl.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/OverviewMap.vue"
 
 	/* hot reload */
 	if (false) {(function () {
@@ -11369,18 +11531,18 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-47cad15a", __vue_options__)
+	    hotAPI.createRecord("data-v-4e98865a", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-47cad15a", __vue_options__)
+	    hotAPI.reload("data-v-4e98865a", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] OverviewMapControl.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] OverviewMap.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
 
 /***/ },
-/* 38 */
+/* 41 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -11388,7 +11550,11 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+
+	var events = ['viewchanged', 'viewchanging'];
+
 	exports.default = {
+	  name: 'map-control-overview-map',
 	  render: function render(h) {
 	    return;
 	  },
@@ -11403,13 +11569,8 @@
 	    size: {
 	      type: Object
 	    },
-	    value: {
-	      type: Object,
-	      default: function _default() {
-	        return {
-	          isOpen: false
-	        };
-	      }
+	    isOpen: {
+	      type: Boolean
 	    }
 	  },
 	  watch: {
@@ -11422,14 +11583,12 @@
 	    size: function size() {
 	      this.reloadControl();
 	    },
-	    'value.isOpen': function valueIsOpen() {
+	    isOpen: function isOpen() {
 	      this.reloadControl();
 	    }
 	  },
 	  methods: {
 	    addControl: function addControl() {
-	      var _this = this;
-
 	      var _$parent = this.$parent,
 	          BMap = _$parent.BMap,
 	          map = _$parent.map;
@@ -11442,16 +11601,21 @@
 	        anchor: global[this.anchor],
 	        offset: this.offset,
 	        size: this.size,
-	        isOpen: this.value.isOpen
+	        isOpen: this.isOpen
 	      });
-	      this.control.addEventListener('viewchanged', function (_ref) {
-	        var type = _ref.type,
-	            target = _ref.target,
-	            isOpen = _ref.isOpen;
-
-	        _this.$emit('input', { isOpen: isOpen });
-	      });
+	      this.bindEvents();
 	      map.addControl(this.control);
+	    },
+	    bindEvents: function bindEvents() {
+	      var _this = this;
+
+	      var control = this.control;
+
+	      events.forEach(function (event) {
+	        control.addEventListener(event, function (arg) {
+	          _this.$emit(event, arg);
+	        });
+	      });
 	    },
 	    removeControl: function removeControl() {
 	      var _this2 = this;
@@ -11461,7 +11625,7 @@
 	            BMap = _$parent2.BMap,
 	            map = _$parent2.map;
 
-	        map.removeControl(_this2.control);
+	        map && map.removeControl(_this2.control);
 	      });
 	    },
 	    reloadControl: function reloadControl() {
@@ -11487,17 +11651,17 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 39 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(40)
+	__vue_exports__ = __webpack_require__(43)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(41)
+	var __vue_template__ = __webpack_require__(44)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -11531,7 +11695,7 @@
 
 
 /***/ },
-/* 40 */
+/* 43 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -11556,27 +11720,36 @@
 	//
 	//
 	//
+	//
 
 	exports.default = {
 	  data: function data() {
 	    return {
-	      position: {
+	      center: {
 	        longitude: 116.404,
-	        latitude: 39.915,
-	        zoom: 15
-	      }
+	        latitude: 39.915
+	      },
+	      zoom: 15
 	    };
 	  },
 
 	  methods: {
-	    syncPosition: function syncPosition(position) {
-	      this.position = position;
+	    syncCenter: function syncCenter(e) {
+	      var _e$target$getCenter = e.target.getCenter(),
+	          lng = _e$target$getCenter.lng,
+	          lat = _e$target$getCenter.lat;
+
+	      this.center.longitude = lng;
+	      this.center.latitude = lat;
+	    },
+	    syncZoom: function syncZoom(e) {
+	      this.zoom = e.target.getZoom();
 	    }
 	  }
 	};
 
 /***/ },
-/* 41 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -11593,18 +11766,24 @@
 	  }, [_c('input', {
 	    directives: [{
 	      name: "model",
-	      rawName: "v-model",
-	      value: (_vm.position.longitude),
-	      expression: "position.longitude"
+	      rawName: "v-model.number",
+	      value: (_vm.center.longitude),
+	      expression: "center.longitude",
+	      modifiers: {
+	        "number": true
+	      }
 	    }],
 	    staticClass: "input is-small",
 	    domProps: {
-	      "value": _vm._s(_vm.position.longitude)
+	      "value": _vm._s(_vm.center.longitude)
 	    },
 	    on: {
 	      "input": function($event) {
 	        if ($event.target.composing) { return; }
-	        _vm.position.longitude = $event.target.value
+	        _vm.center.longitude = _vm._n($event.target.value)
+	      },
+	      "blur": function($event) {
+	        _vm.$forceUpdate()
 	      }
 	    }
 	  })]), _c('label', {
@@ -11614,18 +11793,24 @@
 	  }, [_c('input', {
 	    directives: [{
 	      name: "model",
-	      rawName: "v-model",
-	      value: (_vm.position.latitude),
-	      expression: "position.latitude"
+	      rawName: "v-model.number",
+	      value: (_vm.center.latitude),
+	      expression: "center.latitude",
+	      modifiers: {
+	        "number": true
+	      }
 	    }],
 	    staticClass: "input is-small",
 	    domProps: {
-	      "value": _vm._s(_vm.position.latitude)
+	      "value": _vm._s(_vm.center.latitude)
 	    },
 	    on: {
 	      "input": function($event) {
 	        if ($event.target.composing) { return; }
-	        _vm.position.latitude = $event.target.value
+	        _vm.center.latitude = _vm._n($event.target.value)
+	      },
+	      "blur": function($event) {
+	        _vm.$forceUpdate()
 	      }
 	    }
 	  })]), _c('label', {
@@ -11635,44 +11820,44 @@
 	  }, [_c('input', {
 	    directives: [{
 	      name: "model",
-	      rawName: "v-model",
-	      value: (_vm.position.zoom),
-	      expression: "position.zoom"
+	      rawName: "v-model.number",
+	      value: (_vm.zoom),
+	      expression: "zoom",
+	      modifiers: {
+	        "number": true
+	      }
 	    }],
 	    staticClass: "input is-small",
+	    attrs: {
+	      "type": "number"
+	    },
 	    domProps: {
-	      "value": _vm._s(_vm.position.zoom)
+	      "value": _vm._s(_vm.zoom)
 	    },
 	    on: {
 	      "input": function($event) {
 	        if ($event.target.composing) { return; }
-	        _vm.position.zoom = $event.target.value
+	        _vm.zoom = _vm._n($event.target.value)
+	      },
+	      "blur": function($event) {
+	        _vm.$forceUpdate()
 	      }
 	    }
 	  })])])]), _c('div', {
 	    staticClass: "column is-9"
-	  }, [_c('baidu-map', {
-	    directives: [{
-	      name: "model",
-	      rawName: "v-model",
-	      value: (_vm.position),
-	      expression: "position"
-	    }],
+	  }, [_c('baidu-map', [_c('map-view', {
 	    staticClass: "map",
 	    attrs: {
 	      "scroll-wheel-zoom": true,
-	      "ak": "C6bKwIcQvm2gPPUIPjpSQpVD"
-	    },
-	    domProps: {
-	      "value": (_vm.position)
+	      "center": _vm.center,
+	      "zoom": _vm.zoom
 	    },
 	    on: {
-	      "change": _vm.syncPosition,
-	      "input": function($event) {
-	        _vm.position = $event
-	      }
+	      "moving": _vm.syncCenter,
+	      "moveend": _vm.syncCenter,
+	      "zoomend": _vm.syncZoom
 	    }
-	  })], 1)])
+	  })], 1)], 1)])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
@@ -11683,7 +11868,7 @@
 	}
 
 /***/ },
-/* 42 */
+/* 45 */
 /***/ function(module, exports) {
 
 	var __vue_exports__, __vue_options__
@@ -11706,185 +11891,185 @@
 
 
 /***/ },
-/* 43 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var hljs = __webpack_require__(44);
+	var hljs = __webpack_require__(47);
 
-	hljs.registerLanguage('1c', __webpack_require__(45));
-	hljs.registerLanguage('abnf', __webpack_require__(46));
-	hljs.registerLanguage('accesslog', __webpack_require__(47));
-	hljs.registerLanguage('actionscript', __webpack_require__(48));
-	hljs.registerLanguage('ada', __webpack_require__(49));
-	hljs.registerLanguage('apache', __webpack_require__(50));
-	hljs.registerLanguage('applescript', __webpack_require__(51));
-	hljs.registerLanguage('cpp', __webpack_require__(52));
-	hljs.registerLanguage('arduino', __webpack_require__(53));
-	hljs.registerLanguage('armasm', __webpack_require__(54));
-	hljs.registerLanguage('xml', __webpack_require__(55));
-	hljs.registerLanguage('asciidoc', __webpack_require__(56));
-	hljs.registerLanguage('aspectj', __webpack_require__(57));
-	hljs.registerLanguage('autohotkey', __webpack_require__(58));
-	hljs.registerLanguage('autoit', __webpack_require__(59));
-	hljs.registerLanguage('avrasm', __webpack_require__(60));
-	hljs.registerLanguage('awk', __webpack_require__(61));
-	hljs.registerLanguage('axapta', __webpack_require__(62));
-	hljs.registerLanguage('bash', __webpack_require__(63));
-	hljs.registerLanguage('basic', __webpack_require__(64));
-	hljs.registerLanguage('bnf', __webpack_require__(65));
-	hljs.registerLanguage('brainfuck', __webpack_require__(66));
-	hljs.registerLanguage('cal', __webpack_require__(67));
-	hljs.registerLanguage('capnproto', __webpack_require__(68));
-	hljs.registerLanguage('ceylon', __webpack_require__(69));
-	hljs.registerLanguage('clean', __webpack_require__(70));
-	hljs.registerLanguage('clojure', __webpack_require__(71));
-	hljs.registerLanguage('clojure-repl', __webpack_require__(72));
-	hljs.registerLanguage('cmake', __webpack_require__(73));
-	hljs.registerLanguage('coffeescript', __webpack_require__(74));
-	hljs.registerLanguage('coq', __webpack_require__(75));
-	hljs.registerLanguage('cos', __webpack_require__(76));
-	hljs.registerLanguage('crmsh', __webpack_require__(77));
-	hljs.registerLanguage('crystal', __webpack_require__(78));
-	hljs.registerLanguage('cs', __webpack_require__(79));
-	hljs.registerLanguage('csp', __webpack_require__(80));
-	hljs.registerLanguage('css', __webpack_require__(81));
-	hljs.registerLanguage('d', __webpack_require__(82));
-	hljs.registerLanguage('markdown', __webpack_require__(83));
-	hljs.registerLanguage('dart', __webpack_require__(84));
-	hljs.registerLanguage('delphi', __webpack_require__(85));
-	hljs.registerLanguage('diff', __webpack_require__(86));
-	hljs.registerLanguage('django', __webpack_require__(87));
-	hljs.registerLanguage('dns', __webpack_require__(88));
-	hljs.registerLanguage('dockerfile', __webpack_require__(89));
-	hljs.registerLanguage('dos', __webpack_require__(90));
-	hljs.registerLanguage('dsconfig', __webpack_require__(91));
-	hljs.registerLanguage('dts', __webpack_require__(92));
-	hljs.registerLanguage('dust', __webpack_require__(93));
-	hljs.registerLanguage('ebnf', __webpack_require__(94));
-	hljs.registerLanguage('elixir', __webpack_require__(95));
-	hljs.registerLanguage('elm', __webpack_require__(96));
-	hljs.registerLanguage('ruby', __webpack_require__(97));
-	hljs.registerLanguage('erb', __webpack_require__(98));
-	hljs.registerLanguage('erlang-repl', __webpack_require__(99));
-	hljs.registerLanguage('erlang', __webpack_require__(100));
-	hljs.registerLanguage('excel', __webpack_require__(101));
-	hljs.registerLanguage('fix', __webpack_require__(102));
-	hljs.registerLanguage('flix', __webpack_require__(103));
-	hljs.registerLanguage('fortran', __webpack_require__(104));
-	hljs.registerLanguage('fsharp', __webpack_require__(105));
-	hljs.registerLanguage('gams', __webpack_require__(106));
-	hljs.registerLanguage('gauss', __webpack_require__(107));
-	hljs.registerLanguage('gcode', __webpack_require__(108));
-	hljs.registerLanguage('gherkin', __webpack_require__(109));
-	hljs.registerLanguage('glsl', __webpack_require__(110));
-	hljs.registerLanguage('go', __webpack_require__(111));
-	hljs.registerLanguage('golo', __webpack_require__(112));
-	hljs.registerLanguage('gradle', __webpack_require__(113));
-	hljs.registerLanguage('groovy', __webpack_require__(114));
-	hljs.registerLanguage('haml', __webpack_require__(115));
-	hljs.registerLanguage('handlebars', __webpack_require__(116));
-	hljs.registerLanguage('haskell', __webpack_require__(117));
-	hljs.registerLanguage('haxe', __webpack_require__(118));
-	hljs.registerLanguage('hsp', __webpack_require__(119));
-	hljs.registerLanguage('htmlbars', __webpack_require__(120));
-	hljs.registerLanguage('http', __webpack_require__(121));
-	hljs.registerLanguage('inform7', __webpack_require__(122));
-	hljs.registerLanguage('ini', __webpack_require__(123));
-	hljs.registerLanguage('irpf90', __webpack_require__(124));
-	hljs.registerLanguage('java', __webpack_require__(125));
-	hljs.registerLanguage('javascript', __webpack_require__(126));
-	hljs.registerLanguage('json', __webpack_require__(127));
-	hljs.registerLanguage('julia', __webpack_require__(128));
-	hljs.registerLanguage('kotlin', __webpack_require__(129));
-	hljs.registerLanguage('lasso', __webpack_require__(130));
-	hljs.registerLanguage('ldif', __webpack_require__(131));
-	hljs.registerLanguage('less', __webpack_require__(132));
-	hljs.registerLanguage('lisp', __webpack_require__(133));
-	hljs.registerLanguage('livecodeserver', __webpack_require__(134));
-	hljs.registerLanguage('livescript', __webpack_require__(135));
-	hljs.registerLanguage('llvm', __webpack_require__(136));
-	hljs.registerLanguage('lsl', __webpack_require__(137));
-	hljs.registerLanguage('lua', __webpack_require__(138));
-	hljs.registerLanguage('makefile', __webpack_require__(139));
-	hljs.registerLanguage('mathematica', __webpack_require__(140));
-	hljs.registerLanguage('matlab', __webpack_require__(141));
-	hljs.registerLanguage('maxima', __webpack_require__(142));
-	hljs.registerLanguage('mel', __webpack_require__(143));
-	hljs.registerLanguage('mercury', __webpack_require__(144));
-	hljs.registerLanguage('mipsasm', __webpack_require__(145));
-	hljs.registerLanguage('mizar', __webpack_require__(146));
-	hljs.registerLanguage('perl', __webpack_require__(147));
-	hljs.registerLanguage('mojolicious', __webpack_require__(148));
-	hljs.registerLanguage('monkey', __webpack_require__(149));
-	hljs.registerLanguage('moonscript', __webpack_require__(150));
-	hljs.registerLanguage('nginx', __webpack_require__(151));
-	hljs.registerLanguage('nimrod', __webpack_require__(152));
-	hljs.registerLanguage('nix', __webpack_require__(153));
-	hljs.registerLanguage('nsis', __webpack_require__(154));
-	hljs.registerLanguage('objectivec', __webpack_require__(155));
-	hljs.registerLanguage('ocaml', __webpack_require__(156));
-	hljs.registerLanguage('openscad', __webpack_require__(157));
-	hljs.registerLanguage('oxygene', __webpack_require__(158));
-	hljs.registerLanguage('parser3', __webpack_require__(159));
-	hljs.registerLanguage('pf', __webpack_require__(160));
-	hljs.registerLanguage('php', __webpack_require__(161));
-	hljs.registerLanguage('pony', __webpack_require__(162));
-	hljs.registerLanguage('powershell', __webpack_require__(163));
-	hljs.registerLanguage('processing', __webpack_require__(164));
-	hljs.registerLanguage('profile', __webpack_require__(165));
-	hljs.registerLanguage('prolog', __webpack_require__(166));
-	hljs.registerLanguage('protobuf', __webpack_require__(167));
-	hljs.registerLanguage('puppet', __webpack_require__(168));
-	hljs.registerLanguage('purebasic', __webpack_require__(169));
-	hljs.registerLanguage('python', __webpack_require__(170));
-	hljs.registerLanguage('q', __webpack_require__(171));
-	hljs.registerLanguage('qml', __webpack_require__(172));
-	hljs.registerLanguage('r', __webpack_require__(173));
-	hljs.registerLanguage('rib', __webpack_require__(174));
-	hljs.registerLanguage('roboconf', __webpack_require__(175));
-	hljs.registerLanguage('rsl', __webpack_require__(176));
-	hljs.registerLanguage('ruleslanguage', __webpack_require__(177));
-	hljs.registerLanguage('rust', __webpack_require__(178));
-	hljs.registerLanguage('scala', __webpack_require__(179));
-	hljs.registerLanguage('scheme', __webpack_require__(180));
-	hljs.registerLanguage('scilab', __webpack_require__(181));
-	hljs.registerLanguage('scss', __webpack_require__(182));
-	hljs.registerLanguage('smali', __webpack_require__(183));
-	hljs.registerLanguage('smalltalk', __webpack_require__(184));
-	hljs.registerLanguage('sml', __webpack_require__(185));
-	hljs.registerLanguage('sqf', __webpack_require__(186));
-	hljs.registerLanguage('sql', __webpack_require__(187));
-	hljs.registerLanguage('stan', __webpack_require__(188));
-	hljs.registerLanguage('stata', __webpack_require__(189));
-	hljs.registerLanguage('step21', __webpack_require__(190));
-	hljs.registerLanguage('stylus', __webpack_require__(191));
-	hljs.registerLanguage('subunit', __webpack_require__(192));
-	hljs.registerLanguage('swift', __webpack_require__(193));
-	hljs.registerLanguage('taggerscript', __webpack_require__(194));
-	hljs.registerLanguage('yaml', __webpack_require__(195));
-	hljs.registerLanguage('tap', __webpack_require__(196));
-	hljs.registerLanguage('tcl', __webpack_require__(197));
-	hljs.registerLanguage('tex', __webpack_require__(198));
-	hljs.registerLanguage('thrift', __webpack_require__(199));
-	hljs.registerLanguage('tp', __webpack_require__(200));
-	hljs.registerLanguage('twig', __webpack_require__(201));
-	hljs.registerLanguage('typescript', __webpack_require__(202));
-	hljs.registerLanguage('vala', __webpack_require__(203));
-	hljs.registerLanguage('vbnet', __webpack_require__(204));
-	hljs.registerLanguage('vbscript', __webpack_require__(205));
-	hljs.registerLanguage('vbscript-html', __webpack_require__(206));
-	hljs.registerLanguage('verilog', __webpack_require__(207));
-	hljs.registerLanguage('vhdl', __webpack_require__(208));
-	hljs.registerLanguage('vim', __webpack_require__(209));
-	hljs.registerLanguage('x86asm', __webpack_require__(210));
-	hljs.registerLanguage('xl', __webpack_require__(211));
-	hljs.registerLanguage('xquery', __webpack_require__(212));
-	hljs.registerLanguage('zephir', __webpack_require__(213));
+	hljs.registerLanguage('1c', __webpack_require__(48));
+	hljs.registerLanguage('abnf', __webpack_require__(49));
+	hljs.registerLanguage('accesslog', __webpack_require__(50));
+	hljs.registerLanguage('actionscript', __webpack_require__(51));
+	hljs.registerLanguage('ada', __webpack_require__(52));
+	hljs.registerLanguage('apache', __webpack_require__(53));
+	hljs.registerLanguage('applescript', __webpack_require__(54));
+	hljs.registerLanguage('cpp', __webpack_require__(55));
+	hljs.registerLanguage('arduino', __webpack_require__(56));
+	hljs.registerLanguage('armasm', __webpack_require__(57));
+	hljs.registerLanguage('xml', __webpack_require__(58));
+	hljs.registerLanguage('asciidoc', __webpack_require__(59));
+	hljs.registerLanguage('aspectj', __webpack_require__(60));
+	hljs.registerLanguage('autohotkey', __webpack_require__(61));
+	hljs.registerLanguage('autoit', __webpack_require__(62));
+	hljs.registerLanguage('avrasm', __webpack_require__(63));
+	hljs.registerLanguage('awk', __webpack_require__(64));
+	hljs.registerLanguage('axapta', __webpack_require__(65));
+	hljs.registerLanguage('bash', __webpack_require__(66));
+	hljs.registerLanguage('basic', __webpack_require__(67));
+	hljs.registerLanguage('bnf', __webpack_require__(68));
+	hljs.registerLanguage('brainfuck', __webpack_require__(69));
+	hljs.registerLanguage('cal', __webpack_require__(70));
+	hljs.registerLanguage('capnproto', __webpack_require__(71));
+	hljs.registerLanguage('ceylon', __webpack_require__(72));
+	hljs.registerLanguage('clean', __webpack_require__(73));
+	hljs.registerLanguage('clojure', __webpack_require__(74));
+	hljs.registerLanguage('clojure-repl', __webpack_require__(75));
+	hljs.registerLanguage('cmake', __webpack_require__(76));
+	hljs.registerLanguage('coffeescript', __webpack_require__(77));
+	hljs.registerLanguage('coq', __webpack_require__(78));
+	hljs.registerLanguage('cos', __webpack_require__(79));
+	hljs.registerLanguage('crmsh', __webpack_require__(80));
+	hljs.registerLanguage('crystal', __webpack_require__(81));
+	hljs.registerLanguage('cs', __webpack_require__(82));
+	hljs.registerLanguage('csp', __webpack_require__(83));
+	hljs.registerLanguage('css', __webpack_require__(84));
+	hljs.registerLanguage('d', __webpack_require__(85));
+	hljs.registerLanguage('markdown', __webpack_require__(86));
+	hljs.registerLanguage('dart', __webpack_require__(87));
+	hljs.registerLanguage('delphi', __webpack_require__(88));
+	hljs.registerLanguage('diff', __webpack_require__(89));
+	hljs.registerLanguage('django', __webpack_require__(90));
+	hljs.registerLanguage('dns', __webpack_require__(91));
+	hljs.registerLanguage('dockerfile', __webpack_require__(92));
+	hljs.registerLanguage('dos', __webpack_require__(93));
+	hljs.registerLanguage('dsconfig', __webpack_require__(94));
+	hljs.registerLanguage('dts', __webpack_require__(95));
+	hljs.registerLanguage('dust', __webpack_require__(96));
+	hljs.registerLanguage('ebnf', __webpack_require__(97));
+	hljs.registerLanguage('elixir', __webpack_require__(98));
+	hljs.registerLanguage('elm', __webpack_require__(99));
+	hljs.registerLanguage('ruby', __webpack_require__(100));
+	hljs.registerLanguage('erb', __webpack_require__(101));
+	hljs.registerLanguage('erlang-repl', __webpack_require__(102));
+	hljs.registerLanguage('erlang', __webpack_require__(103));
+	hljs.registerLanguage('excel', __webpack_require__(104));
+	hljs.registerLanguage('fix', __webpack_require__(105));
+	hljs.registerLanguage('flix', __webpack_require__(106));
+	hljs.registerLanguage('fortran', __webpack_require__(107));
+	hljs.registerLanguage('fsharp', __webpack_require__(108));
+	hljs.registerLanguage('gams', __webpack_require__(109));
+	hljs.registerLanguage('gauss', __webpack_require__(110));
+	hljs.registerLanguage('gcode', __webpack_require__(111));
+	hljs.registerLanguage('gherkin', __webpack_require__(112));
+	hljs.registerLanguage('glsl', __webpack_require__(113));
+	hljs.registerLanguage('go', __webpack_require__(114));
+	hljs.registerLanguage('golo', __webpack_require__(115));
+	hljs.registerLanguage('gradle', __webpack_require__(116));
+	hljs.registerLanguage('groovy', __webpack_require__(117));
+	hljs.registerLanguage('haml', __webpack_require__(118));
+	hljs.registerLanguage('handlebars', __webpack_require__(119));
+	hljs.registerLanguage('haskell', __webpack_require__(120));
+	hljs.registerLanguage('haxe', __webpack_require__(121));
+	hljs.registerLanguage('hsp', __webpack_require__(122));
+	hljs.registerLanguage('htmlbars', __webpack_require__(123));
+	hljs.registerLanguage('http', __webpack_require__(124));
+	hljs.registerLanguage('inform7', __webpack_require__(125));
+	hljs.registerLanguage('ini', __webpack_require__(126));
+	hljs.registerLanguage('irpf90', __webpack_require__(127));
+	hljs.registerLanguage('java', __webpack_require__(128));
+	hljs.registerLanguage('javascript', __webpack_require__(129));
+	hljs.registerLanguage('json', __webpack_require__(130));
+	hljs.registerLanguage('julia', __webpack_require__(131));
+	hljs.registerLanguage('kotlin', __webpack_require__(132));
+	hljs.registerLanguage('lasso', __webpack_require__(133));
+	hljs.registerLanguage('ldif', __webpack_require__(134));
+	hljs.registerLanguage('less', __webpack_require__(135));
+	hljs.registerLanguage('lisp', __webpack_require__(136));
+	hljs.registerLanguage('livecodeserver', __webpack_require__(137));
+	hljs.registerLanguage('livescript', __webpack_require__(138));
+	hljs.registerLanguage('llvm', __webpack_require__(139));
+	hljs.registerLanguage('lsl', __webpack_require__(140));
+	hljs.registerLanguage('lua', __webpack_require__(141));
+	hljs.registerLanguage('makefile', __webpack_require__(142));
+	hljs.registerLanguage('mathematica', __webpack_require__(143));
+	hljs.registerLanguage('matlab', __webpack_require__(144));
+	hljs.registerLanguage('maxima', __webpack_require__(145));
+	hljs.registerLanguage('mel', __webpack_require__(146));
+	hljs.registerLanguage('mercury', __webpack_require__(147));
+	hljs.registerLanguage('mipsasm', __webpack_require__(148));
+	hljs.registerLanguage('mizar', __webpack_require__(149));
+	hljs.registerLanguage('perl', __webpack_require__(150));
+	hljs.registerLanguage('mojolicious', __webpack_require__(151));
+	hljs.registerLanguage('monkey', __webpack_require__(152));
+	hljs.registerLanguage('moonscript', __webpack_require__(153));
+	hljs.registerLanguage('nginx', __webpack_require__(154));
+	hljs.registerLanguage('nimrod', __webpack_require__(155));
+	hljs.registerLanguage('nix', __webpack_require__(156));
+	hljs.registerLanguage('nsis', __webpack_require__(157));
+	hljs.registerLanguage('objectivec', __webpack_require__(158));
+	hljs.registerLanguage('ocaml', __webpack_require__(159));
+	hljs.registerLanguage('openscad', __webpack_require__(160));
+	hljs.registerLanguage('oxygene', __webpack_require__(161));
+	hljs.registerLanguage('parser3', __webpack_require__(162));
+	hljs.registerLanguage('pf', __webpack_require__(163));
+	hljs.registerLanguage('php', __webpack_require__(164));
+	hljs.registerLanguage('pony', __webpack_require__(165));
+	hljs.registerLanguage('powershell', __webpack_require__(166));
+	hljs.registerLanguage('processing', __webpack_require__(167));
+	hljs.registerLanguage('profile', __webpack_require__(168));
+	hljs.registerLanguage('prolog', __webpack_require__(169));
+	hljs.registerLanguage('protobuf', __webpack_require__(170));
+	hljs.registerLanguage('puppet', __webpack_require__(171));
+	hljs.registerLanguage('purebasic', __webpack_require__(172));
+	hljs.registerLanguage('python', __webpack_require__(173));
+	hljs.registerLanguage('q', __webpack_require__(174));
+	hljs.registerLanguage('qml', __webpack_require__(175));
+	hljs.registerLanguage('r', __webpack_require__(176));
+	hljs.registerLanguage('rib', __webpack_require__(177));
+	hljs.registerLanguage('roboconf', __webpack_require__(178));
+	hljs.registerLanguage('rsl', __webpack_require__(179));
+	hljs.registerLanguage('ruleslanguage', __webpack_require__(180));
+	hljs.registerLanguage('rust', __webpack_require__(181));
+	hljs.registerLanguage('scala', __webpack_require__(182));
+	hljs.registerLanguage('scheme', __webpack_require__(183));
+	hljs.registerLanguage('scilab', __webpack_require__(184));
+	hljs.registerLanguage('scss', __webpack_require__(185));
+	hljs.registerLanguage('smali', __webpack_require__(186));
+	hljs.registerLanguage('smalltalk', __webpack_require__(187));
+	hljs.registerLanguage('sml', __webpack_require__(188));
+	hljs.registerLanguage('sqf', __webpack_require__(189));
+	hljs.registerLanguage('sql', __webpack_require__(190));
+	hljs.registerLanguage('stan', __webpack_require__(191));
+	hljs.registerLanguage('stata', __webpack_require__(192));
+	hljs.registerLanguage('step21', __webpack_require__(193));
+	hljs.registerLanguage('stylus', __webpack_require__(194));
+	hljs.registerLanguage('subunit', __webpack_require__(195));
+	hljs.registerLanguage('swift', __webpack_require__(196));
+	hljs.registerLanguage('taggerscript', __webpack_require__(197));
+	hljs.registerLanguage('yaml', __webpack_require__(198));
+	hljs.registerLanguage('tap', __webpack_require__(199));
+	hljs.registerLanguage('tcl', __webpack_require__(200));
+	hljs.registerLanguage('tex', __webpack_require__(201));
+	hljs.registerLanguage('thrift', __webpack_require__(202));
+	hljs.registerLanguage('tp', __webpack_require__(203));
+	hljs.registerLanguage('twig', __webpack_require__(204));
+	hljs.registerLanguage('typescript', __webpack_require__(205));
+	hljs.registerLanguage('vala', __webpack_require__(206));
+	hljs.registerLanguage('vbnet', __webpack_require__(207));
+	hljs.registerLanguage('vbscript', __webpack_require__(208));
+	hljs.registerLanguage('vbscript-html', __webpack_require__(209));
+	hljs.registerLanguage('verilog', __webpack_require__(210));
+	hljs.registerLanguage('vhdl', __webpack_require__(211));
+	hljs.registerLanguage('vim', __webpack_require__(212));
+	hljs.registerLanguage('x86asm', __webpack_require__(213));
+	hljs.registerLanguage('xl', __webpack_require__(214));
+	hljs.registerLanguage('xquery', __webpack_require__(215));
+	hljs.registerLanguage('zephir', __webpack_require__(216));
 
 	module.exports = hljs;
 
 /***/ },
-/* 44 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -12708,7 +12893,7 @@
 
 
 /***/ },
-/* 45 */
+/* 48 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs){
@@ -12791,7 +12976,7 @@
 	};
 
 /***/ },
-/* 46 */
+/* 49 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -12866,7 +13051,7 @@
 	};
 
 /***/ },
-/* 47 */
+/* 50 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -12908,7 +13093,7 @@
 	};
 
 /***/ },
-/* 48 */
+/* 51 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -12986,7 +13171,7 @@
 	};
 
 /***/ },
-/* 49 */
+/* 52 */
 /***/ function(module, exports) {
 
 	module.exports = // We try to support full Ada2012
@@ -13163,7 +13348,7 @@
 	};
 
 /***/ },
-/* 50 */
+/* 53 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13213,7 +13398,7 @@
 	};
 
 /***/ },
-/* 51 */
+/* 54 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13303,7 +13488,7 @@
 	};
 
 /***/ },
-/* 52 */
+/* 55 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13473,7 +13658,7 @@
 	};
 
 /***/ },
-/* 53 */
+/* 56 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13577,7 +13762,7 @@
 	};
 
 /***/ },
-/* 54 */
+/* 57 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13673,7 +13858,7 @@
 	};
 
 /***/ },
-/* 55 */
+/* 58 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13780,7 +13965,7 @@
 	};
 
 /***/ },
-/* 56 */
+/* 59 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13972,7 +14157,7 @@
 	};
 
 /***/ },
-/* 57 */
+/* 60 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -14120,7 +14305,7 @@
 	};
 
 /***/ },
-/* 58 */
+/* 61 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14172,7 +14357,7 @@
 	};
 
 /***/ },
-/* 59 */
+/* 62 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14312,7 +14497,7 @@
 	};
 
 /***/ },
-/* 60 */
+/* 63 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14378,7 +14563,7 @@
 	};
 
 /***/ },
-/* 61 */
+/* 64 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14435,7 +14620,7 @@
 	};
 
 /***/ },
-/* 62 */
+/* 65 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14470,7 +14655,7 @@
 	};
 
 /***/ },
-/* 63 */
+/* 66 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14549,7 +14734,7 @@
 	};
 
 /***/ },
-/* 64 */
+/* 67 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14604,7 +14789,7 @@
 	};
 
 /***/ },
-/* 65 */
+/* 68 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs){
@@ -14637,7 +14822,7 @@
 	};
 
 /***/ },
-/* 66 */
+/* 69 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs){
@@ -14678,7 +14863,7 @@
 	};
 
 /***/ },
-/* 67 */
+/* 70 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14762,7 +14947,7 @@
 	};
 
 /***/ },
-/* 68 */
+/* 71 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14815,7 +15000,7 @@
 	};
 
 /***/ },
-/* 69 */
+/* 72 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14886,7 +15071,7 @@
 	};
 
 /***/ },
-/* 70 */
+/* 73 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14915,7 +15100,7 @@
 	};
 
 /***/ },
-/* 71 */
+/* 74 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15014,7 +15199,7 @@
 	};
 
 /***/ },
-/* 72 */
+/* 75 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15033,7 +15218,7 @@
 	};
 
 /***/ },
-/* 73 */
+/* 76 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15075,7 +15260,7 @@
 	};
 
 /***/ },
-/* 74 */
+/* 77 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15225,7 +15410,7 @@
 	};
 
 /***/ },
-/* 75 */
+/* 78 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15296,7 +15481,7 @@
 	};
 
 /***/ },
-/* 76 */
+/* 79 */
 /***/ function(module, exports) {
 
 	module.exports = function cos (hljs) {
@@ -15424,7 +15609,7 @@
 	};
 
 /***/ },
-/* 77 */
+/* 80 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15522,7 +15707,7 @@
 	};
 
 /***/ },
-/* 78 */
+/* 81 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15703,7 +15888,7 @@
 	};
 
 /***/ },
-/* 79 */
+/* 82 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15874,7 +16059,7 @@
 	};
 
 /***/ },
-/* 80 */
+/* 83 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15900,7 +16085,7 @@
 	};
 
 /***/ },
-/* 81 */
+/* 84 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16009,7 +16194,7 @@
 	};
 
 /***/ },
-/* 82 */
+/* 85 */
 /***/ function(module, exports) {
 
 	module.exports = /**
@@ -16271,7 +16456,7 @@
 	};
 
 /***/ },
-/* 83 */
+/* 86 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16383,7 +16568,7 @@
 	};
 
 /***/ },
-/* 84 */
+/* 87 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -16488,7 +16673,7 @@
 	};
 
 /***/ },
-/* 85 */
+/* 88 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16561,7 +16746,7 @@
 	};
 
 /***/ },
-/* 86 */
+/* 89 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16605,7 +16790,7 @@
 	};
 
 /***/ },
-/* 87 */
+/* 90 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16673,7 +16858,7 @@
 	};
 
 /***/ },
-/* 88 */
+/* 91 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16706,7 +16891,7 @@
 	};
 
 /***/ },
-/* 89 */
+/* 92 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16732,7 +16917,7 @@
 	};
 
 /***/ },
-/* 90 */
+/* 93 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16788,7 +16973,7 @@
 	};
 
 /***/ },
-/* 91 */
+/* 94 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16839,7 +17024,7 @@
 	};
 
 /***/ },
-/* 92 */
+/* 95 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16967,7 +17152,7 @@
 	};
 
 /***/ },
-/* 93 */
+/* 96 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17003,7 +17188,7 @@
 	};
 
 /***/ },
-/* 94 */
+/* 97 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17040,7 +17225,7 @@
 	};
 
 /***/ },
-/* 95 */
+/* 98 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17141,7 +17326,7 @@
 	};
 
 /***/ },
-/* 96 */
+/* 99 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17228,7 +17413,7 @@
 	};
 
 /***/ },
-/* 97 */
+/* 100 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17408,7 +17593,7 @@
 	};
 
 /***/ },
-/* 98 */
+/* 101 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17427,7 +17612,7 @@
 	};
 
 /***/ },
-/* 99 */
+/* 102 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17477,7 +17662,7 @@
 	};
 
 /***/ },
-/* 100 */
+/* 103 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17627,7 +17812,7 @@
 	};
 
 /***/ },
-/* 101 */
+/* 104 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17679,7 +17864,7 @@
 	};
 
 /***/ },
-/* 102 */
+/* 105 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17712,7 +17897,7 @@
 	};
 
 /***/ },
-/* 103 */
+/* 106 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -17761,7 +17946,7 @@
 	};
 
 /***/ },
-/* 104 */
+/* 107 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17836,7 +18021,7 @@
 	};
 
 /***/ },
-/* 105 */
+/* 108 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17899,7 +18084,7 @@
 	};
 
 /***/ },
-/* 106 */
+/* 109 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -18057,7 +18242,7 @@
 	};
 
 /***/ },
-/* 107 */
+/* 110 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18283,7 +18468,7 @@
 	};
 
 /***/ },
-/* 108 */
+/* 111 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18354,7 +18539,7 @@
 	};
 
 /***/ },
-/* 109 */
+/* 112 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -18395,7 +18580,7 @@
 	};
 
 /***/ },
-/* 110 */
+/* 113 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18516,7 +18701,7 @@
 	};
 
 /***/ },
-/* 111 */
+/* 114 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18574,7 +18759,7 @@
 	};
 
 /***/ },
-/* 112 */
+/* 115 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18601,7 +18786,7 @@
 	};
 
 /***/ },
-/* 113 */
+/* 116 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18640,7 +18825,7 @@
 	};
 
 /***/ },
-/* 114 */
+/* 117 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18738,7 +18923,7 @@
 	};
 
 /***/ },
-/* 115 */
+/* 118 */
 /***/ function(module, exports) {
 
 	module.exports = // TODO support filter tags like :javascript, support inline HTML
@@ -18849,7 +19034,7 @@
 	};
 
 /***/ },
-/* 116 */
+/* 119 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18887,7 +19072,7 @@
 	};
 
 /***/ },
-/* 117 */
+/* 120 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19013,7 +19198,7 @@
 	};
 
 /***/ },
-/* 118 */
+/* 121 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19129,7 +19314,7 @@
 	};
 
 /***/ },
-/* 119 */
+/* 122 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19179,7 +19364,7 @@
 	};
 
 /***/ },
-/* 120 */
+/* 123 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19254,7 +19439,7 @@
 	};
 
 /***/ },
-/* 121 */
+/* 124 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19299,7 +19484,7 @@
 	};
 
 /***/ },
-/* 122 */
+/* 125 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19360,7 +19545,7 @@
 	};
 
 /***/ },
-/* 123 */
+/* 126 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19430,7 +19615,7 @@
 	};
 
 /***/ },
-/* 124 */
+/* 127 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19510,7 +19695,7 @@
 	};
 
 /***/ },
-/* 125 */
+/* 128 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19622,7 +19807,7 @@
 	};
 
 /***/ },
-/* 126 */
+/* 129 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19797,7 +19982,7 @@
 	};
 
 /***/ },
-/* 127 */
+/* 130 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19838,7 +20023,7 @@
 	};
 
 /***/ },
-/* 128 */
+/* 131 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20020,7 +20205,7 @@
 	};
 
 /***/ },
-/* 129 */
+/* 132 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -20198,7 +20383,7 @@
 	};
 
 /***/ },
-/* 130 */
+/* 133 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20365,7 +20550,7 @@
 	};
 
 /***/ },
-/* 131 */
+/* 134 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20392,7 +20577,7 @@
 	};
 
 /***/ },
-/* 132 */
+/* 135 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20536,7 +20721,7 @@
 	};
 
 /***/ },
-/* 133 */
+/* 136 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20643,7 +20828,7 @@
 	};
 
 /***/ },
-/* 134 */
+/* 137 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20804,7 +20989,7 @@
 	};
 
 /***/ },
-/* 135 */
+/* 138 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20957,7 +21142,7 @@
 	};
 
 /***/ },
-/* 136 */
+/* 139 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21050,7 +21235,7 @@
 	};
 
 /***/ },
-/* 137 */
+/* 140 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21137,7 +21322,7 @@
 	};
 
 /***/ },
-/* 138 */
+/* 141 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21197,7 +21382,7 @@
 	};
 
 /***/ },
-/* 139 */
+/* 142 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21246,7 +21431,7 @@
 	};
 
 /***/ },
-/* 140 */
+/* 143 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21308,7 +21493,7 @@
 	};
 
 /***/ },
-/* 141 */
+/* 144 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21400,7 +21585,7 @@
 	};
 
 /***/ },
-/* 142 */
+/* 145 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21810,7 +21995,7 @@
 	};
 
 /***/ },
-/* 143 */
+/* 146 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22039,7 +22224,7 @@
 	};
 
 /***/ },
-/* 144 */
+/* 147 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22125,7 +22310,7 @@
 	};
 
 /***/ },
-/* 145 */
+/* 148 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22215,7 +22400,7 @@
 	};
 
 /***/ },
-/* 146 */
+/* 149 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22238,7 +22423,7 @@
 	};
 
 /***/ },
-/* 147 */
+/* 150 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22399,7 +22584,7 @@
 	};
 
 /***/ },
-/* 148 */
+/* 151 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22428,7 +22613,7 @@
 	};
 
 /***/ },
-/* 149 */
+/* 152 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22507,7 +22692,7 @@
 	};
 
 /***/ },
-/* 150 */
+/* 153 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22623,7 +22808,7 @@
 	};
 
 /***/ },
-/* 151 */
+/* 154 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22720,7 +22905,7 @@
 	};
 
 /***/ },
-/* 152 */
+/* 155 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22779,7 +22964,7 @@
 	};
 
 /***/ },
-/* 153 */
+/* 156 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22832,7 +23017,7 @@
 	};
 
 /***/ },
-/* 154 */
+/* 157 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22942,7 +23127,7 @@
 	};
 
 /***/ },
-/* 155 */
+/* 158 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23037,7 +23222,7 @@
 	};
 
 /***/ },
-/* 156 */
+/* 159 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23112,7 +23297,7 @@
 	};
 
 /***/ },
-/* 157 */
+/* 160 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23173,7 +23358,7 @@
 	};
 
 /***/ },
-/* 158 */
+/* 161 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23247,7 +23432,7 @@
 	};
 
 /***/ },
-/* 159 */
+/* 162 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23299,7 +23484,7 @@
 	};
 
 /***/ },
-/* 160 */
+/* 163 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23355,7 +23540,7 @@
 	};
 
 /***/ },
-/* 161 */
+/* 164 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23486,7 +23671,7 @@
 	};
 
 /***/ },
-/* 162 */
+/* 165 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23581,7 +23766,7 @@
 	};
 
 /***/ },
-/* 163 */
+/* 166 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23666,7 +23851,7 @@
 	};
 
 /***/ },
-/* 164 */
+/* 167 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23718,7 +23903,7 @@
 	};
 
 /***/ },
-/* 165 */
+/* 168 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23752,7 +23937,7 @@
 	};
 
 /***/ },
-/* 166 */
+/* 169 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23844,7 +24029,7 @@
 	};
 
 /***/ },
-/* 167 */
+/* 170 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23884,7 +24069,7 @@
 	};
 
 /***/ },
-/* 168 */
+/* 171 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24003,7 +24188,7 @@
 	};
 
 /***/ },
-/* 169 */
+/* 172 */
 /***/ function(module, exports) {
 
 	module.exports = // Base deafult colors in PB IDE: background: #FFFFDF; foreground: #000000;
@@ -24065,7 +24250,7 @@
 	};
 
 /***/ },
-/* 170 */
+/* 173 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24161,7 +24346,7 @@
 	};
 
 /***/ },
-/* 171 */
+/* 174 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24188,7 +24373,7 @@
 	};
 
 /***/ },
-/* 172 */
+/* 175 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24361,7 +24546,7 @@
 	};
 
 /***/ },
-/* 173 */
+/* 176 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24435,7 +24620,7 @@
 	};
 
 /***/ },
-/* 174 */
+/* 177 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24466,7 +24651,7 @@
 	};
 
 /***/ },
-/* 175 */
+/* 178 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24537,7 +24722,7 @@
 	};
 
 /***/ },
-/* 176 */
+/* 179 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24577,7 +24762,7 @@
 	};
 
 /***/ },
-/* 177 */
+/* 180 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24642,7 +24827,7 @@
 	};
 
 /***/ },
-/* 178 */
+/* 181 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24750,7 +24935,7 @@
 	};
 
 /***/ },
-/* 179 */
+/* 182 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24869,7 +25054,7 @@
 	};
 
 /***/ },
-/* 180 */
+/* 183 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25014,7 +25199,7 @@
 	};
 
 /***/ },
-/* 181 */
+/* 184 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25072,7 +25257,7 @@
 	};
 
 /***/ },
-/* 182 */
+/* 185 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25174,7 +25359,7 @@
 	};
 
 /***/ },
-/* 183 */
+/* 186 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25234,7 +25419,7 @@
 	};
 
 /***/ },
-/* 184 */
+/* 187 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25288,7 +25473,7 @@
 	};
 
 /***/ },
-/* 185 */
+/* 188 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25358,7 +25543,7 @@
 	};
 
 /***/ },
-/* 186 */
+/* 189 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25733,7 +25918,7 @@
 	};
 
 /***/ },
-/* 187 */
+/* 190 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25897,7 +26082,7 @@
 	};
 
 /***/ },
-/* 188 */
+/* 191 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25984,7 +26169,7 @@
 	};
 
 /***/ },
-/* 189 */
+/* 192 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26026,7 +26211,7 @@
 	};
 
 /***/ },
-/* 190 */
+/* 193 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26077,7 +26262,7 @@
 	};
 
 /***/ },
-/* 191 */
+/* 194 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26535,7 +26720,7 @@
 	};
 
 /***/ },
-/* 192 */
+/* 195 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26573,7 +26758,7 @@
 	};
 
 /***/ },
-/* 193 */
+/* 196 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26694,7 +26879,7 @@
 	};
 
 /***/ },
-/* 194 */
+/* 197 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26742,7 +26927,7 @@
 	};
 
 /***/ },
-/* 195 */
+/* 198 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26830,7 +27015,7 @@
 	};
 
 /***/ },
-/* 196 */
+/* 199 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26870,7 +27055,7 @@
 	};
 
 /***/ },
-/* 197 */
+/* 200 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26935,7 +27120,7 @@
 	};
 
 /***/ },
-/* 198 */
+/* 201 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27001,7 +27186,7 @@
 	};
 
 /***/ },
-/* 199 */
+/* 202 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27040,7 +27225,7 @@
 	};
 
 /***/ },
-/* 200 */
+/* 203 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27128,7 +27313,7 @@
 	};
 
 /***/ },
-/* 201 */
+/* 204 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27198,7 +27383,7 @@
 	};
 
 /***/ },
-/* 202 */
+/* 205 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27329,7 +27514,7 @@
 	};
 
 /***/ },
-/* 203 */
+/* 206 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27383,7 +27568,7 @@
 	};
 
 /***/ },
-/* 204 */
+/* 207 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27443,7 +27628,7 @@
 	};
 
 /***/ },
-/* 205 */
+/* 208 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27486,7 +27671,7 @@
 	};
 
 /***/ },
-/* 206 */
+/* 209 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27502,7 +27687,7 @@
 	};
 
 /***/ },
-/* 207 */
+/* 210 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27605,7 +27790,7 @@
 	};
 
 /***/ },
-/* 208 */
+/* 211 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27670,7 +27855,7 @@
 	};
 
 /***/ },
-/* 209 */
+/* 212 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27780,7 +27965,7 @@
 	};
 
 /***/ },
-/* 210 */
+/* 213 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27920,7 +28105,7 @@
 	};
 
 /***/ },
-/* 211 */
+/* 214 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27997,7 +28182,7 @@
 	};
 
 /***/ },
-/* 212 */
+/* 215 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28072,7 +28257,7 @@
 	};
 
 /***/ },
-/* 213 */
+/* 216 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
