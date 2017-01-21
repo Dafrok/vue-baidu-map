@@ -1,9 +1,10 @@
 import Map from './map/Map.vue'
 import MapView from './map/MapView.vue'
-import ScaleControl from './controls/Scale.vue'
-import NavigationControl from './controls/Navigation.vue'
-import MapTypeControl from './controls/MapType.vue'
-import OverviewMapControl from './controls/OverviewMap.vue'
+import MapControlScale from './controls/Scale.vue'
+import MapControlNavigation from './controls/Navigation.vue'
+import MapControlMapType from './controls/MapType.vue'
+import MapControlOverviewMap from './controls/OverviewMap.vue'
+import MapControlGeolocation from './controls/Geolocation.vue'
 
 export default {
   install (Vue, options) {
@@ -15,9 +16,10 @@ export default {
     }
     Vue.component('baidu-map', Map)
     Vue.component('map-view', MapView)
-    Vue.component('map-control-scale', ScaleControl)
-    Vue.component('map-control-navigation', NavigationControl)
-    Vue.component('map-control-map-type', MapTypeControl)
-    Vue.component('map-control-overview-map', OverviewMapControl)
+    Vue.component('map-control-scale', MapControlScale)
+    Vue.component('map-control-navigation', MapControlNavigation)
+    Vue.component('map-control-map-type', MapControlMapType)
+    Vue.component('map-control-overview-map', MapControlOverviewMap)
+    Vue.component('map-control-geolocation', MapControlGeolocation)
   }
 }

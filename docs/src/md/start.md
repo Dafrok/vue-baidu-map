@@ -1,3 +1,5 @@
+<template lang="markdown">
+
 # 开始使用
 
 ## 安装
@@ -42,3 +44,4 @@ Vue.use(BaiduMap, {
 <baidu-map>
   <map-view class="map">
 </baidu-map>
+</template>

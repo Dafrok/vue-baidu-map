@@ -9,7 +9,8 @@
   "scripts": {
     "build:docs": "webpack --config ./build/webpack.docs.config.js",
     "build": "webpack --config ./build/webpack.prod.config.js",
-    "dev": "webpack-dev-server --content-base docs --config ./build/webpack.docs.config.js --hot --inline "
+    "dev": "webpack-dev-server --content-base docs --config ./build/webpack.docs.config.js --hot --inline",
+    "deploy": "sudo npm run build && sudo npm run build:docs"
   },
   "repository": {
     "type": "git",

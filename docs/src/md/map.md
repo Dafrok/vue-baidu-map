@@ -1,10 +1,12 @@
+<template lang="markdown">
+
 # 地图组件
 
 ## BaiduMap
 
-地图容器，用于控制其它组件实例，是所有地图组件的根节点。
+百度地图容器，用于控制其它组件实例，本身不用于渲染地图，是所有地图组件的根节点。
 
-###实例属性
+### 实例属性
 
 |属性名|类型|默认值|描述|
 |------|:----:|:---:|---|
@@ -176,5 +178,51 @@ export default {
 ```
 
 #### 示例
+<div class="columns">
+  <div class="column is-3">
+    <div class="box">
+      <label class="label">经度</label>
+      <p class="control">
+        <input class="input is-small" v-model.number="center.longitude"/>
+      </p>
+      <label class="label">纬度</label>
+      <p class="control">
+        <input class="input is-small" v-model.number="center.latitude"/>
+      </p>
+      <label class="label">缩放级别</label>
+      <p class="control">
+        <input class="input is-small" v-model.number="zoom" type="number"/>
+      </p>
+    </div>
+  </div>
+  <div class="column is-9">
+    <baidu-map>
+      <map-view class="map" :scroll-wheel-zoom="true" :center="center" :zoom="zoom" @moving="syncCenter" @moveend="syncCenter" @zoomend="syncZoom"></map-view>
+    </baidu-map>
+  </div>
+</div>
+</template>
 
-<demo-map />
+<script>
+export default {
+  data () {
+    return {
+      center: {
+        longitude: 116.404,
+        latitude: 39.915
+      },
+      zoom: 15
+    }
+  },
+  methods: {
+    syncCenter (e) {
+      const {lng, lat} = e.target.getCenter()
+      this.center.longitude = lng
+      this.center.latitude = lat
+    },
+    syncZoom (e) {
+      this.zoom = e.target.getZoom()
+    }
+  }
+}
+</script>

@@ -12,7 +12,7 @@ module.exports = {
     loaders: [
       {
         test: /\.vue$/,
-        loader: 'vue'
+        loader: 'vue',
       },
       {
         test: /\.js$/,
@@ -37,6 +37,12 @@ module.exports = {
         loader: 'url'
       }
     ]
+  },
+  resolve: {
+    alias: {
+      src: __dirname + '/../src',
+      docs: __dirname + '/../docs/src',
+    }
   },
   sassLoader: {
     includePaths: [path.resolve(__dirname, "../node_modules/bulma")]
