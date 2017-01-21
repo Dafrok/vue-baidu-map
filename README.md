@@ -9,6 +9,6 @@ dafrok.github.io/vue-baidu-map
 ## 贡献
 
 ```bash
-$ npm i
-$ npm run dev
+$ sudo npm i
+$ sudo npm run dev
 ```
