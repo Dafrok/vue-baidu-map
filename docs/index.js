@@ -62,19 +62,11 @@
 
 	var _routes2 = _interopRequireDefault(_routes);
 
-	var _index = __webpack_require__(27);
+	var _index = __webpack_require__(28);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _Map = __webpack_require__(42);
-
-	var _Map2 = _interopRequireDefault(_Map);
-
-	var _Controls = __webpack_require__(45);
-
-	var _Controls2 = _interopRequireDefault(_Controls);
-
-	var _highlight = __webpack_require__(46);
+	var _highlight = __webpack_require__(45);
 
 	var _highlight2 = _interopRequireDefault(_highlight);
 
@@ -84,9 +76,6 @@
 	_vue2.default.use(_index2.default, {
 	  ak: 'oW2UEhdth2tRbEE4FUpF9E5YVDCIPYih'
 	});
-
-	_vue2.default.component('demo-map', _Map2.default);
-	_vue2.default.component('demo-controls', _Controls2.default);
 
 	var router = new _vueRouter2.default({
 	  routes: _routes2.default,
@@ -8522,7 +8511,7 @@
 	__vue_exports__ = __webpack_require__(9)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(25)
+	var __vue_template__ = __webpack_require__(26)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -8951,8 +8940,7 @@
 	      this.$nextTick(function () {
 	        _this.subMenu.splice(0, _this.subMenu.length);
 	        var $doc = document.querySelector('.doc');
-	        var $subDocs = $doc.querySelectorAll('h2');
-	        $subDocs.forEach(function (item) {
+	        var $subDocs = $doc.querySelectorAll('h2');[].forEach.call($subDocs, function (item) {
 	          _this.subMenu.push({ name: item.innerText, $el: item });
 	        });
 	      });
@@ -9372,7 +9360,7 @@
 
 	var _map2 = _interopRequireDefault(_map);
 
-	var _controls = __webpack_require__(22);
+	var _controls = __webpack_require__(23);
 
 	var _controls2 = _interopRequireDefault(_controls);
 
@@ -9452,9 +9440,11 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('section', [_c('h1', [_vm._v("开始使用")]), _vm._v(" "), _c('h2', [_vm._v("安装")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h2', [_vm._v("组件挂载")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h2', [_vm._v("快速上手")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
-	    staticClass: "map"
-	  })], 1)], 1)
+	  return _c('section', [
+	    [_c('h1', [_vm._v("开始使用")]), _vm._v(" "), _c('h2', [_vm._v("安装")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h2', [_vm._v("组件挂载")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h2', [_vm._v("快速上手")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	      staticClass: "map"
+	    })], 1)]
+	  ], 2)
 	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('pre', [_c('code', {
 	    staticClass: "language-shell"
@@ -9549,8 +9539,11 @@
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
+	/* script */
+	__vue_exports__ = __webpack_require__(21)
+
 	/* template */
-	var __vue_template__ = __webpack_require__(21)
+	var __vue_template__ = __webpack_require__(22)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -9562,7 +9555,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/.cache/map-2.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/.cache/map-3.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -9573,51 +9566,609 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-48c6bbdb", __vue_options__)
+	    hotAPI.createRecord("data-v-48d4d35c", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-48c6bbdb", __vue_options__)
+	    hotAPI.reload("data-v-48d4d35c", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] map-2.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] map-3.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
 
 /***/ },
 /* 21 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	exports.default = {
+	  data: function data() {
+	    return {
+	      center: {
+	        longitude: 116.404,
+	        latitude: 39.915
+	      },
+	      zoom: 15
+	    };
+	  },
+
+	  methods: {
+	    syncCenter: function syncCenter(e) {
+	      var _e$target$getCenter = e.target.getCenter(),
+	          lng = _e$target$getCenter.lng,
+	          lat = _e$target$getCenter.lat;
+
+	      this.center.longitude = lng;
+	      this.center.latitude = lat;
+	    },
+	    syncZoom: function syncZoom(e) {
+	      this.zoom = e.target.getZoom();
+	    }
+	  }
+	};
+
+/***/ },
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('section', [_c('h1', [_vm._v("地图组件")]), _vm._v(" "), _c('h2', [_vm._v("BaiduMap")]), _vm._v(" "), _c('p', [_vm._v("地图容器，用于控制其它组件实例，是所有地图组件的根节点。")]), _vm._v(" "), _c('p', [_vm._v("###实例属性")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h2', [_vm._v("MapView")]), _vm._v(" "), _c('p', [_vm._v("百度地图实例容器，是地图的可视化操作区域，每一个 baidu-map 组件应对应唯一一个 bmap-view 组件。")]), _vm._v(" "), _c('h3', [_vm._v("实例属性")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('h3', [_vm._v("设置经纬度和缩放等级")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
-	    staticClass: "map",
-	    attrs: {
-	      "center": {
-	        longitude: 116.404,
-	        latitude: 39.915
+	  return _c('section', [
+	    [_c('h1', [_vm._v("地图组件")]), _vm._v(" "), _c('h2', [_vm._v("BaiduMap")]), _vm._v(" "), _c('p', [_vm._v("百度地图容器，用于控制其它组件实例，本身不用于渲染地图，是所有地图组件的根节点。")]), _vm._v(" "), _c('h3', [_vm._v("实例属性")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h2', [_vm._v("MapView")]), _vm._v(" "), _c('p', [_vm._v("百度地图实例容器，是地图的可视化操作区域，每一个 baidu-map 组件应对应唯一一个 bmap-view 组件。")]), _vm._v(" "), _c('h3', [_vm._v("实例属性")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('h3', [_vm._v("设置经纬度和缩放等级")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	      staticClass: "map",
+	      attrs: {
+	        "center": {
+	          longitude: 116.404,
+	          latitude: 39.915
+	        },
+	        "zoom": 15
+	      }
+	    })], 1), _vm._v(" "), _c('h3', [_vm._v("开启滚轮缩放")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(4), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), [_c('baidu-map', [_c('map-view', {
+	      staticClass: "map",
+	      attrs: {
+	        "center": {
+	          longitude: 116.404,
+	          latitude: 39.915
+	        },
+	        "zoom": 15,
+	        "scroll-wheel-zoom": true
+	      }
+	    })], 1)], _vm._v(" "), _c('h3', [_vm._v("设置地图类型")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(5), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), [_c('baidu-map', [_c('map-view', {
+	      staticClass: "map",
+	      attrs: {
+	        "center": {
+	          longitude: 116.404,
+	          latitude: 39.915
+	        },
+	        "zoom": 15,
+	        "mapType": "BMAP_SATELLITE_MAP"
+	      }
+	    })], 1)], _vm._v(" "), _c('h3', [_vm._v("双向绑定")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(6), _vm._v(" "), _c('h4', [_vm._v("示例")]), _vm._v(" "), _c('div', {
+	      staticClass: "columns"
+	    }, [_c('div', {
+	      staticClass: "column is-3"
+	    }, [_c('div', {
+	      staticClass: "box"
+	    }, [_c('label', {
+	      staticClass: "label"
+	    }, [_vm._v("经度")]), _vm._v(" "), _c('p', {
+	      staticClass: "control"
+	    }, [_c('input', {
+	      directives: [{
+	        name: "model",
+	        rawName: "v-model.number",
+	        value: (_vm.center.longitude),
+	        expression: "center.longitude",
+	        modifiers: {
+	          "number": true
+	        }
+	      }],
+	      staticClass: "input is-small",
+	      domProps: {
+	        "value": _vm._s(_vm.center.longitude)
 	      },
-	      "zoom": 15
-	    }
-	  })], 1), _vm._v(" "), _c('h3', [_vm._v("开启滚轮缩放")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(4), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), [_c('baidu-map', [_c('map-view', {
-	    staticClass: "map",
-	    attrs: {
-	      "center": {
-	        longitude: 116.404,
-	        latitude: 39.915
+	      on: {
+	        "input": function($event) {
+	          if ($event.target.composing) { return; }
+	          _vm.center.longitude = _vm._n($event.target.value)
+	        },
+	        "blur": function($event) {
+	          _vm.$forceUpdate()
+	        }
+	      }
+	    })]), _vm._v(" "), _c('label', {
+	      staticClass: "label"
+	    }, [_vm._v("纬度")]), _vm._v(" "), _c('p', {
+	      staticClass: "control"
+	    }, [_c('input', {
+	      directives: [{
+	        name: "model",
+	        rawName: "v-model.number",
+	        value: (_vm.center.latitude),
+	        expression: "center.latitude",
+	        modifiers: {
+	          "number": true
+	        }
+	      }],
+	      staticClass: "input is-small",
+	      domProps: {
+	        "value": _vm._s(_vm.center.latitude)
 	      },
-	      "zoom": 15,
-	      "scroll-wheel-zoom": true
-	    }
-	  })], 1)], _vm._v(" "), _c('h3', [_vm._v("设置地图类型")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(5), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), [_c('baidu-map', [_c('map-view', {
-	    staticClass: "map",
-	    attrs: {
-	      "center": {
-	        longitude: 116.404,
-	        latitude: 39.915
+	      on: {
+	        "input": function($event) {
+	          if ($event.target.composing) { return; }
+	          _vm.center.latitude = _vm._n($event.target.value)
+	        },
+	        "blur": function($event) {
+	          _vm.$forceUpdate()
+	        }
+	      }
+	    })]), _vm._v(" "), _c('label', {
+	      staticClass: "label"
+	    }, [_vm._v("缩放级别")]), _vm._v(" "), _c('p', {
+	      staticClass: "control"
+	    }, [_c('input', {
+	      directives: [{
+	        name: "model",
+	        rawName: "v-model.number",
+	        value: (_vm.zoom),
+	        expression: "zoom",
+	        modifiers: {
+	          "number": true
+	        }
+	      }],
+	      staticClass: "input is-small",
+	      attrs: {
+	        "type": "number"
 	      },
-	      "zoom": 15,
-	      "mapType": "BMAP_SATELLITE_MAP"
-	    }
-	  })], 1)], _vm._v(" "), _c('h3', [_vm._v("双向绑定")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(6), _vm._v(" "), _c('h4', [_vm._v("示例")]), _vm._v(" "), _c('demo-map')], 2)
+	      domProps: {
+	        "value": _vm._s(_vm.zoom)
+	      },
+	      on: {
+	        "input": function($event) {
+	          if ($event.target.composing) { return; }
+	          _vm.zoom = _vm._n($event.target.value)
+	        },
+	        "blur": function($event) {
+	          _vm.$forceUpdate()
+	        }
+	      }
+	    })])])]), _vm._v(" "), _c('div', {
+	      staticClass: "column is-9"
+	    }, [_c('baidu-map', [_c('map-view', {
+	      staticClass: "map",
+	      attrs: {
+	        "scroll-wheel-zoom": true,
+	        "center": _vm.center,
+	        "zoom": _vm.zoom
+	      },
+	      on: {
+	        "moving": _vm.syncCenter,
+	        "moveend": _vm.syncCenter,
+	        "zoomend": _vm.syncZoom
+	      }
+	    })], 1)], 1)])]
+	  ], 2)
 	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
 	    staticStyle: {
@@ -10141,25 +10692,25 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-48c6bbdb", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-48d4d35c", module.exports)
 	  }
 	}
 
 /***/ },
-/* 22 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(23);
+	module.exports = __webpack_require__(24);
 
 /***/ },
-/* 23 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* template */
-	var __vue_template__ = __webpack_require__(24)
+	var __vue_template__ = __webpack_require__(25)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -10171,7 +10722,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/.cache/controls-3.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/.cache/controls-2.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -10182,47 +10733,56 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-29f076f2", __vue_options__)
+	    hotAPI.createRecord("data-v-29e25f71", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-29f076f2", __vue_options__)
+	    hotAPI.reload("data-v-29e25f71", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] controls-3.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] controls-2.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
 
 /***/ },
-/* 24 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('section', [_c('h1', [_vm._v("控件组件")]), _vm._v(" "), _c('p', [_vm._v("控件组件是属于 MapView 组件的子组件，通过声明这些在 MapView 上增加地图的控件。")]), _vm._v(" "), _c('h2', [_vm._v("比例尺控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在右上角加入比例尺控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
-	    staticClass: "map"
-	  }, [_c('map-control-scale', {
-	    attrs: {
-	      "anchor": "BMAP_ANCHOR_TOP_RIGHT"
-	    }
-	  }, [_c('map-view')], 1)], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("缩放控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在右上角加入缩放控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
-	    staticClass: "map"
-	  }, [_c('map-control-navigation', {
-	    attrs: {
-	      "anchor": "BMAP_ANCHOR_TOP_RIGHT"
-	    }
-	  }, [_c('map-view')], 1)], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("地图类型控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(4), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图左上角加入地图类型控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(5), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
-	    staticClass: "map"
-	  }, [_c('map-control-map-type', {
-	    attrs: {
-	      "map-types": ['BMAP_NORMAL_MAP', 'BMAP_HYBRID_MAP'],
-	      "anchor": "BMAP_ANCHOR_TOP_LEFT"
-	    }
-	  }, [_c('map-view')], 1)], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("缩略图控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(6), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(7), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图右下角加入缩略图控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(8), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
-	    staticClass: "map"
-	  }, [_c('map-control-overview-map', {
-	    attrs: {
-	      "anchor": "BMAP_ANCHOR_BOTTM_RIGHT"
-	    }
-	  }, [_c('map-view')], 1)], 1)], 1)], 1)
+	  return _c('section', [
+	    [_c('h1', [_vm._v("控件组件")]), _vm._v(" "), _c('p', [_vm._v("控件组件是属于 MapView 组件的子组件，通过声明这些在 MapView 上增加地图的控件。")]), _vm._v(" "), _c('h2', [_vm._v("MapControlScale")]), _vm._v(" "), _c('p', [_vm._v("比例尺控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在右上角加入比例尺控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	      staticClass: "map"
+	    }, [_c('map-control-scale', {
+	      attrs: {
+	        "anchor": "BMAP_ANCHOR_TOP_RIGHT"
+	      }
+	    }, [_c('map-view')], 1)], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("MapControlNavigation")]), _vm._v(" "), _c('p', [_vm._v("缩放控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在右上角加入缩放控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	      staticClass: "map"
+	    }, [_c('map-control-navigation', {
+	      attrs: {
+	        "anchor": "BMAP_ANCHOR_TOP_RIGHT"
+	      }
+	    }, [_c('map-view')], 1)], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("MapControlMapType")]), _vm._v(" "), _c('p', [_vm._v("地图类型控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(4), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图左上角加入地图类型控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(5), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	      staticClass: "map"
+	    }, [_c('map-control-map-type', {
+	      attrs: {
+	        "map-types": ['BMAP_NORMAL_MAP', 'BMAP_HYBRID_MAP'],
+	        "anchor": "BMAP_ANCHOR_TOP_LEFT"
+	      }
+	    }, [_c('map-view')], 1)], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("MapControlOverviewMap")]), _vm._v(" "), _c('p', [_vm._v("缩略图控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(6), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(7), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图右下角加入缩略图控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(8), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	      staticClass: "map"
+	    }, [_c('map-control-overview-map', {
+	      attrs: {
+	        "anchor": "BMAP_ANCHOR_BOTTOM_RIGHT"
+	      }
+	    }, [_c('map-view')], 1)], 1)], 1)], _vm._v(" "), _c('h2', [_vm._v("MapControlGeolocation")]), _vm._v(" "), _c('p', [_vm._v("定位控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(9), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(10), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图右下角加入定位控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(11), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	      staticClass: "map"
+	    }, [_c('map-control-geolocation', {
+	      attrs: {
+	        "anchor": "BMAP_ANCHOR_BOTTOM_RIGHT",
+	        "showAddressBar": true
+	      }
+	    }, [_c('map-view')], 1)], 1)], 1)
+	  ], 2)
 	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
 	    staticStyle: {
@@ -10548,7 +11108,115 @@
 	    staticClass: "hljs-attr"
 	  }, [_vm._v("anchor")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"BMAP_ANCHOR_BOTTM_RIGHT\"")]), _vm._v("//>")]), _vm._v("\n    "), _c('span', {
+	  }, [_vm._v("\"BMAP_ANCHOR_BOTTOM_RIGHT\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v("/>")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("类型")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("默认值")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("anchor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("ControlAnchor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("控件停靠位置")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("offset")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Size")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("控件偏移值")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("showAddressBar")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("是否显示定位信息面板。默认显示定位信息面板")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("enableAutoLocation")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("false")]), _vm._v(" "), _c('td', [_vm._v("添加控件时是否进行定位。默认添加控件时不进行定位")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("locationIcon")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Icon")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("可自定义定位中心点的Icon样式")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("事件名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("参数")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("locationSuccess")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{point, AddressComponent}")]), _vm._v(" "), _c('td', [_vm._v("定位成功后触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("locationError")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{StatusCode}")]), _vm._v(" "), _c('td', [_vm._v("定位失败后触发此事件")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-control-geolocation")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("anchor")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"BMAP_ANCHOR_BOTTOM_RIGHT\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":showAddressBar")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"true\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("<"), _c('span', {
 	    staticClass: "hljs-name"
@@ -10566,12 +11234,12 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-29f076f2", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-29e25f71", module.exports)
 	  }
 	}
 
 /***/ },
-/* 25 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -10642,7 +11310,7 @@
 	  }, [_c('img', {
 	    staticClass: "logo",
 	    attrs: {
-	      "src": __webpack_require__(26)
+	      "src": __webpack_require__(27)
 	    }
 	  }), _c('span', [_vm._v("VUE BAIDU MAP")]), _c('span', [_vm._v("  ")]), _c('span', {
 	    staticStyle: {
@@ -10679,13 +11347,13 @@
 	}
 
 /***/ },
-/* 26 */
+/* 27 */
 /***/ function(module, exports) {
 
 	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2lpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo2MzAyQTc0N0EyNzcxMUU2QThBREJCMjIxNjkxM0RFQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEQUUxNTZGOERBRTYxMUU2QjFGQkI3RTU2NkM2NzI3MSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEQUUxNTZGN0RBRTYxMUU2QjFGQkI3RTU2NkM2NzI3MSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OThmNTkyMzctMGZiOS0zMTQ5LTk4ODQtZDMxNDY4ZTRmYmI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjYzMDJBNzQ3QTI3NzExRTZBOEFEQkIyMjE2OTEzREVDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+zxA55AAAAGBQTFRFQbiD6+vrxez/uOHvzu+PNkpf////kNS76Pf/ZMScRXv9xM3Q4jo/QIR1lLn+1/L/7vn/y9n5weSAg5qe9fb13vSz3OHfwN7R1JSgT3708fvgvrvD3/Pr+Pz5vufXAAAAiuIJ/AAAACB0Uk5T/////////////////////////////////////////wBcXBvtAAADkklEQVR42rTa7XajIBAGYBCDum62qbV028Tm/u+yfocZGBga4a+V57zMqKcEcYejNUY+OYxBc94FEORRw7QEchwxj9aDHExMaRzkeMMKsyJGyozKgkgtcyozYrTOqojVyKZsiNYZFbMgUmdV2hnROq8yIVJnViZE68yKwUgW5S6kzq7cRa+zK624QKIS9jifrPGG7n2zL57BfQ0siiigcgN/LOx5TvBNbcA1eNsHRpASiHL+XRApRwQqQ0NHudoLHQhiPAhUPgILZt19poNU0odApeHU/poQZEWA8s2JckoIsiFAYbRxQtUtxFbibcxvX4jYSrSN04JYiKXE2jilfRFiKZE2TmlfjFhKsI2viUEg8lBCbdymBkHIQwnU/pRWdRfZlVAbJ7WvD9kVXhRWEBcp6ngbJ1Xdi2zKNyMKp+p+ZFOauAIXy6QgqxKvPTOIH1mVWO15VSeRRYlFYbVvAFk6ORyFHYREZiXcxrz2DSKzEnqFcaseRGYl0MbM9o0gU/Xp2p+5VY8gk0LVnl/1GDIqVBSRECSCjIo/SlKQGFLUvbeN+e3LQYra18YJ7ctCitrTxmlBGEjhRkkMwkEKHCWt6lJqDqJQlKT2HQ0WUsA2FmlBBiaCFiyp6qPBROgoFcNgImSUxjAMLqII5INjcBEiSsMy2Ij6RZDNYCPe2lfB3Z7H1hAbUZ4Fu4X2lKztJzaCX2FzkMDOlb3FxUYGjaM0yzx91GAjw4A/LOJ7naKPGVzkcqnrGta+2efoIwYTqSejvuGqUwrechTsHCNU4ar7FWdbUyQY4Im8aUpxjK848rIb9hNZoYl62hhKwTVewCuscabqaaMTUaO2jH3Bqov2Kz4jlgQZW5Rm/+8VKY6hRyOCOMYaRU3XXMVIrxFGXGOpfbNcdRW/EUR8xrxgqiAUPN5nI4QsxgUZY5Rq/wueEUAIY1RUwVM2g0bq1Yh0H8cgkfrxmP9SeRgUwjVoxTKIJ55vUIpljIh60vArtjEi7bNGoVzlyzbKu7g/a+CfkhzDh1xSjSFidCPSZjbK+Qdm+hN1iNHNSHusUZY4yPyjvwq/dtNqXrpBljMS6jBj8BnraY+8xoq0tPH6H49/eNQRYz+Bo6jPx/UvHp9/0HiNGI+zRIb4fCQglGGdimr9jyAfKTs/Ac93Gd9jzkag0XXUITLrkUlGwAekC5xU2xZOrYNCPuF47fv+vduGZ8IfAQYAWeWoVZ0Ri4oAAAAASUVORK5CYII="
 
 /***/ },
-/* 27 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10694,29 +11362,33 @@
 	  value: true
 	});
 
-	var _Map = __webpack_require__(28);
+	var _Map = __webpack_require__(29);
 
 	var _Map2 = _interopRequireDefault(_Map);
 
-	var _MapView = __webpack_require__(31);
+	var _MapView = __webpack_require__(32);
 
 	var _MapView2 = _interopRequireDefault(_MapView);
 
-	var _Scale = __webpack_require__(34);
+	var _Scale = __webpack_require__(35);
 
 	var _Scale2 = _interopRequireDefault(_Scale);
 
-	var _Navigation = __webpack_require__(36);
+	var _Navigation = __webpack_require__(37);
 
 	var _Navigation2 = _interopRequireDefault(_Navigation);
 
-	var _MapType = __webpack_require__(38);
+	var _MapType = __webpack_require__(39);
 
 	var _MapType2 = _interopRequireDefault(_MapType);
 
-	var _OverviewMap = __webpack_require__(40);
+	var _OverviewMap = __webpack_require__(41);
 
 	var _OverviewMap2 = _interopRequireDefault(_OverviewMap);
+
+	var _Geolocation = __webpack_require__(43);
+
+	var _Geolocation2 = _interopRequireDefault(_Geolocation);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10735,21 +11407,22 @@
 	    Vue.component('map-control-navigation', _Navigation2.default);
 	    Vue.component('map-control-map-type', _MapType2.default);
 	    Vue.component('map-control-overview-map', _OverviewMap2.default);
+	    Vue.component('map-control-geolocation', _Geolocation2.default);
 	  }
 	};
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(29)
+	__vue_exports__ = __webpack_require__(30)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(30)
+	var __vue_template__ = __webpack_require__(31)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -10783,7 +11456,7 @@
 
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -10831,7 +11504,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 30 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -10846,17 +11519,17 @@
 	}
 
 /***/ },
-/* 31 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(32)
+	__vue_exports__ = __webpack_require__(33)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(33)
+	var __vue_template__ = __webpack_require__(34)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -10890,7 +11563,7 @@
 
 
 /***/ },
-/* 32 */
+/* 33 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -11119,7 +11792,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 33 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -11134,14 +11807,14 @@
 	}
 
 /***/ },
-/* 34 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(35)
+	__vue_exports__ = __webpack_require__(36)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -11173,7 +11846,7 @@
 
 
 /***/ },
-/* 35 */
+/* 36 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -11249,14 +11922,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(37)
+	__vue_exports__ = __webpack_require__(38)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -11288,7 +11961,7 @@
 
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -11383,14 +12056,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(39)
+	__vue_exports__ = __webpack_require__(40)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -11422,7 +12095,7 @@
 
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -11503,14 +12176,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(41)
+	__vue_exports__ = __webpack_require__(42)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -11542,7 +12215,7 @@
 
 
 /***/ },
-/* 41 */
+/* 42 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -11651,17 +12324,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 42 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(43)
-
-	/* template */
-	var __vue_template__ = __webpack_require__(44)
+	__vue_exports__ = __webpack_require__(44)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -11673,9 +12343,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/docs/src/components/demos/Map.vue"
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/Geolocation.vue"
 
 	/* hot reload */
 	if (false) {(function () {
@@ -11684,392 +12352,307 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-7c2f7bee", __vue_options__)
+	    hotAPI.createRecord("data-v-2f3e89bd", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-7c2f7bee", __vue_options__)
+	    hotAPI.reload("data-v-2f3e89bd", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] Map.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] Geolocation.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
 
 /***/ },
-/* 43 */
+/* 44 */
 /***/ function(module, exports) {
 
-	"use strict";
+	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
+
+	var events = ['locationSuccess', 'locationError'];
 
 	exports.default = {
-	  data: function data() {
-	    return {
-	      center: {
-	        longitude: 116.404,
-	        latitude: 39.915
-	      },
-	      zoom: 15
-	    };
+	  name: 'map-control-geolocation',
+	  render: function render(h) {
+	    return;
 	  },
 
-	  methods: {
-	    syncCenter: function syncCenter(e) {
-	      var _e$target$getCenter = e.target.getCenter(),
-	          lng = _e$target$getCenter.lng,
-	          lat = _e$target$getCenter.lat;
-
-	      this.center.longitude = lng;
-	      this.center.latitude = lat;
+	  props: {
+	    anchor: {
+	      type: String
 	    },
-	    syncZoom: function syncZoom(e) {
-	      this.zoom = e.target.getZoom();
+	    offset: {
+	      type: Object
+	    },
+	    showAddressBar: {
+	      type: Boolean
+	    },
+	    enableAutoLocation: {
+	      type: Boolean
+	    },
+	    locationIcon: {
+	      type: Object
 	    }
+	  },
+	  watch: {
+	    anchor: function anchor() {
+	      this.reloadControl();
+	    },
+	    offset: function offset() {
+	      this.reloadControl();
+	    },
+	    showAddressBar: function showAddressBar() {
+	      this.reloadControl();
+	    },
+	    enableAutoLocation: function enableAutoLocation() {
+	      this.reloadControl();
+	    },
+	    locationIcon: function locationIcon() {
+	      this.reloadControl();
+	    }
+	  },
+	  methods: {
+	    bindEvents: function bindEvents() {
+	      var _this = this;
+
+	      var control = this.control;
+
+	      events.forEach(function (event) {
+	        control.addEventListener(event, function (arg) {
+	          _this.$emit(event, arg);
+	        });
+	      });
+	    },
+	    addControl: function addControl() {
+	      var _$parent = this.$parent,
+	          BMap = _$parent.BMap,
+	          map = _$parent.map;
+
+	      this.control = new BMap.GeolocationControl({
+	        anchor: global[this.anchor],
+	        showAddressBar: this.showAddressBar,
+	        enableAutoLocation: this.enableAutoLocation,
+	        locationIcon: this.locationIcon
+	      });
+	      this.bindEvents();
+	      map.addControl(this.control);
+	    },
+	    removeControl: function removeControl() {
+	      var _this2 = this;
+
+	      this.$nextTick(function () {
+	        var _$parent2 = _this2.$parent,
+	            BMap = _$parent2.BMap,
+	            map = _$parent2.map;
+
+	        map && map.removeControl(_this2.control);
+	      });
+	    },
+	    reloadControl: function reloadControl() {
+	      var _this3 = this;
+
+	      this.$nextTick(function () {
+	        _this3.removeControl();
+	        _this3.addControl();
+	      });
+	    }
+	  },
+	  mounted: function mounted() {
+	    var _this4 = this;
+
+	    this.$parent.$on('ready', function () {
+	      _this4.addControl();
+	    });
+	  },
+	  beforeDestroy: function beforeDestroy() {
+	    this.removeControl();
 	  }
 	};
-
-/***/ },
-/* 44 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "columns"
-	  }, [_c('div', {
-	    staticClass: "column is-3"
-	  }, [_c('div', {
-	    staticClass: "box"
-	  }, [_c('label', {
-	    staticClass: "label"
-	  }, [_vm._v("经度")]), _c('p', {
-	    staticClass: "control"
-	  }, [_c('input', {
-	    directives: [{
-	      name: "model",
-	      rawName: "v-model.number",
-	      value: (_vm.center.longitude),
-	      expression: "center.longitude",
-	      modifiers: {
-	        "number": true
-	      }
-	    }],
-	    staticClass: "input is-small",
-	    domProps: {
-	      "value": _vm._s(_vm.center.longitude)
-	    },
-	    on: {
-	      "input": function($event) {
-	        if ($event.target.composing) { return; }
-	        _vm.center.longitude = _vm._n($event.target.value)
-	      },
-	      "blur": function($event) {
-	        _vm.$forceUpdate()
-	      }
-	    }
-	  })]), _c('label', {
-	    staticClass: "label"
-	  }, [_vm._v("纬度")]), _c('p', {
-	    staticClass: "control"
-	  }, [_c('input', {
-	    directives: [{
-	      name: "model",
-	      rawName: "v-model.number",
-	      value: (_vm.center.latitude),
-	      expression: "center.latitude",
-	      modifiers: {
-	        "number": true
-	      }
-	    }],
-	    staticClass: "input is-small",
-	    domProps: {
-	      "value": _vm._s(_vm.center.latitude)
-	    },
-	    on: {
-	      "input": function($event) {
-	        if ($event.target.composing) { return; }
-	        _vm.center.latitude = _vm._n($event.target.value)
-	      },
-	      "blur": function($event) {
-	        _vm.$forceUpdate()
-	      }
-	    }
-	  })]), _c('label', {
-	    staticClass: "label"
-	  }, [_vm._v("缩放级别")]), _c('p', {
-	    staticClass: "control"
-	  }, [_c('input', {
-	    directives: [{
-	      name: "model",
-	      rawName: "v-model.number",
-	      value: (_vm.zoom),
-	      expression: "zoom",
-	      modifiers: {
-	        "number": true
-	      }
-	    }],
-	    staticClass: "input is-small",
-	    attrs: {
-	      "type": "number"
-	    },
-	    domProps: {
-	      "value": _vm._s(_vm.zoom)
-	    },
-	    on: {
-	      "input": function($event) {
-	        if ($event.target.composing) { return; }
-	        _vm.zoom = _vm._n($event.target.value)
-	      },
-	      "blur": function($event) {
-	        _vm.$forceUpdate()
-	      }
-	    }
-	  })])])]), _c('div', {
-	    staticClass: "column is-9"
-	  }, [_c('baidu-map', [_c('map-view', {
-	    staticClass: "map",
-	    attrs: {
-	      "scroll-wheel-zoom": true,
-	      "center": _vm.center,
-	      "zoom": _vm.zoom
-	    },
-	    on: {
-	      "moving": _vm.syncCenter,
-	      "moveend": _vm.syncCenter,
-	      "zoomend": _vm.syncZoom
-	    }
-	  })], 1)], 1)])
-	},staticRenderFns: []}
-	module.exports.render._withStripped = true
-	if (false) {
-	  module.hot.accept()
-	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-7c2f7bee", module.exports)
-	  }
-	}
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
 /* 45 */
-/***/ function(module, exports) {
-
-	var __vue_exports__, __vue_options__
-	var __vue_styles__ = {}
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/docs/src/components/demos/Controls.vue"
-	if (__vue_options__.functional) {console.error("[vue-loader] Controls.vue: functional components are not supported and should be defined in plain js files using render functions.")}
-
-	module.exports = __vue_exports__
-
-
-/***/ },
-/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var hljs = __webpack_require__(47);
+	var hljs = __webpack_require__(46);
 
-	hljs.registerLanguage('1c', __webpack_require__(48));
-	hljs.registerLanguage('abnf', __webpack_require__(49));
-	hljs.registerLanguage('accesslog', __webpack_require__(50));
-	hljs.registerLanguage('actionscript', __webpack_require__(51));
-	hljs.registerLanguage('ada', __webpack_require__(52));
-	hljs.registerLanguage('apache', __webpack_require__(53));
-	hljs.registerLanguage('applescript', __webpack_require__(54));
-	hljs.registerLanguage('cpp', __webpack_require__(55));
-	hljs.registerLanguage('arduino', __webpack_require__(56));
-	hljs.registerLanguage('armasm', __webpack_require__(57));
-	hljs.registerLanguage('xml', __webpack_require__(58));
-	hljs.registerLanguage('asciidoc', __webpack_require__(59));
-	hljs.registerLanguage('aspectj', __webpack_require__(60));
-	hljs.registerLanguage('autohotkey', __webpack_require__(61));
-	hljs.registerLanguage('autoit', __webpack_require__(62));
-	hljs.registerLanguage('avrasm', __webpack_require__(63));
-	hljs.registerLanguage('awk', __webpack_require__(64));
-	hljs.registerLanguage('axapta', __webpack_require__(65));
-	hljs.registerLanguage('bash', __webpack_require__(66));
-	hljs.registerLanguage('basic', __webpack_require__(67));
-	hljs.registerLanguage('bnf', __webpack_require__(68));
-	hljs.registerLanguage('brainfuck', __webpack_require__(69));
-	hljs.registerLanguage('cal', __webpack_require__(70));
-	hljs.registerLanguage('capnproto', __webpack_require__(71));
-	hljs.registerLanguage('ceylon', __webpack_require__(72));
-	hljs.registerLanguage('clean', __webpack_require__(73));
-	hljs.registerLanguage('clojure', __webpack_require__(74));
-	hljs.registerLanguage('clojure-repl', __webpack_require__(75));
-	hljs.registerLanguage('cmake', __webpack_require__(76));
-	hljs.registerLanguage('coffeescript', __webpack_require__(77));
-	hljs.registerLanguage('coq', __webpack_require__(78));
-	hljs.registerLanguage('cos', __webpack_require__(79));
-	hljs.registerLanguage('crmsh', __webpack_require__(80));
-	hljs.registerLanguage('crystal', __webpack_require__(81));
-	hljs.registerLanguage('cs', __webpack_require__(82));
-	hljs.registerLanguage('csp', __webpack_require__(83));
-	hljs.registerLanguage('css', __webpack_require__(84));
-	hljs.registerLanguage('d', __webpack_require__(85));
-	hljs.registerLanguage('markdown', __webpack_require__(86));
-	hljs.registerLanguage('dart', __webpack_require__(87));
-	hljs.registerLanguage('delphi', __webpack_require__(88));
-	hljs.registerLanguage('diff', __webpack_require__(89));
-	hljs.registerLanguage('django', __webpack_require__(90));
-	hljs.registerLanguage('dns', __webpack_require__(91));
-	hljs.registerLanguage('dockerfile', __webpack_require__(92));
-	hljs.registerLanguage('dos', __webpack_require__(93));
-	hljs.registerLanguage('dsconfig', __webpack_require__(94));
-	hljs.registerLanguage('dts', __webpack_require__(95));
-	hljs.registerLanguage('dust', __webpack_require__(96));
-	hljs.registerLanguage('ebnf', __webpack_require__(97));
-	hljs.registerLanguage('elixir', __webpack_require__(98));
-	hljs.registerLanguage('elm', __webpack_require__(99));
-	hljs.registerLanguage('ruby', __webpack_require__(100));
-	hljs.registerLanguage('erb', __webpack_require__(101));
-	hljs.registerLanguage('erlang-repl', __webpack_require__(102));
-	hljs.registerLanguage('erlang', __webpack_require__(103));
-	hljs.registerLanguage('excel', __webpack_require__(104));
-	hljs.registerLanguage('fix', __webpack_require__(105));
-	hljs.registerLanguage('flix', __webpack_require__(106));
-	hljs.registerLanguage('fortran', __webpack_require__(107));
-	hljs.registerLanguage('fsharp', __webpack_require__(108));
-	hljs.registerLanguage('gams', __webpack_require__(109));
-	hljs.registerLanguage('gauss', __webpack_require__(110));
-	hljs.registerLanguage('gcode', __webpack_require__(111));
-	hljs.registerLanguage('gherkin', __webpack_require__(112));
-	hljs.registerLanguage('glsl', __webpack_require__(113));
-	hljs.registerLanguage('go', __webpack_require__(114));
-	hljs.registerLanguage('golo', __webpack_require__(115));
-	hljs.registerLanguage('gradle', __webpack_require__(116));
-	hljs.registerLanguage('groovy', __webpack_require__(117));
-	hljs.registerLanguage('haml', __webpack_require__(118));
-	hljs.registerLanguage('handlebars', __webpack_require__(119));
-	hljs.registerLanguage('haskell', __webpack_require__(120));
-	hljs.registerLanguage('haxe', __webpack_require__(121));
-	hljs.registerLanguage('hsp', __webpack_require__(122));
-	hljs.registerLanguage('htmlbars', __webpack_require__(123));
-	hljs.registerLanguage('http', __webpack_require__(124));
-	hljs.registerLanguage('inform7', __webpack_require__(125));
-	hljs.registerLanguage('ini', __webpack_require__(126));
-	hljs.registerLanguage('irpf90', __webpack_require__(127));
-	hljs.registerLanguage('java', __webpack_require__(128));
-	hljs.registerLanguage('javascript', __webpack_require__(129));
-	hljs.registerLanguage('json', __webpack_require__(130));
-	hljs.registerLanguage('julia', __webpack_require__(131));
-	hljs.registerLanguage('kotlin', __webpack_require__(132));
-	hljs.registerLanguage('lasso', __webpack_require__(133));
-	hljs.registerLanguage('ldif', __webpack_require__(134));
-	hljs.registerLanguage('less', __webpack_require__(135));
-	hljs.registerLanguage('lisp', __webpack_require__(136));
-	hljs.registerLanguage('livecodeserver', __webpack_require__(137));
-	hljs.registerLanguage('livescript', __webpack_require__(138));
-	hljs.registerLanguage('llvm', __webpack_require__(139));
-	hljs.registerLanguage('lsl', __webpack_require__(140));
-	hljs.registerLanguage('lua', __webpack_require__(141));
-	hljs.registerLanguage('makefile', __webpack_require__(142));
-	hljs.registerLanguage('mathematica', __webpack_require__(143));
-	hljs.registerLanguage('matlab', __webpack_require__(144));
-	hljs.registerLanguage('maxima', __webpack_require__(145));
-	hljs.registerLanguage('mel', __webpack_require__(146));
-	hljs.registerLanguage('mercury', __webpack_require__(147));
-	hljs.registerLanguage('mipsasm', __webpack_require__(148));
-	hljs.registerLanguage('mizar', __webpack_require__(149));
-	hljs.registerLanguage('perl', __webpack_require__(150));
-	hljs.registerLanguage('mojolicious', __webpack_require__(151));
-	hljs.registerLanguage('monkey', __webpack_require__(152));
-	hljs.registerLanguage('moonscript', __webpack_require__(153));
-	hljs.registerLanguage('nginx', __webpack_require__(154));
-	hljs.registerLanguage('nimrod', __webpack_require__(155));
-	hljs.registerLanguage('nix', __webpack_require__(156));
-	hljs.registerLanguage('nsis', __webpack_require__(157));
-	hljs.registerLanguage('objectivec', __webpack_require__(158));
-	hljs.registerLanguage('ocaml', __webpack_require__(159));
-	hljs.registerLanguage('openscad', __webpack_require__(160));
-	hljs.registerLanguage('oxygene', __webpack_require__(161));
-	hljs.registerLanguage('parser3', __webpack_require__(162));
-	hljs.registerLanguage('pf', __webpack_require__(163));
-	hljs.registerLanguage('php', __webpack_require__(164));
-	hljs.registerLanguage('pony', __webpack_require__(165));
-	hljs.registerLanguage('powershell', __webpack_require__(166));
-	hljs.registerLanguage('processing', __webpack_require__(167));
-	hljs.registerLanguage('profile', __webpack_require__(168));
-	hljs.registerLanguage('prolog', __webpack_require__(169));
-	hljs.registerLanguage('protobuf', __webpack_require__(170));
-	hljs.registerLanguage('puppet', __webpack_require__(171));
-	hljs.registerLanguage('purebasic', __webpack_require__(172));
-	hljs.registerLanguage('python', __webpack_require__(173));
-	hljs.registerLanguage('q', __webpack_require__(174));
-	hljs.registerLanguage('qml', __webpack_require__(175));
-	hljs.registerLanguage('r', __webpack_require__(176));
-	hljs.registerLanguage('rib', __webpack_require__(177));
-	hljs.registerLanguage('roboconf', __webpack_require__(178));
-	hljs.registerLanguage('rsl', __webpack_require__(179));
-	hljs.registerLanguage('ruleslanguage', __webpack_require__(180));
-	hljs.registerLanguage('rust', __webpack_require__(181));
-	hljs.registerLanguage('scala', __webpack_require__(182));
-	hljs.registerLanguage('scheme', __webpack_require__(183));
-	hljs.registerLanguage('scilab', __webpack_require__(184));
-	hljs.registerLanguage('scss', __webpack_require__(185));
-	hljs.registerLanguage('smali', __webpack_require__(186));
-	hljs.registerLanguage('smalltalk', __webpack_require__(187));
-	hljs.registerLanguage('sml', __webpack_require__(188));
-	hljs.registerLanguage('sqf', __webpack_require__(189));
-	hljs.registerLanguage('sql', __webpack_require__(190));
-	hljs.registerLanguage('stan', __webpack_require__(191));
-	hljs.registerLanguage('stata', __webpack_require__(192));
-	hljs.registerLanguage('step21', __webpack_require__(193));
-	hljs.registerLanguage('stylus', __webpack_require__(194));
-	hljs.registerLanguage('subunit', __webpack_require__(195));
-	hljs.registerLanguage('swift', __webpack_require__(196));
-	hljs.registerLanguage('taggerscript', __webpack_require__(197));
-	hljs.registerLanguage('yaml', __webpack_require__(198));
-	hljs.registerLanguage('tap', __webpack_require__(199));
-	hljs.registerLanguage('tcl', __webpack_require__(200));
-	hljs.registerLanguage('tex', __webpack_require__(201));
-	hljs.registerLanguage('thrift', __webpack_require__(202));
-	hljs.registerLanguage('tp', __webpack_require__(203));
-	hljs.registerLanguage('twig', __webpack_require__(204));
-	hljs.registerLanguage('typescript', __webpack_require__(205));
-	hljs.registerLanguage('vala', __webpack_require__(206));
-	hljs.registerLanguage('vbnet', __webpack_require__(207));
-	hljs.registerLanguage('vbscript', __webpack_require__(208));
-	hljs.registerLanguage('vbscript-html', __webpack_require__(209));
-	hljs.registerLanguage('verilog', __webpack_require__(210));
-	hljs.registerLanguage('vhdl', __webpack_require__(211));
-	hljs.registerLanguage('vim', __webpack_require__(212));
-	hljs.registerLanguage('x86asm', __webpack_require__(213));
-	hljs.registerLanguage('xl', __webpack_require__(214));
-	hljs.registerLanguage('xquery', __webpack_require__(215));
-	hljs.registerLanguage('zephir', __webpack_require__(216));
+	hljs.registerLanguage('1c', __webpack_require__(47));
+	hljs.registerLanguage('abnf', __webpack_require__(48));
+	hljs.registerLanguage('accesslog', __webpack_require__(49));
+	hljs.registerLanguage('actionscript', __webpack_require__(50));
+	hljs.registerLanguage('ada', __webpack_require__(51));
+	hljs.registerLanguage('apache', __webpack_require__(52));
+	hljs.registerLanguage('applescript', __webpack_require__(53));
+	hljs.registerLanguage('cpp', __webpack_require__(54));
+	hljs.registerLanguage('arduino', __webpack_require__(55));
+	hljs.registerLanguage('armasm', __webpack_require__(56));
+	hljs.registerLanguage('xml', __webpack_require__(57));
+	hljs.registerLanguage('asciidoc', __webpack_require__(58));
+	hljs.registerLanguage('aspectj', __webpack_require__(59));
+	hljs.registerLanguage('autohotkey', __webpack_require__(60));
+	hljs.registerLanguage('autoit', __webpack_require__(61));
+	hljs.registerLanguage('avrasm', __webpack_require__(62));
+	hljs.registerLanguage('awk', __webpack_require__(63));
+	hljs.registerLanguage('axapta', __webpack_require__(64));
+	hljs.registerLanguage('bash', __webpack_require__(65));
+	hljs.registerLanguage('basic', __webpack_require__(66));
+	hljs.registerLanguage('bnf', __webpack_require__(67));
+	hljs.registerLanguage('brainfuck', __webpack_require__(68));
+	hljs.registerLanguage('cal', __webpack_require__(69));
+	hljs.registerLanguage('capnproto', __webpack_require__(70));
+	hljs.registerLanguage('ceylon', __webpack_require__(71));
+	hljs.registerLanguage('clean', __webpack_require__(72));
+	hljs.registerLanguage('clojure', __webpack_require__(73));
+	hljs.registerLanguage('clojure-repl', __webpack_require__(74));
+	hljs.registerLanguage('cmake', __webpack_require__(75));
+	hljs.registerLanguage('coffeescript', __webpack_require__(76));
+	hljs.registerLanguage('coq', __webpack_require__(77));
+	hljs.registerLanguage('cos', __webpack_require__(78));
+	hljs.registerLanguage('crmsh', __webpack_require__(79));
+	hljs.registerLanguage('crystal', __webpack_require__(80));
+	hljs.registerLanguage('cs', __webpack_require__(81));
+	hljs.registerLanguage('csp', __webpack_require__(82));
+	hljs.registerLanguage('css', __webpack_require__(83));
+	hljs.registerLanguage('d', __webpack_require__(84));
+	hljs.registerLanguage('markdown', __webpack_require__(85));
+	hljs.registerLanguage('dart', __webpack_require__(86));
+	hljs.registerLanguage('delphi', __webpack_require__(87));
+	hljs.registerLanguage('diff', __webpack_require__(88));
+	hljs.registerLanguage('django', __webpack_require__(89));
+	hljs.registerLanguage('dns', __webpack_require__(90));
+	hljs.registerLanguage('dockerfile', __webpack_require__(91));
+	hljs.registerLanguage('dos', __webpack_require__(92));
+	hljs.registerLanguage('dsconfig', __webpack_require__(93));
+	hljs.registerLanguage('dts', __webpack_require__(94));
+	hljs.registerLanguage('dust', __webpack_require__(95));
+	hljs.registerLanguage('ebnf', __webpack_require__(96));
+	hljs.registerLanguage('elixir', __webpack_require__(97));
+	hljs.registerLanguage('elm', __webpack_require__(98));
+	hljs.registerLanguage('ruby', __webpack_require__(99));
+	hljs.registerLanguage('erb', __webpack_require__(100));
+	hljs.registerLanguage('erlang-repl', __webpack_require__(101));
+	hljs.registerLanguage('erlang', __webpack_require__(102));
+	hljs.registerLanguage('excel', __webpack_require__(103));
+	hljs.registerLanguage('fix', __webpack_require__(104));
+	hljs.registerLanguage('flix', __webpack_require__(105));
+	hljs.registerLanguage('fortran', __webpack_require__(106));
+	hljs.registerLanguage('fsharp', __webpack_require__(107));
+	hljs.registerLanguage('gams', __webpack_require__(108));
+	hljs.registerLanguage('gauss', __webpack_require__(109));
+	hljs.registerLanguage('gcode', __webpack_require__(110));
+	hljs.registerLanguage('gherkin', __webpack_require__(111));
+	hljs.registerLanguage('glsl', __webpack_require__(112));
+	hljs.registerLanguage('go', __webpack_require__(113));
+	hljs.registerLanguage('golo', __webpack_require__(114));
+	hljs.registerLanguage('gradle', __webpack_require__(115));
+	hljs.registerLanguage('groovy', __webpack_require__(116));
+	hljs.registerLanguage('haml', __webpack_require__(117));
+	hljs.registerLanguage('handlebars', __webpack_require__(118));
+	hljs.registerLanguage('haskell', __webpack_require__(119));
+	hljs.registerLanguage('haxe', __webpack_require__(120));
+	hljs.registerLanguage('hsp', __webpack_require__(121));
+	hljs.registerLanguage('htmlbars', __webpack_require__(122));
+	hljs.registerLanguage('http', __webpack_require__(123));
+	hljs.registerLanguage('inform7', __webpack_require__(124));
+	hljs.registerLanguage('ini', __webpack_require__(125));
+	hljs.registerLanguage('irpf90', __webpack_require__(126));
+	hljs.registerLanguage('java', __webpack_require__(127));
+	hljs.registerLanguage('javascript', __webpack_require__(128));
+	hljs.registerLanguage('json', __webpack_require__(129));
+	hljs.registerLanguage('julia', __webpack_require__(130));
+	hljs.registerLanguage('kotlin', __webpack_require__(131));
+	hljs.registerLanguage('lasso', __webpack_require__(132));
+	hljs.registerLanguage('ldif', __webpack_require__(133));
+	hljs.registerLanguage('less', __webpack_require__(134));
+	hljs.registerLanguage('lisp', __webpack_require__(135));
+	hljs.registerLanguage('livecodeserver', __webpack_require__(136));
+	hljs.registerLanguage('livescript', __webpack_require__(137));
+	hljs.registerLanguage('llvm', __webpack_require__(138));
+	hljs.registerLanguage('lsl', __webpack_require__(139));
+	hljs.registerLanguage('lua', __webpack_require__(140));
+	hljs.registerLanguage('makefile', __webpack_require__(141));
+	hljs.registerLanguage('mathematica', __webpack_require__(142));
+	hljs.registerLanguage('matlab', __webpack_require__(143));
+	hljs.registerLanguage('maxima', __webpack_require__(144));
+	hljs.registerLanguage('mel', __webpack_require__(145));
+	hljs.registerLanguage('mercury', __webpack_require__(146));
+	hljs.registerLanguage('mipsasm', __webpack_require__(147));
+	hljs.registerLanguage('mizar', __webpack_require__(148));
+	hljs.registerLanguage('perl', __webpack_require__(149));
+	hljs.registerLanguage('mojolicious', __webpack_require__(150));
+	hljs.registerLanguage('monkey', __webpack_require__(151));
+	hljs.registerLanguage('moonscript', __webpack_require__(152));
+	hljs.registerLanguage('nginx', __webpack_require__(153));
+	hljs.registerLanguage('nimrod', __webpack_require__(154));
+	hljs.registerLanguage('nix', __webpack_require__(155));
+	hljs.registerLanguage('nsis', __webpack_require__(156));
+	hljs.registerLanguage('objectivec', __webpack_require__(157));
+	hljs.registerLanguage('ocaml', __webpack_require__(158));
+	hljs.registerLanguage('openscad', __webpack_require__(159));
+	hljs.registerLanguage('oxygene', __webpack_require__(160));
+	hljs.registerLanguage('parser3', __webpack_require__(161));
+	hljs.registerLanguage('pf', __webpack_require__(162));
+	hljs.registerLanguage('php', __webpack_require__(163));
+	hljs.registerLanguage('pony', __webpack_require__(164));
+	hljs.registerLanguage('powershell', __webpack_require__(165));
+	hljs.registerLanguage('processing', __webpack_require__(166));
+	hljs.registerLanguage('profile', __webpack_require__(167));
+	hljs.registerLanguage('prolog', __webpack_require__(168));
+	hljs.registerLanguage('protobuf', __webpack_require__(169));
+	hljs.registerLanguage('puppet', __webpack_require__(170));
+	hljs.registerLanguage('purebasic', __webpack_require__(171));
+	hljs.registerLanguage('python', __webpack_require__(172));
+	hljs.registerLanguage('q', __webpack_require__(173));
+	hljs.registerLanguage('qml', __webpack_require__(174));
+	hljs.registerLanguage('r', __webpack_require__(175));
+	hljs.registerLanguage('rib', __webpack_require__(176));
+	hljs.registerLanguage('roboconf', __webpack_require__(177));
+	hljs.registerLanguage('rsl', __webpack_require__(178));
+	hljs.registerLanguage('ruleslanguage', __webpack_require__(179));
+	hljs.registerLanguage('rust', __webpack_require__(180));
+	hljs.registerLanguage('scala', __webpack_require__(181));
+	hljs.registerLanguage('scheme', __webpack_require__(182));
+	hljs.registerLanguage('scilab', __webpack_require__(183));
+	hljs.registerLanguage('scss', __webpack_require__(184));
+	hljs.registerLanguage('smali', __webpack_require__(185));
+	hljs.registerLanguage('smalltalk', __webpack_require__(186));
+	hljs.registerLanguage('sml', __webpack_require__(187));
+	hljs.registerLanguage('sqf', __webpack_require__(188));
+	hljs.registerLanguage('sql', __webpack_require__(189));
+	hljs.registerLanguage('stan', __webpack_require__(190));
+	hljs.registerLanguage('stata', __webpack_require__(191));
+	hljs.registerLanguage('step21', __webpack_require__(192));
+	hljs.registerLanguage('stylus', __webpack_require__(193));
+	hljs.registerLanguage('subunit', __webpack_require__(194));
+	hljs.registerLanguage('swift', __webpack_require__(195));
+	hljs.registerLanguage('taggerscript', __webpack_require__(196));
+	hljs.registerLanguage('yaml', __webpack_require__(197));
+	hljs.registerLanguage('tap', __webpack_require__(198));
+	hljs.registerLanguage('tcl', __webpack_require__(199));
+	hljs.registerLanguage('tex', __webpack_require__(200));
+	hljs.registerLanguage('thrift', __webpack_require__(201));
+	hljs.registerLanguage('tp', __webpack_require__(202));
+	hljs.registerLanguage('twig', __webpack_require__(203));
+	hljs.registerLanguage('typescript', __webpack_require__(204));
+	hljs.registerLanguage('vala', __webpack_require__(205));
+	hljs.registerLanguage('vbnet', __webpack_require__(206));
+	hljs.registerLanguage('vbscript', __webpack_require__(207));
+	hljs.registerLanguage('vbscript-html', __webpack_require__(208));
+	hljs.registerLanguage('verilog', __webpack_require__(209));
+	hljs.registerLanguage('vhdl', __webpack_require__(210));
+	hljs.registerLanguage('vim', __webpack_require__(211));
+	hljs.registerLanguage('x86asm', __webpack_require__(212));
+	hljs.registerLanguage('xl', __webpack_require__(213));
+	hljs.registerLanguage('xquery', __webpack_require__(214));
+	hljs.registerLanguage('zephir', __webpack_require__(215));
 
 	module.exports = hljs;
 
 /***/ },
-/* 47 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -12893,7 +13476,7 @@
 
 
 /***/ },
-/* 48 */
+/* 47 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs){
@@ -12976,7 +13559,7 @@
 	};
 
 /***/ },
-/* 49 */
+/* 48 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13051,7 +13634,7 @@
 	};
 
 /***/ },
-/* 50 */
+/* 49 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13093,7 +13676,7 @@
 	};
 
 /***/ },
-/* 51 */
+/* 50 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13171,7 +13754,7 @@
 	};
 
 /***/ },
-/* 52 */
+/* 51 */
 /***/ function(module, exports) {
 
 	module.exports = // We try to support full Ada2012
@@ -13348,7 +13931,7 @@
 	};
 
 /***/ },
-/* 53 */
+/* 52 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13398,7 +13981,7 @@
 	};
 
 /***/ },
-/* 54 */
+/* 53 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13488,7 +14071,7 @@
 	};
 
 /***/ },
-/* 55 */
+/* 54 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13658,7 +14241,7 @@
 	};
 
 /***/ },
-/* 56 */
+/* 55 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13762,7 +14345,7 @@
 	};
 
 /***/ },
-/* 57 */
+/* 56 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13858,7 +14441,7 @@
 	};
 
 /***/ },
-/* 58 */
+/* 57 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13965,7 +14548,7 @@
 	};
 
 /***/ },
-/* 59 */
+/* 58 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14157,7 +14740,7 @@
 	};
 
 /***/ },
-/* 60 */
+/* 59 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -14305,7 +14888,7 @@
 	};
 
 /***/ },
-/* 61 */
+/* 60 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14357,7 +14940,7 @@
 	};
 
 /***/ },
-/* 62 */
+/* 61 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14497,7 +15080,7 @@
 	};
 
 /***/ },
-/* 63 */
+/* 62 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14563,7 +15146,7 @@
 	};
 
 /***/ },
-/* 64 */
+/* 63 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14620,7 +15203,7 @@
 	};
 
 /***/ },
-/* 65 */
+/* 64 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14655,7 +15238,7 @@
 	};
 
 /***/ },
-/* 66 */
+/* 65 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14734,7 +15317,7 @@
 	};
 
 /***/ },
-/* 67 */
+/* 66 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14789,7 +15372,7 @@
 	};
 
 /***/ },
-/* 68 */
+/* 67 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs){
@@ -14822,7 +15405,7 @@
 	};
 
 /***/ },
-/* 69 */
+/* 68 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs){
@@ -14863,7 +15446,7 @@
 	};
 
 /***/ },
-/* 70 */
+/* 69 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14947,7 +15530,7 @@
 	};
 
 /***/ },
-/* 71 */
+/* 70 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15000,7 +15583,7 @@
 	};
 
 /***/ },
-/* 72 */
+/* 71 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15071,7 +15654,7 @@
 	};
 
 /***/ },
-/* 73 */
+/* 72 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15100,7 +15683,7 @@
 	};
 
 /***/ },
-/* 74 */
+/* 73 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15199,7 +15782,7 @@
 	};
 
 /***/ },
-/* 75 */
+/* 74 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15218,7 +15801,7 @@
 	};
 
 /***/ },
-/* 76 */
+/* 75 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15260,7 +15843,7 @@
 	};
 
 /***/ },
-/* 77 */
+/* 76 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15410,7 +15993,7 @@
 	};
 
 /***/ },
-/* 78 */
+/* 77 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15481,7 +16064,7 @@
 	};
 
 /***/ },
-/* 79 */
+/* 78 */
 /***/ function(module, exports) {
 
 	module.exports = function cos (hljs) {
@@ -15609,7 +16192,7 @@
 	};
 
 /***/ },
-/* 80 */
+/* 79 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15707,7 +16290,7 @@
 	};
 
 /***/ },
-/* 81 */
+/* 80 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15888,7 +16471,7 @@
 	};
 
 /***/ },
-/* 82 */
+/* 81 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16059,7 +16642,7 @@
 	};
 
 /***/ },
-/* 83 */
+/* 82 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16085,7 +16668,7 @@
 	};
 
 /***/ },
-/* 84 */
+/* 83 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16194,7 +16777,7 @@
 	};
 
 /***/ },
-/* 85 */
+/* 84 */
 /***/ function(module, exports) {
 
 	module.exports = /**
@@ -16456,7 +17039,7 @@
 	};
 
 /***/ },
-/* 86 */
+/* 85 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16568,7 +17151,7 @@
 	};
 
 /***/ },
-/* 87 */
+/* 86 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -16673,7 +17256,7 @@
 	};
 
 /***/ },
-/* 88 */
+/* 87 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16746,7 +17329,7 @@
 	};
 
 /***/ },
-/* 89 */
+/* 88 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16790,7 +17373,7 @@
 	};
 
 /***/ },
-/* 90 */
+/* 89 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16858,7 +17441,7 @@
 	};
 
 /***/ },
-/* 91 */
+/* 90 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16891,7 +17474,7 @@
 	};
 
 /***/ },
-/* 92 */
+/* 91 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16917,7 +17500,7 @@
 	};
 
 /***/ },
-/* 93 */
+/* 92 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16973,7 +17556,7 @@
 	};
 
 /***/ },
-/* 94 */
+/* 93 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17024,7 +17607,7 @@
 	};
 
 /***/ },
-/* 95 */
+/* 94 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17152,7 +17735,7 @@
 	};
 
 /***/ },
-/* 96 */
+/* 95 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17188,7 +17771,7 @@
 	};
 
 /***/ },
-/* 97 */
+/* 96 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17225,7 +17808,7 @@
 	};
 
 /***/ },
-/* 98 */
+/* 97 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17326,7 +17909,7 @@
 	};
 
 /***/ },
-/* 99 */
+/* 98 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17413,7 +17996,7 @@
 	};
 
 /***/ },
-/* 100 */
+/* 99 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17593,7 +18176,7 @@
 	};
 
 /***/ },
-/* 101 */
+/* 100 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17612,7 +18195,7 @@
 	};
 
 /***/ },
-/* 102 */
+/* 101 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17662,7 +18245,7 @@
 	};
 
 /***/ },
-/* 103 */
+/* 102 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17812,7 +18395,7 @@
 	};
 
 /***/ },
-/* 104 */
+/* 103 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17864,7 +18447,7 @@
 	};
 
 /***/ },
-/* 105 */
+/* 104 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17897,7 +18480,7 @@
 	};
 
 /***/ },
-/* 106 */
+/* 105 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -17946,7 +18529,7 @@
 	};
 
 /***/ },
-/* 107 */
+/* 106 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18021,7 +18604,7 @@
 	};
 
 /***/ },
-/* 108 */
+/* 107 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18084,7 +18667,7 @@
 	};
 
 /***/ },
-/* 109 */
+/* 108 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -18242,7 +18825,7 @@
 	};
 
 /***/ },
-/* 110 */
+/* 109 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18468,7 +19051,7 @@
 	};
 
 /***/ },
-/* 111 */
+/* 110 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18539,7 +19122,7 @@
 	};
 
 /***/ },
-/* 112 */
+/* 111 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -18580,7 +19163,7 @@
 	};
 
 /***/ },
-/* 113 */
+/* 112 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18701,7 +19284,7 @@
 	};
 
 /***/ },
-/* 114 */
+/* 113 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18759,7 +19342,7 @@
 	};
 
 /***/ },
-/* 115 */
+/* 114 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18786,7 +19369,7 @@
 	};
 
 /***/ },
-/* 116 */
+/* 115 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18825,7 +19408,7 @@
 	};
 
 /***/ },
-/* 117 */
+/* 116 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18923,7 +19506,7 @@
 	};
 
 /***/ },
-/* 118 */
+/* 117 */
 /***/ function(module, exports) {
 
 	module.exports = // TODO support filter tags like :javascript, support inline HTML
@@ -19034,7 +19617,7 @@
 	};
 
 /***/ },
-/* 119 */
+/* 118 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19072,7 +19655,7 @@
 	};
 
 /***/ },
-/* 120 */
+/* 119 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19198,7 +19781,7 @@
 	};
 
 /***/ },
-/* 121 */
+/* 120 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19314,7 +19897,7 @@
 	};
 
 /***/ },
-/* 122 */
+/* 121 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19364,7 +19947,7 @@
 	};
 
 /***/ },
-/* 123 */
+/* 122 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19439,7 +20022,7 @@
 	};
 
 /***/ },
-/* 124 */
+/* 123 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19484,7 +20067,7 @@
 	};
 
 /***/ },
-/* 125 */
+/* 124 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19545,7 +20128,7 @@
 	};
 
 /***/ },
-/* 126 */
+/* 125 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19615,7 +20198,7 @@
 	};
 
 /***/ },
-/* 127 */
+/* 126 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19695,7 +20278,7 @@
 	};
 
 /***/ },
-/* 128 */
+/* 127 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19807,7 +20390,7 @@
 	};
 
 /***/ },
-/* 129 */
+/* 128 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19982,7 +20565,7 @@
 	};
 
 /***/ },
-/* 130 */
+/* 129 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20023,7 +20606,7 @@
 	};
 
 /***/ },
-/* 131 */
+/* 130 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20205,7 +20788,7 @@
 	};
 
 /***/ },
-/* 132 */
+/* 131 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -20383,7 +20966,7 @@
 	};
 
 /***/ },
-/* 133 */
+/* 132 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20550,7 +21133,7 @@
 	};
 
 /***/ },
-/* 134 */
+/* 133 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20577,7 +21160,7 @@
 	};
 
 /***/ },
-/* 135 */
+/* 134 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20721,7 +21304,7 @@
 	};
 
 /***/ },
-/* 136 */
+/* 135 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20828,7 +21411,7 @@
 	};
 
 /***/ },
-/* 137 */
+/* 136 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20989,7 +21572,7 @@
 	};
 
 /***/ },
-/* 138 */
+/* 137 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21142,7 +21725,7 @@
 	};
 
 /***/ },
-/* 139 */
+/* 138 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21235,7 +21818,7 @@
 	};
 
 /***/ },
-/* 140 */
+/* 139 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21322,7 +21905,7 @@
 	};
 
 /***/ },
-/* 141 */
+/* 140 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21382,7 +21965,7 @@
 	};
 
 /***/ },
-/* 142 */
+/* 141 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21431,7 +22014,7 @@
 	};
 
 /***/ },
-/* 143 */
+/* 142 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21493,7 +22076,7 @@
 	};
 
 /***/ },
-/* 144 */
+/* 143 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21585,7 +22168,7 @@
 	};
 
 /***/ },
-/* 145 */
+/* 144 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21995,7 +22578,7 @@
 	};
 
 /***/ },
-/* 146 */
+/* 145 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22224,7 +22807,7 @@
 	};
 
 /***/ },
-/* 147 */
+/* 146 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22310,7 +22893,7 @@
 	};
 
 /***/ },
-/* 148 */
+/* 147 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22400,7 +22983,7 @@
 	};
 
 /***/ },
-/* 149 */
+/* 148 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22423,7 +23006,7 @@
 	};
 
 /***/ },
-/* 150 */
+/* 149 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22584,7 +23167,7 @@
 	};
 
 /***/ },
-/* 151 */
+/* 150 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22613,7 +23196,7 @@
 	};
 
 /***/ },
-/* 152 */
+/* 151 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22692,7 +23275,7 @@
 	};
 
 /***/ },
-/* 153 */
+/* 152 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22808,7 +23391,7 @@
 	};
 
 /***/ },
-/* 154 */
+/* 153 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22905,7 +23488,7 @@
 	};
 
 /***/ },
-/* 155 */
+/* 154 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22964,7 +23547,7 @@
 	};
 
 /***/ },
-/* 156 */
+/* 155 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23017,7 +23600,7 @@
 	};
 
 /***/ },
-/* 157 */
+/* 156 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23127,7 +23710,7 @@
 	};
 
 /***/ },
-/* 158 */
+/* 157 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23222,7 +23805,7 @@
 	};
 
 /***/ },
-/* 159 */
+/* 158 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23297,7 +23880,7 @@
 	};
 
 /***/ },
-/* 160 */
+/* 159 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23358,7 +23941,7 @@
 	};
 
 /***/ },
-/* 161 */
+/* 160 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23432,7 +24015,7 @@
 	};
 
 /***/ },
-/* 162 */
+/* 161 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23484,7 +24067,7 @@
 	};
 
 /***/ },
-/* 163 */
+/* 162 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23540,7 +24123,7 @@
 	};
 
 /***/ },
-/* 164 */
+/* 163 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23671,7 +24254,7 @@
 	};
 
 /***/ },
-/* 165 */
+/* 164 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23766,7 +24349,7 @@
 	};
 
 /***/ },
-/* 166 */
+/* 165 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23851,7 +24434,7 @@
 	};
 
 /***/ },
-/* 167 */
+/* 166 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23903,7 +24486,7 @@
 	};
 
 /***/ },
-/* 168 */
+/* 167 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23937,7 +24520,7 @@
 	};
 
 /***/ },
-/* 169 */
+/* 168 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24029,7 +24612,7 @@
 	};
 
 /***/ },
-/* 170 */
+/* 169 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24069,7 +24652,7 @@
 	};
 
 /***/ },
-/* 171 */
+/* 170 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24188,7 +24771,7 @@
 	};
 
 /***/ },
-/* 172 */
+/* 171 */
 /***/ function(module, exports) {
 
 	module.exports = // Base deafult colors in PB IDE: background: #FFFFDF; foreground: #000000;
@@ -24250,7 +24833,7 @@
 	};
 
 /***/ },
-/* 173 */
+/* 172 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24346,7 +24929,7 @@
 	};
 
 /***/ },
-/* 174 */
+/* 173 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24373,7 +24956,7 @@
 	};
 
 /***/ },
-/* 175 */
+/* 174 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24546,7 +25129,7 @@
 	};
 
 /***/ },
-/* 176 */
+/* 175 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24620,7 +25203,7 @@
 	};
 
 /***/ },
-/* 177 */
+/* 176 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24651,7 +25234,7 @@
 	};
 
 /***/ },
-/* 178 */
+/* 177 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24722,7 +25305,7 @@
 	};
 
 /***/ },
-/* 179 */
+/* 178 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24762,7 +25345,7 @@
 	};
 
 /***/ },
-/* 180 */
+/* 179 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24827,7 +25410,7 @@
 	};
 
 /***/ },
-/* 181 */
+/* 180 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24935,7 +25518,7 @@
 	};
 
 /***/ },
-/* 182 */
+/* 181 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25054,7 +25637,7 @@
 	};
 
 /***/ },
-/* 183 */
+/* 182 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25199,7 +25782,7 @@
 	};
 
 /***/ },
-/* 184 */
+/* 183 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25257,7 +25840,7 @@
 	};
 
 /***/ },
-/* 185 */
+/* 184 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25359,7 +25942,7 @@
 	};
 
 /***/ },
-/* 186 */
+/* 185 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25419,7 +26002,7 @@
 	};
 
 /***/ },
-/* 187 */
+/* 186 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25473,7 +26056,7 @@
 	};
 
 /***/ },
-/* 188 */
+/* 187 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25543,7 +26126,7 @@
 	};
 
 /***/ },
-/* 189 */
+/* 188 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25918,7 +26501,7 @@
 	};
 
 /***/ },
-/* 190 */
+/* 189 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26082,7 +26665,7 @@
 	};
 
 /***/ },
-/* 191 */
+/* 190 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26169,7 +26752,7 @@
 	};
 
 /***/ },
-/* 192 */
+/* 191 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26211,7 +26794,7 @@
 	};
 
 /***/ },
-/* 193 */
+/* 192 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26262,7 +26845,7 @@
 	};
 
 /***/ },
-/* 194 */
+/* 193 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26720,7 +27303,7 @@
 	};
 
 /***/ },
-/* 195 */
+/* 194 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26758,7 +27341,7 @@
 	};
 
 /***/ },
-/* 196 */
+/* 195 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26879,7 +27462,7 @@
 	};
 
 /***/ },
-/* 197 */
+/* 196 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26927,7 +27510,7 @@
 	};
 
 /***/ },
-/* 198 */
+/* 197 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27015,7 +27598,7 @@
 	};
 
 /***/ },
-/* 199 */
+/* 198 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27055,7 +27638,7 @@
 	};
 
 /***/ },
-/* 200 */
+/* 199 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27120,7 +27703,7 @@
 	};
 
 /***/ },
-/* 201 */
+/* 200 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27186,7 +27769,7 @@
 	};
 
 /***/ },
-/* 202 */
+/* 201 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27225,7 +27808,7 @@
 	};
 
 /***/ },
-/* 203 */
+/* 202 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27313,7 +27896,7 @@
 	};
 
 /***/ },
-/* 204 */
+/* 203 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27383,7 +27966,7 @@
 	};
 
 /***/ },
-/* 205 */
+/* 204 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27514,7 +28097,7 @@
 	};
 
 /***/ },
-/* 206 */
+/* 205 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27568,7 +28151,7 @@
 	};
 
 /***/ },
-/* 207 */
+/* 206 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27628,7 +28211,7 @@
 	};
 
 /***/ },
-/* 208 */
+/* 207 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27671,7 +28254,7 @@
 	};
 
 /***/ },
-/* 209 */
+/* 208 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27687,7 +28270,7 @@
 	};
 
 /***/ },
-/* 210 */
+/* 209 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27790,7 +28373,7 @@
 	};
 
 /***/ },
-/* 211 */
+/* 210 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27855,7 +28438,7 @@
 	};
 
 /***/ },
-/* 212 */
+/* 211 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27965,7 +28548,7 @@
 	};
 
 /***/ },
-/* 213 */
+/* 212 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28105,7 +28688,7 @@
 	};
 
 /***/ },
-/* 214 */
+/* 213 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28182,7 +28765,7 @@
 	};
 
 /***/ },
-/* 215 */
+/* 214 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28257,7 +28840,7 @@
 	};
 
 /***/ },
-/* 216 */
+/* 215 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {

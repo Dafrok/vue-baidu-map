@@ -73,7 +73,7 @@ export default {
         this.subMenu.splice(0, this.subMenu.length)
         const $doc = document.querySelector('.doc')
         const $subDocs = $doc.querySelectorAll('h2')
-        $subDocs.forEach(item => {
+        ;[].forEach.call($subDocs, item => {
           this.subMenu.push({name: item.innerText, $el: item})
         })
       })

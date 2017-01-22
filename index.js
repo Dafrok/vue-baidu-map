@@ -84,6 +84,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _OverviewMap2 = _interopRequireDefault(_OverviewMap);
 
+	var _Geolocation = __webpack_require__(15);
+
+	var _Geolocation2 = _interopRequireDefault(_Geolocation);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
@@ -101,6 +105,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Vue.component('map-control-navigation', _Navigation2.default);
 	    Vue.component('map-control-map-type', _MapType2.default);
 	    Vue.component('map-control-overview-map', _OverviewMap2.default);
+	    Vue.component('map-control-geolocation', _Geolocation2.default);
 	  }
 	};
 
@@ -982,6 +987,156 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _this.$emit(event, arg);
 	        });
 	      });
+	    },
+	    removeControl: function removeControl() {
+	      var _this2 = this;
+
+	      this.$nextTick(function () {
+	        var _$parent2 = _this2.$parent,
+	            BMap = _$parent2.BMap,
+	            map = _$parent2.map;
+
+	        map && map.removeControl(_this2.control);
+	      });
+	    },
+	    reloadControl: function reloadControl() {
+	      var _this3 = this;
+
+	      this.$nextTick(function () {
+	        _this3.removeControl();
+	        _this3.addControl();
+	      });
+	    }
+	  },
+	  mounted: function mounted() {
+	    var _this4 = this;
+
+	    this.$parent.$on('ready', function () {
+	      _this4.addControl();
+	    });
+	  },
+	  beforeDestroy: function beforeDestroy() {
+	    this.removeControl();
+	  }
+	};
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(16)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/Geolocation.vue"
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-2f3e89bd", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-2f3e89bd", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Geolocation.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 16 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var events = ['locationSuccess', 'locationError'];
+
+	exports.default = {
+	  name: 'map-control-geolocation',
+	  render: function render(h) {
+	    return;
+	  },
+
+	  props: {
+	    anchor: {
+	      type: String
+	    },
+	    offset: {
+	      type: Object
+	    },
+	    showAddressBar: {
+	      type: Boolean
+	    },
+	    enableAutoLocation: {
+	      type: Boolean
+	    },
+	    locationIcon: {
+	      type: Object
+	    }
+	  },
+	  watch: {
+	    anchor: function anchor() {
+	      this.reloadControl();
+	    },
+	    offset: function offset() {
+	      this.reloadControl();
+	    },
+	    showAddressBar: function showAddressBar() {
+	      this.reloadControl();
+	    },
+	    enableAutoLocation: function enableAutoLocation() {
+	      this.reloadControl();
+	    },
+	    locationIcon: function locationIcon() {
+	      this.reloadControl();
+	    }
+	  },
+	  methods: {
+	    bindEvents: function bindEvents() {
+	      var _this = this;
+
+	      var control = this.control;
+
+	      events.forEach(function (event) {
+	        control.addEventListener(event, function (arg) {
+	          _this.$emit(event, arg);
+	        });
+	      });
+	    },
+	    addControl: function addControl() {
+	      var _$parent = this.$parent,
+	          BMap = _$parent.BMap,
+	          map = _$parent.map;
+
+	      this.control = new BMap.GeolocationControl({
+	        anchor: global[this.anchor],
+	        showAddressBar: this.showAddressBar,
+	        enableAutoLocation: this.enableAutoLocation,
+	        locationIcon: this.locationIcon
+	      });
+	      this.bindEvents();
+	      map.addControl(this.control);
 	    },
 	    removeControl: function removeControl() {
 	      var _this2 = this;
