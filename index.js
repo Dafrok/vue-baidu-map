@@ -88,6 +88,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Geolocation2 = _interopRequireDefault(_Geolocation);
 
+	var _Copyright = __webpack_require__(17);
+
+	var _Copyright2 = _interopRequireDefault(_Copyright);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
@@ -106,6 +110,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Vue.component('map-control-map-type', _MapType2.default);
 	    Vue.component('map-control-overview-map', _OverviewMap2.default);
 	    Vue.component('map-control-geolocation', _Geolocation2.default);
+	    Vue.component('map-control-copyright', _Copyright2.default);
 	  }
 	};
 
@@ -1147,6 +1152,142 @@ return /******/ (function(modules) { // webpackBootstrap
 	            map = _$parent2.map;
 
 	        map && map.removeControl(_this2.control);
+	      });
+	    },
+	    reloadControl: function reloadControl() {
+	      var _this3 = this;
+
+	      this.$nextTick(function () {
+	        _this3.removeControl();
+	        _this3.addControl();
+	      });
+	    }
+	  },
+	  mounted: function mounted() {
+	    var _this4 = this;
+
+	    this.$parent.$on('ready', function () {
+	      _this4.addControl();
+	    });
+	  },
+	  beforeDestroy: function beforeDestroy() {
+	    this.removeControl();
+	  }
+	};
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(18)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/Copyright.vue"
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-220e62be", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-220e62be", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Copyright.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 18 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  name: 'map-control-copyright',
+	  render: function render(h) {
+	    return;
+	  },
+
+	  props: ['anchor', 'offset', 'copyright'],
+	  watch: {
+	    anchor: function anchor() {
+	      this.reloadControl();
+	    },
+	    offset: function offset() {
+	      this.reloadControl();
+	    },
+	    copyright: function copyright() {
+	      this.reloadControl();
+	    }
+	  },
+	  methods: {
+	    addControl: function addControl() {
+	      var _$parent = this.$parent,
+	          BMap = _$parent.BMap,
+	          map = _$parent.map;
+
+	      this.control = new BMap.CopyrightControl({
+	        anchor: global[this.anchor],
+	        offset: this.offset
+	      });
+	      this.updateCopyrightList();
+	      map.addControl(this.control);
+	    },
+	    removeControl: function removeControl() {
+	      var _this = this;
+
+	      this.$nextTick(function () {
+	        var _$parent2 = _this.$parent,
+	            BMap = _$parent2.BMap,
+	            map = _$parent2.map;
+
+	        map && map.removeControl(_this.control);
+	      });
+	    },
+	    updateCopyrightList: function updateCopyrightList() {
+	      var _this2 = this;
+
+	      var _$parent3 = this.$parent,
+	          BMap = _$parent3.BMap,
+	          map = _$parent3.map;
+	      var _control = this.control,
+	          removeCopyright = _control.removeCopyright,
+	          getCopyrightCollection = _control.getCopyrightCollection;
+
+	      var copyrightList = getCopyrightCollection();
+	      copyrightList && copyrightList.forEach(function (item) {
+	        _this2.control.removeCopyright(item.id);
+	      });
+	      this.copyright && this.copyright.forEach(function (item) {
+	        var bounds = item.bounds ? new BMap.Bounds(new BMap.Point(item.bounds.sw.longitude, item.bounds.sw.latitude), new BMap.Point(item.bounds.ne.longitude, item.bounds.ne.latitude)) : map.getBounds();
+	        _this2.control.addCopyright({
+	          id: item.id,
+	          content: item.content,
+	          bounds: bounds
+	        });
+	        _this2.control.getCopyrightCollection();
 	      });
 	    },
 	    reloadControl: function reloadControl() {

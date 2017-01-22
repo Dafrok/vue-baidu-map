@@ -5,6 +5,7 @@ import MapControlNavigation from './controls/Navigation.vue'
 import MapControlMapType from './controls/MapType.vue'
 import MapControlOverviewMap from './controls/OverviewMap.vue'
 import MapControlGeolocation from './controls/Geolocation.vue'
+import MapControlCopyright from './controls/Copyright.vue'
 
 export default {
   install (Vue, options) {
@@ -21,5 +22,6 @@ export default {
     Vue.component('map-control-map-type', MapControlMapType)
     Vue.component('map-control-overview-map', MapControlOverviewMap)
     Vue.component('map-control-geolocation', MapControlGeolocation)
+    Vue.component('map-control-copyright', MapControlCopyright)
   }
 }
