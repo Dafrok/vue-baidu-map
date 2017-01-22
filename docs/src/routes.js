@@ -1,6 +1,7 @@
 import DocStart from './md/start.md'
 import DocMap from './md/map.md'
 import DocControls from './md/controls.md'
+import DocOverlays from './md/overlays.md'
 
 export default [
   {
@@ -26,5 +27,11 @@ export default [
     path: '/controls',
     component: DocControls,
     name: '控件组件'
+  },
+  {
+    // 控件组件
+    path: '/overlays',
+    component: DocOverlays,
+    name: '覆盖物组件'
   }
 ]
