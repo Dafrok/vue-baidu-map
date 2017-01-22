@@ -92,6 +92,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Copyright2 = _interopRequireDefault(_Copyright);
 
+	var _CityList = __webpack_require__(19);
+
+	var _CityList2 = _interopRequireDefault(_CityList);
+
+	var _Marker = __webpack_require__(21);
+
+	var _Marker2 = _interopRequireDefault(_Marker);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
@@ -105,12 +113,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	    Vue.component('baidu-map', _Map2.default);
 	    Vue.component('map-view', _MapView2.default);
+
 	    Vue.component('map-control-scale', _Scale2.default);
 	    Vue.component('map-control-navigation', _Navigation2.default);
 	    Vue.component('map-control-map-type', _MapType2.default);
 	    Vue.component('map-control-overview-map', _OverviewMap2.default);
 	    Vue.component('map-control-geolocation', _Geolocation2.default);
 	    Vue.component('map-control-copyright', _Copyright2.default);
+	    Vue.component('map-control-city-list', _CityList2.default);
+
+	    Vue.component('map-overlay-marker', _Marker2.default);
 	  }
 	};
 
@@ -1308,6 +1320,330 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  beforeDestroy: function beforeDestroy() {
 	    this.removeControl();
+	  }
+	};
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(20)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/CityList.vue"
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-1740d702", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-1740d702", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] CityList.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 20 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  name: 'map-control-city-list',
+	  render: function render(h) {
+	    return;
+	  },
+
+	  props: {
+	    anchor: {
+	      type: String
+	    },
+	    offset: {
+	      type: Object
+	    }
+	  },
+	  watch: {
+	    anchor: function anchor() {
+	      this.reloadControl();
+	    },
+	    offset: function offset() {
+	      this.reloadControl();
+	    }
+	  },
+	  methods: {
+	    addControl: function addControl() {
+	      var _$parent = this.$parent,
+	          BMap = _$parent.BMap,
+	          map = _$parent.map;
+
+	      this.control = new BMap.CityListControl({
+	        anchor: global[this.anchor],
+	        offset: this.offset,
+	        onChangeBefore: function onChangeBefore() {
+	          this.$emit('changeBefore');
+	        },
+	        onChangeAfter: function onChangeAfter() {
+	          this.$emit('changeAfter');
+	        }
+	      });
+	      map.addControl(this.control);
+	    },
+	    removeControl: function removeControl() {
+	      var _this = this;
+
+	      this.$nextTick(function () {
+	        var _$parent2 = _this.$parent,
+	            BMap = _$parent2.BMap,
+	            map = _$parent2.map;
+
+	        map && map.removeControl(_this.control);
+	      });
+	    },
+	    reloadControl: function reloadControl() {
+	      var _this2 = this;
+
+	      this.$nextTick(function () {
+	        _this2.removeControl();
+	        _this2.addControl();
+	      });
+	    }
+	  },
+	  mounted: function mounted() {
+	    var _this3 = this;
+
+	    this.$parent.$on('ready', function () {
+	      _this3.addControl();
+	    });
+	  },
+	  beforeDestroy: function beforeDestroy() {
+	    this.removeControl();
+	  }
+	};
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(22)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/overlays/Marker.vue"
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-6f0550c6", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-6f0550c6", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Marker.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 22 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _watch;
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	var events = ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'infowindowclose', 'infowindowopen', 'dragstart', 'dragging', 'dragend', 'rightclick'];
+
+	exports.default = {
+	  name: 'map-overlay-marker',
+	  render: function render(h) {
+	    return;
+	  },
+
+	  props: {
+	    point: {},
+	    offset: {},
+	    icon: {},
+	    massClear: {
+	      type: Boolean,
+	      default: true
+	    },
+	    dragging: {
+	      type: Boolean,
+	      default: false
+	    },
+	    clicking: {
+	      type: Boolean,
+	      default: true
+	    },
+	    raiseOnDrag: {
+	      type: Boolean,
+	      default: false
+	    },
+	    draggingCursor: {
+	      type: String
+	    },
+	    rotation: {
+	      type: Number
+	    },
+	    shadow: {},
+	    title: {
+	      type: String
+	    },
+	    animation: {
+	      type: String
+	    }
+	  },
+	  watch: (_watch = {
+	    point: function point() {},
+	    offset: function offset() {},
+	    icon: function icon() {},
+	    massClear: function massClear(val) {
+	      val ? this.overlay.enableMassClear() : this.overlay.disableMassClear();
+	    },
+	    dragging: function dragging(val) {
+	      val ? this.overlay.enableDragging() : this.overlay.disableDragging();
+	    },
+	    clicking: function clicking() {
+	      this.reloadOverlay();
+	    },
+	    raiseOnDrag: function raiseOnDrag() {
+	      this.reloadOverlay();
+	    },
+	    draggingCursor: function draggingCursor(val) {
+	      this.setDraggingCursor(val);
+	    },
+	    rotation: function rotation(val) {
+	      this.setRotation(val);
+	    },
+	    shadow: function shadow(val) {
+	      this.setShadow(val);
+	    }
+	  }, _defineProperty(_watch, 'shadow', function shadow(val) {
+	    this.setTitle(val);
+	  }), _defineProperty(_watch, 'animation', function animation(val) {
+	    this.setAnimation(global[val]);
+	  }), _watch),
+	  mounted: function mounted() {
+	    var _this = this;
+
+	    var _$parent = this.$parent,
+	        BMap = _$parent.BMap,
+	        map = _$parent.map;
+
+	    this.$parent.$on('ready', function () {
+	      _this.addOverlay();
+	    });
+	  },
+
+	  methods: {
+	    bindEvents: function bindEvents() {
+	      var _this2 = this;
+
+	      var overlay = this.overlay;
+
+	      events.forEach(function (event) {
+	        overlay.addEventListener(event, function (arg) {
+	          _this2.$emit(event, arg);
+	        });
+	      });
+	    },
+	    addOverlay: function addOverlay() {
+	      var point = this.point,
+	          offset = this.offset,
+	          icon = this.icon,
+	          massClear = this.massClear,
+	          dragging = this.dragging,
+	          clicking = this.clicking,
+	          raiseOnDrag = this.raiseOnDrag,
+	          draggingCursor = this.draggingCursor,
+	          rotation = this.rotation,
+	          shadow = this.shadow,
+	          title = this.title,
+	          animation = this.animation,
+	          bindEvents = this.bindEvents;
+	      var _$parent2 = this.$parent,
+	          BMap = _$parent2.BMap,
+	          map = _$parent2.map;
+
+	      var overlay = new BMap.Marker(new BMap.Point(point.longitude, point.latitude), {
+	        offset: offset,
+	        icon: icon,
+	        enableMassClear: massClear,
+	        enableDragging: dragging,
+	        enableClicking: clicking,
+	        raiseOnDrag: raiseOnDrag,
+	        draggingCursor: draggingCursor,
+	        rotation: rotation,
+	        shadow: shadow,
+	        title: title
+	      });
+	      this.overlay = overlay;
+	      overlay.setAnimation(global[animation]);
+	      bindEvents();
+	      map.addOverlay(overlay);
+	    },
+	    removeOverlay: function removeOverlay() {
+	      var _$parent3 = this.$parent,
+	          BMap = _$parent3.BMap,
+	          map = _$parent3.map;
+
+	      map.removeOverlay(this.overlay);
+	    },
+	    reloadOverlay: function reloadOverlay() {
+	      var _this3 = this;
+
+	      this.$nextTick(function () {
+	        _this3.removeOverlay();
+	        _this3.addOverlay();
+	      });
+	    }
 	  }
 	};
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))

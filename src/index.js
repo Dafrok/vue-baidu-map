@@ -7,6 +7,7 @@ import MapControlOverviewMap from './controls/OverviewMap.vue'
 import MapControlGeolocation from './controls/Geolocation.vue'
 import MapControlCopyright from './controls/Copyright.vue'
 import MapControlCityList from './controls/CityList.vue'
+import MapOverlayMarker from './overlays/Marker.vue'
 
 export default {
   install (Vue, options) {
@@ -18,7 +19,7 @@ export default {
     }
     Vue.component('baidu-map', Map)
     Vue.component('map-view', MapView)
-    
+
     Vue.component('map-control-scale', MapControlScale)
     Vue.component('map-control-navigation', MapControlNavigation)
     Vue.component('map-control-map-type', MapControlMapType)
@@ -26,5 +27,7 @@ export default {
     Vue.component('map-control-geolocation', MapControlGeolocation)
     Vue.component('map-control-copyright', MapControlCopyright)
     Vue.component('map-control-city-list', MapControlCityList)
+
+    Vue.component('map-overlay-marker', MapOverlayMarker)
   }
 }
