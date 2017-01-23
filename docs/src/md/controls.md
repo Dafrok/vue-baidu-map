@@ -222,7 +222,7 @@
     <map-view class="map">
       <map-control-copyright
         anchor="BMAP_ANCHOR_TOP_RIGHT"
-        :copyright="[{id: 1, content: 'Copyright Message', bounds: {ne: {longitude: 110, latitude: 40}, sw:{longitude: 0, latitude: 0}}}]"/>
+        :copyright="[{id: 1, content: 'Copyright Message', bounds: {ne: {lng: 110, lat: 40}, sw:{lng: 0, lat: 0}}}]"/>
     <map-view/>
   </baidu-map>
 </template>
@@ -233,7 +233,7 @@
   <map-view class="map">
     <map-control-copyright
       anchor="BMAP_ANCHOR_TOP_RIGHT"
-      :copyright="[{id: 1, content: 'Copyright Message', bounds: {ne: {longitude: 110, latitude: 40}, sw:{longitude: 0, latitude: 0}}}, {id: 2, content: '<a>我是版权信息</a>'}]"/>
+      :copyright="[{id: 1, content: 'Copyright Message', bounds: {ne: {lng: 110, lat: 40}, sw:{lng: 0, lat: 0}}}, {id: 2, content: '<a>我是版权信息</a>'}]"/>
   <map-view/>
 </baidu-map>
 

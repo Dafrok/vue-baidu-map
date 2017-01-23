@@ -100,18 +100,18 @@ export default {
     }
   },
   watch: {
-    'center.longitude' (val, oldVal) {
+    'center.lng' (val, oldVal) {
       const {$BMap, map} = this.$parent
-      const longitude = parseFloat(val)
-      if (val.toString() !== oldVal.toString() && longitude >= -180 && longitude <= 180) {
-        map.setCenter(new $BMap.Point(longitude, this.center.latitude))
+      const lng = parseFloat(val)
+      if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
+        map.setCenter(new $BMap.Point(lng, this.center.lat))
       }
     },
-    'center.latitude' (val, oldVal) {
+    'center.lat' (val, oldVal) {
       const {$BMap, map} = this.$parent
-      const latitude = parseFloat(val)
-      if (val.toString() !== oldVal.toString() && latitude >= -74 && latitude <= 74) {
-        map.setCenter(new $BMap.Point(this.center.longitude, latitude))
+      const lat = parseFloat(val)
+      if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
+        map.setCenter(new $BMap.Point(this.center.lng, lat))
       }
     },
     zoom (val, oldVal) {
@@ -203,7 +203,7 @@ export default {
       const {$BMap} = this.$parent
       switch (checkType(center)) {
         case 'String': return new $BMap.Point(center)
-        case 'Object': return new $BMap.Point(parseFloat(center.longitude), parseFloat(center.latitude))
+        case 'Object': return new $BMap.Point(parseFloat(center.lng), parseFloat(center.lat))
         default: return new $BMap.Point()
       }
     }

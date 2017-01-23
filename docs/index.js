@@ -10015,8 +10015,8 @@
 	  data: function data() {
 	    return {
 	      center: {
-	        longitude: 116.404,
-	        latitude: 39.915
+	        lng: 116.404,
+	        lat: 39.915
 	      },
 	      zoom: 15
 	    };
@@ -10028,8 +10028,8 @@
 	          lng = _e$target$getCenter.lng,
 	          lat = _e$target$getCenter.lat;
 
-	      this.center.longitude = lng;
-	      this.center.latitude = lat;
+	      this.center.lng = lng;
+	      this.center.lat = lat;
 	    },
 	    syncZoom: function syncZoom(e) {
 	      this.zoom = e.target.getZoom();
@@ -10047,8 +10047,8 @@
 	      staticClass: "map",
 	      attrs: {
 	        "center": {
-	          longitude: 116.404,
-	          latitude: 39.915
+	          lng: 116.404,
+	          lat: 39.915
 	        },
 	        "zoom": 15
 	      }
@@ -10056,8 +10056,8 @@
 	      staticClass: "map",
 	      attrs: {
 	        "center": {
-	          longitude: 116.404,
-	          latitude: 39.915
+	          lng: 116.404,
+	          lat: 39.915
 	        },
 	        "zoom": 15,
 	        "scroll-wheel-zoom": true
@@ -10066,8 +10066,8 @@
 	      staticClass: "map",
 	      attrs: {
 	        "center": {
-	          longitude: 116.404,
-	          latitude: 39.915
+	          lng: 116.404,
+	          lat: 39.915
 	        },
 	        "zoom": 15,
 	        "mapType": "BMAP_SATELLITE_MAP"
@@ -10086,20 +10086,20 @@
 	      directives: [{
 	        name: "model",
 	        rawName: "v-model.number",
-	        value: (_vm.center.longitude),
-	        expression: "center.longitude",
+	        value: (_vm.center.lng),
+	        expression: "center.lng",
 	        modifiers: {
 	          "number": true
 	        }
 	      }],
 	      staticClass: "input is-small",
 	      domProps: {
-	        "value": _vm._s(_vm.center.longitude)
+	        "value": _vm._s(_vm.center.lng)
 	      },
 	      on: {
 	        "input": function($event) {
 	          if ($event.target.composing) { return; }
-	          _vm.center.longitude = _vm._n($event.target.value)
+	          _vm.center.lng = _vm._n($event.target.value)
 	        },
 	        "blur": function($event) {
 	          _vm.$forceUpdate()
@@ -10113,20 +10113,20 @@
 	      directives: [{
 	        name: "model",
 	        rawName: "v-model.number",
-	        value: (_vm.center.latitude),
-	        expression: "center.latitude",
+	        value: (_vm.center.lat),
+	        expression: "center.lat",
 	        modifiers: {
 	          "number": true
 	        }
 	      }],
 	      staticClass: "input is-small",
 	      domProps: {
-	        "value": _vm._s(_vm.center.latitude)
+	        "value": _vm._s(_vm.center.lat)
 	      },
 	      on: {
 	        "input": function($event) {
 	          if ($event.target.composing) { return; }
-	          _vm.center.latitude = _vm._n($event.target.value)
+	          _vm.center.lat = _vm._n($event.target.value)
 	        },
 	        "blur": function($event) {
 	          _vm.$forceUpdate()
@@ -10487,7 +10487,7 @@
 	    staticClass: "hljs-attr"
 	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"{longitude: 116.404, latitude: 39.915}\"")]), _vm._v(" "), _c('span', {
+	  }, [_vm._v("\"{lng: 116.404, lat: 39.915}\"")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
 	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
@@ -10519,7 +10519,7 @@
 	    staticClass: "hljs-attr"
 	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"{longitude: 116.404, latitude: 39.915}\"")]), _vm._v(" "), _c('span', {
+	  }, [_vm._v("\"{lng: 116.404, lat: 39.915}\"")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
 	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
@@ -10555,7 +10555,7 @@
 	    staticClass: "hljs-attr"
 	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"{longitude: 116.404, latitude: 39.915}\"")]), _vm._v(" "), _c('span', {
+	  }, [_vm._v("\"{lng: 116.404, lat: 39.915}\"")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
 	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
@@ -10591,7 +10591,7 @@
 	    staticClass: "hljs-attr"
 	  }, [_vm._v("v-model.number")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"center.longitude\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	  }, [_vm._v("\"center.lng\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("<"), _c('span', {
 	    staticClass: "hljs-name"
@@ -10599,7 +10599,7 @@
 	    staticClass: "hljs-attr"
 	  }, [_vm._v("v-model.number")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"center.latitude\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	  }, [_vm._v("\"center.lat\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("<"), _c('span', {
 	    staticClass: "hljs-name"
@@ -10671,11 +10671,11 @@
 	    staticClass: "hljs-attr"
 	  }, [_vm._v("center")]), _vm._v(": {\n        "), _c('span', {
 	    staticClass: "hljs-attr"
-	  }, [_vm._v("longitude")]), _vm._v(": "), _c('span', {
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
 	    staticClass: "hljs-number"
 	  }, [_vm._v("116.404")]), _vm._v(",\n        "), _c('span', {
 	    staticClass: "hljs-attr"
-	  }, [_vm._v("latitude")]), _vm._v(": "), _c('span', {
+	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
 	    staticClass: "hljs-number"
 	  }, [_vm._v("39.915")]), _vm._v("\n      },\n      "), _c('span', {
 	    staticClass: "hljs-attr"
@@ -10687,9 +10687,9 @@
 	    staticClass: "hljs-keyword"
 	  }, [_vm._v("const")]), _vm._v(" {lng, lat} = e.target.getCenter()\n      "), _c('span', {
 	    staticClass: "hljs-keyword"
-	  }, [_vm._v("this")]), _vm._v(".center.longitude = lng\n      "), _c('span', {
+	  }, [_vm._v("this")]), _vm._v(".center.lng = lng\n      "), _c('span', {
 	    staticClass: "hljs-keyword"
-	  }, [_vm._v("this")]), _vm._v(".center.latitude = lat\n    },\n    syncZoom (e) {\n      "), _c('span', {
+	  }, [_vm._v("this")]), _vm._v(".center.lat = lat\n    },\n    syncZoom (e) {\n      "), _c('span', {
 	    staticClass: "hljs-keyword"
 	  }, [_vm._v("this")]), _vm._v(".zoom = e.target.getZoom()\n    }\n  }\n}\n")]), _c('span', {
 	    staticClass: "hljs-tag"
@@ -10800,12 +10800,12 @@
 	          content: 'Copyright Message',
 	          bounds: {
 	            ne: {
-	              longitude: 110,
-	              latitude: 40
+	              lng: 110,
+	              lat: 40
 	            },
 	            sw: {
-	              longitude: 0,
-	              latitude: 0
+	              lng: 0,
+	              lat: 0
 	            }
 	          }
 	        }, {
@@ -11332,7 +11332,7 @@
 	    staticClass: "hljs-attr"
 	  }, [_vm._v(":copyright")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"[{id: 1, content: 'Copyright Message', bounds: {ne: {longitude: 110, latitude: 40}, sw:{longitude: 0, latitude: 0"), _c('span', [_vm._v("}}")]), _vm._v("}]\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
+	  }, [_vm._v("\"[{id: 1, content: 'Copyright Message', bounds: {ne: {lng: 110, lat: 40}, sw:{lng: 0, lat: 0"), _c('span', [_vm._v("}}")]), _vm._v("}]\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("<"), _c('span', {
 	    staticClass: "hljs-name"
@@ -11491,16 +11491,16 @@
 	      staticClass: "map",
 	      attrs: {
 	        "center": {
-	          longitude: 116.404,
-	          latitude: 39.915
+	          lng: 116.404,
+	          lat: 39.915
 	        },
 	        "zoom": 15
 	      }
 	    }, [_c('map-overlay-marker', {
 	      attrs: {
 	        "point": {
-	          longitude: 116.404,
-	          latitude: 39.915
+	          lng: 116.404,
+	          lat: 39.915
 	        },
 	        "dragging": true,
 	        "animation": "BMAP_ANIMATION_BOUNCE"
@@ -11686,7 +11686,7 @@
 	    staticClass: "hljs-attr"
 	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"{longitude: 116.404, latitude: 39.915}\"")]), _vm._v(" "), _c('span', {
+	  }, [_vm._v("\"{lng: 116.404, lat: 39.915}\"")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
 	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
@@ -11698,7 +11698,7 @@
 	    staticClass: "hljs-attr"
 	  }, [_vm._v(":point")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"{longitude: 116.404, latitude: 39.915}\"")]), _vm._v(" "), _c('span', {
+	  }, [_vm._v("\"{lng: 116.404, lat: 39.915}\"")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
 	  }, [_vm._v(":dragging")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
@@ -12146,24 +12146,24 @@
 	    }
 	  },
 	  watch: {
-	    'center.longitude': function centerLongitude(val, oldVal) {
+	    'center.lng': function centerlng(val, oldVal) {
 	      var _$parent = this.$parent,
 	          $BMap = _$parent.$BMap,
 	          map = _$parent.map;
 
-	      var longitude = parseFloat(val);
-	      if (val.toString() !== oldVal.toString() && longitude >= -180 && longitude <= 180) {
-	        map.setCenter(new $BMap.Point(longitude, this.center.latitude));
+	      var lng = parseFloat(val);
+	      if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
+	        map.setCenter(new $BMap.Point(lng, this.center.lat));
 	      }
 	    },
-	    'center.latitude': function centerLatitude(val, oldVal) {
+	    'center.lat': function centerlat(val, oldVal) {
 	      var _$parent2 = this.$parent,
 	          $BMap = _$parent2.$BMap,
 	          map = _$parent2.map;
 
-	      var latitude = parseFloat(val);
-	      if (val.toString() !== oldVal.toString() && latitude >= -74 && latitude <= 74) {
-	        map.setCenter(new $BMap.Point(this.center.longitude, latitude));
+	      var lat = parseFloat(val);
+	      if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
+	        map.setCenter(new $BMap.Point(this.center.lng, lat));
 	      }
 	    },
 	    zoom: function zoom(val, oldVal) {
@@ -12282,7 +12282,7 @@
 	        case 'String':
 	          return new $BMap.Point(center);
 	        case 'Object':
-	          return new $BMap.Point(parseFloat(center.longitude), parseFloat(center.latitude));
+	          return new $BMap.Point(parseFloat(center.lng), parseFloat(center.lat));
 	        default:
 	          return new $BMap.Point();
 	      }
@@ -13085,7 +13085,7 @@
 	        _this2.control.removeCopyright(item.id);
 	      });
 	      this.copyright && this.copyright.forEach(function (item) {
-	        var bounds = item.bounds ? new BMap.Bounds(new BMap.Point(item.bounds.sw.longitude, item.bounds.sw.latitude), new BMap.Point(item.bounds.ne.longitude, item.bounds.ne.latitude)) : map.getBounds();
+	        var bounds = item.bounds ? new BMap.Bounds(new BMap.Point(item.bounds.sw.lng, item.bounds.sw.lat), new BMap.Point(item.bounds.ne.lng, item.bounds.ne.lat)) : map.getBounds();
 	        _this2.control.addCopyright({
 	          id: item.id,
 	          content: item.content,
@@ -13404,7 +13404,7 @@
 	          BMap = _$parent2.BMap,
 	          map = _$parent2.map;
 
-	      var overlay = new BMap.Marker(new BMap.Point(point.longitude, point.latitude), {
+	      var overlay = new BMap.Marker(new BMap.Point(point.lng, point.lat), {
 	        offset: offset,
 	        icon: icon,
 	        enableMassClear: massClear,
@@ -23004,8 +23004,8 @@
 	      'InterpretTemplate InterquartileRange Interrupt InterruptSettings Intersection Interval IntervalIntersection IntervalMemberQ IntervalUnion Inverse InverseBetaRegularized InverseCDF InverseChiSquareDistribution InverseContinuousWaveletTransform InverseDistanceTransform InverseEllipticNomeQ InverseErf InverseErfc InverseFourier InverseFourierCosTransform InverseFourierSequenceTransform InverseFourierSinTransform InverseFourierTransform InverseFunction InverseFunctions InverseGammaDistribution InverseGammaRegularized InverseGaussianDistribution InverseGudermannian InverseHaversine InverseJacobiCD InverseJacobiCN InverseJacobiCS InverseJacobiDC InverseJacobiDN InverseJacobiDS InverseJacobiNC InverseJacobiND InverseJacobiNS InverseJacobiSC InverseJacobiSD InverseJacobiSN InverseLaplaceTransform InversePermutation InverseRadon InverseSeries InverseSurvivalFunction InverseWaveletTransform InverseWeierstrassP InverseZTransform Invisible InvisibleApplication InvisibleTimes IrreduciblePolynomialQ IsolatingInterval IsomorphicGraphQ IsotopeData Italic Item ItemBox ItemBoxOptions ItemSize ItemStyle ItoProcess ' +
 	      'JaccardDissimilarity JacobiAmplitude Jacobian JacobiCD JacobiCN JacobiCS JacobiDC JacobiDN JacobiDS JacobiNC JacobiND JacobiNS JacobiP JacobiSC JacobiSD JacobiSN JacobiSymbol JacobiZeta JankoGroupJ1 JankoGroupJ2 JankoGroupJ3 JankoGroupJ4 JarqueBeraALMTest JohnsonDistribution Join Joined JoinedCurve JoinedCurveBox JoinForm JordanDecomposition JordanModelDecomposition ' +
 	      'K KagiChart KaiserBesselWindow KaiserWindow KalmanEstimator KalmanFilter KarhunenLoeveDecomposition KaryTree KatzCentrality KCoreComponents KDistribution KelvinBei KelvinBer KelvinKei KelvinKer KendallTau KendallTauTest KernelExecute KernelMixtureDistribution KernelObject Kernels Ket Khinchin KirchhoffGraph KirchhoffMatrix KleinInvariantJ KnightTourGraph KnotData KnownUnitQ KolmogorovSmirnovTest KroneckerDelta KroneckerModelDecomposition KroneckerProduct KroneckerSymbol KuiperTest KumaraswamyDistribution Kurtosis KuwaharaFilter ' +
-	      'Label Labeled LabeledSlider LabelingFunction LabelStyle LaguerreL LambdaComponents LambertW LanczosWindow LandauDistribution Language LanguageCategory LaplaceDistribution LaplaceTransform Laplacian LaplacianFilter LaplacianGaussianFilter Large Larger Last Latitude LatitudeLongitude LatticeData LatticeReduce Launch LaunchKernels LayeredGraphPlot LayerSizeFunction LayoutInformation LCM LeafCount LeapYearQ LeastSquares LeastSquaresFilterKernel Left LeftArrow LeftArrowBar LeftArrowRightArrow LeftDownTeeVector LeftDownVector LeftDownVectorBar LeftRightArrow LeftRightVector LeftTee LeftTeeArrow LeftTeeVector LeftTriangle LeftTriangleBar LeftTriangleEqual LeftUpDownVector LeftUpTeeVector LeftUpVector LeftUpVectorBar LeftVector LeftVectorBar LegendAppearance Legended LegendFunction LegendLabel LegendLayout LegendMargins LegendMarkers LegendMarkerSize LegendreP LegendreQ LegendreType Length LengthWhile LerchPhi Less LessEqual LessEqualGreater LessFullEqual LessGreater LessLess LessSlantEqual LessTilde LetterCharacter LetterQ Level LeveneTest LeviCivitaTensor LevyDistribution Lexicographic LibraryFunction LibraryFunctionError LibraryFunctionInformation LibraryFunctionLoad LibraryFunctionUnload LibraryLoad LibraryUnload LicenseID LiftingFilterData LiftingWaveletTransform LightBlue LightBrown LightCyan Lighter LightGray LightGreen Lighting LightingAngle LightMagenta LightOrange LightPink LightPurple LightRed LightSources LightYellow Likelihood Limit LimitsPositioning LimitsPositioningTokens LindleyDistribution Line Line3DBox LinearFilter LinearFractionalTransform LinearModelFit LinearOffsetFunction LinearProgramming LinearRecurrence LinearSolve LinearSolveFunction LineBox LineBreak LinebreakAdjustments LineBreakChart LineBreakWithin LineColor LineForm LineGraph LineIndent LineIndentMaxFraction LineIntegralConvolutionPlot LineIntegralConvolutionScale LineLegend LineOpacity LineSpacing LineWrapParts LinkActivate LinkClose LinkConnect LinkConnectedQ LinkCreate LinkError LinkFlush LinkFunction LinkHost LinkInterrupt LinkLaunch LinkMode LinkObject LinkOpen LinkOptions LinkPatterns LinkProtocol LinkRead LinkReadHeld LinkReadyQ Links LinkWrite LinkWriteHeld LiouvilleLambda List Listable ListAnimate ListContourPlot ListContourPlot3D ListConvolve ListCorrelate ListCurvePathPlot ListDeconvolve ListDensityPlot Listen ListFourierSequenceTransform ListInterpolation ListLineIntegralConvolutionPlot ListLinePlot ListLogLinearPlot ListLogLogPlot ListLogPlot ListPicker ListPickerBox ListPickerBoxBackground ListPickerBoxOptions ListPlay ListPlot ListPlot3D ListPointPlot3D ListPolarPlot ListQ ListStreamDensityPlot ListStreamPlot ListSurfacePlot3D ListVectorDensityPlot ListVectorPlot ListVectorPlot3D ListZTransform Literal LiteralSearch LocalClusteringCoefficient LocalizeVariables LocationEquivalenceTest LocationTest Locator LocatorAutoCreate LocatorBox LocatorBoxOptions LocatorCentering LocatorPane LocatorPaneBox LocatorPaneBoxOptions ' +
-	      'LocatorRegion Locked Log Log10 Log2 LogBarnesG LogGamma LogGammaDistribution LogicalExpand LogIntegral LogisticDistribution LogitModelFit LogLikelihood LogLinearPlot LogLogisticDistribution LogLogPlot LogMultinormalDistribution LogNormalDistribution LogPlot LogRankTest LogSeriesDistribution LongEqual Longest LongestAscendingSequence LongestCommonSequence LongestCommonSequencePositions LongestCommonSubsequence LongestCommonSubsequencePositions LongestMatch LongForm Longitude LongLeftArrow LongLeftRightArrow LongRightArrow Loopback LoopFreeGraphQ LowerCaseQ LowerLeftArrow LowerRightArrow LowerTriangularize LowpassFilter LQEstimatorGains LQGRegulator LQOutputRegulatorGains LQRegulatorGains LUBackSubstitution LucasL LuccioSamiComponents LUDecomposition LyapunovSolve LyonsGroupLy ' +
+	      'Label Labeled LabeledSlider LabelingFunction LabelStyle LaguerreL LambdaComponents LambertW LanczosWindow LandauDistribution Language LanguageCategory LaplaceDistribution LaplaceTransform Laplacian LaplacianFilter LaplacianGaussianFilter Large Larger Last lat latlng LatticeData LatticeReduce Launch LaunchKernels LayeredGraphPlot LayerSizeFunction LayoutInformation LCM LeafCount LeapYearQ LeastSquares LeastSquaresFilterKernel Left LeftArrow LeftArrowBar LeftArrowRightArrow LeftDownTeeVector LeftDownVector LeftDownVectorBar LeftRightArrow LeftRightVector LeftTee LeftTeeArrow LeftTeeVector LeftTriangle LeftTriangleBar LeftTriangleEqual LeftUpDownVector LeftUpTeeVector LeftUpVector LeftUpVectorBar LeftVector LeftVectorBar LegendAppearance Legended LegendFunction LegendLabel LegendLayout LegendMargins LegendMarkers LegendMarkerSize LegendreP LegendreQ LegendreType Length LengthWhile LerchPhi Less LessEqual LessEqualGreater LessFullEqual LessGreater LessLess LessSlantEqual LessTilde LetterCharacter LetterQ Level LeveneTest LeviCivitaTensor LevyDistribution Lexicographic LibraryFunction LibraryFunctionError LibraryFunctionInformation LibraryFunctionLoad LibraryFunctionUnload LibraryLoad LibraryUnload LicenseID LiftingFilterData LiftingWaveletTransform LightBlue LightBrown LightCyan Lighter LightGray LightGreen Lighting LightingAngle LightMagenta LightOrange LightPink LightPurple LightRed LightSources LightYellow Likelihood Limit LimitsPositioning LimitsPositioningTokens LindleyDistribution Line Line3DBox LinearFilter LinearFractionalTransform LinearModelFit LinearOffsetFunction LinearProgramming LinearRecurrence LinearSolve LinearSolveFunction LineBox LineBreak LinebreakAdjustments LineBreakChart LineBreakWithin LineColor LineForm LineGraph LineIndent LineIndentMaxFraction LineIntegralConvolutionPlot LineIntegralConvolutionScale LineLegend LineOpacity LineSpacing LineWrapParts LinkActivate LinkClose LinkConnect LinkConnectedQ LinkCreate LinkError LinkFlush LinkFunction LinkHost LinkInterrupt LinkLaunch LinkMode LinkObject LinkOpen LinkOptions LinkPatterns LinkProtocol LinkRead LinkReadHeld LinkReadyQ Links LinkWrite LinkWriteHeld LiouvilleLambda List Listable ListAnimate ListContourPlot ListContourPlot3D ListConvolve ListCorrelate ListCurvePathPlot ListDeconvolve ListDensityPlot Listen ListFourierSequenceTransform ListInterpolation ListLineIntegralConvolutionPlot ListLinePlot ListLogLinearPlot ListLogLogPlot ListLogPlot ListPicker ListPickerBox ListPickerBoxBackground ListPickerBoxOptions ListPlay ListPlot ListPlot3D ListPointPlot3D ListPolarPlot ListQ ListStreamDensityPlot ListStreamPlot ListSurfacePlot3D ListVectorDensityPlot ListVectorPlot ListVectorPlot3D ListZTransform Literal LiteralSearch LocalClusteringCoefficient LocalizeVariables LocationEquivalenceTest LocationTest Locator LocatorAutoCreate LocatorBox LocatorBoxOptions LocatorCentering LocatorPane LocatorPaneBox LocatorPaneBoxOptions ' +
+	      'LocatorRegion Locked Log Log10 Log2 LogBarnesG LogGamma LogGammaDistribution LogicalExpand LogIntegral LogisticDistribution LogitModelFit LogLikelihood LogLinearPlot LogLogisticDistribution LogLogPlot LogMultinormalDistribution LogNormalDistribution LogPlot LogRankTest LogSeriesDistribution LongEqual Longest LongestAscendingSequence LongestCommonSequence LongestCommonSequencePositions LongestCommonSubsequence LongestCommonSubsequencePositions LongestMatch LongForm lng LongLeftArrow LongLeftRightArrow LongRightArrow Loopback LoopFreeGraphQ LowerCaseQ LowerLeftArrow LowerRightArrow LowerTriangularize LowpassFilter LQEstimatorGains LQGRegulator LQOutputRegulatorGains LQRegulatorGains LUBackSubstitution LucasL LuccioSamiComponents LUDecomposition LyapunovSolve LyonsGroupLy ' +
 	      'MachineID MachineName MachineNumberQ MachinePrecision MacintoshSystemPageSetup Magenta Magnification Magnify MainSolve MaintainDynamicCaches Majority MakeBoxes MakeExpression MakeRules MangoldtLambda ManhattanDistance Manipulate Manipulator MannWhitneyTest MantissaExponent Manual Map MapAll MapAt MapIndexed MAProcess MapThread MarcumQ MardiaCombinedTest MardiaKurtosisTest MardiaSkewnessTest MarginalDistribution MarkovProcessProperties Masking MatchingDissimilarity MatchLocalNameQ MatchLocalNames MatchQ Material MathematicaNotation MathieuC MathieuCharacteristicA MathieuCharacteristicB MathieuCharacteristicExponent MathieuCPrime MathieuGroupM11 MathieuGroupM12 MathieuGroupM22 MathieuGroupM23 MathieuGroupM24 MathieuS MathieuSPrime MathMLForm MathMLText Matrices MatrixExp MatrixForm MatrixFunction MatrixLog MatrixPlot MatrixPower MatrixQ MatrixRank Max MaxBend MaxDetect MaxExtraBandwidths MaxExtraConditions MaxFeatures MaxFilter Maximize MaxIterations MaxMemoryUsed MaxMixtureKernels MaxPlotPoints MaxPoints MaxRecursion MaxStableDistribution MaxStepFraction MaxSteps MaxStepSize MaxValue MaxwellDistribution McLaughlinGroupMcL Mean MeanClusteringCoefficient MeanDegreeConnectivity MeanDeviation MeanFilter MeanGraphDistance MeanNeighborDegree MeanShift MeanShiftFilter Median MedianDeviation MedianFilter Medium MeijerG MeixnerDistribution MemberQ MemoryConstrained MemoryInUse Menu MenuAppearance MenuCommandKey MenuEvaluator MenuItem MenuPacket MenuSortingValue MenuStyle MenuView MergeDifferences Mesh MeshFunctions MeshRange MeshShading MeshStyle Message MessageDialog MessageList MessageName MessageOptions MessagePacket Messages MessagesNotebook MetaCharacters MetaInformation Method MethodOptions MexicanHatWavelet MeyerWavelet Min MinDetect MinFilter MinimalPolynomial MinimalStateSpaceModel Minimize Minors MinRecursion MinSize MinStableDistribution Minus MinusPlus MinValue Missing MissingDataMethod MittagLefflerE MixedRadix MixedRadixQuantity MixtureDistribution Mod Modal Mode Modular ModularLambda Module Modulus MoebiusMu Moment Momentary MomentConvert MomentEvaluate MomentGeneratingFunction Monday Monitor MonomialList MonomialOrder MonsterGroupM MorletWavelet MorphologicalBinarize MorphologicalBranchPoints MorphologicalComponents MorphologicalEulerNumber MorphologicalGraph MorphologicalPerimeter MorphologicalTransform Most MouseAnnotation MouseAppearance MouseAppearanceTag MouseButtons Mouseover MousePointerNote MousePosition MovingAverage MovingMedian MoyalDistribution MultiedgeStyle MultilaunchWarning MultiLetterItalics MultiLetterStyle MultilineFunction Multinomial MultinomialDistribution MultinormalDistribution MultiplicativeOrder Multiplicity Multiselection MultivariateHypergeometricDistribution MultivariatePoissonDistribution MultivariateTDistribution ' +
 	      'N NakagamiDistribution NameQ Names NamespaceBox Nand NArgMax NArgMin NBernoulliB NCache NDSolve NDSolveValue Nearest NearestFunction NeedCurrentFrontEndPackagePacket NeedCurrentFrontEndSymbolsPacket NeedlemanWunschSimilarity Needs Negative NegativeBinomialDistribution NegativeMultinomialDistribution NeighborhoodGraph Nest NestedGreaterGreater NestedLessLess NestedScriptRules NestList NestWhile NestWhileList NevilleThetaC NevilleThetaD NevilleThetaN NevilleThetaS NewPrimitiveStyle NExpectation Next NextPrime NHoldAll NHoldFirst NHoldRest NicholsGridLines NicholsPlot NIntegrate NMaximize NMaxValue NMinimize NMinValue NominalVariables NonAssociative NoncentralBetaDistribution NoncentralChiSquareDistribution NoncentralFRatioDistribution NoncentralStudentTDistribution NonCommutativeMultiply NonConstants None NonlinearModelFit NonlocalMeansFilter NonNegative NonPositive Nor NorlundB Norm Normal NormalDistribution NormalGrouping Normalize NormalizedSquaredEuclideanDistance NormalsFunction NormFunction Not NotCongruent NotCupCap NotDoubleVerticalBar Notebook NotebookApply NotebookAutoSave NotebookClose NotebookConvertSettings NotebookCreate NotebookCreateReturnObject NotebookDefault NotebookDelete NotebookDirectory NotebookDynamicExpression NotebookEvaluate NotebookEventActions NotebookFileName NotebookFind NotebookFindReturnObject NotebookGet NotebookGetLayoutInformationPacket NotebookGetMisspellingsPacket NotebookInformation NotebookInterfaceObject NotebookLocate NotebookObject NotebookOpen NotebookOpenReturnObject NotebookPath NotebookPrint NotebookPut NotebookPutReturnObject NotebookRead NotebookResetGeneratedCells Notebooks NotebookSave NotebookSaveAs NotebookSelection NotebookSetupLayoutInformationPacket NotebooksMenu NotebookWrite NotElement NotEqualTilde NotExists NotGreater NotGreaterEqual NotGreaterFullEqual NotGreaterGreater NotGreaterLess NotGreaterSlantEqual NotGreaterTilde NotHumpDownHump NotHumpEqual NotLeftTriangle NotLeftTriangleBar NotLeftTriangleEqual NotLess NotLessEqual NotLessFullEqual NotLessGreater NotLessLess NotLessSlantEqual NotLessTilde NotNestedGreaterGreater NotNestedLessLess NotPrecedes NotPrecedesEqual NotPrecedesSlantEqual NotPrecedesTilde NotReverseElement NotRightTriangle NotRightTriangleBar NotRightTriangleEqual NotSquareSubset NotSquareSubsetEqual NotSquareSuperset NotSquareSupersetEqual NotSubset NotSubsetEqual NotSucceeds NotSucceedsEqual NotSucceedsSlantEqual NotSucceedsTilde NotSuperset NotSupersetEqual NotTilde NotTildeEqual NotTildeFullEqual NotTildeTilde NotVerticalBar NProbability NProduct NProductFactors NRoots NSolve NSum NSumTerms Null NullRecords NullSpace NullWords Number NumberFieldClassNumber NumberFieldDiscriminant NumberFieldFundamentalUnits NumberFieldIntegralBasis NumberFieldNormRepresentatives NumberFieldRegulator NumberFieldRootsOfUnity NumberFieldSignature NumberForm NumberFormat NumberMarks NumberMultiplier NumberPadding NumberPoint NumberQ NumberSeparator ' +
 	      'NumberSigns NumberString Numerator NumericFunction NumericQ NuttallWindow NValues NyquistGridLines NyquistPlot ' +

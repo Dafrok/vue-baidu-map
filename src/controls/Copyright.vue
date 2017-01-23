@@ -41,7 +41,7 @@ export default {
       })
       this.copyright && this.copyright.forEach(item => {
         const bounds = item.bounds
-          ? new BMap.Bounds(new BMap.Point(item.bounds.sw.longitude, item.bounds.sw.latitude), new BMap.Point(item.bounds.ne.longitude, item.bounds.ne.latitude))
+          ? new BMap.Bounds(new BMap.Point(item.bounds.sw.lng, item.bounds.sw.lat), new BMap.Point(item.bounds.ne.lng, item.bounds.ne.lat))
           : map.getBounds()
         this.control.addCopyright({
           id: item.id,

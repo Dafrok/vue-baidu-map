@@ -22,6 +22,7 @@ export default {
   },
   props: {
     point: {},
+    label: {},
     offset: {},
     icon: {},
     massClear: {
@@ -105,7 +106,8 @@ export default {
     addOverlay () {
       const {point, offset, icon, massClear, dragging, clicking, raiseOnDrag, draggingCursor, rotation, shadow, title, animation, bindEvents} = this
       const {BMap, map} = this.$parent
-      const overlay = new BMap.Marker(new BMap.Point(point.longitude, point.latitude), {
+      const label = new Label({})
+      const overlay = new BMap.Marker(new BMap.Point(point.lng, point.lat), {
         offset,
         icon,
         enableMassClear: massClear,

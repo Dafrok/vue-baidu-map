@@ -354,24 +354,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  watch: {
-	    'center.longitude': function centerLongitude(val, oldVal) {
+	    'center.lng': function centerlng(val, oldVal) {
 	      var _$parent = this.$parent,
 	          $BMap = _$parent.$BMap,
 	          map = _$parent.map;
 
-	      var longitude = parseFloat(val);
-	      if (val.toString() !== oldVal.toString() && longitude >= -180 && longitude <= 180) {
-	        map.setCenter(new $BMap.Point(longitude, this.center.latitude));
+	      var lng = parseFloat(val);
+	      if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
+	        map.setCenter(new $BMap.Point(lng, this.center.lat));
 	      }
 	    },
-	    'center.latitude': function centerLatitude(val, oldVal) {
+	    'center.lat': function centerlat(val, oldVal) {
 	      var _$parent2 = this.$parent,
 	          $BMap = _$parent2.$BMap,
 	          map = _$parent2.map;
 
-	      var latitude = parseFloat(val);
-	      if (val.toString() !== oldVal.toString() && latitude >= -74 && latitude <= 74) {
-	        map.setCenter(new $BMap.Point(this.center.longitude, latitude));
+	      var lat = parseFloat(val);
+	      if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
+	        map.setCenter(new $BMap.Point(this.center.lng, lat));
 	      }
 	    },
 	    zoom: function zoom(val, oldVal) {
@@ -490,7 +490,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        case 'String':
 	          return new $BMap.Point(center);
 	        case 'Object':
-	          return new $BMap.Point(parseFloat(center.longitude), parseFloat(center.latitude));
+	          return new $BMap.Point(parseFloat(center.lng), parseFloat(center.lat));
 	        default:
 	          return new $BMap.Point();
 	      }
@@ -1293,7 +1293,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _this2.control.removeCopyright(item.id);
 	      });
 	      this.copyright && this.copyright.forEach(function (item) {
-	        var bounds = item.bounds ? new BMap.Bounds(new BMap.Point(item.bounds.sw.longitude, item.bounds.sw.latitude), new BMap.Point(item.bounds.ne.longitude, item.bounds.ne.latitude)) : map.getBounds();
+	        var bounds = item.bounds ? new BMap.Bounds(new BMap.Point(item.bounds.sw.lng, item.bounds.sw.lat), new BMap.Point(item.bounds.ne.lng, item.bounds.ne.lat)) : map.getBounds();
 	        _this2.control.addCopyright({
 	          id: item.id,
 	          content: item.content,
@@ -1612,7 +1612,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          BMap = _$parent2.BMap,
 	          map = _$parent2.map;
 
-	      var overlay = new BMap.Marker(new BMap.Point(point.longitude, point.latitude), {
+	      var overlay = new BMap.Marker(new BMap.Point(point.lng, point.lat), {
 	        offset: offset,
 	        icon: icon,
 	        enableMassClear: massClear,

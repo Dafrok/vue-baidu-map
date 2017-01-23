@@ -81,14 +81,14 @@
 
 ```html
 <template>
-  <baidu-map ak="YOUR_APP_KEY" :center="{longitude: 116.404, latitude: 39.915}" :zoom="15">
+  <baidu-map ak="YOUR_APP_KEY" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
   </baidu-map>
 </template>
 ```
 
 #### 预览
 <baidu-map>
-  <map-view class="map" :center="{longitude: 116.404, latitude: 39.915}" :zoom="15">
+  <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
 </baidu-map>
 
 ### 开启滚轮缩放
@@ -98,7 +98,7 @@
 ```html
 <template>
   <baidu-map>
-    <map-view :center="{longitude: 116.404, latitude: 39.915}" :zoom="15" :scroll-wheel-zoom="true">
+    <map-view :center="{lng: 116.404, lat: 39.915}" :zoom="15" :scroll-wheel-zoom="true">
   </baidu-map>
 </template>
 ```
@@ -106,7 +106,7 @@
 #### 预览
 <template>
   <baidu-map>
-    <map-view class="map" :center="{longitude: 116.404, latitude: 39.915}" :zoom="15" :scroll-wheel-zoom="true">
+    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" :scroll-wheel-zoom="true">
   </baidu-map>
 </template>
 
@@ -117,7 +117,7 @@
 ```html
 <template>
   <baidu-map>
-    <map-view :center="{longitude: 116.404, latitude: 39.915}" :zoom="15" mapType="BMAP_SATELLITE_MAP">
+    <map-view :center="{lng: 116.404, lat: 39.915}" :zoom="15" mapType="BMAP_SATELLITE_MAP">
   </baidu-map>
 </template>
 ```
@@ -125,7 +125,7 @@
 #### 预览
 <template>
   <baidu-map>
-    <map-view class="map" :center="{longitude: 116.404, latitude: 39.915}" :zoom="15" mapType="BMAP_SATELLITE_MAP">
+    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" mapType="BMAP_SATELLITE_MAP">
   </baidu-map>
 </template>
 
@@ -136,8 +136,8 @@
 ```html
 <template>
   <div>
-    <input v-model.number="center.longitude">
-    <input v-model.number="center.latitude">
+    <input v-model.number="center.lng">
+    <input v-model.number="center.lat">
     <input v-model.number="zoom">
     <baidu-map>
       <map-view
@@ -157,8 +157,8 @@ export default {
   data () {
     return {
       center: {
-        longitude: 116.404,
-        latitude: 39.915
+        lng: 116.404,
+        lat: 39.915
       },
       zoom: 15
     }
@@ -166,8 +166,8 @@ export default {
   methods: {
     syncCenter (e) {
       const {lng, lat} = e.target.getCenter()
-      this.center.longitude = lng
-      this.center.latitude = lat
+      this.center.lng = lng
+      this.center.lat = lat
     },
     syncZoom (e) {
       this.zoom = e.target.getZoom()
@@ -183,11 +183,11 @@ export default {
     <div class="box">
       <label class="label">经度</label>
       <p class="control">
-        <input class="input is-small" v-model.number="center.longitude"/>
+        <input class="input is-small" v-model.number="center.lng"/>
       </p>
       <label class="label">纬度</label>
       <p class="control">
-        <input class="input is-small" v-model.number="center.latitude"/>
+        <input class="input is-small" v-model.number="center.lat"/>
       </p>
       <label class="label">缩放级别</label>
       <p class="control">
@@ -208,8 +208,8 @@ export default {
   data () {
     return {
       center: {
-        longitude: 116.404,
-        latitude: 39.915
+        lng: 116.404,
+        lat: 39.915
       },
       zoom: 15
     }
@@ -217,8 +217,8 @@ export default {
   methods: {
     syncCenter (e) {
       const {lng, lat} = e.target.getCenter()
-      this.center.longitude = lng
-      this.center.latitude = lat
+      this.center.lng = lng
+      this.center.lat = lat
     },
     syncZoom (e) {
       this.zoom = e.target.getZoom()

@@ -50,8 +50,8 @@
 ```html
 <template>
   <baidu-map>
-    <map-view class="map" :center="{longitude: 116.404, latitude: 39.915}" :zoom="15">
-      <map-overlay-marker :point="{longitude: 116.404, latitude: 39.915}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE"/>
+    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+      <map-overlay-marker :point="{lng: 116.404, lat: 39.915}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE"/>
     </map-view>
   </baidu-map>
 </template>
@@ -60,8 +60,8 @@
 #### 预览
 
 <baidu-map>
-  <map-view class="map" :center="{longitude: 116.404, latitude: 39.915}" :zoom="15">
-    <map-overlay-marker :point="{longitude: 116.404, latitude: 39.915}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE"/>
+  <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+    <map-overlay-marker :point="{lng: 116.404, lat: 39.915}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE"/>
   </map-view>
 </baidu-map>
 </template>
