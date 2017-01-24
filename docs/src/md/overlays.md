@@ -51,17 +51,16 @@
 <template>
   <baidu-map>
     <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-      <map-overlay-marker :point="{lng: 116.404, lat: 39.915}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE"/>
+      <map-overlay-marker :point="{lng: 116.404, lat: 39.915}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :label="{content: 'Marker Label', opts: {offset: {width: 20, height: -10}}}"/>
     </map-view>
   </baidu-map>
 </template>
 ```
 
 #### 预览
-
 <baidu-map>
   <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <map-overlay-marker :point="{lng: 116.404, lat: 39.915}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE"/>
+    <map-overlay-marker :point="{lng: 116.404, lat: 39.915}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :label="{content: 'Marker Label', opts: {offset: {width: 20, height: -10}}}"/>
   </map-view>
 </baidu-map>
 </template>

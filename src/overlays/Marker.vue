@@ -1,19 +1,6 @@
 <script>
-const events = [
-  'click',
-  'dblclick',
-  'mousedown',
-  'mouseup',
-  'mouseout',
-  'mouseover',
-  'remove',
-  'infowindowclose',
-  'infowindowopen',
-  'dragstart',
-  'dragging',
-  'dragend',
-  'rightclick'
-]
+import bindEvents from '../base/bindEvent.js'
+import {createLabel} from '../base/factory.js'
 
 export default {
   name: 'map-overlay-marker',
@@ -52,8 +39,14 @@ export default {
     title: {
       type: String
     },
+    label: {
+    },
     animation: {
       type: String
+    },
+    top: {
+      type: Boolean,
+      default: false
     }
   },
   watch: {
@@ -84,8 +77,14 @@ export default {
     shadow (val) {
       this.setTitle(val)
     },
+    label (val) {
+      this.reloadOverlay()
+    },
     animation (val) {
       this.setAnimation(global[val])
+    },
+    top (val) {
+      this.overlay.setTop(val)
     }
   },
   mounted () {
@@ -95,18 +94,9 @@ export default {
     })
   },
   methods: {
-    bindEvents () {
-      const {overlay} = this
-      events.forEach(event => {
-        overlay.addEventListener(event, (arg) => {
-          this.$emit(event, arg)
-        })
-      })
-    },
     addOverlay () {
-      const {point, offset, icon, massClear, dragging, clicking, raiseOnDrag, draggingCursor, rotation, shadow, title, animation, bindEvents} = this
+      const {point, offset, icon, massClear, dragging, clicking, raiseOnDrag, draggingCursor, rotation, shadow, title, label, animation, top, addLabel} = this
       const {BMap, map} = this.$parent
-      const label = new Label({})
       const overlay = new BMap.Marker(new BMap.Point(point.lng, point.lat), {
         offset,
         icon,
@@ -120,9 +110,11 @@ export default {
         title
       })
       this.overlay = overlay
-      overlay.setAnimation(global[animation])
-      bindEvents()
+      label && overlay && overlay.setLabel(createLabel(BMap, label))
+      overlay.setTop(top)
+      bindEvents.call(this, this.overlay)
       map.addOverlay(overlay)
+      overlay.setAnimation(global[animation])
     },
     removeOverlay () {
       const {BMap, map} = this.$parent
