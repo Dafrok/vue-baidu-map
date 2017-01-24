@@ -112,7 +112,7 @@ export default {
       this.overlay = overlay
       label && overlay && overlay.setLabel(createLabel(BMap, label))
       overlay.setTop(top)
-      bindEvents.call(this, this.overlay)
+      bindEvents.call(this, overlay)
       map.addOverlay(overlay)
       overlay.setAnimation(global[animation])
     },

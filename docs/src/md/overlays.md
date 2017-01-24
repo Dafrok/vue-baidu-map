@@ -64,3 +64,63 @@
   </map-view>
 </baidu-map>
 </template>
+
+## MapOverlayPolyline
+
+折线
+
+### 属性
+
+|属性名|类型|默认值|描述|
+|------|:---:|:---:|----|
+### 事件
+
+|事件名|参数|描述|
+|------|:--:|----|
+
+
+### 示例
+
+在地图中添加可编辑的折线
+
+#### 代码
+
+```html
+<template>
+  <baidu-map>
+    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+      <map-overlay-polyline :points="[{lng: 116.404, lat: 39.915}, {lng: 116.405, lat: 39.920}, {lng: 116.423493, lat: 39.907445}]"/>
+    </map-view>
+  </baidu-map>
+</template>
+```
+
+#### 预览
+<ul>
+  <li v-for="point in polylinePath"><input v-model="point.lng"><input v-model="point.lat"></li>
+</ul>
+<baidu-map>
+  <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+    <map-overlay-polyline :points="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolylinePath"/>
+  </map-view>
+</baidu-map>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      polylinePath: [
+        {lng: 116.404, lat: 39.915},
+        {lng: 116.405, lat: 39.920},
+        {lng: 116.423493, lat: 39.907445}
+      ]
+    }
+  },
+  methods: {
+    updatePolylinePath (e) {
+      this.polylinePath = e.target.getPath()
+    }
+  }
+}
+</script>

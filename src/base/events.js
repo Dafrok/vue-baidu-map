@@ -56,5 +56,15 @@ export default {
     'dragging',
     'dragend',
     'rightclick'
+  ],
+  'map-overlay-polyline': [
+    'click',
+    'dblclick',
+    'mousedown',
+    'mouseup',
+    'mouseout',
+    'mouseover',
+    'remove',
+    'lineupdate'
   ]
 }

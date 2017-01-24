@@ -8,6 +8,7 @@ import MapControlGeolocation from './controls/Geolocation.vue'
 import MapControlCopyright from './controls/Copyright.vue'
 import MapControlCityList from './controls/CityList.vue'
 import MapOverlayMarker from './overlays/Marker.vue'
+import MapOverlayPolyline from './overlays/Polyline.vue'
 
 export default {
   install (Vue, options) {
@@ -29,5 +30,6 @@ export default {
     Vue.component('map-control-city-list', MapControlCityList)
 
     Vue.component('map-overlay-marker', MapOverlayMarker)
+    Vue.component('map-overlay-polyline', MapOverlayPolyline)
   }
 }
