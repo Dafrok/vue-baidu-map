@@ -1,8 +1,5 @@
 <script>
-const events = [
-  'locationSuccess',
-  'locationError'
-]
+import bindEvents from '../base/bindEvent.js'
 
 export default {
   name: 'map-control-geolocation',
@@ -44,14 +41,6 @@ export default {
     }
   },
   methods: {
-    bindEvents () {
-      const {control} = this
-      events.forEach(event => {
-        control.addEventListener(event, (arg) => {
-          this.$emit(event, arg)
-        })
-      })
-    },
     addControl () {
       const {BMap, map} = this.$parent
       this.control = new BMap.GeolocationControl({
@@ -60,7 +49,7 @@ export default {
         enableAutoLocation: this.enableAutoLocation,
         locationIcon: this.locationIcon
       })
-      this.bindEvents()
+      bindEvents.call(this, this.control)
       map.addControl(this.control)
     },
     removeControl () {

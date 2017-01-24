@@ -4,42 +4,7 @@ div
 </template>
 
 <script>
-const mapViewEvents = [
-  'click',
-  'dblclick',
-  'rightclick',
-  'rightdblclick',
-  'maptypechange',
-  'mousemove',
-  'mouseover',
-  'mouseout',
-  'movestart',
-  'moving',
-  'moveend',
-  'zoomstart',
-  'zoomend',
-  'addoverlay',
-  'addcontrol',
-  'removecontrol',
-  'removeoverlay',
-  'clearoverlays',
-  'dragstart',
-  'dragging',
-  'dragend',
-  'addtilelayer',
-  'removetilelayer',
-  'load',
-  'resize',
-  'hotspotclick',
-  'hotspotover',
-  'hotspotout',
-  'tilesloaded',
-  'touchstart',
-  'touchmove',
-  'touchend',
-  'longpress'
-]
-
+import bindEvents from '../base/bindEvent.js'
 export default {
   name: 'map-view',
   props: {
@@ -177,19 +142,11 @@ export default {
       pinchToZoom ? map.enablePinchToZoom() : map.disablePinchToZoom()
       autoResize ? map.enableAutoResize() : map.disableAutoResize()
     },
-    bindEvents () {
-      const {map} = this.$parent
-      mapViewEvents.forEach(event => {
-        map.addEventListener(event, (arg) => {
-          this.$emit(event, arg)
-        })
-      })
-    },
-    initMap (BMap) {
+    init (BMap) {
       const map = this.$parent.map = new BMap.Map(this.$el, {enableHighResolution: this.highResolution, enableMapClick: this.mapClick})
-      const {setMapOptions, bindEvents, maxZoom, zoom, center, getCenterPoint} = this
+      const {setMapOptions, maxZoom, zoom, center, getCenterPoint} = this
       setMapOptions()
-      bindEvents()
+      bindEvents.call(this, map)
       map.centerAndZoom(getCenterPoint(center), maxZoom || zoom || 3)
       this.BMap = BMap
       this.map = map
@@ -210,7 +167,7 @@ export default {
   },
   mounted () {
     this.$parent.$on('ready', BMap => {
-      this.initMap(BMap)
+      this.init(BMap)
     })
   }
 }

@@ -1,8 +1,5 @@
 <script>
-const events = [
-  'viewchanged',
-  'viewchanging'
-]
+import bindEvents from '../base/bindEvent.js'
 
 export default {
   name: 'map-control-overview-map',
@@ -50,16 +47,8 @@ export default {
         size: this.size,
         isOpen: this.isOpen
       })
-      this.bindEvents()
+      bindEvents.call(this, this.control)
       map.addControl(this.control)
-    },
-    bindEvents () {
-      const {control} = this
-      events.forEach(event => {
-        control.addEventListener(event, (arg) => {
-          this.$emit(event, arg)
-        })
-      })
     },
     removeControl () {
       this.$nextTick(() => {

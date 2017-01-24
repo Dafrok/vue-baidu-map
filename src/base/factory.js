@@ -1,29 +1,29 @@
 export function createPoint(BMap, options) {
   const {lng, lat} = options
-  return new BMap.Point(lng, lat)
+  return new BMap.Point(parseFloat(lng), parseFloat(lat))
 }
 
 export function createPixel(BMap, options) {
   const {x, y} = options
-  return new BMap.Pixel(x, y)
+  return new BMap.Pixel(parseFloat(x), parseFloat(y))
 }
 
 export function createBounds(BMap, options) {
   const {sw, ne} = options
-  return new BMap.Bounds(sw, ne)
+  return new BMap.Bounds(createPoint(BMap, sw), createPoint(BMap, ne))
 }
 
 export function createSize(BMap, options) {
   const {width, height} = options
-  return new BMap.Size(width, height)
+  return new BMap.Size(parseFloat(width), parseFloat(height))
 }
 
 export function createIcon(BMap, options) {
   const {url, size, opts} = options
   return new BMap.Icon(url, createSize(size), {
-    anchro: createSize(opts.anchor),
-    imageOffset: createSize(opts.imageOffset),
-    infoWindowAnchor: createSize(opts.infoWindowAnchor),
+    anchor: anchor && createSize(BMap, opts.anchor),
+    imageOffset: imageOffset && createSize(BMap, opts.imageOffset),
+    infoWindowAnchor: infoWindowAnchor && createSize(BMap, opts.infoWindowAnchor),
     printImageUrl
   })
 }
@@ -31,8 +31,8 @@ export function createIcon(BMap, options) {
 export function createLabel (BMap, options) {
   const {content, opts} = options
   return new BMap.Label(content, {
-    offset: createSize(opts.offset),
-    position: createPoint(opts.position),
+    offset: opts.offset && createSize(BMap, opts.offset),
+    position: opts.position && createPoint(BMap, opts.position),
     enableMassClear: opts.enableMassClear
   })
 }
