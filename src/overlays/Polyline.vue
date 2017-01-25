@@ -57,6 +57,9 @@ export default {
     },
     massClear (val) {
       val ? this.overlay.enableMassClear() : this.overlay.disableMassClear()
+    },
+    clicking (val) {
+      this.reloadOverlay()
     }
   },
   methods: {
