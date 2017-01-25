@@ -37,8 +37,26 @@ export default {
     }
   },
   watch: {
-    points (val, oldVal) {
-      // this.reloadOverlay()
+    points: {
+      handler (val, oldVal) {
+        this.reloadOverlay()
+      },
+      deep: true
+    },
+    strokeColor (val) {
+      this.overlay.getStrokeColor(val)
+    },
+    strokeColor (val) {
+      this.overlay.getStrokeOpacity(val)
+    },
+    strokeWeight (val) {
+      this.overlay.getStrokeOpacity(val)
+    },
+    editing (val) {
+      val ? this.overlay.enableEditing() : this.overlay.disableEditing()
+    },
+    massClear (val) {
+      val ? this.overlay.enableMassClear() : this.overlay.disableMassClear()
     }
   },
   methods: {
@@ -54,8 +72,10 @@ export default {
         enableMassClear: massClear,
         enableClicking: clicking
       })
-      bindEvents.call(this, overlay)
+      console.log(points)
+      this.overlay = overlay
       map.addOverlay(overlay)
+      bindEvents.call(this, overlay)
     },
     removeOverlay () {
       const {BMap, map} = this.$parent
