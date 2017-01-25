@@ -4,7 +4,7 @@
 
 ## 文档
 
-[dafrok.github.io/vue-baidu-map](dafrok.github.io/vue-baidu-map)
+[https://dafrok.github.io/vue-baidu-map](https://dafrok.github.io/vue-baidu-map)
 
 ## 贡献
 
