@@ -68,37 +68,41 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _MapView2 = _interopRequireDefault(_MapView);
 
-	var _Scale = __webpack_require__(7);
+	var _Scale = __webpack_require__(9);
 
 	var _Scale2 = _interopRequireDefault(_Scale);
 
-	var _Navigation = __webpack_require__(9);
+	var _Navigation = __webpack_require__(11);
 
 	var _Navigation2 = _interopRequireDefault(_Navigation);
 
-	var _MapType = __webpack_require__(11);
+	var _MapType = __webpack_require__(13);
 
 	var _MapType2 = _interopRequireDefault(_MapType);
 
-	var _OverviewMap = __webpack_require__(13);
+	var _OverviewMap = __webpack_require__(15);
 
 	var _OverviewMap2 = _interopRequireDefault(_OverviewMap);
 
-	var _Geolocation = __webpack_require__(15);
+	var _Geolocation = __webpack_require__(17);
 
 	var _Geolocation2 = _interopRequireDefault(_Geolocation);
 
-	var _Copyright = __webpack_require__(17);
+	var _Copyright = __webpack_require__(19);
 
 	var _Copyright2 = _interopRequireDefault(_Copyright);
 
-	var _CityList = __webpack_require__(19);
+	var _CityList = __webpack_require__(21);
 
 	var _CityList2 = _interopRequireDefault(_CityList);
 
-	var _Marker = __webpack_require__(21);
+	var _Marker = __webpack_require__(23);
 
 	var _Marker2 = _interopRequireDefault(_Marker);
+
+	var _Polyline = __webpack_require__(26);
+
+	var _Polyline2 = _interopRequireDefault(_Polyline);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -123,6 +127,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Vue.component('map-control-city-list', _CityList2.default);
 
 	    Vue.component('map-overlay-marker', _Marker2.default);
+	    Vue.component('map-overlay-polyline', _Polyline2.default);
 	  }
 	};
 
@@ -244,7 +249,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	__vue_exports__ = __webpack_require__(5)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(6)
+	var __vue_template__ = __webpack_require__(8)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -279,20 +284,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 5 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	//
-	//
-	//
-	//
-	//
 
-	var mapViewEvents = ['click', 'dblclick', 'rightclick', 'rightdblclick', 'maptypechange', 'mousemove', 'mouseover', 'mouseout', 'movestart', 'moving', 'moveend', 'zoomstart', 'zoomend', 'addoverlay', 'addcontrol', 'removecontrol', 'removeoverlay', 'clearoverlays', 'dragstart', 'dragging', 'dragend', 'addtilelayer', 'removetilelayer', 'load', 'resize', 'hotspotclick', 'hotspotover', 'hotspotout', 'tilesloaded', 'touchstart', 'touchmove', 'touchend', 'longpress'];
+	var _bindEvent = __webpack_require__(6);
+
+	var _bindEvent2 = _interopRequireDefault(_bindEvent);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
 	  name: 'map-view',
@@ -354,7 +358,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  watch: {
-	    'center.lng': function centerlng(val, oldVal) {
+	    'center.lng': function centerLng(val, oldVal) {
 	      var _$parent = this.$parent,
 	          $BMap = _$parent.$BMap,
 	          map = _$parent.map;
@@ -364,7 +368,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        map.setCenter(new $BMap.Point(lng, this.center.lat));
 	      }
 	    },
-	    'center.lat': function centerlat(val, oldVal) {
+	    'center.lat': function centerLat(val, oldVal) {
 	      var _$parent2 = this.$parent,
 	          $BMap = _$parent2.$BMap,
 	          map = _$parent2.map;
@@ -451,28 +455,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	      pinchToZoom ? map.enablePinchToZoom() : map.disablePinchToZoom();
 	      autoResize ? map.enableAutoResize() : map.disableAutoResize();
 	    },
-	    bindEvents: function bindEvents() {
-	      var _this = this;
-
-	      var map = this.$parent.map;
-
-	      mapViewEvents.forEach(function (event) {
-	        map.addEventListener(event, function (arg) {
-	          _this.$emit(event, arg);
-	        });
-	      });
-	    },
-	    initMap: function initMap(BMap) {
+	    init: function init(BMap) {
 	      var map = this.$parent.map = new BMap.Map(this.$el, { enableHighResolution: this.highResolution, enableMapClick: this.mapClick });
 	      var setMapOptions = this.setMapOptions,
-	          bindEvents = this.bindEvents,
 	          maxZoom = this.maxZoom,
 	          zoom = this.zoom,
 	          center = this.center,
 	          getCenterPoint = this.getCenterPoint;
 
 	      setMapOptions();
-	      bindEvents();
+	      _bindEvent2.default.call(this, map);
 	      map.centerAndZoom(getCenterPoint(center), maxZoom || zoom || 3);
 	      this.BMap = BMap;
 	      this.map = map;
@@ -497,17 +489,64 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  mounted: function mounted() {
-	    var _this2 = this;
+	    var _this = this;
 
 	    this.$parent.$on('ready', function (BMap) {
-	      _this2.initMap(BMap);
+	      _this.init(BMap);
 	    });
 	  }
-	};
+	}; //
+	//
+	//
+	//
+	//
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
 /* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	exports.default = function (instance) {
+	  var _this = this;
+
+	  _events2.default[this.$options._componentTag].forEach(function (event) {
+	    instance.addEventListener(event, function (arg) {
+	      _this.$emit(event, arg);
+	    });
+	  });
+	};
+
+	var _events = __webpack_require__(7);
+
+	var _events2 = _interopRequireDefault(_events);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  'map-view': ['click', 'dblclick', 'rightclick', 'rightdblclick', 'maptypechange', 'mousemove', 'mouseover', 'mouseout', 'movestart', 'moving', 'moveend', 'zoomstart', 'zoomend', 'addoverlay', 'addcontrol', 'removecontrol', 'removeoverlay', 'clearoverlays', 'dragstart', 'dragging', 'dragend', 'addtilelayer', 'removetilelayer', 'load', 'resize', 'hotspotclick', 'hotspotover', 'hotspotout', 'tilesloaded', 'touchstart', 'touchmove', 'touchend', 'longpress'],
+	  'map-control-geolocation': ['locationSuccess', 'locationError'],
+	  'map-control-overview-map': ['viewchanged', 'viewchanging'],
+	  'map-overlay-marker': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'infowindowclose', 'infowindowopen', 'dragstart', 'dragging', 'dragend', 'rightclick'],
+	  'map-overlay-polyline': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'lineupdate']
+	};
+
+/***/ },
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -522,14 +561,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 7 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(8)
+	__vue_exports__ = __webpack_require__(10)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -561,7 +600,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 8 */
+/* 10 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -637,14 +676,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 9 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(10)
+	__vue_exports__ = __webpack_require__(12)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -676,7 +715,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 10 */
+/* 12 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -771,14 +810,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 11 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(12)
+	__vue_exports__ = __webpack_require__(14)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -810,7 +849,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 12 */
+/* 14 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -891,14 +930,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 13 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(14)
+	__vue_exports__ = __webpack_require__(16)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -930,8 +969,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 14 */
-/***/ function(module, exports) {
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
 
@@ -939,7 +978,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var events = ['viewchanged', 'viewchanging'];
+	var _bindEvent = __webpack_require__(6);
+
+	var _bindEvent2 = _interopRequireDefault(_bindEvent);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
 	  name: 'map-control-overview-map',
@@ -991,45 +1034,34 @@ return /******/ (function(modules) { // webpackBootstrap
 	        size: this.size,
 	        isOpen: this.isOpen
 	      });
-	      this.bindEvents();
+	      _bindEvent2.default.call(this, this.control);
 	      map.addControl(this.control);
 	    },
-	    bindEvents: function bindEvents() {
+	    removeControl: function removeControl() {
 	      var _this = this;
 
-	      var control = this.control;
-
-	      events.forEach(function (event) {
-	        control.addEventListener(event, function (arg) {
-	          _this.$emit(event, arg);
-	        });
-	      });
-	    },
-	    removeControl: function removeControl() {
-	      var _this2 = this;
-
 	      this.$nextTick(function () {
-	        var _$parent2 = _this2.$parent,
+	        var _$parent2 = _this.$parent,
 	            BMap = _$parent2.BMap,
 	            map = _$parent2.map;
 
-	        map && map.removeControl(_this2.control);
+	        map && map.removeControl(_this.control);
 	      });
 	    },
 	    reloadControl: function reloadControl() {
-	      var _this3 = this;
+	      var _this2 = this;
 
 	      this.$nextTick(function () {
-	        _this3.removeControl();
-	        _this3.addControl();
+	        _this2.removeControl();
+	        _this2.addControl();
 	      });
 	    }
 	  },
 	  mounted: function mounted() {
-	    var _this4 = this;
+	    var _this3 = this;
 
 	    this.$parent.$on('ready', function () {
-	      _this4.addControl();
+	      _this3.addControl();
 	    });
 	  },
 	  beforeDestroy: function beforeDestroy() {
@@ -1039,14 +1071,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 15 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(16)
+	__vue_exports__ = __webpack_require__(18)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -1078,8 +1110,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 16 */
-/***/ function(module, exports) {
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
 
@@ -1087,7 +1119,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var events = ['locationSuccess', 'locationError'];
+	var _bindEvent = __webpack_require__(6);
+
+	var _bindEvent2 = _interopRequireDefault(_bindEvent);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
 	  name: 'map-control-geolocation',
@@ -1130,17 +1166,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  methods: {
-	    bindEvents: function bindEvents() {
-	      var _this = this;
-
-	      var control = this.control;
-
-	      events.forEach(function (event) {
-	        control.addEventListener(event, function (arg) {
-	          _this.$emit(event, arg);
-	        });
-	      });
-	    },
 	    addControl: function addControl() {
 	      var _$parent = this.$parent,
 	          BMap = _$parent.BMap,
@@ -1152,34 +1177,34 @@ return /******/ (function(modules) { // webpackBootstrap
 	        enableAutoLocation: this.enableAutoLocation,
 	        locationIcon: this.locationIcon
 	      });
-	      this.bindEvents();
+	      _bindEvent2.default.call(this, this.control);
 	      map.addControl(this.control);
 	    },
 	    removeControl: function removeControl() {
-	      var _this2 = this;
+	      var _this = this;
 
 	      this.$nextTick(function () {
-	        var _$parent2 = _this2.$parent,
+	        var _$parent2 = _this.$parent,
 	            BMap = _$parent2.BMap,
 	            map = _$parent2.map;
 
-	        map && map.removeControl(_this2.control);
+	        map && map.removeControl(_this.control);
 	      });
 	    },
 	    reloadControl: function reloadControl() {
-	      var _this3 = this;
+	      var _this2 = this;
 
 	      this.$nextTick(function () {
-	        _this3.removeControl();
-	        _this3.addControl();
+	        _this2.removeControl();
+	        _this2.addControl();
 	      });
 	    }
 	  },
 	  mounted: function mounted() {
-	    var _this4 = this;
+	    var _this3 = this;
 
 	    this.$parent.$on('ready', function () {
-	      _this4.addControl();
+	      _this3.addControl();
 	    });
 	  },
 	  beforeDestroy: function beforeDestroy() {
@@ -1189,14 +1214,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 17 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(18)
+	__vue_exports__ = __webpack_require__(20)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -1228,7 +1253,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 18 */
+/* 20 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -1325,14 +1350,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 19 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(20)
+	__vue_exports__ = __webpack_require__(22)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -1364,7 +1389,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 20 */
+/* 22 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -1446,14 +1471,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 21 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(22)
+	__vue_exports__ = __webpack_require__(24)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -1485,8 +1510,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 22 */
-/***/ function(module, exports) {
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
 
@@ -1494,11 +1519,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _watch;
+	var _props, _watch;
+
+	var _bindEvent = __webpack_require__(6);
+
+	var _bindEvent2 = _interopRequireDefault(_bindEvent);
+
+	var _factory = __webpack_require__(25);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-	var events = ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'infowindowclose', 'infowindowopen', 'dragstart', 'dragging', 'dragend', 'rightclick'];
 
 	exports.default = {
 	  name: 'map-overlay-marker',
@@ -1506,8 +1537,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  },
 
-	  props: {
+	  props: (_props = {
 	    point: {},
+	    label: {},
 	    offset: {},
 	    icon: {},
 	    massClear: {
@@ -1535,11 +1567,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    shadow: {},
 	    title: {
 	      type: String
-	    },
-	    animation: {
-	      type: String
 	    }
-	  },
+	  }, _defineProperty(_props, 'label', {}), _defineProperty(_props, 'animation', {
+	    type: String
+	  }), _defineProperty(_props, 'top', {
+	    type: Boolean,
+	    default: false
+	  }), _props),
 	  watch: (_watch = {
 	    point: function point() {},
 	    offset: function offset() {},
@@ -1567,8 +1601,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }, _defineProperty(_watch, 'shadow', function shadow(val) {
 	    this.setTitle(val);
+	  }), _defineProperty(_watch, 'label', function label(val) {
+	    this.reloadOverlay();
 	  }), _defineProperty(_watch, 'animation', function animation(val) {
 	    this.setAnimation(global[val]);
+	  }), _defineProperty(_watch, 'top', function top(val) {
+	    this.overlay.setTop(val);
 	  }), _watch),
 	  mounted: function mounted() {
 	    var _this = this;
@@ -1583,17 +1621,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 
 	  methods: {
-	    bindEvents: function bindEvents() {
-	      var _this2 = this;
-
-	      var overlay = this.overlay;
-
-	      events.forEach(function (event) {
-	        overlay.addEventListener(event, function (arg) {
-	          _this2.$emit(event, arg);
-	        });
-	      });
-	    },
 	    addOverlay: function addOverlay() {
 	      var point = this.point,
 	          offset = this.offset,
@@ -1606,8 +1633,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	          rotation = this.rotation,
 	          shadow = this.shadow,
 	          title = this.title,
+	          label = this.label,
 	          animation = this.animation,
-	          bindEvents = this.bindEvents;
+	          top = this.top,
+	          addLabel = this.addLabel;
 	      var _$parent2 = this.$parent,
 	          BMap = _$parent2.BMap,
 	          map = _$parent2.map;
@@ -1625,9 +1654,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        title: title
 	      });
 	      this.overlay = overlay;
-	      overlay.setAnimation(global[animation]);
-	      bindEvents();
+	      label && overlay && overlay.setLabel((0, _factory.createLabel)(BMap, label));
+	      overlay.setTop(top);
+	      _bindEvent2.default.call(this, overlay);
 	      map.addOverlay(overlay);
+	      overlay.setAnimation(global[animation]);
 	    },
 	    removeOverlay: function removeOverlay() {
 	      var _$parent3 = this.$parent,
@@ -1637,16 +1668,258 @@ return /******/ (function(modules) { // webpackBootstrap
 	      map.removeOverlay(this.overlay);
 	    },
 	    reloadOverlay: function reloadOverlay() {
-	      var _this3 = this;
+	      var _this2 = this;
 
 	      this.$nextTick(function () {
-	        _this3.removeOverlay();
-	        _this3.addOverlay();
+	        _this2.removeOverlay();
+	        _this2.addOverlay();
 	      });
 	    }
 	  }
 	};
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 25 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.createPoint = createPoint;
+	exports.createPixel = createPixel;
+	exports.createBounds = createBounds;
+	exports.createSize = createSize;
+	exports.createIcon = createIcon;
+	exports.createLabel = createLabel;
+	function createPoint(BMap, options) {
+	  var lng = options.lng,
+	      lat = options.lat;
+
+	  return new BMap.Point(parseFloat(lng), parseFloat(lat));
+	}
+
+	function createPixel(BMap, options) {
+	  var x = options.x,
+	      y = options.y;
+
+	  return new BMap.Pixel(parseFloat(x), parseFloat(y));
+	}
+
+	function createBounds(BMap, options) {
+	  var sw = options.sw,
+	      ne = options.ne;
+
+	  return new BMap.Bounds(createPoint(BMap, sw), createPoint(BMap, ne));
+	}
+
+	function createSize(BMap, options) {
+	  var width = options.width,
+	      height = options.height;
+
+	  return new BMap.Size(parseFloat(width), parseFloat(height));
+	}
+
+	function createIcon(BMap, options) {
+	  var url = options.url,
+	      size = options.size,
+	      opts = options.opts;
+
+	  return new BMap.Icon(url, createSize(size), {
+	    anchor: anchor && createSize(BMap, opts.anchor),
+	    imageOffset: imageOffset && createSize(BMap, opts.imageOffset),
+	    infoWindowAnchor: infoWindowAnchor && createSize(BMap, opts.infoWindowAnchor),
+	    printImageUrl: printImageUrl
+	  });
+	}
+
+	function createLabel(BMap, options) {
+	  var content = options.content,
+	      opts = options.opts;
+
+	  return new BMap.Label(content, {
+	    offset: opts.offset && createSize(BMap, opts.offset),
+	    position: opts.position && createPoint(BMap, opts.position),
+	    enableMassClear: opts.enableMassClear
+	  });
+	}
+
+/***/ },
+/* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(27)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/overlays/Polyline.vue"
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-7071c368", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-7071c368", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Polyline.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _watch;
+
+	var _bindEvent = __webpack_require__(6);
+
+	var _bindEvent2 = _interopRequireDefault(_bindEvent);
+
+	var _factory = __webpack_require__(25);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	exports.default = {
+	  name: 'map-overlay-polyline',
+	  render: function render(h) {
+	    return;
+	  },
+
+	  props: {
+	    points: {
+	      type: Array
+	    },
+	    strokeColor: {
+	      type: String
+	    },
+	    strokeWeight: {
+	      type: Number
+	    },
+	    strokeOpacity: {
+	      type: Number
+	    },
+	    strokeStype: {
+	      type: String
+	    },
+	    massClear: {
+	      type: Boolean,
+	      default: true
+	    },
+	    clicking: {
+	      type: Boolean,
+	      default: true
+	    },
+	    editing: {
+	      type: Boolean,
+	      default: false
+	    }
+	  },
+	  watch: (_watch = {
+	    points: {
+	      handler: function handler(val, oldVal) {
+	        this.reloadOverlay();
+	      },
+
+	      deep: true
+	    },
+	    strokeColor: function strokeColor(val) {
+	      this.overlay.getStrokeColor(val);
+	    }
+	  }, _defineProperty(_watch, 'strokeColor', function strokeColor(val) {
+	    this.overlay.getStrokeOpacity(val);
+	  }), _defineProperty(_watch, 'strokeWeight', function strokeWeight(val) {
+	    this.overlay.getStrokeOpacity(val);
+	  }), _defineProperty(_watch, 'editing', function editing(val) {
+	    val ? this.overlay.enableEditing() : this.overlay.disableEditing();
+	  }), _defineProperty(_watch, 'massClear', function massClear(val) {
+	    val ? this.overlay.enableMassClear() : this.overlay.disableMassClear();
+	  }), _watch),
+	  methods: {
+	    addOverlay: function addOverlay() {
+	      var points = this.points,
+	          strokeColor = this.strokeColor,
+	          strokeWeight = this.strokeWeight,
+	          strokeOpacity = this.strokeOpacity,
+	          strokeStyle = this.strokeStyle,
+	          editing = this.editing,
+	          massClear = this.massClear,
+	          clicking = this.clicking;
+	      var _$parent = this.$parent,
+	          BMap = _$parent.BMap,
+	          map = _$parent.map;
+
+	      var overlay = new BMap.Polyline(points.map(function (item) {
+	        return (0, _factory.createPoint)(BMap, { lng: item.lng, lat: item.lat });
+	      }), {
+	        strokeColor: strokeColor,
+	        strokeWeight: strokeWeight,
+	        strokeOpacity: strokeOpacity,
+	        strokeStyle: strokeStyle,
+	        enableEditing: editing,
+	        enableMassClear: massClear,
+	        enableClicking: clicking
+	      });
+	      console.log(points);
+	      this.overlay = overlay;
+	      map.addOverlay(overlay);
+	      _bindEvent2.default.call(this, overlay);
+	    },
+	    removeOverlay: function removeOverlay() {
+	      var _$parent2 = this.$parent,
+	          BMap = _$parent2.BMap,
+	          map = _$parent2.map;
+
+	      map.removeOverlay(this.overlay);
+	    },
+	    reloadOverlay: function reloadOverlay() {
+	      var _this = this;
+
+	      this.$nextTick(function () {
+	        _this.removeOverlay();
+	        _this.addOverlay();
+	      });
+	    }
+	  },
+	  mounted: function mounted() {
+	    var _this2 = this;
+
+	    var _$parent3 = this.$parent,
+	        BMap = _$parent3.BMap,
+	        map = _$parent3.map;
+
+	    this.$parent.$on('ready', function () {
+	      _this2.addOverlay();
+	    });
+	  }
+	};
 
 /***/ }
 /******/ ])
