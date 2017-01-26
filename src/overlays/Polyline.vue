@@ -20,7 +20,7 @@ export default {
     strokeOpacity: {
       type: Number
     },
-    strokeStype: {
+    strokeStyle: {
       type: String
     },
     massClear: {
@@ -44,13 +44,13 @@ export default {
       deep: true
     },
     strokeColor (val) {
-      this.overlay.getStrokeColor(val)
+      this.overlay.setStrokeColor(val)
     },
     strokeColor (val) {
-      this.overlay.getStrokeOpacity(val)
+      this.overlay.setStrokeOpacity(val)
     },
     strokeWeight (val) {
-      this.overlay.getStrokeOpacity(val)
+      this.overlay.setStrokeOpacity(val)
     },
     editing (val) {
       val ? this.overlay.enableEditing() : this.overlay.disableEditing()
@@ -75,7 +75,6 @@ export default {
         enableMassClear: massClear,
         enableClicking: clicking
       })
-      console.log(points)
       this.overlay = overlay
       map.addOverlay(overlay)
       bindEvents.call(this, overlay)
