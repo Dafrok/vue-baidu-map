@@ -66,5 +66,15 @@ export default {
     'mouseover',
     'remove',
     'lineupdate'
+  ],
+  'map-overlay-polygon': [
+    'click',
+    'dblclick',
+    'mousedown',
+    'mouseup',
+    'mouseout',
+    'mouseover',
+    'remove',
+    'lineupdate'
   ]
 }
