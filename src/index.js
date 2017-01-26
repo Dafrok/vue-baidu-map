@@ -9,6 +9,7 @@ import MapControlCopyright from './controls/Copyright.vue'
 import MapControlCityList from './controls/CityList.vue'
 import MapOverlayMarker from './overlays/Marker.vue'
 import MapOverlayPolyline from './overlays/Polyline.vue'
+import MapOverlayPolygon from './overlays/Polygon.vue'
 
 export default {
   install (Vue, options) {
@@ -31,5 +32,6 @@ export default {
 
     Vue.component('map-overlay-marker', MapOverlayMarker)
     Vue.component('map-overlay-polyline', MapOverlayPolyline)
+    Vue.component('map-overlay-polygon', MapOverlayPolygon)
   }
 }
