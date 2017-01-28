@@ -264,7 +264,7 @@ export default {
   <div class="column is-7">
     <baidu-map>
       <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-        <map-overlay-polygon :points="polygonPath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" fill-color="red" :fill-opacity="0.5" :editing="true" @lineupdate="updatePolygonPath"/>
+        <map-overlay-polygon :points="polygonPath" stroke-color="blue" :stroke-opacity="0.5" :fill-opacity="0.5" :editing="true" @lineupdate="updatePolygonPath"/>
       </map-view>
     </baidu-map>
   </div>
