@@ -76,5 +76,15 @@ export default {
     'mouseover',
     'remove',
     'lineupdate'
+  ],
+  'map-overlay-circle': [
+    'click',
+    'dblclick',
+    'mousedown',
+    'mouseup',
+    'mouseout',
+    'mouseover',
+    'remove',
+    'lineupdate'
   ]
 }
