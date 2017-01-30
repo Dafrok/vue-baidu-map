@@ -11,7 +11,6 @@ export default {
     center: {
     },
     radius: {
-      type: Number
     },
     strokeColor: {
       type: String
@@ -45,11 +44,32 @@ export default {
     }
   },
   watch: {
-    center (val) {
-      this.overlay.setCenter(val)
+    'center.lng' (val, oldVal) {
+      const {BMap} = this.$parent
+      const lng = parseFloat(val)
+      if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
+        this.overlay.disableEditing()
+        this.overlay.setCenter(createPoint(BMap, {lng: lng, lat: this.center.lat}))
+        this.overlay.enableEditing()
+      }
     },
-    radius (val) {
-      this.overlay.setRadius(val)
+    'center.lat' (val, oldVal) {
+      this.overlay.disableEditing()
+      const {BMap} = this.$parent
+      const lat = parseFloat(val)
+      if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
+        this.overlay.disableEditing()
+        this.overlay.setCenter(createPoint(BMap, {lng: this.center.lng, lat: lat}))
+        this.overlay.enableEditing()
+      }
+      this.overlay.enableEditing()
+    },
+    radius (val, oldVal) {
+      if (val.toString() !== oldVal.toString()) {
+        this.overlay.disableEditing()
+        this.overlay.setRadius(val)
+        this.overlay.enableEditing()
+      }
     },
     strokeColor (val) {
       this.overlay.setStrokeColor(val)
@@ -93,6 +113,8 @@ export default {
       })
       this.overlay = overlay
       map.addOverlay(overlay)
+      global._map = this.map
+      global._overlay = this.overlay
       bindEvents.call(this, overlay)
       // 这里有一个诡异的bug，直接给 editing 赋值时会出现未知错误，因为使用下面的方法抹平。
       editing ? overlay.enableEditing() : overlay.disableEditing()
@@ -102,14 +124,13 @@ export default {
       map.removeOverlay(this.overlay)
     },
     reloadOverlay () {
-      this.$nextTick(() => {
+      this && this.$nextTick(() => {
         this.removeOverlay()
         this.addOverlay()
       })
     }
   },
   mounted () {
-    const {BMap, map} = this.$parent
     this.$parent.$on('ready', () => {
       this.addOverlay()
     })

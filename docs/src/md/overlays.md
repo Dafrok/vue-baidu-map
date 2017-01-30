@@ -60,10 +60,9 @@
 #### 预览
 <baidu-map>
   <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <map-overlay-marker :point="{lng: 116.404, lat: 39.915}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :label="{content: 'Marker Label', opts: {offset: {width: 20, height: -10}}}"/>
+    <map-overlay-marker :point="markerPoint" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :label="markerLabel"/>
   </map-view>
 </baidu-map>
-</template>
 
 ## MapOverlayPolyline
 
@@ -269,13 +268,23 @@ export default {
     </baidu-map>
   </div>
 </div>
-
-</template>
-
 <script>
 export default {
   data () {
     return {
+      markerPoint: {
+        lng: 116.404,
+        lat: 39.915
+      },
+      markerLabel: {
+        content: 'Marker Label',
+        opts: {
+          offset: {
+            width: 20,
+            height: -10
+          }
+        }
+      },
       polylinePath: [
         {lng: 116.404, lat: 39.915},
         {lng: 116.405, lat: 39.920},
