@@ -45,31 +45,29 @@ export default {
   },
   watch: {
     'center.lng' (val, oldVal) {
+      this.overlay.disableEditing()
       const {BMap} = this.$parent
-      const lng = parseFloat(val)
+      const lng = val
       if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
-        this.overlay.disableEditing()
-        this.overlay.setCenter(createPoint(BMap, {lng: lng, lat: this.center.lat}))
-        this.overlay.enableEditing()
+        this.overlay.setCenter(createPoint(BMap, {lng, lat: this.center.lat}))
       }
+      this.overlay.enableEditing()
     },
     'center.lat' (val, oldVal) {
       this.overlay.disableEditing()
       const {BMap} = this.$parent
-      const lat = parseFloat(val)
+      const lat = val
       if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
         this.overlay.disableEditing()
-        this.overlay.setCenter(createPoint(BMap, {lng: this.center.lng, lat: lat}))
+        this.overlay.setCenter(createPoint(BMap, {lng: this.center.lng, lat}))
         this.overlay.enableEditing()
       }
       this.overlay.enableEditing()
     },
     radius (val, oldVal) {
-      if (val.toString() !== oldVal.toString()) {
-        this.overlay.disableEditing()
-        this.overlay.setRadius(val)
-        this.overlay.enableEditing()
-      }
+      this.overlay.disableEditing()
+      this.overlay.setRadius(val)
+      this.overlay.enableEditing()
     },
     strokeColor (val) {
       this.overlay.setStrokeColor(val)
