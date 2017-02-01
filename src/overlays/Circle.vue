@@ -111,8 +111,6 @@ export default {
       })
       this.overlay = overlay
       map.addOverlay(overlay)
-      global._map = this.map
-      global._overlay = this.overlay
       bindEvents.call(this, overlay)
       // 这里有一个诡异的bug，直接给 editing 赋值时会出现未知错误，因为使用下面的方法抹平。
       editing ? overlay.enableEditing() : overlay.disableEditing()
