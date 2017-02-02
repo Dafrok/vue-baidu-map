@@ -86,5 +86,15 @@ export default {
     'mouseover',
     'remove',
     'lineupdate'
+  ],
+  'map-overlay-label': [
+    'click',
+    'dblclick',
+    'mousedown',
+    'mouseup',
+    'mouseout',
+    'mouseover',
+    'remove',
+    'rightclick'
   ]
 }
