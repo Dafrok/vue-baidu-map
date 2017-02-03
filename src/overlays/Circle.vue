@@ -58,9 +58,7 @@ export default {
       const {BMap} = this.$parent
       const lat = val
       if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
-        this.overlay.disableEditing()
         this.overlay.setCenter(createPoint(BMap, {lng: this.center.lng, lat}))
-        this.overlay.enableEditing()
       }
       this.overlay.enableEditing()
     },
