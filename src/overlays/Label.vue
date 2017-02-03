@@ -13,7 +13,7 @@ export default {
     },
     title: {
       type: String
-    }
+    },
     offset: {},
     position: {},
     style: {},
@@ -76,7 +76,7 @@ export default {
       const {BMap, map} = this.$parent
       const overlay = new BMap.Label(content, {
         offset: createSize(BMap, offset),
-        position: createPoint(BMap, position)
+        position: createPoint(BMap, position),
         enableMassClear: massClear
       })
       this.overlay = overlay
