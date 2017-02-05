@@ -104,6 +104,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Polyline2 = _interopRequireDefault(_Polyline);
 
+	var _Polygon = __webpack_require__(28);
+
+	var _Polygon2 = _interopRequireDefault(_Polygon);
+
+	var _Circle = __webpack_require__(30);
+
+	var _Circle2 = _interopRequireDefault(_Circle);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
@@ -128,6 +136,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    Vue.component('map-overlay-marker', _Marker2.default);
 	    Vue.component('map-overlay-polyline', _Polyline2.default);
+	    Vue.component('map-overlay-polygon', _Polygon2.default);
+	    Vue.component('map-overlay-circle', _Circle2.default);
 	  }
 	};
 
@@ -542,7 +552,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  'map-control-geolocation': ['locationSuccess', 'locationError'],
 	  'map-control-overview-map': ['viewchanged', 'viewchanging'],
 	  'map-overlay-marker': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'infowindowclose', 'infowindowopen', 'dragstart', 'dragging', 'dragend', 'rightclick'],
-	  'map-overlay-polyline': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'lineupdate']
+	  'map-overlay-polyline': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'lineupdate'],
+	  'map-overlay-polygon': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'lineupdate'],
+	  'map-overlay-circle': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'lineupdate'],
+	  'map-overlay-label': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'rightclick']
 	};
 
 /***/ },
@@ -1826,7 +1839,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    strokeOpacity: {
 	      type: Number
 	    },
-	    strokeStype: {
+	    strokeStyle: {
 	      type: String
 	    },
 	    massClear: {
@@ -1851,16 +1864,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	      deep: true
 	    },
 	    strokeColor: function strokeColor(val) {
-	      this.overlay.getStrokeColor(val);
+	      this.overlay.setStrokeColor(val);
 	    }
 	  }, _defineProperty(_watch, 'strokeColor', function strokeColor(val) {
-	    this.overlay.getStrokeOpacity(val);
+	    this.overlay.setStrokeOpacity(val);
 	  }), _defineProperty(_watch, 'strokeWeight', function strokeWeight(val) {
-	    this.overlay.getStrokeOpacity(val);
+	    this.overlay.setStrokeOpacity(val);
 	  }), _defineProperty(_watch, 'editing', function editing(val) {
 	    val ? this.overlay.enableEditing() : this.overlay.disableEditing();
 	  }), _defineProperty(_watch, 'massClear', function massClear(val) {
 	    val ? this.overlay.enableMassClear() : this.overlay.disableMassClear();
+	  }), _defineProperty(_watch, 'clicking', function clicking(val) {
+	    this.reloadOverlay();
 	  }), _watch),
 	  methods: {
 	    addOverlay: function addOverlay() {
@@ -1887,7 +1902,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        enableMassClear: massClear,
 	        enableClicking: clicking
 	      });
-	      console.log(points);
 	      this.overlay = overlay;
 	      map.addOverlay(overlay);
 	      _bindEvent2.default.call(this, overlay);
@@ -1914,6 +1928,402 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var _$parent3 = this.$parent,
 	        BMap = _$parent3.BMap,
 	        map = _$parent3.map;
+
+	    this.$parent.$on('ready', function () {
+	      _this2.addOverlay();
+	    });
+	  }
+	};
+
+/***/ },
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(29)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/overlays/Polygon.vue"
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-2920025e", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-2920025e", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Polygon.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _watch;
+
+	var _bindEvent = __webpack_require__(6);
+
+	var _bindEvent2 = _interopRequireDefault(_bindEvent);
+
+	var _factory = __webpack_require__(25);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	exports.default = {
+	  name: 'map-overlay-polygon',
+	  render: function render(h) {
+	    return;
+	  },
+
+	  props: {
+	    points: {
+	      type: Array
+	    },
+	    strokeColor: {
+	      type: String
+	    },
+	    strokeWeight: {
+	      type: Number
+	    },
+	    strokeOpacity: {
+	      type: Number
+	    },
+	    strokeStyle: {
+	      type: String
+	    },
+	    fillColor: {
+	      type: String
+	    },
+	    fillOpacity: {
+	      type: Number
+	    },
+	    massClear: {
+	      type: Boolean,
+	      default: true
+	    },
+	    clicking: {
+	      type: Boolean,
+	      default: true
+	    },
+	    editing: {
+	      type: Boolean,
+	      default: false
+	    }
+	  },
+	  watch: (_watch = {
+	    points: {
+	      handler: function handler(val, oldVal) {
+	        this.reloadOverlay();
+	      },
+
+	      deep: true
+	    },
+	    strokeColor: function strokeColor(val) {
+	      this.overlay.setStrokeColor(val);
+	    }
+	  }, _defineProperty(_watch, 'strokeColor', function strokeColor(val) {
+	    this.overlay.setStrokeOpacity(val);
+	  }), _defineProperty(_watch, 'strokeWeight', function strokeWeight(val) {
+	    this.overlay.setStrokeOpacity(val);
+	  }), _defineProperty(_watch, 'fillColor', function fillColor(val) {
+	    this.overlay.setFillColor(val);
+	  }), _defineProperty(_watch, 'fillOpacity', function fillOpacity(val) {
+	    this.overlay.setFillOpacity(val);
+	  }), _defineProperty(_watch, 'editing', function editing(val) {
+	    val ? this.overlay.enableEditing() : this.overlay.disableEditing();
+	  }), _defineProperty(_watch, 'massClear', function massClear(val) {
+	    val ? this.overlay.enableMassClear() : this.overlay.disableMassClear();
+	  }), _defineProperty(_watch, 'clicking', function clicking(val) {
+	    this.reloadOverlay();
+	  }), _watch),
+	  methods: {
+	    addOverlay: function addOverlay() {
+	      var points = this.points,
+	          strokeColor = this.strokeColor,
+	          strokeWeight = this.strokeWeight,
+	          strokeOpacity = this.strokeOpacity,
+	          strokeStyle = this.strokeStyle,
+	          fillColor = this.fillColor,
+	          fillOpacity = this.fillOpacity,
+	          editing = this.editing,
+	          massClear = this.massClear,
+	          clicking = this.clicking;
+	      var _$parent = this.$parent,
+	          BMap = _$parent.BMap,
+	          map = _$parent.map;
+
+	      var overlay = new BMap.Polygon(points.map(function (item) {
+	        return (0, _factory.createPoint)(BMap, { lng: item.lng, lat: item.lat });
+	      }), {
+	        strokeColor: strokeColor,
+	        strokeWeight: strokeWeight,
+	        strokeOpacity: strokeOpacity,
+	        strokeStyle: strokeStyle,
+	        fillColor: fillColor,
+	        fillOpacity: fillOpacity,
+	        // enableEditing: editing,
+	        enableMassClear: massClear,
+	        enableClicking: clicking
+	      });
+	      this.overlay = overlay;
+	      map.addOverlay(overlay);
+	      _bindEvent2.default.call(this, overlay);
+	      // 这里有一个诡异的bug，直接给 editing 赋值时会出现未知错误，因为使用下面的方法抹平。
+	      editing ? overlay.enableEditing() : overlay.disableEditing();
+	    },
+	    removeOverlay: function removeOverlay() {
+	      var _$parent2 = this.$parent,
+	          BMap = _$parent2.BMap,
+	          map = _$parent2.map;
+
+	      map.removeOverlay(this.overlay);
+	    },
+	    reloadOverlay: function reloadOverlay() {
+	      var _this = this;
+
+	      this.$nextTick(function () {
+	        _this.removeOverlay();
+	        _this.addOverlay();
+	      });
+	    }
+	  },
+	  mounted: function mounted() {
+	    var _this2 = this;
+
+	    var _$parent3 = this.$parent,
+	        BMap = _$parent3.BMap,
+	        map = _$parent3.map;
+
+	    this.$parent.$on('ready', function () {
+	      _this2.addOverlay();
+	    });
+	  }
+	};
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(31)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/overlays/Circle.vue"
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-2b598348", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-2b598348", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Circle.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _watch;
+
+	var _bindEvent = __webpack_require__(6);
+
+	var _bindEvent2 = _interopRequireDefault(_bindEvent);
+
+	var _factory = __webpack_require__(25);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	exports.default = {
+	  name: 'map-overlay-circle',
+	  render: function render(h) {
+	    return;
+	  },
+
+	  props: {
+	    center: {},
+	    radius: {},
+	    strokeColor: {
+	      type: String
+	    },
+	    strokeWeight: {
+	      type: Number
+	    },
+	    strokeOpacity: {
+	      type: Number
+	    },
+	    strokeStyle: {
+	      type: String
+	    },
+	    fillColor: {
+	      type: String
+	    },
+	    fillOpacity: {
+	      type: Number
+	    },
+	    massClear: {
+	      type: Boolean,
+	      default: true
+	    },
+	    clicking: {
+	      type: Boolean,
+	      default: true
+	    },
+	    editing: {
+	      type: Boolean,
+	      default: false
+	    }
+	  },
+	  watch: (_watch = {
+	    'center.lng': function centerLng(val, oldVal) {
+	      this.overlay.disableEditing();
+	      var BMap = this.$parent.BMap;
+
+	      var lng = val;
+	      if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
+	        this.overlay.setCenter((0, _factory.createPoint)(BMap, { lng: lng, lat: this.center.lat }));
+	      }
+	      this.overlay.enableEditing();
+	    },
+	    'center.lat': function centerLat(val, oldVal) {
+	      this.overlay.disableEditing();
+	      var BMap = this.$parent.BMap;
+
+	      var lat = val;
+	      if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
+	        this.overlay.setCenter((0, _factory.createPoint)(BMap, { lng: this.center.lng, lat: lat }));
+	      }
+	      this.overlay.enableEditing();
+	    },
+	    radius: function radius(val, oldVal) {
+	      this.overlay.disableEditing();
+	      this.overlay.setRadius(val);
+	      this.overlay.enableEditing();
+	    },
+	    strokeColor: function strokeColor(val) {
+	      this.overlay.setStrokeColor(val);
+	    }
+	  }, _defineProperty(_watch, 'strokeColor', function strokeColor(val) {
+	    this.overlay.setStrokeOpacity(val);
+	  }), _defineProperty(_watch, 'strokeWeight', function strokeWeight(val) {
+	    this.overlay.setStrokeOpacity(val);
+	  }), _defineProperty(_watch, 'fillColor', function fillColor(val) {
+	    this.overlay.setFillColor(val);
+	  }), _defineProperty(_watch, 'fillOpacity', function fillOpacity(val) {
+	    this.overlay.setFillOpacity(val);
+	  }), _defineProperty(_watch, 'editing', function editing(val) {
+	    val ? this.overlay.enableEditing() : this.overlay.disableEditing();
+	  }), _defineProperty(_watch, 'massClear', function massClear(val) {
+	    val ? this.overlay.enableMassClear() : this.overlay.disableMassClear();
+	  }), _defineProperty(_watch, 'clicking', function clicking(val) {
+	    this.reloadOverlay();
+	  }), _watch),
+	  methods: {
+	    addOverlay: function addOverlay() {
+	      var center = this.center,
+	          radius = this.radius,
+	          strokeColor = this.strokeColor,
+	          strokeWeight = this.strokeWeight,
+	          strokeOpacity = this.strokeOpacity,
+	          strokeStyle = this.strokeStyle,
+	          fillColor = this.fillColor,
+	          fillOpacity = this.fillOpacity,
+	          editing = this.editing,
+	          massClear = this.massClear,
+	          clicking = this.clicking;
+	      var _$parent = this.$parent,
+	          BMap = _$parent.BMap,
+	          map = _$parent.map;
+
+	      var overlay = new BMap.Circle((0, _factory.createPoint)(BMap, { lng: center.lng, lat: center.lat }), radius, {
+	        strokeColor: strokeColor,
+	        strokeWeight: strokeWeight,
+	        strokeOpacity: strokeOpacity,
+	        strokeStyle: strokeStyle,
+	        fillColor: fillColor,
+	        fillOpacity: fillOpacity,
+	        // enableEditing: editing,
+	        enableMassClear: massClear,
+	        enableClicking: clicking
+	      });
+	      this.overlay = overlay;
+	      map.addOverlay(overlay);
+	      _bindEvent2.default.call(this, overlay);
+	      // 这里有一个诡异的bug，直接给 editing 赋值时会出现未知错误，因为使用下面的方法抹平。
+	      editing ? overlay.enableEditing() : overlay.disableEditing();
+	    },
+	    removeOverlay: function removeOverlay() {
+	      var _$parent2 = this.$parent,
+	          BMap = _$parent2.BMap,
+	          map = _$parent2.map;
+
+	      map.removeOverlay(this.overlay);
+	    },
+	    reloadOverlay: function reloadOverlay() {
+	      var _this = this;
+
+	      this && this.$nextTick(function () {
+	        _this.removeOverlay();
+	        _this.addOverlay();
+	      });
+	    }
+	  },
+	  mounted: function mounted() {
+	    var _this2 = this;
 
 	    this.$parent.$on('ready', function () {
 	      _this2.addOverlay();

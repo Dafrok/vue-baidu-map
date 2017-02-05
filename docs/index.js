@@ -66,7 +66,7 @@
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _highlight = __webpack_require__(62);
+	var _highlight = __webpack_require__(64);
 
 	var _highlight2 = _interopRequireDefault(_highlight);
 
@@ -9423,7 +9423,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/.cache/start-1.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/.cache/start-2.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -9434,12 +9434,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-83810340", __vue_options__)
+	    hotAPI.createRecord("data-v-8364d43e", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-83810340", __vue_options__)
+	    hotAPI.reload("data-v-8364d43e", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] start-1.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] start-2.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -9531,7 +9531,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-83810340", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-8364d43e", module.exports)
 	  }
 	}
 
@@ -9564,7 +9564,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/.cache/map-2.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/.cache/map-1.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -9575,12 +9575,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-48c6bbdb", __vue_options__)
+	    hotAPI.createRecord("data-v-48b8a45a", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-48c6bbdb", __vue_options__)
+	    hotAPI.reload("data-v-48b8a45a", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] map-2.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] map-1.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -10701,7 +10701,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-48c6bbdb", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-48b8a45a", module.exports)
 	  }
 	}
 
@@ -10731,7 +10731,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/.cache/controls-4.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/.cache/controls-3.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -10742,12 +10742,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-29fe8e73", __vue_options__)
+	    hotAPI.createRecord("data-v-29f076f2", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-29fe8e73", __vue_options__)
+	    hotAPI.reload("data-v-29f076f2", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] controls-4.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] controls-3.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -11430,7 +11430,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-29fe8e73", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-29f076f2", module.exports)
 	  }
 	}
 
@@ -11463,7 +11463,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/.cache/overlays-3.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/.cache/overlays-4.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -11474,12 +11474,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-47db709f", __vue_options__)
+	    hotAPI.createRecord("data-v-47e98820", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-47db709f", __vue_options__)
+	    hotAPI.reload("data-v-47e98820", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] overlays-3.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] overlays-4.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -11488,7 +11488,7 @@
 /* 28 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -12046,12 +12046,234 @@
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 	exports.default = {
 	  data: function data() {
 	    return {
+	      markerPoint: {
+	        lng: 116.404,
+	        lat: 39.915
+	      },
+	      markerLabel: {
+	        content: 'Marker Label',
+	        opts: {
+	          offset: {
+	            width: 20,
+	            height: -10
+	          }
+	        }
+	      },
 	      polylinePath: [{ lng: 116.404, lat: 39.915 }, { lng: 116.405, lat: 39.920 }, { lng: 116.423493, lat: 39.907445 }],
-	      polygonPath: [{ lng: 116.412732, lat: 39.911707 }, { lng: 116.39455, lat: 39.910932 }, { lng: 116.403461, lat: 39.921336 }]
+	      polygonPath: [{ lng: 116.412732, lat: 39.911707 }, { lng: 116.39455, lat: 39.910932 }, { lng: 116.403461, lat: 39.921336 }],
+	      circlePath: {
+	        center: {
+	          lng: 116.404,
+	          lat: 39.915
+	        },
+	        radius: 500
+	      }
 	    };
 	  },
 
@@ -12067,6 +12289,10 @@
 	    },
 	    addPolygonPoint: function addPolygonPoint() {
 	      this.polygonPath.push({ lng: 116.404, lat: 39.915 });
+	    },
+	    updateCirclePath: function updateCirclePath(e) {
+	      this.circlePath.center = e.target.getCenter();
+	      this.circlePath.radius = e.target.getRadius();
 	    }
 	  }
 	};
@@ -12088,23 +12314,12 @@
 	      }
 	    }, [_c('map-overlay-marker', {
 	      attrs: {
-	        "point": {
-	          lng: 116.404,
-	          lat: 39.915
-	        },
+	        "point": _vm.markerPoint,
 	        "dragging": true,
 	        "animation": "BMAP_ANIMATION_BOUNCE",
-	        "label": {
-	          content: 'Marker Label',
-	          opts: {
-	            offset: {
-	              width: 20,
-	              height: -10
-	            }
-	          }
-	        }
+	        "label": _vm.markerLabel
 	      }
-	    })], 1)], 1)], _vm._v(" "), _c('h2', [_vm._v("MapOverlayPolyline")]), _vm._v(" "), _c('p', [_vm._v("折线")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(4), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图中添加可编辑的折线")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(5), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('div', {
+	    })], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("MapOverlayPolyline")]), _vm._v(" "), _c('p', [_vm._v("折线")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(4), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图中添加可编辑的折线")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(5), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('div', {
 	      staticClass: "columns"
 	    }, [_c('div', {
 	      staticClass: "column is-5"
@@ -12296,7 +12511,135 @@
 	      on: {
 	        "lineupdate": _vm.updatePolygonPath
 	      }
-	    })], 1)], 1)], 1)])
+	    })], 1)], 1)], 1)]), _vm._v(" "), _c('h2', [_vm._v("MapOverlayCircle")]), _vm._v(" "), _c('p', [_vm._v("圆形")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(9), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(10), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图中添加圆形")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(11), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('div', {
+	      staticClass: "columns"
+	    }, [_c('div', {
+	      staticClass: "column is-5"
+	    }, [_c('div', {
+	      staticClass: "box"
+	    }, [_c('div', {
+	      staticClass: "control is-horizontal"
+	    }, [_c('div', {
+	      staticClass: "control-label"
+	    }, [_c('label', {
+	      staticClass: "label",
+	      domProps: {
+	        "textContent": _vm._s("圆心")
+	      }
+	    })]), _vm._v(" "), _c('div', {
+	      staticClass: "control is-grouped"
+	    }, [_c('p', {
+	      staticClass: "control is-expanded"
+	    }, [_c('input', {
+	      directives: [{
+	        name: "model",
+	        rawName: "v-model.number",
+	        value: (_vm.circlePath.center.lng),
+	        expression: "circlePath.center.lng",
+	        modifiers: {
+	          "number": true
+	        }
+	      }],
+	      staticClass: "input",
+	      attrs: {
+	        "type": "text",
+	        "placeholder": "经度"
+	      },
+	      domProps: {
+	        "value": _vm._s(_vm.circlePath.center.lng)
+	      },
+	      on: {
+	        "input": function($event) {
+	          if ($event.target.composing) { return; }
+	          _vm.circlePath.center.lng = _vm._n($event.target.value)
+	        },
+	        "blur": function($event) {
+	          _vm.$forceUpdate()
+	        }
+	      }
+	    })]), _vm._v(" "), _c('p', {
+	      staticClass: "control is-expanded"
+	    }, [_c('input', {
+	      directives: [{
+	        name: "model",
+	        rawName: "v-model.number",
+	        value: (_vm.circlePath.center.lat),
+	        expression: "circlePath.center.lat",
+	        modifiers: {
+	          "number": true
+	        }
+	      }],
+	      staticClass: "input",
+	      attrs: {
+	        "type": "email",
+	        "placeholder": "纬度"
+	      },
+	      domProps: {
+	        "value": _vm._s(_vm.circlePath.center.lat)
+	      },
+	      on: {
+	        "input": function($event) {
+	          if ($event.target.composing) { return; }
+	          _vm.circlePath.center.lat = _vm._n($event.target.value)
+	        },
+	        "blur": function($event) {
+	          _vm.$forceUpdate()
+	        }
+	      }
+	    })])])]), _vm._v(" "), _c('div', {
+	      staticClass: "control is-horizontal"
+	    }, [_c('div', {
+	      staticClass: "control-label"
+	    }, [_c('label', {
+	      staticClass: "label",
+	      domProps: {
+	        "textContent": _vm._s("半径")
+	      }
+	    })]), _vm._v(" "), _c('div', {
+	      staticClass: "control"
+	    }, [_c('p', {
+	      staticClass: "control"
+	    }, [_c('input', {
+	      directives: [{
+	        name: "model",
+	        rawName: "v-model",
+	        value: (_vm.circlePath.radius),
+	        expression: "circlePath.radius"
+	      }],
+	      staticClass: "input",
+	      attrs: {
+	        "type": "text",
+	        "placeholder": "半径"
+	      },
+	      domProps: {
+	        "value": _vm._s(_vm.circlePath.radius)
+	      },
+	      on: {
+	        "input": function($event) {
+	          if ($event.target.composing) { return; }
+	          _vm.circlePath.radius = $event.target.value
+	        }
+	      }
+	    })])])])])]), _vm._v(" "), _c('div', {
+	      staticClass: "column is-7"
+	    }, [_c('baidu-map', [_c('map-view', {
+	      staticClass: "map",
+	      attrs: {
+	        "center": {
+	          lng: 116.404,
+	          lat: 39.915
+	        },
+	        "zoom": 15
+	      }
+	    }, [_c('map-overlay-circle', {
+	      attrs: {
+	        "center": _vm.circlePath.center,
+	        "radius": _vm.circlePath.radius
+	      },
+	      on: {
+	        "lineupdate": _vm.updateCirclePath
+	      }
+	    })], 1)], 1)], 1)])]
 	  ], 2)
 	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
@@ -13002,12 +13345,272 @@
 	  }, [_vm._v("</"), _c('span', {
 	    staticClass: "hljs-name"
 	  }, [_vm._v("script")]), _vm._v(">")]), _vm._v("\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("类型")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("默认值")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("center")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Point")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("圆心，单位为米")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("radius")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("半径，单位为米")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("strokeColor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("折线颜色")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("strokeWeight")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("折线的宽度，以像素为单位")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("strokeOpacity")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("折线的透明度，取值范围0 - 1")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("strokeStyle")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("'solid'")]), _vm._v(" "), _c('td', [_vm._v("折线的样式，solid或dashed")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("fillColor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("填充颜色。当参数为空时，折线覆盖物将没有填充效果")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("fillOpacity")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("填充的透明度，取值范围0 - 1")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("enableMassClear")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("是否在调用map.clearOverlays清除此覆盖物")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("enableEditing")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("false")]), _vm._v(" "), _c('td', [_vm._v("是否启用线编辑")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("enableClicking")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("是否响应点击事件")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("事件名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("参数")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("click")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("点击折线后会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dblclick")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("双击折线后会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mousedown")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标在折线上按下触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseup")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标在折线释放触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseout")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标离开折线时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseover")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("当鼠标进入折线区域时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("remove")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("移除折线时触发")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("lineupdate")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("覆盖物的属性发生变化时触发")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"{lng: 116.404, lat: 39.915}\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"15\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-overlay-circle")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"polylinePath\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("stroke-color")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"blue\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":stroke-opacity")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"0.5\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":stroke-weight")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"2\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":editing")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"true\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("@lineupdate")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"updatePolygonPath\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("script")]), _vm._v(">")]), _c('span', {
+	    staticClass: "javascript"
+	  }, [_vm._v("\n"), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("export")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("default")]), _vm._v(" {\n  data () {\n    "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("return")]), _vm._v(" {\n      "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("polygonPath")]), _vm._v(": [\n        {"), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("116.412732")]), _vm._v(", "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("39.911707")]), _vm._v("},\n        {"), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("116.39455")]), _vm._v(", "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("39.910932")]), _vm._v("},\n        {"), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("116.403461")]), _vm._v(", "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("39.921336")]), _vm._v("}\n      ]\n    }\n  },\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("methods")]), _vm._v(": {\n    updatePolygonPath (e) {\n      "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("this")]), _vm._v(".polylinePath = e.target.getPath()\n    },\n    addPolygonPoint () {\n      "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("this")]), _vm._v(".polygonPath.push({"), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("116.404")]), _vm._v(", "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("39.915")]), _vm._v("})\n    }\n  }\n}\n")]), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("script")]), _vm._v(">")]), _vm._v("\n")])])
 	}]}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-47db709f", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-47e98820", module.exports)
 	  }
 	}
 
@@ -13183,6 +13786,10 @@
 
 	var _Polygon2 = _interopRequireDefault(_Polygon);
 
+	var _Circle = __webpack_require__(62);
+
+	var _Circle2 = _interopRequireDefault(_Circle);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
@@ -13208,6 +13815,7 @@
 	    Vue.component('map-overlay-marker', _Marker2.default);
 	    Vue.component('map-overlay-polyline', _Polyline2.default);
 	    Vue.component('map-overlay-polygon', _Polygon2.default);
+	    Vue.component('map-overlay-circle', _Circle2.default);
 	  }
 	};
 
@@ -13623,7 +14231,9 @@
 	  'map-control-overview-map': ['viewchanged', 'viewchanging'],
 	  'map-overlay-marker': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'infowindowclose', 'infowindowopen', 'dragstart', 'dragging', 'dragend', 'rightclick'],
 	  'map-overlay-polyline': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'lineupdate'],
-	  'map-overlay-polygon': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'lineupdate']
+	  'map-overlay-polygon': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'lineupdate'],
+	  'map-overlay-circle': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'lineupdate'],
+	  'map-overlay-label': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'rightclick']
 	};
 
 /***/ },
@@ -15199,182 +15809,386 @@
 /* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var hljs = __webpack_require__(63);
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
 
-	hljs.registerLanguage('1c', __webpack_require__(64));
-	hljs.registerLanguage('abnf', __webpack_require__(65));
-	hljs.registerLanguage('accesslog', __webpack_require__(66));
-	hljs.registerLanguage('actionscript', __webpack_require__(67));
-	hljs.registerLanguage('ada', __webpack_require__(68));
-	hljs.registerLanguage('apache', __webpack_require__(69));
-	hljs.registerLanguage('applescript', __webpack_require__(70));
-	hljs.registerLanguage('cpp', __webpack_require__(71));
-	hljs.registerLanguage('arduino', __webpack_require__(72));
-	hljs.registerLanguage('armasm', __webpack_require__(73));
-	hljs.registerLanguage('xml', __webpack_require__(74));
-	hljs.registerLanguage('asciidoc', __webpack_require__(75));
-	hljs.registerLanguage('aspectj', __webpack_require__(76));
-	hljs.registerLanguage('autohotkey', __webpack_require__(77));
-	hljs.registerLanguage('autoit', __webpack_require__(78));
-	hljs.registerLanguage('avrasm', __webpack_require__(79));
-	hljs.registerLanguage('awk', __webpack_require__(80));
-	hljs.registerLanguage('axapta', __webpack_require__(81));
-	hljs.registerLanguage('bash', __webpack_require__(82));
-	hljs.registerLanguage('basic', __webpack_require__(83));
-	hljs.registerLanguage('bnf', __webpack_require__(84));
-	hljs.registerLanguage('brainfuck', __webpack_require__(85));
-	hljs.registerLanguage('cal', __webpack_require__(86));
-	hljs.registerLanguage('capnproto', __webpack_require__(87));
-	hljs.registerLanguage('ceylon', __webpack_require__(88));
-	hljs.registerLanguage('clean', __webpack_require__(89));
-	hljs.registerLanguage('clojure', __webpack_require__(90));
-	hljs.registerLanguage('clojure-repl', __webpack_require__(91));
-	hljs.registerLanguage('cmake', __webpack_require__(92));
-	hljs.registerLanguage('coffeescript', __webpack_require__(93));
-	hljs.registerLanguage('coq', __webpack_require__(94));
-	hljs.registerLanguage('cos', __webpack_require__(95));
-	hljs.registerLanguage('crmsh', __webpack_require__(96));
-	hljs.registerLanguage('crystal', __webpack_require__(97));
-	hljs.registerLanguage('cs', __webpack_require__(98));
-	hljs.registerLanguage('csp', __webpack_require__(99));
-	hljs.registerLanguage('css', __webpack_require__(100));
-	hljs.registerLanguage('d', __webpack_require__(101));
-	hljs.registerLanguage('markdown', __webpack_require__(102));
-	hljs.registerLanguage('dart', __webpack_require__(103));
-	hljs.registerLanguage('delphi', __webpack_require__(104));
-	hljs.registerLanguage('diff', __webpack_require__(105));
-	hljs.registerLanguage('django', __webpack_require__(106));
-	hljs.registerLanguage('dns', __webpack_require__(107));
-	hljs.registerLanguage('dockerfile', __webpack_require__(108));
-	hljs.registerLanguage('dos', __webpack_require__(109));
-	hljs.registerLanguage('dsconfig', __webpack_require__(110));
-	hljs.registerLanguage('dts', __webpack_require__(111));
-	hljs.registerLanguage('dust', __webpack_require__(112));
-	hljs.registerLanguage('ebnf', __webpack_require__(113));
-	hljs.registerLanguage('elixir', __webpack_require__(114));
-	hljs.registerLanguage('elm', __webpack_require__(115));
-	hljs.registerLanguage('ruby', __webpack_require__(116));
-	hljs.registerLanguage('erb', __webpack_require__(117));
-	hljs.registerLanguage('erlang-repl', __webpack_require__(118));
-	hljs.registerLanguage('erlang', __webpack_require__(119));
-	hljs.registerLanguage('excel', __webpack_require__(120));
-	hljs.registerLanguage('fix', __webpack_require__(121));
-	hljs.registerLanguage('flix', __webpack_require__(122));
-	hljs.registerLanguage('fortran', __webpack_require__(123));
-	hljs.registerLanguage('fsharp', __webpack_require__(124));
-	hljs.registerLanguage('gams', __webpack_require__(125));
-	hljs.registerLanguage('gauss', __webpack_require__(126));
-	hljs.registerLanguage('gcode', __webpack_require__(127));
-	hljs.registerLanguage('gherkin', __webpack_require__(128));
-	hljs.registerLanguage('glsl', __webpack_require__(129));
-	hljs.registerLanguage('go', __webpack_require__(130));
-	hljs.registerLanguage('golo', __webpack_require__(131));
-	hljs.registerLanguage('gradle', __webpack_require__(132));
-	hljs.registerLanguage('groovy', __webpack_require__(133));
-	hljs.registerLanguage('haml', __webpack_require__(134));
-	hljs.registerLanguage('handlebars', __webpack_require__(135));
-	hljs.registerLanguage('haskell', __webpack_require__(136));
-	hljs.registerLanguage('haxe', __webpack_require__(137));
-	hljs.registerLanguage('hsp', __webpack_require__(138));
-	hljs.registerLanguage('htmlbars', __webpack_require__(139));
-	hljs.registerLanguage('http', __webpack_require__(140));
-	hljs.registerLanguage('inform7', __webpack_require__(141));
-	hljs.registerLanguage('ini', __webpack_require__(142));
-	hljs.registerLanguage('irpf90', __webpack_require__(143));
-	hljs.registerLanguage('java', __webpack_require__(144));
-	hljs.registerLanguage('javascript', __webpack_require__(145));
-	hljs.registerLanguage('json', __webpack_require__(146));
-	hljs.registerLanguage('julia', __webpack_require__(147));
-	hljs.registerLanguage('kotlin', __webpack_require__(148));
-	hljs.registerLanguage('lasso', __webpack_require__(149));
-	hljs.registerLanguage('ldif', __webpack_require__(150));
-	hljs.registerLanguage('less', __webpack_require__(151));
-	hljs.registerLanguage('lisp', __webpack_require__(152));
-	hljs.registerLanguage('livecodeserver', __webpack_require__(153));
-	hljs.registerLanguage('livescript', __webpack_require__(154));
-	hljs.registerLanguage('llvm', __webpack_require__(155));
-	hljs.registerLanguage('lsl', __webpack_require__(156));
-	hljs.registerLanguage('lua', __webpack_require__(157));
-	hljs.registerLanguage('makefile', __webpack_require__(158));
-	hljs.registerLanguage('mathematica', __webpack_require__(159));
-	hljs.registerLanguage('matlab', __webpack_require__(160));
-	hljs.registerLanguage('maxima', __webpack_require__(161));
-	hljs.registerLanguage('mel', __webpack_require__(162));
-	hljs.registerLanguage('mercury', __webpack_require__(163));
-	hljs.registerLanguage('mipsasm', __webpack_require__(164));
-	hljs.registerLanguage('mizar', __webpack_require__(165));
-	hljs.registerLanguage('perl', __webpack_require__(166));
-	hljs.registerLanguage('mojolicious', __webpack_require__(167));
-	hljs.registerLanguage('monkey', __webpack_require__(168));
-	hljs.registerLanguage('moonscript', __webpack_require__(169));
-	hljs.registerLanguage('nginx', __webpack_require__(170));
-	hljs.registerLanguage('nimrod', __webpack_require__(171));
-	hljs.registerLanguage('nix', __webpack_require__(172));
-	hljs.registerLanguage('nsis', __webpack_require__(173));
-	hljs.registerLanguage('objectivec', __webpack_require__(174));
-	hljs.registerLanguage('ocaml', __webpack_require__(175));
-	hljs.registerLanguage('openscad', __webpack_require__(176));
-	hljs.registerLanguage('oxygene', __webpack_require__(177));
-	hljs.registerLanguage('parser3', __webpack_require__(178));
-	hljs.registerLanguage('pf', __webpack_require__(179));
-	hljs.registerLanguage('php', __webpack_require__(180));
-	hljs.registerLanguage('pony', __webpack_require__(181));
-	hljs.registerLanguage('powershell', __webpack_require__(182));
-	hljs.registerLanguage('processing', __webpack_require__(183));
-	hljs.registerLanguage('profile', __webpack_require__(184));
-	hljs.registerLanguage('prolog', __webpack_require__(185));
-	hljs.registerLanguage('protobuf', __webpack_require__(186));
-	hljs.registerLanguage('puppet', __webpack_require__(187));
-	hljs.registerLanguage('purebasic', __webpack_require__(188));
-	hljs.registerLanguage('python', __webpack_require__(189));
-	hljs.registerLanguage('q', __webpack_require__(190));
-	hljs.registerLanguage('qml', __webpack_require__(191));
-	hljs.registerLanguage('r', __webpack_require__(192));
-	hljs.registerLanguage('rib', __webpack_require__(193));
-	hljs.registerLanguage('roboconf', __webpack_require__(194));
-	hljs.registerLanguage('rsl', __webpack_require__(195));
-	hljs.registerLanguage('ruleslanguage', __webpack_require__(196));
-	hljs.registerLanguage('rust', __webpack_require__(197));
-	hljs.registerLanguage('scala', __webpack_require__(198));
-	hljs.registerLanguage('scheme', __webpack_require__(199));
-	hljs.registerLanguage('scilab', __webpack_require__(200));
-	hljs.registerLanguage('scss', __webpack_require__(201));
-	hljs.registerLanguage('smali', __webpack_require__(202));
-	hljs.registerLanguage('smalltalk', __webpack_require__(203));
-	hljs.registerLanguage('sml', __webpack_require__(204));
-	hljs.registerLanguage('sqf', __webpack_require__(205));
-	hljs.registerLanguage('sql', __webpack_require__(206));
-	hljs.registerLanguage('stan', __webpack_require__(207));
-	hljs.registerLanguage('stata', __webpack_require__(208));
-	hljs.registerLanguage('step21', __webpack_require__(209));
-	hljs.registerLanguage('stylus', __webpack_require__(210));
-	hljs.registerLanguage('subunit', __webpack_require__(211));
-	hljs.registerLanguage('swift', __webpack_require__(212));
-	hljs.registerLanguage('taggerscript', __webpack_require__(213));
-	hljs.registerLanguage('yaml', __webpack_require__(214));
-	hljs.registerLanguage('tap', __webpack_require__(215));
-	hljs.registerLanguage('tcl', __webpack_require__(216));
-	hljs.registerLanguage('tex', __webpack_require__(217));
-	hljs.registerLanguage('thrift', __webpack_require__(218));
-	hljs.registerLanguage('tp', __webpack_require__(219));
-	hljs.registerLanguage('twig', __webpack_require__(220));
-	hljs.registerLanguage('typescript', __webpack_require__(221));
-	hljs.registerLanguage('vala', __webpack_require__(222));
-	hljs.registerLanguage('vbnet', __webpack_require__(223));
-	hljs.registerLanguage('vbscript', __webpack_require__(224));
-	hljs.registerLanguage('vbscript-html', __webpack_require__(225));
-	hljs.registerLanguage('verilog', __webpack_require__(226));
-	hljs.registerLanguage('vhdl', __webpack_require__(227));
-	hljs.registerLanguage('vim', __webpack_require__(228));
-	hljs.registerLanguage('x86asm', __webpack_require__(229));
-	hljs.registerLanguage('xl', __webpack_require__(230));
-	hljs.registerLanguage('xquery', __webpack_require__(231));
-	hljs.registerLanguage('zephir', __webpack_require__(232));
+	/* script */
+	__vue_exports__ = __webpack_require__(63)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/overlays/Circle.vue"
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-2b598348", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-2b598348", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Circle.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 63 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _watch;
+
+	var _bindEvent = __webpack_require__(38);
+
+	var _bindEvent2 = _interopRequireDefault(_bindEvent);
+
+	var _factory = __webpack_require__(57);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	exports.default = {
+	  name: 'map-overlay-circle',
+	  render: function render(h) {
+	    return;
+	  },
+
+	  props: {
+	    center: {},
+	    radius: {},
+	    strokeColor: {
+	      type: String
+	    },
+	    strokeWeight: {
+	      type: Number
+	    },
+	    strokeOpacity: {
+	      type: Number
+	    },
+	    strokeStyle: {
+	      type: String
+	    },
+	    fillColor: {
+	      type: String
+	    },
+	    fillOpacity: {
+	      type: Number
+	    },
+	    massClear: {
+	      type: Boolean,
+	      default: true
+	    },
+	    clicking: {
+	      type: Boolean,
+	      default: true
+	    },
+	    editing: {
+	      type: Boolean,
+	      default: false
+	    }
+	  },
+	  watch: (_watch = {
+	    'center.lng': function centerLng(val, oldVal) {
+	      this.overlay.disableEditing();
+	      var BMap = this.$parent.BMap;
+
+	      var lng = val;
+	      if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
+	        this.overlay.setCenter((0, _factory.createPoint)(BMap, { lng: lng, lat: this.center.lat }));
+	      }
+	      this.overlay.enableEditing();
+	    },
+	    'center.lat': function centerLat(val, oldVal) {
+	      this.overlay.disableEditing();
+	      var BMap = this.$parent.BMap;
+
+	      var lat = val;
+	      if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
+	        this.overlay.setCenter((0, _factory.createPoint)(BMap, { lng: this.center.lng, lat: lat }));
+	      }
+	      this.overlay.enableEditing();
+	    },
+	    radius: function radius(val, oldVal) {
+	      this.overlay.disableEditing();
+	      this.overlay.setRadius(val);
+	      this.overlay.enableEditing();
+	    },
+	    strokeColor: function strokeColor(val) {
+	      this.overlay.setStrokeColor(val);
+	    }
+	  }, _defineProperty(_watch, 'strokeColor', function strokeColor(val) {
+	    this.overlay.setStrokeOpacity(val);
+	  }), _defineProperty(_watch, 'strokeWeight', function strokeWeight(val) {
+	    this.overlay.setStrokeOpacity(val);
+	  }), _defineProperty(_watch, 'fillColor', function fillColor(val) {
+	    this.overlay.setFillColor(val);
+	  }), _defineProperty(_watch, 'fillOpacity', function fillOpacity(val) {
+	    this.overlay.setFillOpacity(val);
+	  }), _defineProperty(_watch, 'editing', function editing(val) {
+	    val ? this.overlay.enableEditing() : this.overlay.disableEditing();
+	  }), _defineProperty(_watch, 'massClear', function massClear(val) {
+	    val ? this.overlay.enableMassClear() : this.overlay.disableMassClear();
+	  }), _defineProperty(_watch, 'clicking', function clicking(val) {
+	    this.reloadOverlay();
+	  }), _watch),
+	  methods: {
+	    addOverlay: function addOverlay() {
+	      var center = this.center,
+	          radius = this.radius,
+	          strokeColor = this.strokeColor,
+	          strokeWeight = this.strokeWeight,
+	          strokeOpacity = this.strokeOpacity,
+	          strokeStyle = this.strokeStyle,
+	          fillColor = this.fillColor,
+	          fillOpacity = this.fillOpacity,
+	          editing = this.editing,
+	          massClear = this.massClear,
+	          clicking = this.clicking;
+	      var _$parent = this.$parent,
+	          BMap = _$parent.BMap,
+	          map = _$parent.map;
+
+	      var overlay = new BMap.Circle((0, _factory.createPoint)(BMap, { lng: center.lng, lat: center.lat }), radius, {
+	        strokeColor: strokeColor,
+	        strokeWeight: strokeWeight,
+	        strokeOpacity: strokeOpacity,
+	        strokeStyle: strokeStyle,
+	        fillColor: fillColor,
+	        fillOpacity: fillOpacity,
+	        // enableEditing: editing,
+	        enableMassClear: massClear,
+	        enableClicking: clicking
+	      });
+	      this.overlay = overlay;
+	      map.addOverlay(overlay);
+	      _bindEvent2.default.call(this, overlay);
+	      // 这里有一个诡异的bug，直接给 editing 赋值时会出现未知错误，因为使用下面的方法抹平。
+	      editing ? overlay.enableEditing() : overlay.disableEditing();
+	    },
+	    removeOverlay: function removeOverlay() {
+	      var _$parent2 = this.$parent,
+	          BMap = _$parent2.BMap,
+	          map = _$parent2.map;
+
+	      map.removeOverlay(this.overlay);
+	    },
+	    reloadOverlay: function reloadOverlay() {
+	      var _this = this;
+
+	      this && this.$nextTick(function () {
+	        _this.removeOverlay();
+	        _this.addOverlay();
+	      });
+	    }
+	  },
+	  mounted: function mounted() {
+	    var _this2 = this;
+
+	    this.$parent.$on('ready', function () {
+	      _this2.addOverlay();
+	    });
+	  }
+	};
+
+/***/ },
+/* 64 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var hljs = __webpack_require__(65);
+
+	hljs.registerLanguage('1c', __webpack_require__(66));
+	hljs.registerLanguage('abnf', __webpack_require__(67));
+	hljs.registerLanguage('accesslog', __webpack_require__(68));
+	hljs.registerLanguage('actionscript', __webpack_require__(69));
+	hljs.registerLanguage('ada', __webpack_require__(70));
+	hljs.registerLanguage('apache', __webpack_require__(71));
+	hljs.registerLanguage('applescript', __webpack_require__(72));
+	hljs.registerLanguage('cpp', __webpack_require__(73));
+	hljs.registerLanguage('arduino', __webpack_require__(74));
+	hljs.registerLanguage('armasm', __webpack_require__(75));
+	hljs.registerLanguage('xml', __webpack_require__(76));
+	hljs.registerLanguage('asciidoc', __webpack_require__(77));
+	hljs.registerLanguage('aspectj', __webpack_require__(78));
+	hljs.registerLanguage('autohotkey', __webpack_require__(79));
+	hljs.registerLanguage('autoit', __webpack_require__(80));
+	hljs.registerLanguage('avrasm', __webpack_require__(81));
+	hljs.registerLanguage('awk', __webpack_require__(82));
+	hljs.registerLanguage('axapta', __webpack_require__(83));
+	hljs.registerLanguage('bash', __webpack_require__(84));
+	hljs.registerLanguage('basic', __webpack_require__(85));
+	hljs.registerLanguage('bnf', __webpack_require__(86));
+	hljs.registerLanguage('brainfuck', __webpack_require__(87));
+	hljs.registerLanguage('cal', __webpack_require__(88));
+	hljs.registerLanguage('capnproto', __webpack_require__(89));
+	hljs.registerLanguage('ceylon', __webpack_require__(90));
+	hljs.registerLanguage('clean', __webpack_require__(91));
+	hljs.registerLanguage('clojure', __webpack_require__(92));
+	hljs.registerLanguage('clojure-repl', __webpack_require__(93));
+	hljs.registerLanguage('cmake', __webpack_require__(94));
+	hljs.registerLanguage('coffeescript', __webpack_require__(95));
+	hljs.registerLanguage('coq', __webpack_require__(96));
+	hljs.registerLanguage('cos', __webpack_require__(97));
+	hljs.registerLanguage('crmsh', __webpack_require__(98));
+	hljs.registerLanguage('crystal', __webpack_require__(99));
+	hljs.registerLanguage('cs', __webpack_require__(100));
+	hljs.registerLanguage('csp', __webpack_require__(101));
+	hljs.registerLanguage('css', __webpack_require__(102));
+	hljs.registerLanguage('d', __webpack_require__(103));
+	hljs.registerLanguage('markdown', __webpack_require__(104));
+	hljs.registerLanguage('dart', __webpack_require__(105));
+	hljs.registerLanguage('delphi', __webpack_require__(106));
+	hljs.registerLanguage('diff', __webpack_require__(107));
+	hljs.registerLanguage('django', __webpack_require__(108));
+	hljs.registerLanguage('dns', __webpack_require__(109));
+	hljs.registerLanguage('dockerfile', __webpack_require__(110));
+	hljs.registerLanguage('dos', __webpack_require__(111));
+	hljs.registerLanguage('dsconfig', __webpack_require__(112));
+	hljs.registerLanguage('dts', __webpack_require__(113));
+	hljs.registerLanguage('dust', __webpack_require__(114));
+	hljs.registerLanguage('ebnf', __webpack_require__(115));
+	hljs.registerLanguage('elixir', __webpack_require__(116));
+	hljs.registerLanguage('elm', __webpack_require__(117));
+	hljs.registerLanguage('ruby', __webpack_require__(118));
+	hljs.registerLanguage('erb', __webpack_require__(119));
+	hljs.registerLanguage('erlang-repl', __webpack_require__(120));
+	hljs.registerLanguage('erlang', __webpack_require__(121));
+	hljs.registerLanguage('excel', __webpack_require__(122));
+	hljs.registerLanguage('fix', __webpack_require__(123));
+	hljs.registerLanguage('flix', __webpack_require__(124));
+	hljs.registerLanguage('fortran', __webpack_require__(125));
+	hljs.registerLanguage('fsharp', __webpack_require__(126));
+	hljs.registerLanguage('gams', __webpack_require__(127));
+	hljs.registerLanguage('gauss', __webpack_require__(128));
+	hljs.registerLanguage('gcode', __webpack_require__(129));
+	hljs.registerLanguage('gherkin', __webpack_require__(130));
+	hljs.registerLanguage('glsl', __webpack_require__(131));
+	hljs.registerLanguage('go', __webpack_require__(132));
+	hljs.registerLanguage('golo', __webpack_require__(133));
+	hljs.registerLanguage('gradle', __webpack_require__(134));
+	hljs.registerLanguage('groovy', __webpack_require__(135));
+	hljs.registerLanguage('haml', __webpack_require__(136));
+	hljs.registerLanguage('handlebars', __webpack_require__(137));
+	hljs.registerLanguage('haskell', __webpack_require__(138));
+	hljs.registerLanguage('haxe', __webpack_require__(139));
+	hljs.registerLanguage('hsp', __webpack_require__(140));
+	hljs.registerLanguage('htmlbars', __webpack_require__(141));
+	hljs.registerLanguage('http', __webpack_require__(142));
+	hljs.registerLanguage('inform7', __webpack_require__(143));
+	hljs.registerLanguage('ini', __webpack_require__(144));
+	hljs.registerLanguage('irpf90', __webpack_require__(145));
+	hljs.registerLanguage('java', __webpack_require__(146));
+	hljs.registerLanguage('javascript', __webpack_require__(147));
+	hljs.registerLanguage('json', __webpack_require__(148));
+	hljs.registerLanguage('julia', __webpack_require__(149));
+	hljs.registerLanguage('kotlin', __webpack_require__(150));
+	hljs.registerLanguage('lasso', __webpack_require__(151));
+	hljs.registerLanguage('ldif', __webpack_require__(152));
+	hljs.registerLanguage('less', __webpack_require__(153));
+	hljs.registerLanguage('lisp', __webpack_require__(154));
+	hljs.registerLanguage('livecodeserver', __webpack_require__(155));
+	hljs.registerLanguage('livescript', __webpack_require__(156));
+	hljs.registerLanguage('llvm', __webpack_require__(157));
+	hljs.registerLanguage('lsl', __webpack_require__(158));
+	hljs.registerLanguage('lua', __webpack_require__(159));
+	hljs.registerLanguage('makefile', __webpack_require__(160));
+	hljs.registerLanguage('mathematica', __webpack_require__(161));
+	hljs.registerLanguage('matlab', __webpack_require__(162));
+	hljs.registerLanguage('maxima', __webpack_require__(163));
+	hljs.registerLanguage('mel', __webpack_require__(164));
+	hljs.registerLanguage('mercury', __webpack_require__(165));
+	hljs.registerLanguage('mipsasm', __webpack_require__(166));
+	hljs.registerLanguage('mizar', __webpack_require__(167));
+	hljs.registerLanguage('perl', __webpack_require__(168));
+	hljs.registerLanguage('mojolicious', __webpack_require__(169));
+	hljs.registerLanguage('monkey', __webpack_require__(170));
+	hljs.registerLanguage('moonscript', __webpack_require__(171));
+	hljs.registerLanguage('nginx', __webpack_require__(172));
+	hljs.registerLanguage('nimrod', __webpack_require__(173));
+	hljs.registerLanguage('nix', __webpack_require__(174));
+	hljs.registerLanguage('nsis', __webpack_require__(175));
+	hljs.registerLanguage('objectivec', __webpack_require__(176));
+	hljs.registerLanguage('ocaml', __webpack_require__(177));
+	hljs.registerLanguage('openscad', __webpack_require__(178));
+	hljs.registerLanguage('oxygene', __webpack_require__(179));
+	hljs.registerLanguage('parser3', __webpack_require__(180));
+	hljs.registerLanguage('pf', __webpack_require__(181));
+	hljs.registerLanguage('php', __webpack_require__(182));
+	hljs.registerLanguage('pony', __webpack_require__(183));
+	hljs.registerLanguage('powershell', __webpack_require__(184));
+	hljs.registerLanguage('processing', __webpack_require__(185));
+	hljs.registerLanguage('profile', __webpack_require__(186));
+	hljs.registerLanguage('prolog', __webpack_require__(187));
+	hljs.registerLanguage('protobuf', __webpack_require__(188));
+	hljs.registerLanguage('puppet', __webpack_require__(189));
+	hljs.registerLanguage('purebasic', __webpack_require__(190));
+	hljs.registerLanguage('python', __webpack_require__(191));
+	hljs.registerLanguage('q', __webpack_require__(192));
+	hljs.registerLanguage('qml', __webpack_require__(193));
+	hljs.registerLanguage('r', __webpack_require__(194));
+	hljs.registerLanguage('rib', __webpack_require__(195));
+	hljs.registerLanguage('roboconf', __webpack_require__(196));
+	hljs.registerLanguage('rsl', __webpack_require__(197));
+	hljs.registerLanguage('ruleslanguage', __webpack_require__(198));
+	hljs.registerLanguage('rust', __webpack_require__(199));
+	hljs.registerLanguage('scala', __webpack_require__(200));
+	hljs.registerLanguage('scheme', __webpack_require__(201));
+	hljs.registerLanguage('scilab', __webpack_require__(202));
+	hljs.registerLanguage('scss', __webpack_require__(203));
+	hljs.registerLanguage('smali', __webpack_require__(204));
+	hljs.registerLanguage('smalltalk', __webpack_require__(205));
+	hljs.registerLanguage('sml', __webpack_require__(206));
+	hljs.registerLanguage('sqf', __webpack_require__(207));
+	hljs.registerLanguage('sql', __webpack_require__(208));
+	hljs.registerLanguage('stan', __webpack_require__(209));
+	hljs.registerLanguage('stata', __webpack_require__(210));
+	hljs.registerLanguage('step21', __webpack_require__(211));
+	hljs.registerLanguage('stylus', __webpack_require__(212));
+	hljs.registerLanguage('subunit', __webpack_require__(213));
+	hljs.registerLanguage('swift', __webpack_require__(214));
+	hljs.registerLanguage('taggerscript', __webpack_require__(215));
+	hljs.registerLanguage('yaml', __webpack_require__(216));
+	hljs.registerLanguage('tap', __webpack_require__(217));
+	hljs.registerLanguage('tcl', __webpack_require__(218));
+	hljs.registerLanguage('tex', __webpack_require__(219));
+	hljs.registerLanguage('thrift', __webpack_require__(220));
+	hljs.registerLanguage('tp', __webpack_require__(221));
+	hljs.registerLanguage('twig', __webpack_require__(222));
+	hljs.registerLanguage('typescript', __webpack_require__(223));
+	hljs.registerLanguage('vala', __webpack_require__(224));
+	hljs.registerLanguage('vbnet', __webpack_require__(225));
+	hljs.registerLanguage('vbscript', __webpack_require__(226));
+	hljs.registerLanguage('vbscript-html', __webpack_require__(227));
+	hljs.registerLanguage('verilog', __webpack_require__(228));
+	hljs.registerLanguage('vhdl', __webpack_require__(229));
+	hljs.registerLanguage('vim', __webpack_require__(230));
+	hljs.registerLanguage('x86asm', __webpack_require__(231));
+	hljs.registerLanguage('xl', __webpack_require__(232));
+	hljs.registerLanguage('xquery', __webpack_require__(233));
+	hljs.registerLanguage('zephir', __webpack_require__(234));
 
 	module.exports = hljs;
 
 /***/ },
-/* 63 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -16198,7 +17012,7 @@
 
 
 /***/ },
-/* 64 */
+/* 66 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs){
@@ -16281,7 +17095,7 @@
 	};
 
 /***/ },
-/* 65 */
+/* 67 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16356,7 +17170,7 @@
 	};
 
 /***/ },
-/* 66 */
+/* 68 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16398,7 +17212,7 @@
 	};
 
 /***/ },
-/* 67 */
+/* 69 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16476,7 +17290,7 @@
 	};
 
 /***/ },
-/* 68 */
+/* 70 */
 /***/ function(module, exports) {
 
 	module.exports = // We try to support full Ada2012
@@ -16653,7 +17467,7 @@
 	};
 
 /***/ },
-/* 69 */
+/* 71 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16703,7 +17517,7 @@
 	};
 
 /***/ },
-/* 70 */
+/* 72 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16793,7 +17607,7 @@
 	};
 
 /***/ },
-/* 71 */
+/* 73 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16963,7 +17777,7 @@
 	};
 
 /***/ },
-/* 72 */
+/* 74 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17067,7 +17881,7 @@
 	};
 
 /***/ },
-/* 73 */
+/* 75 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17163,7 +17977,7 @@
 	};
 
 /***/ },
-/* 74 */
+/* 76 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17270,7 +18084,7 @@
 	};
 
 /***/ },
-/* 75 */
+/* 77 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17462,7 +18276,7 @@
 	};
 
 /***/ },
-/* 76 */
+/* 78 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -17610,7 +18424,7 @@
 	};
 
 /***/ },
-/* 77 */
+/* 79 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17662,7 +18476,7 @@
 	};
 
 /***/ },
-/* 78 */
+/* 80 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17802,7 +18616,7 @@
 	};
 
 /***/ },
-/* 79 */
+/* 81 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17868,7 +18682,7 @@
 	};
 
 /***/ },
-/* 80 */
+/* 82 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17925,7 +18739,7 @@
 	};
 
 /***/ },
-/* 81 */
+/* 83 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17960,7 +18774,7 @@
 	};
 
 /***/ },
-/* 82 */
+/* 84 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18039,7 +18853,7 @@
 	};
 
 /***/ },
-/* 83 */
+/* 85 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18094,7 +18908,7 @@
 	};
 
 /***/ },
-/* 84 */
+/* 86 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs){
@@ -18127,7 +18941,7 @@
 	};
 
 /***/ },
-/* 85 */
+/* 87 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs){
@@ -18168,7 +18982,7 @@
 	};
 
 /***/ },
-/* 86 */
+/* 88 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18252,7 +19066,7 @@
 	};
 
 /***/ },
-/* 87 */
+/* 89 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18305,7 +19119,7 @@
 	};
 
 /***/ },
-/* 88 */
+/* 90 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18376,7 +19190,7 @@
 	};
 
 /***/ },
-/* 89 */
+/* 91 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18405,7 +19219,7 @@
 	};
 
 /***/ },
-/* 90 */
+/* 92 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18504,7 +19318,7 @@
 	};
 
 /***/ },
-/* 91 */
+/* 93 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18523,7 +19337,7 @@
 	};
 
 /***/ },
-/* 92 */
+/* 94 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18565,7 +19379,7 @@
 	};
 
 /***/ },
-/* 93 */
+/* 95 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18715,7 +19529,7 @@
 	};
 
 /***/ },
-/* 94 */
+/* 96 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18786,7 +19600,7 @@
 	};
 
 /***/ },
-/* 95 */
+/* 97 */
 /***/ function(module, exports) {
 
 	module.exports = function cos (hljs) {
@@ -18914,7 +19728,7 @@
 	};
 
 /***/ },
-/* 96 */
+/* 98 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19012,7 +19826,7 @@
 	};
 
 /***/ },
-/* 97 */
+/* 99 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19193,7 +20007,7 @@
 	};
 
 /***/ },
-/* 98 */
+/* 100 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19364,7 +20178,7 @@
 	};
 
 /***/ },
-/* 99 */
+/* 101 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19390,7 +20204,7 @@
 	};
 
 /***/ },
-/* 100 */
+/* 102 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19499,7 +20313,7 @@
 	};
 
 /***/ },
-/* 101 */
+/* 103 */
 /***/ function(module, exports) {
 
 	module.exports = /**
@@ -19761,7 +20575,7 @@
 	};
 
 /***/ },
-/* 102 */
+/* 104 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19873,7 +20687,7 @@
 	};
 
 /***/ },
-/* 103 */
+/* 105 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -19978,7 +20792,7 @@
 	};
 
 /***/ },
-/* 104 */
+/* 106 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20051,7 +20865,7 @@
 	};
 
 /***/ },
-/* 105 */
+/* 107 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20095,7 +20909,7 @@
 	};
 
 /***/ },
-/* 106 */
+/* 108 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20163,7 +20977,7 @@
 	};
 
 /***/ },
-/* 107 */
+/* 109 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20196,7 +21010,7 @@
 	};
 
 /***/ },
-/* 108 */
+/* 110 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20222,7 +21036,7 @@
 	};
 
 /***/ },
-/* 109 */
+/* 111 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20278,7 +21092,7 @@
 	};
 
 /***/ },
-/* 110 */
+/* 112 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20329,7 +21143,7 @@
 	};
 
 /***/ },
-/* 111 */
+/* 113 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20457,7 +21271,7 @@
 	};
 
 /***/ },
-/* 112 */
+/* 114 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20493,7 +21307,7 @@
 	};
 
 /***/ },
-/* 113 */
+/* 115 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20530,7 +21344,7 @@
 	};
 
 /***/ },
-/* 114 */
+/* 116 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20631,7 +21445,7 @@
 	};
 
 /***/ },
-/* 115 */
+/* 117 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20718,7 +21532,7 @@
 	};
 
 /***/ },
-/* 116 */
+/* 118 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20898,7 +21712,7 @@
 	};
 
 /***/ },
-/* 117 */
+/* 119 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20917,7 +21731,7 @@
 	};
 
 /***/ },
-/* 118 */
+/* 120 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20967,7 +21781,7 @@
 	};
 
 /***/ },
-/* 119 */
+/* 121 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21117,7 +21931,7 @@
 	};
 
 /***/ },
-/* 120 */
+/* 122 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21169,7 +21983,7 @@
 	};
 
 /***/ },
-/* 121 */
+/* 123 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21202,7 +22016,7 @@
 	};
 
 /***/ },
-/* 122 */
+/* 124 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -21251,7 +22065,7 @@
 	};
 
 /***/ },
-/* 123 */
+/* 125 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21326,7 +22140,7 @@
 	};
 
 /***/ },
-/* 124 */
+/* 126 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21389,7 +22203,7 @@
 	};
 
 /***/ },
-/* 125 */
+/* 127 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -21547,7 +22361,7 @@
 	};
 
 /***/ },
-/* 126 */
+/* 128 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21773,7 +22587,7 @@
 	};
 
 /***/ },
-/* 127 */
+/* 129 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21844,7 +22658,7 @@
 	};
 
 /***/ },
-/* 128 */
+/* 130 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -21885,7 +22699,7 @@
 	};
 
 /***/ },
-/* 129 */
+/* 131 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22006,7 +22820,7 @@
 	};
 
 /***/ },
-/* 130 */
+/* 132 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22064,7 +22878,7 @@
 	};
 
 /***/ },
-/* 131 */
+/* 133 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22091,7 +22905,7 @@
 	};
 
 /***/ },
-/* 132 */
+/* 134 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22130,7 +22944,7 @@
 	};
 
 /***/ },
-/* 133 */
+/* 135 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22228,7 +23042,7 @@
 	};
 
 /***/ },
-/* 134 */
+/* 136 */
 /***/ function(module, exports) {
 
 	module.exports = // TODO support filter tags like :javascript, support inline HTML
@@ -22339,7 +23153,7 @@
 	};
 
 /***/ },
-/* 135 */
+/* 137 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22377,7 +23191,7 @@
 	};
 
 /***/ },
-/* 136 */
+/* 138 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22503,7 +23317,7 @@
 	};
 
 /***/ },
-/* 137 */
+/* 139 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22619,7 +23433,7 @@
 	};
 
 /***/ },
-/* 138 */
+/* 140 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22669,7 +23483,7 @@
 	};
 
 /***/ },
-/* 139 */
+/* 141 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22744,7 +23558,7 @@
 	};
 
 /***/ },
-/* 140 */
+/* 142 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22789,7 +23603,7 @@
 	};
 
 /***/ },
-/* 141 */
+/* 143 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22850,7 +23664,7 @@
 	};
 
 /***/ },
-/* 142 */
+/* 144 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22920,7 +23734,7 @@
 	};
 
 /***/ },
-/* 143 */
+/* 145 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23000,7 +23814,7 @@
 	};
 
 /***/ },
-/* 144 */
+/* 146 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23112,7 +23926,7 @@
 	};
 
 /***/ },
-/* 145 */
+/* 147 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23287,7 +24101,7 @@
 	};
 
 /***/ },
-/* 146 */
+/* 148 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23328,7 +24142,7 @@
 	};
 
 /***/ },
-/* 147 */
+/* 149 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23510,7 +24324,7 @@
 	};
 
 /***/ },
-/* 148 */
+/* 150 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -23688,7 +24502,7 @@
 	};
 
 /***/ },
-/* 149 */
+/* 151 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23855,7 +24669,7 @@
 	};
 
 /***/ },
-/* 150 */
+/* 152 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23882,7 +24696,7 @@
 	};
 
 /***/ },
-/* 151 */
+/* 153 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24026,7 +24840,7 @@
 	};
 
 /***/ },
-/* 152 */
+/* 154 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24133,7 +24947,7 @@
 	};
 
 /***/ },
-/* 153 */
+/* 155 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24294,7 +25108,7 @@
 	};
 
 /***/ },
-/* 154 */
+/* 156 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24447,7 +25261,7 @@
 	};
 
 /***/ },
-/* 155 */
+/* 157 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24540,7 +25354,7 @@
 	};
 
 /***/ },
-/* 156 */
+/* 158 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24627,7 +25441,7 @@
 	};
 
 /***/ },
-/* 157 */
+/* 159 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24687,7 +25501,7 @@
 	};
 
 /***/ },
-/* 158 */
+/* 160 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24736,7 +25550,7 @@
 	};
 
 /***/ },
-/* 159 */
+/* 161 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24798,7 +25612,7 @@
 	};
 
 /***/ },
-/* 160 */
+/* 162 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24890,7 +25704,7 @@
 	};
 
 /***/ },
-/* 161 */
+/* 163 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25300,7 +26114,7 @@
 	};
 
 /***/ },
-/* 162 */
+/* 164 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25529,7 +26343,7 @@
 	};
 
 /***/ },
-/* 163 */
+/* 165 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25615,7 +26429,7 @@
 	};
 
 /***/ },
-/* 164 */
+/* 166 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25705,7 +26519,7 @@
 	};
 
 /***/ },
-/* 165 */
+/* 167 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25728,7 +26542,7 @@
 	};
 
 /***/ },
-/* 166 */
+/* 168 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25889,7 +26703,7 @@
 	};
 
 /***/ },
-/* 167 */
+/* 169 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25918,7 +26732,7 @@
 	};
 
 /***/ },
-/* 168 */
+/* 170 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25997,7 +26811,7 @@
 	};
 
 /***/ },
-/* 169 */
+/* 171 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26113,7 +26927,7 @@
 	};
 
 /***/ },
-/* 170 */
+/* 172 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26210,7 +27024,7 @@
 	};
 
 /***/ },
-/* 171 */
+/* 173 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26269,7 +27083,7 @@
 	};
 
 /***/ },
-/* 172 */
+/* 174 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26322,7 +27136,7 @@
 	};
 
 /***/ },
-/* 173 */
+/* 175 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26432,7 +27246,7 @@
 	};
 
 /***/ },
-/* 174 */
+/* 176 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26527,7 +27341,7 @@
 	};
 
 /***/ },
-/* 175 */
+/* 177 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26602,7 +27416,7 @@
 	};
 
 /***/ },
-/* 176 */
+/* 178 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26663,7 +27477,7 @@
 	};
 
 /***/ },
-/* 177 */
+/* 179 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26737,7 +27551,7 @@
 	};
 
 /***/ },
-/* 178 */
+/* 180 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26789,7 +27603,7 @@
 	};
 
 /***/ },
-/* 179 */
+/* 181 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26845,7 +27659,7 @@
 	};
 
 /***/ },
-/* 180 */
+/* 182 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26976,7 +27790,7 @@
 	};
 
 /***/ },
-/* 181 */
+/* 183 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27071,7 +27885,7 @@
 	};
 
 /***/ },
-/* 182 */
+/* 184 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27156,7 +27970,7 @@
 	};
 
 /***/ },
-/* 183 */
+/* 185 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27208,7 +28022,7 @@
 	};
 
 /***/ },
-/* 184 */
+/* 186 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27242,7 +28056,7 @@
 	};
 
 /***/ },
-/* 185 */
+/* 187 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27334,7 +28148,7 @@
 	};
 
 /***/ },
-/* 186 */
+/* 188 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27374,7 +28188,7 @@
 	};
 
 /***/ },
-/* 187 */
+/* 189 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27493,7 +28307,7 @@
 	};
 
 /***/ },
-/* 188 */
+/* 190 */
 /***/ function(module, exports) {
 
 	module.exports = // Base deafult colors in PB IDE: background: #FFFFDF; foreground: #000000;
@@ -27555,7 +28369,7 @@
 	};
 
 /***/ },
-/* 189 */
+/* 191 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27651,7 +28465,7 @@
 	};
 
 /***/ },
-/* 190 */
+/* 192 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27678,7 +28492,7 @@
 	};
 
 /***/ },
-/* 191 */
+/* 193 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27851,7 +28665,7 @@
 	};
 
 /***/ },
-/* 192 */
+/* 194 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27925,7 +28739,7 @@
 	};
 
 /***/ },
-/* 193 */
+/* 195 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27956,7 +28770,7 @@
 	};
 
 /***/ },
-/* 194 */
+/* 196 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28027,7 +28841,7 @@
 	};
 
 /***/ },
-/* 195 */
+/* 197 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28067,7 +28881,7 @@
 	};
 
 /***/ },
-/* 196 */
+/* 198 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28132,7 +28946,7 @@
 	};
 
 /***/ },
-/* 197 */
+/* 199 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28240,7 +29054,7 @@
 	};
 
 /***/ },
-/* 198 */
+/* 200 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28359,7 +29173,7 @@
 	};
 
 /***/ },
-/* 199 */
+/* 201 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28504,7 +29318,7 @@
 	};
 
 /***/ },
-/* 200 */
+/* 202 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28562,7 +29376,7 @@
 	};
 
 /***/ },
-/* 201 */
+/* 203 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28664,7 +29478,7 @@
 	};
 
 /***/ },
-/* 202 */
+/* 204 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28724,7 +29538,7 @@
 	};
 
 /***/ },
-/* 203 */
+/* 205 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28778,7 +29592,7 @@
 	};
 
 /***/ },
-/* 204 */
+/* 206 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28848,7 +29662,7 @@
 	};
 
 /***/ },
-/* 205 */
+/* 207 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -29223,7 +30037,7 @@
 	};
 
 /***/ },
-/* 206 */
+/* 208 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -29387,7 +30201,7 @@
 	};
 
 /***/ },
-/* 207 */
+/* 209 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -29474,7 +30288,7 @@
 	};
 
 /***/ },
-/* 208 */
+/* 210 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -29516,7 +30330,7 @@
 	};
 
 /***/ },
-/* 209 */
+/* 211 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -29567,7 +30381,7 @@
 	};
 
 /***/ },
-/* 210 */
+/* 212 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30025,7 +30839,7 @@
 	};
 
 /***/ },
-/* 211 */
+/* 213 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30063,7 +30877,7 @@
 	};
 
 /***/ },
-/* 212 */
+/* 214 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30184,7 +30998,7 @@
 	};
 
 /***/ },
-/* 213 */
+/* 215 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30232,7 +31046,7 @@
 	};
 
 /***/ },
-/* 214 */
+/* 216 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30320,7 +31134,7 @@
 	};
 
 /***/ },
-/* 215 */
+/* 217 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30360,7 +31174,7 @@
 	};
 
 /***/ },
-/* 216 */
+/* 218 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30425,7 +31239,7 @@
 	};
 
 /***/ },
-/* 217 */
+/* 219 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30491,7 +31305,7 @@
 	};
 
 /***/ },
-/* 218 */
+/* 220 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30530,7 +31344,7 @@
 	};
 
 /***/ },
-/* 219 */
+/* 221 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30618,7 +31432,7 @@
 	};
 
 /***/ },
-/* 220 */
+/* 222 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30688,7 +31502,7 @@
 	};
 
 /***/ },
-/* 221 */
+/* 223 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30819,7 +31633,7 @@
 	};
 
 /***/ },
-/* 222 */
+/* 224 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30873,7 +31687,7 @@
 	};
 
 /***/ },
-/* 223 */
+/* 225 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30933,7 +31747,7 @@
 	};
 
 /***/ },
-/* 224 */
+/* 226 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30976,7 +31790,7 @@
 	};
 
 /***/ },
-/* 225 */
+/* 227 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30992,7 +31806,7 @@
 	};
 
 /***/ },
-/* 226 */
+/* 228 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -31095,7 +31909,7 @@
 	};
 
 /***/ },
-/* 227 */
+/* 229 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -31160,7 +31974,7 @@
 	};
 
 /***/ },
-/* 228 */
+/* 230 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -31270,7 +32084,7 @@
 	};
 
 /***/ },
-/* 229 */
+/* 231 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -31410,7 +32224,7 @@
 	};
 
 /***/ },
-/* 230 */
+/* 232 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -31487,7 +32301,7 @@
 	};
 
 /***/ },
-/* 231 */
+/* 233 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -31562,7 +32376,7 @@
 	};
 
 /***/ },
-/* 232 */
+/* 234 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
