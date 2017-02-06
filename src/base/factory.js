@@ -1,24 +1,24 @@
-export function createPoint(BMap, options) {
+export function createPoint(BMap, options = {}) {
   const {lng, lat} = options
   return new BMap.Point(parseFloat(lng), parseFloat(lat))
 }
 
-export function createPixel(BMap, options) {
+export function createPixel(BMap, options = {}) {
   const {x, y} = options
   return new BMap.Pixel(parseFloat(x), parseFloat(y))
 }
 
-export function createBounds(BMap, options) {
+export function createBounds(BMap, options = {}) {
   const {sw, ne} = options
   return new BMap.Bounds(createPoint(BMap, sw), createPoint(BMap, ne))
 }
 
-export function createSize(BMap, options) {
+export function createSize(BMap, options = {}) {
   const {width, height} = options
   return new BMap.Size(parseFloat(width), parseFloat(height))
 }
 
-export function createIcon(BMap, options) {
+export function createIcon(BMap, options = {}) {
   const {url, size, opts} = options
   return new BMap.Icon(url, createSize(size), {
     anchor: anchor && createSize(BMap, opts.anchor),
@@ -28,7 +28,7 @@ export function createIcon(BMap, options) {
   })
 }
 
-export function createLabel (BMap, options) {
+export function createLabel (BMap, options = {}) {
   const {content, opts} = options
   return new BMap.Label(content, {
     offset: opts.offset && createSize(BMap, opts.offset),

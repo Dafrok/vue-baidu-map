@@ -16,7 +16,7 @@ export default {
     },
     offset: {},
     position: {},
-    style: {},
+    labelStyle: {},
     zIndex: {},
     massClear: {
       type: Boolean,
@@ -57,7 +57,7 @@ export default {
         this.overlay.setCenter(createPoint(BMap, {lng: this.center.lng, lat}))
       }
     },
-    style: {
+    labelStyle: {
       handler (val) {
         this.overlay.setStyle(val)
       },
@@ -72,7 +72,7 @@ export default {
   },
   methods: {
     addOverlay () {
-      const {content, title, offset, position, style, zIndex, massClear} = this
+      const {content, title, offset, position, labelStyle, zIndex, massClear} = this
       const {BMap, map} = this.$parent
       const overlay = new BMap.Label(content, {
         offset: createSize(BMap, offset),
@@ -82,7 +82,7 @@ export default {
       this.overlay = overlay
       map.addOverlay(overlay)
       title && overlay.setTitle(title)
-      style && overlay.setStyle(style)
+      labelStyle && overlay.setStyle(labelStyle)
       zIndex && overlay.setZIndex(zIndex)
       bindEvents.call(this, overlay)
     },
