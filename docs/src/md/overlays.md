@@ -411,7 +411,7 @@ export default {
 
 ### 示例
 
-在地图中添加圆形
+在地图中添加一个红色24号字的文本标签
 
 #### 代码
 
@@ -419,8 +419,8 @@ export default {
 <template>
   <baidu-map>
     <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-      <map-overlay-label content="This is a label"/>
-    </map-view>
+      <map-overlay-label content="This is a label" :position="{lng: 116.404, lat: 39.915}" :labelStyle="{color: 'red', fontSize : '24px'}" title="Hover me"/>
+  </map-view>
   </baidu-map>
 </template>
 ```
