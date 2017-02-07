@@ -16,7 +16,7 @@ npm i --save vue-baidu-map
 
 ### 挂载
 
-```vue
+```javascript
 import Vue from 'vue'
 import BaiduMap from 'vue-baidu-map'
 
@@ -27,7 +27,7 @@ Vue.use(BaiduMap, {
 ```
 
 ### 使用
-```
+```vue
 <template>
   <baidu-map>
     <map-view class="map-view">
