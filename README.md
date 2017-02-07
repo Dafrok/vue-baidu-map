@@ -6,6 +6,42 @@
 
 [https://dafrok.github.io/vue-baidu-map](https://dafrok.github.io/vue-baidu-map)
 
+## 开始使用
+
+### 安装
+
+```shell
+npm i --save vue-baidu-map
+```
+
+### 挂载
+
+```vue
+import Vue from 'vue'
+import BaiduMap from 'vue-baidu-map'
+
+Vue.use(BaiduMap, {
+  // ak 是在百度地图开发者平台申请的密钥 详见 http://lbsyun.baidu.com/apiconsole/key */
+  ak: 'YOUR_APP_KEY'
+})
+```
+
+### 使用
+```
+<template>
+  <baidu-map>
+    <map-view class="map-view">
+  </baidu-map>
+</template>
+
+<style>
+.map-view {
+  width: 400px;
+  height: 300px;
+}
+</style>
+```
+
 ## 贡献
 
 ```bash
