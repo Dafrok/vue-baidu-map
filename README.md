@@ -10,7 +10,7 @@
 
 ### 安装
 
-```shell
+```bash
 npm i --save vue-baidu-map
 ```
 
@@ -45,6 +45,6 @@ Vue.use(BaiduMap, {
 ## 贡献
 
 ```bash
-$ sudo npm i
-$ sudo npm run dev
+sudo npm i
+sudo npm run dev
 ```
