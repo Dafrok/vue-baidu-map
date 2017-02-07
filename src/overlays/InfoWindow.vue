@@ -83,7 +83,7 @@ export default {
   },
   methods: {
     addOverlay () {
-      const {show, position, title, width, height, maxWidth, offset, autoPan, closeOnClick, message, maximize} = this
+      const {show, position, title, width, height, maxWidth, offset, autoPan, closeOnClick, message, maximize, bindObserver} = this
       const {BMap, map} = this.$parent
       const $content = this.$refs.contents
       const overlay = new BMap.InfoWindow($content, {
@@ -101,10 +101,19 @@ export default {
       maximize ? overlay.enableMaximize() : overlay.disableMaximize()
       bindEvents.call(this, overlay)
       this.overlay = overlay
-      ;[].forEach.call($content.querySelectorAll('img'), $img => $img.onload = () => overlay.redraw())
       overlay.redraw()
+      ;[].forEach.call($content.querySelectorAll('img'), $img => $img.onload = () => overlay.redraw())
+      bindObserver()
       this.$container = map // map or marker
       show && this.openInfoWindow()
+    },
+    bindObserver () {
+      if (!MutationObserver) {
+        return
+      }
+      const {$refs, overlay} = this
+      this.observer = new MutationObserver(mutations => overlay.redraw())
+      this.observer.observe($refs.contents, {attributes: true, childList: true, characterData: true, subtree: true})
     },
     openInfoWindow () {
       const {$container, position, overlay} = this
@@ -124,6 +133,9 @@ export default {
         this.addOverlay()
       })
     }
+  },
+  beforeDestroy () {
+    this.observer && this.observer.disconnect();
   },
   mounted () {
     this.$parent.$on('ready', () => {
