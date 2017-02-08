@@ -107,6 +107,11 @@ export default {
 $primary:#0075c7;
 @import 'bulma';
 
+.map img {
+  max-width: none!important;
+  background: none!important;
+}
+
 h1.title {
   .logo {
     width: 2.5rem;
