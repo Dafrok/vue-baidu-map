@@ -62,11 +62,11 @@
 
 	var _routes2 = _interopRequireDefault(_routes);
 
-	var _index = __webpack_require__(22);
+	var _index = __webpack_require__(32);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _highlight = __webpack_require__(59);
+	var _highlight = __webpack_require__(69);
 
 	var _highlight2 = _interopRequireDefault(_highlight);
 
@@ -8511,7 +8511,7 @@
 	__vue_exports__ = __webpack_require__(9)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(20)
+	var __vue_template__ = __webpack_require__(30)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -9352,19 +9352,19 @@
 	  value: true
 	});
 
-	var _start = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./md/start.md\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _start = __webpack_require__(16);
 
 	var _start2 = _interopRequireDefault(_start);
 
-	var _map = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./md/map.md\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _map = __webpack_require__(19);
 
 	var _map2 = _interopRequireDefault(_map);
 
-	var _controls = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./md/controls.md\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _controls = __webpack_require__(23);
 
 	var _controls2 = _interopRequireDefault(_controls);
 
-	var _overlays = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./md/overlays.md\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _overlays = __webpack_require__(26);
 
 	var _overlays2 = _interopRequireDefault(_overlays);
 
@@ -9398,11 +9398,5064 @@
 	}];
 
 /***/ },
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(17);
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* template */
+	var __vue_template__ = __webpack_require__(18)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/start-1.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-5e2bc64f", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-5e2bc64f", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] start-1.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('section', [
+	    [_c('h1', [_vm._v("开始使用")]), _vm._v(" "), _c('h2', [_vm._v("安装")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h2', [_vm._v("组件挂载")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h2', [_vm._v("快速上手")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	      staticClass: "map"
+	    })], 1)]
+	  ], 2)
+	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-shell"
+	  }, [_vm._v("$ npm install vue-baidu-map\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-javascript"
+	  }, [_c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("import")]), _vm._v(" Vue "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("from")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("'vue'")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("import")]), _vm._v(" BaiduMap "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("from")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("'vue-baidu-map'")]), _vm._v("\n\nVue.use(BaiduMap, {\n  "), _c('span', {
+	    staticClass: "hljs-comment"
+	  }, [_vm._v("// ak 是在百度地图开发者平台申请的密钥 详见 http://lbsyun.baidu.com/apiconsole/key */")]), _vm._v("\n  ak: "), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("'YOUR_APP_KEY'")]), _vm._v("\n})\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map-view\"")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("style")]), _vm._v(">")]), _c('span', {
+	    staticClass: "css"
+	  }, [_vm._v("\n"), _c('span', {
+	    staticClass: "hljs-selector-class"
+	  }, [_vm._v(".map-view")]), _vm._v(" {\n  "), _c('span', {
+	    staticClass: "hljs-attribute"
+	  }, [_vm._v("width")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("400px")]), _vm._v(";\n  "), _c('span', {
+	    staticClass: "hljs-attribute"
+	  }, [_vm._v("height")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("300px")]), _vm._v(";\n}\n")]), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("style")]), _vm._v(">")]), _vm._v("\n")])])
+	}]}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-5e2bc64f", module.exports)
+	  }
+	}
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(20);
+
+/***/ },
 /* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(21)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(22)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/map-3.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-75c04b0b", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-75c04b0b", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] map-3.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 21 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	exports.default = {
+	  data: function data() {
+	    return {
+	      center: {
+	        lng: 116.404,
+	        lat: 39.915
+	      },
+	      zoom: 15
+	    };
+	  },
+
+	  methods: {
+	    syncCenter: function syncCenter(e) {
+	      var _e$target$getCenter = e.target.getCenter(),
+	          lng = _e$target$getCenter.lng,
+	          lat = _e$target$getCenter.lat;
+
+	      this.center.lng = lng;
+	      this.center.lat = lat;
+	    },
+	    syncZoom: function syncZoom(e) {
+	      this.zoom = e.target.getZoom();
+	    }
+	  }
+	};
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('section', [
+	    [_c('h1', [_vm._v("地图组件")]), _vm._v(" "), _c('h2', [_vm._v("BaiduMap")]), _vm._v(" "), _c('p', [_vm._v("百度地图容器，用于控制其它组件实例，本身不用于渲染地图，是所有地图组件的根节点。")]), _vm._v(" "), _c('h3', [_vm._v("实例属性")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h2', [_vm._v("MapView")]), _vm._v(" "), _c('p', [_vm._v("百度地图实例容器，是地图的可视化操作区域，每一个 baidu-map 组件应对应唯一一个 bmap-view 组件。")]), _vm._v(" "), _c('h3', [_vm._v("实例属性")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('h3', [_vm._v("设置经纬度和缩放等级")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	      staticClass: "map",
+	      attrs: {
+	        "center": {
+	          lng: 116.404,
+	          lat: 39.915
+	        },
+	        "zoom": 15
+	      }
+	    })], 1), _vm._v(" "), _c('h3', [_vm._v("开启滚轮缩放")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(4), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), [_c('baidu-map', [_c('map-view', {
+	      staticClass: "map",
+	      attrs: {
+	        "center": {
+	          lng: 116.404,
+	          lat: 39.915
+	        },
+	        "zoom": 15,
+	        "scroll-wheel-zoom": true
+	      }
+	    })], 1)], _vm._v(" "), _c('h3', [_vm._v("设置地图类型")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(5), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), [_c('baidu-map', [_c('map-view', {
+	      staticClass: "map",
+	      attrs: {
+	        "center": {
+	          lng: 116.404,
+	          lat: 39.915
+	        },
+	        "zoom": 15,
+	        "mapType": "BMAP_SATELLITE_MAP"
+	      }
+	    })], 1)], _vm._v(" "), _c('h3', [_vm._v("双向绑定")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(6), _vm._v(" "), _c('h4', [_vm._v("示例")]), _vm._v(" "), _c('div', {
+	      staticClass: "columns"
+	    }, [_c('div', {
+	      staticClass: "column is-3"
+	    }, [_c('div', {
+	      staticClass: "box"
+	    }, [_c('label', {
+	      staticClass: "label"
+	    }, [_vm._v("经度")]), _vm._v(" "), _c('p', {
+	      staticClass: "control"
+	    }, [_c('input', {
+	      directives: [{
+	        name: "model",
+	        rawName: "v-model.number",
+	        value: (_vm.center.lng),
+	        expression: "center.lng",
+	        modifiers: {
+	          "number": true
+	        }
+	      }],
+	      staticClass: "input is-small",
+	      domProps: {
+	        "value": _vm._s(_vm.center.lng)
+	      },
+	      on: {
+	        "input": function($event) {
+	          if ($event.target.composing) { return; }
+	          _vm.center.lng = _vm._n($event.target.value)
+	        },
+	        "blur": function($event) {
+	          _vm.$forceUpdate()
+	        }
+	      }
+	    })]), _vm._v(" "), _c('label', {
+	      staticClass: "label"
+	    }, [_vm._v("纬度")]), _vm._v(" "), _c('p', {
+	      staticClass: "control"
+	    }, [_c('input', {
+	      directives: [{
+	        name: "model",
+	        rawName: "v-model.number",
+	        value: (_vm.center.lat),
+	        expression: "center.lat",
+	        modifiers: {
+	          "number": true
+	        }
+	      }],
+	      staticClass: "input is-small",
+	      domProps: {
+	        "value": _vm._s(_vm.center.lat)
+	      },
+	      on: {
+	        "input": function($event) {
+	          if ($event.target.composing) { return; }
+	          _vm.center.lat = _vm._n($event.target.value)
+	        },
+	        "blur": function($event) {
+	          _vm.$forceUpdate()
+	        }
+	      }
+	    })]), _vm._v(" "), _c('label', {
+	      staticClass: "label"
+	    }, [_vm._v("缩放级别")]), _vm._v(" "), _c('p', {
+	      staticClass: "control"
+	    }, [_c('input', {
+	      directives: [{
+	        name: "model",
+	        rawName: "v-model.number",
+	        value: (_vm.zoom),
+	        expression: "zoom",
+	        modifiers: {
+	          "number": true
+	        }
+	      }],
+	      staticClass: "input is-small",
+	      attrs: {
+	        "type": "number"
+	      },
+	      domProps: {
+	        "value": _vm._s(_vm.zoom)
+	      },
+	      on: {
+	        "input": function($event) {
+	          if ($event.target.composing) { return; }
+	          _vm.zoom = _vm._n($event.target.value)
+	        },
+	        "blur": function($event) {
+	          _vm.$forceUpdate()
+	        }
+	      }
+	    })])])]), _vm._v(" "), _c('div', {
+	      staticClass: "column is-9"
+	    }, [_c('baidu-map', [_c('map-view', {
+	      staticClass: "map",
+	      attrs: {
+	        "scroll-wheel-zoom": true,
+	        "center": _vm.center,
+	        "zoom": _vm.zoom
+	      },
+	      on: {
+	        "moving": _vm.syncCenter,
+	        "moveend": _vm.syncCenter,
+	        "zoomend": _vm.syncZoom
+	      }
+	    })], 1)], 1)])]
+	  ], 2)
+	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("类型")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("默认值")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("ak")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("于"), _c('a', {
+	    attrs: {
+	      "href": "http://lbsyun.baidu.com/apiconsole/key"
+	    }
+	  }, [_vm._v("百度地图开发者平台")]), _vm._v("申请的密钥，该属性仅在初始化时生效，为必填项。")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("类型")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("默认值")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("center")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Array")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("定位")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("zoom")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Object")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("缩放等级")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("min-zoom")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("最小缩放级别")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("max-zoom")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("最大缩放级别")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("high-resolution")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("高分屏模式 该项仅在地图组件挂载时加载一次")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("map-click")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("允许点击 该项仅在地图组件挂载时加载一次")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("map-type")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("global.BMAP_NORMAL_MAP")]), _vm._v(" "), _c('td', [_vm._v("地图类型")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dragging")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("允许拖拽")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("scroll-wheel-zoom")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("false")]), _vm._v(" "), _c('td', [_vm._v("允许鼠标滚轮缩放")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("double-click-zoom")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("允许双击缩放")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("keyboard")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("允许键盘操作")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("inertial-dragging")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("false")]), _vm._v(" "), _c('td', [_vm._v("允许惯性拖拽")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("continuous-zoom")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("false")]), _vm._v(" "), _c('td', [_vm._v("允许无级缩放")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("pinch-to-zoom")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("允许双指缩放")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("auto-resize")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("允许自适应容器尺寸")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("事件名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("参数")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("click")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, point, pixel, overlay}")]), _vm._v(" "), _c('td', [_vm._v("左键单击地图时触发此事件。 当双击时，产生的事件序列为： click click dblclick")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dblclick")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, pixel, point}")]), _vm._v(" "), _c('td', [_vm._v("鼠标双击地图时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("rightclick")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, point, pixel, overlay}")]), _vm._v(" "), _c('td', [_vm._v("右键单击地图时触发此事件。 当双击时，产生的事件序列为： rightclick rightclick rightdblclick")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("rightdblclick")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, point, pixel, overlay}")]), _vm._v(" "), _c('td', [_vm._v("右键双击地图时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("maptypechange")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("地图类型发生变化时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mousemove")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, point, pixel, overlay}")]), _vm._v(" "), _c('td', [_vm._v("鼠标在地图区域移动过程中触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseover")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("鼠标移入地图区域时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseout")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("鼠标移出地图区域时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("movestart")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("地图移动开始时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("moving")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("地图移动过程中触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("moveend")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("地图移动结束时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("zoomstart")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("地图更改缩放级别开始时触发触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("zoomend")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("地图更改缩放级别结束时触发触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("addoverlay")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("当使用Map.addOverlay()方法向地图中添加单个覆盖物时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("addcontrol")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("当使用Map.addControl()方法向地图中添加单个控件时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("removecontrol")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("当使用Map.removeControl()方法移除单个控件时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("removeoverlay")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("当使用Map.removeOverlay()方法移除单个覆盖物时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("clearoverlays")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("当使用Map.clearOverlays()方法一次性移除全部覆盖物时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dragstart")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, pixel, point}")]), _vm._v(" "), _c('td', [_vm._v("开始拖拽地图时触发")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dragging")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, pixel, point}")]), _vm._v(" "), _c('td', [_vm._v("拖拽地图过程中触发")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dragend")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, pixel, point}")]), _vm._v(" "), _c('td', [_vm._v("停止拖拽地图时触发")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("addtilelayer")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("添加一个自定义地图图层时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("removetilelayer")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("移除一个自定义地图图层时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("load")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, pixel, point, zoom}")]), _vm._v(" "), _c('td', [_vm._v("调用Map.centerAndZoom()方法时会触发此事件。这表示位置、缩放层级已经确定，但可能还在载入地图图块")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("resize")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, size}")]), _vm._v(" "), _c('td', [_vm._v("地图可视区域大小发生变化时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("hotspotclick")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, spots}")]), _vm._v(" "), _c('td', [_vm._v("点击热区时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("hotspotover")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, spots}")]), _vm._v(" "), _c('td', [_vm._v("鼠标移至热区时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("hotspotout")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, spots}")]), _vm._v(" "), _c('td', [_vm._v("鼠标移出热区时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("tilesloaded")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target}")]), _vm._v(" "), _c('td', [_vm._v("当地图所有图块完成加载时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("touchstart")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, point,pixel}")]), _vm._v(" "), _c('td', [_vm._v("触摸开始时触发此事件，仅适用移动设备")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("touchmove")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, point,pixel}")]), _vm._v(" "), _c('td', [_vm._v("触摸移动时触发此事件，仅适用移动设备")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("touchend")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, point,pixel}")]), _vm._v(" "), _c('td', [_vm._v("触摸结束时触发此事件，仅适用移动设备")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("longpress")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{type, target, point,pixel}")]), _vm._v(" "), _c('td', [_vm._v("长按事件，仅适用移动设备")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("ak")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"YOUR_APP_KEY\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"{lng: 116.404, lat: 39.915}\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"15\"")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"{lng: 116.404, lat: 39.915}\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"15\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":scroll-wheel-zoom")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"true\"")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"{lng: 116.404, lat: 39.915}\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"15\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("mapType")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"BMAP_SATELLITE_MAP\"")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("div")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("input")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("v-model.number")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"center.lng\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("input")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("v-model.number")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"center.lat\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("input")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("v-model.number")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"zoom\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v("\n        "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v("\n        "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":scroll-wheel-zoom")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"true\"")]), _vm._v("\n        "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"center\"")]), _vm._v("\n        "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"zoom\"")]), _vm._v("\n        "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("@moving")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"syncCenter\"")]), _vm._v("\n        "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("@moveend")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"syncCenter\"")]), _vm._v("\n        "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("@zoomend")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"syncZoom\"")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("div")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("script")]), _vm._v(">")]), _c('span', {
+	    staticClass: "javascript"
+	  }, [_vm._v("\n"), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("export")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("default")]), _vm._v(" {\n  data () {\n    "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("return")]), _vm._v(" {\n      "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("center")]), _vm._v(": {\n        "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("116.404")]), _vm._v(",\n        "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("39.915")]), _vm._v("\n      },\n      "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("zoom")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("15")]), _vm._v("\n    }\n  },\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("methods")]), _vm._v(": {\n    syncCenter (e) {\n      "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("const")]), _vm._v(" {lng, lat} = e.target.getCenter()\n      "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("this")]), _vm._v(".center.lng = lng\n      "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("this")]), _vm._v(".center.lat = lat\n    },\n    syncZoom (e) {\n      "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("this")]), _vm._v(".zoom = e.target.getZoom()\n    }\n  }\n}\n")]), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("script")]), _vm._v(">")]), _vm._v("\n")])])
+	}]}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-75c04b0b", module.exports)
+	  }
+	}
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(24);
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* template */
+	var __vue_template__ = __webpack_require__(25)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/controls-2.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-d9ad45bc", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-d9ad45bc", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] controls-2.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('section', [
+	    [_c('h1', [_vm._v("控件组件")]), _vm._v(" "), _c('p', [_vm._v("控件组件是属于 MapView 组件的子组件，通过声明这些在 MapView 上增加地图的控件。")]), _vm._v(" "), _c('h2', [_vm._v("MapControlScale")]), _vm._v(" "), _c('p', [_vm._v("比例尺控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在右上角加入比例尺控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	      staticClass: "map"
+	    }, [_c('map-control-scale', {
+	      attrs: {
+	        "anchor": "BMAP_ANCHOR_TOP_RIGHT"
+	      }
+	    }, [_c('map-view')], 1)], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("MapControlNavigation")]), _vm._v(" "), _c('p', [_vm._v("缩放控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在右上角加入缩放控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	      staticClass: "map"
+	    }, [_c('map-control-navigation', {
+	      attrs: {
+	        "anchor": "BMAP_ANCHOR_TOP_RIGHT"
+	      }
+	    }, [_c('map-view')], 1)], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("MapControlMapType")]), _vm._v(" "), _c('p', [_vm._v("地图类型控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(4), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图左上角加入地图类型控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(5), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	      staticClass: "map"
+	    }, [_c('map-control-map-type', {
+	      attrs: {
+	        "map-types": ['BMAP_NORMAL_MAP', 'BMAP_HYBRID_MAP'],
+	        "anchor": "BMAP_ANCHOR_TOP_LEFT"
+	      }
+	    }, [_c('map-view')], 1)], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("MapControlOverviewMap")]), _vm._v(" "), _c('p', [_vm._v("缩略图控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(6), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(7), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图右下角加入缩略图控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(8), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	      staticClass: "map"
+	    }, [_c('map-control-overview-map', {
+	      attrs: {
+	        "anchor": "BMAP_ANCHOR_BOTTOM_RIGHT"
+	      }
+	    }, [_c('map-view')], 1)], 1)], 1)], _vm._v(" "), _c('h2', [_vm._v("MapControlGeolocation")]), _vm._v(" "), _c('p', [_vm._v("定位控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(9), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(10), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图右下角加入定位控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(11), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	      staticClass: "map"
+	    }, [_c('map-control-geolocation', {
+	      attrs: {
+	        "anchor": "BMAP_ANCHOR_BOTTOM_RIGHT",
+	        "showAddressBar": true
+	      }
+	    }, [_c('map-view')], 1)], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("MapControlCopyright")]), _vm._v(" "), _c('p', [_vm._v("版权控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(12), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图右上角加入版权信息控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(13), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	      staticClass: "map"
+	    }, [_c('map-control-copyright', {
+	      attrs: {
+	        "anchor": "BMAP_ANCHOR_TOP_RIGHT",
+	        "copyright": [{
+	          id: 1,
+	          content: 'Copyright Message',
+	          bounds: {
+	            ne: {
+	              lng: 110,
+	              lat: 40
+	            },
+	            sw: {
+	              lng: 0,
+	              lat: 0
+	            }
+	          }
+	        }, {
+	          id: 2,
+	          content: '<a>我是版权信息</a>'
+	        }]
+	      }
+	    }, [_c('map-view')], 1)], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("MapControlCityList")]), _vm._v(" "), _c('p', [_vm._v("城市选择控件")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(14), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(15), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图左上角加入城市切换控件")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(16), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	      staticClass: "map"
+	    }, [_c('map-control-city-list', {
+	      attrs: {
+	        "anchor": "BMAP_ANCHOR_TOP_LEFT"
+	      }
+	    }, [_c('map-view')], 1)], 1)], 1)
+	  ], 2)
+	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("类型")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("默认值")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("anchor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("ControlAnchor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("控件停靠位置")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("offset")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Size")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("控件偏移值")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-control-scale")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("anchor")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"BMAP_ANCHOR_TOP_RIGHT\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v("/>")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("类型")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("默认值")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("anchor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("ControlAnchor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("控件停靠位置")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("offset")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Size")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("控件偏移值")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("type")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("NavigationControlType")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("平移缩放控件的类型")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("showZoomInfo")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("是否显示级别提示信息")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("enableGeolocation")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("false")]), _vm._v(" "), _c('td', [_vm._v("控件是否集成定位功能")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-control-navigation")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("anchor")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"BMAP_ANCHOR_TOP_RIGHT\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v("/>")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("类型")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("默认值")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("anchor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("ControlAnchor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("控件停靠位置")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("offset")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Size")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("控件偏移值")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("type")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("MapTypeControlType")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("控件样式")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mapTypes")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Array")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("控件展示的地图类型，默认为普通图、卫星图、卫星加路网混合图和三维图。通过此属性可配置控件展示的地图类型")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-control-map-type")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":map-types")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"['BMAP_NORMAL_MAP', 'BMAP_HYBRID_MAP']\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("anchor")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"BMAP_ANCHOR_TOP_LEFT\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v("/>")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("类型")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("默认值")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("anchor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("ControlAnchor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("控件停靠位置")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("offset")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Size")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("控件偏移值")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("size")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Size")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("缩略地图控件的大小")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("isOpen")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("false")]), _vm._v(" "), _c('td', [_vm._v("缩略地图添加到地图后的开合状态")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("事件名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("参数")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("viewchanged")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, isOpen}")]), _vm._v(" "), _c('td', [_vm._v("缩略地图开合状态发生变化后触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("viewchanging")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("缩略地图开合状态发生变化过程中触发此事件")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-control-overview-map")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("anchor")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"BMAP_ANCHOR_BOTTOM_RIGHT\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v("/>")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("类型")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("默认值")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("anchor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("ControlAnchor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("控件停靠位置")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("offset")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Size")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("控件偏移值")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("showAddressBar")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("是否显示定位信息面板。默认显示定位信息面板")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("enableAutoLocation")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("false")]), _vm._v(" "), _c('td', [_vm._v("添加控件时是否进行定位。默认添加控件时不进行定位")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("locationIcon")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Icon")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("可自定义定位中心点的Icon样式")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("事件名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("参数")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("locationSuccess")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{point, AddressComponent}")]), _vm._v(" "), _c('td', [_vm._v("定位成功后触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("locationError")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("{StatusCode}")]), _vm._v(" "), _c('td', [_vm._v("定位失败后触发此事件")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-control-geolocation")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("anchor")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"BMAP_ANCHOR_BOTTOM_RIGHT\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":showAddressBar")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"true\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v("/>")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("类型")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("默认值")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("anchor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("ControlAnchor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("控件停靠位置")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("offset")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Size")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("控件偏移值")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("copyright")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Array")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("版权信息列表")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-control-copyright")]), _vm._v("\n        "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("anchor")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"BMAP_ANCHOR_TOP_RIGHT\"")]), _vm._v("\n        "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":copyright")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"[{id: 1, content: 'Copyright Message', bounds: {ne: {lng: 110, lat: 40}, sw:{lng: 0, lat: 0"), _c('span', [_vm._v("}}")]), _vm._v("}]\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v("/>")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("类型")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("默认值")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("anchor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("ControlAnchor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("控件停靠位置")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("offset")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Size")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("控件偏移值")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("事件名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("参数")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("changeBefore")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("切换城市前触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("changeAfter")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("切换城市后触发此事件")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-control-city-list")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("anchor")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"BMAP_ANCHOR_TOP_LEFT\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v("/>")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
+	}]}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-d9ad45bc", module.exports)
+	  }
+	}
+
+/***/ },
+/* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(27);
+
+/***/ },
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(28)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(29)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/overlays-4.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-9d9ef45e", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-9d9ef45e", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] overlays-4.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 28 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	exports.default = {
+	  data: function data() {
+	    return {
+	      infoWindow: {
+	        show: true,
+	        contents: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+	      },
+	      markerPoint: {
+	        lng: 116.404,
+	        lat: 39.915
+	      },
+	      markerLabel: {
+	        content: 'Marker Label',
+	        opts: {
+	          offset: {
+	            width: 20,
+	            height: -10
+	          }
+	        }
+	      },
+	      polylinePath: [{ lng: 116.404, lat: 39.915 }, { lng: 116.405, lat: 39.920 }, { lng: 116.423493, lat: 39.907445 }],
+	      polygonPath: [{ lng: 116.412732, lat: 39.911707 }, { lng: 116.39455, lat: 39.910932 }, { lng: 116.403461, lat: 39.921336 }],
+	      circlePath: {
+	        center: {
+	          lng: 116.404,
+	          lat: 39.915
+	        },
+	        radius: 500
+	      },
+	      labelStyle: { color: 'red', fontSize: '24px' }
+	    };
+	  },
+
+	  methods: {
+	    updatePolylinePath: function updatePolylinePath(e) {
+	      this.polylinePath = e.target.getPath();
+	    },
+	    addPolylinePoint: function addPolylinePoint() {
+	      this.polylinePath.push({ lng: 116.404, lat: 39.915 });
+	    },
+	    updatePolygonPath: function updatePolygonPath(e) {
+	      this.polygonPath = e.target.getPath();
+	    },
+	    addPolygonPoint: function addPolygonPoint() {
+	      this.polygonPath.push({ lng: 116.404, lat: 39.915 });
+	    },
+	    updateCirclePath: function updateCirclePath(e) {
+	      this.circlePath.center = e.target.getCenter();
+	      this.circlePath.radius = e.target.getRadius();
+	    },
+	    infoWindowClose: function infoWindowClose(e) {
+	      this.infoWindow.show = false;
+	    },
+	    infoWindowOpen: function infoWindowOpen(e) {
+	      this.infoWindow.show = true;
+	    }
+	  }
+	};
+
+/***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('section', [
+	    [_c('h1', [_vm._v("覆盖物组件")]), _vm._v(" "), _c('h2', [_vm._v("MapOverlayMarker")]), _vm._v(" "), _c('p', [_vm._v("点标记")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图中心添加可拖动的跳跃点标记")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	      staticClass: "map",
+	      attrs: {
+	        "center": {
+	          lng: 116.404,
+	          lat: 39.915
+	        },
+	        "zoom": 15
+	      }
+	    }, [_c('map-overlay-marker', {
+	      attrs: {
+	        "point": _vm.markerPoint,
+	        "dragging": true,
+	        "animation": "BMAP_ANIMATION_BOUNCE",
+	        "label": _vm.markerLabel
+	      }
+	    })], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("MapOverlayPolyline")]), _vm._v(" "), _c('p', [_vm._v("折线")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(4), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图中添加可编辑的折线")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(5), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('div', {
+	      staticClass: "columns"
+	    }, [_c('div', {
+	      staticClass: "column is-5"
+	    }, [_c('div', {
+	      staticClass: "box"
+	    }, [_vm._l((_vm.polylinePath), function(point, index) {
+	      return _c('div', {
+	        staticClass: "control is-horizontal"
+	      }, [_c('div', {
+	        staticClass: "control-label"
+	      }, [_c('label', {
+	        staticClass: "label",
+	        domProps: {
+	          "textContent": _vm._s(("坐标" + (index + 1)))
+	        }
+	      })]), _vm._v(" "), _c('div', {
+	        staticClass: "control is-grouped"
+	      }, [_c('p', {
+	        staticClass: "control is-expanded"
+	      }, [_c('input', {
+	        directives: [{
+	          name: "model",
+	          rawName: "v-model",
+	          value: (point.lng),
+	          expression: "point.lng"
+	        }],
+	        staticClass: "input",
+	        attrs: {
+	          "type": "text",
+	          "placeholder": "经度"
+	        },
+	        domProps: {
+	          "value": _vm._s(point.lng)
+	        },
+	        on: {
+	          "input": function($event) {
+	            if ($event.target.composing) { return; }
+	            point.lng = $event.target.value
+	          }
+	        }
+	      })]), _vm._v(" "), _c('p', {
+	        staticClass: "control is-expanded"
+	      }, [_c('input', {
+	        directives: [{
+	          name: "model",
+	          rawName: "v-model",
+	          value: (point.lat),
+	          expression: "point.lat"
+	        }],
+	        staticClass: "input",
+	        attrs: {
+	          "type": "email",
+	          "placeholder": "纬度"
+	        },
+	        domProps: {
+	          "value": _vm._s(point.lat)
+	        },
+	        on: {
+	          "input": function($event) {
+	            if ($event.target.composing) { return; }
+	            point.lat = $event.target.value
+	          }
+	        }
+	      })])])])
+	    }), _vm._v(" "), _c('div', {
+	      staticClass: "control is-grouped"
+	    }, [_c('p', {
+	      staticClass: "control"
+	    }, [_c('button', {
+	      staticClass: "button is-primary",
+	      on: {
+	        "click": _vm.addPolylinePoint
+	      }
+	    }, [_vm._v("添加一个坐标")])])])], 2)]), _vm._v(" "), _c('div', {
+	      staticClass: "column is-7"
+	    }, [_c('baidu-map', [_c('map-view', {
+	      staticClass: "map",
+	      attrs: {
+	        "center": {
+	          lng: 116.404,
+	          lat: 39.915
+	        },
+	        "zoom": 15
+	      }
+	    }, [_c('map-overlay-polyline', {
+	      attrs: {
+	        "points": _vm.polylinePath,
+	        "stroke-color": "blue",
+	        "stroke-opacity": 0.5,
+	        "stroke-weight": 2,
+	        "editing": true
+	      },
+	      on: {
+	        "lineupdate": _vm.updatePolylinePath
+	      }
+	    })], 1)], 1)], 1)]), _vm._v(" "), _c('h2', [_vm._v("MapOverlayPolygon")]), _vm._v(" "), _c('p', [_vm._v("多边形")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(6), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(7), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图中添加可编辑的多边形")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(8), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('div', {
+	      staticClass: "columns"
+	    }, [_c('div', {
+	      staticClass: "column is-5"
+	    }, [_c('div', {
+	      staticClass: "box"
+	    }, [_vm._l((_vm.polygonPath), function(point, index) {
+	      return _c('div', {
+	        staticClass: "control is-horizontal"
+	      }, [_c('div', {
+	        staticClass: "control-label"
+	      }, [_c('label', {
+	        staticClass: "label",
+	        domProps: {
+	          "textContent": _vm._s(("坐标" + (index + 1)))
+	        }
+	      })]), _vm._v(" "), _c('div', {
+	        staticClass: "control is-grouped"
+	      }, [_c('p', {
+	        staticClass: "control is-expanded"
+	      }, [_c('input', {
+	        directives: [{
+	          name: "model",
+	          rawName: "v-model",
+	          value: (point.lng),
+	          expression: "point.lng"
+	        }],
+	        staticClass: "input",
+	        attrs: {
+	          "type": "text",
+	          "placeholder": "经度"
+	        },
+	        domProps: {
+	          "value": _vm._s(point.lng)
+	        },
+	        on: {
+	          "input": function($event) {
+	            if ($event.target.composing) { return; }
+	            point.lng = $event.target.value
+	          }
+	        }
+	      })]), _vm._v(" "), _c('p', {
+	        staticClass: "control is-expanded"
+	      }, [_c('input', {
+	        directives: [{
+	          name: "model",
+	          rawName: "v-model",
+	          value: (point.lat),
+	          expression: "point.lat"
+	        }],
+	        staticClass: "input",
+	        attrs: {
+	          "type": "email",
+	          "placeholder": "纬度"
+	        },
+	        domProps: {
+	          "value": _vm._s(point.lat)
+	        },
+	        on: {
+	          "input": function($event) {
+	            if ($event.target.composing) { return; }
+	            point.lat = $event.target.value
+	          }
+	        }
+	      })])])])
+	    }), _vm._v(" "), _c('div', {
+	      staticClass: "control is-grouped"
+	    }, [_c('p', {
+	      staticClass: "control"
+	    }, [_c('button', {
+	      staticClass: "button is-primary",
+	      on: {
+	        "click": _vm.addPolygonPoint
+	      }
+	    }, [_vm._v("添加一个坐标")])])])], 2)]), _vm._v(" "), _c('div', {
+	      staticClass: "column is-7"
+	    }, [_c('baidu-map', [_c('map-view', {
+	      staticClass: "map",
+	      attrs: {
+	        "center": {
+	          lng: 116.404,
+	          lat: 39.915
+	        },
+	        "zoom": 15
+	      }
+	    }, [_c('map-overlay-polygon', {
+	      attrs: {
+	        "points": _vm.polygonPath,
+	        "stroke-color": "blue",
+	        "stroke-opacity": 0.5,
+	        "fill-opacity": 0.5,
+	        "editing": true
+	      },
+	      on: {
+	        "lineupdate": _vm.updatePolygonPath
+	      }
+	    })], 1)], 1)], 1)]), _vm._v(" "), _c('h2', [_vm._v("MapOverlayCircle")]), _vm._v(" "), _c('p', [_vm._v("圆形")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(9), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(10), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图中添加圆形")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(11), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('div', {
+	      staticClass: "columns"
+	    }, [_c('div', {
+	      staticClass: "column is-5"
+	    }, [_c('div', {
+	      staticClass: "box"
+	    }, [_c('div', {
+	      staticClass: "control is-horizontal"
+	    }, [_c('div', {
+	      staticClass: "control-label"
+	    }, [_c('label', {
+	      staticClass: "label",
+	      domProps: {
+	        "textContent": _vm._s("圆心")
+	      }
+	    })]), _vm._v(" "), _c('div', {
+	      staticClass: "control is-grouped"
+	    }, [_c('p', {
+	      staticClass: "control is-expanded"
+	    }, [_c('input', {
+	      directives: [{
+	        name: "model",
+	        rawName: "v-model.number",
+	        value: (_vm.circlePath.center.lng),
+	        expression: "circlePath.center.lng",
+	        modifiers: {
+	          "number": true
+	        }
+	      }],
+	      staticClass: "input",
+	      attrs: {
+	        "type": "text",
+	        "placeholder": "经度"
+	      },
+	      domProps: {
+	        "value": _vm._s(_vm.circlePath.center.lng)
+	      },
+	      on: {
+	        "input": function($event) {
+	          if ($event.target.composing) { return; }
+	          _vm.circlePath.center.lng = _vm._n($event.target.value)
+	        },
+	        "blur": function($event) {
+	          _vm.$forceUpdate()
+	        }
+	      }
+	    })]), _vm._v(" "), _c('p', {
+	      staticClass: "control is-expanded"
+	    }, [_c('input', {
+	      directives: [{
+	        name: "model",
+	        rawName: "v-model.number",
+	        value: (_vm.circlePath.center.lat),
+	        expression: "circlePath.center.lat",
+	        modifiers: {
+	          "number": true
+	        }
+	      }],
+	      staticClass: "input",
+	      attrs: {
+	        "type": "email",
+	        "placeholder": "纬度"
+	      },
+	      domProps: {
+	        "value": _vm._s(_vm.circlePath.center.lat)
+	      },
+	      on: {
+	        "input": function($event) {
+	          if ($event.target.composing) { return; }
+	          _vm.circlePath.center.lat = _vm._n($event.target.value)
+	        },
+	        "blur": function($event) {
+	          _vm.$forceUpdate()
+	        }
+	      }
+	    })])])]), _vm._v(" "), _c('div', {
+	      staticClass: "control is-horizontal"
+	    }, [_c('div', {
+	      staticClass: "control-label"
+	    }, [_c('label', {
+	      staticClass: "label",
+	      domProps: {
+	        "textContent": _vm._s("半径")
+	      }
+	    })]), _vm._v(" "), _c('div', {
+	      staticClass: "control"
+	    }, [_c('p', {
+	      staticClass: "control"
+	    }, [_c('input', {
+	      directives: [{
+	        name: "model",
+	        rawName: "v-model",
+	        value: (_vm.circlePath.radius),
+	        expression: "circlePath.radius"
+	      }],
+	      staticClass: "input",
+	      attrs: {
+	        "type": "text",
+	        "placeholder": "半径"
+	      },
+	      domProps: {
+	        "value": _vm._s(_vm.circlePath.radius)
+	      },
+	      on: {
+	        "input": function($event) {
+	          if ($event.target.composing) { return; }
+	          _vm.circlePath.radius = $event.target.value
+	        }
+	      }
+	    })])])])])]), _vm._v(" "), _c('div', {
+	      staticClass: "column is-7"
+	    }, [_c('baidu-map', [_c('map-view', {
+	      staticClass: "map",
+	      attrs: {
+	        "center": {
+	          lng: 116.404,
+	          lat: 39.915
+	        },
+	        "zoom": 15
+	      }
+	    }, [_c('map-overlay-circle', {
+	      attrs: {
+	        "center": _vm.circlePath.center,
+	        "radius": _vm.circlePath.radius
+	      },
+	      on: {
+	        "lineupdate": _vm.updateCirclePath
+	      }
+	    })], 1)], 1)], 1)]), _vm._v(" "), _c('h2', [_vm._v("MapOverlayLabel")]), _vm._v(" "), _c('p', [_vm._v("标签")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(12), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(13), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图中添加一个红色24号字的文本标签")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(14), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	      staticClass: "map",
+	      attrs: {
+	        "center": {
+	          lng: 116.404,
+	          lat: 39.915
+	        },
+	        "zoom": 15
+	      }
+	    }, [_c('map-overlay-label', {
+	      attrs: {
+	        "content": "This is a label",
+	        "position": {
+	          lng: 116.404,
+	          lat: 39.915
+	        },
+	        "labelStyle": _vm.labelStyle,
+	        "title": "Hover me"
+	      }
+	    })], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("MapOverlayInfoWindow")]), _vm._v(" "), _c('p', [_vm._v("信息窗体")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(15), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(16), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图中添加一个信息窗体")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(17), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('div', {
+	      staticClass: "columns"
+	    }, [_c('div', {
+	      staticClass: "column is-3"
+	    }, [_c('div', {
+	      staticClass: "box"
+	    }, [_c('div', {
+	      staticClass: "control is-horizontal"
+	    }, [_c('div', {
+	      staticClass: "control"
+	    }, [_c('textarea', {
+	      directives: [{
+	        name: "model",
+	        rawName: "v-model.number",
+	        value: (_vm.infoWindow.contents),
+	        expression: "infoWindow.contents",
+	        modifiers: {
+	          "number": true
+	        }
+	      }],
+	      staticClass: "textarea",
+	      attrs: {
+	        "placeholder": "内容"
+	      },
+	      domProps: {
+	        "value": _vm._s(_vm.infoWindow.contents)
+	      },
+	      on: {
+	        "input": function($event) {
+	          if ($event.target.composing) { return; }
+	          _vm.infoWindow.contents = _vm._n($event.target.value)
+	        },
+	        "blur": function($event) {
+	          _vm.$forceUpdate()
+	        }
+	      }
+	    })])]), _vm._v(" "), _c('div', {
+	      staticClass: "control is-horizontal"
+	    }, [_c('p', {
+	      staticClass: "control"
+	    }, [_c('button', {
+	      staticClass: "button is-primary",
+	      on: {
+	        "click": function($event) {
+	          _vm.infoWindow.show = !_vm.infoWindow.show
+	        }
+	      }
+	    }, [_vm._v("显示 / 隐藏信息窗体")])])])])]), _vm._v(" "), _c('div', {
+	      staticClass: "column is-9"
+	    }, [_c('baidu-map', [_c('map-view', {
+	      staticClass: "map",
+	      attrs: {
+	        "center": {
+	          lng: 116.404,
+	          lat: 39.915
+	        },
+	        "zoom": 15
+	      }
+	    }, [_c('map-overlay-info-window', {
+	      attrs: {
+	        "position": {
+	          lng: 116.404,
+	          lat: 39.915
+	        },
+	        "title": "Info Window Title",
+	        "show": _vm.infoWindow.show
+	      },
+	      on: {
+	        "close": _vm.infoWindowClose,
+	        "open": _vm.infoWindowOpen
+	      }
+	    }, [_c('p', {
+	      domProps: {
+	        "textContent": _vm._s(_vm.infoWindow.contents)
+	      }
+	    })])], 1)], 1)], 1)])]
+	  ], 2)
+	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("类型")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("默认值")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("offset")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Size")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("标注的位置偏移值")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("icon")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Icon")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("标注所用的图标对象")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("massClear")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("是否在调用map.clearOverlays清除此覆盖物")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dragging")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("false")]), _vm._v(" "), _c('td', [_vm._v("是否启用拖拽")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("clicking")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("是否响应点击事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("raiseOnDrag")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("false")]), _vm._v(" "), _c('td', [_vm._v("拖拽标注时，标注是否开启离开地图表面效果")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("draggingCursor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("拖拽标注时的鼠标指针样式。此属性值需遵循CSS的cursor属性规范")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("rotation")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("旋转角度")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("shadow")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Icon")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("阴影图标")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("title")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("鼠标移到marker上的显示内容")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("animation")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("动画效果")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("事件名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("参数")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("click")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("点击标注图标后会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dblclick")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point,pixel}")]), _vm._v(" "), _c('td', [_vm._v("双击标注图标后会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mousedown")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point,pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标在标注图上按下触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseup")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point,pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标在标注图上释放触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseout")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point,pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标离开标注时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseover")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point,pixel}")]), _vm._v(" "), _c('td', [_vm._v("当鼠标进入标注图标区域时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("remove")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("移除标注时触发")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("infowindowclose")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("信息窗在此标注上关闭时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("infowindowopen")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("信息窗在此标注上打开时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dragstart")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("开始拖拽标注时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dragging")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, pixel, point}")]), _vm._v(" "), _c('td', [_vm._v("拖拽标注过程中触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dragend")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, pixel, point}")]), _vm._v(" "), _c('td', [_vm._v("拖拽结束时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("rightclick")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("右键点击标注时触发此事件")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"{lng: 116.404, lat: 39.915}\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"15\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-overlay-marker")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":point")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"{lng: 116.404, lat: 39.915}\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":dragging")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"true\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("animation")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"BMAP_ANIMATION_BOUNCE\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":label")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"{content: 'Marker Label', opts: {offset: {width: 20, height: -10"), _c('span', [_vm._v("}}")]), _vm._v("}\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("类型")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("默认值")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("points")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Array")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("[]")]), _vm._v(" "), _c('td', [_vm._v("构成折线的点")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("strokeColor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("折线颜色")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("strokeWeight")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("折线的宽度，以像素为单位")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("strokeOpacity")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("折线的透明度，取值范围0 - 1")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("strokeStyle")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("'solid'")]), _vm._v(" "), _c('td', [_vm._v("折线的样式，solid或dashed")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("enableMassClear")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("是否在调用map.clearOverlays清除此覆盖物")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("enableEditing")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("false")]), _vm._v(" "), _c('td', [_vm._v("是否启用线编辑")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("enableClicking")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("是否响应点击事件")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("事件名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("参数")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("click")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("点击折线后会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dblclick")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("双击折线后会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mousedown")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标在折线上按下触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseup")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标在折线释放触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseout")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标离开折线时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseover")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("当鼠标进入折线区域时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("remove")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("移除折线时触发")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("lineupdate")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("覆盖物的属性发生变化时触发")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"{lng: 116.404, lat: 39.915}\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"15\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-overlay-polyline")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":points")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"polylinePath\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("stroke-color")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"blue\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":stroke-opacity")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"0.5\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":stroke-weight")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"2\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":editing")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"true\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("@lineupdate")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"updatePolylinePath\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("script")]), _vm._v(">")]), _c('span', {
+	    staticClass: "javascript"
+	  }, [_vm._v("\n"), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("export")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("default")]), _vm._v(" {\n  data () {\n    "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("return")]), _vm._v(" {\n      "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("polylinePath")]), _vm._v(": [\n        {"), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("116.404")]), _vm._v(", "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("39.915")]), _vm._v("},\n        {"), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("116.405")]), _vm._v(", "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("39.920")]), _vm._v("},\n        {"), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("116.423493")]), _vm._v(", "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("39.907445")]), _vm._v("}\n      ]\n    }\n  },\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("methods")]), _vm._v(": {\n    updatePolylinePath (e) {\n      "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("this")]), _vm._v(".polylinePath = e.target.getPath()\n    },\n    addPolylinePoint () {\n      "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("this")]), _vm._v(".polylinePath.push({"), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("116.404")]), _vm._v(", "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("39.915")]), _vm._v("})\n    }\n  }\n}\n")]), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("script")]), _vm._v(">")]), _vm._v("\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("类型")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("默认值")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("points")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Array")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("[]")]), _vm._v(" "), _c('td', [_vm._v("构成折线的点")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("strokeColor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("折线颜色")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("strokeWeight")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("折线的宽度，以像素为单位")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("strokeOpacity")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("折线的透明度，取值范围0 - 1")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("strokeStyle")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("'solid'")]), _vm._v(" "), _c('td', [_vm._v("折线的样式，solid或dashed")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("fillColor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("填充颜色。当参数为空时，折线覆盖物将没有填充效果")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("fillOpacity")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("填充的透明度，取值范围0 - 1")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("enableMassClear")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("是否在调用map.clearOverlays清除此覆盖物")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("enableEditing")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("false")]), _vm._v(" "), _c('td', [_vm._v("是否启用线编辑")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("enableClicking")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("是否响应点击事件")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("事件名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("参数")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("click")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("点击折线后会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dblclick")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("双击折线后会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mousedown")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标在折线上按下触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseup")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标在折线释放触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseout")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标离开折线时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseover")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("当鼠标进入折线区域时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("remove")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("移除折线时触发")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("lineupdate")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("覆盖物的属性发生变化时触发")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"{lng: 116.404, lat: 39.915}\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"15\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-overlay-polygon")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":points")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"polylinePath\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("stroke-color")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"blue\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":stroke-opacity")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"0.5\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":stroke-weight")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"2\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":editing")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"true\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("@lineupdate")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"updatePolygonPath\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("script")]), _vm._v(">")]), _c('span', {
+	    staticClass: "javascript"
+	  }, [_vm._v("\n"), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("export")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("default")]), _vm._v(" {\n  data () {\n    "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("return")]), _vm._v(" {\n      "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("polygonPath")]), _vm._v(": [\n        {"), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("116.412732")]), _vm._v(", "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("39.911707")]), _vm._v("},\n        {"), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("116.39455")]), _vm._v(", "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("39.910932")]), _vm._v("},\n        {"), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("116.403461")]), _vm._v(", "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("39.921336")]), _vm._v("}\n      ]\n    }\n  },\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("methods")]), _vm._v(": {\n    updatePolygonPath (e) {\n      "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("this")]), _vm._v(".polylinePath = e.target.getPath()\n    },\n    addPolygonPoint () {\n      "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("this")]), _vm._v(".polygonPath.push({"), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("116.404")]), _vm._v(", "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("39.915")]), _vm._v("})\n    }\n  }\n}\n")]), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("script")]), _vm._v(">")]), _vm._v("\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("类型")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("默认值")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("center")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Point")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("圆心，单位为米")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("radius")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("半径，单位为米")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("strokeColor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("折线颜色")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("strokeWeight")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("折线的宽度，以像素为单位")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("strokeOpacity")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("折线的透明度，取值范围0 - 1")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("strokeStyle")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("'solid'")]), _vm._v(" "), _c('td', [_vm._v("折线的样式，solid或dashed")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("fillColor")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("填充颜色。当参数为空时，折线覆盖物将没有填充效果")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("fillOpacity")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("undefined")]), _vm._v(" "), _c('td', [_vm._v("填充的透明度，取值范围0 - 1")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("enableMassClear")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("是否在调用map.clearOverlays清除此覆盖物")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("enableEditing")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("false")]), _vm._v(" "), _c('td', [_vm._v("是否启用线编辑")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("enableClicking")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("是否响应点击事件")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("事件名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("参数")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("click")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("点击折线后会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dblclick")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("双击折线后会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mousedown")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标在折线上按下触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseup")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标在折线释放触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseout")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标离开折线时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseover")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("当鼠标进入折线区域时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("remove")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("移除折线时触发")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("lineupdate")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("覆盖物的属性发生变化时触发")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"{lng: 116.404, lat: 39.915}\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"15\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-overlay-circle")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"polylinePath\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("stroke-color")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"blue\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":stroke-opacity")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"0.5\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":stroke-weight")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"2\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":editing")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"true\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("@lineupdate")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"updatePolygonPath\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("script")]), _vm._v(">")]), _c('span', {
+	    staticClass: "javascript"
+	  }, [_vm._v("\n"), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("export")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("default")]), _vm._v(" {\n  data () {\n    "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("return")]), _vm._v(" {\n      "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("polygonPath")]), _vm._v(": [\n        {"), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("116.412732")]), _vm._v(", "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("39.911707")]), _vm._v("},\n        {"), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("116.39455")]), _vm._v(", "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("39.910932")]), _vm._v("},\n        {"), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("116.403461")]), _vm._v(", "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("39.921336")]), _vm._v("}\n      ]\n    }\n  },\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("methods")]), _vm._v(": {\n    updatePolygonPath (e) {\n      "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("this")]), _vm._v(".polylinePath = e.target.getPath()\n    },\n    addPolygonPoint () {\n      "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("this")]), _vm._v(".polygonPath.push({"), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("116.404")]), _vm._v(", "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-number"
+	  }, [_vm._v("39.915")]), _vm._v("})\n    }\n  }\n}\n")]), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("script")]), _vm._v(">")]), _vm._v("\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("类型")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("默认值")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("content")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("文本标注的内容")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("title")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("当鼠标移至标注上时显示此字段")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("labelStyle")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Object")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("文本标注的样式")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("offset")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Size")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("文本标注的位置偏移值")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("position")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Point")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("文本标注的地理位置")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("zIndex")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("文本标注的z轴位置")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("massClear")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("是否在调用map.clearOverlays清除此覆盖物")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("事件名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("参数")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("click")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("点击折线后会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dblclick")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("双击折线后会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mousedown")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标在折线上按下触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseup")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标在折线释放触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseout")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标离开折线时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseover")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("当鼠标进入折线区域时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("remove")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("移除折线时触发")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("lineupdate")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("覆盖物的属性发生变化时触发")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"{lng: 116.404, lat: 39.915}\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"15\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-overlay-label")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("content")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"This is a label\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":position")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"{lng: 116.404, lat: 39.915}\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":labelStyle")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"{color: 'red', fontSize : '24px'}\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("title")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"Hover me\"")]), _vm._v("/>")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("类型")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("默认值")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("show")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("false")]), _vm._v(" "), _c('td', [_vm._v("信息窗体是否开启")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("position")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Point")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("信息窗体所指坐标")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("width")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("信息窗宽度，单位像素。取值范围：0, 220 - 730。如果您指定宽度为0，则信息窗口的宽度将按照其内容自动调整")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("height")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("信息窗高度，单位像素。取值范围：0, 60 - 650。如果您指定高度为0，则信息窗口的高度将按照其内容自动调整")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("maxWidth")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Number")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("信息窗最大化时的宽度，单位像素。取值范围：220 - 730")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("offset")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Size")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("信息窗位置偏移值。默认情况下在地图上打开的信息窗底端的尖角将指向其地理坐标，在标注上打开的信息窗底端尖角的位置取决于标注所用图标的infoWindowOffset属性值，您可以为信息窗添加偏移量来改变默认位置")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("title")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }), _vm._v(" "), _c('td', [_vm._v("信息窗标题文字，支持HTML内容")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("autoPan")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("是否开启信息窗口打开时地图自动移动")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("closeOnClick")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("true")]), _vm._v(" "), _c('td', [_vm._v("是否开启点击地图关闭信息窗口")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("message")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("String")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("自定义部分的短信内容，可选项。完整的短信内容包括：自定义部分+位置链接，不设置时，显示默认短信内容。短信内容最长为140个字")]), _vm._v(" "), _c('td')]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("maximize")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("Boolean")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("false")]), _vm._v(" "), _c('td', [_vm._v("允许最大化")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("事件名")]), _vm._v(" "), _c('th', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("参数")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("click")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("点击折线后会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("dblclick")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("双击折线后会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mousedown")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标在折线上按下触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseup")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标在折线释放触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseout")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("鼠标离开折线时触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("mouseover")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target, point, pixel}")]), _vm._v(" "), _c('td', [_vm._v("当鼠标进入折线区域时会触发此事件")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("remove")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("移除折线时触发")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("lineupdate")]), _vm._v(" "), _c('td', {
+	    staticStyle: {
+	      "text-align": "center"
+	    }
+	  }, [_vm._v("event{type, target}")]), _vm._v(" "), _c('td', [_vm._v("覆盖物的属性发生变化时触发")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-html"
+	  }, [_c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("class")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"map\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"{lng: 116.404, lat: 39.915}\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":zoom")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"15\"")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-overlay-info-window")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":position")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"{lng: 116.404, lat: 39.915}\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("title")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"Info Window Title\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":show")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"infoWindow.show\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("@close")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"infoWindowClose\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("@open")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"infoWindowOpen\"")]), _vm._v(">")]), _vm._v("\n        "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("p")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("v-text")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"infoWindow.contents\"")]), _vm._v(">")]), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("p")]), _vm._v(">")]), _vm._v("\n      "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-overlay-info-window")]), _vm._v(">")]), _vm._v("\n    "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("map-view")]), _vm._v(">")]), _vm._v("\n  "), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("baidu-map")]), _vm._v(">")]), _vm._v("\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("template")]), _vm._v(">")]), _vm._v("\n\n"), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("<"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("script")]), _vm._v(">")]), _c('span', {
+	    staticClass: "javascript"
+	  }, [_vm._v("\n"), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("export")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("default")]), _vm._v(" {\n  data () {\n    "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("return")]), _vm._v(" {\n      "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("infoWindow")]), _vm._v(": {\n        "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("show")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-literal"
+	  }, [_vm._v("true")]), _vm._v(",\n        "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("contents")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'")]), _vm._v("\n      }\n    }\n  },\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("methods")]), _vm._v(": {\n    infoWindowClose (e) {\n      "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("this")]), _vm._v(".infoWindow.show = "), _c('span', {
+	    staticClass: "hljs-literal"
+	  }, [_vm._v("false")]), _vm._v("\n    },\n    infoWindowOpen (e) {\n      "), _c('span', {
+	    staticClass: "hljs-keyword"
+	  }, [_vm._v("this")]), _vm._v(".infoWindow.show = "), _c('span', {
+	    staticClass: "hljs-literal"
+	  }, [_vm._v("true")]), _vm._v("\n    }\n  }\n}\n")]), _c('span', {
+	    staticClass: "hljs-tag"
+	  }, [_vm._v("</"), _c('span', {
+	    staticClass: "hljs-name"
+	  }, [_vm._v("script")]), _vm._v(">")]), _vm._v("\n")])])
+	}]}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-9d9ef45e", module.exports)
+	  }
+	}
+
+/***/ },
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -9473,7 +14526,7 @@
 	  }, [_c('img', {
 	    staticClass: "logo",
 	    attrs: {
-	      "src": __webpack_require__(21)
+	      "src": __webpack_require__(31)
 	    }
 	  }), _c('span', [_vm._v("VUE BAIDU MAP")]), _c('span', [_vm._v("  ")]), _c('span', {
 	    staticStyle: {
@@ -9510,13 +14563,13 @@
 	}
 
 /***/ },
-/* 21 */
+/* 31 */
 /***/ function(module, exports) {
 
 	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2lpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo2MzAyQTc0N0EyNzcxMUU2QThBREJCMjIxNjkxM0RFQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEQUUxNTZGOERBRTYxMUU2QjFGQkI3RTU2NkM2NzI3MSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEQUUxNTZGN0RBRTYxMUU2QjFGQkI3RTU2NkM2NzI3MSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OThmNTkyMzctMGZiOS0zMTQ5LTk4ODQtZDMxNDY4ZTRmYmI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjYzMDJBNzQ3QTI3NzExRTZBOEFEQkIyMjE2OTEzREVDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+zxA55AAAAGBQTFRFQbiD6+vrxez/uOHvzu+PNkpf////kNS76Pf/ZMScRXv9xM3Q4jo/QIR1lLn+1/L/7vn/y9n5weSAg5qe9fb13vSz3OHfwN7R1JSgT3708fvgvrvD3/Pr+Pz5vufXAAAAiuIJ/AAAACB0Uk5T/////////////////////////////////////////wBcXBvtAAADkklEQVR42rTa7XajIBAGYBCDum62qbV028Tm/u+yfocZGBga4a+V57zMqKcEcYejNUY+OYxBc94FEORRw7QEchwxj9aDHExMaRzkeMMKsyJGyozKgkgtcyozYrTOqojVyKZsiNYZFbMgUmdV2hnROq8yIVJnViZE68yKwUgW5S6kzq7cRa+zK624QKIS9jifrPGG7n2zL57BfQ0siiigcgN/LOx5TvBNbcA1eNsHRpASiHL+XRApRwQqQ0NHudoLHQhiPAhUPgILZt19poNU0odApeHU/poQZEWA8s2JckoIsiFAYbRxQtUtxFbibcxvX4jYSrSN04JYiKXE2jilfRFiKZE2TmlfjFhKsI2viUEg8lBCbdymBkHIQwnU/pRWdRfZlVAbJ7WvD9kVXhRWEBcp6ngbJ1Xdi2zKNyMKp+p+ZFOauAIXy6QgqxKvPTOIH1mVWO15VSeRRYlFYbVvAFk6ORyFHYREZiXcxrz2DSKzEnqFcaseRGYl0MbM9o0gU/Xp2p+5VY8gk0LVnl/1GDIqVBSRECSCjIo/SlKQGFLUvbeN+e3LQYra18YJ7ctCitrTxmlBGEjhRkkMwkEKHCWt6lJqDqJQlKT2HQ0WUsA2FmlBBiaCFiyp6qPBROgoFcNgImSUxjAMLqII5INjcBEiSsMy2Ij6RZDNYCPe2lfB3Z7H1hAbUZ4Fu4X2lKztJzaCX2FzkMDOlb3FxUYGjaM0yzx91GAjw4A/LOJ7naKPGVzkcqnrGta+2efoIwYTqSejvuGqUwrechTsHCNU4ar7FWdbUyQY4Im8aUpxjK848rIb9hNZoYl62hhKwTVewCuscabqaaMTUaO2jH3Bqov2Kz4jlgQZW5Rm/+8VKY6hRyOCOMYaRU3XXMVIrxFGXGOpfbNcdRW/EUR8xrxgqiAUPN5nI4QsxgUZY5Rq/wueEUAIY1RUwVM2g0bq1Yh0H8cgkfrxmP9SeRgUwjVoxTKIJ55vUIpljIh60vArtjEi7bNGoVzlyzbKu7g/a+CfkhzDh1xSjSFidCPSZjbK+Qdm+hN1iNHNSHusUZY4yPyjvwq/dtNqXrpBljMS6jBj8BnraY+8xoq0tPH6H49/eNQRYz+Bo6jPx/UvHp9/0HiNGI+zRIb4fCQglGGdimr9jyAfKTs/Ac93Gd9jzkag0XXUITLrkUlGwAekC5xU2xZOrYNCPuF47fv+vduGZ8IfAQYAWeWoVZ0Ri4oAAAAASUVORK5CYII="
 
 /***/ },
-/* 22 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9525,63 +14578,63 @@
 	  value: true
 	});
 
-	var _Map = __webpack_require__(23);
+	var _Map = __webpack_require__(33);
 
 	var _Map2 = _interopRequireDefault(_Map);
 
-	var _MapView = __webpack_require__(26);
+	var _MapView = __webpack_require__(36);
 
 	var _MapView2 = _interopRequireDefault(_MapView);
 
-	var _Scale = __webpack_require__(31);
+	var _Scale = __webpack_require__(41);
 
 	var _Scale2 = _interopRequireDefault(_Scale);
 
-	var _Navigation = __webpack_require__(33);
+	var _Navigation = __webpack_require__(43);
 
 	var _Navigation2 = _interopRequireDefault(_Navigation);
 
-	var _MapType = __webpack_require__(35);
+	var _MapType = __webpack_require__(45);
 
 	var _MapType2 = _interopRequireDefault(_MapType);
 
-	var _OverviewMap = __webpack_require__(37);
+	var _OverviewMap = __webpack_require__(47);
 
 	var _OverviewMap2 = _interopRequireDefault(_OverviewMap);
 
-	var _Geolocation = __webpack_require__(39);
+	var _Geolocation = __webpack_require__(49);
 
 	var _Geolocation2 = _interopRequireDefault(_Geolocation);
 
-	var _Copyright = __webpack_require__(41);
+	var _Copyright = __webpack_require__(51);
 
 	var _Copyright2 = _interopRequireDefault(_Copyright);
 
-	var _CityList = __webpack_require__(43);
+	var _CityList = __webpack_require__(53);
 
 	var _CityList2 = _interopRequireDefault(_CityList);
 
-	var _Marker = __webpack_require__(45);
+	var _Marker = __webpack_require__(55);
 
 	var _Marker2 = _interopRequireDefault(_Marker);
 
-	var _Polyline = __webpack_require__(48);
+	var _Polyline = __webpack_require__(58);
 
 	var _Polyline2 = _interopRequireDefault(_Polyline);
 
-	var _Polygon = __webpack_require__(50);
+	var _Polygon = __webpack_require__(60);
 
 	var _Polygon2 = _interopRequireDefault(_Polygon);
 
-	var _Circle = __webpack_require__(52);
+	var _Circle = __webpack_require__(62);
 
 	var _Circle2 = _interopRequireDefault(_Circle);
 
-	var _Label = __webpack_require__(54);
+	var _Label = __webpack_require__(64);
 
 	var _Label2 = _interopRequireDefault(_Label);
 
-	var _InfoWindow = __webpack_require__(56);
+	var _InfoWindow = __webpack_require__(66);
 
 	var _InfoWindow2 = _interopRequireDefault(_InfoWindow);
 
@@ -9617,17 +14670,17 @@
 	};
 
 /***/ },
-/* 23 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(24)
+	__vue_exports__ = __webpack_require__(34)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(25)
+	var __vue_template__ = __webpack_require__(35)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -9661,7 +14714,7 @@
 
 
 /***/ },
-/* 24 */
+/* 34 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -9709,7 +14762,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 25 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -9724,17 +14777,17 @@
 	}
 
 /***/ },
-/* 26 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(27)
+	__vue_exports__ = __webpack_require__(37)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(30)
+	var __vue_template__ = __webpack_require__(40)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -9768,7 +14821,7 @@
 
 
 /***/ },
-/* 27 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -9777,7 +14830,7 @@
 	  value: true
 	});
 
-	var _bindEvent = __webpack_require__(28);
+	var _bindEvent = __webpack_require__(38);
 
 	var _bindEvent2 = _interopRequireDefault(_bindEvent);
 
@@ -9988,7 +15041,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 28 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10007,14 +15060,14 @@
 	  });
 	};
 
-	var _events = __webpack_require__(29);
+	var _events = __webpack_require__(39);
 
 	var _events2 = _interopRequireDefault(_events);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ },
-/* 29 */
+/* 39 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10035,7 +15088,7 @@
 	};
 
 /***/ },
-/* 30 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -10050,14 +15103,14 @@
 	}
 
 /***/ },
-/* 31 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(32)
+	__vue_exports__ = __webpack_require__(42)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -10089,7 +15142,7 @@
 
 
 /***/ },
-/* 32 */
+/* 42 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -10165,14 +15218,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 33 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(34)
+	__vue_exports__ = __webpack_require__(44)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -10204,7 +15257,7 @@
 
 
 /***/ },
-/* 34 */
+/* 44 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -10299,14 +15352,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 35 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(36)
+	__vue_exports__ = __webpack_require__(46)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -10338,7 +15391,7 @@
 
 
 /***/ },
-/* 36 */
+/* 46 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -10419,14 +15472,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 37 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(38)
+	__vue_exports__ = __webpack_require__(48)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -10458,7 +15511,7 @@
 
 
 /***/ },
-/* 38 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -10467,7 +15520,7 @@
 	  value: true
 	});
 
-	var _bindEvent = __webpack_require__(28);
+	var _bindEvent = __webpack_require__(38);
 
 	var _bindEvent2 = _interopRequireDefault(_bindEvent);
 
@@ -10560,14 +15613,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 39 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(40)
+	__vue_exports__ = __webpack_require__(50)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -10599,7 +15652,7 @@
 
 
 /***/ },
-/* 40 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -10608,7 +15661,7 @@
 	  value: true
 	});
 
-	var _bindEvent = __webpack_require__(28);
+	var _bindEvent = __webpack_require__(38);
 
 	var _bindEvent2 = _interopRequireDefault(_bindEvent);
 
@@ -10703,14 +15756,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 41 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(42)
+	__vue_exports__ = __webpack_require__(52)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -10742,7 +15795,7 @@
 
 
 /***/ },
-/* 42 */
+/* 52 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -10839,14 +15892,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 43 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(44)
+	__vue_exports__ = __webpack_require__(54)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -10878,7 +15931,7 @@
 
 
 /***/ },
-/* 44 */
+/* 54 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -10961,14 +16014,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 45 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(46)
+	__vue_exports__ = __webpack_require__(56)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -11000,7 +16053,7 @@
 
 
 /***/ },
-/* 46 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -11011,11 +16064,11 @@
 
 	var _props, _watch;
 
-	var _bindEvent = __webpack_require__(28);
+	var _bindEvent = __webpack_require__(38);
 
 	var _bindEvent2 = _interopRequireDefault(_bindEvent);
 
-	var _factory = __webpack_require__(47);
+	var _factory = __webpack_require__(57);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11170,7 +16223,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 47 */
+/* 57 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -11243,14 +16296,14 @@
 	}
 
 /***/ },
-/* 48 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(49)
+	__vue_exports__ = __webpack_require__(59)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -11282,7 +16335,7 @@
 
 
 /***/ },
-/* 49 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11293,11 +16346,11 @@
 
 	var _watch;
 
-	var _bindEvent = __webpack_require__(28);
+	var _bindEvent = __webpack_require__(38);
 
 	var _bindEvent2 = _interopRequireDefault(_bindEvent);
 
-	var _factory = __webpack_require__(47);
+	var _factory = __webpack_require__(57);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11419,14 +16472,14 @@
 	};
 
 /***/ },
-/* 50 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(51)
+	__vue_exports__ = __webpack_require__(61)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -11458,7 +16511,7 @@
 
 
 /***/ },
-/* 51 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11469,11 +16522,11 @@
 
 	var _watch;
 
-	var _bindEvent = __webpack_require__(28);
+	var _bindEvent = __webpack_require__(38);
 
 	var _bindEvent2 = _interopRequireDefault(_bindEvent);
 
-	var _factory = __webpack_require__(47);
+	var _factory = __webpack_require__(57);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11611,14 +16664,14 @@
 	};
 
 /***/ },
-/* 52 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(53)
+	__vue_exports__ = __webpack_require__(63)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -11650,7 +16703,7 @@
 
 
 /***/ },
-/* 53 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11661,11 +16714,11 @@
 
 	var _watch;
 
-	var _bindEvent = __webpack_require__(28);
+	var _bindEvent = __webpack_require__(38);
 
 	var _bindEvent2 = _interopRequireDefault(_bindEvent);
 
-	var _factory = __webpack_require__(47);
+	var _factory = __webpack_require__(57);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11815,14 +16868,14 @@
 	};
 
 /***/ },
-/* 54 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(55)
+	__vue_exports__ = __webpack_require__(65)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -11854,7 +16907,7 @@
 
 
 /***/ },
-/* 55 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11863,11 +16916,11 @@
 	  value: true
 	});
 
-	var _bindEvent = __webpack_require__(28);
+	var _bindEvent = __webpack_require__(38);
 
 	var _bindEvent2 = _interopRequireDefault(_bindEvent);
 
-	var _factory = __webpack_require__(47);
+	var _factory = __webpack_require__(57);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11996,17 +17049,17 @@
 	};
 
 /***/ },
-/* 56 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* script */
-	__vue_exports__ = __webpack_require__(57)
+	__vue_exports__ = __webpack_require__(67)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(58)
+	var __vue_template__ = __webpack_require__(68)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -12040,7 +17093,7 @@
 
 
 /***/ },
-/* 57 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12049,11 +17102,11 @@
 	  value: true
 	});
 
-	var _bindEvent = __webpack_require__(28);
+	var _bindEvent = __webpack_require__(38);
 
 	var _bindEvent2 = _interopRequireDefault(_bindEvent);
 
-	var _factory = __webpack_require__(47);
+	var _factory = __webpack_require__(57);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12235,7 +17288,7 @@
 	};
 
 /***/ },
-/* 58 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -12252,185 +17305,185 @@
 	}
 
 /***/ },
-/* 59 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var hljs = __webpack_require__(60);
+	var hljs = __webpack_require__(70);
 
-	hljs.registerLanguage('1c', __webpack_require__(61));
-	hljs.registerLanguage('abnf', __webpack_require__(62));
-	hljs.registerLanguage('accesslog', __webpack_require__(63));
-	hljs.registerLanguage('actionscript', __webpack_require__(64));
-	hljs.registerLanguage('ada', __webpack_require__(65));
-	hljs.registerLanguage('apache', __webpack_require__(66));
-	hljs.registerLanguage('applescript', __webpack_require__(67));
-	hljs.registerLanguage('cpp', __webpack_require__(68));
-	hljs.registerLanguage('arduino', __webpack_require__(69));
-	hljs.registerLanguage('armasm', __webpack_require__(70));
-	hljs.registerLanguage('xml', __webpack_require__(71));
-	hljs.registerLanguage('asciidoc', __webpack_require__(72));
-	hljs.registerLanguage('aspectj', __webpack_require__(73));
-	hljs.registerLanguage('autohotkey', __webpack_require__(74));
-	hljs.registerLanguage('autoit', __webpack_require__(75));
-	hljs.registerLanguage('avrasm', __webpack_require__(76));
-	hljs.registerLanguage('awk', __webpack_require__(77));
-	hljs.registerLanguage('axapta', __webpack_require__(78));
-	hljs.registerLanguage('bash', __webpack_require__(79));
-	hljs.registerLanguage('basic', __webpack_require__(80));
-	hljs.registerLanguage('bnf', __webpack_require__(81));
-	hljs.registerLanguage('brainfuck', __webpack_require__(82));
-	hljs.registerLanguage('cal', __webpack_require__(83));
-	hljs.registerLanguage('capnproto', __webpack_require__(84));
-	hljs.registerLanguage('ceylon', __webpack_require__(85));
-	hljs.registerLanguage('clean', __webpack_require__(86));
-	hljs.registerLanguage('clojure', __webpack_require__(87));
-	hljs.registerLanguage('clojure-repl', __webpack_require__(88));
-	hljs.registerLanguage('cmake', __webpack_require__(89));
-	hljs.registerLanguage('coffeescript', __webpack_require__(90));
-	hljs.registerLanguage('coq', __webpack_require__(91));
-	hljs.registerLanguage('cos', __webpack_require__(92));
-	hljs.registerLanguage('crmsh', __webpack_require__(93));
-	hljs.registerLanguage('crystal', __webpack_require__(94));
-	hljs.registerLanguage('cs', __webpack_require__(95));
-	hljs.registerLanguage('csp', __webpack_require__(96));
-	hljs.registerLanguage('css', __webpack_require__(97));
-	hljs.registerLanguage('d', __webpack_require__(98));
-	hljs.registerLanguage('markdown', __webpack_require__(99));
-	hljs.registerLanguage('dart', __webpack_require__(100));
-	hljs.registerLanguage('delphi', __webpack_require__(101));
-	hljs.registerLanguage('diff', __webpack_require__(102));
-	hljs.registerLanguage('django', __webpack_require__(103));
-	hljs.registerLanguage('dns', __webpack_require__(104));
-	hljs.registerLanguage('dockerfile', __webpack_require__(105));
-	hljs.registerLanguage('dos', __webpack_require__(106));
-	hljs.registerLanguage('dsconfig', __webpack_require__(107));
-	hljs.registerLanguage('dts', __webpack_require__(108));
-	hljs.registerLanguage('dust', __webpack_require__(109));
-	hljs.registerLanguage('ebnf', __webpack_require__(110));
-	hljs.registerLanguage('elixir', __webpack_require__(111));
-	hljs.registerLanguage('elm', __webpack_require__(112));
-	hljs.registerLanguage('ruby', __webpack_require__(113));
-	hljs.registerLanguage('erb', __webpack_require__(114));
-	hljs.registerLanguage('erlang-repl', __webpack_require__(115));
-	hljs.registerLanguage('erlang', __webpack_require__(116));
-	hljs.registerLanguage('excel', __webpack_require__(117));
-	hljs.registerLanguage('fix', __webpack_require__(118));
-	hljs.registerLanguage('flix', __webpack_require__(119));
-	hljs.registerLanguage('fortran', __webpack_require__(120));
-	hljs.registerLanguage('fsharp', __webpack_require__(121));
-	hljs.registerLanguage('gams', __webpack_require__(122));
-	hljs.registerLanguage('gauss', __webpack_require__(123));
-	hljs.registerLanguage('gcode', __webpack_require__(124));
-	hljs.registerLanguage('gherkin', __webpack_require__(125));
-	hljs.registerLanguage('glsl', __webpack_require__(126));
-	hljs.registerLanguage('go', __webpack_require__(127));
-	hljs.registerLanguage('golo', __webpack_require__(128));
-	hljs.registerLanguage('gradle', __webpack_require__(129));
-	hljs.registerLanguage('groovy', __webpack_require__(130));
-	hljs.registerLanguage('haml', __webpack_require__(131));
-	hljs.registerLanguage('handlebars', __webpack_require__(132));
-	hljs.registerLanguage('haskell', __webpack_require__(133));
-	hljs.registerLanguage('haxe', __webpack_require__(134));
-	hljs.registerLanguage('hsp', __webpack_require__(135));
-	hljs.registerLanguage('htmlbars', __webpack_require__(136));
-	hljs.registerLanguage('http', __webpack_require__(137));
-	hljs.registerLanguage('inform7', __webpack_require__(138));
-	hljs.registerLanguage('ini', __webpack_require__(139));
-	hljs.registerLanguage('irpf90', __webpack_require__(140));
-	hljs.registerLanguage('java', __webpack_require__(141));
-	hljs.registerLanguage('javascript', __webpack_require__(142));
-	hljs.registerLanguage('json', __webpack_require__(143));
-	hljs.registerLanguage('julia', __webpack_require__(144));
-	hljs.registerLanguage('kotlin', __webpack_require__(145));
-	hljs.registerLanguage('lasso', __webpack_require__(146));
-	hljs.registerLanguage('ldif', __webpack_require__(147));
-	hljs.registerLanguage('less', __webpack_require__(148));
-	hljs.registerLanguage('lisp', __webpack_require__(149));
-	hljs.registerLanguage('livecodeserver', __webpack_require__(150));
-	hljs.registerLanguage('livescript', __webpack_require__(151));
-	hljs.registerLanguage('llvm', __webpack_require__(152));
-	hljs.registerLanguage('lsl', __webpack_require__(153));
-	hljs.registerLanguage('lua', __webpack_require__(154));
-	hljs.registerLanguage('makefile', __webpack_require__(155));
-	hljs.registerLanguage('mathematica', __webpack_require__(156));
-	hljs.registerLanguage('matlab', __webpack_require__(157));
-	hljs.registerLanguage('maxima', __webpack_require__(158));
-	hljs.registerLanguage('mel', __webpack_require__(159));
-	hljs.registerLanguage('mercury', __webpack_require__(160));
-	hljs.registerLanguage('mipsasm', __webpack_require__(161));
-	hljs.registerLanguage('mizar', __webpack_require__(162));
-	hljs.registerLanguage('perl', __webpack_require__(163));
-	hljs.registerLanguage('mojolicious', __webpack_require__(164));
-	hljs.registerLanguage('monkey', __webpack_require__(165));
-	hljs.registerLanguage('moonscript', __webpack_require__(166));
-	hljs.registerLanguage('nginx', __webpack_require__(167));
-	hljs.registerLanguage('nimrod', __webpack_require__(168));
-	hljs.registerLanguage('nix', __webpack_require__(169));
-	hljs.registerLanguage('nsis', __webpack_require__(170));
-	hljs.registerLanguage('objectivec', __webpack_require__(171));
-	hljs.registerLanguage('ocaml', __webpack_require__(172));
-	hljs.registerLanguage('openscad', __webpack_require__(173));
-	hljs.registerLanguage('oxygene', __webpack_require__(174));
-	hljs.registerLanguage('parser3', __webpack_require__(175));
-	hljs.registerLanguage('pf', __webpack_require__(176));
-	hljs.registerLanguage('php', __webpack_require__(177));
-	hljs.registerLanguage('pony', __webpack_require__(178));
-	hljs.registerLanguage('powershell', __webpack_require__(179));
-	hljs.registerLanguage('processing', __webpack_require__(180));
-	hljs.registerLanguage('profile', __webpack_require__(181));
-	hljs.registerLanguage('prolog', __webpack_require__(182));
-	hljs.registerLanguage('protobuf', __webpack_require__(183));
-	hljs.registerLanguage('puppet', __webpack_require__(184));
-	hljs.registerLanguage('purebasic', __webpack_require__(185));
-	hljs.registerLanguage('python', __webpack_require__(186));
-	hljs.registerLanguage('q', __webpack_require__(187));
-	hljs.registerLanguage('qml', __webpack_require__(188));
-	hljs.registerLanguage('r', __webpack_require__(189));
-	hljs.registerLanguage('rib', __webpack_require__(190));
-	hljs.registerLanguage('roboconf', __webpack_require__(191));
-	hljs.registerLanguage('rsl', __webpack_require__(192));
-	hljs.registerLanguage('ruleslanguage', __webpack_require__(193));
-	hljs.registerLanguage('rust', __webpack_require__(194));
-	hljs.registerLanguage('scala', __webpack_require__(195));
-	hljs.registerLanguage('scheme', __webpack_require__(196));
-	hljs.registerLanguage('scilab', __webpack_require__(197));
-	hljs.registerLanguage('scss', __webpack_require__(198));
-	hljs.registerLanguage('smali', __webpack_require__(199));
-	hljs.registerLanguage('smalltalk', __webpack_require__(200));
-	hljs.registerLanguage('sml', __webpack_require__(201));
-	hljs.registerLanguage('sqf', __webpack_require__(202));
-	hljs.registerLanguage('sql', __webpack_require__(203));
-	hljs.registerLanguage('stan', __webpack_require__(204));
-	hljs.registerLanguage('stata', __webpack_require__(205));
-	hljs.registerLanguage('step21', __webpack_require__(206));
-	hljs.registerLanguage('stylus', __webpack_require__(207));
-	hljs.registerLanguage('subunit', __webpack_require__(208));
-	hljs.registerLanguage('swift', __webpack_require__(209));
-	hljs.registerLanguage('taggerscript', __webpack_require__(210));
-	hljs.registerLanguage('yaml', __webpack_require__(211));
-	hljs.registerLanguage('tap', __webpack_require__(212));
-	hljs.registerLanguage('tcl', __webpack_require__(213));
-	hljs.registerLanguage('tex', __webpack_require__(214));
-	hljs.registerLanguage('thrift', __webpack_require__(215));
-	hljs.registerLanguage('tp', __webpack_require__(216));
-	hljs.registerLanguage('twig', __webpack_require__(217));
-	hljs.registerLanguage('typescript', __webpack_require__(218));
-	hljs.registerLanguage('vala', __webpack_require__(219));
-	hljs.registerLanguage('vbnet', __webpack_require__(220));
-	hljs.registerLanguage('vbscript', __webpack_require__(221));
-	hljs.registerLanguage('vbscript-html', __webpack_require__(222));
-	hljs.registerLanguage('verilog', __webpack_require__(223));
-	hljs.registerLanguage('vhdl', __webpack_require__(224));
-	hljs.registerLanguage('vim', __webpack_require__(225));
-	hljs.registerLanguage('x86asm', __webpack_require__(226));
-	hljs.registerLanguage('xl', __webpack_require__(227));
-	hljs.registerLanguage('xquery', __webpack_require__(228));
-	hljs.registerLanguage('zephir', __webpack_require__(229));
+	hljs.registerLanguage('1c', __webpack_require__(71));
+	hljs.registerLanguage('abnf', __webpack_require__(72));
+	hljs.registerLanguage('accesslog', __webpack_require__(73));
+	hljs.registerLanguage('actionscript', __webpack_require__(74));
+	hljs.registerLanguage('ada', __webpack_require__(75));
+	hljs.registerLanguage('apache', __webpack_require__(76));
+	hljs.registerLanguage('applescript', __webpack_require__(77));
+	hljs.registerLanguage('cpp', __webpack_require__(78));
+	hljs.registerLanguage('arduino', __webpack_require__(79));
+	hljs.registerLanguage('armasm', __webpack_require__(80));
+	hljs.registerLanguage('xml', __webpack_require__(81));
+	hljs.registerLanguage('asciidoc', __webpack_require__(82));
+	hljs.registerLanguage('aspectj', __webpack_require__(83));
+	hljs.registerLanguage('autohotkey', __webpack_require__(84));
+	hljs.registerLanguage('autoit', __webpack_require__(85));
+	hljs.registerLanguage('avrasm', __webpack_require__(86));
+	hljs.registerLanguage('awk', __webpack_require__(87));
+	hljs.registerLanguage('axapta', __webpack_require__(88));
+	hljs.registerLanguage('bash', __webpack_require__(89));
+	hljs.registerLanguage('basic', __webpack_require__(90));
+	hljs.registerLanguage('bnf', __webpack_require__(91));
+	hljs.registerLanguage('brainfuck', __webpack_require__(92));
+	hljs.registerLanguage('cal', __webpack_require__(93));
+	hljs.registerLanguage('capnproto', __webpack_require__(94));
+	hljs.registerLanguage('ceylon', __webpack_require__(95));
+	hljs.registerLanguage('clean', __webpack_require__(96));
+	hljs.registerLanguage('clojure', __webpack_require__(97));
+	hljs.registerLanguage('clojure-repl', __webpack_require__(98));
+	hljs.registerLanguage('cmake', __webpack_require__(99));
+	hljs.registerLanguage('coffeescript', __webpack_require__(100));
+	hljs.registerLanguage('coq', __webpack_require__(101));
+	hljs.registerLanguage('cos', __webpack_require__(102));
+	hljs.registerLanguage('crmsh', __webpack_require__(103));
+	hljs.registerLanguage('crystal', __webpack_require__(104));
+	hljs.registerLanguage('cs', __webpack_require__(105));
+	hljs.registerLanguage('csp', __webpack_require__(106));
+	hljs.registerLanguage('css', __webpack_require__(107));
+	hljs.registerLanguage('d', __webpack_require__(108));
+	hljs.registerLanguage('markdown', __webpack_require__(109));
+	hljs.registerLanguage('dart', __webpack_require__(110));
+	hljs.registerLanguage('delphi', __webpack_require__(111));
+	hljs.registerLanguage('diff', __webpack_require__(112));
+	hljs.registerLanguage('django', __webpack_require__(113));
+	hljs.registerLanguage('dns', __webpack_require__(114));
+	hljs.registerLanguage('dockerfile', __webpack_require__(115));
+	hljs.registerLanguage('dos', __webpack_require__(116));
+	hljs.registerLanguage('dsconfig', __webpack_require__(117));
+	hljs.registerLanguage('dts', __webpack_require__(118));
+	hljs.registerLanguage('dust', __webpack_require__(119));
+	hljs.registerLanguage('ebnf', __webpack_require__(120));
+	hljs.registerLanguage('elixir', __webpack_require__(121));
+	hljs.registerLanguage('elm', __webpack_require__(122));
+	hljs.registerLanguage('ruby', __webpack_require__(123));
+	hljs.registerLanguage('erb', __webpack_require__(124));
+	hljs.registerLanguage('erlang-repl', __webpack_require__(125));
+	hljs.registerLanguage('erlang', __webpack_require__(126));
+	hljs.registerLanguage('excel', __webpack_require__(127));
+	hljs.registerLanguage('fix', __webpack_require__(128));
+	hljs.registerLanguage('flix', __webpack_require__(129));
+	hljs.registerLanguage('fortran', __webpack_require__(130));
+	hljs.registerLanguage('fsharp', __webpack_require__(131));
+	hljs.registerLanguage('gams', __webpack_require__(132));
+	hljs.registerLanguage('gauss', __webpack_require__(133));
+	hljs.registerLanguage('gcode', __webpack_require__(134));
+	hljs.registerLanguage('gherkin', __webpack_require__(135));
+	hljs.registerLanguage('glsl', __webpack_require__(136));
+	hljs.registerLanguage('go', __webpack_require__(137));
+	hljs.registerLanguage('golo', __webpack_require__(138));
+	hljs.registerLanguage('gradle', __webpack_require__(139));
+	hljs.registerLanguage('groovy', __webpack_require__(140));
+	hljs.registerLanguage('haml', __webpack_require__(141));
+	hljs.registerLanguage('handlebars', __webpack_require__(142));
+	hljs.registerLanguage('haskell', __webpack_require__(143));
+	hljs.registerLanguage('haxe', __webpack_require__(144));
+	hljs.registerLanguage('hsp', __webpack_require__(145));
+	hljs.registerLanguage('htmlbars', __webpack_require__(146));
+	hljs.registerLanguage('http', __webpack_require__(147));
+	hljs.registerLanguage('inform7', __webpack_require__(148));
+	hljs.registerLanguage('ini', __webpack_require__(149));
+	hljs.registerLanguage('irpf90', __webpack_require__(150));
+	hljs.registerLanguage('java', __webpack_require__(151));
+	hljs.registerLanguage('javascript', __webpack_require__(152));
+	hljs.registerLanguage('json', __webpack_require__(153));
+	hljs.registerLanguage('julia', __webpack_require__(154));
+	hljs.registerLanguage('kotlin', __webpack_require__(155));
+	hljs.registerLanguage('lasso', __webpack_require__(156));
+	hljs.registerLanguage('ldif', __webpack_require__(157));
+	hljs.registerLanguage('less', __webpack_require__(158));
+	hljs.registerLanguage('lisp', __webpack_require__(159));
+	hljs.registerLanguage('livecodeserver', __webpack_require__(160));
+	hljs.registerLanguage('livescript', __webpack_require__(161));
+	hljs.registerLanguage('llvm', __webpack_require__(162));
+	hljs.registerLanguage('lsl', __webpack_require__(163));
+	hljs.registerLanguage('lua', __webpack_require__(164));
+	hljs.registerLanguage('makefile', __webpack_require__(165));
+	hljs.registerLanguage('mathematica', __webpack_require__(166));
+	hljs.registerLanguage('matlab', __webpack_require__(167));
+	hljs.registerLanguage('maxima', __webpack_require__(168));
+	hljs.registerLanguage('mel', __webpack_require__(169));
+	hljs.registerLanguage('mercury', __webpack_require__(170));
+	hljs.registerLanguage('mipsasm', __webpack_require__(171));
+	hljs.registerLanguage('mizar', __webpack_require__(172));
+	hljs.registerLanguage('perl', __webpack_require__(173));
+	hljs.registerLanguage('mojolicious', __webpack_require__(174));
+	hljs.registerLanguage('monkey', __webpack_require__(175));
+	hljs.registerLanguage('moonscript', __webpack_require__(176));
+	hljs.registerLanguage('nginx', __webpack_require__(177));
+	hljs.registerLanguage('nimrod', __webpack_require__(178));
+	hljs.registerLanguage('nix', __webpack_require__(179));
+	hljs.registerLanguage('nsis', __webpack_require__(180));
+	hljs.registerLanguage('objectivec', __webpack_require__(181));
+	hljs.registerLanguage('ocaml', __webpack_require__(182));
+	hljs.registerLanguage('openscad', __webpack_require__(183));
+	hljs.registerLanguage('oxygene', __webpack_require__(184));
+	hljs.registerLanguage('parser3', __webpack_require__(185));
+	hljs.registerLanguage('pf', __webpack_require__(186));
+	hljs.registerLanguage('php', __webpack_require__(187));
+	hljs.registerLanguage('pony', __webpack_require__(188));
+	hljs.registerLanguage('powershell', __webpack_require__(189));
+	hljs.registerLanguage('processing', __webpack_require__(190));
+	hljs.registerLanguage('profile', __webpack_require__(191));
+	hljs.registerLanguage('prolog', __webpack_require__(192));
+	hljs.registerLanguage('protobuf', __webpack_require__(193));
+	hljs.registerLanguage('puppet', __webpack_require__(194));
+	hljs.registerLanguage('purebasic', __webpack_require__(195));
+	hljs.registerLanguage('python', __webpack_require__(196));
+	hljs.registerLanguage('q', __webpack_require__(197));
+	hljs.registerLanguage('qml', __webpack_require__(198));
+	hljs.registerLanguage('r', __webpack_require__(199));
+	hljs.registerLanguage('rib', __webpack_require__(200));
+	hljs.registerLanguage('roboconf', __webpack_require__(201));
+	hljs.registerLanguage('rsl', __webpack_require__(202));
+	hljs.registerLanguage('ruleslanguage', __webpack_require__(203));
+	hljs.registerLanguage('rust', __webpack_require__(204));
+	hljs.registerLanguage('scala', __webpack_require__(205));
+	hljs.registerLanguage('scheme', __webpack_require__(206));
+	hljs.registerLanguage('scilab', __webpack_require__(207));
+	hljs.registerLanguage('scss', __webpack_require__(208));
+	hljs.registerLanguage('smali', __webpack_require__(209));
+	hljs.registerLanguage('smalltalk', __webpack_require__(210));
+	hljs.registerLanguage('sml', __webpack_require__(211));
+	hljs.registerLanguage('sqf', __webpack_require__(212));
+	hljs.registerLanguage('sql', __webpack_require__(213));
+	hljs.registerLanguage('stan', __webpack_require__(214));
+	hljs.registerLanguage('stata', __webpack_require__(215));
+	hljs.registerLanguage('step21', __webpack_require__(216));
+	hljs.registerLanguage('stylus', __webpack_require__(217));
+	hljs.registerLanguage('subunit', __webpack_require__(218));
+	hljs.registerLanguage('swift', __webpack_require__(219));
+	hljs.registerLanguage('taggerscript', __webpack_require__(220));
+	hljs.registerLanguage('yaml', __webpack_require__(221));
+	hljs.registerLanguage('tap', __webpack_require__(222));
+	hljs.registerLanguage('tcl', __webpack_require__(223));
+	hljs.registerLanguage('tex', __webpack_require__(224));
+	hljs.registerLanguage('thrift', __webpack_require__(225));
+	hljs.registerLanguage('tp', __webpack_require__(226));
+	hljs.registerLanguage('twig', __webpack_require__(227));
+	hljs.registerLanguage('typescript', __webpack_require__(228));
+	hljs.registerLanguage('vala', __webpack_require__(229));
+	hljs.registerLanguage('vbnet', __webpack_require__(230));
+	hljs.registerLanguage('vbscript', __webpack_require__(231));
+	hljs.registerLanguage('vbscript-html', __webpack_require__(232));
+	hljs.registerLanguage('verilog', __webpack_require__(233));
+	hljs.registerLanguage('vhdl', __webpack_require__(234));
+	hljs.registerLanguage('vim', __webpack_require__(235));
+	hljs.registerLanguage('x86asm', __webpack_require__(236));
+	hljs.registerLanguage('xl', __webpack_require__(237));
+	hljs.registerLanguage('xquery', __webpack_require__(238));
+	hljs.registerLanguage('zephir', __webpack_require__(239));
 
 	module.exports = hljs;
 
 /***/ },
-/* 60 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -13254,7 +18307,7 @@
 
 
 /***/ },
-/* 61 */
+/* 71 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs){
@@ -13337,7 +18390,7 @@
 	};
 
 /***/ },
-/* 62 */
+/* 72 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13412,7 +18465,7 @@
 	};
 
 /***/ },
-/* 63 */
+/* 73 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13454,7 +18507,7 @@
 	};
 
 /***/ },
-/* 64 */
+/* 74 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13532,7 +18585,7 @@
 	};
 
 /***/ },
-/* 65 */
+/* 75 */
 /***/ function(module, exports) {
 
 	module.exports = // We try to support full Ada2012
@@ -13709,7 +18762,7 @@
 	};
 
 /***/ },
-/* 66 */
+/* 76 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13759,7 +18812,7 @@
 	};
 
 /***/ },
-/* 67 */
+/* 77 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13849,7 +18902,7 @@
 	};
 
 /***/ },
-/* 68 */
+/* 78 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14019,7 +19072,7 @@
 	};
 
 /***/ },
-/* 69 */
+/* 79 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14123,7 +19176,7 @@
 	};
 
 /***/ },
-/* 70 */
+/* 80 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14219,7 +19272,7 @@
 	};
 
 /***/ },
-/* 71 */
+/* 81 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14326,7 +19379,7 @@
 	};
 
 /***/ },
-/* 72 */
+/* 82 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14518,7 +19571,7 @@
 	};
 
 /***/ },
-/* 73 */
+/* 83 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -14666,7 +19719,7 @@
 	};
 
 /***/ },
-/* 74 */
+/* 84 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14718,7 +19771,7 @@
 	};
 
 /***/ },
-/* 75 */
+/* 85 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14858,7 +19911,7 @@
 	};
 
 /***/ },
-/* 76 */
+/* 86 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14924,7 +19977,7 @@
 	};
 
 /***/ },
-/* 77 */
+/* 87 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14981,7 +20034,7 @@
 	};
 
 /***/ },
-/* 78 */
+/* 88 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15016,7 +20069,7 @@
 	};
 
 /***/ },
-/* 79 */
+/* 89 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15095,7 +20148,7 @@
 	};
 
 /***/ },
-/* 80 */
+/* 90 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15150,7 +20203,7 @@
 	};
 
 /***/ },
-/* 81 */
+/* 91 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs){
@@ -15183,7 +20236,7 @@
 	};
 
 /***/ },
-/* 82 */
+/* 92 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs){
@@ -15224,7 +20277,7 @@
 	};
 
 /***/ },
-/* 83 */
+/* 93 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15308,7 +20361,7 @@
 	};
 
 /***/ },
-/* 84 */
+/* 94 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15361,7 +20414,7 @@
 	};
 
 /***/ },
-/* 85 */
+/* 95 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15432,7 +20485,7 @@
 	};
 
 /***/ },
-/* 86 */
+/* 96 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15461,7 +20514,7 @@
 	};
 
 /***/ },
-/* 87 */
+/* 97 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15560,7 +20613,7 @@
 	};
 
 /***/ },
-/* 88 */
+/* 98 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15579,7 +20632,7 @@
 	};
 
 /***/ },
-/* 89 */
+/* 99 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15621,7 +20674,7 @@
 	};
 
 /***/ },
-/* 90 */
+/* 100 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15771,7 +20824,7 @@
 	};
 
 /***/ },
-/* 91 */
+/* 101 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15842,7 +20895,7 @@
 	};
 
 /***/ },
-/* 92 */
+/* 102 */
 /***/ function(module, exports) {
 
 	module.exports = function cos (hljs) {
@@ -15970,7 +21023,7 @@
 	};
 
 /***/ },
-/* 93 */
+/* 103 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16068,7 +21121,7 @@
 	};
 
 /***/ },
-/* 94 */
+/* 104 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16249,7 +21302,7 @@
 	};
 
 /***/ },
-/* 95 */
+/* 105 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16420,7 +21473,7 @@
 	};
 
 /***/ },
-/* 96 */
+/* 106 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16446,7 +21499,7 @@
 	};
 
 /***/ },
-/* 97 */
+/* 107 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16555,7 +21608,7 @@
 	};
 
 /***/ },
-/* 98 */
+/* 108 */
 /***/ function(module, exports) {
 
 	module.exports = /**
@@ -16817,7 +21870,7 @@
 	};
 
 /***/ },
-/* 99 */
+/* 109 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16929,7 +21982,7 @@
 	};
 
 /***/ },
-/* 100 */
+/* 110 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -17034,7 +22087,7 @@
 	};
 
 /***/ },
-/* 101 */
+/* 111 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17107,7 +22160,7 @@
 	};
 
 /***/ },
-/* 102 */
+/* 112 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17151,7 +22204,7 @@
 	};
 
 /***/ },
-/* 103 */
+/* 113 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17219,7 +22272,7 @@
 	};
 
 /***/ },
-/* 104 */
+/* 114 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17252,7 +22305,7 @@
 	};
 
 /***/ },
-/* 105 */
+/* 115 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17278,7 +22331,7 @@
 	};
 
 /***/ },
-/* 106 */
+/* 116 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17334,7 +22387,7 @@
 	};
 
 /***/ },
-/* 107 */
+/* 117 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17385,7 +22438,7 @@
 	};
 
 /***/ },
-/* 108 */
+/* 118 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17513,7 +22566,7 @@
 	};
 
 /***/ },
-/* 109 */
+/* 119 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17549,7 +22602,7 @@
 	};
 
 /***/ },
-/* 110 */
+/* 120 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17586,7 +22639,7 @@
 	};
 
 /***/ },
-/* 111 */
+/* 121 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17687,7 +22740,7 @@
 	};
 
 /***/ },
-/* 112 */
+/* 122 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17774,7 +22827,7 @@
 	};
 
 /***/ },
-/* 113 */
+/* 123 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17954,7 +23007,7 @@
 	};
 
 /***/ },
-/* 114 */
+/* 124 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17973,7 +23026,7 @@
 	};
 
 /***/ },
-/* 115 */
+/* 125 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18023,7 +23076,7 @@
 	};
 
 /***/ },
-/* 116 */
+/* 126 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18173,7 +23226,7 @@
 	};
 
 /***/ },
-/* 117 */
+/* 127 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18225,7 +23278,7 @@
 	};
 
 /***/ },
-/* 118 */
+/* 128 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18258,7 +23311,7 @@
 	};
 
 /***/ },
-/* 119 */
+/* 129 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -18307,7 +23360,7 @@
 	};
 
 /***/ },
-/* 120 */
+/* 130 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18382,7 +23435,7 @@
 	};
 
 /***/ },
-/* 121 */
+/* 131 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18445,7 +23498,7 @@
 	};
 
 /***/ },
-/* 122 */
+/* 132 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -18603,7 +23656,7 @@
 	};
 
 /***/ },
-/* 123 */
+/* 133 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18829,7 +23882,7 @@
 	};
 
 /***/ },
-/* 124 */
+/* 134 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18900,7 +23953,7 @@
 	};
 
 /***/ },
-/* 125 */
+/* 135 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -18941,7 +23994,7 @@
 	};
 
 /***/ },
-/* 126 */
+/* 136 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19062,7 +24115,7 @@
 	};
 
 /***/ },
-/* 127 */
+/* 137 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19120,7 +24173,7 @@
 	};
 
 /***/ },
-/* 128 */
+/* 138 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19147,7 +24200,7 @@
 	};
 
 /***/ },
-/* 129 */
+/* 139 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19186,7 +24239,7 @@
 	};
 
 /***/ },
-/* 130 */
+/* 140 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19284,7 +24337,7 @@
 	};
 
 /***/ },
-/* 131 */
+/* 141 */
 /***/ function(module, exports) {
 
 	module.exports = // TODO support filter tags like :javascript, support inline HTML
@@ -19395,7 +24448,7 @@
 	};
 
 /***/ },
-/* 132 */
+/* 142 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19433,7 +24486,7 @@
 	};
 
 /***/ },
-/* 133 */
+/* 143 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19559,7 +24612,7 @@
 	};
 
 /***/ },
-/* 134 */
+/* 144 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19675,7 +24728,7 @@
 	};
 
 /***/ },
-/* 135 */
+/* 145 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19725,7 +24778,7 @@
 	};
 
 /***/ },
-/* 136 */
+/* 146 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19800,7 +24853,7 @@
 	};
 
 /***/ },
-/* 137 */
+/* 147 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19845,7 +24898,7 @@
 	};
 
 /***/ },
-/* 138 */
+/* 148 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19906,7 +24959,7 @@
 	};
 
 /***/ },
-/* 139 */
+/* 149 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19976,7 +25029,7 @@
 	};
 
 /***/ },
-/* 140 */
+/* 150 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20056,7 +25109,7 @@
 	};
 
 /***/ },
-/* 141 */
+/* 151 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20168,7 +25221,7 @@
 	};
 
 /***/ },
-/* 142 */
+/* 152 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20343,7 +25396,7 @@
 	};
 
 /***/ },
-/* 143 */
+/* 153 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20384,7 +25437,7 @@
 	};
 
 /***/ },
-/* 144 */
+/* 154 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20566,7 +25619,7 @@
 	};
 
 /***/ },
-/* 145 */
+/* 155 */
 /***/ function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -20744,7 +25797,7 @@
 	};
 
 /***/ },
-/* 146 */
+/* 156 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20911,7 +25964,7 @@
 	};
 
 /***/ },
-/* 147 */
+/* 157 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20938,7 +25991,7 @@
 	};
 
 /***/ },
-/* 148 */
+/* 158 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21082,7 +26135,7 @@
 	};
 
 /***/ },
-/* 149 */
+/* 159 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21189,7 +26242,7 @@
 	};
 
 /***/ },
-/* 150 */
+/* 160 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21350,7 +26403,7 @@
 	};
 
 /***/ },
-/* 151 */
+/* 161 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21503,7 +26556,7 @@
 	};
 
 /***/ },
-/* 152 */
+/* 162 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21596,7 +26649,7 @@
 	};
 
 /***/ },
-/* 153 */
+/* 163 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21683,7 +26736,7 @@
 	};
 
 /***/ },
-/* 154 */
+/* 164 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21743,7 +26796,7 @@
 	};
 
 /***/ },
-/* 155 */
+/* 165 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21792,7 +26845,7 @@
 	};
 
 /***/ },
-/* 156 */
+/* 166 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21854,7 +26907,7 @@
 	};
 
 /***/ },
-/* 157 */
+/* 167 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -21946,7 +26999,7 @@
 	};
 
 /***/ },
-/* 158 */
+/* 168 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22356,7 +27409,7 @@
 	};
 
 /***/ },
-/* 159 */
+/* 169 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22585,7 +27638,7 @@
 	};
 
 /***/ },
-/* 160 */
+/* 170 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22671,7 +27724,7 @@
 	};
 
 /***/ },
-/* 161 */
+/* 171 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22761,7 +27814,7 @@
 	};
 
 /***/ },
-/* 162 */
+/* 172 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22784,7 +27837,7 @@
 	};
 
 /***/ },
-/* 163 */
+/* 173 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22945,7 +27998,7 @@
 	};
 
 /***/ },
-/* 164 */
+/* 174 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -22974,7 +28027,7 @@
 	};
 
 /***/ },
-/* 165 */
+/* 175 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23053,7 +28106,7 @@
 	};
 
 /***/ },
-/* 166 */
+/* 176 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23169,7 +28222,7 @@
 	};
 
 /***/ },
-/* 167 */
+/* 177 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23266,7 +28319,7 @@
 	};
 
 /***/ },
-/* 168 */
+/* 178 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23325,7 +28378,7 @@
 	};
 
 /***/ },
-/* 169 */
+/* 179 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23378,7 +28431,7 @@
 	};
 
 /***/ },
-/* 170 */
+/* 180 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23488,7 +28541,7 @@
 	};
 
 /***/ },
-/* 171 */
+/* 181 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23583,7 +28636,7 @@
 	};
 
 /***/ },
-/* 172 */
+/* 182 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23658,7 +28711,7 @@
 	};
 
 /***/ },
-/* 173 */
+/* 183 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23719,7 +28772,7 @@
 	};
 
 /***/ },
-/* 174 */
+/* 184 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23793,7 +28846,7 @@
 	};
 
 /***/ },
-/* 175 */
+/* 185 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23845,7 +28898,7 @@
 	};
 
 /***/ },
-/* 176 */
+/* 186 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23901,7 +28954,7 @@
 	};
 
 /***/ },
-/* 177 */
+/* 187 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24032,7 +29085,7 @@
 	};
 
 /***/ },
-/* 178 */
+/* 188 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24127,7 +29180,7 @@
 	};
 
 /***/ },
-/* 179 */
+/* 189 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24212,7 +29265,7 @@
 	};
 
 /***/ },
-/* 180 */
+/* 190 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24264,7 +29317,7 @@
 	};
 
 /***/ },
-/* 181 */
+/* 191 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24298,7 +29351,7 @@
 	};
 
 /***/ },
-/* 182 */
+/* 192 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24390,7 +29443,7 @@
 	};
 
 /***/ },
-/* 183 */
+/* 193 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24430,7 +29483,7 @@
 	};
 
 /***/ },
-/* 184 */
+/* 194 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24549,7 +29602,7 @@
 	};
 
 /***/ },
-/* 185 */
+/* 195 */
 /***/ function(module, exports) {
 
 	module.exports = // Base deafult colors in PB IDE: background: #FFFFDF; foreground: #000000;
@@ -24611,7 +29664,7 @@
 	};
 
 /***/ },
-/* 186 */
+/* 196 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24707,7 +29760,7 @@
 	};
 
 /***/ },
-/* 187 */
+/* 197 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24734,7 +29787,7 @@
 	};
 
 /***/ },
-/* 188 */
+/* 198 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24907,7 +29960,7 @@
 	};
 
 /***/ },
-/* 189 */
+/* 199 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24981,7 +30034,7 @@
 	};
 
 /***/ },
-/* 190 */
+/* 200 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25012,7 +30065,7 @@
 	};
 
 /***/ },
-/* 191 */
+/* 201 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25083,7 +30136,7 @@
 	};
 
 /***/ },
-/* 192 */
+/* 202 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25123,7 +30176,7 @@
 	};
 
 /***/ },
-/* 193 */
+/* 203 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25188,7 +30241,7 @@
 	};
 
 /***/ },
-/* 194 */
+/* 204 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25296,7 +30349,7 @@
 	};
 
 /***/ },
-/* 195 */
+/* 205 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25415,7 +30468,7 @@
 	};
 
 /***/ },
-/* 196 */
+/* 206 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25560,7 +30613,7 @@
 	};
 
 /***/ },
-/* 197 */
+/* 207 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25618,7 +30671,7 @@
 	};
 
 /***/ },
-/* 198 */
+/* 208 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25720,7 +30773,7 @@
 	};
 
 /***/ },
-/* 199 */
+/* 209 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25780,7 +30833,7 @@
 	};
 
 /***/ },
-/* 200 */
+/* 210 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25834,7 +30887,7 @@
 	};
 
 /***/ },
-/* 201 */
+/* 211 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25904,7 +30957,7 @@
 	};
 
 /***/ },
-/* 202 */
+/* 212 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26279,7 +31332,7 @@
 	};
 
 /***/ },
-/* 203 */
+/* 213 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26443,7 +31496,7 @@
 	};
 
 /***/ },
-/* 204 */
+/* 214 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26530,7 +31583,7 @@
 	};
 
 /***/ },
-/* 205 */
+/* 215 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26572,7 +31625,7 @@
 	};
 
 /***/ },
-/* 206 */
+/* 216 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26623,7 +31676,7 @@
 	};
 
 /***/ },
-/* 207 */
+/* 217 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27081,7 +32134,7 @@
 	};
 
 /***/ },
-/* 208 */
+/* 218 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27119,7 +32172,7 @@
 	};
 
 /***/ },
-/* 209 */
+/* 219 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27240,7 +32293,7 @@
 	};
 
 /***/ },
-/* 210 */
+/* 220 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27288,7 +32341,7 @@
 	};
 
 /***/ },
-/* 211 */
+/* 221 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27376,7 +32429,7 @@
 	};
 
 /***/ },
-/* 212 */
+/* 222 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27416,7 +32469,7 @@
 	};
 
 /***/ },
-/* 213 */
+/* 223 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27481,7 +32534,7 @@
 	};
 
 /***/ },
-/* 214 */
+/* 224 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27547,7 +32600,7 @@
 	};
 
 /***/ },
-/* 215 */
+/* 225 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27586,7 +32639,7 @@
 	};
 
 /***/ },
-/* 216 */
+/* 226 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27674,7 +32727,7 @@
 	};
 
 /***/ },
-/* 217 */
+/* 227 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27744,7 +32797,7 @@
 	};
 
 /***/ },
-/* 218 */
+/* 228 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27875,7 +32928,7 @@
 	};
 
 /***/ },
-/* 219 */
+/* 229 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27929,7 +32982,7 @@
 	};
 
 /***/ },
-/* 220 */
+/* 230 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27989,7 +33042,7 @@
 	};
 
 /***/ },
-/* 221 */
+/* 231 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28032,7 +33085,7 @@
 	};
 
 /***/ },
-/* 222 */
+/* 232 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28048,7 +33101,7 @@
 	};
 
 /***/ },
-/* 223 */
+/* 233 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28151,7 +33204,7 @@
 	};
 
 /***/ },
-/* 224 */
+/* 234 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28216,7 +33269,7 @@
 	};
 
 /***/ },
-/* 225 */
+/* 235 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28326,7 +33379,7 @@
 	};
 
 /***/ },
-/* 226 */
+/* 236 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28466,7 +33519,7 @@
 	};
 
 /***/ },
-/* 227 */
+/* 237 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28543,7 +33596,7 @@
 	};
 
 /***/ },
-/* 228 */
+/* 238 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28618,7 +33671,7 @@
 	};
 
 /***/ },
-/* 229 */
+/* 239 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
