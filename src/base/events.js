@@ -96,5 +96,12 @@ export default {
     'mouseover',
     'remove',
     'rightclick'
+  ],
+  'map-overlay-info-window': [
+    'close',
+    'open',
+    'maximize',
+    'restore',
+    'clickclose'
   ]
 }
