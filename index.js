@@ -112,6 +112,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Circle2 = _interopRequireDefault(_Circle);
 
+	var _Label = __webpack_require__(32);
+
+	var _Label2 = _interopRequireDefault(_Label);
+
+	var _InfoWindow = __webpack_require__(34);
+
+	var _InfoWindow2 = _interopRequireDefault(_InfoWindow);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
@@ -138,6 +146,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Vue.component('map-overlay-polyline', _Polyline2.default);
 	    Vue.component('map-overlay-polygon', _Polygon2.default);
 	    Vue.component('map-overlay-circle', _Circle2.default);
+	    Vue.component('map-overlay-label', _Label2.default);
+	    Vue.component('map-overlay-info-window', _InfoWindow2.default);
 	  }
 	};
 
@@ -555,7 +565,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  'map-overlay-polyline': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'lineupdate'],
 	  'map-overlay-polygon': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'lineupdate'],
 	  'map-overlay-circle': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'lineupdate'],
-	  'map-overlay-label': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'rightclick']
+	  'map-overlay-label': ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseout', 'mouseover', 'remove', 'rightclick'],
+	  'map-overlay-info-window': ['close', 'open', 'maximize', 'restore', 'clickclose']
 	};
 
 /***/ },
@@ -1438,14 +1449,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	          BMap = _$parent.BMap,
 	          map = _$parent.map;
 
+	      var _instance = this;
 	      this.control = new BMap.CityListControl({
 	        anchor: global[this.anchor],
 	        offset: this.offset,
 	        onChangeBefore: function onChangeBefore() {
-	          this.$emit('changeBefore');
+	          _instance.$emit('changeBefore');
 	        },
 	        onChangeAfter: function onChangeAfter() {
-	          this.$emit('changeAfter');
+	          _instance.$emit('changeAfter');
 	        }
 	      });
 	      map.addControl(this.control);
@@ -1707,35 +1719,40 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.createSize = createSize;
 	exports.createIcon = createIcon;
 	exports.createLabel = createLabel;
-	function createPoint(BMap, options) {
+	function createPoint(BMap) {
+	  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 	  var lng = options.lng,
 	      lat = options.lat;
 
 	  return new BMap.Point(parseFloat(lng), parseFloat(lat));
 	}
 
-	function createPixel(BMap, options) {
+	function createPixel(BMap) {
+	  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 	  var x = options.x,
 	      y = options.y;
 
 	  return new BMap.Pixel(parseFloat(x), parseFloat(y));
 	}
 
-	function createBounds(BMap, options) {
+	function createBounds(BMap) {
+	  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 	  var sw = options.sw,
 	      ne = options.ne;
 
 	  return new BMap.Bounds(createPoint(BMap, sw), createPoint(BMap, ne));
 	}
 
-	function createSize(BMap, options) {
+	function createSize(BMap) {
+	  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 	  var width = options.width,
 	      height = options.height;
 
 	  return new BMap.Size(parseFloat(width), parseFloat(height));
 	}
 
-	function createIcon(BMap, options) {
+	function createIcon(BMap) {
+	  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 	  var url = options.url,
 	      size = options.size,
 	      opts = options.opts;
@@ -1748,7 +1765,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  });
 	}
 
-	function createLabel(BMap, options) {
+	function createLabel(BMap) {
+	  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 	  var content = options.content,
 	      opts = options.opts;
 
@@ -2330,6 +2348,426 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	  }
 	};
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(33)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/overlays/Label.vue"
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-03a39bd0", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-03a39bd0", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Label.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _bindEvent = __webpack_require__(6);
+
+	var _bindEvent2 = _interopRequireDefault(_bindEvent);
+
+	var _factory = __webpack_require__(25);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  name: 'map-overlay-label',
+	  render: function render(h) {
+	    return;
+	  },
+
+	  props: {
+	    content: {
+	      type: String
+	    },
+	    title: {
+	      type: String
+	    },
+	    offset: {},
+	    position: {},
+	    labelStyle: {},
+	    zIndex: {},
+	    massClear: {
+	      type: Boolean,
+	      default: true
+	    }
+	  },
+	  watch: {
+	    content: function content(val) {
+	      this.overlay.setContent(val);
+	    },
+	    title: function title(val) {
+	      this.overlay.setTitle(val);
+	    },
+	    'offset.width': function offsetWidth(val, oldVal) {
+	      var BMap = this.$parent.BMap;
+
+	      if (val.toString() !== oldVal.toString()) {
+	        this.overlay.setOffset((0, _factory.createSize)(BMap, { width: val, height: this.offset.height }));
+	      }
+	    },
+	    'offset.height': function offsetHeight(val) {
+	      var BMap = this.$parent.BMap;
+
+	      if (val.toString() !== oldVal.toString()) {
+	        this.overlay.setOffset((0, _factory.createSize)(BMap, { width: this.offset.width, height: val }));
+	      }
+	    },
+	    'position.lng': function positionLng(val, oldVal) {
+	      var BMap = this.$parent.BMap;
+
+	      var lng = val;
+	      if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
+	        this.overlay.setCenter((0, _factory.createPoint)(BMap, { lng: lng, lat: this.center.lat }));
+	      }
+	    },
+	    'position.lat': function positionLat(val, oldVal) {
+	      var BMap = this.$parent.BMap;
+
+	      var lat = val;
+	      if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
+	        this.overlay.setCenter((0, _factory.createPoint)(BMap, { lng: this.center.lng, lat: lat }));
+	      }
+	    },
+
+	    labelStyle: {
+	      handler: function handler(val) {
+	        this.overlay.setStyle(val);
+	      },
+
+	      deep: true
+	    },
+	    zIndex: function zIndex(val) {
+	      this.overlay.setZIndex(val);
+	    },
+	    massClear: function massClear(val) {
+	      val ? this.overlay.enableMassClear() : this.overlay.disableMassClear();
+	    }
+	  },
+	  methods: {
+	    addOverlay: function addOverlay() {
+	      var content = this.content,
+	          title = this.title,
+	          offset = this.offset,
+	          position = this.position,
+	          labelStyle = this.labelStyle,
+	          zIndex = this.zIndex,
+	          massClear = this.massClear;
+	      var _$parent = this.$parent,
+	          BMap = _$parent.BMap,
+	          map = _$parent.map;
+
+	      var overlay = new BMap.Label(content, {
+	        offset: (0, _factory.createSize)(BMap, offset),
+	        position: (0, _factory.createPoint)(BMap, position),
+	        enableMassClear: massClear
+	      });
+	      this.overlay = overlay;
+	      map.addOverlay(overlay);
+	      title && overlay.setTitle(title);
+	      labelStyle && overlay.setStyle(labelStyle);
+	      zIndex && overlay.setZIndex(zIndex);
+	      _bindEvent2.default.call(this, overlay);
+	    },
+	    removeOverlay: function removeOverlay() {
+	      var _$parent2 = this.$parent,
+	          BMap = _$parent2.BMap,
+	          map = _$parent2.map;
+
+	      map.removeOverlay(this.overlay);
+	    },
+	    reloadOverlay: function reloadOverlay() {
+	      var _this = this;
+
+	      this && this.$nextTick(function () {
+	        _this.removeOverlay();
+	        _this.addOverlay();
+	      });
+	    }
+	  },
+	  mounted: function mounted() {
+	    var _this2 = this;
+
+	    this.$parent.$on('ready', function () {
+	      _this2.addOverlay();
+	    });
+	  }
+	};
+
+/***/ },
+/* 34 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(35)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(36)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/overlays/InfoWindow.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-07b8f2ca", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-07b8f2ca", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] InfoWindow.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _bindEvent = __webpack_require__(6);
+
+	var _bindEvent2 = _interopRequireDefault(_bindEvent);
+
+	var _factory = __webpack_require__(25);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	//
+	//
+	//
+	//
+	//
+
+	exports.default = {
+	  name: 'map-overlay-info-window',
+	  props: {
+	    show: {
+	      type: Boolean
+	    },
+	    position: {
+	      type: Object
+	    },
+	    title: {
+	      type: String
+	    },
+	    width: {
+	      type: Number
+	    },
+	    height: {
+	      type: Number
+	    },
+	    maxWidth: {
+	      type: Number
+	    },
+	    offset: {
+	      type: Object
+	    },
+	    maximize: {
+	      type: Boolean
+	    },
+	    autoPan: {
+	      type: Boolean
+	    },
+	    closeOnClick: {
+	      type: Boolean
+	    },
+	    message: {
+	      type: String
+	    }
+	  },
+	  watch: {
+	    show: function show(val) {
+	      val ? this.openInfoWindow() : this.closeInfoWindow();
+	    },
+	    'position.lng': function positionLng(val, oldVal) {
+	      this.reloadOverlay();
+	    },
+	    'position.lat': function positionLat(val, oldVal) {
+	      this.reloadOverlay();
+	    },
+	    'offset.width': function offsetWidth(val, oldVal) {
+	      this.reloadOverlay();
+	    },
+	    'offset.height': function offsetHeight(val) {
+	      this.reloadOverlay();
+	    },
+	    maxWidth: function maxWidth() {
+	      this.reloadOverlay();
+	    },
+	    width: function width(val) {
+	      this.overlay.setWidth(val);
+	    },
+	    height: function height(val) {
+	      this.overlay.setHeight(val);
+	    },
+	    title: function title(val) {
+	      this.overlay.setTitle(val);
+	    },
+	    maximize: function maximize(val) {
+	      val ? this.overlay.enableMaximize() : this.overlay.disableMaximize();
+	    },
+	    autoPan: function autoPan(val) {
+	      val ? this.overlay.enableAutoPan() : this.overlay.disableAutoPan();
+	    },
+	    closeOnClick: function closeOnClick(val) {
+	      val ? this.overlay.enableCloseOnClick() : this.overlay.disableCloseOnClick();
+	    }
+	  },
+	  methods: {
+	    addOverlay: function addOverlay() {
+	      var show = this.show,
+	          position = this.position,
+	          title = this.title,
+	          width = this.width,
+	          height = this.height,
+	          maxWidth = this.maxWidth,
+	          offset = this.offset,
+	          autoPan = this.autoPan,
+	          closeOnClick = this.closeOnClick,
+	          message = this.message,
+	          maximize = this.maximize;
+	      var _$parent = this.$parent,
+	          BMap = _$parent.BMap,
+	          map = _$parent.map;
+
+	      var $content = this.$refs.contents;
+	      var overlay = new BMap.InfoWindow($content, {
+	        width: width, // 信息窗口宽度
+	        height: height, // 信息窗口高度
+	        title: title, // 信息窗口标题
+	        maxWidth: maxWidth,
+	        offset: (0, _factory.createSize)(BMap, offset),
+	        enableAutoPan: autoPan,
+	        enableCloseOnClick: closeOnClick,
+	        enableMessage: typeof message === 'undefined', //设置允许信息窗发送短息
+	        message: message
+	      });
+
+	      maximize ? overlay.enableMaximize() : overlay.disableMaximize();
+	      _bindEvent2.default.call(this, overlay);
+	      this.overlay = overlay;[].forEach.call($content.querySelectorAll('img'), function ($img) {
+	        return $img.onload = function () {
+	          return overlay.redraw();
+	        };
+	      });
+	      overlay.redraw();
+	      this.$container = map; // map or marker
+	      show && this.openInfoWindow();
+	    },
+	    openInfoWindow: function openInfoWindow() {
+	      var $container = this.$container,
+	          position = this.position,
+	          overlay = this.overlay;
+	      var _$parent2 = this.$parent,
+	          BMap = _$parent2.BMap,
+	          map = _$parent2.map;
+
+	      $container.openInfoWindow(overlay, (0, _factory.createPoint)(BMap, position));
+	    },
+	    closeInfoWindow: function closeInfoWindow() {
+	      this.$container.closeInfoWindow(this.overlay);
+	    },
+	    removeOverlay: function removeOverlay() {
+	      var _$parent3 = this.$parent,
+	          BMap = _$parent3.BMap,
+	          map = _$parent3.map;
+
+	      map.removeOverlay(this.overlay);
+	    },
+	    reloadOverlay: function reloadOverlay() {
+	      var _this = this;
+
+	      this && this.$nextTick(function () {
+	        _this.removeOverlay();
+	        _this.addOverlay();
+	      });
+	    }
+	  },
+	  mounted: function mounted() {
+	    var _this2 = this;
+
+	    this.$parent.$on('ready', function () {
+	      _this2.addOverlay();
+	    });
+	  }
+	};
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    ref: "contents"
+	  }, [_vm._t("default")], 2)
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-07b8f2ca", module.exports)
+	  }
+	}
 
 /***/ }
 /******/ ])
