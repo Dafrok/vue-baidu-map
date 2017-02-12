@@ -2685,7 +2685,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          autoPan = this.autoPan,
 	          closeOnClick = this.closeOnClick,
 	          message = this.message,
-	          maximize = this.maximize;
+	          maximize = this.maximize,
+	          bindObserver = this.bindObserver;
 	      var _$parent = this.$parent,
 	          BMap = _$parent.BMap,
 	          map = _$parent.map;
@@ -2705,14 +2706,27 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      maximize ? overlay.enableMaximize() : overlay.disableMaximize();
 	      _bindEvent2.default.call(this, overlay);
-	      this.overlay = overlay;[].forEach.call($content.querySelectorAll('img'), function ($img) {
+	      this.overlay = overlay;
+	      overlay.redraw();[].forEach.call($content.querySelectorAll('img'), function ($img) {
 	        return $img.onload = function () {
 	          return overlay.redraw();
 	        };
 	      });
-	      overlay.redraw();
+	      bindObserver();
 	      this.$container = map; // map or marker
 	      show && this.openInfoWindow();
+	    },
+	    bindObserver: function bindObserver() {
+	      if (!MutationObserver) {
+	        return;
+	      }
+	      var $refs = this.$refs,
+	          overlay = this.overlay;
+
+	      this.observer = new MutationObserver(function (mutations) {
+	        return overlay.redraw();
+	      });
+	      this.observer.observe($refs.contents, { attributes: true, childList: true, characterData: true, subtree: true });
 	    },
 	    openInfoWindow: function openInfoWindow() {
 	      var $container = this.$container,
@@ -2742,6 +2756,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _this.addOverlay();
 	      });
 	    }
+	  },
+	  beforeDestroy: function beforeDestroy() {
+	    this.observer && this.observer.disconnect();
 	  },
 	  mounted: function mounted() {
 	    var _this2 = this;
