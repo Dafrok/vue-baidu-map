@@ -525,7 +525,6 @@ export default {
     <baidu-map>
       <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
         <map-overlay-info-window :point="{lng: 116.404, lat: 39.915}" title="Info Window Title" :show="infoWindow.show" @close="infoWindowClose" @open="infoWindowOpen">
-          <img src='http://wiki.lbsyun.baidu.com/cms/logo/lbsyunlogo296-120.png' width="200px"/>
           <p v-text="infoWindow.contents"></p>
         </map-overlay-info-window>
       </map-view>
