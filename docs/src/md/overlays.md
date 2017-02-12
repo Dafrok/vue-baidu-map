@@ -475,7 +475,7 @@ export default {
 <template>
   <baidu-map>
     <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-      <map-overlay-info-window :point="{lng: 116.404, lat: 39.915}" title="Info Window Title" :show="infoWindow.show" @close="infoWindowClose" @open="infoWindowOpen">
+      <map-overlay-info-window :position="{lng: 116.404, lat: 39.915}" title="Info Window Title" :show="infoWindow.show" @close="infoWindowClose" @open="infoWindowOpen">
         <p v-text="infoWindow.contents"></p>
       </map-overlay-info-window>
     </map-view>
@@ -524,7 +524,7 @@ export default {
   <div class="column is-9">
     <baidu-map>
       <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-        <map-overlay-info-window :point="{lng: 116.404, lat: 39.915}" title="Info Window Title" :show="infoWindow.show" @close="infoWindowClose" @open="infoWindowOpen">
+        <map-overlay-info-window :position="{lng: 116.404, lat: 39.915}" title="Info Window Title" :show="infoWindow.show" @close="infoWindowClose" @open="infoWindowOpen">
           <p v-text="infoWindow.contents"></p>
         </map-overlay-info-window>
       </map-view>
