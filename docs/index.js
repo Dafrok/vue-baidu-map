@@ -9423,7 +9423,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/start-1.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/start-3.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -9434,12 +9434,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-5e2bc64f", __vue_options__)
+	    hotAPI.createRecord("data-v-5e47f551", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-5e2bc64f", __vue_options__)
+	    hotAPI.reload("data-v-5e47f551", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] start-1.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] start-3.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -9531,7 +9531,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-5e2bc64f", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-5e47f551", module.exports)
 	  }
 	}
 
@@ -9564,7 +9564,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/map-3.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/map-2.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -9575,12 +9575,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-75c04b0b", __vue_options__)
+	    hotAPI.createRecord("data-v-75b2338a", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-75c04b0b", __vue_options__)
+	    hotAPI.reload("data-v-75b2338a", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] map-3.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] map-2.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -10701,7 +10701,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-75c04b0b", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-75b2338a", module.exports)
 	  }
 	}
 
@@ -10731,7 +10731,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/controls-2.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/controls-1.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -10742,12 +10742,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-d9ad45bc", __vue_options__)
+	    hotAPI.createRecord("data-v-d9c974be", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-d9ad45bc", __vue_options__)
+	    hotAPI.reload("data-v-d9c974be", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] controls-2.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] controls-1.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -11430,7 +11430,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-d9ad45bc", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-d9c974be", module.exports)
 	  }
 	}
 
@@ -12841,7 +12841,7 @@
 	      on: {
 	        "lineupdate": _vm.updatePolygonPath
 	      }
-	    })], 1)], 1)], 1)]), _vm._v(" "), _c('h2', [_vm._v("MapOverlayCircle")]), _vm._v(" "), _c('p', [_vm._v("圆形")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(9), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(10), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图中添加圆形")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(11), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('div', {
+	    })], 1)], 1)], 1)]), _vm._v(" "), _c('h2', [_vm._v("MapOverlayCircle")]), _vm._v(" "), _vm._m(9), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(10), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(11), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图中添加圆形")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(12), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('div', {
 	      staticClass: "columns"
 	    }, [_c('div', {
 	      staticClass: "column is-5"
@@ -12969,7 +12969,7 @@
 	      on: {
 	        "lineupdate": _vm.updateCirclePath
 	      }
-	    })], 1)], 1)], 1)]), _vm._v(" "), _c('h2', [_vm._v("MapOverlayLabel")]), _vm._v(" "), _c('p', [_vm._v("标签")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(12), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(13), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图中添加一个红色24号字的文本标签")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(14), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
+	    })], 1)], 1)], 1)]), _vm._v(" "), _c('h2', [_vm._v("MapOverlayLabel")]), _vm._v(" "), _c('p', [_vm._v("标签")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(13), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(14), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图中添加一个红色24号字的文本标签")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(15), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('baidu-map', [_c('map-view', {
 	      staticClass: "map",
 	      attrs: {
 	        "center": {
@@ -12988,7 +12988,7 @@
 	        "labelStyle": _vm.labelStyle,
 	        "title": "Hover me"
 	      }
-	    })], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("MapOverlayInfoWindow")]), _vm._v(" "), _c('p', [_vm._v("信息窗体")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(15), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(16), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图中添加一个信息窗体")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(17), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('div', {
+	    })], 1)], 1), _vm._v(" "), _c('h2', [_vm._v("MapOverlayInfoWindow")]), _vm._v(" "), _c('p', [_vm._v("信息窗体")]), _vm._v(" "), _c('h3', [_vm._v("属性")]), _vm._v(" "), _vm._m(16), _vm._v(" "), _c('h3', [_vm._v("事件")]), _vm._v(" "), _vm._m(17), _vm._v(" "), _c('h3', [_vm._v("示例")]), _vm._v(" "), _c('p', [_vm._v("在地图中添加一个信息窗体")]), _vm._v(" "), _c('h4', [_vm._v("代码")]), _vm._v(" "), _vm._m(18), _vm._v(" "), _c('h4', [_vm._v("预览")]), _vm._v(" "), _c('div', {
 	      staticClass: "columns"
 	    }, [_c('div', {
 	      staticClass: "column is-3"
@@ -13770,6 +13770,8 @@
 	    staticClass: "hljs-name"
 	  }, [_vm._v("script")]), _vm._v(">")]), _vm._v("\n")])])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('p', [_vm._v("圆形 - "), _c('strong', [_vm._v("该组件由于内部实现所局限，暂时不能使用双向绑定。")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("属性名")]), _vm._v(" "), _c('th', {
 	    staticStyle: {
 	      "text-align": "center"
@@ -13953,10 +13955,6 @@
 	  }, [_vm._v(":stroke-weight")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
 	  }, [_vm._v("\"2\"")]), _vm._v(" "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v(":editing")]), _vm._v("="), _c('span', {
-	    staticClass: "hljs-string"
-	  }, [_vm._v("\"true\"")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
 	  }, [_vm._v("@lineupdate")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
@@ -16766,29 +16764,29 @@
 	  },
 	  watch: (_watch = {
 	    'center.lng': function centerLng(val, oldVal) {
-	      this.overlay.disableEditing();
+	      // this.overlay.disableEditing()
 	      var BMap = this.$parent.BMap;
 
 	      var lng = val;
 	      if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
 	        this.overlay.setCenter((0, _factory.createPoint)(BMap, { lng: lng, lat: this.center.lat }));
 	      }
-	      this.overlay.enableEditing();
+	      // this.overlay.enableEditing()
 	    },
 	    'center.lat': function centerLat(val, oldVal) {
-	      this.overlay.disableEditing();
+	      // this.overlay.disableEditing()
 	      var BMap = this.$parent.BMap;
 
 	      var lat = val;
 	      if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
 	        this.overlay.setCenter((0, _factory.createPoint)(BMap, { lng: this.center.lng, lat: lat }));
 	      }
-	      this.overlay.enableEditing();
+	      // this.overlay.enableEditing()
 	    },
 	    radius: function radius(val, oldVal) {
-	      this.overlay.disableEditing();
+	      // this.overlay.disableEditing()
 	      this.overlay.setRadius(val);
-	      this.overlay.enableEditing();
+	      // this.overlay.enableEditing()
 	    },
 	    strokeColor: function strokeColor(val) {
 	      this.overlay.setStrokeColor(val);
@@ -17209,7 +17207,7 @@
 	          BMap = _$parent.BMap,
 	          map = _$parent.map;
 
-	      var $content = this.$refs.contents;
+	      var $content = this.$el;
 	      var overlay = new BMap.InfoWindow($content, {
 	        width: width, // 信息窗口宽度
 	        height: height, // 信息窗口高度
@@ -17238,13 +17236,13 @@
 	      if (!MutationObserver) {
 	        return;
 	      }
-	      var $refs = this.$refs,
+	      var $el = this.$el,
 	          overlay = this.overlay;
 
 	      this.observer = new MutationObserver(function (mutations) {
 	        return overlay.redraw();
 	      });
-	      this.observer.observe($refs.contents, { attributes: true, childList: true, characterData: true, subtree: true });
+	      this.observer.observe($el, { attributes: true, childList: true, characterData: true, subtree: true });
 	    },
 	    openInfoWindow: function openInfoWindow() {
 	      var $container = this.$container,
@@ -17292,9 +17290,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    ref: "contents"
-	  }, [_vm._t("default")], 2)
+	  return _c('div', [_vm._t("default")], 2)
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {

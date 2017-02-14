@@ -2248,29 +2248,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  watch: (_watch = {
 	    'center.lng': function centerLng(val, oldVal) {
-	      this.overlay.disableEditing();
+	      // this.overlay.disableEditing()
 	      var BMap = this.$parent.BMap;
 
 	      var lng = val;
 	      if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
 	        this.overlay.setCenter((0, _factory.createPoint)(BMap, { lng: lng, lat: this.center.lat }));
 	      }
-	      this.overlay.enableEditing();
+	      // this.overlay.enableEditing()
 	    },
 	    'center.lat': function centerLat(val, oldVal) {
-	      this.overlay.disableEditing();
+	      // this.overlay.disableEditing()
 	      var BMap = this.$parent.BMap;
 
 	      var lat = val;
 	      if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
 	        this.overlay.setCenter((0, _factory.createPoint)(BMap, { lng: this.center.lng, lat: lat }));
 	      }
-	      this.overlay.enableEditing();
+	      // this.overlay.enableEditing()
 	    },
 	    radius: function radius(val, oldVal) {
-	      this.overlay.disableEditing();
+	      // this.overlay.disableEditing()
 	      this.overlay.setRadius(val);
-	      this.overlay.enableEditing();
+	      // this.overlay.enableEditing()
 	    },
 	    strokeColor: function strokeColor(val) {
 	      this.overlay.setStrokeColor(val);
@@ -2691,7 +2691,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          BMap = _$parent.BMap,
 	          map = _$parent.map;
 
-	      var $content = this.$refs.contents;
+	      var $content = this.$el;
 	      var overlay = new BMap.InfoWindow($content, {
 	        width: width, // 信息窗口宽度
 	        height: height, // 信息窗口高度
@@ -2720,13 +2720,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (!MutationObserver) {
 	        return;
 	      }
-	      var $refs = this.$refs,
+	      var $el = this.$el,
 	          overlay = this.overlay;
 
 	      this.observer = new MutationObserver(function (mutations) {
 	        return overlay.redraw();
 	      });
-	      this.observer.observe($refs.contents, { attributes: true, childList: true, characterData: true, subtree: true });
+	      this.observer.observe($el, { attributes: true, childList: true, characterData: true, subtree: true });
 	    },
 	    openInfoWindow: function openInfoWindow() {
 	      var $container = this.$container,
@@ -2774,9 +2774,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    ref: "contents"
-	  }, [_vm._t("default")], 2)
+	  return _c('div', [_vm._t("default")], 2)
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {

@@ -1,5 +1,5 @@
 <template lang="pug">
-div(ref="contents")
+div
   slot
 </template>
 
@@ -85,7 +85,7 @@ export default {
     addOverlay () {
       const {show, position, title, width, height, maxWidth, offset, autoPan, closeOnClick, message, maximize, bindObserver} = this
       const {BMap, map} = this.$parent
-      const $content = this.$refs.contents
+      const $content = this.$el
       const overlay = new BMap.InfoWindow($content, {
         width : width,     // 信息窗口宽度
         height: height,     // 信息窗口高度
@@ -111,9 +111,9 @@ export default {
       if (!MutationObserver) {
         return
       }
-      const {$refs, overlay} = this
+      const {$el, overlay} = this
       this.observer = new MutationObserver(mutations => overlay.redraw())
-      this.observer.observe($refs.contents, {attributes: true, childList: true, characterData: true, subtree: true})
+      this.observer.observe($el, {attributes: true, childList: true, characterData: true, subtree: true})
     },
     openInfoWindow () {
       const {$container, position, overlay} = this
