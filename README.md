@@ -45,6 +45,6 @@ Vue.use(BaiduMap, {
 ## 贡献
 
 ```bash
-sudo npm i
-sudo npm run dev
+npm i
+npm run dev
 ```
