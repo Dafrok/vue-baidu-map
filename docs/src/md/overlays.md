@@ -271,7 +271,7 @@ export default {
 
 ## MapOverlayCircle
 
-圆形
+圆形 - **该组件由于内部实现所局限，暂时不能使用双向绑定。**
 
 ### 属性
 
@@ -313,7 +313,7 @@ export default {
 <template>
   <baidu-map>
     <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-      <map-overlay-circle :center="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolygonPath"/>
+      <map-overlay-circle :center="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" @lineupdate="updatePolygonPath"/>
     </map-view>
   </baidu-map>
 </template>
