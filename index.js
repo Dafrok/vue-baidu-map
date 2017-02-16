@@ -687,11 +687,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  mounted: function mounted() {
-	    var _this3 = this;
+	    var map = this.$parent.map;
+	    var addControl = this.addControl;
 
-	    this.$parent.$on('ready', function () {
-	      _this3.addControl();
-	    });
+	    map ? addControl() : this.$parent.$on('ready', addControl);
 	  },
 	  beforeDestroy: function beforeDestroy() {
 	    this.removeControl();
@@ -821,11 +820,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  mounted: function mounted() {
-	    var _this3 = this;
+	    var map = this.$parent.map;
+	    var addControl = this.addControl;
 
-	    this.$parent.$on('ready', function () {
-	      _this3.addControl();
-	    });
+	    map ? addControl() : this.$parent.$on('ready', addControl);
 	  },
 	  beforeDestroy: function beforeDestroy() {
 	    this.removeControl();
@@ -941,11 +939,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  mounted: function mounted() {
-	    var _this3 = this;
+	    var map = this.$parent.map;
+	    var addControl = this.addControl;
 
-	    this.$parent.$on('ready', function () {
-	      _this3.addControl();
-	    });
+	    map ? addControl() : this.$parent.$on('ready', addControl);
 	  },
 	  beforeDestroy: function beforeDestroy() {
 	    this.removeControl();
@@ -1082,11 +1079,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  mounted: function mounted() {
-	    var _this3 = this;
+	    var map = this.$parent.map;
+	    var addControl = this.addControl;
 
-	    this.$parent.$on('ready', function () {
-	      _this3.addControl();
-	    });
+	    map ? addControl() : this.$parent.$on('ready', addControl);
 	  },
 	  beforeDestroy: function beforeDestroy() {
 	    this.removeControl();
@@ -1225,11 +1221,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  mounted: function mounted() {
-	    var _this3 = this;
+	    var map = this.$parent.map;
+	    var addControl = this.addControl;
 
-	    this.$parent.$on('ready', function () {
-	      _this3.addControl();
-	    });
+	    map ? addControl() : this.$parent.$on('ready', addControl);
 	  },
 	  beforeDestroy: function beforeDestroy() {
 	    this.removeControl();
@@ -1361,11 +1356,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  mounted: function mounted() {
-	    var _this4 = this;
+	    var map = this.$parent.map;
+	    var addControl = this.addControl;
 
-	    this.$parent.$on('ready', function () {
-	      _this4.addControl();
-	    });
+	    map ? addControl() : this.$parent.$on('ready', addControl);
 	  },
 	  beforeDestroy: function beforeDestroy() {
 	    this.removeControl();
@@ -1483,11 +1477,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  mounted: function mounted() {
-	    var _this3 = this;
+	    var map = this.$parent.map;
+	    var addControl = this.addControl;
 
-	    this.$parent.$on('ready', function () {
-	      _this3.addControl();
-	    });
+	    map ? addControl() : this.$parent.$on('ready', addControl);
 	  },
 	  beforeDestroy: function beforeDestroy() {
 	    this.removeControl();
@@ -1634,15 +1627,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.overlay.setTop(val);
 	  }), _watch),
 	  mounted: function mounted() {
-	    var _this = this;
+	    var map = this.$parent.map;
+	    var addOverlay = this.addOverlay;
 
-	    var _$parent = this.$parent,
-	        BMap = _$parent.BMap,
-	        map = _$parent.map;
-
-	    this.$parent.$on('ready', function () {
-	      _this.addOverlay();
-	    });
+	    map ? addOverlay() : this.$parent.$on('ready', addOverlay);
 	  },
 
 	  methods: {
@@ -1662,9 +1650,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	          animation = this.animation,
 	          top = this.top,
 	          addLabel = this.addLabel;
-	      var _$parent2 = this.$parent,
-	          BMap = _$parent2.BMap,
-	          map = _$parent2.map;
+	      var _$parent = this.$parent,
+	          BMap = _$parent.BMap,
+	          map = _$parent.map;
 
 	      var overlay = new BMap.Marker(new BMap.Point(point.lng, point.lat), {
 	        offset: offset,
@@ -1686,18 +1674,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	      overlay.setAnimation(global[animation]);
 	    },
 	    removeOverlay: function removeOverlay() {
-	      var _$parent3 = this.$parent,
-	          BMap = _$parent3.BMap,
-	          map = _$parent3.map;
+	      var _$parent2 = this.$parent,
+	          BMap = _$parent2.BMap,
+	          map = _$parent2.map;
 
 	      map.removeOverlay(this.overlay);
 	    },
 	    reloadOverlay: function reloadOverlay() {
-	      var _this2 = this;
+	      var _this = this;
 
 	      this.$nextTick(function () {
-	        _this2.removeOverlay();
-	        _this2.addOverlay();
+	        _this.removeOverlay();
+	        _this.addOverlay();
 	      });
 	    }
 	  }
@@ -1941,15 +1929,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  mounted: function mounted() {
-	    var _this2 = this;
+	    var map = this.$parent.map;
+	    var addOverlay = this.addOverlay;
 
-	    var _$parent3 = this.$parent,
-	        BMap = _$parent3.BMap,
-	        map = _$parent3.map;
-
-	    this.$parent.$on('ready', function () {
-	      _this2.addOverlay();
-	    });
+	    map ? addOverlay() : this.$parent.$on('ready', addOverlay);
 	  }
 	};
 
@@ -2133,15 +2116,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  mounted: function mounted() {
-	    var _this2 = this;
+	    var map = this.$parent.map;
+	    var addOverlay = this.addOverlay;
 
-	    var _$parent3 = this.$parent,
-	        BMap = _$parent3.BMap,
-	        map = _$parent3.map;
-
-	    this.$parent.$on('ready', function () {
-	      _this2.addOverlay();
-	    });
+	    map ? addOverlay() : this.$parent.$on('ready', addOverlay);
 	  }
 	};
 
@@ -2341,11 +2319,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  mounted: function mounted() {
-	    var _this2 = this;
+	    var map = this.$parent.map;
+	    var addOverlay = this.addOverlay;
 
-	    this.$parent.$on('ready', function () {
-	      _this2.addOverlay();
-	    });
+	    map ? addOverlay() : this.$parent.$on('ready', addOverlay);
 	  }
 	};
 
@@ -2525,7 +2502,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var _this2 = this;
 
 	    this.$parent.$on('ready', function () {
-	      _this2.addOverlay();
+	      var map = _this2.$parent.map;
+	      var addOverlay = _this2.addOverlay;
+
+	      map ? addOverlay() : _this2.$parent.$on('ready', addOverlay);
 	    });
 	  }
 	};
@@ -2761,11 +2741,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.observer && this.observer.disconnect();
 	  },
 	  mounted: function mounted() {
-	    var _this2 = this;
+	    var map = this.$parent.map;
+	    var addOverlay = this.addOverlay;
 
-	    this.$parent.$on('ready', function () {
-	      _this2.addOverlay();
-	    });
+	    map ? addOverlay() : this.$parent.$on('ready', addOverlay);
 	  }
 	};
 

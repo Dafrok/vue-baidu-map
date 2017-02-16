@@ -59,9 +59,9 @@ export default {
     }
   },
   mounted () {
-    this.$parent.$on('ready', () => {
-      this.addControl()
-    })
+    const {map} = this.$parent
+    const {addControl} = this
+    map ? addControl() : this.$parent.$on('ready', addControl)
   },
   beforeDestroy () {
     this.removeControl()

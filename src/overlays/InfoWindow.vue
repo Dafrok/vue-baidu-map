@@ -138,9 +138,9 @@ export default {
     this.observer && this.observer.disconnect();
   },
   mounted () {
-    this.$parent.$on('ready', () => {
-      this.addOverlay()
-    })
+    const {map} = this.$parent
+    const {addOverlay} = this
+    map ? addOverlay() : this.$parent.$on('ready', addOverlay)
   }
 }
 </script>

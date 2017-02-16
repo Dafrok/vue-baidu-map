@@ -107,10 +107,9 @@ export default {
     }
   },
   mounted () {
-    const {BMap, map} = this.$parent
-    this.$parent.$on('ready', () => {
-      this.addOverlay()
-    })
+    const {map} = this.$parent
+    const {addOverlay} = this
+    map ? addOverlay() : this.$parent.$on('ready', addOverlay)
   }
 }
 </script>

@@ -99,7 +99,9 @@ export default {
   },
   mounted () {
     this.$parent.$on('ready', () => {
-      this.addOverlay()
+      const {map} = this.$parent
+      const {addOverlay} = this
+      map ? addOverlay() : this.$parent.$on('ready', addOverlay)
     })
   }
 }
