@@ -1,14 +1,6 @@
-<template lang="markdown">
-
 # 开始使用
 
-## 安装
-
-```shell
-$ npm install vue-baidu-map
-```
-
-## 组件挂载
+## 引入
 
 ```javascript
 import Vue from 'vue'
@@ -20,9 +12,7 @@ Vue.use(BaiduMap, {
 })
 ```
 
-## 快速上手
-
-#### 代码
+## 挂载
 
 ```html
 <template>
@@ -39,9 +29,8 @@ Vue.use(BaiduMap, {
 </style>
 ```
 
-#### 预览
+## 预览
 
 <baidu-map>
   <map-view class="map">
 </baidu-map>
-</template>

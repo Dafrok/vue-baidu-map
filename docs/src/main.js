@@ -6,6 +6,13 @@ import BaiduMap from 'src/index.js'
 
 import Hljs from 'highlight.js'
 
+import 'github-markdown-css'
+import 'highlight.js/styles/github.css'
+import 'material-design-lite/material.min.css'
+import 'material-design-lite/material.min.js'
+import 'material-design-icons/iconfont/material-icons.css'
+import './fonts/iconfont.css'
+
 Vue.use(VueRouter);
 Vue.use(BaiduMap, {
   ak: 'oW2UEhdth2tRbEE4FUpF9E5YVDCIPYih'
@@ -14,11 +21,6 @@ Vue.use(BaiduMap, {
 const router = new VueRouter({
     routes,
     linkActiveClass: 'is-active',
-})
-
-router.beforeEach(function (to, from, next) {
-  global.scrollTo(0, 0)
-  next()
 })
 
 router.afterEach(route => {

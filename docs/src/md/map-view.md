@@ -1,22 +1,8 @@
-<template lang="markdown">
+# 地图视图
 
-# 地图组件
+`MapView` 百度地图实例容器，是地图的可视化区域，每一个 `BaiduMap` 组件应对应唯一一个 `MapView` 组件。
 
-## BaiduMap
-
-百度地图容器，用于控制其它组件实例，本身不用于渲染地图，是所有地图组件的根节点。
-
-### 实例属性
-
-|属性名|类型|默认值|描述|
-|------|:----:|:---:|---|
-|ak|String|undefined|于[百度地图开发者平台](http://lbsyun.baidu.com/apiconsole/key)申请的密钥，该属性仅在初始化时生效，为必填项。|
-
-## MapView
-
-百度地图实例容器，是地图的可视化操作区域，每一个 baidu-map 组件应对应唯一一个 bmap-view 组件。
-
-### 实例属性
+## 实例属性
 
 |属性名|类型|默认值|描述|
 |------|:----:|:---:|---|
@@ -36,7 +22,7 @@
 |pinch-to-zoom|Boolean|true|允许双指缩放|
 |auto-resize|Boolean|true|允许自适应容器尺寸|
 
-### 事件
+## 事件
 |事件名|参数|描述|
 |---|:----:|---|
 |click|{type, target, point, pixel, overlay}|左键单击地图时触发此事件。 当双击时，产生的事件序列为： click click dblclick|
@@ -73,7 +59,7 @@
 |touchend|{type, target, point,pixel}|触摸结束时触发此事件，仅适用移动设备|
 |longpress|{type, target, point,pixel}|长按事件，仅适用移动设备|
 
-### 示例
+## 示例
 
 ### 设置经纬度和缩放等级
 
@@ -201,7 +187,6 @@ export default {
     </baidu-map>
   </div>
 </div>
-</template>
 
 <script>
 export default {
