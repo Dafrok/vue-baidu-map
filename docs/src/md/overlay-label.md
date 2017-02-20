@@ -47,11 +47,13 @@
 ```
 
 #### 预览
-<baidu-map>
-  <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <map-overlay-label content="This is a label" :position="{lng: 116.404, lat: 39.915}" :labelStyle="labelStyle" title="Hover me"/>
-  </map-view>
-</baidu-map>
+<doc-preview>
+  <baidu-map slot="map">
+    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+      <map-overlay-label content="This is a label" :position="{lng: 116.404, lat: 39.915}" :labelStyle="labelStyle" title="Hover me"/>
+    </map-view>
+  </baidu-map>
+</doc-preview>
 </template>
 
 <script>

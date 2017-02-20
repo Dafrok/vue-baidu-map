@@ -73,42 +73,39 @@ export default {
 ```
 
 #### 预览
-<div class="columns">
-  <div class="column is-5">
-    <div class="box">
-      <div class="control is-horizontal">
-        <div class="control-label">
-          <label class="label" v-text="`圆心`"></label>
-        </div>
-        <div class="control is-grouped">
-          <p class="control is-expanded">
-            <input class="input" type="text" placeholder="经度" v-model.number="circlePath.center.lng">
-          </p>
-          <p class="control is-expanded">
-            <input class="input" type="email" placeholder="纬度" v-model.number="circlePath.center.lat">
-          </p>
+
+<doc-preview>
+  <baidu-map slot="map">
+    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+      <map-overlay-circle :center="circlePath.center" :radius="circlePath.radius" @lineupdate="updateCirclePath"/>
+    </map-view>
+  </baidu-map>
+  <div slot="bottom" class="mdl-card__actions mdl-card--border">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--4-col">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="circlePath.center.lng">
+          <label class="mdl-textfield__label">圆心（经度）</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
         </div>
       </div>
-      <div class="control is-horizontal">
-        <div class="control-label">
-          <label class="label" v-text="`半径`"></label>
+      <div class="mdl-cell mdl-cell--4-col">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="circlePath.center.lat">
+          <label class="mdl-textfield__label">圆心（纬度）</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
         </div>
-        <div class="control">
-          <p class="control">
-            <input class="input" type="text" placeholder="半径" v-model="circlePath.radius">
-          </p>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="circlePath.radius">
+          <label class="mdl-textfield__label">半径</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
         </div>
       </div>
     </div>
   </div>
-  <div class="column is-7">
-    <baidu-map>
-      <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-        <map-overlay-circle :center="circlePath.center" :radius="circlePath.radius" @lineupdate="updateCirclePath"/>
-      </map-view>
-    </baidu-map>
-  </div>
-</div>
+</doc-preview>
 </template>
 
 <script>

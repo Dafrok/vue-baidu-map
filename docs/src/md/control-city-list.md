@@ -1,6 +1,6 @@
 # 城市选择控件
 
-`MapControlCityList` 城市列表控件仅在 PC 端生效。
+`MapControlCityList` 城市列表控件仅在 `MapView` 尺寸足够大时生效。
 
 ## 属性
 
@@ -33,10 +33,11 @@
 ```
 
 #### 预览
-<baidu-map>
-  <map-view class="map">
-    <map-control-city-list anchor="BMAP_ANCHOR_TOP_LEFT"/>
-  <map-view/>
-</baidu-map>
-</template>
 
+<doc-preview>
+  <baidu-map slot="map">
+    <map-view class="map">
+      <map-control-city-list anchor="BMAP_ANCHOR_TOP_LEFT"/>
+    <map-view/>
+  </baidu-map>
+</doc-preview>

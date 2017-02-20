@@ -28,8 +28,11 @@
 ```
 
 #### 预览
-<baidu-map>
-  <map-view class="map">
-    <map-control-map-type :map-types="['BMAP_NORMAL_MAP', 'BMAP_HYBRID_MAP']" anchor="BMAP_ANCHOR_TOP_LEFT"/>
-  <map-view/>
-</baidu-map>
+
+<doc-preview>
+  <baidu-map slot="map">
+    <map-view class="map">
+      <map-control-map-type :map-types="['BMAP_NORMAL_MAP', 'BMAP_HYBRID_MAP']" anchor="BMAP_ANCHOR_TOP_LEFT"/>
+    <map-view/>
+  </baidu-map>
+</doc-preview>

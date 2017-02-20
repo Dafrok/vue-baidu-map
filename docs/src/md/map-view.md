@@ -67,15 +67,18 @@
 
 ```html
 <template>
-  <baidu-map ak="YOUR_APP_KEY" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+  <baidu-map>
+    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
   </baidu-map>
 </template>
 ```
 
 #### 预览
-<baidu-map>
-  <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-</baidu-map>
+<doc-preview>
+  <baidu-map slot="map">
+    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+  </baidu-map>
+</doc-preview>
 
 ### 开启滚轮缩放
 
@@ -90,11 +93,11 @@
 ```
 
 #### 预览
-<template>
-  <baidu-map>
+<doc-preview>
+  <baidu-map slot="map">
     <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" :scroll-wheel-zoom="true">
   </baidu-map>
-</template>
+</doc-preview>
 
 ### 设置地图类型
 
@@ -109,11 +112,11 @@
 ```
 
 #### 预览
-<template>
-  <baidu-map>
+<doc-preview>
+  <baidu-map slot="map">
     <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" mapType="BMAP_SATELLITE_MAP">
   </baidu-map>
-</template>
+</doc-preview>
 
 ### 双向绑定
 
@@ -163,30 +166,37 @@ export default {
 </script>
 ```
 
-#### 示例
-<div class="columns">
-  <div class="column is-3">
-    <div class="box">
-      <label class="label">经度</label>
-      <p class="control">
-        <input class="input is-small" v-model.number="center.lng"/>
-      </p>
-      <label class="label">纬度</label>
-      <p class="control">
-        <input class="input is-small" v-model.number="center.lat"/>
-      </p>
-      <label class="label">缩放级别</label>
-      <p class="control">
-        <input class="input is-small" v-model.number="zoom" type="number"/>
-      </p>
+#### 预览
+<doc-preview>
+  <baidu-map slot="map">
+    <map-view class="map" :scroll-wheel-zoom="true" :center="center" :zoom="zoom" @moving="syncCenter" @moveend="syncCenter" @zoomend="syncZoom"></map-view>
+  </baidu-map>
+  <div slot="bottom" class="mdl-card__actions mdl-card--border">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--4-col">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="center.lng">
+          <label class="mdl-textfield__label">经度</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="center.lat">
+          <label class="mdl-textfield__label">纬度</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="zoom">
+          <label class="mdl-textfield__label">缩放</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="column is-9">
-    <baidu-map>
-      <map-view class="map" :scroll-wheel-zoom="true" :center="center" :zoom="zoom" @moving="syncCenter" @moveend="syncCenter" @zoomend="syncZoom"></map-view>
-    </baidu-map>
-  </div>
-</div>
+</doc-preview>
 
 <script>
 export default {

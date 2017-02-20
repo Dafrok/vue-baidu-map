@@ -73,32 +73,29 @@ export default {
 ```
 
 #### 预览
-
-<div class="columns">
-  <div class="column is-3">
-    <div class="box">
-      <div class="control is-horizontal">
-        <div class="control">
-          <textarea class="textarea" placeholder="内容" v-model.number="infoWindow.contents"/>
+<doc-preview>
+  <baidu-map slot="map">
+    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+      <map-overlay-info-window :position="{lng: 116.404, lat: 39.915}" title="Info Window Title" :show="infoWindow.show" @close="infoWindowClose" @open="infoWindowOpen">
+        <p v-text="infoWindow.contents"></p>
+      </map-overlay-info-window>
+    </map-view>
+  </baidu-map>
+  <div slot="bottom" class="mdl-card__actions mdl-card--border">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--3-offset">
+        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
+          <input type="checkbox" class="mdl-switch__input" v-model="infoWindow.show" @click="infoWindow.show = !infoWindow.show">
+          <span class="mdl-switch__label">信息窗体开关</span>
+        </label>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <textarea class="mdl-textfield__input" type="text" rows= "2" v-model="infoWindow.contents"></textarea>
+          <label class="mdl-textfield__label" >信息窗体内容</label>
         </div>
-      </div>
-      <div class="control is-horizontal">
-        <p class="control">
-          <button class="button is-primary" @click="infoWindow.show = !infoWindow.show">显示 / 隐藏信息窗体</button>
-        </p>
       </div>
     </div>
   </div>
-  <div class="column is-9">
-    <baidu-map>
-      <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-        <map-overlay-info-window :position="{lng: 116.404, lat: 39.915}" title="Info Window Title" :show="infoWindow.show" @close="infoWindowClose" @open="infoWindowOpen">
-          <p v-text="infoWindow.contents"></p>
-        </map-overlay-info-window>
-      </map-view>
-    </baidu-map>
-  </div>
-</div>
+</doc-preview>
 
 </template>
 

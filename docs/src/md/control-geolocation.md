@@ -35,9 +35,11 @@
 ```
 
 #### 预览
-<baidu-map>
-  <map-view class="map">
-    <map-control-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true"/>
-  <map-view/>
-</baidu-map>
-</template>
+
+<doc-preview>
+  <baidu-map slot="map">
+    <map-view class="map">
+      <map-control-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true"/>
+    <map-view/>
+  </baidu-map>
+</doc-preview>

@@ -29,8 +29,11 @@
 ```
 
 #### 预览
-<baidu-map>
-  <map-view class="map">
-    <map-control-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"/>
-  <map-view/>
-</baidu-map>
+<doc-preview>
+  <baidu-map slot="map">
+    <map-view class="map">
+      <map-control-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"/>
+    <map-view/>
+  </baidu-map>
+</doc-preview>
+  

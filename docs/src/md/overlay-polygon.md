@@ -72,37 +72,36 @@ export default {
 ```
 
 #### 预览
-<div class="columns">
-  <div class="column is-5">
-    <div class="box">
-      <div class="control is-horizontal" v-for="(point, index) in polygonPath">
-        <div class="control-label">
-          <label class="label" v-text="`坐标${index + 1}`"></label>
-        </div>
-        <div class="control is-grouped">
-          <p class="control is-expanded">
-            <input class="input" type="text" placeholder="经度" v-model="point.lng">
-          </p>
-          <p class="control is-expanded">
-            <input class="input" type="email" placeholder="纬度" v-model="point.lat">
-          </p>
+
+<doc-preview>
+  <baidu-map slot="map">
+    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+      <map-overlay-polygon :points="polygonPath" stroke-color="blue" :stroke-opacity="0.5" :fill-opacity="0.5" :editing="true" @lineupdate="updatePolygonPath"/>
+    </map-view>
+  </baidu-map>
+  <div slot="bottom" class="mdl-card__actions mdl-card--border">
+    <div class="mdl-grid" v-for="(point, index) in polygonPath">
+      <div class="mdl-cell mdl-cell--6-col">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="point.lng">
+          <label class="mdl-textfield__label" v-text="`坐标${index + 1}经度`"></label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
         </div>
       </div>
-      <div class="control is-grouped">
-        <p class="control">
-          <button class="button is-primary" @click="addPolygonPoint">添加一个坐标</button>
-        </p>
+      <div class="mdl-cell mdl-cell--6-col">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="point.lat">
+          <label class="mdl-textfield__label" v-text="`坐标${index + 1}纬度`"></label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
       </div>
     </div>
+    <!-- Accent-colored raised button with ripple -->
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" @click="addPolygonPoint">
+      添加一个坐标
+    </button>
   </div>
-  <div class="column is-7">
-    <baidu-map>
-      <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-        <map-overlay-polygon :points="polygonPath" stroke-color="blue" :stroke-opacity="0.5" :fill-opacity="0.5" :editing="true" @lineupdate="updatePolygonPath"/>
-      </map-view>
-    </baidu-map>
-  </div>
-</div>
+</doc-preview>
 </template>
 
 <script>
@@ -122,6 +121,7 @@ export default {
     },
     addPolygonPoint () {
       this.polygonPath.push({lng: 116.404, lat: 39.915})
+      this.$nextTick(global.componentHandler.upgradeDom)
     }
   }
 }

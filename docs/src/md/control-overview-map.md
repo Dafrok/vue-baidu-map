@@ -34,8 +34,10 @@
 ```
 
 #### 预览
-<baidu-map>
-  <map-view class="map">
-    <map-control-overview-map anchor="BMAP_ANCHOR_BOTTOM_RIGHT"/>
-  <map-view/>
-</baidu-map>
+<doc-preview>
+  <baidu-map slot="map">
+    <map-view class="map">
+      <map-control-overview-map anchor="BMAP_ANCHOR_BOTTOM_RIGHT"/>
+    <map-view/>
+  </baidu-map>
+</doc-preview>

@@ -30,7 +30,8 @@ Vue.use(BaiduMap, {
 ```
 
 ## 预览
-
-<baidu-map>
-  <map-view class="map">
-</baidu-map>
+<doc-preview>
+  <baidu-map slot="map">
+    <map-view class="map">
+  </baidu-map>
+</doc-preview>

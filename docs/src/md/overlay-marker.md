@@ -56,11 +56,13 @@
 ```
 
 #### 预览
-<baidu-map>
-  <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <map-overlay-marker :point="markerPoint" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :label="markerLabel"/>
-  </map-view>
-</baidu-map>
+<doc-preview>
+  <baidu-map slot="map">
+    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+      <map-overlay-marker :point="markerPoint" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :label="markerLabel"/>
+    </map-view>
+  </baidu-map>
+</doc-preview>
 </template>
 
 <script>

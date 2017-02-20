@@ -49,7 +49,10 @@ export default {
     }
   },
   mounted () {
-    this.$router.afterEach(route => (this.$refs.main.scrollTop = 0))
+    this.$router.afterEach(route => {
+      this.$refs.main.scrollTop = 0
+      this.$nextTick(global.componentHandler.upgradeDom)
+    })
   }
 }
 </script>
