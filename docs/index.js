@@ -9222,7 +9222,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/index-3.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/index-1.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -9233,12 +9233,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-1d9745c1", __vue_options__)
+	    hotAPI.createRecord("data-v-1d7b16bf", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-1d9745c1", __vue_options__)
+	    hotAPI.reload("data-v-1d7b16bf", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] index-3.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] index-1.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -9268,13 +9268,13 @@
 	    }
 	  })])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('ul', [_c('li', [_vm._v("大部分实例属性支持双向绑定")]), _vm._v(" "), _c('li', [_vm._v("纯异步渲染")])])
+	  return _c('ul', [_c('li', [_vm._v("为大部分实例属性提供双向绑定的支持。")]), _vm._v(" "), _c('li', [_vm._v("足够完善的实例事件处理模式。")]), _vm._v(" "), _c('li', [_vm._v("纯异步渲染。")])])
 	}]}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-1d9745c1", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-1d7b16bf", module.exports)
 	  }
 	}
 
@@ -9304,7 +9304,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/start-base-4.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/start-base-2.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -9315,12 +9315,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-d7c71aec", __vue_options__)
+	    hotAPI.createRecord("data-v-d7ff78f0", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-d7c71aec", __vue_options__)
+	    hotAPI.reload("data-v-d7ff78f0", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] start-base-4.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] start-base-2.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -9330,17 +9330,113 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('section', [_c('h1', [_vm._v("基础")]), _vm._v(" "), _c('blockquote', [_c('p', [_c('a', {
+	  return _c('section', [_c('h1', [_vm._v("基础")]), _vm._v(" "), _c('h2', [_vm._v("常量")]), _vm._v(" "), _c('h3', [_vm._v("ControlAnchor")]), _vm._v(" "), _c('p', [_vm._v("此常量表示控件的定位。")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h3', [_vm._v("NavigationControlType")]), _vm._v(" "), _c('p', [_vm._v("此常量表示平移缩放控件的类型。")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h3', [_vm._v("MapTypeControlType")]), _vm._v(" "), _c('p', [_vm._v("此常量表示MapTypeControl的外观样式。")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('h3', [_vm._v("Animation")]), _vm._v(" "), _c('p', [_vm._v("此常量表示标注的动画效果。")]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('h3', [_vm._v("MapType")]), _vm._v(" "), _c('p', [_vm._v("表示一种地图类型。")]), _vm._v(" "), _vm._m(4), _vm._v(" "), _c('h3', [_vm._v("LengthUnit")]), _vm._v(" "), _c('p', [_vm._v("常量表示长度单位制。")]), _vm._v(" "), _vm._m(5), _vm._v(" "), _c('h2', [_vm._v("私有类型")]), _vm._v(" "), _c('h3', [_vm._v("Point")]), _vm._v(" "), _c('p', [_vm._v("用于描述地图上点的经纬度。")]), _vm._v(" "), _c('h4', [_vm._v("结构")]), _vm._v(" "), _vm._m(6), _vm._v(" "), _c('h3', [_vm._v("Size")]), _vm._v(" "), _c('p', [_vm._v("用于描述地图上制定区域的长宽尺寸。")]), _vm._v(" "), _c('h4', [_vm._v("结构")]), _vm._v(" "), _vm._m(7), _vm._v(" "), _c('h3', [_vm._v("Pixel")]), _vm._v(" "), _c('p', [_vm._v("用于描述地图上某一个像素点的坐标。")]), _vm._v(" "), _c('h4', [_vm._v("结构")]), _vm._v(" "), _vm._m(8), _vm._v(" "), _c('h3', [_vm._v("Bounds")]), _vm._v(" "), _c('p', [_vm._v("用于描述地图上的一片区域上由西南和东北两个坐标围成的一片区域。")]), _vm._v(" "), _c('h4', [_vm._v("结构")]), _vm._v(" "), _vm._m(9), _vm._v(" "), _c('h3', [_vm._v("Icon")]), _vm._v(" "), _c('p', [_vm._v("声明一个图标。")]), _vm._v(" "), _c('h4', [_vm._v("结构")]), _vm._v(" "), _vm._m(10), _vm._v(" "), _c('h3', [_vm._v("Label")]), _vm._v(" "), _c('p', [_vm._v("声明一个标签。")]), _vm._v(" "), _vm._m(11), _vm._v(" "), _c('h2', [_vm._v("参考")]), _vm._v(" "), _c('blockquote', [_c('p', [_c('a', {
 	    attrs: {
 	      "href": "http://lbsyun.baidu.com/cms/jsapi/reference/jsapi_reference.html"
 	    }
 	  }, [_vm._v("百度地图官方文档")])])])], 1)
-	},staticRenderFns: []}
+	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("常量")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("BMAP_ANCHOR_TOP_LEFT")]), _vm._v(" "), _c('td', [_vm._v("控件将定位到地图的左上角")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("BMAP_ANCHOR_TOP_RIGHT")]), _vm._v(" "), _c('td', [_vm._v("控件将定位到地图的右上角")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("BMAP_ANCHOR_BOTTOM_LEFT")]), _vm._v(" "), _c('td', [_vm._v("控件将定位到地图的左下角")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("BMAP_ANCHOR_BOTTOM_RIGHT")]), _vm._v(" "), _c('td', [_vm._v("控件将定位到地图的右下角")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("常量")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("BMAP_NAVIGATION_CONTROL_LARGE")]), _vm._v(" "), _c('td', [_vm._v("标准的平移缩放控件（包括平移、缩放按钮和滑块）")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("BMAP_NAVIGATION_CONTROL_SMALL")]), _vm._v(" "), _c('td', [_vm._v("仅包含平移和缩放按钮")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("BMAP_NAVIGATION_CONTROL_PAN")]), _vm._v(" "), _c('td', [_vm._v("仅包含平移按钮")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("BMAP_NAVIGATION_CONTROL_ZOOM")]), _vm._v(" "), _c('td', [_vm._v("仅包含缩放按钮")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("常量")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("BMAP_MAPTYPE_CONTROL_HORIZONTAL")]), _vm._v(" "), _c('td', [_vm._v("按钮水平方式展示，默认采用此类型展示")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("BMAP_MAPTYPE_CONTROL_DROPDOWN")]), _vm._v(" "), _c('td', [_vm._v("按钮呈下拉列表方式展示")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("BMAP_MAPTYPE_CONTROL_MAP")]), _vm._v(" "), _c('td', [_vm._v("以图片方式展示类型控件，设置该类型后无法指定maptypes属性")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("常量")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("BMAP_ANIMATION_DROP")]), _vm._v(" "), _c('td', [_vm._v("坠落动画")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("BMAP_ANIMATION_BOUNCE")]), _vm._v(" "), _c('td', [_vm._v("跳动动画")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("常量")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("BMAP_NORMAL_MAP")]), _vm._v(" "), _c('td', [_vm._v("此地图类型展示普通街道视图")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("BMAP_PERSPECTIVE_MAP")]), _vm._v(" "), _c('td', [_vm._v("此地图类型展示透视图像视图")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("BMAP_SATELLITE_MAP")]), _vm._v(" "), _c('td', [_vm._v("此地图类型展示卫星视图")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("BMAP_HYBRID_MAP")]), _vm._v(" "), _c('td', [_vm._v("此地图类型展示卫星和路网的混合视图")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("常量")]), _vm._v(" "), _c('th', [_vm._v("描述")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("BMAP_UNIT_METRIC")]), _vm._v(" "), _c('td', [_vm._v("公制单位")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("BMAP_UNIT_IMPERIAL")]), _vm._v(" "), _c('td', [_vm._v("英制单位")])])])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-javascript"
+	  }, [_vm._v("{\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-built_in"
+	  }, [_vm._v("Number")]), _vm._v("\n  lat: "), _c('span', {
+	    staticClass: "hljs-built_in"
+	  }, [_vm._v("Number")]), _vm._v("\n}\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-javascript"
+	  }, [_vm._v("{\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("width")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-built_in"
+	  }, [_vm._v("Number")]), _vm._v(",\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("height")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-built_in"
+	  }, [_vm._v("Number")]), _vm._v("\n}\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-javascript"
+	  }, [_vm._v("{\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("x")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-built_in"
+	  }, [_vm._v("Number")]), _vm._v(",\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("y")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-built_in"
+	  }, [_vm._v("Number")]), _vm._v("\n}\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-javascript"
+	  }, [_vm._v("{\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("sw")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-built_in"
+	  }, [_vm._v("Number")]), _vm._v(",\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("ne")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-built_in"
+	  }, [_vm._v("Number")]), _vm._v("\n}\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-javascript"
+	  }, [_vm._v("{\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("url")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-built_in"
+	  }, [_vm._v("String")]), _vm._v(",\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("size")]), _vm._v(": Size,\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("opts")]), _vm._v(": {\n    "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("anchor")]), _vm._v(": Size,\n    "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("imageOffset")]), _vm._v(": Size,\n    "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("infoWindowAnchor")]), _vm._v(": Size,\n    "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("printImageUrl")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-built_in"
+	  }, [_vm._v("String")]), _vm._v("\n  }\n}\n")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('pre', [_c('code', {
+	    staticClass: "language-javascript"
+	  }, [_vm._v("{\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("content")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-built_in"
+	  }, [_vm._v("String")]), _vm._v(",\n  "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("opts")]), _vm._v(": {\n    "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("offset")]), _vm._v(": Size\n    position: Point,\n    "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("enableMassClear")]), _vm._v(": "), _c('span', {
+	    staticClass: "hljs-built_in"
+	  }, [_vm._v("Boolean")]), _vm._v("\n  }\n}\n")])])
+	}]}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-d7c71aec", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-d7ff78f0", module.exports)
 	  }
 	}
 
@@ -9370,7 +9466,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/start-installation-2.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/start-installation-4.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -9381,12 +9477,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-00da4e31", __vue_options__)
+	    hotAPI.createRecord("data-v-00f67d33", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-00da4e31", __vue_options__)
+	    hotAPI.reload("data-v-00f67d33", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] start-installation-2.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] start-installation-4.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -9406,7 +9502,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-00da4e31", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-00f67d33", module.exports)
 	  }
 	}
 
@@ -9436,7 +9532,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/start-usage-1.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/start-usage-3.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -9447,12 +9543,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-12fc3ea3", __vue_options__)
+	    hotAPI.createRecord("data-v-13186da5", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-12fc3ea3", __vue_options__)
+	    hotAPI.reload("data-v-13186da5", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] start-usage-1.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] start-usage-3.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -9462,7 +9558,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('section', [_c('h1', [_vm._v("开始使用")]), _vm._v(" "), _c('h2', [_vm._v("引入")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h2', [_vm._v("挂载")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h2', [_vm._v("预览")]), _vm._v(" "), _c('doc-preview', [_c('baidu-map', {
+	  return _c('section', [_c('h1', [_vm._v("快速上手")]), _vm._v(" "), _c('h2', [_vm._v("引入")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('h2', [_vm._v("挂载")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('h2', [_vm._v("预览")]), _vm._v(" "), _c('doc-preview', [_c('baidu-map', {
 	    slot: "map"
 	  }, [_c('map-view', {
 	    staticClass: "map"
@@ -9540,7 +9636,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-12fc3ea3", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-13186da5", module.exports)
 	  }
 	}
 
@@ -9639,7 +9735,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/map-view-7.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/map-view-6.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -9650,12 +9746,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-72e0ec67", __vue_options__)
+	    hotAPI.createRecord("data-v-72d2d4e6", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-72e0ec67", __vue_options__)
+	    hotAPI.reload("data-v-72d2d4e6", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] map-view-7.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] map-view-6.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -10770,7 +10866,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-72e0ec67", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-72d2d4e6", module.exports)
 	  }
 	}
 
@@ -10800,7 +10896,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/control-scale-9.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/control-scale-7.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -10811,12 +10907,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-194f0bcf", __vue_options__)
+	    hotAPI.createRecord("data-v-1932dccd", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-194f0bcf", __vue_options__)
+	    hotAPI.reload("data-v-1932dccd", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] control-scale-9.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] control-scale-7.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -10908,7 +11004,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-194f0bcf", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-1932dccd", module.exports)
 	  }
 	}
 
@@ -10938,7 +11034,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/control-navigation-6.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/control-navigation-8.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -10949,12 +11045,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-4749f7b4", __vue_options__)
+	    hotAPI.createRecord("data-v-476626b6", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-4749f7b4", __vue_options__)
+	    hotAPI.reload("data-v-476626b6", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] control-navigation-6.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] control-navigation-8.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -11070,7 +11166,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-4749f7b4", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-476626b6", module.exports)
 	  }
 	}
 
@@ -11100,7 +11196,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/control-map-type-8.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/control-map-type-10.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -11111,12 +11207,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-6008782d", __vue_options__)
+	    hotAPI.createRecord("data-v-d5dfc90c", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-6008782d", __vue_options__)
+	    hotAPI.reload("data-v-d5dfc90c", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] control-map-type-8.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] control-map-type-10.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -11229,7 +11325,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-6008782d", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-d5dfc90c", module.exports)
 	  }
 	}
 
@@ -11259,7 +11355,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/control-overview-map-12.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/control-overview-map-9.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -11270,12 +11366,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-41844542", __vue_options__)
+	    hotAPI.createRecord("data-v-0fe5946b", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-41844542", __vue_options__)
+	    hotAPI.reload("data-v-0fe5946b", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] control-overview-map-12.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] control-overview-map-9.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -11397,7 +11493,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-41844542", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-0fe5946b", module.exports)
 	  }
 	}
 
@@ -11427,7 +11523,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/control-geolocation-10.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/control-geolocation-11.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -11438,12 +11534,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-fd716006", __vue_options__)
+	    hotAPI.createRecord("data-v-fd553104", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-fd716006", __vue_options__)
+	    hotAPI.reload("data-v-fd553104", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] control-geolocation-10.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] control-geolocation-11.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -11578,7 +11674,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-fd716006", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-fd553104", module.exports)
 	  }
 	}
 
@@ -11763,7 +11859,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/control-city-list-11.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/control-city-list-12.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -11774,12 +11870,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-1bec0844", __vue_options__)
+	    hotAPI.createRecord("data-v-1bfa1fc5", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-1bec0844", __vue_options__)
+	    hotAPI.reload("data-v-1bfa1fc5", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] control-city-list-11.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] control-city-list-12.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -11885,7 +11981,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-1bec0844", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-1bfa1fc5", module.exports)
 	  }
 	}
 
@@ -12432,7 +12528,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/overlay-polyline-16.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/overlay-polyline-15.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -12443,12 +12539,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-34fc01c4", __vue_options__)
+	    hotAPI.createRecord("data-v-351830c6", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-34fc01c4", __vue_options__)
+	    hotAPI.reload("data-v-351830c6", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] overlay-polyline-16.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] overlay-polyline-15.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -13025,7 +13121,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-34fc01c4", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-351830c6", module.exports)
 	  }
 	}
 
@@ -13058,7 +13154,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/overlay-polygon-17.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/overlay-polygon-16.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -13069,12 +13165,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-236ae206", __vue_options__)
+	    hotAPI.createRecord("data-v-23871108", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-236ae206", __vue_options__)
+	    hotAPI.reload("data-v-23871108", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] overlay-polygon-17.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] overlay-polygon-16.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -13679,7 +13775,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-236ae206", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-23871108", module.exports)
 	  }
 	}
 
@@ -13712,7 +13808,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/overlay-circle-18.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/overlay-circle-17.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -13723,12 +13819,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-60e0de10", __vue_options__)
+	    hotAPI.createRecord("data-v-60d2c68f", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-60e0de10", __vue_options__)
+	    hotAPI.reload("data-v-60d2c68f", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] overlay-circle-18.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] overlay-circle-17.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -14367,7 +14463,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-60e0de10", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-60d2c68f", module.exports)
 	  }
 	}
 
@@ -14400,7 +14496,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/overlay-label-15.vue"
+	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/node_modules/vue-markdown-loader/_cache/overlay-label-18.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -14411,12 +14507,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-d284d7fe", __vue_options__)
+	    hotAPI.createRecord("data-v-d2304af8", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-d284d7fe", __vue_options__)
+	    hotAPI.reload("data-v-d2304af8", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] overlay-label-15.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] overlay-label-18.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -14771,7 +14867,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-d284d7fe", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-d2304af8", module.exports)
 	  }
 	}
 
