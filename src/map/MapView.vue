@@ -66,30 +66,35 @@ export default {
   },
   watch: {
     'center.lng' (val, oldVal) {
-      const {$BMap, map} = this.$parent
+      const {$BMap} = this.$parent
+      const  {map} = this
       const lng = parseFloat(val)
       if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
         map.setCenter(new $BMap.Point(lng, this.center.lat))
       }
     },
     'center.lat' (val, oldVal) {
-      const {$BMap, map} = this.$parent
+      const {$BMap} = this.$parent
+      const  {map} = this
       const lat = parseFloat(val)
       if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
         map.setCenter(new $BMap.Point(this.center.lng, lat))
       }
     },
     zoom (val, oldVal) {
-      const {$BMap, map} = this.$parent
+      const {$BMap} = this.$parent
+      const  {map} = this
       const zoom = parseFloat(val)
       if (val.toString() !== oldVal.toString() && zoom >= 3 && zoom <= 19) {
         map.setZoom(zoom)
       }
     },
     minZoom (val) {
+      const  {map} = this
       map.setMinZoom(val)
     },
     maxZoom (val) {
+      const  {map} = this
       map.setMaxZoom(val)
     },
     highResolution () {
@@ -99,37 +104,45 @@ export default {
       // Require remount component
     },
     mapType (val) {
+      const  {map} = this
       map.setMapType(global[val])
     },
     dragging (val) {
+      const  {map} = this
       val ? map.enableDragging() : map.disableDragging()
     },
     scrollWheelZoom (val) {
+      const  {map} = this
       val ? map.enableScrollWheelZoom() : map.disableScrollWheelZoom()
     },
     doubleClickZoom (val) {
+      const  {map} = this
       val ? map.enableDoubleClickZoom() : map.disableDoubleClickZoom()
     },
     keyboard (val) {
+      const  {map} = this
       val ? map.enableKeyboard() : map.disableKeyboard()
     },
     inertialDragging (val) {
+      const  {map} = this
       val ? map.enableInertialDragging() : map.disableInertialDragging()
     },
     continuousZoom (val) {
+      const  {map} = this
       val ? map.enableContinuousZoom() : map.disableContinuousZoom()
     },
     pinchToZoom (val) {
+      const  {map} = this
       val ? map.enablePinchToZoom() : map.disablePinchToZoom()
     },
     autoResize (val) {
+      const  {map} = this
       val ? map.enableAutoResize() : map.disableAutoResize()
     }
   },
   methods: {
     setMapOptions () {
-      const {map} = this.$parent
-      const {minZoom, maxZoom, mapType, dragging, scrollWheelZoom, doubleClickZoom, keyboard, inertialDragging, continuousZoom, pinchToZoom, autoResize} = this
+      const {map, minZoom, maxZoom, mapType, dragging, scrollWheelZoom, doubleClickZoom, keyboard, inertialDragging, continuousZoom, pinchToZoom, autoResize} = this
       minZoom && map.setMinZoom(minZoom)
       maxZoom && map.setMaxZoom(maxZoom)
       mapType && map.setMapType(global[mapType])
@@ -143,14 +156,14 @@ export default {
       autoResize ? map.enableAutoResize() : map.disableAutoResize()
     },
     init (BMap) {
-      const map = this.$parent.map = new BMap.Map(this.$el, {enableHighResolution: this.highResolution, enableMapClick: this.mapClick})
+      const map = new BMap.Map(this.$el, {enableHighResolution: this.highResolution, enableMapClick: this.mapClick})
+      this.map = map
       const {setMapOptions, maxZoom, zoom, center, getCenterPoint} = this
       setMapOptions()
       bindEvents.call(this, map)
       map.centerAndZoom(getCenterPoint(center), maxZoom || zoom || 3)
       this.BMap = BMap
-      this.map = map
-      this.$emit('ready')
+      this.$emit('ready', {BMap, map})
     },
     checkType (val) {
       return Object.prototype.toString.call(val).slice(8, -1)

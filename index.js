@@ -379,9 +379,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  watch: {
 	    'center.lng': function centerLng(val, oldVal) {
-	      var _$parent = this.$parent,
-	          $BMap = _$parent.$BMap,
-	          map = _$parent.map;
+	      var $BMap = this.$parent.$BMap;
+	      var map = this.map;
 
 	      var lng = parseFloat(val);
 	      if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
@@ -389,9 +388,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    },
 	    'center.lat': function centerLat(val, oldVal) {
-	      var _$parent2 = this.$parent,
-	          $BMap = _$parent2.$BMap,
-	          map = _$parent2.map;
+	      var $BMap = this.$parent.$BMap;
+	      var map = this.map;
 
 	      var lat = parseFloat(val);
 	      if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
@@ -399,9 +397,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    },
 	    zoom: function zoom(val, oldVal) {
-	      var _$parent3 = this.$parent,
-	          $BMap = _$parent3.$BMap,
-	          map = _$parent3.map;
+	      var $BMap = this.$parent.$BMap;
+	      var map = this.map;
 
 	      var zoom = parseFloat(val);
 	      if (val.toString() !== oldVal.toString() && zoom >= 3 && zoom <= 19) {
@@ -409,9 +406,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    },
 	    minZoom: function minZoom(val) {
+	      var map = this.map;
+
 	      map.setMinZoom(val);
 	    },
 	    maxZoom: function maxZoom(val) {
+	      var map = this.map;
+
 	      map.setMaxZoom(val);
 	    },
 	    highResolution: function highResolution() {
@@ -421,37 +422,55 @@ return /******/ (function(modules) { // webpackBootstrap
 	      // Require remount component
 	    },
 	    mapType: function mapType(val) {
+	      var map = this.map;
+
 	      map.setMapType(global[val]);
 	    },
 	    dragging: function dragging(val) {
+	      var map = this.map;
+
 	      val ? map.enableDragging() : map.disableDragging();
 	    },
 	    scrollWheelZoom: function scrollWheelZoom(val) {
+	      var map = this.map;
+
 	      val ? map.enableScrollWheelZoom() : map.disableScrollWheelZoom();
 	    },
 	    doubleClickZoom: function doubleClickZoom(val) {
+	      var map = this.map;
+
 	      val ? map.enableDoubleClickZoom() : map.disableDoubleClickZoom();
 	    },
 	    keyboard: function keyboard(val) {
+	      var map = this.map;
+
 	      val ? map.enableKeyboard() : map.disableKeyboard();
 	    },
 	    inertialDragging: function inertialDragging(val) {
+	      var map = this.map;
+
 	      val ? map.enableInertialDragging() : map.disableInertialDragging();
 	    },
 	    continuousZoom: function continuousZoom(val) {
+	      var map = this.map;
+
 	      val ? map.enableContinuousZoom() : map.disableContinuousZoom();
 	    },
 	    pinchToZoom: function pinchToZoom(val) {
+	      var map = this.map;
+
 	      val ? map.enablePinchToZoom() : map.disablePinchToZoom();
 	    },
 	    autoResize: function autoResize(val) {
+	      var map = this.map;
+
 	      val ? map.enableAutoResize() : map.disableAutoResize();
 	    }
 	  },
 	  methods: {
 	    setMapOptions: function setMapOptions() {
-	      var map = this.$parent.map;
-	      var minZoom = this.minZoom,
+	      var map = this.map,
+	          minZoom = this.minZoom,
 	          maxZoom = this.maxZoom,
 	          mapType = this.mapType,
 	          dragging = this.dragging,
@@ -476,7 +495,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      autoResize ? map.enableAutoResize() : map.disableAutoResize();
 	    },
 	    init: function init(BMap) {
-	      var map = this.$parent.map = new BMap.Map(this.$el, { enableHighResolution: this.highResolution, enableMapClick: this.mapClick });
+	      var map = new BMap.Map(this.$el, { enableHighResolution: this.highResolution, enableMapClick: this.mapClick });
+	      this.map = map;
 	      var setMapOptions = this.setMapOptions,
 	          maxZoom = this.maxZoom,
 	          zoom = this.zoom,
@@ -487,8 +507,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      _bindEvent2.default.call(this, map);
 	      map.centerAndZoom(getCenterPoint(center), maxZoom || zoom || 3);
 	      this.BMap = BMap;
-	      this.map = map;
-	      this.$emit('ready');
+	      this.$emit('ready', { BMap: BMap, map: map });
 	    },
 	    checkType: function checkType(val) {
 	      return Object.prototype.toString.call(val).slice(8, -1);
