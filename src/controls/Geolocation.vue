@@ -16,7 +16,7 @@ export default {
     showAddressBar: {
       type: Boolean
     },
-    enableAutoLocation: {
+    autoLocation: {
       type: Boolean
     },
     locationIcon: {
@@ -33,7 +33,7 @@ export default {
     showAddressBar () {
       this.reloadControl()
     },
-    enableAutoLocation () {
+    autoLocation () {
       this.reloadControl()
     },
     locationIcon () {
@@ -46,11 +46,12 @@ export default {
       this.control = new BMap.GeolocationControl({
         anchor: global[this.anchor],
         showAddressBar: this.showAddressBar,
-        enableAutoLocation: this.enableAutoLocation,
+        enableAutoLocation: this.autoLocation,
         locationIcon: this.locationIcon
       })
       bindEvents.call(this, this.control)
       map.addControl(this.control)
+      global.map = map
     },
     removeControl () {
       this.$nextTick(() => {

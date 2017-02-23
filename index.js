@@ -1180,7 +1180,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    showAddressBar: {
 	      type: Boolean
 	    },
-	    enableAutoLocation: {
+	    autoLocation: {
 	      type: Boolean
 	    },
 	    locationIcon: {
@@ -1197,7 +1197,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    showAddressBar: function showAddressBar() {
 	      this.reloadControl();
 	    },
-	    enableAutoLocation: function enableAutoLocation() {
+	    autoLocation: function autoLocation() {
 	      this.reloadControl();
 	    },
 	    locationIcon: function locationIcon() {
@@ -1213,11 +1213,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.control = new BMap.GeolocationControl({
 	        anchor: global[this.anchor],
 	        showAddressBar: this.showAddressBar,
-	        enableAutoLocation: this.enableAutoLocation,
+	        enableAutoLocation: this.autoLocation,
 	        locationIcon: this.locationIcon
 	      });
 	      _bindEvent2.default.call(this, this.control);
 	      map.addControl(this.control);
+	      global.map = map;
 	    },
 	    removeControl: function removeControl() {
 	      var _this = this;

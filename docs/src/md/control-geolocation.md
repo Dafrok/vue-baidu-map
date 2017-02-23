@@ -9,7 +9,7 @@
 |anchor|ControlAnchor|undefined|控件停靠位置|
 |offset|Size|undefined|控件偏移值|
 |showAddressBar|Boolean|undefined|是否显示定位信息面板。默认显示定位信息面板|
-|enableAutoLocation|Boolean|false|添加控件时是否进行定位。默认添加控件时不进行定位|
+|autoLocation|Boolean|false|添加控件时是否进行定位。默认添加控件时不进行定位|
 |locationIcon|Icon|undefined|可自定义定位中心点的Icon样式|
 
 ## 事件
@@ -28,7 +28,7 @@
 <template>
   <baidu-map>
     <map-view class="map">
-      <map-control-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true"/>
+      <map-control-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"/>
     <map-view/>
   </baidu-map>
 </template>
@@ -39,7 +39,7 @@
 <doc-preview>
   <baidu-map slot="map">
     <map-view class="map">
-      <map-control-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true"/>
+      <map-control-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"/>
     <map-view/>
   </baidu-map>
 </doc-preview>
