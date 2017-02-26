@@ -1,3 +1,5 @@
+<template lang="md">
+
 # 地图视图
 
 `MapView` 百度地图实例容器，是地图的可视化区域，每一个 `BaiduMap` 组件应对应至少一个 `MapView` 组件才能使地图实例被正常渲染。
@@ -198,6 +200,7 @@ export default {
     </div>
   </div>
 </doc-preview>
+</template>
 
 <script>
 export default {

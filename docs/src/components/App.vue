@@ -94,4 +94,7 @@ h2 {
     color: #555;
   }
 }
+.mdl-navigation__link.is-active {
+  background-color: #e2e2e2;
+}
 </style>
