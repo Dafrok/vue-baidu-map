@@ -24,6 +24,9 @@ import DocOverlayCircle from './md/overlay-circle.md'
 import DocOverlayLabel from './md/overlay-label.md'
 import DocOverlayInfoWindow from './md/overlay-info-window.md'
 
+import DocContextMenu from './md/context-menu.md'
+import DocContextMenuItem from './md/context-menu-item.md'
+
 export default [
   {
     // 首页
@@ -149,6 +152,23 @@ export default [
         name: '信息窗体',
         component: DocOverlayInfoWindow
       }
+    ]
+  },
+  {
+    path: '/context-menu',
+    name: '菜单',
+    component: CateView,
+    children: [
+      {
+        path: 'menu',
+        name: '菜单容器',
+        component: DocContextMenu
+      },
+      {
+        path: 'item',
+        name: '菜单项',
+        component: DocContextMenuItem
+      },
     ]
   }
 ]

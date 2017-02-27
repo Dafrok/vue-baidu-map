@@ -120,6 +120,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _InfoWindow2 = _interopRequireDefault(_InfoWindow);
 
+	var _menu = __webpack_require__(37);
+
+	var _menu2 = _interopRequireDefault(_menu);
+
+	var _item = __webpack_require__(40);
+
+	var _item2 = _interopRequireDefault(_item);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
@@ -148,6 +156,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Vue.component('map-overlay-circle', _Circle2.default);
 	    Vue.component('map-overlay-label', _Label2.default);
 	    Vue.component('map-overlay-info-window', _InfoWindow2.default);
+
+	    Vue.component('map-context-menu', _menu2.default);
+	    Vue.component('map-context-menu-item', _item2.default);
 	  }
 	};
 
@@ -174,7 +185,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/map/Map.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\src\\map\\Map.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -185,9 +196,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-6a9f0389", __vue_options__)
+	    hotAPI.createRecord("data-v-7d9fda8a", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-6a9f0389", __vue_options__)
+	    hotAPI.reload("data-v-7d9fda8a", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] Map.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -254,7 +265,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-6a9f0389", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-7d9fda8a", module.exports)
 	  }
 	}
 
@@ -281,7 +292,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/map/MapView.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\src\\map\\MapView.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -292,9 +303,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-b3963164", __vue_options__)
+	    hotAPI.createRecord("data-v-22670d80", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-b3963164", __vue_options__)
+	    hotAPI.reload("data-v-22670d80", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] MapView.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -599,7 +610,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-b3963164", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-22670d80", module.exports)
 	  }
 	}
 
@@ -623,7 +634,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/Scale.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\src\\controls\\Scale.vue"
 
 	/* hot reload */
 	if (false) {(function () {
@@ -632,9 +643,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-49a7737e", __vue_options__)
+	    hotAPI.createRecord("data-v-5f236056", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-49a7737e", __vue_options__)
+	    hotAPI.reload("data-v-5f236056", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] Scale.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -737,7 +748,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/Navigation.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\src\\controls\\Navigation.vue"
 
 	/* hot reload */
 	if (false) {(function () {
@@ -746,9 +757,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-043dd2a6", __vue_options__)
+	    hotAPI.createRecord("data-v-5a09e999", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-043dd2a6", __vue_options__)
+	    hotAPI.reload("data-v-5a09e999", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] Navigation.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -870,7 +881,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/MapType.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\src\\controls\\MapType.vue"
 
 	/* hot reload */
 	if (false) {(function () {
@@ -879,9 +890,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-40903426", __vue_options__)
+	    hotAPI.createRecord("data-v-e6c44afe", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-40903426", __vue_options__)
+	    hotAPI.reload("data-v-e6c44afe", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] MapType.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -989,7 +1000,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/OverviewMap.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\src\\controls\\OverviewMap.vue"
 
 	/* hot reload */
 	if (false) {(function () {
@@ -998,9 +1009,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-4e98865a", __vue_options__)
+	    hotAPI.createRecord("data-v-778a10ee", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-4e98865a", __vue_options__)
+	    hotAPI.reload("data-v-778a10ee", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] OverviewMap.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -1129,7 +1140,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/Geolocation.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\src\\controls\\Geolocation.vue"
 
 	/* hot reload */
 	if (false) {(function () {
@@ -1138,9 +1149,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-2f3e89bd", __vue_options__)
+	    hotAPI.createRecord("data-v-58301451", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-2f3e89bd", __vue_options__)
+	    hotAPI.reload("data-v-58301451", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] Geolocation.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -1272,7 +1283,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/Copyright.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\src\\controls\\Copyright.vue"
 
 	/* hot reload */
 	if (false) {(function () {
@@ -1281,9 +1292,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-220e62be", __vue_options__)
+	    hotAPI.createRecord("data-v-2d498252", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-220e62be", __vue_options__)
+	    hotAPI.reload("data-v-2d498252", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] Copyright.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -1407,7 +1418,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/controls/CityList.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\src\\controls\\CityList.vue"
 
 	/* hot reload */
 	if (false) {(function () {
@@ -1416,9 +1427,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-1740d702", __vue_options__)
+	    hotAPI.createRecord("data-v-071974ee", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-1740d702", __vue_options__)
+	    hotAPI.reload("data-v-071974ee", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] CityList.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -1528,7 +1539,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/overlays/Marker.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\src\\overlays\\Marker.vue"
 
 	/* hot reload */
 	if (false) {(function () {
@@ -1537,9 +1548,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-6f0550c6", __vue_options__)
+	    hotAPI.createRecord("data-v-220479b2", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-6f0550c6", __vue_options__)
+	    hotAPI.reload("data-v-220479b2", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] Marker.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -1805,7 +1816,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/overlays/Polyline.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\src\\overlays\\Polyline.vue"
 
 	/* hot reload */
 	if (false) {(function () {
@@ -1814,9 +1825,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-7071c368", __vue_options__)
+	    hotAPI.createRecord("data-v-90c08790", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-7071c368", __vue_options__)
+	    hotAPI.reload("data-v-90c08790", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] Polyline.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -1976,7 +1987,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/overlays/Polygon.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\src\\overlays\\Polygon.vue"
 
 	/* hot reload */
 	if (false) {(function () {
@@ -1985,9 +1996,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-2920025e", __vue_options__)
+	    hotAPI.createRecord("data-v-53f4121c", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-2920025e", __vue_options__)
+	    hotAPI.reload("data-v-53f4121c", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] Polygon.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -2163,7 +2174,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/overlays/Circle.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\src\\overlays\\Circle.vue"
 
 	/* hot reload */
 	if (false) {(function () {
@@ -2172,9 +2183,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-2b598348", __vue_options__)
+	    hotAPI.createRecord("data-v-c55b3170", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-2b598348", __vue_options__)
+	    hotAPI.reload("data-v-c55b3170", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] Circle.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -2366,7 +2377,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/overlays/Label.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\src\\overlays\\Label.vue"
 
 	/* hot reload */
 	if (false) {(function () {
@@ -2375,9 +2386,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-03a39bd0", __vue_options__)
+	    hotAPI.createRecord("data-v-191f88a8", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-03a39bd0", __vue_options__)
+	    hotAPI.reload("data-v-191f88a8", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] Label.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -2553,7 +2564,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/baidu/Documents/Github/vue-baidu-map/src/overlays/InfoWindow.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\src\\overlays\\InfoWindow.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -2564,9 +2575,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-07b8f2ca", __vue_options__)
+	    hotAPI.createRecord("data-v-63e1c5b6", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-07b8f2ca", __vue_options__)
+	    hotAPI.reload("data-v-63e1c5b6", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] InfoWindow.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -2779,7 +2790,316 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-07b8f2ca", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-63e1c5b6", module.exports)
+	  }
+	}
+
+/***/ },
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(38)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(39)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\src\\context-menu\\menu.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-5e0fa55d", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-5e0fa55d", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] menu.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 38 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	//
+	//
+	//
+	//
+	//
+
+	exports.default = {
+	  name: 'map-context-menu',
+	  props: {
+	    width: {
+	      type: Number
+	    }
+	  },
+	  methods: {
+	    addContextMenu: function addContextMenu(BMap, parent, map) {
+	      var _this = this;
+
+	      var menu = this.menu = new BMap.ContextMenu();
+	      this.parent = parent;
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+
+	      try {
+	        var _loop = function _loop() {
+	          var item = _step.value;
+
+	          if (item.seperator) {
+	            menu.addSeparator();
+	            return 'continue';
+	          }
+	          var menuItem = new BMap.MenuItem(item.text, function (point, pixel) {
+	            item.callback({
+	              point: point,
+	              pixel: pixel,
+	              BMap: BMap,
+	              map: map,
+	              target: parent
+	            });
+	          }, {
+	            width: _this.width,
+	            id: item.id,
+	            iconUrl: item.iconUrl
+	          });
+	          item.disabled ? menuItem.disable() : menuItem.enable();
+	          menu.addItem(menuItem);
+	        };
+
+	        for (var _iterator = this.$children[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var _ret = _loop();
+
+	          if (_ret === 'continue') continue;
+	        }
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
+	        }
+	      }
+
+	      parent.addContextMenu(menu);
+	    },
+	    removeContextMenu: function removeContextMenu() {
+	      this.parent.removeContextMenu(this.menu);
+	    },
+	    reloadContextMenu: function reloadContextMenu() {
+	      var _this2 = this;
+
+	      this.parent && this.$nextTick(function () {
+	        var $parent = _this2.$parent,
+	            removeContextMenu = _this2.removeContextMenu,
+	            addContextMenu = _this2.addContextMenu;
+
+	        removeContextMenu();
+	        addContextMenu($parent.BMap || $parent.$parent.BMap, $parent.map || $parent.overlay, $parent.map || $parent.$parentmap);
+	      });
+	    }
+	  },
+	  mounted: function mounted() {
+	    var map = void 0;
+	    var BMap = void 0;
+	    var addContextMenu = this.addContextMenu,
+	        $parent = this.$parent;
+
+	    switch ($parent.$options._componentTag) {
+	      case 'map-view':
+	        map = $parent.map;
+	        map ? addContextMenu() : $parent.$on('ready', function () {
+	          return addContextMenu($parent.BMap, $parent.map, $parent.map);
+	        });
+	        break;
+	      case 'map-overlay-marker':
+	        map = $parent.$parent.map;
+	        map ? addContextMenu() : $parent.$parent.$on('ready', function () {
+	          return addContextMenu($parent.$parent.BMap, $parent.overlay, $parent.$parent.map);
+	        });
+	        break;
+	    }
+	  },
+	  beforeDestroy: function beforeDestroy() {
+	    this.removeContextMenu();
+	  }
+	};
+
+/***/ },
+/* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', [_vm._t("default")], 2)
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-5e0fa55d", module.exports)
+	  }
+	}
+
+/***/ },
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(41)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(42)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\src\\context-menu\\item.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-6f87ddde", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-6f87ddde", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] item.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 41 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	//
+	//
+	//
+	//
+
+	exports.default = {
+	  name: 'map-context-menu-item',
+	  props: {
+	    callback: {
+	      type: Function,
+	      default: new Function()
+	    },
+	    text: {
+	      type: String
+	    },
+	    iconUrl: {
+	      type: String
+	    },
+	    id: {
+	      type: String
+	    },
+	    disabled: {
+	      type: Boolean
+	    },
+	    seperator: {
+	      type: Boolean
+	    }
+	  },
+	  methods: {
+	    reload: function reload() {
+	      this.$parent.reloadContextMenu();
+	    }
+	  },
+	  watch: {
+	    text: function text() {
+	      this.reload();
+	    },
+	    iconUrl: function iconUrl() {
+	      this.reload();
+	    },
+	    id: function id() {
+	      this.reload();
+	    },
+	    disabled: function disabled() {
+	      this.reload();
+	    },
+	    iseperator: function iseperator() {
+	      this.reload();
+	    },
+	    callback: function callback() {
+	      this.reload();
+	    }
+	  },
+	  destroyed: function destroyed() {
+	    this.reload();
+	  },
+	  mounted: function mounted() {
+	    this.reload();
+	  }
+	};
+
+/***/ },
+/* 42 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('span', [_vm._t("default")], 2)
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-6f87ddde", module.exports)
 	  }
 	}
 
