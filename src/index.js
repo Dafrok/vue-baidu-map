@@ -13,6 +13,8 @@ import MapOverlayPolygon from './overlays/Polygon.vue'
 import MapOverlayCircle from './overlays/Circle.vue'
 import MapOverlayLabel from './overlays/Label.vue'
 import MapOverlayInfoWindow from './overlays/InfoWindow.vue'
+import MapContextMenu from './context-menu/menu.vue'
+import MapContextMenuItem from './context-menu/item.vue'
 
 export default {
   install (Vue, options) {
@@ -39,5 +41,8 @@ export default {
     Vue.component('map-overlay-circle', MapOverlayCircle)
     Vue.component('map-overlay-label', MapOverlayLabel)
     Vue.component('map-overlay-info-window', MapOverlayInfoWindow)
+
+    Vue.component('map-context-menu', MapContextMenu)
+    Vue.component('map-context-menu-item', MapContextMenuItem)
   }
 }
