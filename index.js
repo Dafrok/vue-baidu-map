@@ -386,6 +386,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    autoResize: {
 	      type: Boolean,
 	      default: true
+	    },
+	    theme: {
+	      type: Array
 	    }
 	  },
 	  watch: {
@@ -476,6 +479,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var map = this.map;
 
 	      val ? map.enableAutoResize() : map.disableAutoResize();
+	    },
+	    theme: function theme(val) {
+	      map.setMapStyle({ styleJson: val });
 	    }
 	  },
 	  methods: {
@@ -512,8 +518,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	          maxZoom = this.maxZoom,
 	          zoom = this.zoom,
 	          center = this.center,
-	          getCenterPoint = this.getCenterPoint;
+	          getCenterPoint = this.getCenterPoint,
+	          theme = this.theme;
 
+	      map.setMapStyle({ styleJson: theme });
 	      setMapOptions();
 	      _bindEvent2.default.call(this, map);
 	      map.centerAndZoom(getCenterPoint(center), maxZoom || zoom || 3);
