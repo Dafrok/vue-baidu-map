@@ -62,6 +62,9 @@ export default {
     autoResize: {
       type: Boolean,
       default: true
+    },
+    theme: {
+      type: Array
     }
   },
   watch: {
@@ -138,6 +141,9 @@ export default {
     autoResize (val) {
       const  {map} = this
       val ? map.enableAutoResize() : map.disableAutoResize()
+    },
+    theme (val) {
+      map.setMapStyle({styleJson: val});
     }
   },
   methods: {
@@ -158,7 +164,8 @@ export default {
     init (BMap) {
       const map = new BMap.Map(this.$el, {enableHighResolution: this.highResolution, enableMapClick: this.mapClick})
       this.map = map
-      const {setMapOptions, maxZoom, zoom, center, getCenterPoint} = this
+      const {setMapOptions, maxZoom, zoom, center, getCenterPoint, theme} = this
+      map.setMapStyle({styleJson: theme});
       setMapOptions()
       bindEvents.call(this, map)
       map.centerAndZoom(getCenterPoint(center), maxZoom || zoom || 3)

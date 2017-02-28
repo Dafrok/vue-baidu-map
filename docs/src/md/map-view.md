@@ -23,6 +23,7 @@
 |continuous-zoom|Boolean|false|允许无级缩放|
 |pinch-to-zoom|Boolean|true|允许双指缩放|
 |auto-resize|Boolean|true|允许自适应容器尺寸|
+|theme|Array|undefined|自定义主题|
 
 ## 事件
 |事件名|参数|描述|
@@ -62,6 +63,12 @@
 |touchend|{type, target, point,pixel}|触摸结束时触发此事件，仅适用移动设备|
 |longpress|{type, target, point,pixel}|长按事件，仅适用移动设备|
 
+## 自定义主题
+
+百度地图实例允许用户设置自定义配色风格以配合不同风格的主题设计。
+
+> 主题数据格式请参考：[百度地图主题编辑器](http://developer.baidu.com/map/custom/)
+
 ## 示例
 
 ### 设置经纬度和缩放等级
@@ -99,6 +106,50 @@
 <doc-preview>
   <baidu-map slot="map">
     <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" :scroll-wheel-zoom="true">
+  </baidu-map>
+</doc-preview>
+
+### 设置自定义主题
+
+#### 代码
+
+```html
+<template>
+  <baidu-map>
+    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" :theme="theme">
+  </baidu-map>
+</template>
+<script>
+export default {
+  data () {
+    return {
+      theme: [
+        {
+          "featureType": "all",
+          "elementType": "geometry",
+          "stylers": {
+              "hue": "#007fff",
+              "saturation": 89
+          }
+        },
+        {
+          "featureType": "water",
+          "elementType": "all",
+          "stylers": {
+              "color": "#ffffff"
+          }
+        }
+      ]
+    }
+  }
+}
+</script>
+```
+
+#### 预览
+<doc-preview>
+  <baidu-map slot="map">
+    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" :theme="theme">
   </baidu-map>
 </doc-preview>
 
@@ -210,7 +261,24 @@ export default {
         lng: 116.404,
         lat: 39.915
       },
-      zoom: 15
+      zoom: 15,
+      theme: [
+        {
+          "featureType": "all",
+          "elementType": "geometry",
+          "stylers": {
+              "hue": "#007fff",
+              "saturation": 89
+          }
+        },
+        {
+          "featureType": "water",
+          "elementType": "all",
+          "stylers": {
+              "color": "#ffffff"
+          }
+        }
+      ]
     }
   },
   methods: {
