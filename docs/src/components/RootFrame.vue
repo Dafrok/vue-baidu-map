@@ -11,7 +11,7 @@ div.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header
           i.material-icons.iconfont.icon-github
   div.mdl-layout__drawer(@click="close", ref="drawer")
     router-link(to="/").logo
-      img(src="../../favicon.png")
+      img(src="//dafrok.github.io/vue-baidu-map/favicon.png")
     slot(name="navigation")
   main.mdl-layout__content(ref="main")
     .page-content
