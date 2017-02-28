@@ -4,14 +4,12 @@
 
 <p align="center">基于 VUE 2.0 的百度地图组件
 
-## 特性
+## 仓库
 
-- 为大部分实例属性提供双向绑定的支持。
-- 足够完善的实例事件处理模式。
-- 纯异步渲染。
+[Github](https://github.com/Dafrok/vue-baidu-map)
 
 ## 协议
 
-> [MIT](https://opensource.org/licenses/MIT)
+> [MIT License](https://opensource.org/licenses/MIT)
 
 Copyright (c) 2016-present, Dafrok

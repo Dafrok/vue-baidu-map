@@ -95,6 +95,10 @@ h2 {
   }
 }
 .mdl-navigation__link.is-active {
-  background-color: #e2e2e2;
+  color: #333;
+  font-weight: 700;
+  &::before {
+    content: '★ '
+  }
 }
 </style>

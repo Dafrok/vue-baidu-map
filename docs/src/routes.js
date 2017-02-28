@@ -31,7 +31,7 @@ export default [
   {
     // 首页
     path: '/',
-    name:  '首页',
+    name:  'VUE BAIDU MAP',
     component: DocIndex,
     meta: 'hidden'
   },
@@ -42,11 +42,6 @@ export default [
     name: '开始',
     children: [
       {
-        path: 'base',
-        component: DocStartBase,
-        name: '基础'
-      },
-      {
         path: 'installation',
         component: DocStartInstallation,
         name: '安装'
@@ -56,6 +51,11 @@ export default [
         component: DocStartUsage,
         name: '快速上手'
       },
+      {
+        path: 'base',
+        component: DocStartBase,
+        name: '基础'
+      }
     ]
   },
   {
