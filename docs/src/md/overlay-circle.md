@@ -44,7 +44,7 @@
 <template>
   <baidu-map>
     <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-      <map-overlay-circle :center="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" @lineupdate="updatePolygonPath"/>
+      <map-overlay-circle :center="circlePath.center" :radius="circlePath.radius" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" @lineupdate="updateCirclePath"/>
     </map-view>
   </baidu-map>
 </template>
@@ -53,19 +53,19 @@
 export default {
   data () {
     return {
-      polygonPath: [
-        {lng: 116.412732, lat: 39.911707},
-        {lng: 116.39455, lat: 39.910932},
-        {lng: 116.403461, lat: 39.921336}
-      ]
+      circlePath: {
+        center: {
+          lng: 116.404,
+          lat: 39.915
+        },
+        radius: 500
+      }
     }
   },
   methods: {
-    updatePolygonPath (e) {
-      this.polylinePath = e.target.getPath()
-    },
-    addPolygonPoint () {
-      this.polygonPath.push({lng: 116.404, lat: 39.915})
+    updateCirclePath (e) {
+      this.circlePath.center = e.target.getCenter()
+      this.circlePath.radius = e.target.getRadius()
     }
   }
 }

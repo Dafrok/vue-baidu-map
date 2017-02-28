@@ -9487,7 +9487,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\start-installation-4.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\start-installation-3.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -9498,12 +9498,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-fe864b0c", __vue_options__)
+	    hotAPI.createRecord("data-v-fea27a0e", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-fe864b0c", __vue_options__)
+	    hotAPI.reload("data-v-fea27a0e", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] start-installation-4.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] start-installation-3.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -9523,7 +9523,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-fe864b0c", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-fea27a0e", module.exports)
 	  }
 	}
 
@@ -9553,7 +9553,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\start-usage-8.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\start-usage-5.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -9564,12 +9564,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-27b1d7c3", __vue_options__)
+	    hotAPI.createRecord("data-v-27879140", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-27b1d7c3", __vue_options__)
+	    hotAPI.reload("data-v-27879140", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] start-usage-8.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] start-usage-5.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -9657,7 +9657,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-27b1d7c3", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-27879140", module.exports)
 	  }
 	}
 
@@ -9693,10 +9693,10 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\baidu-map-3.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\baidu-map-4.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-25f2e3f2"
+	__vue_options__._scopeId = "data-v-2600fb73"
 
 	/* hot reload */
 	if (false) {(function () {
@@ -9705,12 +9705,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-25f2e3f2", __vue_options__)
+	    hotAPI.createRecord("data-v-2600fb73", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-25f2e3f2", __vue_options__)
+	    hotAPI.reload("data-v-2600fb73", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] baidu-map-3.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] baidu-map-4.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -9731,8 +9731,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../css-loader/index.js!./../../vue-loader/lib/style-rewriter.js?id=data-v-25f2e3f2&scoped=true!./../../sass-loader/index.js!./../../vue-loader/lib/selector.js?type=styles&index=0!./baidu-map-3.vue", function() {
-				var newContent = require("!!./../../css-loader/index.js!./../../vue-loader/lib/style-rewriter.js?id=data-v-25f2e3f2&scoped=true!./../../sass-loader/index.js!./../../vue-loader/lib/selector.js?type=styles&index=0!./baidu-map-3.vue");
+			module.hot.accept("!!./../../css-loader/index.js!./../../vue-loader/lib/style-rewriter.js?id=data-v-2600fb73&scoped=true!./../../sass-loader/index.js!./../../vue-loader/lib/selector.js?type=styles&index=0!./baidu-map-4.vue", function() {
+				var newContent = require("!!./../../css-loader/index.js!./../../vue-loader/lib/style-rewriter.js?id=data-v-2600fb73&scoped=true!./../../sass-loader/index.js!./../../vue-loader/lib/selector.js?type=styles&index=0!./baidu-map-4.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -9750,7 +9750,7 @@
 
 
 	// module
-	exports.push([module.id, "\n.map.left[data-v-25f2e3f2] {\n  right: 50%;\n}\n.map.right[data-v-25f2e3f2] {\n  left: 50%;\n}\n", ""]);
+	exports.push([module.id, "\n.map.left[data-v-2600fb73] {\n  right: 50%;\n}\n.map.right[data-v-2600fb73] {\n  left: 50%;\n}\n", ""]);
 
 	// exports
 
@@ -10131,7 +10131,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-25f2e3f2", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-2600fb73", module.exports)
 	  }
 	}
 
@@ -10164,7 +10164,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\map-view-7.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\map-view-6.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -10175,12 +10175,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-6fd23324", __vue_options__)
+	    hotAPI.createRecord("data-v-6fee6226", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-6fd23324", __vue_options__)
+	    hotAPI.reload("data-v-6fee6226", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] map-view-7.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] map-view-6.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -11486,7 +11486,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-6fd23324", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-6fee6226", module.exports)
 	  }
 	}
 
@@ -11516,7 +11516,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\control-scale-5.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\control-scale-7.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -11527,12 +11527,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-647ee024", __vue_options__)
+	    hotAPI.createRecord("data-v-649b0f26", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-647ee024", __vue_options__)
+	    hotAPI.reload("data-v-649b0f26", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] control-scale-5.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] control-scale-7.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -11624,7 +11624,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-647ee024", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-649b0f26", module.exports)
 	  }
 	}
 
@@ -11654,7 +11654,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\control-navigation-6.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\control-navigation-8.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -11665,12 +11665,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-71df560a", __vue_options__)
+	    hotAPI.createRecord("data-v-71a6f806", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-71df560a", __vue_options__)
+	    hotAPI.reload("data-v-71a6f806", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] control-navigation-6.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] control-navigation-8.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -11786,7 +11786,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-71df560a", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-71a6f806", module.exports)
 	  }
 	}
 
@@ -11816,7 +11816,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\control-map-type-10.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\control-map-type-12.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -11827,12 +11827,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-9c150d5a", __vue_options__)
+	    hotAPI.createRecord("data-v-9bdcaf56", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-9c150d5a", __vue_options__)
+	    hotAPI.reload("data-v-9bdcaf56", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] control-map-type-10.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] control-map-type-12.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -11945,7 +11945,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-9c150d5a", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-9bdcaf56", module.exports)
 	  }
 	}
 
@@ -12143,7 +12143,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\control-geolocation-12.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\control-geolocation-10.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -12154,12 +12154,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-2907a686", __vue_options__)
+	    hotAPI.createRecord("data-v-28eb7784", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-2907a686", __vue_options__)
+	    hotAPI.reload("data-v-28eb7784", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] control-geolocation-12.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] control-geolocation-10.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -12299,7 +12299,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-2907a686", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-28eb7784", module.exports)
 	  }
 	}
 
@@ -12484,7 +12484,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\control-city-list-13.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\control-city-list-14.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -12495,12 +12495,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-c862d6e6", __vue_options__)
+	    hotAPI.createRecord("data-v-c846a7e4", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-c862d6e6", __vue_options__)
+	    hotAPI.reload("data-v-c846a7e4", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] control-city-list-13.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] control-city-list-14.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -12606,7 +12606,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-c862d6e6", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-c846a7e4", module.exports)
 	  }
 	}
 
@@ -12639,7 +12639,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\overlay-marker-16.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\overlay-marker-13.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -12650,12 +12650,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-61568c7d", __vue_options__)
+	    hotAPI.createRecord("data-v-612c45fa", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-61568c7d", __vue_options__)
+	    hotAPI.reload("data-v-612c45fa", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] overlay-marker-16.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] overlay-marker-13.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -13120,7 +13120,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-61568c7d", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-612c45fa", module.exports)
 	  }
 	}
 
@@ -13779,7 +13779,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\overlay-polygon-17.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\overlay-polygon-16.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -13790,12 +13790,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-20c59204", __vue_options__)
+	    hotAPI.createRecord("data-v-20b77a83", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-20c59204", __vue_options__)
+	    hotAPI.reload("data-v-20b77a83", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] overlay-polygon-17.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] overlay-polygon-16.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -14400,7 +14400,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-20c59204", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-20b77a83", module.exports)
 	  }
 	}
 
@@ -14433,7 +14433,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\overlay-circle-14.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\overlay-circle-17.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -14444,12 +14444,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-72cd8025", __vue_options__)
+	    hotAPI.createRecord("data-v-72f7c6a8", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-72cd8025", __vue_options__)
+	    hotAPI.reload("data-v-72f7c6a8", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] overlay-circle-14.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] overlay-circle-17.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -14998,7 +14998,11 @@
 	    staticClass: "hljs-attr"
 	  }, [_vm._v(":center")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"polylinePath\"")]), _vm._v(" "), _c('span', {
+	  }, [_vm._v("\"circlePath.center\"")]), _vm._v(" "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v(":radius")]), _vm._v("="), _c('span', {
+	    staticClass: "hljs-string"
+	  }, [_vm._v("\"circlePath.radius\"")]), _vm._v(" "), _c('span', {
 	    staticClass: "hljs-attr"
 	  }, [_vm._v("stroke-color")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
@@ -15014,7 +15018,7 @@
 	    staticClass: "hljs-attr"
 	  }, [_vm._v("@lineupdate")]), _vm._v("="), _c('span', {
 	    staticClass: "hljs-string"
-	  }, [_vm._v("\"updatePolygonPath\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
+	  }, [_vm._v("\"updateCirclePath\"")]), _vm._v("/>")]), _vm._v("\n    "), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("</"), _c('span', {
 	    staticClass: "hljs-name"
@@ -15040,45 +15044,27 @@
 	    staticClass: "hljs-keyword"
 	  }, [_vm._v("return")]), _vm._v(" {\n      "), _c('span', {
 	    staticClass: "hljs-attr"
-	  }, [_vm._v("polygonPath")]), _vm._v(": [\n        {"), _c('span', {
+	  }, [_vm._v("circlePath")]), _vm._v(": {\n        "), _c('span', {
+	    staticClass: "hljs-attr"
+	  }, [_vm._v("center")]), _vm._v(": {\n          "), _c('span', {
 	    staticClass: "hljs-attr"
 	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
 	    staticClass: "hljs-number"
-	  }, [_vm._v("116.412732")]), _vm._v(", "), _c('span', {
+	  }, [_vm._v("116.404")]), _vm._v(",\n          "), _c('span', {
 	    staticClass: "hljs-attr"
 	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
 	    staticClass: "hljs-number"
-	  }, [_vm._v("39.911707")]), _vm._v("},\n        {"), _c('span', {
+	  }, [_vm._v("39.915")]), _vm._v("\n        },\n        "), _c('span', {
 	    staticClass: "hljs-attr"
-	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
+	  }, [_vm._v("radius")]), _vm._v(": "), _c('span', {
 	    staticClass: "hljs-number"
-	  }, [_vm._v("116.39455")]), _vm._v(", "), _c('span', {
+	  }, [_vm._v("500")]), _vm._v("\n      }\n    }\n  },\n  "), _c('span', {
 	    staticClass: "hljs-attr"
-	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
-	    staticClass: "hljs-number"
-	  }, [_vm._v("39.910932")]), _vm._v("},\n        {"), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
-	    staticClass: "hljs-number"
-	  }, [_vm._v("116.403461")]), _vm._v(", "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
-	    staticClass: "hljs-number"
-	  }, [_vm._v("39.921336")]), _vm._v("}\n      ]\n    }\n  },\n  "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("methods")]), _vm._v(": {\n    updatePolygonPath (e) {\n      "), _c('span', {
+	  }, [_vm._v("methods")]), _vm._v(": {\n    updateCirclePath (e) {\n      "), _c('span', {
 	    staticClass: "hljs-keyword"
-	  }, [_vm._v("this")]), _vm._v(".polylinePath = e.target.getPath()\n    },\n    addPolygonPoint () {\n      "), _c('span', {
+	  }, [_vm._v("this")]), _vm._v(".circlePath.center = e.target.getCenter()\n      "), _c('span', {
 	    staticClass: "hljs-keyword"
-	  }, [_vm._v("this")]), _vm._v(".polygonPath.push({"), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("lng")]), _vm._v(": "), _c('span', {
-	    staticClass: "hljs-number"
-	  }, [_vm._v("116.404")]), _vm._v(", "), _c('span', {
-	    staticClass: "hljs-attr"
-	  }, [_vm._v("lat")]), _vm._v(": "), _c('span', {
-	    staticClass: "hljs-number"
-	  }, [_vm._v("39.915")]), _vm._v("})\n    }\n  }\n}\n")]), _c('span', {
+	  }, [_vm._v("this")]), _vm._v(".circlePath.radius = e.target.getRadius()\n    }\n  }\n}\n")]), _c('span', {
 	    staticClass: "hljs-tag"
 	  }, [_vm._v("</"), _c('span', {
 	    staticClass: "hljs-name"
@@ -15088,7 +15074,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-72cd8025", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-72f7c6a8", module.exports)
 	  }
 	}
 
@@ -15121,7 +15107,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\overlay-label-18.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\overlay-label-19.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -15132,12 +15118,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-8ef4196a", __vue_options__)
+	    hotAPI.createRecord("data-v-8ed7ea68", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-8ef4196a", __vue_options__)
+	    hotAPI.reload("data-v-8ed7ea68", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] overlay-label-18.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] overlay-label-19.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -15492,7 +15478,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-8ef4196a", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-8ed7ea68", module.exports)
 	  }
 	}
 
@@ -15525,7 +15511,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\overlay-info-window-20.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\overlay-info-window-18.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -15536,12 +15522,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-3e9bdb72", __vue_options__)
+	    hotAPI.createRecord("data-v-412414a0", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-3e9bdb72", __vue_options__)
+	    hotAPI.reload("data-v-412414a0", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] overlay-info-window-20.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] overlay-info-window-18.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -16137,7 +16123,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-3e9bdb72", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-412414a0", module.exports)
 	  }
 	}
 
@@ -16170,7 +16156,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\context-menu-19.vue"
+	__vue_options__.__file = "E:\\Github\\vue-baidu-map\\node_modules\\vue-markdown-loader\\_cache\\context-menu-20.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -16181,12 +16167,12 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-4788785a", __vue_options__)
+	    hotAPI.createRecord("data-v-48be7d70", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-4788785a", __vue_options__)
+	    hotAPI.reload("data-v-48be7d70", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] context-menu-19.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] context-menu-20.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
@@ -16509,7 +16495,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-4788785a", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-48be7d70", module.exports)
 	  }
 	}
 
