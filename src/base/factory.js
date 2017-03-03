@@ -19,12 +19,12 @@ export function createSize(BMap, options = {}) {
 }
 
 export function createIcon(BMap, options = {}) {
-  const {url, size, opts} = options
-  return new BMap.Icon(url, createSize(size), {
-    anchor: anchor && createSize(BMap, opts.anchor),
-    imageOffset: imageOffset && createSize(BMap, opts.imageOffset),
-    infoWindowAnchor: infoWindowAnchor && createSize(BMap, opts.infoWindowAnchor),
-    printImageUrl
+  const {url, size, opts = {}} = options
+  return new BMap.Icon(url, createSize(BMap, size), {
+    anchor: opts.anchor && createSize(BMap, opts.anchor),
+    imageOffset: opts.imageOffset && createSize(BMap, opts.imageOffset),
+    infoWindowAnchor: opts.infoWindowAnchor && createSize(BMap, opts.infoWindowAnchor),
+    printImageUrl: opts.printImageUrl
   })
 }
 
