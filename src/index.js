@@ -13,8 +13,9 @@ import MapOverlayPolygon from './overlays/Polygon.vue'
 import MapOverlayCircle from './overlays/Circle.vue'
 import MapOverlayLabel from './overlays/Label.vue'
 import MapOverlayInfoWindow from './overlays/InfoWindow.vue'
-import MapContextMenu from './context-menu/menu.vue'
-import MapContextMenuItem from './context-menu/item.vue'
+import MapContextMenu from './context-menu/Menu.vue'
+import MapContextMenuItem from './context-menu/Item.vue'
+import MapLocalSearch from './search/LocalSearch.vue'
 
 export default {
   install (Vue, options) {
@@ -44,5 +45,7 @@ export default {
 
     Vue.component('map-context-menu', MapContextMenu)
     Vue.component('map-context-menu-item', MapContextMenuItem)
+
+    Vue.component('map-local-search', MapLocalSearch)
   }
 }

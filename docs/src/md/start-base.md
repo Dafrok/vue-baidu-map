@@ -63,6 +63,14 @@
 |BMAP_UNIT_METRIC|公制单位|
 |BMAP_UNIT_IMPERIAL|英制单位|
 
+### HighlightModes
+
+此常量用于描述对象当前状态。
+
+|常量|描述|
+|----|----|
+|BMAP_HIGHLIGHT_STEP|驾车结果展现中点击列表后的展现点步骤|
+|BMAP_HIGHLIGHT_ROUTE|驾车结果展现中点击列表后的展现路段|
 
 
 

@@ -27,6 +27,8 @@ import DocOverlayInfoWindow from './md/overlay-info-window.md'
 import DocContextMenu from './md/context-menu.md'
 import DocContextMenuItem from './md/context-menu-item.md'
 
+import DocLocalSearch from './md/local-search.md'
+
 export default [
   {
     // 首页
@@ -169,6 +171,18 @@ export default [
         name: '菜单项',
         component: DocContextMenuItem
       },
+    ]
+  },
+  {
+    path: '/search',
+    name: '检索',
+    component: CateView,
+    children: [
+      {
+        path: 'local-search',
+        name: '本地检索',
+        component: DocLocalSearch
+      }
     ]
   }
 ]
