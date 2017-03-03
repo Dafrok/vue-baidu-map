@@ -55,6 +55,7 @@ export default {
     let BMap
     const {addContextMenu, $parent} = this
     switch ($parent.$options._componentTag) {
+      case 'baidu-map':
       case 'map-view':
         map = $parent.map
         map ? addContextMenu() : $parent.$on('ready', () => addContextMenu($parent.BMap, $parent.map, $parent.map))

@@ -17,10 +17,8 @@
 
 ```html
 <template>
-  <baidu-map>
-    <map-view class="map">
-      <map-control-scale anchor="BMAP_ANCHOR_TOP_RIGHT"/>
-    <map-view/>
+  <baidu-map class="map">
+    <map-control-scale anchor="BMAP_ANCHOR_TOP_RIGHT"/>
   </baidu-map>
 </template>
 ```
@@ -28,9 +26,7 @@
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map">
-    <map-view class="map">
-      <map-control-scale anchor="BMAP_ANCHOR_TOP_RIGHT"/>
-    <map-view/>
+  <baidu-map slot="map" class="map">
+    <map-control-scale anchor="BMAP_ANCHOR_TOP_RIGHT"/>
   </baidu-map>
 </doc-preview>

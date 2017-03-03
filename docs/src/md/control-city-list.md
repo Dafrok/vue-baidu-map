@@ -24,10 +24,8 @@
 
 ```html
 <template>
-  <baidu-map>
-    <map-view class="map">
-      <map-control-city-list anchor="BMAP_ANCHOR_TOP_LEFT"/>
-    <map-view/>
+  <baidu-map class="map">
+    <map-control-city-list anchor="BMAP_ANCHOR_TOP_LEFT"/>
   </baidu-map>
 </template>
 ```
@@ -35,9 +33,7 @@
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map">
-    <map-view class="map">
-      <map-control-city-list anchor="BMAP_ANCHOR_TOP_LEFT"/>
-    <map-view/>
+  <baidu-map slot="map" class="map">
+    <map-control-city-list anchor="BMAP_ANCHOR_TOP_LEFT"/>
   </baidu-map>
 </doc-preview>

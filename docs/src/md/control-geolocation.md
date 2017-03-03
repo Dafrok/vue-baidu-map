@@ -26,10 +26,8 @@
 
 ```html
 <template>
-  <baidu-map>
-    <map-view class="map">
-      <map-control-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"/>
-    <map-view/>
+  <baidu-map class="map">
+    <map-control-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"/>
   </baidu-map>
 </template>
 ```
@@ -37,9 +35,7 @@
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map">
-    <map-view class="map">
-      <map-control-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"/>
-    <map-view/>
+  <baidu-map slot="map" class="map">
+    <map-control-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"/>
   </baidu-map>
 </doc-preview>

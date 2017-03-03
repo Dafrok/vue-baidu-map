@@ -1,5 +1,5 @@
 export default {
-  'map-view': [
+  'baidu-map': [
     'click',
     'dblclick',
     'rightclick',

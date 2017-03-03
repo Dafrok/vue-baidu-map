@@ -42,10 +42,8 @@
 
 ```html
 <template>
-  <baidu-map>
-    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-      <map-overlay-circle :center="circlePath.center" :radius="circlePath.radius" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" @lineupdate="updateCirclePath"/>
-    </map-view>
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+    <map-overlay-circle :center="circlePath.center" :radius="circlePath.radius" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" @lineupdate="updateCirclePath"></map-overlay-circle>
   </baidu-map>
 </template>
 
@@ -75,10 +73,8 @@ export default {
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map">
-    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-      <map-overlay-circle :center="circlePath.center" :radius="circlePath.radius" @lineupdate="updateCirclePath"/>
-    </map-view>
+  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+    <map-overlay-circle :center="circlePath.center" :radius="circlePath.radius" @lineupdate="updateCirclePath"></map-overlay-circle>
   </baidu-map>
   <div slot="bottom" class="mdl-card__actions mdl-card--border">
     <div class="mdl-grid">

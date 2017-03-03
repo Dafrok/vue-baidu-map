@@ -13,6 +13,10 @@ export default {
     keyword: {
       type: [Array, String]
     },
+    resultPanel: {
+      type: Boolean,
+      default: true
+    },
     forceLocal: {
       type: Boolean
     },
@@ -79,7 +83,7 @@ export default {
     addLocalSearch () {
       const instance = this
       const {map, BMap} = this.$parent
-      const {search, pageCapacity, autoViewport, selectFirstResult, highlightMode, location} = this
+      const {search, pageCapacity, autoViewport, selectFirstResult, highlightMode, location, resultPanel} = this
       const _location = typeof location === 'object' ? createBounds(location) : location
       const local = this.local = new BMap.LocalSearch(_location || map, {
         onMarkersSet (e) {
@@ -97,7 +101,7 @@ export default {
         pageCapacity: pageCapacity,
         renderOptions: {
           map,
-          panel: this.$el,
+          panel: resultPanel && this.$el,
           selectFirstResult,
           autoViewport,
           highlightMode

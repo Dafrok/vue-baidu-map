@@ -25,13 +25,11 @@
 
 ```html
 <template>
-  <baidu-map>
-    <map-view class="map">
-      <map-context-menu>
-        <map-context-menu-item :callback="gotoBeijing">去北京</map-context-menu-item>
-        <map-context-menu-item :callback="gotoShanghai">去上海</map-context-menu-item>
-      </map-context-menu>
-    <map-view/>
+  <baidu-map class="map" :center="center" :zoom="zoom">
+    <map-context-menu>
+      <map-context-menu-item :callback="gotoBeijing">去北京</map-context-menu-item>
+      <map-context-menu-item :callback="gotoShanghai">去上海</map-context-menu-item>
+    </map-context-menu>
   </baidu-map>
 </template>
 
@@ -67,13 +65,11 @@ export default {
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map">
-    <map-view class="map" :center="center" :zoom="zoom">
-      <map-context-menu>
-        <map-context-menu-item :callback="gotoBeijing" text="去北京"></map-context-menu-item>
-        <map-context-menu-item :callback="gotoShanghai" text="去上海"></map-context-menu-item>
-      </map-context-menu>
-    </map-view>
+  <baidu-map slot="map" class="map" :center="center" :zoom="zoom">
+    <map-context-menu>
+      <map-context-menu-item :callback="gotoBeijing" text="去北京"></map-context-menu-item>
+      <map-context-menu-item :callback="gotoShanghai" text="去上海"></map-context-menu-item>
+    </map-context-menu>
   </baidu-map>
 </doc-preview>
 </template>

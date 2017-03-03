@@ -17,7 +17,7 @@
 
 ```html
 <template>
-  <baidu-map>
+  <baidu-map class="map">
     <map-control-copyright
       anchor="BMAP_ANCHOR_TOP_RIGHT"
       :copyright="[{id: 1, content: 'Copyright Message', bounds: {ne: {lng: 110, lat: 40}, sw:{lng: 0, lat: 0}}}, {id: 2, content: '<a>我是版权信息</a>'}]"/>
@@ -28,11 +28,9 @@
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map">
-    <map-view class="map">
-      <map-control-copyright
-        anchor="BMAP_ANCHOR_TOP_RIGHT"
-        :copyright="[{id: 1, content: 'Copyright Message', bounds: {ne: {lng: 110, lat: 40}, sw:{lng: 0, lat: 0}}}, {id: 2, content: '<a>我是版权信息</a>'}]"/>
-    <map-view/>
+  <baidu-map slot="map" class="map">
+    <map-control-copyright
+      anchor="BMAP_ANCHOR_TOP_RIGHT"
+      :copyright="[{id: 1, content: 'Copyright Message', bounds: {ne: {lng: 110, lat: 40}, sw:{lng: 0, lat: 0}}}, {id: 2, content: '<a>我是版权信息</a>'}]"/>
   </baidu-map>
 </doc-preview>

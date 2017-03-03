@@ -180,7 +180,7 @@ export default [
     children: [
       {
         path: 'local-search',
-        name: '本地检索',
+        name: '地区检索',
         component: DocLocalSearch
       }
     ]

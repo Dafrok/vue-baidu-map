@@ -2,7 +2,7 @@
 
 # 信息窗体
 
-`MapOverlayInfoWindow`
+`MapOverlayInfoWindow` 信息窗体使用 slot 模式渲染子节点。如果您的浏览器支持 `MutationObserver` 方法，在您更新子节点的时候会自动调整信息窗体的尺寸。如果不支持该方法，您需要在更新子节点后手动调用当前 `InfoWindow` 实例的 `overlay.redraw()` 方法更新视图。
 
 ## 属性
 
@@ -41,12 +41,11 @@
 
 ```html
 <template>
-  <baidu-map>
-    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-      <map-overlay-info-window :position="{lng: 116.404, lat: 39.915}" title="Info Window Title" :show="infoWindow.show" @close="infoWindowClose" @open="infoWindowOpen">
-        <p v-text="infoWindow.contents"></p>
-      </map-overlay-info-window>
-    </map-view>
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+    <map-overlay-info-window :position="{lng: 116.404, lat: 39.915}" title="Info Window Title" :show="infoWindow.show" @close="infoWindowClose" @open="infoWindowOpen">
+      <p v-text="infoWindow.contents"></p>
+      <button @click="clear">Clear</button>
+    </map-overlay-info-window>
   </baidu-map>
 </template>
 
@@ -66,6 +65,9 @@ export default {
     },
     infoWindowOpen (e) {
       this.infoWindow.show = true
+    },
+    clear () {
+      this.infoWindow.contents = ''
     }
   }
 }
@@ -74,12 +76,11 @@ export default {
 
 #### 预览
 <doc-preview>
-  <baidu-map slot="map">
-    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-      <map-overlay-info-window :position="{lng: 116.404, lat: 39.915}" title="Info Window Title" :show="infoWindow.show" @close="infoWindowClose" @open="infoWindowOpen">
-        <p v-text="infoWindow.contents"></p>
-      </map-overlay-info-window>
-    </map-view>
+  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+    <map-overlay-info-window :position="{lng: 116.404, lat: 39.915}" title="Info Window Title" :show="infoWindow.show" @close="infoWindowClose" @open="infoWindowOpen">
+      <p v-text="infoWindow.contents"></p>
+      <button @click="clear">Clear</button>
+    </map-overlay-info-window>
   </baidu-map>
   <div slot="bottom" class="mdl-card__actions mdl-card--border">
     <div class="mdl-grid">
@@ -115,6 +116,9 @@ export default {
     },
     infoWindowOpen (e) {
       this.infoWindow.show = true
+    },
+    clear () {
+      this.infoWindow.contents = ''
     }
   }
 }

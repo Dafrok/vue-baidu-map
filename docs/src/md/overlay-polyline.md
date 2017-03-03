@@ -38,10 +38,8 @@
 
 ```html
 <template>
-  <baidu-map>
-    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-      <map-overlay-polyline :points="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolylinePath"/>
-    </map-view>
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+    <map-overlay-polyline :points="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolylinePath"></map-overlay-polyline>
   </baidu-map>
 </template>
 
@@ -71,10 +69,8 @@ export default {
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map">
-    <map-view class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-      <map-overlay-polyline :points="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolylinePath"/>
-    </map-view>
+  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+    <map-overlay-polyline :points="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolylinePath"></map-overlay-polyline>
   </baidu-map>
   <div slot="bottom" class="mdl-card__actions mdl-card--border">
     <div class="mdl-grid" v-for="(point, index) in polylinePath">
