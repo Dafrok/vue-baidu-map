@@ -1,6 +1,6 @@
 <script>
 import bindEvents from '../base/bindEvent.js'
-import {createLabel} from '../base/factory.js'
+import {createLabel, createIcon} from '../base/factory.js'
 
 export default {
   name: 'bm-marker',
@@ -52,7 +52,13 @@ export default {
   watch: {
     point () {},
     offset () {},
-    icon () {},
+    icon: {
+      deep: true,
+      handler (val) {
+        const {BMap} = this.$parent
+        this.overlay.setIcon(createIcon(BMap, val))
+      }
+    },
     massClear (val) {
       val ? this.overlay.enableMassClear() : this.overlay.disableMassClear()
     },
@@ -98,7 +104,7 @@ export default {
       const {BMap, map} = this.$parent
       const overlay = new BMap.Marker(new BMap.Point(point.lng, point.lat), {
         offset,
-        icon,
+        icon: icon && createIcon(BMap, icon),
         enableMassClear: massClear,
         enableDragging: dragging,
         enableClicking: clicking,

@@ -48,7 +48,7 @@
 ```html
 <template>
   <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <bm-marker :point="{lng: 116.404, lat: 39.915}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :label="{content: 'Marker Label', opts: {offset: {width: 20, height: -10}}}"/>
+    <bm-marker :point="{lng: 116.404, lat: 39.915}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :label="{content: 'Marker Label', opts: {offset: {width: 20, height: -10}}}"></bm-marker>
   </baidu-map>
 </template>
 ```
@@ -56,7 +56,26 @@
 #### 预览
 <doc-preview>
   <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <bm-marker :point="markerPoint" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :label="markerLabel"/>
+    <bm-marker :point="markerPoint" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :label="markerLabel"></bm-marker>
+  </baidu-map>
+</doc-preview>
+
+### 添加一个自定义图标的点
+
+#### 代码
+
+```html
+<template>
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+    <bm-marker :point="markerPoint" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :icon="{url: 'http://developer.baidu.com/map/jsdemo/img/fox.gif', size: {width: 300, height: 157}}"></bm-marker>
+  </baidu-map>
+</template>
+```
+
+#### 预览
+<doc-preview>
+  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+    <bm-marker :point="markerPoint" :icon="markerIcon"></bm-marker>
   </baidu-map>
 </doc-preview>
 </template>
@@ -65,6 +84,10 @@
 export default {
   data () {
     return {
+      markerIcon: {
+        url: 'http://developer.baidu.com/map/jsdemo/img/fox.gif',
+        size: {width: 300, height: 157}
+      },
       markerLabel: {
         content: 'Marker Label',
         opts: {
