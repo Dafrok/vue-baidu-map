@@ -29,13 +29,13 @@ Vue.use(BaiduMap, {
 ### 使用
 ```vue
 <template>
-  <baidu-map>
-    <bm-view class="bm-view">
+  <baidu-map class="map">
   </baidu-map>
 </template>
 
 <style>
-.bm-view {
+/* 地图容器必须设置宽和高属性 */
+.map {
   width: 400px;
   height: 300px;
 }
