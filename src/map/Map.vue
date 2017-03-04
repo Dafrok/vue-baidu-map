@@ -195,27 +195,32 @@ export default {
       this.init(BMap)
     },
     getMapScript () {
-      const ak = this._BMap().ak
       if (!global.BMap) {
-        return new Promise((resolve, reject) => {
+        const ak = this._BMap().ak
+        global.BMap = {}
+        global.BMap._preloader = new Promise((resolve, reject) => {
           global._initBaiduMap = function () {
             resolve(global.BMap)
             global.document.body.removeChild($script)
+            global.BMap._preloader = null
             global._initBaiduMap = null
           }
           const $script = document.createElement('script')
           global.document.body.appendChild($script)
           $script.src = `//api.map.baidu.com/api?v=2.0&ak=${ak}&callback=_initBaiduMap`;
         })
+        return global.BMap._preloader
+      } else if (!global.BMap._preloader) {
+        return Promise.resolve(global.BMap)
+      } else {
+        return global.BMap._preloader
       }
-      return Promise.resolve(global.BMap)
     }
   },
   created () {
     const {getMapScript, initMap} = this
     getMapScript()
       .then(initMap)
-      .then()
   }
 }
 </script>
