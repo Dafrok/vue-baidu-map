@@ -20,10 +20,8 @@
 
 ```html
 <template>
-  <baidu-map>
-    <bm-view class="map">
-      <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"/>
-    <bm-view/>
+  <baidu-map class="map">
+    <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"/>
   </baidu-map>
 </template>
 ```
