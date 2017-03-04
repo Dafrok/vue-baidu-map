@@ -2,7 +2,7 @@
 
 # 圆形
 
-`MapOverlayCircle` 圆形覆盖物组件由于内部实现所局限，暂时不能进行双向绑定。
+`BmCircle` 圆形覆盖物组件由于内部实现所局限，暂时不能进行双向绑定。
 
 ## 属性
 
@@ -43,7 +43,7 @@
 ```html
 <template>
   <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <map-overlay-circle :center="circlePath.center" :radius="circlePath.radius" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" @lineupdate="updateCirclePath"></map-overlay-circle>
+    <bm-circle :center="circlePath.center" :radius="circlePath.radius" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" @lineupdate="updateCirclePath"></bm-circle>
   </baidu-map>
 </template>
 
@@ -74,7 +74,7 @@ export default {
 
 <doc-preview>
   <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <map-overlay-circle :center="circlePath.center" :radius="circlePath.radius" @lineupdate="updateCirclePath"></map-overlay-circle>
+    <bm-circle :center="circlePath.center" :radius="circlePath.radius" @lineupdate="updateCirclePath"></bm-circle>
   </baidu-map>
   <div slot="bottom" class="mdl-card__actions mdl-card--border">
     <div class="mdl-grid">

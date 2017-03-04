@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'map-control-map-type',
+  name: 'bm-map-type',
   render (h) {
     return
   },

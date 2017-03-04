@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'map-control-copyright',
+  name: 'bm-copyright',
   render (h) {
     return
   },

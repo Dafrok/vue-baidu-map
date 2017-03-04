@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'map-control-navigation',
+  name: 'bm-navigation',
   render (h) {
     return
   },

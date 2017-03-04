@@ -1,8 +1,8 @@
 <template lang="md">
 
-# 右键菜单
+# 上下文菜单
 
-`MapContextMenu`
+`BmContextMenu`
 
 ## 属性
 
@@ -26,10 +26,10 @@
 ```html
 <template>
   <baidu-map class="map" :center="center" :zoom="zoom">
-    <map-context-menu>
-      <map-context-menu-item :callback="gotoBeijing">去北京</map-context-menu-item>
-      <map-context-menu-item :callback="gotoShanghai">去上海</map-context-menu-item>
-    </map-context-menu>
+    <bm-context-menu>
+      <bm-context-menu-item :callback="gotoBeijing">去北京</bm-context-menu-item>
+      <bm-context-menu-item :callback="gotoShanghai">去上海</bm-context-menu-item>
+    </bm-context-menu>
   </baidu-map>
 </template>
 
@@ -66,10 +66,10 @@ export default {
 
 <doc-preview>
   <baidu-map slot="map" class="map" :center="center" :zoom="zoom">
-    <map-context-menu>
-      <map-context-menu-item :callback="gotoBeijing" text="去北京"></map-context-menu-item>
-      <map-context-menu-item :callback="gotoShanghai" text="去上海"></map-context-menu-item>
-    </map-context-menu>
+    <bm-context-menu>
+      <bm-context-menu-item :callback="gotoBeijing" text="去北京"></bm-context-menu-item>
+      <bm-context-menu-item :callback="gotoShanghai" text="去上海"></bm-context-menu-item>
+    </bm-context-menu>
   </baidu-map>
 </doc-preview>
 </template>

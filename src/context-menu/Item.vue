@@ -4,7 +4,7 @@ span
 </template>
 <script>
 export default {
-  name: 'map-context-menu-item',
+  name: 'bm-context-menu-item',
   props: {
     callback: {
       type: Function,

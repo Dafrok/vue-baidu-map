@@ -7,7 +7,7 @@ div
 import bindEvents from '../base/bindEvent.js'
 import {createPoint, createSize} from '../base/factory.js'
 export default {
-  name: 'map-overlay-info-window',
+  name: 'bm-info-window',
   props: {
     show: {
       type: Boolean

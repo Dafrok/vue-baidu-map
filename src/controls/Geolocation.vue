@@ -2,7 +2,7 @@
 import bindEvents from '../base/bindEvent.js'
 
 export default {
-  name: 'map-control-geolocation',
+  name: 'bm-geolocation',
   render (h) {
     return
   },

@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'map-control-scale',
+  name: 'bm-scale',
   render (h) {
     return
   },

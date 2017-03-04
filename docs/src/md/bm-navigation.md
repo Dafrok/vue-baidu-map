@@ -1,6 +1,6 @@
 # 缩放控件
 
-`MapControlNavigation`
+`BmNavigation`
 
 ## 属性
 
@@ -21,9 +21,9 @@
 ```html
 <template>
   <baidu-map>
-    <map-view class="map">
-      <map-control-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"/>
-    <map-view/>
+    <bm-view class="map">
+      <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"/>
+    <bm-view/>
   </baidu-map>
 </template>
 ```
@@ -31,7 +31,7 @@
 #### 预览
 <doc-preview>
   <baidu-map slot="map" class="map">
-    <map-control-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"/>
+    <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"/>
   </baidu-map>
 </doc-preview>
   

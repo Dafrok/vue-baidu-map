@@ -3,7 +3,7 @@ import bindEvents from '../base/bindEvent.js'
 import {createPoint} from '../base/factory.js'
 
 export default {
-  name: 'map-overlay-polygon',
+  name: 'bm-polygon',
   render (h) {
     return
   },

@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'map-control-city-list',
+  name: 'bm-city-list',
   render (h) {
     return
   },

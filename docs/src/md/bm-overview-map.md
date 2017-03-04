@@ -1,6 +1,6 @@
 # 缩略图控件
 
-`MapControlOverviewMap`
+`BmOverviewMap`
 
 ## 属性
 
@@ -26,7 +26,7 @@
 ```html
 <template>
   <baidu-map class="map">
-    <map-control-overview-map anchor="BMAP_ANCHOR_BOTTOM_RIGHT"/>
+    <bm-overview-map anchor="BMAP_ANCHOR_BOTTOM_RIGHT"/>
   </baidu-map>
 </template>
 ```
@@ -34,6 +34,6 @@
 #### 预览
 <doc-preview>
   <baidu-map slot="map" class="map">
-    <map-control-overview-map anchor="BMAP_ANCHOR_BOTTOM_RIGHT"/>
+    <bm-overview-map anchor="BMAP_ANCHOR_BOTTOM_RIGHT"/>
   </baidu-map>
 </doc-preview>

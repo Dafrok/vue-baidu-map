@@ -2,7 +2,7 @@
 
 # 标签
 
-`MapOverlayLabel`
+`BmLabel`
 
 ## 属性
 
@@ -39,7 +39,7 @@
 ```html
 <template>
   <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <map-overlay-label content="This is a label" :position="{lng: 116.404, lat: 39.915}" :labelStyle="{color: 'red', fontSize : '24px'}" title="Hover me"/>
+    <bm-label content="This is a label" :position="{lng: 116.404, lat: 39.915}" :labelStyle="{color: 'red', fontSize : '24px'}" title="Hover me"/>
   </baidu-map>
 </template>
 ```
@@ -47,7 +47,7 @@
 #### 预览
 <doc-preview>
   <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <map-overlay-label content="This is a label" :position="{lng: 116.404, lat: 39.915}" :labelStyle="labelStyle" title="Hover me"/>
+    <bm-label content="This is a label" :position="{lng: 116.404, lat: 39.915}" :labelStyle="labelStyle" title="Hover me"/>
   </baidu-map>
 </doc-preview>
 </template>

@@ -1,6 +1,6 @@
 import Map from './map/Map.vue'
-import MapView from './map/MapView.vue'
-import MapControlScale from './controls/Scale.vue'
+import BmView from './map/MapView.vue'
+import BmScale from './controls/Scale.vue'
 import MapControlNavigation from './controls/Navigation.vue'
 import MapControlMapType from './controls/MapType.vue'
 import MapControlOverviewMap from './controls/OverviewMap.vue'
@@ -26,26 +26,26 @@ export default {
       }
     }
     Vue.component('baidu-map', Map)
-    Vue.component('map-view', MapView)
+    Vue.component('bm-view', BmView)
 
-    Vue.component('map-control-scale', MapControlScale)
-    Vue.component('map-control-navigation', MapControlNavigation)
-    Vue.component('map-control-map-type', MapControlMapType)
-    Vue.component('map-control-overview-map', MapControlOverviewMap)
-    Vue.component('map-control-geolocation', MapControlGeolocation)
-    Vue.component('map-control-copyright', MapControlCopyright)
-    Vue.component('map-control-city-list', MapControlCityList)
+    Vue.component('bm-scale', BmScale)
+    Vue.component('bm-navigation', MapControlNavigation)
+    Vue.component('bm-map-type', MapControlMapType)
+    Vue.component('bm-overview-map', MapControlOverviewMap)
+    Vue.component('bm-geolocation', MapControlGeolocation)
+    Vue.component('bm-copyright', MapControlCopyright)
+    Vue.component('bm-city-list', MapControlCityList)
 
-    Vue.component('map-overlay-marker', MapOverlayMarker)
-    Vue.component('map-overlay-polyline', MapOverlayPolyline)
-    Vue.component('map-overlay-polygon', MapOverlayPolygon)
-    Vue.component('map-overlay-circle', MapOverlayCircle)
-    Vue.component('map-overlay-label', MapOverlayLabel)
-    Vue.component('map-overlay-info-window', MapOverlayInfoWindow)
+    Vue.component('bm-marker', MapOverlayMarker)
+    Vue.component('bm-polyline', MapOverlayPolyline)
+    Vue.component('bm-polygon', MapOverlayPolygon)
+    Vue.component('bm-circle', MapOverlayCircle)
+    Vue.component('bm-label', MapOverlayLabel)
+    Vue.component('bm-info-window', MapOverlayInfoWindow)
 
-    Vue.component('map-context-menu', MapContextMenu)
-    Vue.component('map-context-menu-item', MapContextMenuItem)
+    Vue.component('bm-context-menu', MapContextMenu)
+    Vue.component('bm-context-menu-item', MapContextMenuItem)
 
-    Vue.component('map-local-search', MapLocalSearch)
+    Vue.component('bm-local-search', MapLocalSearch)
   }
 }

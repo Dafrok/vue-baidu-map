@@ -2,6 +2,8 @@
 
 # 地区检索
 
+`bm-local-search`
+
 ## 属性
 
 |属性名|类型 |默认值|描述|
@@ -34,10 +36,10 @@
 <template>
 <label>关键词：<input v-model="keyword"></label>
 <label>地区：<input v-model="location"></label>
-<baidu-map class="doc-map-container">
-  <map-view class="doc-map-view">
-  </map-view>
-  <map-local-search class="doc-local-search" :keyword="keyword" :auto-viewport="true" :location="location"></map-local-search>
+<baidu-map class="map-container">
+  <bm-view class="bm-view">
+  </bm-view>
+  <bm-local-search :keyword="keyword" :auto-viewport="true" :location="location"></bm-local-search>
 </baidu-map>
 </template>
 
@@ -53,12 +55,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.doc-map-container {
-  .doc-map-view {
-    width: 100%;
-    height: 400px;
-  }
-  .doc-local-search {
+.map-container {
+  .bm-view {
     width: 100%;
     height: 400px;
   }
@@ -72,10 +70,10 @@ export default {
 <label>关键词：<input v-model="keyword"></label>
 <label>地区：<input v-model="location"></label>
 
-<baidu-map class="doc-map-container">
-  <map-view class="doc-map-view">
-  </map-view>
-  <map-local-search class="doc-local-search" :keyword="keyword" :auto-viewport="true" :location="location"></map-local-search>
+<baidu-map class="map-container">
+  <bm-view class="bm-view">
+  </bm-view>
+  <bm-local-search :keyword="keyword" :auto-viewport="true" :location="location"></bm-local-search>
 </baidu-map>
 </template>
 
@@ -90,15 +88,15 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.doc-map-container {
-  .doc-map-view {
+<style lang="sass">
+.map-container {
+  .bm-view {
     width: 100%;
     height: 400px;
-  }
-  .doc-local-search {
-    width: 100%;
-    height: 400px;
+    img {
+      max-width: none!important;
+      background: none!important;
+    }
   }
 }
 </style>

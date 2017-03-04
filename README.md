@@ -30,12 +30,12 @@ Vue.use(BaiduMap, {
 ```vue
 <template>
   <baidu-map>
-    <map-view class="map-view">
+    <bm-view class="bm-view">
   </baidu-map>
 </template>
 
 <style>
-.map-view {
+.bm-view {
   width: 400px;
   height: 300px;
 }

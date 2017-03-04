@@ -5,7 +5,7 @@ div
 
 <script>
 export default {
-  name: 'map-context-menu',
+  name: 'bm-context-menu',
   props: {
     width: {
       type: Number
@@ -56,11 +56,11 @@ export default {
     const {addContextMenu, $parent} = this
     switch ($parent.$options._componentTag) {
       case 'baidu-map':
-      case 'map-view':
+      case 'bm-view':
         map = $parent.map
         map ? addContextMenu() : $parent.$on('ready', () => addContextMenu($parent.BMap, $parent.map, $parent.map))
         break;
-      case 'map-overlay-marker':
+      case 'bm-marker':
         map = $parent.$parent.map
         map ? addContextMenu() : $parent.$parent.$on('ready', () => addContextMenu($parent.$parent.BMap, $parent.overlay, $parent.$parent.map))
         break;

@@ -34,15 +34,15 @@ export default {
     'touchend',
     'longpress'
   ],
-  'map-control-geolocation': [
+  'bm-geolocation': [
     'locationSuccess',
     'locationError'
   ],
-  'map-control-overview-map': [
+  'bm-overview-map': [
     'viewchanged',
     'viewchanging'
   ],
-  'map-overlay-marker': [
+  'bm-marker': [
     'click',
     'dblclick',
     'mousedown',
@@ -57,7 +57,7 @@ export default {
     'dragend',
     'rightclick'
   ],
-  'map-overlay-polyline': [
+  'bm-polyline': [
     'click',
     'dblclick',
     'mousedown',
@@ -67,7 +67,7 @@ export default {
     'remove',
     'lineupdate'
   ],
-  'map-overlay-polygon': [
+  'bm-polygon': [
     'click',
     'dblclick',
     'mousedown',
@@ -77,7 +77,7 @@ export default {
     'remove',
     'lineupdate'
   ],
-  'map-overlay-circle': [
+  'bm-circle': [
     'click',
     'dblclick',
     'mousedown',
@@ -87,7 +87,7 @@ export default {
     'remove',
     'lineupdate'
   ],
-  'map-overlay-label': [
+  'bm-label': [
     'click',
     'dblclick',
     'mousedown',
@@ -97,7 +97,7 @@ export default {
     'remove',
     'rightclick'
   ],
-  'map-overlay-info-window': [
+  'bm-info-window': [
     'close',
     'open',
     'maximize',

@@ -1,6 +1,6 @@
 # 比例尺控件
 
-`MapControlScale`
+`BmScale`
 
 ## 属性
 
@@ -18,7 +18,7 @@
 ```html
 <template>
   <baidu-map class="map">
-    <map-control-scale anchor="BMAP_ANCHOR_TOP_RIGHT"/>
+    <bm-scale anchor="BMAP_ANCHOR_TOP_RIGHT"/>
   </baidu-map>
 </template>
 ```
@@ -27,6 +27,6 @@
 
 <doc-preview>
   <baidu-map slot="map" class="map">
-    <map-control-scale anchor="BMAP_ANCHOR_TOP_RIGHT"/>
+    <bm-scale anchor="BMAP_ANCHOR_TOP_RIGHT"/>
   </baidu-map>
 </doc-preview>

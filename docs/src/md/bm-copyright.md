@@ -1,5 +1,5 @@
 # 版权控件
-`MapControlCopyright`
+`BmCopyright`
 
 ## 属性
 
@@ -18,7 +18,7 @@
 ```html
 <template>
   <baidu-map class="map">
-    <map-control-copyright
+    <bm-copyright
       anchor="BMAP_ANCHOR_TOP_RIGHT"
       :copyright="[{id: 1, content: 'Copyright Message', bounds: {ne: {lng: 110, lat: 40}, sw:{lng: 0, lat: 0}}}, {id: 2, content: '<a>我是版权信息</a>'}]"/>
   </baidu-map>
@@ -29,7 +29,7 @@
 
 <doc-preview>
   <baidu-map slot="map" class="map">
-    <map-control-copyright
+    <bm-copyright
       anchor="BMAP_ANCHOR_TOP_RIGHT"
       :copyright="[{id: 1, content: 'Copyright Message', bounds: {ne: {lng: 110, lat: 40}, sw:{lng: 0, lat: 0}}}, {id: 2, content: '<a>我是版权信息</a>'}]"/>
   </baidu-map>

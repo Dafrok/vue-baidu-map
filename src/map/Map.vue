@@ -6,7 +6,7 @@ div
 <script>
 import bindEvents from '../base/bindEvent.js'
 export default {
-  name: 'map-view',
+  name: 'bm-view',
   props: {
     center: {
       type: [Object, String]
@@ -164,7 +164,7 @@ export default {
     init (BMap) {
       let $el = this.$el
       for (let $node of this.$slots.default || []) {
-        if ($node.componentOptions && $node.componentOptions.tag === 'map-view') {
+        if ($node.componentOptions && $node.componentOptions.tag === 'bm-view') {
           $el = $node.elm
         }
       }

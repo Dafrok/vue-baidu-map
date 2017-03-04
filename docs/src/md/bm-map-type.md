@@ -1,6 +1,6 @@
 # 地图类型控件
 
-`MapControlMapType`
+`BmMapType`
 
 ## 属性
 
@@ -20,7 +20,7 @@
 ```html
 <template>
   <baidu-map class="map">
-    <map-control-map-type :map-types="['BMAP_NORMAL_MAP', 'BMAP_HYBRID_MAP']" anchor="BMAP_ANCHOR_TOP_LEFT"/>
+    <bm-map-type :map-types="['BMAP_NORMAL_MAP', 'BMAP_HYBRID_MAP']" anchor="BMAP_ANCHOR_TOP_LEFT"/>
   </baidu-map>
 </template>
 ```
@@ -29,6 +29,6 @@
 
 <doc-preview>
   <baidu-map slot="map" class="map">
-    <map-control-map-type :map-types="['BMAP_NORMAL_MAP', 'BMAP_HYBRID_MAP']" anchor="BMAP_ANCHOR_TOP_LEFT"/>
+    <bm-map-type :map-types="['BMAP_NORMAL_MAP', 'BMAP_HYBRID_MAP']" anchor="BMAP_ANCHOR_TOP_LEFT"/>
   </baidu-map>
 </doc-preview>

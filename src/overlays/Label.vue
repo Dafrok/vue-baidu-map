@@ -3,7 +3,7 @@ import bindEvents from '../base/bindEvent.js'
 import {createPoint, createSize} from '../base/factory.js'
 
 export default {
-  name: 'map-overlay-label',
+  name: 'bm-label',
   render (h) {
     return
   },

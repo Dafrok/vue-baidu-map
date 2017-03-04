@@ -4,6 +4,6 @@ div
 
 <script>
 export default {
-  name: 'map-view'
+  name: 'bm-view'
 }
 </script>

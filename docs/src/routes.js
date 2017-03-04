@@ -7,27 +7,27 @@ import DocStartInstallation from './md/start-installation.md'
 import DocStartUsage from './md/start-usage.md'
 
 import DocBaiduMap from './md/baidu-map.md'
-import DocMapView from './md/map-view.md'
+import DocBmView from './md/bm-view.md'
 
-import DocControlScale from './md/control-scale.md'
-import DocControlNavigation from './md/control-navigation.md'
-import DocControlMapType from './md/control-map-type.md'
-import DocControlOverviewMap from './md/control-overview-map.md'
-import DocControlGeolocation from './md/control-geolocation.md'
-import DocControlCopyright from './md/control-copyright.md'
-import DocControlCityList from './md/control-city-list.md'
+import DocControlScale from './md/bm-scale.md'
+import DocControlNavigation from './md/bm-navigation.md'
+import DocControlMapType from './md/bm-map-type.md'
+import DocControlOverviewMap from './md/bm-overview-map.md'
+import DocControlGeolocation from './md/bm-geolocation.md'
+import DocControlCopyright from './md/bm-copyright.md'
+import DocControlCityList from './md/bm-city-list.md'
 
-import DocOverlayMarker from './md/overlay-marker.md'
-import DocOverlayPolyline from './md/overlay-polyline.md'
-import DocOverlayPolygon from './md/overlay-polygon.md'
-import DocOverlayCircle from './md/overlay-circle.md'
-import DocOverlayLabel from './md/overlay-label.md'
-import DocOverlayInfoWindow from './md/overlay-info-window.md'
+import DocOverlayMarker from './md/bm-marker.md'
+import DocOverlayPolyline from './md/bm-polyline.md'
+import DocOverlayPolygon from './md/bm-polygon.md'
+import DocOverlayCircle from './md/bm-circle.md'
+import DocOverlayLabel from './md/bm-label.md'
+import DocOverlayInfoWindow from './md/bm-info-window.md'
 
-import DocContextMenu from './md/context-menu.md'
-import DocContextMenuItem from './md/context-menu-item.md'
+import DocContextMenu from './md/bm-context-menu.md'
+import DocContextMenuItem from './md/bm-context-menu-item.md'
 
-import DocLocalSearch from './md/local-search.md'
+import DocLocalSearch from './md/bm-local-search.md'
 
 export default [
   {
@@ -71,8 +71,8 @@ export default [
         name: '地图容器'
       },
       {
-        path: 'map-view',
-        component: DocMapView,
+        path: 'bm-view',
+        component: DocBmView,
         name: '地图视图'
       },
     ]
@@ -163,7 +163,7 @@ export default [
     children: [
       {
         path: 'menu',
-        name: '菜单容器',
+        name: '上下文菜单',
         component: DocContextMenu
       },
       {

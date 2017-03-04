@@ -1,8 +1,8 @@
 <template lang="md">
 
-# 折线
+# 多边形
 
-`MapOverlayPolyline`
+`BmPolygon`
 
 ## 属性
 
@@ -13,6 +13,8 @@
 |strokeWeight|Number|undefined|折线的宽度，以像素为单位|
 |strokeOpacity|Number|undefined|折线的透明度，取值范围0 - 1|
 |strokeStyle|String|'solid'|折线的样式，solid或dashed|
+|fillColor|String|undefined|填充颜色。当参数为空时，折线覆盖物将没有填充效果|
+|fillOpacity|Number|undefined|填充的透明度，取值范围0 - 1|
 |enableMassClear|Boolean|true|是否在调用map.clearOverlays清除此覆盖物|
 |enableEditing|Boolean|false|是否启用线编辑|
 |enableClicking|Boolean|true|是否响应点击事件|
@@ -30,16 +32,17 @@
 |remove|event{type, target}|移除折线时触发|
 |lineupdate|event{type, target}|覆盖物的属性发生变化时触发|
 
+
 ## 示例
 
-### 在地图中添加可编辑的折线
+### 在地图中添加可编辑的多边形
 
 #### 代码
 
 ```html
 <template>
   <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <map-overlay-polyline :points="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolylinePath"></map-overlay-polyline>
+    <bm-polygon :points="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolygonPath"/>
   </baidu-map>
 </template>
 
@@ -47,19 +50,19 @@
 export default {
   data () {
     return {
-      polylinePath: [
-        {lng: 116.404, lat: 39.915},
-        {lng: 116.405, lat: 39.920},
-        {lng: 116.423493, lat: 39.907445}
+      polygonPath: [
+        {lng: 116.412732, lat: 39.911707},
+        {lng: 116.39455, lat: 39.910932},
+        {lng: 116.403461, lat: 39.921336}
       ]
     }
   },
   methods: {
-    updatePolylinePath (e) {
+    updatePolygonPath (e) {
       this.polylinePath = e.target.getPath()
     },
-    addPolylinePoint () {
-      this.polylinePath.push({lng: 116.404, lat: 39.915})
+    addPolygonPoint () {
+      this.polygonPath.push({lng: 116.404, lat: 39.915})
     }
   }
 }
@@ -70,10 +73,10 @@ export default {
 
 <doc-preview>
   <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <map-overlay-polyline :points="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolylinePath"></map-overlay-polyline>
+    <bm-polygon :points="polygonPath" stroke-color="blue" :stroke-opacity="0.5" :fill-opacity="0.5" :editing="true" @lineupdate="updatePolygonPath"></bm-polygon>
   </baidu-map>
   <div slot="bottom" class="mdl-card__actions mdl-card--border">
-    <div class="mdl-grid" v-for="(point, index) in polylinePath">
+    <div class="mdl-grid" v-for="(point, index) in polygonPath">
       <div class="mdl-cell mdl-cell--6-col">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="point.lng">
@@ -90,7 +93,7 @@ export default {
       </div>
     </div>
     <!-- Accent-colored raised button with ripple -->
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" @click="addPolylinePoint">
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" @click="addPolygonPoint">
       添加一个坐标
     </button>
   </div>
@@ -101,19 +104,19 @@ export default {
 export default {
   data () {
     return {
-      polylinePath: [
-        {lng: 116.404, lat: 39.915},
-        {lng: 116.405, lat: 39.920},
-        {lng: 116.423493, lat: 39.907445}
+      polygonPath: [
+        {lng: 116.412732, lat: 39.911707},
+        {lng: 116.39455, lat: 39.910932},
+        {lng: 116.403461, lat: 39.921336}
       ]
     }
   },
   methods: {
-    updatePolylinePath (e) {
-      this.polylinePath = e.target.getPath()
+    updatePolygonPath (e) {
+      this.polygonPath = e.target.getPath()
     },
-    addPolylinePoint () {
-      this.polylinePath.push({lng: 116.404, lat: 39.915})
+    addPolygonPoint () {
+      this.polygonPath.push({lng: 116.404, lat: 39.915})
       this.$nextTick(global.componentHandler.upgradeDom)
     }
   }

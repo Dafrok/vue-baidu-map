@@ -5,7 +5,7 @@ div
 <script>
 import {createBounds} from '../base/factory.js'
 export default {
-  name: 'map-local-search',
+  name: 'bm-local-search',
   props: {
     location: {
       type: [Object, String]

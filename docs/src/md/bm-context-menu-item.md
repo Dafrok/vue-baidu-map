@@ -2,7 +2,7 @@
 
 # 菜单项
 
-`MapContextMenuItem` 菜单项是右键菜单的子组件，请勿在其他组件中使用。
+`BmContextMenuItem` 菜单项是右键菜单的子组件，请勿在其他组件中使用。
 
 ## 属性
 
@@ -23,12 +23,12 @@
 ```html
 <template>
   <baidu-map class="map" :center="center" :zoom="zoom">
-    <map-context-menu>
-      <map-context-menu-item :callback="gotoBeijing" text="去北京"></map-context-menu-item>
-      <map-context-menu-item :callback="gotoShanghai" text="去上海" iconUrl="http://lbsyun.baidu.com/skins/MySkin/resources/img/red.png"></map-context-menu-item>
-      <map-context-menu-item seperator></map-context-menu-item>
-      <map-context-menu-item disabled text="去深圳"></map-context-menu-item>
-    </map-context-menu>
+    <bm-context-menu>
+      <bm-context-menu-item :callback="gotoBeijing" text="去北京"></bm-context-menu-item>
+      <bm-context-menu-item :callback="gotoShanghai" text="去上海" iconUrl="http://lbsyun.baidu.com/skins/MySkin/resources/img/red.png"></bm-context-menu-item>
+      <bm-context-menu-item seperator></bm-context-menu-item>
+      <bm-context-menu-item disabled text="去深圳"></bm-context-menu-item>
+    </bm-context-menu>
   </baidu-map>
 </template>
 
@@ -65,12 +65,12 @@ export default {
 
 <doc-preview>
   <baidu-map slot="map" class="map" :center="center" :zoom="zoom">
-    <map-context-menu>
-      <map-context-menu-item :callback="gotoBeijing" text="去北京"></map-context-menu-item>
-      <map-context-menu-item :callback="gotoShanghai" text="去上海" iconUrl="http://lbsyun.baidu.com/skins/MySkin/resources/img/red.png"></map-context-menu-item>
-      <map-context-menu-item seperator></map-context-menu-item>
-      <map-context-menu-item disabled text="去深圳"></map-context-menu-item>
-    </map-context-menu>
+    <bm-context-menu>
+      <bm-context-menu-item :callback="gotoBeijing" text="去北京"></bm-context-menu-item>
+      <bm-context-menu-item :callback="gotoShanghai" text="去上海" iconUrl="http://lbsyun.baidu.com/skins/MySkin/resources/img/red.png"></bm-context-menu-item>
+      <bm-context-menu-item seperator></bm-context-menu-item>
+      <bm-context-menu-item disabled text="去深圳"></bm-context-menu-item>
+    </bm-context-menu>
   </baidu-map>
 </doc-preview>
 </template>

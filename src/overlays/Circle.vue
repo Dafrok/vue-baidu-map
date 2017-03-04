@@ -3,7 +3,7 @@ import bindEvents from '../base/bindEvent.js'
 import {createPoint} from '../base/factory.js'
 
 export default {
-  name: 'map-overlay-circle',
+  name: 'bm-circle',
   render (h) {
     return
   },

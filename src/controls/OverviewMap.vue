@@ -2,7 +2,7 @@
 import bindEvents from '../base/bindEvent.js'
 
 export default {
-  name: 'map-control-overview-map',
+  name: 'bm-overview-map',
   render (h) {
     return
   },

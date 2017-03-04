@@ -1,6 +1,6 @@
 # 定位控件
 
-`MapControlGeolocation`
+`BmGeolocation`
 
 ## 属性
 
@@ -27,7 +27,7 @@
 ```html
 <template>
   <baidu-map class="map">
-    <map-control-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"/>
+    <bm-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"/>
   </baidu-map>
 </template>
 ```
@@ -36,6 +36,6 @@
 
 <doc-preview>
   <baidu-map slot="map" class="map">
-    <map-control-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"/>
+    <bm-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"/>
   </baidu-map>
 </doc-preview>
