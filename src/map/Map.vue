@@ -49,11 +49,11 @@ export default {
     },
     inertialDragging: {
       type: Boolean,
-      default: false
+      default: true
     },
     continuousZoom: {
       type: Boolean,
-      default: false
+      default: true
     },
     pinchToZoom: {
       type: Boolean,
