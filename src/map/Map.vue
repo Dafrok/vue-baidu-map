@@ -170,12 +170,11 @@ export default {
       }
       const map = new BMap.Map($el, {enableHighResolution: this.highResolution, enableMapClick: this.mapClick})
       this.map = map
-      const {setMapOptions, maxZoom, zoom, center, getCenterPoint, theme} = this
+      const {setMapOptions, maxZoom, zoom, getCenterPoint, theme} = this
       map.setMapStyle({styleJson: theme});
       setMapOptions()
       bindEvents.call(this, map)
-      map.centerAndZoom(getCenterPoint(center), maxZoom || zoom || 3)
-      this.BMap = BMap
+      map.centerAndZoom(getCenterPoint(), maxZoom || zoom || 3)
       this.$emit('ready', {BMap, map})
     },
     checkType (val) {
@@ -185,7 +184,7 @@ export default {
       const {center, checkType} = this
       const {BMap} = this
       switch (checkType(center)) {
-        case 'String': return new BMap.Point(center)
+        case 'String': return center
         case 'Object': return new BMap.Point(parseFloat(center.lng), parseFloat(center.lat))
         default: return new BMap.Point()
       }
