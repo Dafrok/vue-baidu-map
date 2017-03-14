@@ -8,7 +8,7 @@ export default {
     return
   },
   props: {
-    point: {},
+    position: {},
     label: {},
     offset: {},
     icon: {},
@@ -50,8 +50,34 @@ export default {
     }
   },
   watch: {
-    point () {},
-    offset () {},
+    'position.lng' (val, oldVal) {
+      const {BMap, overlay} = this
+      const lng = parseFloat(val)
+      if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
+        overlay.setPosition(new BMap.Point(lng, this.position.lat))
+      }
+    },
+    'position.lat' (val, oldVal) {
+      const {BMap, overlay} = this
+      const lat = parseFloat(val)
+      if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
+        overlay.setPosition(new BMap.Point(this.position.lng, lat))
+      }
+    },
+    'offset.width' (val, oldVal) {
+      const {BMap, overlay} = this
+      const width = parseFloat(val)
+      if (val.toString() !== oldVal.toString()) {
+        overlay.setOffset(new BMap.Size(width, this.offset.height))
+      }
+    },
+    'offset.height' (val, oldVal) {
+      const {BMap, overlay} = this
+      const height = parseFloat(val)
+      if (val.toString() !== oldVal.toString()) {
+        overlay.setOffset(new BMap.Size(this.offset.width, height))
+      }
+    },
     icon: {
       deep: true,
       handler (val) {
@@ -100,9 +126,9 @@ export default {
   },
   methods: {
     addOverlay () {
-      const {point, offset, icon, massClear, dragging, clicking, raiseOnDrag, draggingCursor, rotation, shadow, title, label, animation, top, addLabel} = this
+      const {position, offset, icon, massClear, dragging, clicking, raiseOnDrag, draggingCursor, rotation, shadow, title, label, animation, top, addLabel} = this
       const {BMap, map} = this.$parent
-      const overlay = new BMap.Marker(new BMap.Point(point.lng, point.lat), {
+      const overlay = new BMap.Marker(new BMap.Point(position.lng, position.lat), {
         offset,
         icon: icon && createIcon(BMap, icon),
         enableMassClear: massClear,
