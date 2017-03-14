@@ -8,6 +8,7 @@
 
 |属性名|类型|默认值|描述|
 |------|:---:|:---:|----|
+|position|Size||标注的位置|
 |offset|Size||标注的位置偏移值|
 |icon|Icon||标注所用的图标对象|
 |massClear|Boolean|true|是否在调用map.clearOverlays清除此覆盖物|
@@ -48,7 +49,7 @@
 ```html
 <template>
   <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <bm-marker :point="{lng: 116.404, lat: 39.915}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :label="{content: 'Marker Label', opts: {offset: {width: 20, height: -10}}}"></bm-marker>
+    <bm-marker :position="{lng: 116.404, lat: 39.915}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :label="{content: 'Marker Label', opts: {offset: {width: 20, height: -10}}}"></bm-marker>
   </baidu-map>
 </template>
 ```
@@ -56,7 +57,7 @@
 #### 预览
 <doc-preview>
   <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <bm-marker :point="markerPoint" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :label="markerLabel"></bm-marker>
+    <bm-marker :position="markerPoint" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :label="markerLabel"></bm-marker>
   </baidu-map>
 </doc-preview>
 
@@ -67,7 +68,7 @@
 ```html
 <template>
   <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <bm-marker :point="markerPoint" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :icon="{url: 'http://developer.baidu.com/map/jsdemo/img/fox.gif', size: {width: 300, height: 157}}"></bm-marker>
+    <bm-marker :position="markerPoint" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :icon="{url: 'http://developer.baidu.com/map/jsdemo/img/fox.gif', size: {width: 300, height: 157}}"></bm-marker>
   </baidu-map>
 </template>
 ```
@@ -75,7 +76,7 @@
 #### 预览
 <doc-preview>
   <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <bm-marker :point="markerPoint" :icon="markerIcon"></bm-marker>
+    <bm-marker :position="markerPoint" :icon="markerIcon"></bm-marker>
   </baidu-map>
 </doc-preview>
 </template>

@@ -68,9 +68,15 @@ export default {
     }
   },
   watch: {
+    center (val, oldVal) {
+      const {checkType, map} = this
+      if (checkType(val) === 'String' && val !== oldVal) {
+        map.setCenter(val)
+      }
+    },
     'center.lng' (val, oldVal) {
       const {BMap} = this
-      const  {map} = this
+      const {map} = this
       const lng = parseFloat(val)
       if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
         map.setCenter(new BMap.Point(lng, this.center.lat))
@@ -78,7 +84,7 @@ export default {
     },
     'center.lat' (val, oldVal) {
       const {BMap} = this
-      const  {map} = this
+      const {map} = this
       const lat = parseFloat(val)
       if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
         map.setCenter(new BMap.Point(this.center.lng, lat))

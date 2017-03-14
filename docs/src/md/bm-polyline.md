@@ -8,7 +8,7 @@
 
 |属性名|类型|默认值|描述|
 |------|:---:|:---:|----|
-|points|Array|[]|构成折线的点|
+|path|Array[Point]|[]|构成折线的点|
 |strokeColor|String|undefined|折线颜色|
 |strokeWeight|Number|undefined|折线的宽度，以像素为单位|
 |strokeOpacity|Number|undefined|折线的透明度，取值范围0 - 1|
@@ -39,7 +39,7 @@
 ```html
 <template>
   <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <bm-polyline :points="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolylinePath"></bm-polyline>
+    <bm-polyline :path="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolylinePath"></bm-polyline>
   </baidu-map>
 </template>
 
@@ -70,7 +70,7 @@ export default {
 
 <doc-preview>
   <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <bm-polyline :points="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolylinePath"></bm-polyline>
+    <bm-polyline :path="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolylinePath"></bm-polyline>
   </baidu-map>
   <div slot="bottom" class="mdl-card__actions mdl-card--border">
     <div class="mdl-grid" v-for="(point, index) in polylinePath">
