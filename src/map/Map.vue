@@ -69,22 +69,28 @@ export default {
   },
   watch: {
     center (val, oldVal) {
-      const {checkType, map} = this
+      const {checkType, map, BMap} = this
       if (checkType(val) === 'String' && val !== oldVal) {
         map.setCenter(val)
+      } else if (checkType(oldVal) === 'String' && checkType(val) === 'Object'){
+        map.setCenter(new BMap.Point(parseFloat(val.lng), parseFloat(val.lat)))
       }
     },
     'center.lng' (val, oldVal) {
-      const {BMap} = this
-      const {map} = this
+      const {BMap, map, checkType} = this
+      if (checkType(oldVal) === 'Undefined' || checkType(val) === 'Undefined') {
+        return
+      }
       const lng = parseFloat(val)
       if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
         map.setCenter(new BMap.Point(lng, this.center.lat))
       }
     },
     'center.lat' (val, oldVal) {
-      const {BMap} = this
-      const {map} = this
+      const {BMap, map, checkType} = this
+      if (checkType(oldVal) === 'Undefined' || checkType(val) === 'Undefined') {
+        return
+      }
       const lat = parseFloat(val)
       if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
         map.setCenter(new BMap.Point(this.center.lng, lat))

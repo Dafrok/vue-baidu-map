@@ -27,8 +27,8 @@
 <template>
   <baidu-map class="map" :center="center" :zoom="zoom">
     <bm-context-menu>
-      <bm-context-menu-item :callback="gotoBeijing">去北京</bm-context-menu-item>
-      <bm-context-menu-item :callback="gotoShanghai">去上海</bm-context-menu-item>
+      <bm-context-menu-item :callback="gotoBeijing" text="去北京"></bm-context-menu-item>
+      <bm-context-menu-item :callback="gotoShanghai" text="去上海"></bm-context-menu-item>
     </bm-context-menu>
   </baidu-map>
 </template>
@@ -78,25 +78,16 @@ export default {
 export default {
   data () {
     return {
-      center: {
-        lng: 116.404,
-        lat: 39.915
-      },
+      center: '北京',
       zoom: 15
     }
   },
   methods: {
     gotoBeijing (e) {
-      this.center = {
-        lng: 116.404,
-        lat: 39.915
-      }
+      this.center = '北京'
     },
     gotoShanghai (e) {
-      this.center = {
-        lng: 121.473354,
-        lat: 31.238413
-      }
+      this.center = '上海'
     }
   }
 }
