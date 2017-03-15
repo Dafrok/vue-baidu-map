@@ -57,7 +57,7 @@
 #### 预览
 <doc-preview>
   <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <bm-marker :position="markerPoint" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :label="markerLabel" @dragend="handleDragEnd"></bm-marker>
+    <bm-marker :position="markerPoint" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :label="markerLabel"></bm-marker>
   </baidu-map>
 </doc-preview>
 

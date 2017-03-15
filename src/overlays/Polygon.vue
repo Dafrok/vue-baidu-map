@@ -8,7 +8,7 @@ export default {
     return
   },
   props: {
-    points: {
+    path: {
       type: Array
     },
     strokeColor: {
@@ -43,7 +43,7 @@ export default {
     }
   },
   watch: {
-    points: {
+    path: {
       handler (val, oldVal) {
         this.reloadOverlay()
       },
@@ -76,9 +76,9 @@ export default {
   },
   methods: {
     addOverlay () {
-      const {points, strokeColor, strokeWeight, strokeOpacity, strokeStyle, fillColor, fillOpacity, editing, massClear, clicking} = this
+      const {path, strokeColor, strokeWeight, strokeOpacity, strokeStyle, fillColor, fillOpacity, editing, massClear, clicking} = this
       const {BMap, map} = this.$parent
-      const overlay = new BMap.Polygon(points.map(item => createPoint(BMap, {lng: item.lng, lat: item.lat})), {
+      const overlay = new BMap.Polygon(path.map(item => createPoint(BMap, {lng: item.lng, lat: item.lat})), {
         strokeColor,
         strokeWeight,
         strokeOpacity,
