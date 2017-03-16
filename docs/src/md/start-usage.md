@@ -30,7 +30,8 @@ Vue.use(BaiduMap, {
 
 ## 注意事项
 
-由于百度地图 JS API 是只有 JSONP 一种加载方式，因此 `BaiduMap` 组件的渲染只能是异步的。因此，请使用 `ready` 事件来执行地图 API 加载完毕后才能执行的代码，不要试图在 vue 的生命周期中修改 model 层。
+由于百度地图 JS API 只有 JSONP 一种加载方式，因此 `BaiduMap` 组件及其所有子组件的渲染只能是异步的。\
+因此，请使用 `BaiduMap` 组件的 `ready` 事件来执行地图 API 加载完毕后才能执行的代码，不要试图在 vue 自身的生命周期中调用 `BMap` 类，更不要在这些时机修改 model 层。
 
 ### 错误用法
 
