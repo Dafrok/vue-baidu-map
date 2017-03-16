@@ -126,6 +126,7 @@ export default {
   },
   methods: {
     addOverlay () {
+      console.log(position)
       const {position, offset, icon, massClear, dragging, clicking, raiseOnDrag, draggingCursor, rotation, shadow, title, label, animation, top, addLabel} = this
       const {BMap, map} = this.$parent
       const overlay = new BMap.Marker(new BMap.Point(position.lng, position.lat), {
