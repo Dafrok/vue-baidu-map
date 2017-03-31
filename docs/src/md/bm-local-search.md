@@ -8,7 +8,7 @@
 
 |属性名|类型 |默认值|描述|
 |------|:---:|:----:|----|
-|location|String, Bounds, None|undefined|location表示检索区域，其类型可为空、坐标点或城市名称的字符串。当参数为空时，检索位置由当前地图中心点确定，且搜索结果的标注将自动加载到地图上，并支持调整地图视野层级；当参数为坐标时，检索位置由该点所在位置确定；当参数为城市名称时，检索会在该城市内进行。|
+|location|String, Point, None|undefined|location表示检索区域，其类型可为空、坐标点或城市名称的字符串。当参数为空时，检索位置由当前地图中心点确定，且搜索结果的标注将自动加载到地图上，并支持调整地图视野层级；当参数为坐标时，检索位置由该点所在位置确定；当参数为城市名称时，检索会在该城市内进行。|
 |keyword|String, Array|undefined|搜索关键字。当keyword为数组时将同时执行多关键字的查询，最多支持10个关键字。|
 |forceLocal|Boolean|undefined|表示是否将搜索范围约束在当前城市|
 |customData|CustomData|undefined|表示检索lbs云服务的数据|

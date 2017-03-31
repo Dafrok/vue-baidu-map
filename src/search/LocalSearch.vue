@@ -3,7 +3,7 @@ div
 </template>
 
 <script>
-import {createBounds} from '../base/factory.js'
+import {createPoint} from '../base/factory.js'
 export default {
   name: 'bm-local-search',
   props: {
@@ -42,11 +42,18 @@ export default {
     }
   },
   watch: {
-    location () {
-      this.reloadLocalSearch()
+    location: {
+      handler (val) {
+        this.local.setLocation(val)
+      },
+      deep: true
     },
-    keyword () {
-      this.local && this.search()
+    keyword (val) {
+      const {local, forceLocal, customData} = this
+      this.local && this.local.search(val, {
+        forceLocal,
+        customData
+      })
     },
     forceLocal () {
       this.reloadLocalSearch()
@@ -84,7 +91,15 @@ export default {
       const instance = this
       const {map, BMap} = this.$parent
       const {search, pageCapacity, autoViewport, selectFirstResult, highlightMode, location, resultPanel} = this
-      const _location = typeof location === 'object' ? createBounds(location) : location
+      const _location = (location => {
+        if (location.lng && location.lat) {
+          return createPoint(BMap, location)
+        } else if (typeof location === 'string') {
+          return location
+        } else {
+          return map
+        }
+      })(location)
       const local = this.local = new BMap.LocalSearch(_location || map, {
         onMarkersSet (e) {
           instance.$emit('markersset', e)
