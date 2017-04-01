@@ -183,7 +183,7 @@ export default {
       const map = new BMap.Map($el, {enableHighResolution: this.highResolution, enableMapClick: this.mapClick})
       this.map = map
       const {setMapOptions, maxZoom, zoom, getCenterPoint, theme} = this
-      map.setMapStyle({styleJson: theme});
+      theme && map.setMapStyle({styleJson: theme});
       setMapOptions()
       bindEvents.call(this, map)
       map.centerAndZoom(getCenterPoint(), maxZoom || zoom || 3)
