@@ -94,11 +94,9 @@ h2 {
     color: #555;
   }
 }
-.mdl-navigation__link.is-active {
-  color: #333;
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link.is-active {
   font-weight: 700;
-  &::before {
-    content: '★ '
-  }
+  color: #3f51b5;
+  border-right: 2px solid #3f51b5;
 }
 </style>
