@@ -1,5 +1,7 @@
 # VUE BAIDU MAP
 
+[![npm version](https://badge.fury.io/js/vue-baidu-map.svg)](https://badge.fury.io/js/vue-baidu-map)
+
 基于 Vue 2.x 的百度地图组件库
 
 ## 文档
