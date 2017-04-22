@@ -16,6 +16,7 @@ import MapOverlayInfoWindow from './overlays/InfoWindow.vue'
 import MapContextMenu from './context-menu/Menu.vue'
 import MapContextMenuItem from './context-menu/Item.vue'
 import MapLocalSearch from './search/LocalSearch.vue'
+import MapLayerTile from './layers/Tile.vue'
 
 export default {
   install (Vue, options) {
@@ -47,5 +48,7 @@ export default {
     Vue.component('bm-context-menu-item', MapContextMenuItem)
 
     Vue.component('bm-local-search', MapLocalSearch)
+
+    Vue.component('bm-tile', MapLayerTile)
   }
 }

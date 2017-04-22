@@ -29,6 +29,8 @@ import DocContextMenuItem from './md/bm-context-menu-item.md'
 
 import DocLocalSearch from './md/bm-local-search.md'
 
+import DocLayerTile from './md/bm-tile.md'
+
 export default [
   {
     // 首页
@@ -184,5 +186,17 @@ export default [
         component: DocLocalSearch
       }
     ]
-  }
+  },
+  {
+    path: '/layer',
+    name: '图层',
+    component: CateView,
+    children: [
+      {
+        path: 'tile',
+        component: DocLayerTile,
+        name: '瓦片图层'
+      }
+    ]
+  },
 ]

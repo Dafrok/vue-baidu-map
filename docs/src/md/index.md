@@ -1,6 +1,6 @@
 # VUE BAIDU MAP
 
-<p align="center"><img src="//dafrok.github.io/vue-baidu-map/favicon.png">
+<p align="center"><img src="//dafrok.github.io/vue-baidu-map/favicon.png" width="200px">
 
 <p align="center">基于 VUE 2.x 的百度地图组件
 

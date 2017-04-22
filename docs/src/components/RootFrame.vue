@@ -18,7 +18,7 @@ div.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header
       slot(name="page-content")
 </template>
 
-<style lang="sass" scoped>
+<style lang="stylus" scoped>
 .logo {
   display: block;
   text-align: center;

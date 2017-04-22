@@ -12,33 +12,33 @@ module.exports = {
     loaders: [
       {
         test: /\.vue$/,
-        loader: 'vue',
+        loader: 'vue-loader',
       },
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: [/node_modules/, /md/]
       },
       {
         test: /\.md$/,
-        loader: 'vue-markdown',
+        loader: 'vue-markdown-loader',
         exclude: /node_modules/
       },
       {
         test: /\.css$/,
-        loader: 'style!css'
+        loader: 'style-loader!css-loader'
       },
       {
-        test: /\.sass$/,
-        loader: 'style!css!sass'
+        test: /\.styl$/,
+        loader: 'style-loader!css-loader!stylus-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: 'url'
+        loader: 'url-loader'
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url'
+        loader: 'url-loader'
       }
     ]
   },
@@ -47,8 +47,6 @@ module.exports = {
       src: __dirname + '/../src',
       docs: __dirname + '/../docs/src',
     }
-  },
-  sassLoader: {
   },
   plugins: [
     new HtmlWebpackPlugin({

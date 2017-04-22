@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="stylus">
 .map img {
   max-width: none!important;
   background: none!important;
