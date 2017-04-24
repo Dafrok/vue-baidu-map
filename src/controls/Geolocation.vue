@@ -1,4 +1,5 @@
 <script>
+import commonMixin from '@/base/mixins/common.js'
 import bindEvents from '../base/bindEvent.js'
 
 export default {
@@ -6,6 +7,7 @@ export default {
   render (h) {
     return
   },
+  mixins: [commonMixin],
   props: {
     anchor: {
       type: String,
@@ -25,24 +27,24 @@ export default {
   },
   watch: {
     anchor () {
-      this.reloadControl()
+      this.reload()
     },
     offset () {
-      this.reloadControl()
+      this.reload()
     },
     showAddressBar () {
-      this.reloadControl()
+      this.reload()
     },
     autoLocation () {
-      this.reloadControl()
+      this.reload()
     },
     locationIcon () {
-      this.reloadControl()
+      this.reload()
     }
   },
   methods: {
-    addControl () {
-      const {BMap, map} = this.$parent
+    load () {
+      const {BMap, map} = this
       this.control = new BMap.GeolocationControl({
         anchor: global[this.anchor],
         showAddressBar: this.showAddressBar,
@@ -53,26 +55,12 @@ export default {
       map.addControl(this.control)
       global.map = map
     },
-    removeControl () {
+    unload () {
       this.$nextTick(() => {
-        const {BMap, map} = this.$parent
+        const {BMap, map} = this
         map && map.removeControl(this.control)
       })
-    },
-    reloadControl () {
-      this.$nextTick(() => {
-        this.removeControl()
-        this.addControl()
-      })
     }
-  },
-  mounted () {
-    const {map} = this.$parent
-    const {addControl} = this
-    map ? addControl() : this.$parent.$on('ready', addControl)
-  },
-  beforeDestroy () {
-    this.removeControl()
   }
 }
 </script>

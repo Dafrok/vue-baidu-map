@@ -1,24 +1,27 @@
 <script>
+import commonMixin from '@/base/mixins/common.js'
+
 export default {
   name: 'bm-copyright',
   render (h) {
     return
   },
+  mixins: [commonMixin],
   props: ['anchor', 'offset', 'copyright'],
   watch: {
     anchor () {
-      this.reloadControl()
+      this.reload()
     },
     offset () {
-      this.reloadControl()
+      this.reload()
     },
     copyright () {
-      this.reloadControl()
+      this.reload()
     }
   },
   methods: {
-    addControl () {
-      const {BMap, map} = this.$parent
+    load () {
+      const {BMap, map} = this
       this.control = new BMap.CopyrightControl({
         anchor: global[this.anchor],
         offset: this.offset
@@ -26,14 +29,14 @@ export default {
       this.updateCopyrightList()
       map.addControl(this.control)
     },
-    removeControl () {
+    unload () {
       this.$nextTick(() => {
-        const {BMap, map} = this.$parent
+        const {BMap, map} = this
         map && map.removeControl(this.control)
       })
     },
     updateCopyrightList () {
-      const {BMap, map} = this.$parent
+      const {BMap, map} = this
       const {removeCopyright, getCopyrightCollection} = this.control
       const copyrightList = getCopyrightCollection()
       copyrightList && copyrightList.forEach(item => {
@@ -50,21 +53,7 @@ export default {
         })
         this.control.getCopyrightCollection()
       })
-    },
-    reloadControl () {
-      this.$nextTick(() => {
-        this.removeControl()
-        this.addControl()
-      })
     }
-  },
-  mounted () {
-    const {map} = this.$parent
-    const {addControl} = this
-    map ? addControl() : this.$parent.$on('ready', addControl)
-  },
-  beforeDestroy () {
-    this.removeControl()
   }
 }
 </script>

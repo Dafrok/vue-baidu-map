@@ -1,9 +1,12 @@
 <script>
+import commonMixin from '@/base/mixins/common.js'
+
 export default {
   name: 'bm-navigation',
   render (h) {
     return
   },
+  mixins: [commonMixin],
   props: {
     anchor: {
       type: String,
@@ -24,21 +27,21 @@ export default {
   },
   watch: {
     anchor () {
-      this.reloadControl()
+      this.reload()
     },
     offset () {
-      this.reloadControl()
+      this.reload()
     },
     type () {
-      this.reloadControl()
+      this.reload()
     },
     showZoomInfo () {
-      this.reloadControl()
+      this.reload()
     }
   },
   methods: {
-    addControl () {
-      const {BMap, map} = this.$parent
+    load () {
+      const {BMap, map} = this
       this.control = new BMap.NavigationControl({
         anchor: global[this.anchor],
         offset: this.offset,
@@ -48,26 +51,12 @@ export default {
       })
       map.addControl(this.control)
     },
-    removeControl () {
+    unload () {
       this.$nextTick(() => {
-        const {BMap, map} = this.$parent
+        const {BMap, map} = this
         map && map.removeControl(this.control)
       })
-    },
-    reloadControl () {
-      this.$nextTick(() => {
-        this.removeControl()
-        this.addControl()
-      })
     }
-  },
-  mounted () {
-    const {map} = this.$parent
-    const {addControl} = this
-    map ? addControl() : this.$parent.$on('ready', addControl)
-  },
-  beforeDestroy () {
-    this.removeControl()
   }
 }
 </script>

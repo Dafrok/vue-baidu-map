@@ -1,27 +1,30 @@
 <script>
+import commonMixin from '@/base/mixins/common.js'
+
 export default {
   name: 'bm-map-type',
   render (h) {
     return
   },
+  mixins: [commonMixin],
   props: ['type', 'mapTypes', 'anchor', 'offset'],
   watch: {
     anchor () {
-      this.reloadControl()
+      this.reload()
     },
     offset () {
-      this.reloadControl()
+      this.reload()
     },
     type () {
-      this.reloadControl()
+      this.reload()
     },
     mapTypes () {
-      this.reloadControl()
+      this.reload()
     }
   },
   methods: {
-    addControl () {
-      const {BMap, map} = this.$parent
+    load () {
+      const {BMap, map} = this
       const mapTypes = []
       this.mapTypes && this.mapTypes.forEach(item => {
         mapTypes.push(global[item])
@@ -34,26 +37,12 @@ export default {
       })
       map.addControl(this.control)
     },
-    removeControl () {
+    unload () {
       this.$nextTick(() => {
-        const {BMap, map} = this.$parent
+        const {BMap, map} = this
         map && map.removeControl(this.control)
       })
-    },
-    reloadControl () {
-      this.$nextTick(() => {
-        this.removeControl()
-        this.addControl()
-      })
     }
-  },
-  mounted () {
-    const {map} = this.$parent
-    const {addControl} = this
-    map ? addControl() : this.$parent.$on('ready', addControl)
-  },
-  beforeDestroy () {
-    this.removeControl()
   }
 }
 </script>
