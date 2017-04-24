@@ -44,7 +44,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      src: __dirname + '/../src',
+      '@': __dirname + '/../src',
       docs: __dirname + '/../docs/src',
     }
   },

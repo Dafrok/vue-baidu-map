@@ -30,6 +30,7 @@ import DocContextMenuItem from './md/bm-context-menu-item.md'
 import DocLocalSearch from './md/bm-local-search.md'
 
 import DocLayerTile from './md/bm-tile.md'
+import DocLayerTraffic from './md/bm-traffic.md'
 
 export default [
   {
@@ -196,6 +197,11 @@ export default [
         path: 'tile',
         component: DocLayerTile,
         name: '瓦片图层'
+      },
+      {
+        path: 'traffic',
+        component: DocLayerTraffic,
+        name: '交通流量图层'
       }
     ]
   },

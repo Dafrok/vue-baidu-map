@@ -1,12 +1,12 @@
 <script>
-import bindEvents from '../base/bindEvent.js'
-import {createPoint} from '../base/factory.js'
+import commonMixin from '@/base/mixins/common.js'
 
 export default {
   name: 'bm-tile',
   render (h) {
     return
   },
+  mixins: [commonMixin],
   props: {
     transparentPng: {
       type: Boolean
@@ -35,9 +35,8 @@ export default {
     }
   },
   methods: {
-    addLayer () {
-      const {transparentPng, tileUrlTemplate, copyright, zIndex} = this
-      const {BMap, map} = this.$parent
+    load () {
+      const {BMap, map, transparentPng, tileUrlTemplate, copyright, zIndex} = this
       const layer = new BMap.TileLayer({
         transparentPng,
         tileUrlTemplate,
@@ -47,21 +46,10 @@ export default {
       this.layer = layer
       map.addTileLayer(layer)
     },
-    removeLayer () {
-      const {BMap, map} = this.$parent
+    unload () {
+      const {BMap, map} = this
       map.removeTileLayer(this.layer)
-    },
-    reloadLayer () {
-      this && this.$nextTick(() => {
-        this.removeOverlay()
-        this.addOverlay()
-      })
     }
-  },
-  mounted () {
-    const {map} = this.$parent
-    const {addLayer} = this
-    map ? addLayer() : this.$parent.$on('ready', addLayer)
   }
 }
 </script>

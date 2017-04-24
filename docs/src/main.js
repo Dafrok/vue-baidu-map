@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './components/App.vue'
 import routes from './routes'
-import BaiduMap from 'src/index.js'
+import BaiduMap from '@/index.js'
 import DocPreview from './components/DocPreview.vue'
 
 import Hljs from 'highlight.js'
