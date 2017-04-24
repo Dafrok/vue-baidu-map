@@ -22,16 +22,16 @@ export default {
   },
   watch: {
     transparentPng () {
-      this.reloadLayer()
+      this.reload()
     },
     tileUrlTemplate () {
-      this.reloadLayer()
+      this.reload()
     },
     copyright () {
-      this.reloadLayer()
+      this.reload()
     },
     zIndex () {
-      this.reloadLayer()
+      this.reload()
     }
   },
   methods: {
