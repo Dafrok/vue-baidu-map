@@ -162,6 +162,29 @@
 }
 ```
 
+### Copyright
+
+声明一条版权信息。
+
+```javascript
+{
+  id: Number,
+  content String,
+  bounds: Bounds
+}
+```
+
+### PredictDate
+
+声明一个交通流量的预测日期。
+
+```javascript
+{
+  weekday: Number,
+  hour: Number
+}
+```
+
 ## 参考
 
 > [百度地图官方文档](http://lbsyun.baidu.com/cms/jsapi/reference/jsapi_reference.html)

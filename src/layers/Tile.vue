@@ -1,5 +1,6 @@
 <script>
 import commonMixin from '@/base/mixins/common.js'
+import {createBounds} from '@/base/factory.js'
 
 export default {
   name: 'bm-tile',
@@ -40,10 +41,13 @@ export default {
       this.originInstance = new BMap.TileLayer({
         transparentPng,
         tileUrlTemplate,
-        copyright,
+        copyright: copyright && {
+          id: copyright.id,
+          content: copyright.content,
+          bounds: copyright.bounds && createBounds(copyright.bounds)
+        },
         zIndex
       })
-      this.originInstance = 
       map.addTileLayer(this.originInstance)
     }
   }
