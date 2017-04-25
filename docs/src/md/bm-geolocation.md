@@ -9,7 +9,7 @@
 |anchor|ControlAnchor|undefined|控件停靠位置|
 |offset|Size|undefined|控件偏移值|
 |showAddressBar|Boolean|undefined|是否显示定位信息面板。默认显示定位信息面板|
-|autoLocation|Boolean|false|添加控件时是否进行定位。默认添加控件时不进行定位|
+|autoLocation|Boolean|false|添加控件时是否进行定位。根据 [W3C相关标准](https://www.w3.org/TR/geolocation-API/#privacy_for_uas) 描述，为保证用户隐私安全，geoLocation API 必须使用 SSL 连接，并获得用户的手动许可。请确保使用该属性时满足上述条件。|
 |locationIcon|Icon|undefined|可自定义定位中心点的Icon样式|
 
 ## 事件
