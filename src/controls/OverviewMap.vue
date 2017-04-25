@@ -7,7 +7,7 @@ export default {
   render (h) {
     return
   },
-  mixins: [commonMixin],
+  mixins: [commonMixin('control')],
   props: {
     anchor: {
       type: String,
@@ -43,20 +43,14 @@ export default {
       this.mapTypes && this.mapTypes.forEach(item => {
         mapTypes.push(global[item])
       })
-      this.control = new BMap.OverviewMapControl({
+      this.originInstance = new BMap.OverviewMapControl({
         anchor: global[this.anchor],
         offset: this.offset,
         size: this.size,
         isOpen: this.isOpen
       })
-      bindEvents.call(this, this.control)
-      map.addControl(this.control)
-    },
-    unload () {
-      this.$nextTick(() => {
-        const {BMap, map} = this
-        map && map.removeControl(this.control)
-      })
+      bindEvents.call(this, this.originInstance)
+      map.addControl(this.originInstance)
     }
   }
 }

@@ -8,7 +8,7 @@ export default {
   render (h) {
     return
   },
-  mixins: [commonMixin],
+  mixins: [commonMixin('overlay')],
   props: {
     path: {
       type: Array
@@ -46,19 +46,19 @@ export default {
       deep: true
     },
     strokeColor (val) {
-      this.overlay.setStrokeColor(val)
+      this.originInstance.setStrokeColor(val)
     },
     strokeColor (val) {
-      this.overlay.setStrokeOpacity(val)
+      this.originInstance.setStrokeOpacity(val)
     },
     strokeWeight (val) {
-      this.overlay.setStrokeOpacity(val)
+      this.originInstance.setStrokeOpacity(val)
     },
     editing (val) {
-      val ? this.overlay.enableEditing() : this.overlay.disableEditing()
+      val ? this.originInstance.enableEditing() : this.originInstance.disableEditing()
     },
     massClear (val) {
-      val ? this.overlay.enableMassClear() : this.overlay.disableMassClear()
+      val ? this.originInstance.enableMassClear() : this.originInstance.disableMassClear()
     },
     clicking (val) {
       this.reload()
@@ -76,13 +76,9 @@ export default {
         enableMassClear: massClear,
         enableClicking: clicking
       })
-      this.overlay = overlay
+      this.originInstance = overlay
       map.addOverlay(overlay)
       bindEvents.call(this, overlay)
-    },
-    unload () {
-      const {BMap, map} = this
-      map.removeOverlay(this.overlay)
     }
   }
 }

@@ -8,7 +8,7 @@ export default {
   render (h) {
     return
   },
-  mixins: [commonMixin],
+  mixins: [commonMixin('overlay')],
   props: {
     content: {
       type: String
@@ -27,49 +27,49 @@ export default {
   },
   watch: {
     content (val) {
-      this.overlay.setContent(val)
+      this.originInstance.setContent(val)
     },
     title (val) {
-      this.overlay.setTitle(val)
+      this.originInstance.setTitle(val)
     },
     'offset.width' (val, oldVal) {
       const {BMap} = this
       if (val.toString() !== oldVal.toString()) {
-        this.overlay.setOffset(createSize(BMap, {width: val, height: this.offset.height}))
+        this.originInstance.setOffset(createSize(BMap, {width: val, height: this.offset.height}))
       }
 
     },
     'offset.height' (val) {
       const {BMap} = this
       if (val.toString() !== oldVal.toString()) {
-        this.overlay.setOffset(createSize(BMap, {width: this.offset.width, height: val}))
+        this.originInstance.setOffset(createSize(BMap, {width: this.offset.width, height: val}))
       }
     },
     'position.lng' (val, oldVal) {
       const {BMap} = this
       const lng = val
       if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
-        this.overlay.setCenter(createPoint(BMap, {lng, lat: this.center.lat}))
+        this.originInstance.setCenter(createPoint(BMap, {lng, lat: this.center.lat}))
       }
     },
     'position.lat' (val, oldVal) {
       const {BMap} = this
       const lat = val
       if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
-        this.overlay.setCenter(createPoint(BMap, {lng: this.center.lng, lat}))
+        this.originInstance.setCenter(createPoint(BMap, {lng: this.center.lng, lat}))
       }
     },
     labelStyle: {
       handler (val) {
-        this.overlay.setStyle(val)
+        this.originInstance.setStyle(val)
       },
       deep: true
     },
     zIndex (val) {
-      this.overlay.setZIndex(val)
+      this.originInstance.setZIndex(val)
     },
     massClear (val) {
-      val ? this.overlay.enableMassClear() : this.overlay.disableMassClear()
+      val ? this.originInstance.enableMassClear() : this.originInstance.disableMassClear()
     }
   },
   methods: {
@@ -80,16 +80,12 @@ export default {
         position: createPoint(BMap, position),
         enableMassClear: massClear
       })
-      this.overlay = overlay
+      this.originInstance = overlay
       map.addOverlay(overlay)
       title && overlay.setTitle(title)
       labelStyle && overlay.setStyle(labelStyle)
       zIndex && overlay.setZIndex(zIndex)
       bindEvents.call(this, overlay)
-    },
-    unload () {
-      const {BMap, map} = this
-      map.removeOverlay(this.overlay)
     }
   }
 }

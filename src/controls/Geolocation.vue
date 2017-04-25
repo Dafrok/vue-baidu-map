@@ -7,7 +7,7 @@ export default {
   render (h) {
     return
   },
-  mixins: [commonMixin],
+  mixins: [commonMixin('control')],
   props: {
     anchor: {
       type: String,
@@ -45,21 +45,15 @@ export default {
   methods: {
     load () {
       const {BMap, map} = this
-      this.control = new BMap.GeolocationControl({
+      this.originInstance = new BMap.GeolocationControl({
         anchor: global[this.anchor],
         showAddressBar: this.showAddressBar,
         enableAutoLocation: this.autoLocation,
         locationIcon: this.locationIcon
       })
-      bindEvents.call(this, this.control)
-      map.addControl(this.control)
+      bindEvents.call(this, this.originInstance)
+      map.addControl(this.originInstance)
       global.map = map
-    },
-    unload () {
-      this.$nextTick(() => {
-        const {BMap, map} = this
-        map && map.removeControl(this.control)
-      })
     }
   }
 }

@@ -6,7 +6,7 @@ export default {
   render (h) {
     return
   },
-  mixins: [commonMixin],
+  mixins: [commonMixin('control')],
   props: {
     anchor: {
       type: String,
@@ -42,20 +42,14 @@ export default {
   methods: {
     load () {
       const {BMap, map} = this
-      this.control = new BMap.NavigationControl({
+      this.originInstance = new BMap.NavigationControl({
         anchor: global[this.anchor],
         offset: this.offset,
         type: this.type,
         showZoomInfo: this.showZoomInfo,
         enableGeolocation: this.enableGeolocation
       })
-      map.addControl(this.control)
-    },
-    unload () {
-      this.$nextTick(() => {
-        const {BMap, map} = this
-        map && map.removeControl(this.control)
-      })
+      map.addControl(this.originInstance)
     }
   }
 }

@@ -6,7 +6,7 @@ export default {
   render (h) {
     return
   },
-  mixins: [commonMixin],
+  mixins: [commonMixin('layer')],
   props: {
     predictDate: {
       type: Object
@@ -26,15 +26,10 @@ export default {
   methods: {
     load () {
       const {pridictDate, BMap, map} = this
-      const layer = new BMap.TrafficLayer({
+      this.originInstance = new BMap.TrafficLayer({
         pridictDate
       })
-      this.layer = layer
-      map.addTileLayer(layer)
-    },
-    unload () {
-      const {BMap, map} = this.$parent
-      map.removeTileLayer(this.layer)
+      map.addTileLayer(this.originInstance)
     }
   }
 }

@@ -6,7 +6,7 @@ export default {
   render (h) {
     return
   },
-  mixins: [commonMixin],
+  mixins: [commonMixin('layer')],
   props: {
     transparentPng: {
       type: Boolean
@@ -37,18 +37,14 @@ export default {
   methods: {
     load () {
       const {BMap, map, transparentPng, tileUrlTemplate, copyright, zIndex} = this
-      const layer = new BMap.TileLayer({
+      this.originInstance = new BMap.TileLayer({
         transparentPng,
         tileUrlTemplate,
         copyright,
         zIndex
       })
-      this.layer = layer
-      map.addTileLayer(layer)
-    },
-    unload () {
-      const {BMap, map} = this
-      map.removeTileLayer(this.layer)
+      this.originInstance = 
+      map.addTileLayer(this.originInstance)
     }
   }
 }

@@ -6,7 +6,7 @@ export default {
   render (h) {
     return
   },
-  mixins: [commonMixin],
+  mixins: [commonMixin('control')],
   props: {
     anchor: {
       type: String,
@@ -26,17 +26,11 @@ export default {
   methods: {
     load () {
       const {BMap, map} = this
-      this.control = new BMap.ScaleControl({
+      this.originInstance = new BMap.ScaleControl({
         anchor: global[this.anchor],
         offset: this.offset
       })
-      map.addControl(this.control)
-    },
-    unload () {
-      this.$nextTick(() => {
-        const {BMap, map} = this
-        map && map.removeControl(this.control)
-      })
+      map.addControl(this.originInstance)
     }
   }
 }

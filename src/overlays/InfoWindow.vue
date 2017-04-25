@@ -10,7 +10,7 @@ import {createPoint, createSize} from '@/base/factory.js'
 
 export default {
   name: 'bm-info-window',
-  mixins: [commonMixin],
+  mixins: [commonMixin('overlay')],
   props: {
     show: {
       type: Boolean
@@ -66,22 +66,22 @@ export default {
       this.reload()
     },
     width (val) {
-      this.overlay.setWidth(val)
+      this.originInstance.setWidth(val)
     },
     height (val) {
-      this.overlay.setHeight(val)
+      this.originInstance.setHeight(val)
     },
     title (val) {
-      this.overlay.setTitle(val)
+      this.originInstance.setTitle(val)
     },
     maximize (val) {
-      val ? this.overlay.enableMaximize() : this.overlay.disableMaximize()
+      val ? this.originInstance.enableMaximize() : this.originInstance.disableMaximize()
     },
     autoPan (val) {
-      val ? this.overlay.enableAutoPan() : this.overlay.disableAutoPan()
+      val ? this.originInstance.enableAutoPan() : this.originInstance.disableAutoPan()
     },
     closeOnClick (val) {
-      val ? this.overlay.enableCloseOnClick() : this.overlay.disableCloseOnClick()
+      val ? this.originInstance.enableCloseOnClick() : this.originInstance.disableCloseOnClick()
     }
   },
   methods: {
@@ -102,7 +102,7 @@ export default {
 
       maximize ? overlay.enableMaximize() : overlay.disableMaximize()
       bindEvents.call(this, overlay)
-      this.overlay = overlay
+      this.originInstance = overlay
       overlay.redraw()
       ;[].forEach.call($content.querySelectorAll('img'), $img => $img.onload = () => overlay.redraw())
       bindObserver()
@@ -113,20 +113,16 @@ export default {
       if (!MutationObserver) {
         return
       }
-      const {$el, overlay} = this
-      this.observer = new MutationObserver(mutations => overlay.redraw())
+      const {$el, originInstance} = this
+      this.observer = new MutationObserver(mutations => originInstance.redraw())
       this.observer.observe($el, {attributes: true, childList: true, characterData: true, subtree: true})
     },
     openInfoWindow () {
-      const {BMap, map, $container, position, overlay} = this
-      $container.openInfoWindow(overlay, createPoint(BMap, position))
+      const {BMap, map, $container, position, originInstance} = this
+      $container.openInfoWindow(originInstance, createPoint(BMap, position))
     },
     closeInfoWindow () {
-      this.$container.closeInfoWindow(this.overlay)
-    },
-    unload () {
-      const {BMap, map} = this
-      map.removeOverlay(this.overlay)
+      this.$container.closeInfoWindow(this.originInstance)
     }
   }
 }

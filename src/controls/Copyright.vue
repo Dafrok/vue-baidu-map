@@ -6,7 +6,7 @@ export default {
   render (h) {
     return
   },
-  mixins: [commonMixin],
+  mixins: [commonMixin('control')],
   props: ['anchor', 'offset', 'copyright'],
   watch: {
     anchor () {
@@ -22,36 +22,30 @@ export default {
   methods: {
     load () {
       const {BMap, map} = this
-      this.control = new BMap.CopyrightControl({
+      this.originInstance = new BMap.CopyrightControl({
         anchor: global[this.anchor],
         offset: this.offset
       })
       this.updateCopyrightList()
-      map.addControl(this.control)
-    },
-    unload () {
-      this.$nextTick(() => {
-        const {BMap, map} = this
-        map && map.removeControl(this.control)
-      })
+      map.addControl(this.originInstance)
     },
     updateCopyrightList () {
       const {BMap, map} = this
-      const {removeCopyright, getCopyrightCollection} = this.control
+      const {removeCopyright, getCopyrightCollection} = this.originInstance
       const copyrightList = getCopyrightCollection()
       copyrightList && copyrightList.forEach(item => {
-        this.control.removeCopyright(item.id)
+        this.originInstance.removeCopyright(item.id)
       })
       this.copyright && this.copyright.forEach(item => {
         const bounds = item.bounds
           ? new BMap.Bounds(new BMap.Point(item.bounds.sw.lng, item.bounds.sw.lat), new BMap.Point(item.bounds.ne.lng, item.bounds.ne.lat))
           : map.getBounds()
-        this.control.addCopyright({
+        this.originInstance.addCopyright({
           id: item.id,
           content: item.content,
           bounds
         })
-        this.control.getCopyrightCollection()
+        this.originInstance.getCopyrightCollection()
       })
     }
   }

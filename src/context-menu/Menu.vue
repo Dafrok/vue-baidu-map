@@ -13,11 +13,11 @@ export default {
       type: Number
     }
   },
-  mixins: [commonMixin],
+  mixins: [commonMixin('contextMenu')],
   methods: {
     load () {
       const {width, BMap, map, $parent} = this
-      const menu = this.menu = new BMap.ContextMenu()
+      const menu = this.originInstance = new BMap.ContextMenu()
       const parent = this.parent = $parent.overlay || map
       for (let item of this.$children) {
         if (item.seperator) {
@@ -41,11 +41,6 @@ export default {
         menu.addItem(menuItem)
       }
       parent.addContextMenu(menu)
-    },
-    unload () {
-      this.$nextTick(() => {
-        this.parent && this.parent.removeContextMenu(this.menu)
-      })
     }
   }
 }

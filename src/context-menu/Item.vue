@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     reload () {
-      this.$parent.BMap && this.$parent.reload()
+      this.$parent.map && this.$parent.reload()
     }
   },
   watch: {
