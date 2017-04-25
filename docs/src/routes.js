@@ -160,35 +160,6 @@ export default [
     ]
   },
   {
-    path: '/context-menu',
-    name: '菜单',
-    component: CateView,
-    children: [
-      {
-        path: 'menu',
-        name: '上下文菜单',
-        component: DocContextMenu
-      },
-      {
-        path: 'item',
-        name: '菜单项',
-        component: DocContextMenuItem
-      },
-    ]
-  },
-  {
-    path: '/search',
-    name: '检索',
-    component: CateView,
-    children: [
-      {
-        path: 'local-search',
-        name: '地区检索',
-        component: DocLocalSearch
-      }
-    ]
-  },
-  {
     path: '/layer',
     name: '图层',
     component: CateView,
@@ -205,4 +176,33 @@ export default [
       }
     ]
   },
+  {
+    path: '/search',
+    name: '检索',
+    component: CateView,
+    children: [
+      {
+        path: 'local-search',
+        name: '地区检索',
+        component: DocLocalSearch
+      }
+    ]
+  },
+  {
+    path: '/context-menu',
+    name: '菜单',
+    component: CateView,
+    children: [
+      {
+        path: 'menu',
+        name: '上下文菜单',
+        component: DocContextMenu
+      },
+      {
+        path: 'item',
+        name: '菜单项',
+        component: DocContextMenuItem
+      },
+    ]
+  }
 ]

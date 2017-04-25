@@ -3,7 +3,7 @@ div
 </template>
 
 <script>
-import {createPoint} from '../base/factory.js'
+import {createPoint} from '@/base/factory.js'
 export default {
   name: 'bm-local-search',
   props: {

@@ -1,12 +1,14 @@
 <script>
-import bindEvents from '../base/bindEvent.js'
-import {createLabel, createIcon} from '../base/factory.js'
+import commonMixin from '@/base/mixins/common.js'
+import bindEvents from '@/base/bindEvent.js'
+import {createLabel, createIcon} from '@/base/factory.js'
 
 export default {
   name: 'bm-marker',
   render (h) {
     return
   },
+  mixins: [commonMixin],
   props: {
     position: {},
     label: {},
@@ -51,7 +53,7 @@ export default {
   },
   watch: {
     'position.lng' (val, oldVal) {
-      const {BMap} = this.$parent
+      const {BMap} = this
       const {overlay} = this
       const lng = parseFloat(val)
       if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
@@ -59,7 +61,7 @@ export default {
       }
     },
     'position.lat' (val, oldVal) {
-      const {BMap} = this.$parent
+      const {BMap} = this
       const {overlay} = this
       const lat = parseFloat(val)
       if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
@@ -67,7 +69,7 @@ export default {
       }
     },
     'offset.width' (val, oldVal) {
-      const {BMap} = this.$parent
+      const {BMap} = this
       const {overlay} = this
       const width = parseFloat(val)
       if (val.toString() !== oldVal.toString()) {
@@ -75,7 +77,7 @@ export default {
       }
     },
     'offset.height' (val, oldVal) {
-      const {BMap} = this.$parent
+      const {BMap} = this
       const {overlay} = this
       const height = parseFloat(val)
       if (val.toString() !== oldVal.toString()) {
@@ -85,7 +87,7 @@ export default {
     icon: {
       deep: true,
       handler (val) {
-        const {BMap} = this.$parent
+        const {BMap} = this
         this.overlay.setIcon(createIcon(BMap, val))
       }
     },
@@ -96,10 +98,10 @@ export default {
       val ? this.overlay.enableDragging() : this.overlay.disableDragging()
     },
     clicking () {
-      this.reloadOverlay()
+      this.reload()
     },
     raiseOnDrag () {
-      this.reloadOverlay()
+      this.reload()
     },
     draggingCursor (val) {
       this.setDraggingCursor(val)
@@ -114,7 +116,7 @@ export default {
       this.setTitle(val)
     },
     label (val) {
-      this.reloadOverlay()
+      this.reload()
     },
     animation (val) {
       this.setAnimation(global[val])
@@ -123,15 +125,9 @@ export default {
       this.overlay.setTop(val)
     }
   },
-  mounted () {
-    const {map} = this.$parent
-    const {addOverlay} = this
-    map ? addOverlay() : this.$parent.$on('ready', addOverlay)
-  },
   methods: {
-    addOverlay () {
-      const {position, offset, icon, massClear, dragging, clicking, raiseOnDrag, draggingCursor, rotation, shadow, title, label, animation, top, addLabel} = this
-      const {BMap, map} = this.$parent
+    load () {
+      const {BMap, map, position, offset, icon, massClear, dragging, clicking, raiseOnDrag, draggingCursor, rotation, shadow, title, label, animation, top, addLabel} = this
       const overlay = new BMap.Marker(new BMap.Point(position.lng, position.lat), {
         offset,
         icon: icon && createIcon(BMap, icon),
@@ -151,15 +147,9 @@ export default {
       map.addOverlay(overlay)
       overlay.setAnimation(global[animation])
     },
-    removeOverlay () {
-      const {BMap, map} = this.$parent
+    unload () {
+      const {BMap, map} = this
       map.removeOverlay(this.overlay)
-    },
-    reloadOverlay () {
-      this.$nextTick(() => {
-        this.removeOverlay()
-        this.addOverlay()
-      })
     }
   }
 }

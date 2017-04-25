@@ -4,10 +4,13 @@ div
 </template>
 
 <script>
-import bindEvents from '../base/bindEvent.js'
-import {createPoint, createSize} from '../base/factory.js'
+import commonMixin from '@/base/mixins/common.js'
+import bindEvents from '@/base/bindEvent.js'
+import {createPoint, createSize} from '@/base/factory.js'
+
 export default {
   name: 'bm-info-window',
+  mixins: [commonMixin],
   props: {
     show: {
       type: Boolean
@@ -48,19 +51,19 @@ export default {
       val ? this.openInfoWindow() : this.closeInfoWindow()
     },
     'position.lng' (val, oldVal) {
-      this.reloadOverlay()
+      this.reload()
     },
     'position.lat' (val, oldVal) {
-      this.reloadOverlay()
+      this.reload()
     },
     'offset.width' (val, oldVal) {
-      this.reloadOverlay()
+      this.reload()
     },
     'offset.height' (val) {
-      this.reloadOverlay()
+      this.reload()
     },
     maxWidth () {
-      this.reloadOverlay()
+      this.reload()
     },
     width (val) {
       this.overlay.setWidth(val)
@@ -82,9 +85,8 @@ export default {
     }
   },
   methods: {
-    addOverlay () {
-      const {show, position, title, width, height, maxWidth, offset, autoPan, closeOnClick, message, maximize, bindObserver} = this
-      const {BMap, map} = this.$parent
+    load () {
+      const {BMap, map, show, position, title, width, height, maxWidth, offset, autoPan, closeOnClick, message, maximize, bindObserver} = this
       const $content = this.$el
       const overlay = new BMap.InfoWindow($content, {
         width : width,     // 信息窗口宽度
@@ -116,31 +118,16 @@ export default {
       this.observer.observe($el, {attributes: true, childList: true, characterData: true, subtree: true})
     },
     openInfoWindow () {
-      const {$container, position, overlay} = this
-      const {BMap, map} = this.$parent
+      const {BMap, map, $container, position, overlay} = this
       $container.openInfoWindow(overlay, createPoint(BMap, position))
     },
     closeInfoWindow () {
       this.$container.closeInfoWindow(this.overlay)
     },
-    removeOverlay () {
-      const {BMap, map} = this.$parent
+    unload () {
+      const {BMap, map} = this
       map.removeOverlay(this.overlay)
-    },
-    reloadOverlay () {
-      this && this.$nextTick(() => {
-        this.removeOverlay()
-        this.addOverlay()
-      })
     }
-  },
-  beforeDestroy () {
-    this.observer && this.observer.disconnect();
-  },
-  mounted () {
-    const {map} = this.$parent
-    const {addOverlay} = this
-    map ? addOverlay() : this.$parent.$on('ready', addOverlay)
   }
 }
 </script>

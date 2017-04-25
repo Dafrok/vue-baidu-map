@@ -1,12 +1,14 @@
 <script>
-import bindEvents from '../base/bindEvent.js'
-import {createPoint} from '../base/factory.js'
+import commonMixin from '@/base/mixins/common.js'
+import bindEvents from '@/base/bindEvent.js'
+import {createPoint} from '@/base/factory.js'
 
 export default {
   name: 'bm-polyline',
   render (h) {
     return
   },
+  mixins: [commonMixin],
   props: {
     path: {
       type: Array
@@ -39,7 +41,7 @@ export default {
   watch: {
     path: {
       handler (val, oldVal) {
-        this.reloadOverlay()
+        this.reload()
       },
       deep: true
     },
@@ -59,13 +61,12 @@ export default {
       val ? this.overlay.enableMassClear() : this.overlay.disableMassClear()
     },
     clicking (val) {
-      this.reloadOverlay()
+      this.reload()
     }
   },
   methods: {
-    addOverlay () {
-      const {path, strokeColor, strokeWeight, strokeOpacity, strokeStyle, editing, massClear, clicking} = this
-      const {BMap, map} = this.$parent
+    load () {
+      const {BMap, map, path, strokeColor, strokeWeight, strokeOpacity, strokeStyle, editing, massClear, clicking} = this
       const overlay = new BMap.Polyline(path.map(item => createPoint(BMap, {lng: item.lng, lat: item.lat})), {
         strokeColor,
         strokeWeight,
@@ -79,21 +80,10 @@ export default {
       map.addOverlay(overlay)
       bindEvents.call(this, overlay)
     },
-    removeOverlay () {
-      const {BMap, map} = this.$parent
+    unload () {
+      const {BMap, map} = this
       map.removeOverlay(this.overlay)
-    },
-    reloadOverlay () {
-      this.$nextTick(() => {
-        this.removeOverlay()
-        this.addOverlay()
-      })
     }
-  },
-  mounted () {
-    const {map} = this.$parent
-    const {addOverlay} = this
-    map ? addOverlay() : this.$parent.$on('ready', addOverlay)
   }
 }
 </script>

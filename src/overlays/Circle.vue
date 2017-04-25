@@ -1,12 +1,14 @@
 <script>
-import bindEvents from '../base/bindEvent.js'
-import {createPoint} from '../base/factory.js'
+import commonMixin from '@/base/mixins/common.js'
+import bindEvents from '@/base/bindEvent.js'
+import {createPoint} from '@/base/factory.js'
 
 export default {
   name: 'bm-circle',
   render (h) {
     return
   },
+  mixins: [commonMixin],
   props: {
     center: {
     },
@@ -46,7 +48,7 @@ export default {
   watch: {
     'center.lng' (val, oldVal) {
       // this.overlay.disableEditing()
-      const {BMap} = this.$parent
+      const {BMap} = this
       const lng = val
       if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
         this.overlay.setCenter(createPoint(BMap, {lng, lat: this.center.lat}))
@@ -55,7 +57,7 @@ export default {
     },
     'center.lat' (val, oldVal) {
       // this.overlay.disableEditing()
-      const {BMap} = this.$parent
+      const {BMap} = this
       const lat = val
       if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
         this.overlay.setCenter(createPoint(BMap, {lng: this.center.lng, lat}))
@@ -89,13 +91,12 @@ export default {
       val ? this.overlay.enableMassClear() : this.overlay.disableMassClear()
     },
     clicking (val) {
-      this.reloadOverlay()
+      this.reload()
     }
   },
   methods: {
-    addOverlay () {
-      const {center, radius, strokeColor, strokeWeight, strokeOpacity, strokeStyle, fillColor, fillOpacity, editing, massClear, clicking} = this
-      const {BMap, map} = this.$parent
+    load () {
+      const {BMap, map, center, radius, strokeColor, strokeWeight, strokeOpacity, strokeStyle, fillColor, fillOpacity, editing, massClear, clicking} = this
       const overlay = new BMap.Circle(createPoint(BMap, {lng: center.lng, lat: center.lat}), radius, {
         strokeColor,
         strokeWeight,
@@ -113,21 +114,10 @@ export default {
       // 这里有一个诡异的bug，直接给 editing 赋值时会出现未知错误，因为使用下面的方法抹平。
       editing ? overlay.enableEditing() : overlay.disableEditing()
     },
-    removeOverlay () {
-      const {BMap, map} = this.$parent
+    unload () {
+      const {BMap, map} = this
       map.removeOverlay(this.overlay)
-    },
-    reloadOverlay () {
-      this && this.$nextTick(() => {
-        this.removeOverlay()
-        this.addOverlay()
-      })
     }
-  },
-  mounted () {
-    const {map} = this.$parent
-    const {addOverlay} = this
-    map ? addOverlay() : this.$parent.$on('ready', addOverlay)
   }
 }
 </script>
