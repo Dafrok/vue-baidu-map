@@ -19,8 +19,8 @@
 
 |事件名|参数|描述|
 |------|:--:|----|
-|click|event{type, target, point, pixel}|点击地面图层后会触发此事件|
-|dblclick|event{type, target, point, pixel}|双击地面图层后会触发此事件|
+|click|event{type, target}|点击地面图层后会触发此事件|
+|dblclick|event{type, target}|双击地面图层后会触发此事件|
 
 ## 示例
 
