@@ -26,7 +26,7 @@ class Mixin {
         })
       },
       reload () {
-        this && this.$nextTick(() => {
+        this && this.BMap && this.$nextTick(() => {
           this.unload()
           this.load()
         })
