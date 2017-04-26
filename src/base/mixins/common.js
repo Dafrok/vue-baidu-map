@@ -34,7 +34,6 @@ class Mixin {
       unload () {
         this.$nextTick(() => {
           const {map, originInstance} = this
-          console.log(map[prop.type, types[prop.type].unload])
           try {
             map[types[prop.type].unload](this.originInstance)
           } catch (e) {}

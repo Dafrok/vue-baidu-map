@@ -5,14 +5,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: './docs/src/main.js',
   output: {
-    path: './docs',
+    path: path.resolve(__dirname, './docs'),
     filename: 'index.js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.vue$/,
         loader: 'vue-loader',
+        exclude: /_cache/
       },
       {
         test: /\.js$/,
@@ -22,7 +23,7 @@ module.exports = {
       {
         test: /\.md$/,
         loader: 'vue-markdown-loader',
-        exclude: /node_modules/
+        exclude: [/node_modules/]
       },
       {
         test: /\.css$/,
