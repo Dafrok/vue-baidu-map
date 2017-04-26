@@ -1,7 +1,3 @@
-<template lang="pug">
-span
-</template>
-
 <script>
 import commonMixin from '@/base/mixins/common.js'
 import bindEvents from '@/base/bindEvent.js'
@@ -9,6 +5,9 @@ import bindEvents from '@/base/bindEvent.js'
 export default {
   name: 'bm-overview-map',
   mixins: [commonMixin('control')],
+  render () {
+    return
+  },
   props: {
     anchor: {
       type: String,

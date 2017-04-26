@@ -1,12 +1,11 @@
-<template lang="pug">
-span
-</template>
-
 <script>
 import commonMixin from '@/base/mixins/common.js'
 
 export default {
   name: 'bm-map-type',
+  render () {
+    return
+  },
   mixins: [commonMixin('control')],
   props: ['type', 'mapTypes', 'anchor', 'offset'],
   watch: {

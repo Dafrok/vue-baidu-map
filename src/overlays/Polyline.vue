@@ -5,7 +5,7 @@ import {createPoint} from '@/base/factory.js'
 
 export default {
   name: 'bm-polyline',
-  render (h) {
+  render () {
     return
   },
   mixins: [commonMixin('overlay')],

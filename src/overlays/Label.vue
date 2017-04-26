@@ -5,7 +5,7 @@ import {createPoint, createSize} from '@/base/factory.js'
 
 export default {
   name: 'bm-label',
-  render (h) {
+  render () {
     return
   },
   mixins: [commonMixin('overlay')],

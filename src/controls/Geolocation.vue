@@ -1,13 +1,12 @@
-<template lang="pug">
-span
-</template>
-
 <script>
 import commonMixin from '@/base/mixins/common.js'
 import bindEvents from '@/base/bindEvent.js'
 
 export default {
   name: 'bm-geolocation',
+  render () {
+    return
+  },
   mixins: [commonMixin('control')],
   props: {
     anchor: {

@@ -2,6 +2,7 @@
 div
   slot
 </template>
+
 <script>
 import commonMixin from '@/base/mixins/common.js'
 import bindEvents from '@/base/bindEvent.js'

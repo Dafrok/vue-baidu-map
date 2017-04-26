@@ -1,12 +1,11 @@
-<template lang="pug">
-span
-</template>
-
 <script>
 import commonMixin from '@/base/mixins/common.js'
 
 export default {
   name: 'bm-city-list',
+  render () {
+    return
+  },
   mixins: [commonMixin('control')],
   props: {
     anchor: {

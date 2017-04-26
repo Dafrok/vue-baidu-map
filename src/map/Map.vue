@@ -1,5 +1,6 @@
 <template lang="pug">
 div
+  div(v-if="!hasBmView", ref="view", style="width: 100%; height: 100%")
   slot
 </template>
 
@@ -174,9 +175,10 @@ export default {
       autoResize ? map.enableAutoResize() : map.disableAutoResize()
     },
     init (BMap) {
-      let $el = this.$el
+      let $el = this.$refs.view
       for (let $node of this.$slots.default || []) {
         if ($node.componentOptions && $node.componentOptions.tag === 'bm-view') {
+          this.hasBmView = true
           $el = $node.elm
         }
       }
@@ -232,6 +234,11 @@ export default {
     const {getMapScript, initMap} = this
     getMapScript()
       .then(initMap)
+  },
+  data () {
+    return {
+      hasBmView: false
+    }
   }
 }
 </script>
