@@ -61,7 +61,6 @@ export default {
       this.originInstance = overlay
       bindEvents.call(this, overlay)
       map.addOverlay(overlay)
-      global.inst = this
     }
   }
 }

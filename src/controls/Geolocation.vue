@@ -53,7 +53,6 @@ export default {
       })
       bindEvents.call(this, this.originInstance)
       map.addControl(this.originInstance)
-      global.map = map
     }
   }
 }

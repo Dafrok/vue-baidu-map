@@ -7,6 +7,7 @@ import MapControlOverviewMap from './controls/OverviewMap.vue'
 import MapControlGeolocation from './controls/Geolocation.vue'
 import MapControlCopyright from './controls/Copyright.vue'
 import MapControlCityList from './controls/CityList.vue'
+import MapControlPanorama from './controls/Panorama.vue'
 import MapOverlayMarker from './overlays/Marker.vue'
 import MapOverlayPolyline from './overlays/Polyline.vue'
 import MapOverlayPolygon from './overlays/Polygon.vue'
@@ -38,6 +39,7 @@ export default {
     Vue.component('bm-geolocation', MapControlGeolocation)
     Vue.component('bm-copyright', MapControlCopyright)
     Vue.component('bm-city-list', MapControlCityList)
+    Vue.component('bm-panorama', MapControlPanorama)
 
     Vue.component('bm-marker', MapOverlayMarker)
     Vue.component('bm-polyline', MapOverlayPolyline)
