@@ -11,6 +11,7 @@ import MapOverlayMarker from './overlays/Marker.vue'
 import MapOverlayPolyline from './overlays/Polyline.vue'
 import MapOverlayPolygon from './overlays/Polygon.vue'
 import MapOverlayCircle from './overlays/Circle.vue'
+import MapOverlayGround from './overlays/Ground.vue'
 import MapOverlayLabel from './overlays/Label.vue'
 import MapOverlayInfoWindow from './overlays/InfoWindow.vue'
 import MapContextMenu from './context-menu/Menu.vue'
@@ -42,6 +43,7 @@ export default {
     Vue.component('bm-polyline', MapOverlayPolyline)
     Vue.component('bm-polygon', MapOverlayPolygon)
     Vue.component('bm-circle', MapOverlayCircle)
+    Vue.component('bm-ground', MapOverlayGround)
     Vue.component('bm-label', MapOverlayLabel)
     Vue.component('bm-info-window', MapOverlayInfoWindow)
 

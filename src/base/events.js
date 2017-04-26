@@ -103,5 +103,9 @@ export default {
     'maximize',
     'restore',
     'clickclose'
+  ],
+  'bm-ground': [
+    'click',
+    'dblclick'
   ]
 }

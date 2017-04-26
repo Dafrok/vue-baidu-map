@@ -21,6 +21,7 @@ import DocOverlayMarker from './md/bm-marker.md'
 import DocOverlayPolyline from './md/bm-polyline.md'
 import DocOverlayPolygon from './md/bm-polygon.md'
 import DocOverlayCircle from './md/bm-circle.md'
+import DocOverlayGround from './md/bm-ground.md'
 import DocOverlayLabel from './md/bm-label.md'
 import DocOverlayInfoWindow from './md/bm-info-window.md'
 
@@ -146,6 +147,11 @@ export default [
         path: 'circle',
         name: '圆形',
         component: DocOverlayCircle
+      },
+      {
+        path: 'ground',
+        name: '地面',
+        component: DocOverlayGround
       },
       {
         path: 'label',
