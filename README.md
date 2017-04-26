@@ -8,6 +8,7 @@
 [![Travis](https://img.shields.io/travis/Dafrok/vue-baidu-map.svg)]()
 [![license](https://img.shields.io/github/license/dafrok/vue-baidu-map.svg)]()
 [![Package Quality](http://npm.packagequality.com/shield/vue-baidu-map.svg)](http://packagequality.com/#?package=vue-baidu-map)
+[![npm](https://img.shields.io/npm/dm/vue-baidu-map.svg)]()
 
 基于 Vue 2.x 的百度地图组件库
 
