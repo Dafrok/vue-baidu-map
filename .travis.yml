@@ -6,8 +6,11 @@ branches:
 script:
   - npm run build:docs
 after_script:
+  - cp ./docs/favicon.png ./dist/
+  - cd dist
+  - git init
   - git config user.name "Dafrok"
   - git config user.email "o.o@mug.dog"
   - git add .
   - git commit -m "Travis build docs"
-  - git push origin master --force --quiet "https://${GITHUB_TOKEN}@github.com/Dafrok/vue-baidu-map.git"
+  - git push  --force --quiet "https://${GITHUB_TOKEN}@github.com/Dafrok/vue-baidu-map.git" master:gh-pages
