@@ -4,6 +4,8 @@ div
 </template>
 
 <script>
+import commonMixin from '@/base/mixins/common.js'
+
 export default {
   name: 'bm-context-menu',
   props: {
@@ -11,10 +13,12 @@ export default {
       type: Number
     }
   },
+  mixins: [commonMixin],
   methods: {
-    addContextMenu (BMap, parent, map) {
+    load () {
+      const {width, BMap, map, $parent} = this
       const menu = this.menu = new BMap.ContextMenu()
-      this.parent = parent
+      const parent = this.parent = $parent.overlay || map
       for (let item of this.$children) {
         if (item.seperator) {
           menu.addSeparator()
@@ -36,38 +40,13 @@ export default {
         item.disabled ? menuItem.disable() : menuItem.enable()
         menu.addItem(menuItem)
       }
-
       parent.addContextMenu(menu)
     },
-    removeContextMenu () {
-      this.parent.removeContextMenu(this.menu)
-    },
-    reloadContextMenu () {
-      this.parent && this.$nextTick(() => {
-        const {$parent, removeContextMenu, addContextMenu} = this
-        removeContextMenu()
-        addContextMenu ($parent.BMap || $parent.$parent.BMap, $parent.map || $parent.overlay, $parent.map || $parent.$parentmap)
+    unload () {
+      this.$nextTick(() => {
+        this.parent && this.parent.removeContextMenu(this.menu)
       })
     }
-  },
-  mounted () {
-    let map
-    let BMap
-    const {addContextMenu, $parent} = this
-    switch ($parent.$options._componentTag) {
-      case 'baidu-map':
-      case 'bm-view':
-        map = $parent.map
-        map ? addContextMenu() : $parent.$on('ready', () => addContextMenu($parent.BMap, $parent.map, $parent.map))
-        break;
-      case 'bm-marker':
-        map = $parent.$parent.map
-        map ? addContextMenu() : $parent.$parent.$on('ready', () => addContextMenu($parent.$parent.BMap, $parent.overlay, $parent.$parent.map))
-        break;
-    }
-  },
-  beforeDestroy () {
-    this.removeContextMenu()
   }
 }
 </script>

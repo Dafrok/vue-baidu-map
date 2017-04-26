@@ -2,7 +2,7 @@
 
 # 地区检索
 
-`bm-local-search`
+`BmLocalSearch`
 
 ## 属性
 

@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     reload () {
-      this.$parent.reloadContextMenu()
+      this.$parent.BMap && this.$parent.reload()
     }
   },
   watch: {

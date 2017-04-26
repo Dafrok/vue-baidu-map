@@ -19,7 +19,7 @@
 
 ## 示例
 
-### 插入一个右键菜单
+### 在地图中插入一个上下文菜单
 
 #### 代码
 
@@ -72,6 +72,53 @@ export default {
     </bm-context-menu>
   </baidu-map>
 </doc-preview>
+
+### 在 `BmMarker` 组件中插入一个上下文菜单
+
+#### 代码
+
+```html
+<template>
+  <baidu-map class="map" :center="center" :zoom="zoom">
+    <bm-marker :position="{lng: 116.404, lat: 39.915}" :dragging="true">
+      <bm-context-menu>
+        <bm-context-menu-item :callback="getPosition" text="获取坐标"></bm-context-menu-item>
+      </bm-context-menu>
+    </bm-marker>
+  </baidu-map>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      center: {
+        lng: 116.404,
+        lat: 39.915
+      },
+      zoom: 15
+    }
+  },
+  methods: {
+    getPosition (e) {
+      alert(`${e.point.lng} / ${e.point.lat}`)
+    }
+  }
+}
+</script>
+```
+
+#### 预览
+
+<doc-preview>
+  <baidu-map slot="map" class="map" :center="center" :zoom="zoom">
+    <bm-marker :position="{lng: 116.404, lat: 39.915}" :dragging="true">
+      <bm-context-menu>
+        <bm-context-menu-item :callback="getPosition" text="获取坐标"></bm-context-menu-item>
+      </bm-context-menu>
+    </bm-marker>
+  </baidu-map>
+</doc-preview>
 </template>
 
 <script>
@@ -88,6 +135,9 @@ export default {
     },
     gotoShanghai (e) {
       this.center = '上海'
+    },
+    getPosition (e) {
+      alert(`${e.point.lng} / ${e.point.lat}`)
     }
   }
 }

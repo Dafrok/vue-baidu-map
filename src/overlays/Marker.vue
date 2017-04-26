@@ -1,3 +1,7 @@
+<template lang="pug">
+div
+  slot
+</template>
 <script>
 import commonMixin from '@/base/mixins/common.js'
 import bindEvents from '@/base/bindEvent.js'
@@ -5,9 +9,6 @@ import {createLabel, createIcon} from '@/base/factory.js'
 
 export default {
   name: 'bm-marker',
-  render (h) {
-    return
-  },
   mixins: [commonMixin],
   props: {
     position: {},
