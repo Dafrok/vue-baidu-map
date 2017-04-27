@@ -86,30 +86,33 @@ export default {
   },
   methods: {
     load () {
-      const {BMap, map, show, position, title, width, height, maxWidth, offset, autoPan, closeOnClick, message, maximize, bindObserver} = this
+      const {BMap, map, show, title, width, height, maxWidth, offset, autoPan, closeOnClick, message, maximize, bindObserver} = this
       const $content = this.$el
       const overlay = new BMap.InfoWindow($content, {
-        width : width,     // 信息窗口宽度
-        height: height,     // 信息窗口高度
-        title : title, // 信息窗口标题
-        maxWidth: maxWidth,
+        width,
+        height,
+        title,
+        maxWidth,
         offset: createSize(BMap, offset),
         enableAutoPan: autoPan,
         enableCloseOnClick: closeOnClick,
-        enableMessage: typeof message === 'undefined',//设置允许信息窗发送短息
-        message: message
+        enableMessage: typeof message === 'undefined',
+        message
       })
 
       maximize ? overlay.enableMaximize() : overlay.disableMaximize()
       bindEvents.call(this, overlay)
       this.originInstance = overlay
       overlay.redraw()
-      ;[].forEach.call($content.querySelectorAll('img'), $img => $img.onload = () => overlay.redraw())
+      ;[].forEach.call($content.querySelectorAll('img'), $img => {
+        $img.onload = () => overlay.redraw()
+      })
       bindObserver()
-      this.$container = map // map or marker
+      this.$container = map
       show && this.openInfoWindow()
     },
     bindObserver () {
+      const MutationObserver = global.MutationObserver
       if (!MutationObserver) {
         return
       }
@@ -118,7 +121,7 @@ export default {
       this.observer.observe($el, {attributes: true, childList: true, characterData: true, subtree: true})
     },
     openInfoWindow () {
-      const {BMap, map, $container, position, originInstance} = this
+      const {BMap, $container, position, originInstance} = this
       $container.openInfoWindow(originInstance, createPoint(BMap, position))
     },
     closeInfoWindow () {

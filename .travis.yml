@@ -4,6 +4,7 @@ node_js:
 branches:
   only: master
 script:
+  - npm run test
   - npm run build:docs
 after_script:
   - cp ./docs/favicon.png ./dist/

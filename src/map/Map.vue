@@ -73,7 +73,7 @@ export default {
       const {checkType, map, BMap} = this
       if (checkType(val) === 'String' && val !== oldVal) {
         map.setCenter(val)
-      } else if (checkType(oldVal) === 'String' && checkType(val) === 'Object'){
+      } else if (checkType(oldVal) === 'String' && checkType(val) === 'Object') {
         map.setCenter(new BMap.Point(parseFloat(val.lng), parseFloat(val.lat)))
       }
     },
@@ -98,19 +98,18 @@ export default {
       }
     },
     zoom (val, oldVal) {
-      const {BMap} = this
-      const  {map} = this
+      const {map} = this
       const zoom = parseFloat(val)
       if (val.toString() !== oldVal.toString() && zoom >= 3 && zoom <= 19) {
         map.setZoom(zoom)
       }
     },
     minZoom (val) {
-      const  {map} = this
+      const {map} = this
       map.setMinZoom(val)
     },
     maxZoom (val) {
-      const  {map} = this
+      const {map} = this
       map.setMaxZoom(val)
     },
     highResolution () {
@@ -120,43 +119,44 @@ export default {
       // Require remount component
     },
     mapType (val) {
-      const  {map} = this
+      const {map} = this
       map.setMapType(global[val])
     },
     dragging (val) {
-      const  {map} = this
+      const {map} = this
       val ? map.enableDragging() : map.disableDragging()
     },
     scrollWheelZoom (val) {
-      const  {map} = this
+      const {map} = this
       val ? map.enableScrollWheelZoom() : map.disableScrollWheelZoom()
     },
     doubleClickZoom (val) {
-      const  {map} = this
+      const {map} = this
       val ? map.enableDoubleClickZoom() : map.disableDoubleClickZoom()
     },
     keyboard (val) {
-      const  {map} = this
+      const {map} = this
       val ? map.enableKeyboard() : map.disableKeyboard()
     },
     inertialDragging (val) {
-      const  {map} = this
+      const {map} = this
       val ? map.enableInertialDragging() : map.disableInertialDragging()
     },
     continuousZoom (val) {
-      const  {map} = this
+      const {map} = this
       val ? map.enableContinuousZoom() : map.disableContinuousZoom()
     },
     pinchToZoom (val) {
-      const  {map} = this
+      const {map} = this
       val ? map.enablePinchToZoom() : map.disablePinchToZoom()
     },
     autoResize (val) {
-      const  {map} = this
+      const {map} = this
       val ? map.enableAutoResize() : map.disableAutoResize()
     },
     theme (val) {
-      map.setMapStyle({styleJson: val});
+      const {map} = this
+      map.setMapStyle({styleJson: val})
     }
   },
   methods: {
@@ -185,7 +185,7 @@ export default {
       const map = new BMap.Map($el, {enableHighResolution: this.highResolution, enableMapClick: this.mapClick})
       this.map = map
       const {setMapOptions, maxZoom, zoom, getCenterPoint, theme} = this
-      theme && map.setMapStyle({styleJson: theme});
+      theme && map.setMapStyle({styleJson: theme})
       setMapOptions()
       bindEvents.call(this, map)
       map.centerAndZoom(getCenterPoint(), maxZoom || zoom || 3)
@@ -220,7 +220,7 @@ export default {
           }
           const $script = document.createElement('script')
           global.document.body.appendChild($script)
-          $script.src = `//api.map.baidu.com/api?v=2.0&ak=${ak}&callback=_initBaiduMap`;
+          $script.src = `//api.map.baidu.com/api?v=2.0&ak=${ak}&callback=_initBaiduMap`
         })
         return global.BMap._preloader
       } else if (!global.BMap._preloader) {

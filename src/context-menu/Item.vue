@@ -8,7 +8,7 @@ export default {
   props: {
     callback: {
       type: Function,
-      default: new Function
+      default: function () {}
     },
     text: {
       type: String

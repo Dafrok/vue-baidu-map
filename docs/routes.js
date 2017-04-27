@@ -38,7 +38,7 @@ export default [
   {
     // 首页
     path: '/',
-    name:  'VUE BAIDU MAP',
+    name: 'VUE BAIDU MAP',
     component: DocIndex,
     meta: 'hidden'
   },
@@ -79,7 +79,7 @@ export default [
         path: 'bm-view',
         component: DocBmView,
         name: '地图视图'
-      },
+      }
     ]
   },
   {
@@ -214,7 +214,7 @@ export default [
         path: 'item',
         name: '菜单项',
         component: DocContextMenuItem
-      },
+      }
     ]
   }
 ]

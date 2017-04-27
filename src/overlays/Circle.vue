@@ -5,9 +5,7 @@ import {createPoint} from '@/base/factory.js'
 
 export default {
   name: 'bm-circle',
-  render () {
-    return
-  },
+  render () {},
   mixins: [commonMixin('overlay')],
   props: {
     center: {
@@ -72,7 +70,7 @@ export default {
     strokeColor (val) {
       this.originInstance.setStrokeColor(val)
     },
-    strokeColor (val) {
+    strokeOpacity (val) {
       this.originInstance.setStrokeOpacity(val)
     },
     strokeWeight (val) {

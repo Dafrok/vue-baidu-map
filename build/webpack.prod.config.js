@@ -1,5 +1,4 @@
 const path = require('path')
-const webpack = require('webpack')
 
 module.exports = {
   entry: './src/index.js',
@@ -24,7 +23,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@': __dirname + '/../src'
+      '@': path.resolve(__dirname, '../src')
     }
-  },
+  }
 }

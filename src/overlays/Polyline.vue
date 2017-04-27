@@ -5,9 +5,7 @@ import {createPoint} from '@/base/factory.js'
 
 export default {
   name: 'bm-polyline',
-  render () {
-    return
-  },
+  render () {},
   mixins: [commonMixin('overlay')],
   props: {
     path: {
@@ -48,7 +46,7 @@ export default {
     strokeColor (val) {
       this.originInstance.setStrokeColor(val)
     },
-    strokeColor (val) {
+    strokeOpacity (val) {
       this.originInstance.setStrokeOpacity(val)
     },
     strokeWeight (val) {

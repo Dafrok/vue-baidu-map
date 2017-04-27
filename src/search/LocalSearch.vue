@@ -50,7 +50,7 @@ export default {
     },
     keyword (val) {
       const {local, forceLocal, customData} = this
-      this.local && this.local.search(val, {
+      local && local.search(val, {
         forceLocal,
         customData
       })
@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     search () {
-      const {local, keyword, option, forceLocal, customData} = this
+      const {local, keyword, forceLocal, customData} = this
       local.search(keyword, {
         forceLocal,
         customData
@@ -100,7 +100,7 @@ export default {
           return map
         }
       })(location)
-      const local = this.local = new BMap.LocalSearch(_location || map, {
+      this.local = new BMap.LocalSearch(_location || map, {
         onMarkersSet (e) {
           instance.$emit('markersset', e)
         },
@@ -120,7 +120,7 @@ export default {
           selectFirstResult,
           autoViewport,
           highlightMode
-        },
+        }
       })
       search()
     }

@@ -4,9 +4,7 @@ import commonMixin from '@/base/mixins/common.js'
 export default {
   name: 'bm-panorama',
   mixins: [commonMixin('control')],
-  render () {
-    return
-  },
+  render () {},
   props: ['anchor', 'offset'],
   watch: {
     anchor () {

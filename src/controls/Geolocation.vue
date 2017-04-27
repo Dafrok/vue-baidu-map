@@ -4,13 +4,11 @@ import bindEvents from '@/base/bindEvent.js'
 
 export default {
   name: 'bm-geolocation',
-  render () {
-    return
-  },
+  render () {},
   mixins: [commonMixin('control')],
   props: {
     anchor: {
-      type: String,
+      type: String
     },
     offset: {
       type: Object

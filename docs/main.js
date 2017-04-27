@@ -14,7 +14,7 @@ import 'material-design-lite/material.min.js'
 import 'material-design-icons/iconfont/material-icons.css'
 import './fonts/iconfont.css'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 Vue.use(BaiduMap, {
   ak: 'oW2UEhdth2tRbEE4FUpF9E5YVDCIPYih'
 })
@@ -22,8 +22,8 @@ Vue.use(BaiduMap, {
 Vue.component('doc-preview', DocPreview)
 
 const router = new VueRouter({
-    routes,
-    linkActiveClass: 'is-active',
+  routes,
+  linkActiveClass: 'is-active'
 })
 
 router.afterEach(route => {
@@ -31,7 +31,7 @@ router.afterEach(route => {
   Array.prototype.forEach.call(blocks, Hljs.highlightBlock)
 })
 
-new Vue({
+export default new Vue({
   el: '#app',
   router,
   render: h => h(App)

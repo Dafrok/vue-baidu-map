@@ -3,9 +3,7 @@ import commonMixin from '@/base/mixins/common.js'
 
 export default {
   name: 'bm-triffic',
-  render (h) {
-    return
-  },
+  render (h) {},
   mixins: [commonMixin('layer')],
   props: {
     predictDate: {

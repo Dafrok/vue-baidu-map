@@ -33,7 +33,7 @@ export default {
             target: parent
           })
         }, {
-          width: this.width,
+          width,
           id: item.id,
           iconUrl: item.iconUrl
         })

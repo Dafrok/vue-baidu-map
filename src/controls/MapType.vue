@@ -3,9 +3,7 @@ import commonMixin from '@/base/mixins/common.js'
 
 export default {
   name: 'bm-map-type',
-  render () {
-    return
-  },
+  render () {},
   mixins: [commonMixin('control')],
   props: ['type', 'mapTypes', 'anchor', 'offset'],
   watch: {

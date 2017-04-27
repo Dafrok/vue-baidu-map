@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     close () {
-      document.querySelector('.mdl-layout__obfuscator').classList.remove('is-visible');
+      document.querySelector('.mdl-layout__obfuscator').classList.remove('is-visible')
       this.$refs.drawer.classList.remove('is-visible')
     }
   },

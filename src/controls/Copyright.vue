@@ -3,9 +3,7 @@ import commonMixin from '@/base/mixins/common.js'
 
 export default {
   name: 'bm-copyright',
-  render () {
-    return
-  },
+  render () {},
   mixins: [commonMixin('control')],
   props: ['anchor', 'offset', 'copyright'],
   watch: {
@@ -34,7 +32,7 @@ export default {
       const {removeCopyright, getCopyrightCollection} = this.originInstance
       const copyrightList = getCopyrightCollection()
       copyrightList && copyrightList.forEach(item => {
-        this.originInstance.removeCopyright(item.id)
+        removeCopyright(item.id)
       })
       this.copyright && this.copyright.forEach(item => {
         const bounds = item.bounds

@@ -5,12 +5,10 @@ import bindEvents from '@/base/bindEvent.js'
 export default {
   name: 'bm-overview-map',
   mixins: [commonMixin('control')],
-  render () {
-    return
-  },
+  render () {},
   props: {
     anchor: {
-      type: String,
+      type: String
     },
     offset: {
       type: Object

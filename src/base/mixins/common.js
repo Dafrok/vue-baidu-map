@@ -35,13 +35,13 @@ class Mixin {
         this.$nextTick(() => {
           const {map, originInstance} = this
           try {
-            map[types[prop.type].unload](this.originInstance)
+            map[types[prop.type].unload](originInstance)
           } catch (e) {}
         })
       }
     }
     this.mounted = function () {
-      const {BMap, map} = this.$parent
+      const {map} = this.$parent
       const {ready} = this
       map ? ready() : this.$parent.$on('ready', ready)
     }

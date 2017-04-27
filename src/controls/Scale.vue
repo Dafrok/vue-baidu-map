@@ -3,13 +3,11 @@ import commonMixin from '@/base/mixins/common.js'
 
 export default {
   name: 'bm-scale',
-  render () {
-    return
-  },
+  render () {},
   mixins: [commonMixin('control')],
   props: {
     anchor: {
-      type: String,
+      type: String
     },
     offset: {
       type: Object

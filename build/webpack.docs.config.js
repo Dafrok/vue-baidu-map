@@ -1,5 +1,4 @@
 const path = require('path')
-const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
@@ -12,12 +11,12 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        use: ['vue-loader'],
+        use: ['vue-loader', 'eslint-loader'],
         exclude: /_cache/
       },
       {
         test: /\.js$/,
-        use: ['babel-loader'],
+        use: ['babel-loader', 'eslint-loader'],
         exclude: [/node_modules/, /md/]
       },
       {
@@ -45,13 +44,13 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@': __dirname + '/../src',
-      docs: __dirname + '/../docs/src',
+      '@': path.resolve(__dirname, '../src'),
+      docs: path.resolve(__dirname, '../docs/src')
     }
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './docs/template/index.html'
+      template: path.resolve(__dirname, '../docs/template/index.html')
     })
   ]
 }

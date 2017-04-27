@@ -3,13 +3,11 @@ import commonMixin from '@/base/mixins/common.js'
 
 export default {
   name: 'bm-navigation',
-  render () {
-    return
-  },
+  render () {},
   mixins: [commonMixin('control')],
   props: {
     anchor: {
-      type: String,
+      type: String
     },
     offset: {
       type: Object
@@ -18,7 +16,7 @@ export default {
       type: Object
     },
     showZoomInfo: {
-      type: Boolean,
+      type: Boolean
     },
     enableGeolocation: {
       type: Boolean,

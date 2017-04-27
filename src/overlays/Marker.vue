@@ -13,7 +13,6 @@ export default {
   mixins: [commonMixin('overlay')],
   props: {
     position: {},
-    label: {},
     offset: {},
     icon: {},
     massClear: {
@@ -39,11 +38,13 @@ export default {
       type: Number
     },
     shadow: {
+      type: Object
     },
     title: {
       type: String
     },
     label: {
+      type: Object
     },
     animation: {
       type: String
@@ -110,7 +111,7 @@ export default {
     shadow (val) {
       this.setShadow(val)
     },
-    shadow (val) {
+    title (val) {
       this.setTitle(val)
     },
     label (val) {
@@ -125,7 +126,7 @@ export default {
   },
   methods: {
     load () {
-      const {BMap, map, position, offset, icon, massClear, dragging, clicking, raiseOnDrag, draggingCursor, rotation, shadow, title, label, animation, top, addLabel} = this
+      const {BMap, map, position, offset, icon, massClear, dragging, clicking, raiseOnDrag, draggingCursor, rotation, shadow, title, label, animation, top} = this
       const overlay = new BMap.Marker(new BMap.Point(position.lng, position.lat), {
         offset,
         icon: icon && createIcon(BMap, icon),

@@ -4,9 +4,7 @@ import {createBounds} from '@/base/factory.js'
 
 export default {
   name: 'bm-tile',
-  render (h) {
-    return
-  },
+  render (h) {},
   mixins: [commonMixin('layer')],
   props: {
     transparentPng: {

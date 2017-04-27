@@ -5,9 +5,7 @@ import {createBounds} from '@/base/factory.js'
 
 export default {
   name: 'bm-ground',
-  render () {
-    return
-  },
+  render () {},
   mixins: [commonMixin('overlay')],
   props: {
     bounds: {
@@ -45,7 +43,7 @@ export default {
     },
     displayOnMaxLevel (val) {
       this.originInstance.setDisplayOnMaxLevel(val)
-    },
+    }
   },
   methods: {
     load () {

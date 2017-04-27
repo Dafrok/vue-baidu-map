@@ -5,9 +5,7 @@ import {createPoint, createSize} from '@/base/factory.js'
 
 export default {
   name: 'bm-label',
-  render () {
-    return
-  },
+  render () {},
   mixins: [commonMixin('overlay')],
   props: {
     content: {
@@ -37,12 +35,14 @@ export default {
       if (val.toString() !== oldVal.toString()) {
         this.originInstance.setOffset(createSize(BMap, {width: val, height: this.offset.height}))
       }
-
     },
-    'offset.height' (val) {
+    'offset.height' (val, oldVal) {
       const {BMap} = this
       if (val.toString() !== oldVal.toString()) {
-        this.originInstance.setOffset(createSize(BMap, {width: this.offset.width, height: val}))
+        this.originInstance.setOffset(createSize(BMap, {
+          width: this.offset.width,
+          height: val
+        }))
       }
     },
     'position.lng' (val, oldVal) {
