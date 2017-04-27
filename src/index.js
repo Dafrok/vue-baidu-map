@@ -20,6 +20,7 @@ import MapContextMenuItem from './context-menu/Item.vue'
 import MapLocalSearch from './search/LocalSearch.vue'
 import MapLayerTile from './layers/Tile.vue'
 import MapLayerTraffic from './layers/Traffic.vue'
+import MapExtendBoundary from './extends/Boundary.vue'
 
 export default {
   install (Vue, options) {
@@ -56,5 +57,7 @@ export default {
 
     Vue.component('bm-tile', MapLayerTile)
     Vue.component('bm-traffic', MapLayerTraffic)
+
+    Vue.component('bm-boundary', MapExtendBoundary)
   }
 }

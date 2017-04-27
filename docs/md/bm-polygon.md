@@ -42,7 +42,7 @@
 ```html
 <template>
   <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <bm-polygon :path="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolygonPath"/>
+    <bm-polygon :path="polygonPath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolygonPath"/>
   </baidu-map>
 </template>
 
@@ -59,7 +59,7 @@ export default {
   },
   methods: {
     updatePolygonPath (e) {
-      this.polylinePath = e.target.getPath()
+      this.polygonPath = e.target.getPath()
     },
     addPolygonPoint () {
       this.polygonPath.push({lng: 116.404, lat: 39.915})

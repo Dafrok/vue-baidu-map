@@ -9,7 +9,10 @@ export default {
   mixins: [commonMixin('overlay')],
   props: {
     path: {
-      type: Array
+      type: Array,
+      default () {
+        return []
+      }
     },
     strokeColor: {
       type: String

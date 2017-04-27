@@ -34,6 +34,8 @@ import DocLocalSearch from './md/bm-local-search.md'
 import DocLayerTile from './md/bm-tile.md'
 import DocLayerTraffic from './md/bm-traffic.md'
 
+import DocExtendBoundary from './md/bm-boundary.md'
+
 export default [
   {
     // 首页
@@ -214,6 +216,18 @@ export default [
         path: 'item',
         name: '菜单项',
         component: DocContextMenuItem
+      }
+    ]
+  },
+  {
+    path: '/extend',
+    name: '扩展',
+    component: CateView,
+    children: [
+      {
+        path: 'menu',
+        name: '行政区划',
+        component: DocExtendBoundary
       }
     ]
   }

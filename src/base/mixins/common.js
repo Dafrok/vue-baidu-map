@@ -13,6 +13,8 @@ const types = {
   }
 }
 
+const getParent = $component => $component.abstract ? getParent($component.$parent) : $component
+
 class Mixin {
   constructor (prop) {
     this.methods = {
@@ -25,23 +27,24 @@ class Mixin {
           map
         })
       },
+      transmitEvent (e) {
+        this.$emit(e.type.replace(/^on/, ''), e)
+      },
       reload () {
         this && this.BMap && this.$nextTick(() => {
           this.unload()
-          this.load()
+          this.$nextTick(this.load)
         })
       },
       unload () {
-        this.$nextTick(() => {
-          const {map, originInstance} = this
-          try {
-            map[types[prop.type].unload](originInstance)
-          } catch (e) {}
-        })
+        const {map, originInstance} = this
+        try {
+          map[types[prop.type].unload](originInstance)
+        } catch (e) {}
       }
     }
     this.mounted = function () {
-      const {map} = this.$parent
+      const map = getParent(this.$parent).map
       const {ready} = this
       map ? ready() : this.$parent.$on('ready', ready)
     }
