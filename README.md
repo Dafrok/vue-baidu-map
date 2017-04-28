@@ -10,7 +10,7 @@
 [![Package Quality](http://npm.packagequality.com/shield/vue-baidu-map.svg)](http://packagequality.com/#?package=vue-baidu-map)
 [![npm](https://img.shields.io/npm/dm/vue-baidu-map.svg)]()
 
-基于 Vue 2.x 的百度地图组件库
+<p align="center">基于 VUE 2.x 的百度地图组件
 
 ## 文档
 
