@@ -21,7 +21,7 @@ export default {
     BmPolygon
   },
   watch: {
-    name (val) {
+    name () {
       this.reload()
     }
   },
@@ -30,12 +30,8 @@ export default {
       const {BMap, name} = this
       const bd = new BMap.Boundary()
       bd.get(name, data => {
-        this.path = data.boundaries[0] ? data.boundaries[0]
-          .split(';')
-          .map(point => {
-            const p = point.split(',')
-            return {lng: +p[0], lat: +p[1]}
-          }) : []
+        this.path = (data.boundaries[0] || []).split(';')
+          .map(point => (([lng, lat]) => ({lng, lat}))(point.split(',').map(p => +p)))
       })
     }
   }

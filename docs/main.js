@@ -5,10 +5,9 @@ import routes from './routes'
 import BaiduMap from '@/index.js'
 import DocPreview from './components/DocPreview.vue'
 
-import Hljs from 'highlight.js'
+import Prism from 'prismjs'
 
-import 'github-markdown-css'
-import 'highlight.js/styles/github.css'
+import 'prismjs/themes/prism-tomorrow.css'
 import 'material-design-lite/material.min.css'
 import 'material-design-lite/material.min.js'
 import 'material-design-icons/iconfont/material-icons.css'
@@ -27,8 +26,7 @@ const router = new VueRouter({
 })
 
 router.afterEach(route => {
-  let blocks = document.querySelectorAll('pre code')
-  Array.prototype.forEach.call(blocks, Hljs.highlightBlock)
+  Vue.nextTick(Prism.highlightAll)
 })
 
 export default new Vue({
