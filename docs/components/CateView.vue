@@ -9,7 +9,7 @@ router-view
   a
     color #4183C4
     &.absent
-      color #cc0000
+      color #c00
     &.anchor 
       display block
       padding-left 30px
@@ -44,7 +44,7 @@ router-view
 
   h2 
     font-size 24px
-    border-bottom 1px solid #cccccc
+    border-bottom 1px solid #ccc
     color black 
 
   h3 
@@ -65,7 +65,7 @@ router-view
 
   hr 
     border 0 none
-    color #cccccc
+    color #ccc
     height 4px
     padding 0
 
@@ -114,7 +114,7 @@ router-view
     padding 0
     border-collapse collapse 
     tr 
-      border-top 1px solid #cccccc
+      border-top 1px solid #ccc
       background-color white
       margin 0
       padding 0 
@@ -122,11 +122,12 @@ router-view
         background-color #f8f8f8 
       th 
         font-weight bold
-        border 1px solid #cccccc
+        border 1px solid #ccc
         margin 0
-        padding 6px 13px 
+        padding 6px 13px
+        background #ccc
       td 
-        border 1px solid #cccccc
+        border 1px solid #ccc
         margin 0
         padding 6px 13px 
       th, td
@@ -143,7 +144,7 @@ router-view
       display block
       overflow hidden 
       & > span 
-        border 1px solid #dddddd
+        border 1px solid #ddd
         display block
         float left
         overflow hidden
@@ -153,7 +154,7 @@ router-view
       span
         span
           clear both
-          color #333333
+          color #333
           display block
           padding 5px 0 0 
         img 
@@ -219,7 +220,7 @@ router-view
 
   .highlight pre 
     background-color #f8f8f8
-    border 1px solid #cccccc
+    border 1px solid #ccc
     font-size 13px
     line-height 19px
     overflow auto
@@ -228,7 +229,7 @@ router-view
 
   pre 
     background-color #f8f8f8
-    border 1px solid #cccccc
+    border 1px solid #ccc
     font-size 13px
     line-height 19px
     overflow auto
