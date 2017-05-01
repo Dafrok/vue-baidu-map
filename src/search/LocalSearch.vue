@@ -3,7 +3,7 @@ div
 </template>
 
 <script>
-import {createPoint} from '@/base/factory.js'
+import {createPoint, createBounds} from '@/base/factory.js'
 import commonMixin from '@/base/mixins/common.js'
 
 export default {
@@ -26,11 +26,12 @@ export default {
     customData: {
       type: Object
     },
-    // bounds: {
-    //   type: Array
-    // },
-    // nearby: {
-    // },
+    bounds: {
+      type: Object
+    },
+    nearby: {
+      type: Object
+    },
     // page: {
     //   type: Number
     // },
@@ -47,7 +48,6 @@ export default {
   watch: {
     location: {
       handler (val) {
-        console.log(this.map)
         this.originInstance.setLocation(val || this.map)
       },
       deep: true
@@ -58,6 +58,20 @@ export default {
         forceLocal,
         customData
       })
+    },
+    bounds: {
+      handler (val) {
+        const {searchInBounds} = this
+        searchInBounds(val)
+      },
+      deep: true
+    },
+    nearby: {
+      handler (val) {
+        const {searchNearby} = this
+        searchNearby(val)
+      },
+      deep: true
     },
     forceLocal () {
       this.reload()
@@ -79,6 +93,15 @@ export default {
     }
   },
   methods: {
+    searchNearby (nearby) {
+      // todo
+      const {originInstance, keyword, customData, BMap} = this
+      originInstance.searchNearby(keyword, createPoint(BMap, nearby.center), nearby.radius, customData)
+    },
+    searchInBounds (bounds) {
+      const {originInstance, keyword, customData, BMap} = this
+      originInstance.searchInBounds(keyword, createBounds(BMap, bounds), customData)
+    },
     search () {
       const {originInstance, keyword, forceLocal, customData} = this
       originInstance.search(keyword, {
@@ -89,16 +112,8 @@ export default {
     load () {
       const instance = this
       const {map, BMap} = this.$parent
-      const {search, pageCapacity, autoViewport, selectFirstResult, highlightMode, location, resultPanel} = this
-      const _location = (location => {
-        if (location.lng && location.lat) {
-          return createPoint(BMap, location)
-        } else if (typeof location === 'string') {
-          return location
-        } else {
-          return map
-        }
-      })(location)
+      const {search, pageCapacity, autoViewport, selectFirstResult, highlightMode, location, resultPanel, bounds, searchInBounds, nearby, searchNearby} = this
+      const _location = location ? location.lng && location.lat ? createPoint(BMap, location) : location : map
       this.originInstance = new BMap.LocalSearch(_location || map, {
         onMarkersSet (e) {
           instance.$emit('markersset', e)
@@ -121,7 +136,7 @@ export default {
           highlightMode
         }
       })
-      search()
+      nearby ? searchNearby(nearby) : bounds ? searchInBounds(bounds) : search()
     }
   }
 }
