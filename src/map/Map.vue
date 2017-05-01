@@ -6,6 +6,8 @@ div
 
 <script>
 import bindEvents from '../base/bindEvent.js'
+import {checkType} from '@/base/util.js'
+
 export default {
   name: 'bm-view',
   props: {
@@ -70,7 +72,7 @@ export default {
   },
   watch: {
     center (val, oldVal) {
-      const {checkType, map, BMap} = this
+      const {map, BMap} = this
       if (checkType(val) === 'String' && val !== oldVal) {
         map.setCenter(val)
       } else if (checkType(oldVal) === 'String' && checkType(val) === 'Object') {
@@ -78,7 +80,7 @@ export default {
       }
     },
     'center.lng' (val, oldVal) {
-      const {BMap, map, checkType} = this
+      const {BMap, map} = this
       if (checkType(oldVal) === 'Undefined' || checkType(val) === 'Undefined') {
         return
       }
@@ -88,7 +90,7 @@ export default {
       }
     },
     'center.lat' (val, oldVal) {
-      const {BMap, map, checkType} = this
+      const {BMap, map} = this
       if (checkType(oldVal) === 'Undefined' || checkType(val) === 'Undefined') {
         return
       }
@@ -191,12 +193,8 @@ export default {
       map.centerAndZoom(getCenterPoint(), maxZoom || zoom || 3)
       this.$emit('ready', {BMap, map})
     },
-    checkType (val) {
-      return Object.prototype.toString.call(val).slice(8, -1)
-    },
     getCenterPoint () {
-      const {center, checkType} = this
-      const {BMap} = this
+      const {center, BMap} = this
       switch (checkType(center)) {
         case 'String': return center
         case 'Object': return new BMap.Point(parseFloat(center.lng), parseFloat(center.lat))

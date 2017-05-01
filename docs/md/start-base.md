@@ -72,7 +72,13 @@
 |BMAP_HIGHLIGHT_STEP|驾车结果展现中点击列表后的展现点步骤|
 |BMAP_HIGHLIGHT_ROUTE|驾车结果展现中点击列表后的展现路段|
 
+### TransitRouteResult
 
+|常量|描述|
+|BMAP_TRANSIT_POLICY_LEAST_TIME|最少时间|
+|BMAP_TRANSIT_POLICY_LEAST_TRANSFER|最少换乘|
+|BMAP_TRANSIT_POLICY_LEAST_WALKING|最少步行|
+|BMAP_TRANSIT_POLICY_AVOID_SUBWAYS|不乘地铁|
 
 ## 私有类型
 

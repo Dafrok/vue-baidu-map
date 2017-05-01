@@ -56,7 +56,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style>
 .map-container {
   .bm-view {
     width: 100%;

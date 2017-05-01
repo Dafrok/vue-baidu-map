@@ -4,6 +4,7 @@ div
 
 <script>
 import {createPoint, createBounds} from '@/base/factory.js'
+import {isPoint} from '@/base/util.js'
 import commonMixin from '@/base/mixins/common.js'
 
 export default {
@@ -82,6 +83,9 @@ export default {
         this.reload()
       }
     },
+    resultPanel () {
+      this.reload()
+    },
     pageCapacity (val) {
       this.originInstance && this.originInstance.setPageCapacity(val)
     },
@@ -94,9 +98,7 @@ export default {
   },
   methods: {
     searchNearby (nearby) {
-      // todo
       const {originInstance, keyword, customData, BMap} = this
-      console.log(keyword, createPoint(BMap, nearby.center), nearby.radius)
       originInstance.searchNearby(keyword, createPoint(BMap, nearby.center), nearby.radius, customData)
     },
     searchInBounds (bounds) {
@@ -114,8 +116,8 @@ export default {
       const instance = this
       const {map, BMap} = this.$parent
       const {search, pageCapacity, autoViewport, selectFirstResult, highlightMode, location, resultPanel, bounds, searchInBounds, nearby, searchNearby} = this
-      const _location = location ? location.lng && location.lat ? createPoint(BMap, location) : location : map
-      this.originInstance = new BMap.LocalSearch(_location || map, {
+      const _location = location ? isPoint(location) ? createPoint(BMap, location) : location : map
+      this.originInstance = new BMap.LocalSearch(_location, {
         onMarkersSet (e) {
           instance.$emit('markersset', e)
         },
