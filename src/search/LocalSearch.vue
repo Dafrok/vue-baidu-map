@@ -4,8 +4,11 @@ div
 
 <script>
 import {createPoint} from '@/base/factory.js'
+import commonMixin from '@/base/mixins/common.js'
+
 export default {
   name: 'bm-local-search',
+  mixins: [commonMixin('search')],
   props: {
     location: {
       type: [Object, String]
@@ -44,7 +47,8 @@ export default {
   watch: {
     location: {
       handler (val) {
-        this.local.setLocation(val)
+        console.log(this.map)
+        this.local.setLocation(val || this.map)
       },
       deep: true
     },
@@ -82,12 +86,12 @@ export default {
         customData
       })
     },
-    reloadLocalSearch () {
+    reload () {
       const {map} = this.$parent
       const {addLocalSearch} = this
       map ? addLocalSearch() : this.$parent.$on('ready', addLocalSearch)
     },
-    addLocalSearch () {
+    load () {
       const instance = this
       const {map, BMap} = this.$parent
       const {search, pageCapacity, autoViewport, selectFirstResult, highlightMode, location, resultPanel} = this
@@ -124,9 +128,6 @@ export default {
       })
       search()
     }
-  },
-  mounted () {
-    this.reloadLocalSearch()
   }
 }
 </script>
