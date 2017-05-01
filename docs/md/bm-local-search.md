@@ -137,6 +137,17 @@ export default {
 </doc-preview>
 
 
+### 在一个圆形区域内进行当前地区检索
+
+#### 预览
+
+<doc-preview>
+  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+    <bm-local-search keyword="餐馆" :nearby="nearby" :auto-viewport="true" :resultPanel="false"></bm-local-search>
+    <bm-circle :center="nearby.center" :radius="nearby.radius"></bm-circle>
+  </baidu-map>
+</doc-preview>
+
 </template>
 
 <script>
@@ -152,6 +163,13 @@ export default {
       pEnd: {
         lng: 116.357474,
         lat: 39.988609
+      },
+      nearby: {
+        center: {
+          lng: 116.404, 
+          lat: 39.915
+        },
+        radius: 1000
       }
     }
   },

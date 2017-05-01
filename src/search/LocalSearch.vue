@@ -96,6 +96,7 @@ export default {
     searchNearby (nearby) {
       // todo
       const {originInstance, keyword, customData, BMap} = this
+      console.log(keyword, createPoint(BMap, nearby.center), nearby.radius)
       originInstance.searchNearby(keyword, createPoint(BMap, nearby.center), nearby.radius, customData)
     },
     searchInBounds (bounds) {
