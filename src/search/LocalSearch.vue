@@ -48,48 +48,43 @@ export default {
     location: {
       handler (val) {
         console.log(this.map)
-        this.local.setLocation(val || this.map)
+        this.originInstance.setLocation(val || this.map)
       },
       deep: true
     },
     keyword (val) {
-      const {local, forceLocal, customData} = this
-      local && local.search(val, {
+      const {originInstance, forceLocal, customData} = this
+      originInstance && originInstance.search(val, {
         forceLocal,
         customData
       })
     },
     forceLocal () {
-      this.reloadLocalSearch()
+      this.reload()
     },
     customData: {
       deep: true,
       handler () {
-        this.reloadLocalSearch()
+        this.reload()
       }
     },
     pageCapacity (val) {
-      this.local && this.local.setPageCapacity(val)
+      this.originInstance && this.originInstance.setPageCapacity(val)
     },
     autoViewport (val) {
-      this.local && (val ? this.local.enableAutoViewport() : this.local.disableAutoViewport())
+      this.originInstance && (val ? this.originInstance.enableAutoViewport() : this.originInstance.disableAutoViewport())
     },
     selectFirstResult (val) {
-      this.local && (val ? this.local.enableFirstResultSelection() : this.local.disableFirstResultSelection())
+      this.originInstance && (val ? this.originInstance.enableFirstResultSelection() : this.originInstance.disableFirstResultSelection())
     }
   },
   methods: {
     search () {
-      const {local, keyword, forceLocal, customData} = this
-      local.search(keyword, {
+      const {originInstance, keyword, forceLocal, customData} = this
+      originInstance.search(keyword, {
         forceLocal,
         customData
       })
-    },
-    reload () {
-      const {map} = this.$parent
-      const {addLocalSearch} = this
-      map ? addLocalSearch() : this.$parent.$on('ready', addLocalSearch)
     },
     load () {
       const instance = this
@@ -104,7 +99,7 @@ export default {
           return map
         }
       })(location)
-      this.local = new BMap.LocalSearch(_location || map, {
+      this.originInstance = new BMap.LocalSearch(_location || map, {
         onMarkersSet (e) {
           instance.$emit('markersset', e)
         },
