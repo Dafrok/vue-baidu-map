@@ -31,6 +31,7 @@ import DocContextMenuItem from './md/bm-context-menu-item.md'
 
 import DocLocalSearch from './md/bm-local-search.md'
 import DocTransit from './md/bm-transit.md'
+import DocWalking from './md/bm-walking.md'
 
 import DocLayerTile from './md/bm-tile.md'
 import DocLayerTraffic from './md/bm-traffic.md'
@@ -205,6 +206,11 @@ export default [
         path: 'transit',
         name: '公交路线检索',
         component: DocTransit
+      },
+      {
+        path: 'walking',
+        name: '步行路线检索',
+        component: DocWalking
       }
     ]
   },

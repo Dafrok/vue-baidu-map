@@ -19,6 +19,7 @@ import MapContextMenu from './context-menu/Menu.vue'
 import MapContextMenuItem from './context-menu/Item.vue'
 import MapLocalSearch from './search/LocalSearch.vue'
 import MapTransit from './search/Transit.vue'
+import MapWalking from './search/Walking.vue'
 import MapLayerTile from './layers/Tile.vue'
 import MapLayerTraffic from './layers/Traffic.vue'
 import MapExtendBoundary from './extends/Boundary.vue'
@@ -56,6 +57,7 @@ export default {
 
     Vue.component('bm-local-search', MapLocalSearch)
     Vue.component('bm-transit', MapTransit)
+    Vue.component('bm-walking', MapWalking)
 
     Vue.component('bm-tile', MapLayerTile)
     Vue.component('bm-traffic', MapLayerTraffic)
