@@ -2,7 +2,7 @@
 
 # 信息窗体
 
-`BmInfoWindow` 信息窗体使用 slot 模式渲染子节点。如果您的浏览器支持 `MutationObserver` 方法，在您更新子节点的时候会自动调整信息窗体的尺寸。如果不支持该方法，您需要在更新子节点后手动调用当前 `BmInfoWindow` 实例的 `overlay.redraw()` 方法更新视图。
+`BmInfoWindow` 信息窗体使用 slot 模式渲染子节点。如果您的浏览器支持 `MutationObserver` 方法，在您更新子节点的时候会自动调整信息窗体的尺寸。如果不支持该方法，您需要在更新子节点后手动调用当前 `BmInfoWindow` 组件实例的 `redraw()` 方法更新视图。
 
 ## 属性
 
