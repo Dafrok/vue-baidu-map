@@ -250,8 +250,8 @@ export default [
     ]
   },
   {
-    path: '/extend',
-    name: '扩展',
+    path: '/other',
+    name: '其它',
     component: CateView,
     children: [
       {
