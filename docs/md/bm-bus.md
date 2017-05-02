@@ -1,8 +1,8 @@
 <template lang="md">
 
-# 驾车路线规划
+# 公交路线检索
 
-`BmDriving`
+`BmBus`
 
 ## 属性
 

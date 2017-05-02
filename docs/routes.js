@@ -17,6 +17,7 @@ import DocControlGeolocation from './md/bm-geolocation.md'
 import DocControlCopyright from './md/bm-copyright.md'
 import DocControlCityList from './md/bm-city-list.md'
 import DocControlPanorama from './md/bm-panorama.md'
+import DocControl from './md/bm-control.md'
 
 import DocOverlayMarker from './md/bm-marker.md'
 import DocOverlayPolyline from './md/bm-polyline.md'
@@ -132,6 +133,11 @@ export default [
         path: 'panorama',
         component: DocControlPanorama,
         name: '全景'
+      },
+      {
+        path: 'control',
+        component: DocControl,
+        name: '自定义控件'
       }
     ]
   },
