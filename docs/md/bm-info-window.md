@@ -17,7 +17,7 @@
 |title|String||信息窗标题文字，支持HTML内容|
 |autoPan|Boolean|true|是否开启信息窗口打开时地图自动移动|
 |closeOnClick|Boolean|true|是否开启点击地图关闭信息窗口|
-|message|String|自定义部分的短信内容，可选项。完整的短信内容包括：自定义部分+位置链接，不设置时，显示默认短信内容。短信内容最长为140个字|
+|message|String||自定义部分的短信内容，可选项。完整的短信内容包括：自定义部分+位置链接，不设置时，显示默认短信内容。短信内容最长为140个字|
 |maximize|Boolean|false|允许最大化|
 
 ## 事件
