@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+div(v-show="panel")
 </template>
 
 <script>
@@ -20,10 +20,10 @@ export default {
     end: {
       type: [Object, String]
     },
-    resultPanel: {
-      type: Boolean,
-      default: true
-    },
+    // panel: {
+    //   type: Boolean,
+    //   default: true
+    // },
     policy: {
       type: String
     },
@@ -59,7 +59,7 @@ export default {
       },
       deep: true
     },
-    resultPanel () {
+    panel () {
       this.reload()
     },
     policy (val) {
@@ -71,8 +71,11 @@ export default {
     autoViewport (val) {
       this.originInstance && (val ? this.originInstance.enableAutoViewport() : this.originInstance.disableAutoViewport())
     },
-    selectFirstResult (val) {
-      this.originInstance && (val ? this.originInstance.enableFirstResultSelection() : this.originInstance.disableFirstResultSelection())
+    selectFirstResult () {
+      this.reload()
+    },
+    highlightMode () {
+      this.reload()
     }
   },
   methods: {
@@ -82,13 +85,13 @@ export default {
     },
     load () {
       const instance = this
-      const {map, BMap} = this.$parent
-      const {location, policy, pageCapacity, resultPanel, selectFirstResult, autoViewport, highlightMode, search, start, end} = this
+      const {map, BMap, location, policy, pageCapacity, selectFirstResult, autoViewport, highlightMode, search, start, end} = this
       const _location = location ? isPoint(location) ? createPoint(BMap, location) : location : map
       this.originInstance = new BMap.TransitRoute(_location, {
         renderOptions: {
           map,
-          panel: resultPanel && this.$el,
+          // panel: panel && this.$el,
+          panel: this.$el,
           selectFirstResult,
           autoViewport,
           highlightMode

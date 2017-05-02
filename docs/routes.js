@@ -33,6 +33,7 @@ import DocLocalSearch from './md/bm-local-search.md'
 import DocTransit from './md/bm-transit.md'
 import DocWalking from './md/bm-walking.md'
 import DocDriving from './md/bm-driving.md'
+import DocBus from './md/bm-bus.md'
 
 import DocLayerTile from './md/bm-tile.md'
 import DocLayerTraffic from './md/bm-traffic.md'
@@ -217,6 +218,11 @@ export default [
         path: 'driving',
         name: '驾车路线规划',
         component: DocDriving
+      },
+      {
+        path: 'bus',
+        name: '公交路线检索',
+        component: DocBus
       }
     ]
   },

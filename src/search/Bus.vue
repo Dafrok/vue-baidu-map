@@ -8,17 +8,14 @@ import {isPoint} from '@/base/util.js'
 import commonMixin from '@/base/mixins/common.js'
 
 export default {
-  name: 'bm-walking',
+  name: 'bm-bus',
   mixins: [commonMixin('search')],
   props: {
     location: {
       type: [Object, String]
     },
-    start: {
-      type: [Object, String]
-    },
-    end: {
-      type: [Object, String]
+    keyword: {
+      type: String
     },
     panel: {
       type: Boolean,
@@ -42,68 +39,56 @@ export default {
       },
       deep: true
     },
-    start: {
-      handler (val) {
-        const {originInstance, end, BMap} = this
-        originInstance.search(isPoint(val) ? createPoint(BMap, val) : val, end)
-      },
-      deep: true
+    keyword (val) {
+      this.search(val)
     },
-    end: {
-      handler (val) {
-        const {originInstance, start, BMap} = this
-        originInstance.search(start, isPoint(val) ? createPoint(BMap, val) : val)
-      },
-      deep: true
+    panel () {
+      this.reload()
     },
-    // panel () {
-    //   this.reload()
-    // },
     autoViewport (val) {
       this.reload()
     },
     selectFirstResult (val) {
       this.reload()
-    },
-    highlightMode () {
-      this.reload()
     }
   },
   methods: {
-    search (start, end) {
+    search (keyword) {
       const {originInstance} = this
-      originInstance.search(start, end)
+      originInstance.getBusList(keyword)
     },
     load () {
       const instance = this
-      const {map, BMap, location, selectFirstResult, autoViewport, highlightMode, search, start, end} = this
+      const {location, selectFirstResult, autoViewport, highlightMode, keyword, search, BMap, map} = this
       const _location = location ? isPoint(location) ? createPoint(BMap, location) : location : map
-      this.originInstance = new BMap.WalkingRoute(_location, {
+      this.originInstance = new BMap.BusLineSearch(_location, {
         renderOptions: {
           map,
-          // panel: panel && this.$el,
           panel: this.$el,
           selectFirstResult,
           autoViewport,
           highlightMode
         },
-        onSearchComplete (e) {
-          instance.$emit('searchcomplete', e)
+        onGetBusListComplete (e) {
+          instance.$emit('getbuslistcomplete', e)
+        },
+        onGetBusLineComplete (e) {
+          instance.$emit('getbuslinecomplete', e)
+        },
+        onBusListHtmlSet (e) {
+          instance.$emit('buslisthtmlset', e)
+        },
+        onBusLineHtmlSet (e) {
+          instance.$emit('buslinehtmlset', e)
         },
         onMarkersSet (e) {
           instance.$emit('markersset', e)
         },
-        onInfoHtmlSet (e) {
-          instance.$emit('infohtmlset', e)
-        },
         onPolylinesSet (e) {
           instance.$emit('polylinesset', e)
-        },
-        onResultsHtmlSet (e) {
-          instance.$emit('resultshtmlset', e)
         }
       })
-      search(isPoint(start) ? createPoint(BMap, start) : start, isPoint(end) ? createPoint(BMap, end) : end)
+      search(keyword)
     }
   }
 }

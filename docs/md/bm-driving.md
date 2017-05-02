@@ -15,8 +15,7 @@
 |endCity|String|undefined|终点城市，可以是城市名或者城市编码。作为地方性重复地名的辅助选项，须与 startCity 属性同时使用，否则检索结果以 location 属性为准。|
 |waypoints|Array|undefined|途经点集合，最多支持10个途经点，可以是名称也可以是坐标。|
 |policy|DrivingPolicy|undefined|驾车导航的策略参数|
-|resultPanel|Boolean|true|是否选展现检索结果面板。|
-|pageCapacity|Number|undefined|设置每页容量，取值范围：1 - 100，对于多关键字检索，每页容量表示每个关键字返回结果的数量（例如当用2个关键字检索时，实际结果数量范围为：2 - 200）。此值只对下一次检索有效|
+|panel|Boolean|true|是否选展现检索结果面板。|
 |autoViewport|Boolean|undefined|检索结束后是否自动调整地图视野。|
 |selectFirstResult|Boolean|undefined|是否选择第一个检索结果。|
 
@@ -37,6 +36,7 @@
 #### 代码
 
 ```html
+<template>
 <baidu-map class="map-container">
   <bm-view class="bm-view">
   </bm-view>
@@ -49,6 +49,16 @@
     :waypoints="['昭君墓', '陕西兵马俑']">
   </bm-driving>
 </baidu-map>
+</template>
+
+<style>
+.map-container {
+  .bm-view {
+    width: 100%;
+    height: 400px;
+  }
+}
+</style>
 ```
 
 #### 预览

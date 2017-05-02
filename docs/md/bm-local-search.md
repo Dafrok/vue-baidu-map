@@ -14,7 +14,7 @@
 |keyword|String, Array|undefined|搜索关键字。当keyword为数组时将同时执行多关键字的查询，最多支持10个关键字。|
 |forceLocal|Boolean|undefined|表示是否将搜索范围约束在当前城市|
 |customData|CustomData|undefined|表示检索lbs云服务的数据|
-|resultPanel|Boolean|true|是否选展现检索结果面板。|
+|panel|Boolean|true|是否选展现检索结果面板。|
 |pageCapacity|Number|undefined|设置每页容量，取值范围：1 - 100，对于多关键字检索，每页容量表示每个关键字返回结果的数量（例如当用2个关键字检索时，实际结果数量范围为：2 - 200）。此值只对下一次检索有效|
 |autoViewport|Boolean|undefined|检索结束后是否自动调整地图视野。|
 |selectFirstResult|Boolean|undefined|是否选择第一个检索结果。|

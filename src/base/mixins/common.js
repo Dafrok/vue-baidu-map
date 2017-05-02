@@ -39,6 +39,7 @@ class Mixin {
       unload () {
         const {map, originInstance} = this
         try {
+          prop.type === 'search' && originInstance.clearResults()
           map[types[prop.type].unload](originInstance)
         } catch (e) {}
       }

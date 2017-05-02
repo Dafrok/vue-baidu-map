@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+div(v-show="panel")
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default {
     keyword: {
       type: [Array, String]
     },
-    resultPanel: {
+    panel: {
       type: Boolean,
       default: true
     },
@@ -83,9 +83,9 @@ export default {
         this.reload()
       }
     },
-    resultPanel () {
-      this.reload()
-    },
+    // panel () {
+    //   this.reload()
+    // },
     pageCapacity (val) {
       this.originInstance && this.originInstance.setPageCapacity(val)
     },
@@ -94,6 +94,9 @@ export default {
     },
     selectFirstResult (val) {
       this.originInstance && (val ? this.originInstance.enableFirstResultSelection() : this.originInstance.disableFirstResultSelection())
+    },
+    highlightMode () {
+      this.reload()
     }
   },
   methods: {
@@ -114,8 +117,7 @@ export default {
     },
     load () {
       const instance = this
-      const {map, BMap} = this.$parent
-      const {search, pageCapacity, autoViewport, selectFirstResult, highlightMode, location, resultPanel, bounds, searchInBounds, nearby, searchNearby} = this
+      const {map, BMap, search, pageCapacity, autoViewport, selectFirstResult, highlightMode, location, bounds, searchInBounds, nearby, searchNearby} = this
       const _location = location ? isPoint(location) ? createPoint(BMap, location) : location : map
       this.originInstance = new BMap.LocalSearch(_location, {
         onMarkersSet (e) {
@@ -133,7 +135,8 @@ export default {
         pageCapacity: pageCapacity,
         renderOptions: {
           map,
-          panel: resultPanel && this.$el,
+          // panel: panel && this.$el,
+          panel: this.$el,
           selectFirstResult,
           autoViewport,
           highlightMode

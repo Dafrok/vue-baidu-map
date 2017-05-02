@@ -12,7 +12,7 @@
 |start|String, Point, LocalResultPoi|undefined|起点，参数可以是关键字、坐标点（自1.1版本支持）或者LocalSearchPoi实例。|
 |end|String, Point, LocalResultPoi|undefined|终点，参数可以是关键字、坐标点（自1.1版本支持）或者LocalSearchPoi实例。|
 |policy|TransitPolicy|undefined|公交导航的策略参数|
-|resultPanel|Boolean|true|是否选展现检索结果面板。|
+|panel|Boolean|true|是否选展现检索结果面板。|
 |pageCapacity|Number|undefined|设置每页容量，取值范围：1 - 100，对于多关键字检索，每页容量表示每个关键字返回结果的数量（例如当用2个关键字检索时，实际结果数量范围为：2 - 200）。此值只对下一次检索有效|
 |autoViewport|Boolean|undefined|检索结束后是否自动调整地图视野。|
 |selectFirstResult|Boolean|undefined|是否选择第一个检索结果。|
@@ -25,7 +25,7 @@
 |infohtmlset|{poi: LocalResultPoi, html: HTMLElement}|标注气泡内容创建后的回调函数。|
 |resultshtmlset|{container: HTMLElement}|结果列表添加完成后的回调函数。|
 |searchcomplete|{results: TransitRouteResult}|检索完成后的回调函数。如果是多关键字检索，回调函数参数返回一个LocalResult的数组，数组中的结果顺序和检索中多关键字数组中顺序一致|
-|onpolylinesset|{routes: Array, routes: Array}|折线添加完成后的回调函数。|
+|polylinesset|{routes: Array, routes: Array}|折线添加完成后的回调函数。|
 
 ## 示例
 

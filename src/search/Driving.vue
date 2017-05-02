@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+div(v-show="panel")
 </template>
 
 <script>
@@ -32,12 +32,9 @@ export default {
     policy: {
       type: String
     },
-    resultPanel: {
+    panel: {
       type: Boolean,
       default: true
-    },
-    pageCapacity: {
-      type: Number
     },
     autoViewport: {
       type: Boolean
@@ -103,17 +100,20 @@ export default {
       },
       deep: true
     },
-    resultPanel () {
-      this.reload()
-    },
+    // panel () {
+    //   this.reload()
+    // },
     policy (val) {
       this.originInstance.setPolicy(global[val])
     },
-    autoViewport (val) {
-      this.originInstance && (val ? this.originInstance.enableAutoViewport() : this.originInstance.disableAutoViewport())
+    autoViewport () {
+      this.reload()
     },
-    selectFirstResult (val) {
-      this.originInstance && (val ? this.originInstance.enableFirstResultSelection() : this.originInstance.disableFirstResultSelection())
+    selectFirstResult () {
+      this.reload()
+    },
+    highlightMode () {
+      this.reload()
     }
   },
   methods: {
@@ -127,13 +127,13 @@ export default {
     },
     load () {
       const instance = this
-      const {map, BMap} = this.$parent
-      const {location, policy, resultPanel, selectFirstResult, autoViewport, highlightMode, search, start, end, startCity, endCity, waypoints} = this
+      const {map, BMap, location, policy, selectFirstResult, autoViewport, highlightMode, search, start, end, startCity, endCity, waypoints} = this
       const _location = location ? isPoint(location) ? createPoint(BMap, location) : location : map
       this.originInstance = new BMap.DrivingRoute(_location, {
         renderOptions: {
           map,
-          panel: resultPanel && this.$el,
+          // panel: panel && this.$el,
+          panel: this.$el,
           selectFirstResult,
           autoViewport,
           highlightMode

@@ -29,7 +29,6 @@
 ## 事件
 |事件名|参数|描述|
 |---|:----:|---|
-|ready |{BMap, map}|地图视图渲染完毕时触发，返回一个百度地图的核心类和地图实例。|
 |click|{type, target, point, pixel, overlay}|左键单击地图时触发此事件。 当双击时，产生的事件序列为： click click dblclick|
 |dblclick|{type, target, pixel, point}|鼠标双击地图时会触发此事件|
 |rightclick|{type, target, point, pixel, overlay}|右键单击地图时触发此事件。 当双击时，产生的事件序列为： rightclick rightclick rightdblclick|
