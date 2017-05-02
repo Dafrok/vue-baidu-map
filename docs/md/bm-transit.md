@@ -29,7 +29,7 @@
 
 ## 示例
 
-### 检索百度大厦到北京邮电大学西门的公交路线
+### 检索百度大厦到北京邮电大学西门的公交路线规划
 
 #### 代码
 
@@ -58,5 +58,4 @@
   </bm-view>
   <bm-transit start="百度大厦" end="北京邮电大学西门" :auto-viewport="true" location="北京"></bm-transit>
 </baidu-map>
-
 </template>

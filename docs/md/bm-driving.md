@@ -32,7 +32,9 @@
 
 ## 示例
 
-### 代码
+### 查询北京新街口途径昭君墓和陕西兵马俑到达南京新街口的驾车路线规划
+
+#### 代码
 
 ```html
 <baidu-map class="map-container">
@@ -49,7 +51,7 @@
 </baidu-map>
 ```
 
-### 预览
+#### 预览
 
 <baidu-map class="map-container">
   <bm-view class="bm-view">
