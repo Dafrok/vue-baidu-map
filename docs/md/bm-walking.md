@@ -1,8 +1,8 @@
 <template lang="md">
 
-# 公交路线检索
+# 步行路线检索
 
-`BmTransit`
+`BmWalking`
 
 ## 属性
 
