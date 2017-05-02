@@ -25,7 +25,7 @@
 |infohtmlset|{poi: LocalResultPoi, html: HTMLElement}|标注气泡内容创建后的回调函数。|
 |resultshtmlset|{container: HTMLElement}|结果列表添加完成后的回调函数。|
 |searchcomplete|{results: TransitRouteResult}|检索完成后的回调函数。如果是多关键字检索，回调函数参数返回一个LocalResult的数组，数组中的结果顺序和检索中多关键字数组中顺序一致|
-|onpolylinesset|{routes: Array, routes: Array}|折线添加完成后的回调函数。|
+|polylinesset|{routes: Array, routes: Array}|折线添加完成后的回调函数。|
 
 ## 示例
 
