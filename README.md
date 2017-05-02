@@ -53,7 +53,13 @@ Vue.use(BaiduMap, {
 
 ## 贡献
 
-```bash
-npm i
-npm run dev
-```
+[CONTRIBUTING](https://github.com/Dafrok/vue-baidu-map/blob/master/CONTRIBUTING.md)
+
+
+## 协议
+
+[MIT License](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2016-present, Dafrok
+
+
