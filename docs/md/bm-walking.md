@@ -1,6 +1,6 @@
 <template lang="md">
 
-# 步行路线检索
+# 步行路线规划
 
 `BmWalking`
 

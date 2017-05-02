@@ -72,7 +72,9 @@
 |BMAP_HIGHLIGHT_STEP|驾车结果展现中点击列表后的展现点步骤|
 |BMAP_HIGHLIGHT_ROUTE|驾车结果展现中点击列表后的展现路段|
 
-### TransitRouteResult
+### TransitPolicy
+
+此常量表示公交方案的策略。
 
 |常量|描述|
 |----|----|
@@ -80,6 +82,17 @@
 |BMAP_TRANSIT_POLICY_LEAST_TRANSFER|最少换乘|
 |BMAP_TRANSIT_POLICY_LEAST_WALKING|最少步行|
 |BMAP_TRANSIT_POLICY_AVOID_SUBWAYS|不乘地铁|
+
+### DrivingPolicy
+
+此枚举类型表示驾车方案的策略配置。
+
+|常量|描述|
+|----|----|
+|BMAP_DRIVING_POLICY_LEAST_TIME|最少时间|
+|BMAP_DRIVING_POLICY_LEAST_DISTANCE|最短距离|
+|BMAP_DRIVING_POLICY_AVOID_HIGHWAYS|避开高速|
+
 
 ## 私有类型
 
