@@ -14,7 +14,7 @@
 ## 语言
 
 - [中文](https://github.com/Dafrok/vue-baidu-map/blob/master/README.zh.md)
-- [EN](https://github.com/Dafrok/vue-baidu-map/blob/master/README.md)
+- [English](https://github.com/Dafrok/vue-baidu-map/blob/master/README.md)
 
 ## 文档
 
