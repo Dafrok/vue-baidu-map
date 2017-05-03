@@ -20,10 +20,10 @@ export default {
     end: {
       type: [Object, String]
     },
-    // panel: {
-    //   type: Boolean,
-    //   default: true
-    // },
+    panel: {
+      type: Boolean,
+      default: true
+    },
     policy: {
       type: String
     },

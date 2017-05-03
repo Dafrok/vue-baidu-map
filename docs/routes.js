@@ -1,52 +1,22 @@
 import CateView from './components/CateView.vue'
 
-import DocIndex from './md/index.md'
+// import DocLocalSearch from './md/zh/bm-local-search.md'
+// import DocTransit from './md/zh/bm-transit.md'
+// import DocWalking from './md/zh/bm-walking.md'
+// import DocDriving from './md/zh/bm-driving.md'
+// import DocBus from './md/zh/bm-bus.md'
 
-import DocStartBase from './md/start-base.md'
-import DocStartInstallation from './md/start-installation.md'
-import DocStartUsage from './md/start-usage.md'
+// import DocLayerTile from './md/zh/bm-tile.md'
+// import DocLayerTraffic from './md/zh/bm-traffic.md'
 
-import DocBaiduMap from './md/baidu-map.md'
-import DocBmView from './md/bm-view.md'
-
-import DocControlScale from './md/bm-scale.md'
-import DocControlNavigation from './md/bm-navigation.md'
-import DocControlMapType from './md/bm-map-type.md'
-import DocControlOverviewMap from './md/bm-overview-map.md'
-import DocControlGeolocation from './md/bm-geolocation.md'
-import DocControlCopyright from './md/bm-copyright.md'
-import DocControlCityList from './md/bm-city-list.md'
-import DocControlPanorama from './md/bm-panorama.md'
-import DocControl from './md/bm-control.md'
-
-import DocOverlayMarker from './md/bm-marker.md'
-import DocOverlayPolyline from './md/bm-polyline.md'
-import DocOverlayPolygon from './md/bm-polygon.md'
-import DocOverlayCircle from './md/bm-circle.md'
-import DocOverlayGround from './md/bm-ground.md'
-import DocOverlayLabel from './md/bm-label.md'
-import DocOverlayInfoWindow from './md/bm-info-window.md'
-
-import DocContextMenu from './md/bm-context-menu.md'
-import DocContextMenuItem from './md/bm-context-menu-item.md'
-
-import DocLocalSearch from './md/bm-local-search.md'
-import DocTransit from './md/bm-transit.md'
-import DocWalking from './md/bm-walking.md'
-import DocDriving from './md/bm-driving.md'
-import DocBus from './md/bm-bus.md'
-
-import DocLayerTile from './md/bm-tile.md'
-import DocLayerTraffic from './md/bm-traffic.md'
-
-import DocExtendBoundary from './md/bm-boundary.md'
+// import DocExtendBoundary from './md/zh/bm-boundary.md'
 
 export default [
   {
     // 首页
     path: '/',
     name: 'VUE BAIDU MAP',
-    component: DocIndex,
+    component: () => import('./md/zh/index.md'),
     meta: 'hidden'
   },
   {
@@ -57,17 +27,17 @@ export default [
     children: [
       {
         path: 'installation',
-        component: DocStartInstallation,
+        component: () => import('./md/zh/start-installation.md'),
         name: '安装'
       },
       {
         path: 'usage',
-        component: DocStartUsage,
+        component: () => import('./md/zh/start-usage.md'),
         name: '快速上手'
       },
       {
         path: 'base',
-        component: DocStartBase,
+        component: () => import('./md/zh/start-base.md'),
         name: '基础'
       }
     ]
@@ -79,12 +49,12 @@ export default [
     children: [
       {
         path: 'baidu-map',
-        component: DocBaiduMap,
+        component: () => import('./md/zh/baidu-map.md'),
         name: '地图容器'
       },
       {
         path: 'bm-view',
-        component: DocBmView,
+        component: () => import('./md/zh/bm-view.md'),
         name: '地图视图'
       }
     ]
@@ -96,47 +66,47 @@ export default [
     children: [
       {
         path: 'scale',
-        component: DocControlScale,
+        component: () => import('./md/zh/bm-scale.md'),
         name: '比例尺'
       },
       {
         path: 'navigation',
-        component: DocControlNavigation,
+        component: () => import('./md/zh/bm-navigation.md'),
         name: '缩放'
       },
       {
         path: 'map-type',
-        component: DocControlMapType,
+        component: () => import('./md/zh/bm-map-type.md'),
         name: '地图类型'
       },
       {
         path: 'overview-map',
-        component: DocControlOverviewMap,
+        component: () => import('./md/zh/bm-overview-map.md'),
         name: '缩略图'
       },
       {
         path: 'geolocation',
-        component: DocControlGeolocation,
+        component: () => import('./md/zh/bm-geolocation.md'),
         name: '定位'
       },
       {
         path: 'copyright',
-        component: DocControlCopyright,
+        component: () => import('./md/zh/bm-copyright.md'),
         name: '版权'
       },
       {
         path: 'city-list',
-        component: DocControlCityList,
+        component: () => import('./md/zh/bm-city-list.md'),
         name: '城市列表'
       },
       {
         path: 'panorama',
-        component: DocControlPanorama,
+        component: () => import('./md/zh/bm-panorama.md'),
         name: '全景'
       },
       {
         path: 'control',
-        component: DocControl,
+        component: () => import('./md/zh/bm-control.md'),
         name: '自定义控件'
       }
     ]
@@ -149,37 +119,37 @@ export default [
       {
         path: 'marker',
         name: '点',
-        component: DocOverlayMarker
+        component: () => import('./md/zh/bm-marker.md')
       },
       {
         path: 'polyline',
         name: '折线',
-        component: DocOverlayPolyline
+        component: () => import('./md/zh/bm-polyline.md')
       },
       {
         path: 'polygon',
         name: '多边形',
-        component: DocOverlayPolygon
+        component: () => import('./md/zh/bm-polygon.md')
       },
       {
         path: 'circle',
         name: '圆形',
-        component: DocOverlayCircle
+        component: () => import('./md/zh/bm-circle.md')
       },
       {
         path: 'ground',
         name: '地面',
-        component: DocOverlayGround
+        component: () => import('./md/zh/bm-ground.md')
       },
       {
         path: 'label',
         name: '标签',
-        component: DocOverlayLabel
+        component: () => import('./md/zh/bm-label.md')
       },
       {
         path: 'info-window',
         name: '信息窗体',
-        component: DocOverlayInfoWindow
+        component: () => import('./md/zh/bm-info-window.md')
       }
     ]
   },
@@ -190,12 +160,12 @@ export default [
     children: [
       {
         path: 'tile',
-        component: DocLayerTile,
+        component: () => import('./md/zh/bm-tile.md'),
         name: '瓦片图层'
       },
       {
         path: 'traffic',
-        component: DocLayerTraffic,
+        component: () => import('./md/zh/bm-traffic.md'),
         name: '交通流量图层'
       }
     ]
@@ -208,27 +178,27 @@ export default [
       {
         path: 'local-search',
         name: '地区检索',
-        component: DocLocalSearch
+        component: () => import('./md/zh/bm-local-search.md')
       },
       {
         path: 'transit',
         name: '公交路线规划',
-        component: DocTransit
+        component: () => import('./md/zh/bm-transit.md')
       },
       {
         path: 'walking',
         name: '步行路线规划',
-        component: DocWalking
+        component: () => import('./md/zh/bm-walking.md')
       },
       {
         path: 'driving',
         name: '驾车路线规划',
-        component: DocDriving
+        component: () => import('./md/zh/bm-driving.md')
       },
       {
         path: 'bus',
         name: '公交路线检索',
-        component: DocBus
+        component: () => import('./md/zh/bm-bus.md')
       }
     ]
   },
@@ -240,12 +210,12 @@ export default [
       {
         path: 'menu',
         name: '上下文菜单',
-        component: DocContextMenu
+        component: () => import('./md/zh/bm-context-menu.md')
       },
       {
         path: 'item',
         name: '菜单项',
-        component: DocContextMenuItem
+        component: () => import('./md/zh/bm-context-menu-item.md')
       }
     ]
   },
@@ -257,7 +227,7 @@ export default [
       {
         path: 'menu',
         name: '行政区划',
-        component: DocExtendBoundary
+        component: () => import('./md/zh/bm-boundary.md')
       }
     ]
   }

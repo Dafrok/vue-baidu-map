@@ -218,7 +218,7 @@ router-view
     border none
     background transparent 
 
-  .highlight pre 
+  .highlight pre
     background-color #f8f8f8
     border 1px solid #ccc
     font-size 13px
@@ -228,7 +228,7 @@ router-view
     border-radius 3px 
 
   pre 
-    background-color #f8f8f8
+    // background-color #f8f8f8
     border 1px solid #ccc
     font-size 13px
     line-height 19px

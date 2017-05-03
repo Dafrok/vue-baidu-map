@@ -1,11 +1,35 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = {
-  entry: './docs/main.js',
+  entry: {
+    main: 'docs/main.js',
+    libs: [
+      'vue',
+      'vue-router',
+      'prismjs',
+      'material-design-lite/material.min.js'
+    ],
+    resource: [
+      'prismjs/themes/prism-tomorrow.css',
+      'docs/fonts/iconfont.css',
+      'material-design-icons/iconfont/material-icons.css',
+      'material-design-lite/material.min.css'
+    ],
+    vendor: [
+      'docs/components/App.vue',
+      'docs/components/CateView.vue',
+      'docs/components/DocPreview.vue',
+      'docs/components/Drawer.vue',
+      'docs/components/RootFrame.vue',
+    ]
+  },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'index.js'
+    filename: '[name].[hash:8].bundle.js',
+    chunkFilename: '[name].[chunkhash:8].js'
   },
   module: {
     rules: [
@@ -45,12 +69,20 @@ module.exports = {
   resolve: {
     alias: {
       '@': path.resolve(__dirname, '../src'),
-      docs: path.resolve(__dirname, '../docs/src')
+      docs: path.resolve(__dirname, '../docs')
     }
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../docs/template/index.html')
+      template: path.resolve(__dirname, '../docs/template/index.html'),
+      chunks: ['libs', 'vendor', 'resource', 'main']
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ['vendor', 'libs', 'resource', 'manifest'],
+      minChunks: Infinity
+    }),
+    new InlineManifestWebpackPlugin({
+        name: 'webpackManifest'
     })
   ]
 }
