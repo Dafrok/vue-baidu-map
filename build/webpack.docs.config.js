@@ -23,7 +23,7 @@ module.exports = {
       'docs/components/CateView.vue',
       'docs/components/DocPreview.vue',
       'docs/components/Drawer.vue',
-      'docs/components/RootFrame.vue',
+      'docs/components/RootFrame.vue'
     ]
   },
   output: {
@@ -82,7 +82,7 @@ module.exports = {
       minChunks: Infinity
     }),
     new InlineManifestWebpackPlugin({
-        name: 'webpackManifest'
+      name: 'webpackManifest'
     })
   ]
 }
