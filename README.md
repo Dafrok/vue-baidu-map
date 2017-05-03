@@ -53,7 +53,7 @@ Vue.use(BaiduMap, {
 
 ## 贡献
 
-[CONTRIBUTING](https://github.com/Dafrok/vue-baidu-map/blob/master/CONTRIBUTING.md)
+[Contributing Guide](https://github.com/Dafrok/vue-baidu-map/blob/master/CONTRIBUTING.md)
 
 
 ## 协议

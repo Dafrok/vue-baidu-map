@@ -10,6 +10,10 @@
 [![Package Quality](http://npm.packagequality.com/shield/vue-baidu-map.svg)](http://packagequality.com/#?package=vue-baidu-map)
 [![npm](https://img.shields.io/npm/dm/vue-baidu-map.svg)]()
 
+## 贡献
+
+[Contributing Guide](https://github.com/Dafrok/vue-baidu-map/blob/master/CONTRIBUTING.md)
+
 ## 协议
 
 [MIT License](//opensource.org/licenses/MIT)
