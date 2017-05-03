@@ -37,16 +37,16 @@
 #### 代码
 
 ```html
-<baidu-map class="map" :center="{lng: 116.403765, lat: 39.914850}" :zoom="10">
-  <bm-boundary name="北京市海淀区" :strokeWeight="2" strokeColor="#ff0000"></bm-boundary>
+<baidu-map class="map" :center="{lng: 116.403765, lat: 39.914850}" :zoom="11">
+  <bm-boundary name="北京市海淀区" :strokeWeight="2" strokeColor="blue"></bm-boundary>
 </baidu-map>
 ```
 
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="{lng: 116.403765, lat: 39.914850}" :zoom="10">
-    <bm-boundary name="北京市海淀区" :strokeWeight="2" strokeColor="#ff0000"></bm-boundary>
+  <baidu-map slot="map" class="map" :center="{lng: 116.403765, lat: 39.914850}" :zoom="11">
+    <bm-boundary name="北京市海淀区" :strokeWeight="2" strokeColor="blue"></bm-boundary>
   </baidu-map>
   </div>
 </doc-preview>

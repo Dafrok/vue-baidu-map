@@ -18,7 +18,7 @@ export default {
     load () {
       const {width, BMap, map, $parent} = this
       const menu = this.originInstance = new BMap.ContextMenu()
-      const parent = this.parent = $parent.overlay || map
+      const parent = this.parent = $parent.originInstance || map
       for (let item of this.$children) {
         if (item.seperator) {
           menu.addSeparator()
