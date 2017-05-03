@@ -35,7 +35,7 @@ import Vue from 'vue'
 import BaiduMap from 'vue-baidu-map'
 
 Vue.use(BaiduMap, {
-  /* For details of the app key, visit http://lbsyun.baidu.com/apiconsole/key */
+  /* Visit http://lbsyun.baidu.com/apiconsole/key for details about app key. */
   ak: 'YOUR_APP_KEY'
 })
 ```
