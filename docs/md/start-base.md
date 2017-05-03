@@ -75,6 +75,7 @@
 ### TransitRouteResult
 
 |常量|描述|
+|----|----|
 |BMAP_TRANSIT_POLICY_LEAST_TIME|最少时间|
 |BMAP_TRANSIT_POLICY_LEAST_TRANSFER|最少换乘|
 |BMAP_TRANSIT_POLICY_LEAST_WALKING|最少步行|
