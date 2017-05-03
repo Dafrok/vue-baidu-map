@@ -12,10 +12,10 @@
 
 ## 贡献
 
-[Contributing Guide](https://github.com/Dafrok/vue-baidu-map/blob/master/CONTRIBUTING.md)
+[贡献指南](https://github.com/Dafrok/vue-baidu-map/blob/master/CONTRIBUTING.md)
 
 ## 协议
 
-[MIT License](//opensource.org/licenses/MIT)
+[MIT 许可证](//opensource.org/licenses/MIT)
 
-Copyright (c) 2016-present, Dafrok
+版权所有 (c) 2016-至今 Dafrok <o.o@mug.dog>
