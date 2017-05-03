@@ -49,7 +49,9 @@
 ```html
 <template>
   <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <bm-marker :position="{lng: 116.404, lat: 39.915}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :label="{content: 'Marker Label', opts: {offset: {width: 20, height: -10}}}"></bm-marker>
+    <bm-marker :position="{lng: 116.404, lat: 39.915}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE">
+      <bm-label content="我爱北京天安门" :labelStyle="{color: 'red', fontSize : '24px'}" :offset="{width: -35, height: 30}"/>
+    </bm-marker>
   </baidu-map>
 </template>
 ```
@@ -57,7 +59,9 @@
 #### 预览
 <doc-preview>
   <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <bm-marker :position="markerPoint" :dragging="true" animation="BMAP_ANIMATION_BOUNCE" :label="markerLabel"></bm-marker>
+    <bm-marker :position="markerPoint" :dragging="true" animation="BMAP_ANIMATION_BOUNCE">
+      <bm-label content="我爱北京天安门" :labelStyle="{color: '#f33', fontSize : '12px'}" :offset="{width: -35, height: 30}"/>
+    </bm-marker>
   </baidu-map>
 </doc-preview>
 
@@ -81,10 +85,55 @@
 </doc-preview>
 </template>
 
+### 点击 Marker 弹出 InfoWindow
+
+#### 代码
+
+```html
+<template>
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+    <bm-marker :position="markerPoint" :dragging="true" @click="infoWindowOpen">
+      <bm-info-window :show="show" @close="infoWindowClose" @open="infoWindowOpen">我爱北京天安门</bm-info-window>
+    </bm-marker>
+  </baidu-map>
+</template>
+
 <script>
 export default {
   data () {
     return {
+      show: false
+    }
+  },
+  methods: {
+    infoWindowClose () {
+      this.show = false
+    },
+    infoWindowOpen () {
+      this.show = true
+    }
+  }
+}
+</script>
+```
+
+#### 预览
+<doc-preview>
+  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+    <bm-marker :position="{lng: 116.404, lat: 39.915}" :dragging="true" @click="infoWindowOpen">
+      <bm-info-window :show="infoWindow.show" @close="infoWindowClose" @open="infoWindowOpen">我爱北京天安门</bm-info-window>
+    </bm-marker>
+  </baidu-map>
+</doc-preview>
+
+
+<script>
+export default {
+  data () {
+    return {
+      infoWindow: {
+        show: true
+      },
       markerIcon: {
         url: 'http://developer.baidu.com/map/jsdemo/img/fox.gif',
         size: {width: 300, height: 157}
@@ -102,6 +151,14 @@ export default {
         lng: 116.404,
         lat: 39.915
       }
+    }
+  },
+  methods: {
+    infoWindowClose () {
+      this.infoWindow.show = false
+    },
+    infoWindowOpen () {
+      this.infoWindow.show = true
     }
   }
 }

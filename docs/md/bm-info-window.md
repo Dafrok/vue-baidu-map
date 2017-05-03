@@ -83,16 +83,9 @@ export default {
   </baidu-map>
   <div slot="bottom" class="mdl-card__actions mdl-card--border">
     <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--6-col mdl-cell--3-offset">
-        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
-          <input type="checkbox" class="mdl-switch__input" v-model="infoWindow.show" @click="infoWindow.show = !infoWindow.show">
-          <span class="mdl-switch__label">信息窗体开关</span>
-        </label>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <textarea class="mdl-textfield__input" type="text" rows= "2" v-model="infoWindow.contents"></textarea>
-          <label class="mdl-textfield__label" >信息窗体内容</label>
-        </div>
-      </div>
+      <label><input type="checkbox" v-model="infoWindow.show">信息窗体开关</label>
+      <textarea class="mdl-textfield__input" type="text" rows= "2" v-model="infoWindow.contents"></textarea>
+      <label class="mdl-textfield__label" >信息窗体内容</label>
     </div>
   </div>
 </doc-preview>

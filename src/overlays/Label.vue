@@ -74,14 +74,18 @@ export default {
   },
   methods: {
     load () {
-      const {BMap, map, content, title, offset, position, labelStyle, zIndex, massClear} = this
+      const {BMap, map, content, title, offset, position, labelStyle, zIndex, massClear, $parent} = this
       const overlay = new BMap.Label(content, {
         offset: createSize(BMap, offset),
         position: createPoint(BMap, position),
         enableMassClear: massClear
       })
       this.originInstance = overlay
-      map.addOverlay(overlay)
+      try {
+        $parent.originInstance.setLabel(overlay)
+      } catch (e) {
+        map.addOverlay(overlay)
+      }
       title && overlay.setTitle(title)
       labelStyle && overlay.setStyle(labelStyle)
       zIndex && overlay.setZIndex(zIndex)
