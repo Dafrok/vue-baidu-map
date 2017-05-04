@@ -73,6 +73,7 @@ module.exports = {
     }
   },
   plugins: [
+    new webpack.HashedModuleIdsPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../docs/template/index.html'),
       chunks: ['libs', 'vendor', 'resource', 'main']
