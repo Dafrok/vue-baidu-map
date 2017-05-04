@@ -1,31 +1,31 @@
-import Map from './map/Map.vue'
+import BaiduMap from './map/Map.vue'
 import BmView from './map/MapView.vue'
 import BmScale from './controls/Scale.vue'
-import MapControlNavigation from './controls/Navigation.vue'
-import MapControlMapType from './controls/MapType.vue'
-import MapControlOverviewMap from './controls/OverviewMap.vue'
-import MapControlGeolocation from './controls/Geolocation.vue'
-import MapControlCopyright from './controls/Copyright.vue'
-import MapControlCityList from './controls/CityList.vue'
-import MapControlPanorama from './controls/Panorama.vue'
-import MapControl from './controls/Control.vue'
-import MapOverlayMarker from './overlays/Marker.vue'
-import MapOverlayPolyline from './overlays/Polyline.vue'
-import MapOverlayPolygon from './overlays/Polygon.vue'
-import MapOverlayCircle from './overlays/Circle.vue'
-import MapOverlayGround from './overlays/Ground.vue'
-import MapOverlayLabel from './overlays/Label.vue'
-import MapOverlayInfoWindow from './overlays/InfoWindow.vue'
-import MapContextMenu from './context-menu/Menu.vue'
-import MapContextMenuItem from './context-menu/Item.vue'
-import MapLocalSearch from './search/LocalSearch.vue'
-import MapTransit from './search/Transit.vue'
-import MapWalking from './search/Walking.vue'
-import MapDriving from './search/Driving.vue'
-import MapBus from './search/Bus.vue'
-import MapLayerTile from './layers/Tile.vue'
-import MapLayerTraffic from './layers/Traffic.vue'
-import MapExtendBoundary from './extends/Boundary.vue'
+import BmNavigation from './controls/Navigation.vue'
+import BmMapType from './controls/MapType.vue'
+import BmOverviewMap from './controls/OverviewMap.vue'
+import BmGeolocation from './controls/Geolocation.vue'
+import BmCopyright from './controls/Copyright.vue'
+import BmCityList from './controls/CityList.vue'
+import BmPanorama from './controls/Panorama.vue'
+import BmControl from './controls/Control.vue'
+import BmMarker from './overlays/Marker.vue'
+import BmPolyline from './overlays/Polyline.vue'
+import BmPolygon from './overlays/Polygon.vue'
+import BmCircle from './overlays/Circle.vue'
+import BmGround from './overlays/Ground.vue'
+import BmLabel from './overlays/Label.vue'
+import BmInfoWindow from './overlays/InfoWindow.vue'
+import BmContextMenu from './context-menu/Menu.vue'
+import BmContextMenuItem from './context-menu/Item.vue'
+import BmLocalSearch from './search/LocalSearch.vue'
+import BmTransit from './search/Transit.vue'
+import BmWalking from './search/Walking.vue'
+import BmDriving from './search/Driving.vue'
+import BmBus from './search/Bus.vue'
+import BmTile from './layers/Tile.vue'
+import BmTraffic from './layers/Traffic.vue'
+import BmBoundary from './extends/Boundary.vue'
 
 export default {
   install (Vue, options) {
@@ -35,39 +35,39 @@ export default {
         ak
       }
     }
-    Vue.component('baidu-map', Map)
+    Vue.component('baidu-map', BaiduMap)
     Vue.component('bm-view', BmView)
 
     Vue.component('bm-scale', BmScale)
-    Vue.component('bm-navigation', MapControlNavigation)
-    Vue.component('bm-map-type', MapControlMapType)
-    Vue.component('bm-overview-map', MapControlOverviewMap)
-    Vue.component('bm-geolocation', MapControlGeolocation)
-    Vue.component('bm-copyright', MapControlCopyright)
-    Vue.component('bm-city-list', MapControlCityList)
-    Vue.component('bm-panorama', MapControlPanorama)
-    Vue.component('bm-control', MapControl)
+    Vue.component('bm-navigation', BmNavigation)
+    Vue.component('bm-map-type', BmMapType)
+    Vue.component('bm-overview-map', BmOverviewMap)
+    Vue.component('bm-geolocation', BmGeolocation)
+    Vue.component('bm-copyright', BmCopyright)
+    Vue.component('bm-city-list', BmCityList)
+    Vue.component('bm-panorama', BmPanorama)
+    Vue.component('bm-control', BmControl)
 
-    Vue.component('bm-marker', MapOverlayMarker)
-    Vue.component('bm-polyline', MapOverlayPolyline)
-    Vue.component('bm-polygon', MapOverlayPolygon)
-    Vue.component('bm-circle', MapOverlayCircle)
-    Vue.component('bm-ground', MapOverlayGround)
-    Vue.component('bm-label', MapOverlayLabel)
-    Vue.component('bm-info-window', MapOverlayInfoWindow)
+    Vue.component('bm-marker', BmMarker)
+    Vue.component('bm-polyline', BmPolyline)
+    Vue.component('bm-polygon', BmPolygon)
+    Vue.component('bm-circle', BmCircle)
+    Vue.component('bm-ground', BmGround)
+    Vue.component('bm-label', BmLabel)
+    Vue.component('bm-info-window', BmInfoWindow)
 
-    Vue.component('bm-context-menu', MapContextMenu)
-    Vue.component('bm-context-menu-item', MapContextMenuItem)
+    Vue.component('bm-context-menu', BmContextMenu)
+    Vue.component('bm-context-menu-item', BmContextMenuItem)
 
-    Vue.component('bm-local-search', MapLocalSearch)
-    Vue.component('bm-transit', MapTransit)
-    Vue.component('bm-walking', MapWalking)
-    Vue.component('bm-driving', MapDriving)
-    Vue.component('bm-bus', MapBus)
+    Vue.component('bm-local-search', BmLocalSearch)
+    Vue.component('bm-transit', BmTransit)
+    Vue.component('bm-walking', BmWalking)
+    Vue.component('bm-driving', BmDriving)
+    Vue.component('bm-bus', BmBus)
 
-    Vue.component('bm-tile', MapLayerTile)
-    Vue.component('bm-traffic', MapLayerTraffic)
+    Vue.component('bm-tile', BmTile)
+    Vue.component('bm-traffic', BmTraffic)
 
-    Vue.component('bm-boundary', MapExtendBoundary)
+    Vue.component('bm-boundary', BmBoundary)
   }
 }
