@@ -11,6 +11,9 @@ import {checkType} from '@/base/util.js'
 export default {
   name: 'bm-view',
   props: {
+    ak: {
+      type: String
+    },
     center: {
       type: [Object, String]
     },
@@ -207,7 +210,7 @@ export default {
     },
     getMapScript () {
       if (!global.BMap) {
-        const ak = this._BMap().ak
+        const ak = this.ak || this._BMap().ak
         global.BMap = {}
         global.BMap._preloader = new Promise((resolve, reject) => {
           global._initBaiduMap = function () {

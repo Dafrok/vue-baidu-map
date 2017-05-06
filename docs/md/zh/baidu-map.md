@@ -9,6 +9,7 @@
 
 |属性名|类型|默认值|描述|
 |------|:----:|:---:|---|
+|ak|String|undefined|百度地图开发者平台申请的密钥，仅在局部注册组件时声明。|
 |center|Point, String|undefined|定位, 可使用如“广州市海珠区”的地区字符串，也可以使用对象如 {lng: 116.404, lat: 39.915} 表示经纬度|
 |zoom|Number|undefined|缩放等级|
 |min-zoom|Number|undefined|最小缩放级别|

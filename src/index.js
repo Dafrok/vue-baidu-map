@@ -30,11 +30,8 @@ import BmBoundary from './extends/Boundary.vue'
 export default {
   install (Vue, options) {
     const {ak} = options
-    Vue.prototype._BMap = () => {
-      return {
-        ak
-      }
-    }
+    Vue.prototype._BMap = () => ({ak})
+
     Vue.component('baidu-map', BaiduMap)
     Vue.component('bm-view', BmView)
 
@@ -70,4 +67,14 @@ export default {
 
     Vue.component('bm-boundary', BmBoundary)
   }
+}
+
+export {
+  BaiduMap, BmView,
+  BmScale, BmNavigation, BmMapType, BmOverviewMap, BmGeolocation, BmCopyright, BmCityList, BmPanorama, BmControl,
+  BmMarker, BmPolyline, BmPolygon, BmCircle, BmGround, BmLabel, BmInfoWindow,
+  BmContextMenu, BmContextMenuItem,
+  BmLocalSearch, BmTransit, BmWalking, BmDriving, BmBus,
+  BmTile, BmTraffic,
+  BmBoundary
 }
