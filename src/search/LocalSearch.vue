@@ -49,7 +49,9 @@ export default {
   watch: {
     location: {
       handler (val) {
-        this.originInstance.setLocation(val || this.map)
+        const {originInstance, search} = this
+        originInstance.setLocation(val || this.map)
+        search()
       },
       deep: true
     },
@@ -109,15 +111,15 @@ export default {
       originInstance.searchInBounds(keyword, createBounds(BMap, bounds), customData)
     },
     search () {
-      const {originInstance, keyword, forceLocal, customData} = this
-      originInstance.search(keyword, {
+      const {originInstance, keyword, forceLocal, customData, nearby, bounds, searchNearby, searchInBounds} = this
+      nearby ? searchNearby(nearby) : bounds ? searchInBounds(bounds) : originInstance.search(keyword, {
         forceLocal,
         customData
       })
     },
     load () {
       const instance = this
-      const {map, BMap, search, pageCapacity, autoViewport, selectFirstResult, highlightMode, location, bounds, searchInBounds, nearby, searchNearby} = this
+      const {map, BMap, search, pageCapacity, autoViewport, selectFirstResult, highlightMode, location} = this
       const _location = location ? isPoint(location) ? createPoint(BMap, location) : location : map
       this.originInstance = new BMap.LocalSearch(_location, {
         onMarkersSet (e) {
@@ -142,7 +144,7 @@ export default {
           highlightMode
         }
       })
-      nearby ? searchNearby(nearby) : bounds ? searchInBounds(bounds) : search()
+      search()
     }
   }
 }
