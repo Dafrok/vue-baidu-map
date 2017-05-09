@@ -1,16 +1,5 @@
 import CateView from './components/CateView.vue'
 
-// import DocLocalSearch from './md/zh/bm-local-search.md'
-// import DocTransit from './md/zh/bm-transit.md'
-// import DocWalking from './md/zh/bm-walking.md'
-// import DocDriving from './md/zh/bm-driving.md'
-// import DocBus from './md/zh/bm-bus.md'
-
-// import DocLayerTile from './md/zh/bm-tile.md'
-// import DocLayerTraffic from './md/zh/bm-traffic.md'
-
-// import DocExtendBoundary from './md/zh/bm-boundary.md'
-
 export default [
   {
     // 首页
