@@ -37,8 +37,8 @@
 
 ```html
 <template>
-<baidu-map class="map-container">
-  <bm-view class="bm-view">
+<baidu-map>
+  <bm-view class="map">
   </bm-view>
   <bm-driving
     start="新街口"
@@ -50,22 +50,15 @@
   </bm-driving>
 </baidu-map>
 </template>
-
-<style>
-.map-container {
-  .bm-view {
-    width: 100%;
-    height: 400px;
-  }
-}
-</style>
 ```
 
 #### 预览
 
-<baidu-map class="map-container">
-  <bm-view class="bm-view">
+<doc-preview>
+<baidu-map>
+  <bm-view class="map">
   </bm-view>
   <bm-driving start="新街口" end="新街口" startCity="北京" endCity="南京" :auto-viewport="true" location="北京" :waypoints="['昭君墓', '陕西兵马俑']"></bm-driving>
 </baidu-map>
+</doc-preview>
 </template>

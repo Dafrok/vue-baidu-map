@@ -1,23 +1,16 @@
 <template>
 <div class="demo-card-wide mdl-card mdl-shadow--4dp">
-  <div class="mdl-card__title">
-    <div class="mdl-spinner mdl-js-spinner is-active"></div>
-    <slot name="map"></slot>
-  </div>
+  <slot></slot>
   <slot name="bottom"></slot>
-  <div class="mdl-card__menu">
-    <slot name="menu"></slot>
-  </div>
 </div>
 </template>
 
 <style lang="stylus" scoped>
 .mdl-card {
+  overflow: hidden;
   width: 100%;
 }
 .mdl-card__title {
-  position: relative;
-  padding-top: 50%;
   background-color: #f2f2f2;
 }
 .mdl-spinner {

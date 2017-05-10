@@ -58,7 +58,7 @@
 
 #### 预览
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
     <bm-marker :position="markerPoint" :dragging="true" animation="BMAP_ANIMATION_BOUNCE">
       <bm-label content="我爱北京天安门" :labelStyle="{color: '#f33', fontSize : '12px'}" :offset="{width: -35, height: 30}"/>
     </bm-marker>
@@ -79,7 +79,7 @@
 
 #### 预览
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
     <bm-marker :position="markerPoint" :icon="markerIcon"></bm-marker>
   </baidu-map>
 </doc-preview>
@@ -119,7 +119,7 @@ export default {
 
 #### 预览
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
     <bm-marker :position="{lng: 116.404, lat: 39.915}" :dragging="true" @click="infoWindowOpen">
       <bm-info-window :show="infoWindow.show" @close="infoWindowClose" @open="infoWindowOpen">我爱北京天安门</bm-info-window>
     </bm-marker>

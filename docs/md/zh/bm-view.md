@@ -13,7 +13,7 @@
 #### 代码
 ```html
 <doc-preview>
-  <baidu-map slot="map" class="map">
+  <baidu-map class="map">
     <p style="text-indent: 20px; line-height: 60px;">以下是使用 `bm-view` 组件渲染的百度地图实例</p>
     <bm-view style="position: absolute; top: 60px; bottom: 20px; left: 20px; right: 20px"></bm-view>
   </baidu-map>
@@ -22,7 +22,7 @@
 
 #### 预览
 <doc-preview>
-  <baidu-map slot="map" class="map">
+  <baidu-map class="map">
     <p style="text-indent: 20px; line-height: 60px;">以下是使用 `bm-view` 组件渲染的百度地图实例</p>
     <bm-view style="position: absolute; top: 60px; bottom: 20px; left: 20px; right: 20px"></bm-view>
   </baidu-map>

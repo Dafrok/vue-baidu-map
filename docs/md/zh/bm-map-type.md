@@ -28,7 +28,7 @@
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map" class="map">
+  <baidu-map class="map">
     <bm-map-type :map-types="['BMAP_NORMAL_MAP', 'BMAP_HYBRID_MAP']" anchor="BMAP_ANCHOR_TOP_LEFT"/>
   </baidu-map>
 </doc-preview>

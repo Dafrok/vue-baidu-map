@@ -75,18 +75,25 @@ export default {
 
 #### 预览
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
     <bm-info-window :position="{lng: 116.404, lat: 39.915}" title="Info Window Title" :show="infoWindow.show" @close="infoWindowClose" @open="infoWindowOpen">
       <p v-text="infoWindow.contents"></p>
       <button @click="clear">Clear</button>
     </bm-info-window>
   </baidu-map>
-  <div slot="bottom" class="mdl-card__actions mdl-card--border">
-    <div class="mdl-grid">
-      <label><input type="checkbox" v-model="infoWindow.show">信息窗体开关</label>
-      <textarea class="mdl-textfield__input" type="text" rows= "2" v-model="infoWindow.contents"></textarea>
-      <label class="mdl-textfield__label" >信息窗体内容</label>
-    </div>
+  <div class="toolbar">
+    <table>
+      <thead>
+        <tr>
+          <th><label><input type="checkbox" v-model="infoWindow.show">信息窗体内容</label></th>
+        <tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><text-field v-model="infoWindow.contents"></text-field></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </doc-preview>
 

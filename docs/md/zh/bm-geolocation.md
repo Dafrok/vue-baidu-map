@@ -35,7 +35,7 @@
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map" class="map">
+  <baidu-map class="map">
     <bm-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"/>
   </baidu-map>
 </doc-preview>

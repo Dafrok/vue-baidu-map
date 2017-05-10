@@ -69,27 +69,26 @@ export default {
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
     <bm-polyline :path="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolylinePath"></bm-polyline>
   </baidu-map>
-  <div slot="bottom" class="mdl-card__actions mdl-card--border">
-    <div class="mdl-grid" v-for="(point, index) in polylinePath">
-      <div class="mdl-cell mdl-cell--6-col">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="point.lng">
-          <label class="mdl-textfield__label" v-text="`坐标${index + 1}经度`"></label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-      </div>
-      <div class="mdl-cell mdl-cell--6-col">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="point.lat">
-          <label class="mdl-textfield__label" v-text="`坐标${index + 1}纬度`"></label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-      </div>
-    </div>
-    <!-- Accent-colored raised button with ripple -->
+  <div class="toolbar">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>经度</th>
+          <th>纬度</th>
+        <tr>
+      </thead>
+      <tbody>
+        <tr v-for="(point, index) in polylinePath" class="list-line">
+          <td v-text="`坐标${index + 1}`"></td>
+          <td><text-field label="经度" pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="point.lng"></text-field></td>
+          <td><text-field label="纬度" pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="point.lat"></text-field></td>
+        </tr>
+      </tbody>
+    </table>
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" @click="addPolylinePoint">
       添加一个坐标
     </button>

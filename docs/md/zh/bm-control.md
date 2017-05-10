@@ -43,7 +43,7 @@ export default {
 ```
 
 <doc-preview>
-  <baidu-map slot="map" class="map" :zoom="zoom" :center="{lng: 116.404, lat: 39.915}">
+  <baidu-map class="map" :zoom="zoom" :center="{lng: 116.404, lat: 39.915}">
     <bm-control>
       <button @click="addZoom(19)">缩放至最大</button>
       <button @click="addZoom(10)">还原</button>

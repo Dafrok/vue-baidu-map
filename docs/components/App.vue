@@ -34,11 +34,6 @@ export default {
 </script>
 
 <style lang="stylus">
-.map img {
-  max-width: none!important;
-  background: none!important;
-}
-
 h1.title {
   .logo {
     width: 2.5rem;
@@ -81,11 +76,20 @@ h2 {
 }
 
 .map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  width: 100%;
+  height: 300px
+  img {
+    max-width: none!important;
+    background: none!important;
+  }
+}
+
+.toolbar {
+  padding: 1rem;
+  font-size: 0;
+  * {
+    font-size: 1rem;
+  }
 }
 
 .mdl-list__item {

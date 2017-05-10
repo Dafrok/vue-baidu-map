@@ -25,7 +25,7 @@
 
 #### 预览
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
     <bm-panorama></bm-panorama>
   </baidu-map>
 </doc-preview>

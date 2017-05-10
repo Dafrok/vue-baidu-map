@@ -33,28 +33,20 @@
 
 ```html
 <template>
-<baidu-map class="map-container">
-  <bm-view class="bm-view">
+<baidu-map>
+  <bm-view class="map">
   </bm-view>
   <bm-bus keyword="331" :auto-viewport="true" location="北京"></bm-bus>
 </baidu-map>
 </template>
-
-<style>
-.map-container {
-  .bm-view {
-    width: 100%;
-    height: 400px;
-  }
-}
-</style>
 ```
 
 #### 预览
-
-<baidu-map class="map-container">
-  <bm-view class="bm-view">
-  </bm-view>
-  <bm-bus keyword="331" :auto-viewport="true" location="北京"></bm-bus>
-</baidu-map>
+<doc-preview>
+  <baidu-map>
+    <bm-view class="map">
+    </bm-view>
+    <bm-bus keyword="331" :auto-viewport="true" location="北京"></bm-bus>
+  </baidu-map>
+</doc-preview>
 </template>

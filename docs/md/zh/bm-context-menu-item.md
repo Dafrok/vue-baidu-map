@@ -64,7 +64,7 @@ export default {
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="center" :zoom="zoom">
+  <baidu-map class="map" :center="center" :zoom="zoom">
     <bm-context-menu>
       <bm-context-menu-item :callback="gotoBeijing" text="去北京"></bm-context-menu-item>
       <bm-context-menu-item :callback="gotoShanghai" text="去上海" iconUrl="http://lbsyun.baidu.com/skins/MySkin/resources/img/red.png"></bm-context-menu-item>

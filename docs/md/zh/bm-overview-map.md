@@ -33,7 +33,7 @@
 
 #### 预览
 <doc-preview>
-  <baidu-map slot="map" class="map">
+  <baidu-map class="map">
     <bm-overview-map anchor="BMAP_ANCHOR_BOTTOM_RIGHT"/>
   </baidu-map>
 </doc-preview>

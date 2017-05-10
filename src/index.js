@@ -25,7 +25,7 @@ import BmDriving from './search/Driving.vue'
 import BmBus from './search/Bus.vue'
 import BmTile from './layers/Tile.vue'
 import BmTraffic from './layers/Traffic.vue'
-import BmBoundary from './extends/Boundary.vue'
+import BmBoundary from './Others/Boundary.vue'
 
 export default {
   install (Vue, options) {

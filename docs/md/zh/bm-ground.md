@@ -50,7 +50,7 @@ export default {
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="12">
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="12">
     <bm-ground
       :bounds="bounds"
       imageURL="//developer.baidu.com/map/jsdemo/img/si-huan.png"

@@ -26,7 +26,7 @@
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="{lng: 116.332782, lat: 40.007978}" :zoom="15">
+  <baidu-map class="map" :center="{lng: 116.332782, lat: 40.007978}" :zoom="15">
     <bm-traffic :predictDate="{weekday: 7, hour: 12}">
     </bm-traffic>
   </baidu-map>

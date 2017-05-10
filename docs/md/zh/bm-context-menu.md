@@ -65,7 +65,7 @@ export default {
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="center" :zoom="zoom">
+  <baidu-map class="map" :center="center" :zoom="zoom">
     <bm-context-menu>
       <bm-context-menu-item :callback="gotoBeijing" text="去北京"></bm-context-menu-item>
       <bm-context-menu-item :callback="gotoShanghai" text="去上海"></bm-context-menu-item>
@@ -111,7 +111,7 @@ export default {
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="center" :zoom="zoom">
+  <baidu-map class="map" :center="center" :zoom="zoom">
     <bm-marker :position="{lng: 116.404, lat: 39.915}" :dragging="true">
       <bm-context-menu>
         <bm-context-menu-item :callback="getPosition" text="获取坐标"></bm-context-menu-item>

@@ -85,7 +85,7 @@
 
 #### 预览
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
   </baidu-map>
 </doc-preview>
 
@@ -102,7 +102,7 @@
 
 #### 预览
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" :scroll-wheel-zoom="true">
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" :scroll-wheel-zoom="true">
   </baidu-map>
 </doc-preview>
 
@@ -144,7 +144,7 @@ export default {
 
 #### 预览
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" :theme="theme">
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" :theme="theme">
   </baidu-map>
 </doc-preview>
 
@@ -161,7 +161,7 @@ export default {
 
 #### 预览
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" mapType="BMAP_SATELLITE_MAP">
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" mapType="BMAP_SATELLITE_MAP">
   </baidu-map>
 </doc-preview>
 
@@ -214,32 +214,24 @@ export default {
 
 #### 预览
 <doc-preview>
-  <baidu-map slot="map" class="map" :scroll-wheel-zoom="true" :center="center" :zoom="zoom" @moving="syncCenter" @moveend="syncCenter" @zoomend="syncZoom">
+  <baidu-map class="map" :scroll-wheel-zoom="true" :center="center" :zoom="zoom" @moving="syncCenter" @moveend="syncCenter" @zoomend="syncZoom">
   </baidu-map>
-  <div slot="bottom" class="mdl-card__actions mdl-card--border">
-    <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--4-col">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="center.lng">
-          <label class="mdl-textfield__label">经度</label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-      </div>
-      <div class="mdl-cell mdl-cell--4-col">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="center.lat">
-          <label class="mdl-textfield__label">纬度</label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-      </div>
-      <div class="mdl-cell mdl-cell--4-col">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="zoom">
-          <label class="mdl-textfield__label">缩放</label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-      </div>
-    </div>
+  <div class="toolbar">
+    <table>
+      <thead>
+        <tr><th>经度</th><th>纬度</th><th>缩放</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><text-field v-model.number="center.lng" pattern="-?[0-9]*(\.[0-9]+)?" label="经度"></text-field></th>
+          <td><text-field v-model.number="center.lat" pattern="-?[0-9]*(\.[0-9]+)?" label="纬度"></text-field></td>
+          <td><text-field v-model.number="zoom" pattern="-?[0-9]*(\.[0-9]+)?" label="缩放"></text-field></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    
+    
   </div>
 </doc-preview>
 </template>

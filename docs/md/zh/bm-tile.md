@@ -32,7 +32,7 @@
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="{lng: 116.332782, lat: 40.007978}" :zoom="16">
+  <baidu-map class="map" :center="{lng: 116.332782, lat: 40.007978}" :zoom="16">
     <bm-tile
       :isTransparentPng="true"
       tileUrlTemplate="//developer.baidu.com/map/jsdemo/demo/tiles/{Z}/tile{X}_{Y}.png"/></bm-tile>

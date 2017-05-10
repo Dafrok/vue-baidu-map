@@ -36,13 +36,12 @@
 
 ```html
 <template>
-<label>关键词：<input v-model="keyword"></label>
-<label>地区：<input v-model="location"></label>
-<baidu-map class="map-container">
-  <bm-view class="bm-view">
-  </bm-view>
-  <bm-local-search :keyword="keyword" :auto-viewport="true" :location="location"></bm-local-search>
-</baidu-map>
+  <label>关键词：<input v-model="keyword"></label>
+  <label>地区：<input v-model="location"></label>
+  <baidu-map>
+    <bm-view class="map"></bm-view>
+    <bm-local-search :keyword="keyword" :auto-viewport="true" :location="location"></bm-local-search>
+  </baidu-map>
 </template>
 
 <script>
@@ -55,27 +54,34 @@ export default {
   }
 }
 </script>
-
-<style>
-.map-container {
-  .bm-view {
-    width: 100%;
-    height: 400px;
-  }
-}
 </style>
 ```
 
 
 #### 预览
 
-<label>关键词：<input v-model="keyword"></label>
-<label>地区：<input v-model="location"></label>
-
-<baidu-map class="map-container">
-  <bm-view class="bm-view">
+<doc-preview>
+<baidu-map>
+  <bm-view class="map">
   </bm-view>
+  <div class="toolbar">
+    <table>
+      <thead>
+        <tr>
+          <th>地区</th>
+          <th>关键词</th>
+        <tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><text-field v-model="location"></text-field></td>
+          <td><text-field v-model="keyword"></text-field></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   <bm-local-search :keyword="keyword" :auto-viewport="true" :location="location"></bm-local-search>
+</doc-preview>
 </baidu-map>
 
 
@@ -85,8 +91,9 @@ export default {
 
 ```html
 <template>
-  <baidu-map class="map">
-    <bm-local-search keyword="银行" :bounds="bounds" :auto-viewport="true" :resultPanel="false"></bm-local-search>
+  <baidu-map>
+    <bm-view class="map"></bm-view>
+    <bm-local-search keyword="银行" :bounds="bounds" :auto-viewport="true" :panel="false"></bm-local-search>
     <bm-polygon :path="polygonPath"></bm-polygon>
   </baidu-map>
 </template>
@@ -130,8 +137,9 @@ export default {
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="{lng: 116.274625, lat: 39.961627}" :zoom="11">
-    <bm-local-search keyword="银行" :bounds="bounds" :auto-viewport="true" :resultPanel="false"></bm-local-search>
+  <baidu-map :center="{lng: 116.274625, lat: 39.961627}" :zoom="11">
+    <bm-view class="map"></bm-view>
+    <bm-local-search keyword="银行" :bounds="bounds" :auto-viewport="true" :panel="false"></bm-local-search>
     <bm-polygon :path="polygonPath"></bm-polygon>
   </baidu-map>
 </doc-preview>
@@ -143,8 +151,9 @@ export default {
 
 ```html
 <template>
-  <baidu-map class="map">
-    <bm-local-search keyword="餐馆" :nearby="nearby" :auto-viewport="true" :resultPanel="false"></bm-local-search>
+  <baidu-map>
+    <bm-view class="map"></bm-view>
+    <bm-local-search keyword="餐馆" :nearby="nearby" :auto-viewport="true" :panel="false"></bm-local-search>
     <bm-circle :center="nearby.center" :radius="nearby.radius"></bm-circle>
   </baidu-map>
 </template>
@@ -169,8 +178,9 @@ export default {
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
-    <bm-local-search keyword="餐馆" :nearby="nearby" :auto-viewport="true" :resultPanel="false"></bm-local-search>
+  <baidu-map :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+    <bm-view class="map"></bm-view>
+    <bm-local-search keyword="餐馆" :nearby="nearby" :auto-viewport="true" :panel="false"></bm-local-search>
     <bm-circle :center="nearby.center" :radius="nearby.radius"></bm-circle>
   </baidu-map>
 </doc-preview>
@@ -220,16 +230,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-.map-container {
-  .bm-view {
-    width: 100%;
-    height: 400px;
-    img {
-      max-width: none!important;
-      background: none!important;
-    }
-  }
-}
-</style>

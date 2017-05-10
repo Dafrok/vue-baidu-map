@@ -74,33 +74,26 @@ export default {
 #### 预览
 
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
     <bm-circle :center="circlePath.center" :radius="circlePath.radius" @lineupdate="updateCirclePath" :editing="true"></bm-circle>
   </baidu-map>
-  <div slot="bottom" class="mdl-card__actions mdl-card--border">
-    <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--4-col">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="circlePath.center.lng">
-          <label class="mdl-textfield__label">圆心（经度）</label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-      </div>
-      <div class="mdl-cell mdl-cell--4-col">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="circlePath.center.lat">
-          <label class="mdl-textfield__label">圆心（纬度）</label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-      </div>
-      <div class="mdl-cell mdl-cell--4-col">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="circlePath.radius">
-          <label class="mdl-textfield__label">半径</label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-      </div>
-    </div>
+  <div class="toolbar">
+    <table>
+      <thead>
+        <tr>
+          <th>圆心经度</th>
+          <th>圆心纬度</th>
+          <th>半径</th>
+        <tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><text-field label="经度" pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="circlePath.center.lng"></text-field></td>
+          <td><text-field label="纬度" pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="circlePath.center.lat"></text-field></td>
+          <td><text-field label="纬度" pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="circlePath.radius"></text-field></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </doc-preview>
 </template>

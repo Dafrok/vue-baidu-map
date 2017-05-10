@@ -4,6 +4,7 @@ import App from './components/App.vue'
 import routes from './routes'
 import BaiduMap from '@/index.js'
 import DocPreview from './components/DocPreview.vue'
+import TextField from './components/TextField.vue'
 
 import Prism from 'prismjs'
 
@@ -19,6 +20,7 @@ Vue.use(BaiduMap, {
 })
 
 Vue.component('doc-preview', DocPreview)
+Vue.component('text-field', TextField)
 
 const router = new VueRouter({
   routes,

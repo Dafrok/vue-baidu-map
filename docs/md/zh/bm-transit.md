@@ -35,27 +35,20 @@
 
 ```html
 <template>
-<baidu-map class="map-container">
-  <bm-view class="bm-view">
+<baidu-map>
+  <bm-view class="map">
   </bm-view>
   <bm-transit start="百度大厦" end="北京邮电大学西门" :auto-viewport="true" location="北京"></bm-transit>
 </baidu-map>
 </template>
-
-<style>
-.map-container {
-  .bm-view {
-    width: 100%;
-    height: 400px;
-  }
-}
-</style>
 ```
 
 #### 预览
-<baidu-map class="map-container">
-  <bm-view class="bm-view">
+<doc-preview>
+<baidu-map>
+  <bm-view class="map">
   </bm-view>
   <bm-transit start="百度大厦" end="北京邮电大学西门" :auto-viewport="true" location="北京"></bm-transit>
 </baidu-map>
+</doc-preview>
 </template>

@@ -46,7 +46,7 @@
 
 #### 预览
 <doc-preview>
-  <baidu-map slot="map" class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
     <bm-label content="我爱北京天安门" :position="{lng: 116.404, lat: 39.915}" :labelStyle="labelStyle" title="Hover me"/>
   </baidu-map>
 </doc-preview>

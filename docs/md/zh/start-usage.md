@@ -108,6 +108,6 @@ export default {
 
 ## 预览
 <doc-preview>
-  <baidu-map slot="map" class="map">
+  <baidu-map class="map">
   </baidu-map>
 </doc-preview>
