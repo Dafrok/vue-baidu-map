@@ -19,7 +19,6 @@ export default {
   font-size 0
   display inline-block
   width 100%
-  padding 0 10px
   .label
     font-size .75rem
   .input

@@ -88,9 +88,9 @@ export default {
       </thead>
       <tbody>
         <tr>
-          <td><text-field label="经度" pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="circlePath.center.lng"></text-field></td>
-          <td><text-field label="纬度" pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="circlePath.center.lat"></text-field></td>
-          <td><text-field label="纬度" pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="circlePath.radius"></text-field></td>
+          <td><text-field pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="circlePath.center.lng"></text-field></td>
+          <td><text-field pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="circlePath.center.lat"></text-field></td>
+          <td><text-field pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="circlePath.radius"></text-field></td>
         </tr>
       </tbody>
     </table>

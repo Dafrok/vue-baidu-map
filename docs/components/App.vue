@@ -75,22 +75,24 @@ h2 {
   }
 }
 
-.map {
-  width: 100%;
-  height: 300px
-  img {
-    max-width: none!important;
-    background: none!important;
-  }
-}
+.map
+  width 100%
+  height 300px
+  img
+    max-width: none!important
+    background: none!important
 
-.toolbar {
-  padding: 1rem;
-  font-size: 0;
-  * {
-    font-size: 1rem;
-  }
-}
+.toolbar
+  padding 1rem
+  font-size 0
+    font-size 1rem
+  table
+    thead
+      tr
+        th
+          color white
+          background #69c
+          border-color #69c
 
 .mdl-list__item {
   &.title {

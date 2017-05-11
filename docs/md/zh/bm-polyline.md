@@ -84,8 +84,8 @@ export default {
       <tbody>
         <tr v-for="(point, index) in polylinePath" class="list-line">
           <td v-text="`坐标${index + 1}`"></td>
-          <td><text-field label="经度" pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="point.lng"></text-field></td>
-          <td><text-field label="纬度" pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="point.lat"></text-field></td>
+          <td><text-field pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="point.lng"></text-field></td>
+          <td><text-field pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="point.lat"></text-field></td>
         </tr>
       </tbody>
     </table>
