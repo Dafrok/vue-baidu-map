@@ -21,7 +21,7 @@
 ```html
 <template>
   <baidu-map class="map">
-    <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"/>
+    <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-navigation>
   </baidu-map>
 </template>
 ```
@@ -29,7 +29,7 @@
 #### 预览
 <doc-preview>
   <baidu-map class="map">
-    <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"/>
+    <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-navigation>
   </baidu-map>
 </doc-preview>
   
