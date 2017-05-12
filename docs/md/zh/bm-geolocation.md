@@ -27,7 +27,7 @@
 ```html
 <template>
   <baidu-map class="map">
-    <bm-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"/>
+    <bm-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"></bm-geolocation>
   </baidu-map>
 </template>
 ```
@@ -36,6 +36,6 @@
 
 <doc-preview>
   <baidu-map class="map">
-    <bm-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"/>
+    <bm-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"></bm-geolocation>
   </baidu-map>
 </doc-preview>
