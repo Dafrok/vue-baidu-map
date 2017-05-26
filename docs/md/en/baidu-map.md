@@ -108,7 +108,7 @@ Baidu Map instance allows users to set a custom theme.
   </baidu-map>
 </doc-preview>
 
-### Set a Custom Event
+### Set a Custom Theme
 
 #### Code
 
