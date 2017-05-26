@@ -97,7 +97,8 @@ export default {
     }
   },
   methods: {
-    handler () {
+    handler ({BMap, map}) {
+      console.log(BMap, map)
       this.lng = 116.404
       this.lat = 39.915
     }
