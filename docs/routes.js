@@ -388,5 +388,31 @@ export default [
         }
       }
     ]
+  },
+  {
+    path: '/en/map',
+    name: 'Map',
+    component: CateView,
+    meta: {
+      lang: 'en'
+    },
+    children: [
+      {
+        path: 'baidu-map',
+        component: () => import('./md/en/baidu-map.md'),
+        name: 'Map Container',
+        meta: {
+          lang: 'en'
+        }
+      },
+      {
+        path: 'bm-view',
+        component: () => import('./md/en/bm-view.md'),
+        name: 'Map View',
+        meta: {
+          lang: 'en'
+        }
+      }
+    ]
   }
 ]
