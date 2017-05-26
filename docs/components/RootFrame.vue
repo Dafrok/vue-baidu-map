@@ -5,12 +5,12 @@ div.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header
       span.mdl-layout-title(v-text="title") VUE BAIDU MAP
       .mdl-layout-spacer
       .mdl-navigation
-        a.mdl-button.mdl-js-button.mdl-button--icon(href="https://github.com/Dafrok/vue-baidu-map")
-          i.material-icons.iconfont.icon-star
+        router-link(:to="`/${otherLang}/index`", @click="changeLang").mdl-button.mdl-js-button.mdl-button--icon
+          i.material-icons.iconfont.icon-zhongyingwenqiehuan-xianshizhongyingwen
         a.mdl-button.mdl-js-button.mdl-button--icon(href="https://github.com/Dafrok/vue-baidu-map")
           i.material-icons.iconfont.icon-github
   div.mdl-layout__drawer(@click="close", ref="drawer")
-    router-link(to="/").logo
+    router-link(:to="`/${lang}/index`").logo
       img(src="//dafrok.github.io/vue-baidu-map/favicon.png")
     slot(name="navigation")
   main.mdl-layout__content(ref="main")
@@ -36,19 +36,30 @@ div.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header
 
 <script>
 export default {
+  props: ['lang'],
   data () {
     return {
       title: this.$route.name
     }
   },
   methods: {
+    changeLang () {
+      this.$emit('changeLang', this.otherLang)
+    },
     close () {
       document.querySelector('.mdl-layout__obfuscator').classList.remove('is-visible')
       this.$refs.drawer.classList.remove('is-visible')
     }
   },
+  computed: {
+    otherLang () {
+      return this.lang === 'zh' ? 'en' : 'zh'
+    }
+  },
   mounted () {
     this.$router.afterEach(route => {
+      const meta = this.$route.meta || {}
+      this.$emit('changeLang', meta.lang)
       this.$refs.main.scrollTop = 0
       this.$nextTick(global.componentHandler.upgradeDom)
       this.title = route.name

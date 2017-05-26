@@ -1,8 +1,8 @@
 <template lang="pug">
-root-frame
+root-frame(:lang="lang", @changeLang="changeLang")
   drawer(slot="navigation")
     nav
-      div.cate(v-for="route in routeMap")
+      div.cate(v-for="route in routeMap", v-if="route.name")
         .mdl-list__item.title(v-text="route.name")
         router-link.mdl-navigation__link.sub(v-for="subRoute in route.children",  :to="`${route.path}/${subRoute.path}`", v-text="subRoute.name")
   router-view(slot="page-content").doc.markdown-body
@@ -19,11 +19,21 @@ export default {
     RootFrame,
     Drawer
   },
+  data () {
+    return {
+      lang: 'zh'
+    }
+  },
+  methods: {
+    changeLang (lang) {
+      this.lang = lang
+    }
+  },
   computed: {
     routeMap () {
       const ret = []
       for (const route of routeMap) {
-        if (route.meta !== 'hidden') {
+        if (!route.meta || (route.meta && !route.meta.hidden && route.meta.lang === this.lang)) {
           ret.push(route)
         }
       }

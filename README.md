@@ -66,6 +66,4 @@ Vue.use(BaiduMap, {
 
 [MIT License](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2016-present, Dafrok
-
-
+Copyright (c) 2016-present, Dafrok <o.o@mug.dog>
