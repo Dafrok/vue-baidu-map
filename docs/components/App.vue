@@ -1,11 +1,13 @@
 <template lang="pug">
-root-frame(:lang="lang", @changeLang="changeLang")
-  drawer(slot="navigation")
-    nav
-      div.cate(v-for="route in routeMap", v-if="route.name")
-        .mdl-list__item.title(v-text="route.name")
-        router-link.mdl-navigation__link.sub(v-for="subRoute in route.children",  :to="`${route.path}/${subRoute.path}`", v-text="subRoute.name")
-  router-view(slot="page-content").doc.markdown-body
+div
+  router-view(v-show="isIndex")
+  root-frame(v-show="!isIndex", :lang="lang", @changeLang="changeLang")
+    drawer(slot="navigation")
+      nav
+        div.cate(v-for="route in routeMap", v-if="route.name")
+          .mdl-list__item.title(v-text="route.name")
+          router-link.mdl-navigation__link.sub(v-for="subRoute in route.children",  :to="`${route.path}/${subRoute.path}`", v-text="subRoute.name")
+    router-view(slot="page-content").doc.markdown-body
 </template>
 
 <script>
@@ -29,10 +31,17 @@ export default {
       this.lang = lang
     }
   },
+  mounted () {
+    this.$router.afterEach(route => {
+      this.$nextTick(global.componentHandler.upgradeDom)
+    })
+  },
   computed: {
+    isIndex () {
+      return this.$route.fullPath === '/'
+    },
     routeMap () {
       const ret = []
-      console.log(routeMap)
       for (const route of routeMap) {
         if (!route.meta || (route.meta && !route.meta.hidden && route.meta.lang === this.lang)) {
           ret.push(route)

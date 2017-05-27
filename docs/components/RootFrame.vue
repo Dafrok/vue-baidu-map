@@ -10,7 +10,7 @@ div.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header
         a.mdl-button.mdl-js-button.mdl-button--icon(href="https://github.com/Dafrok/vue-baidu-map")
           i.material-icons.iconfont.icon-github
   div.mdl-layout__drawer(@click="close", ref="drawer")
-    router-link(:to="`/${lang}/index`").logo
+    router-link(:to="`/`").logo
       img(src="//dafrok.github.io/vue-baidu-map/favicon.png")
     slot(name="navigation")
   main.mdl-layout__content(ref="main")
@@ -61,7 +61,6 @@ export default {
       const meta = this.$route.meta || {}
       this.$emit('changeLang', meta.lang)
       this.$refs.main.scrollTop = 0
-      this.$nextTick(global.componentHandler.upgradeDom)
       this.title = route.name
     })
   }

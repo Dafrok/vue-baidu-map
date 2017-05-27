@@ -1,6 +1,7 @@
 import CateView from './components/CateView.vue'
+import Index from './components/Index.vue'
 
-// const langs = ['zh', 'en']
+const langs = ['zh', 'en']
 
 const genRouteMap = (routeMap, lang, isChild) => routeMap.reduce((res, item) => {
   const route = {
@@ -361,8 +362,7 @@ const routeMap = [
 export default [
   {
     path: '/',
-    redirect: '/zh/index'
+    component: Index
   },
-  ...genRouteMap(routeMap, 'zh'),
-  ...genRouteMap(routeMap, 'en')
+  ...langs.reduce((map, lang) => map.concat(genRouteMap(routeMap, lang)), [])
 ]
