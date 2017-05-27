@@ -17,9 +17,9 @@ The container is an empty DOM node which used to mount other components or DOM n
 |high-resolution|Boolean|true|High resolution mode.|
 |map-click|Boolean|true|Allow to click on the map.|
 |map-type|Number|BMAP_NORMAL_MAP|Map type.|
-|dragging|Boolean|true|Allow drag on the map.|
-|scroll-wheel-zoom|Boolean|false|Allow zoom by mousewheel on the map.|
-|double-click-zoom|Boolean|true|Allow zoom by double click on the map.|
+|dragging|Boolean|true|Allow to drag on the map.|
+|scroll-wheel-zoom|Boolean|false|Allow to zoom by mousewheel on the map.|
+|double-click-zoom|Boolean|true|Allow to zoom by double click on the map.|
 |keyboard|Boolean|true|Allow keyboard events on the map.|
 |inertial-dragging|Boolean|false|Dragging with inertia.|
 |continuous-zoom|Boolean|false|Continuous zoom.|

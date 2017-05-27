@@ -1,0 +1,120 @@
+<template lang="md">
+
+# Polyline Overlay
+
+`BmPolyline`
+
+## Instance Properties
+
+|name|type|default|description|
+|------|:---:|:---:|----|
+|path|Array[Point]|[]|The points that makes the polyline.|
+|strokeColor|String||Polyline stroke color.|
+|strokeWeight|Number||Polyline stroke width.|
+|strokeOpacity|Number||Polyline stroke opacity.|
+|strokeStyle|String|'solid'|Polyline stroke style. `'solid'` or `'dashed'`.|
+|enableMassClear|Boolean|true|Whether remove this overlay or not when `map.clearOverlays` is called.|
+|enableEditing|Boolean|false|Enable editing the polyline.|
+|enableClicking|Boolean|true|Whether to respond to a click event.|
+
+## Events
+
+|name|parameter|description|
+|------|:--:|----|
+|click|event{type, target, point, pixel}|Triggers when click on the polyline.|
+|dblclick|event{type, target, point, pixel}|Triggers when double click on the polyline.|
+|mousedown|event{type, target, point, pixel}|Triggers when the mouse is pressed down on the polyline.|
+|mouseup|event{type, target, point, pixel}|Triggers when the mouse is released on the polyline.|
+|mouseout|event{type, target, point, pixel}|Triggers when the mouse leaves the polyline.|
+|mouseover|event{type, target, point, pixel}|Triggers when the mouse enters the polyline.|
+|remove|event{type, target}|Triggers when the polyline is removed.|
+|lineupdate|event{type, target}|Triggers when the polyline is updated.|
+
+## Examples
+
+### Add an editable polyline on the map
+
+#### Code
+
+```html
+<template>
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+    <bm-polyline :path="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolylinePath"></bm-polyline>
+  </baidu-map>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      polylinePath: [
+        {lng: 116.404, lat: 39.915},
+        {lng: 116.405, lat: 39.920},
+        {lng: 116.423493, lat: 39.907445}
+      ]
+    }
+  },
+  methods: {
+    updatePolylinePath (e) {
+      this.polylinePath = e.target.getPath()
+    },
+    addPolylinePoint () {
+      this.polylinePath.push({lng: 116.404, lat: 39.915})
+    }
+  }
+}
+</script>
+```
+
+#### Example
+
+<doc-preview>
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+    <bm-polyline :path="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolylinePath"></bm-polyline>
+  </baidu-map>
+  <div class="toolbar">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Longitude</th>
+          <th>Latitude</th>
+        <tr>
+      </thead>
+      <tbody>
+        <tr v-for="(point, index) in polylinePath" class="list-line">
+          <td v-text="`Point-${index + 1}`"></td>
+          <td><text-field pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="point.lng"></text-field></td>
+          <td><text-field pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="point.lat"></text-field></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" @click="addPolylinePoint">
+      Add Point
+    </button>
+  </div>
+</doc-preview>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      polylinePath: [
+        {lng: 116.404, lat: 39.915},
+        {lng: 116.405, lat: 39.920},
+        {lng: 116.423493, lat: 39.907445}
+      ]
+    }
+  },
+  methods: {
+    updatePolylinePath (e) {
+      this.polylinePath = e.target.getPath()
+    },
+    addPolylinePoint () {
+      this.polylinePath.push({lng: 116.404, lat: 39.915})
+      this.$nextTick(global.componentHandler.upgradeDom)
+    }
+  }
+}
+</script>

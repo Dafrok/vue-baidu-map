@@ -1,19 +1,19 @@
-# 自定义控件
+# Custom Control
 
 `BmControl`
 
-## 属性
+## Instance Properties
 
-|属性名|类型|默认值|描述|
+|name|type|default|description|
 |------|:---:|:---:|----|
-|anchor|ControlAnchor|undefined|控件停靠位置，默认为左上。|
-|offset|Size|undefined|控件偏移值|
+|anchor|ControlAnchor||The location of the control.|
+|offset|Size||The offset of the control.|
 
-## 示例
+## Examples
 
-### 插入自定义控件
+### Add a custom control on the map
 
-#### 代码
+#### Code
 
 ```html
 <template>
@@ -42,14 +42,14 @@ export default {
 </script>
 ```
 
-#### 预览
+#### Preview 
 
 <doc-preview>
   <baidu-map class="map" :zoom="zoom" :center="{lng: 116.404, lat: 39.915}">
     <bm-control>
-      <button @click="addZoom(19)">缩放至最大</button>
-      <button @click="addZoom(10)">还原</button>
-      <button @click="addZoom(3)">缩放至最小</button>
+      <button @click="addZoom(19)">Zoom Max</button>
+      <button @click="addZoom(10)">Reset</button>
+      <button @click="addZoom(3)">Zoom Min</button>
     </bm-control>
   </baidu-map>
 </doc-preview>

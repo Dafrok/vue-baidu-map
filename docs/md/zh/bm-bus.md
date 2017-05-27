@@ -23,7 +23,7 @@
 |buslisthtmlset|{container: HTMLElement}|公交列表结果页渲染后回调函数。|
 |buslinehtmlset|{container: HTMLElement}|公交线路结果页渲染后回调函数。|
 |markersset|{pois: Array, transfers: Array}|标注添加完成后的回调函数。|
-|onpolylinesset|{routes: Array, routes: Array}|折线添加完成后的回调函数。|
+|polylinesset|{routes: Array, routes: Array}|折线添加完成后的回调函数。|
 
 ## 示例
 

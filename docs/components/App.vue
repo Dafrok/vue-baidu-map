@@ -32,6 +32,7 @@ export default {
   computed: {
     routeMap () {
       const ret = []
+      console.log(routeMap)
       for (const route of routeMap) {
         if (!route.meta || (route.meta && !route.meta.hidden && route.meta.lang === this.lang)) {
           ret.push(route)

@@ -1,418 +1,368 @@
 import CateView from './components/CateView.vue'
 
+// const langs = ['zh', 'en']
+
+const genRouteMap = (routeMap, lang, isChild) => routeMap.reduce((res, item) => {
+  const route = {
+    path: isChild ? item.path : `/${lang}/${item.path}`,
+    name: item.name[lang],
+    component: typeof item.component === 'string' ? () => import(`./md/${lang}/${item.component}.md`) : item.component,
+    meta: Object.assign({lang}, item.meta),
+    children: genRouteMap(item.children || [], lang, true)
+  }
+  res.push(route)
+  return res
+}, [])
+
+const routeMap = [
+  {
+    // 首页
+    path: 'index',
+    name: {
+      'zh': '文档',
+      'en': 'Documentation'
+    },
+    component: 'index',
+    meta: {
+      hidden: true
+    }
+  },
+  {
+    // 开始
+    path: 'start',
+    component: CateView,
+    name: {
+      zh: '开始',
+      en: 'Get Start'
+    },
+    children: [
+      {
+        path: 'installation',
+        component: 'start-installation',
+        name: {
+          zh: '安装',
+          en: 'Installation'
+        }
+      },
+      {
+        path: 'usage',
+        component: 'start-usage',
+        name: {
+          zh: '快速上手',
+          en: 'Usage'
+        }
+      },
+      {
+        path: 'base',
+        component: 'start-base',
+        name: {
+          zh: '基础',
+          en: 'Base'
+        }
+      }
+    ]
+  },
+  {
+    path: 'map',
+    name: {
+      zh: '地图',
+      en: 'Map'
+    },
+    component: CateView,
+    children: [
+      {
+        path: 'baidu-map',
+        component: 'baidu-map',
+        name: {
+          zh: '地图容器',
+          en: 'Map Container'
+        }
+      },
+      {
+        path: 'bm-view',
+        component: 'bm-view',
+        name: {
+          zh: '地图视图',
+          en: 'Map View'
+        }
+      }
+    ]
+  },
+  {
+    path: 'control',
+    name: {
+      zh: '控件',
+      en: 'Control'
+    },
+    component: CateView,
+    children: [
+      {
+        path: 'scale',
+        component: 'bm-scale',
+        name: {
+          zh: '比例尺',
+          en: 'Scale'
+        }
+      },
+      {
+        path: 'navigation',
+        component: 'bm-navigation',
+        name: {
+          zh: '缩放',
+          en: 'Navigation'
+        }
+      },
+      {
+        path: 'map-type',
+        component: 'bm-map-type',
+        name: {
+          zh: '地图类型',
+          en: 'Map Type'
+        }
+      },
+      {
+        path: 'overview-map',
+        component: 'bm-overview-map',
+        name: {
+          zh: '缩略图',
+          en: 'Overview Map'
+        }
+      },
+      {
+        path: 'geolocation',
+        component: 'bm-geolocation',
+        name: {
+          zh: '定位',
+          en: 'Geolocation'
+        }
+      },
+      {
+        path: 'copyright',
+        component: 'bm-copyright',
+        name: {
+          zh: '版权',
+          en: 'Copyright'
+        }
+      },
+      {
+        path: 'city-list',
+        component: 'bm-city-list',
+        name: {
+          zh: '城市列表',
+          en: 'City List'
+        }
+      },
+      {
+        path: 'panorama',
+        component: 'bm-panorama',
+        name: {
+          zh: '全景',
+          en: 'Panorama'
+        }
+      },
+      {
+        path: 'control',
+        component: 'bm-control',
+        name: {
+          zh: '自定义控件',
+          en: 'Custom Control'
+        }
+      }
+    ]
+  },
+  {
+    path: 'overlay',
+    name: {
+      zh: '覆盖物',
+      en: 'Overlay'
+    },
+    component: CateView,
+    children: [
+      {
+        path: 'marker',
+        component: 'bm-marker',
+        name: {
+          zh: '点',
+          en: 'Marker'
+        }
+      },
+      {
+        path: 'polyline',
+        component: 'bm-polyline',
+        name: {
+          zh: '折线',
+          en: 'Polyline'
+        }
+      },
+      {
+        path: 'polygon',
+        component: 'bm-polygon',
+        name: {
+          zh: '多边形',
+          en: 'Polygon'
+        }
+      },
+      {
+        path: 'circle',
+        component: 'bm-circle',
+        name: {
+          zh: '圆形',
+          en: 'Circle'
+        }
+      },
+      {
+        path: 'ground',
+        component: 'bm-ground',
+        name: {
+          zh: '地面',
+          en: 'Ground'
+        }
+      },
+      {
+        path: 'label',
+        component: 'bm-label',
+        name: {
+          zh: '标签',
+          en: 'Label'
+        }
+      },
+      {
+        path: 'info-window',
+        component: 'bm-info-window',
+        name: {
+          zh: '信息窗体',
+          en: 'Info Window'
+        }
+      }
+    ]
+  },
+  {
+    path: 'layer',
+    name: {
+      zh: '图层',
+      en: 'Layer'
+    },
+    component: CateView,
+    children: [
+      {
+        path: 'tile',
+        component: 'bm-tile',
+        name: {
+          zh: '瓦片图层',
+          en: 'Tile'
+        }
+      },
+      {
+        path: 'traffic',
+        component: 'bm-traffic',
+        name: {
+          zh: '交通流量图层',
+          en: 'Traffic'
+        }
+      }
+    ]
+  },
+  {
+    path: 'search',
+    name: {
+      zh: '检索',
+      en: 'Search'
+    },
+    component: CateView,
+    children: [
+      {
+        path: 'local-search',
+        component: 'bm-local-search',
+        name: {
+          zh: '地区检索',
+          en: 'Local Search'
+        }
+      },
+      {
+        path: 'transit',
+        component: 'bm-transit',
+        name: {
+          zh: '公交路线规划',
+          en: 'Transit'
+        }
+      },
+      {
+        path: 'walking',
+        component: 'bm-walking',
+        name: {
+          zh: '步行路线规划',
+          en: 'Walking'
+        }
+      },
+      {
+        path: 'driving',
+        component: 'bm-driving',
+        name: {
+          zh: '驾车路线规划',
+          en: 'Driving'
+        }
+      },
+      {
+        path: 'bus',
+        component: 'bm-bus',
+        name: {
+          zh: '公交路线检索',
+          en: 'Bus'
+        }
+      }
+    ]
+  },
+  {
+    path: 'context-menu',
+    name: {
+      zh: '上下文菜单',
+      en: 'Context Menu'
+    },
+    component: CateView,
+    children: [
+      {
+        path: 'menu',
+        component: 'bm-context-menu',
+        name: {
+          zh: '菜单',
+          en: 'Menu'
+        }
+      },
+      {
+        path: 'item',
+        component: 'bm-context-menu-item',
+        name: {
+          zh: '菜单项',
+          en: 'Menu Item'
+        }
+      }
+    ]
+  },
+  {
+    path: 'other',
+    name: {
+      zh: '其它',
+      en: 'Other'
+    },
+    component: CateView,
+    children: [
+      {
+        path: 'boundary',
+        name: {
+          zh: '行政区划',
+          en: 'Boundary'
+        },
+        component: 'bm-boundary'
+      }
+    ]
+  }
+]
+
 export default [
   {
     path: '/',
     redirect: '/zh/index'
   },
-  {
-    // 首页
-    path: '/zh/index',
-    name: 'VUE BAIDU MAP',
-    component: () => import('./md/zh/index.md'),
-    meta: {
-      hidden: true,
-      lang: 'zh'
-    }
-  },
-  {
-    // 开始
-    path: '/zh/start',
-    component: CateView,
-    name: '开始',
-    meta: {
-      lang: 'zh'
-    },
-    children: [
-      {
-        path: 'installation',
-        component: () => import('./md/zh/start-installation.md'),
-        name: '安装',
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'usage',
-        component: () => import('./md/zh/start-usage.md'),
-        name: '快速上手',
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'base',
-        component: () => import('./md/zh/start-base.md'),
-        name: '基础',
-        meta: {
-          lang: 'zh'
-        }
-      }
-    ]
-  },
-  {
-    path: '/zh/map',
-    name: '地图',
-    component: CateView,
-    meta: {
-      lang: 'zh'
-    },
-    children: [
-      {
-        path: 'baidu-map',
-        component: () => import('./md/zh/baidu-map.md'),
-        name: '地图容器',
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'bm-view',
-        component: () => import('./md/zh/bm-view.md'),
-        name: '地图视图',
-        meta: {
-          lang: 'zh'
-        }
-      }
-    ]
-  },
-  {
-    path: '/zh/control',
-    name: '控件',
-    component: CateView,
-    meta: {
-      lang: 'zh'
-    },
-    children: [
-      {
-        path: 'scale',
-        component: () => import('./md/zh/bm-scale.md'),
-        name: '比例尺',
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'navigation',
-        component: () => import('./md/zh/bm-navigation.md'),
-        name: '缩放',
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'map-type',
-        component: () => import('./md/zh/bm-map-type.md'),
-        name: '地图类型',
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'overview-map',
-        component: () => import('./md/zh/bm-overview-map.md'),
-        name: '缩略图',
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'geolocation',
-        component: () => import('./md/zh/bm-geolocation.md'),
-        name: '定位',
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'copyright',
-        component: () => import('./md/zh/bm-copyright.md'),
-        name: '版权',
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'city-list',
-        component: () => import('./md/zh/bm-city-list.md'),
-        name: '城市列表',
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'panorama',
-        component: () => import('./md/zh/bm-panorama.md'),
-        name: '全景',
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'control',
-        component: () => import('./md/zh/bm-control.md'),
-        name: '自定义控件',
-        meta: {
-          lang: 'zh'
-        }
-      }
-    ]
-  },
-  {
-    path: '/zh/overlay',
-    name: '覆盖物',
-    component: CateView,
-    meta: {
-      lang: 'zh'
-    },
-    children: [
-      {
-        path: 'marker',
-        name: '点',
-        component: () => import('./md/zh/bm-marker.md'),
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'polyline',
-        name: '折线',
-        component: () => import('./md/zh/bm-polyline.md'),
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'polygon',
-        name: '多边形',
-        component: () => import('./md/zh/bm-polygon.md'),
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'circle',
-        name: '圆形',
-        component: () => import('./md/zh/bm-circle.md'),
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'ground',
-        name: '地面',
-        component: () => import('./md/zh/bm-ground.md'),
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'label',
-        name: '标签',
-        component: () => import('./md/zh/bm-label.md'),
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'info-window',
-        name: '信息窗体',
-        component: () => import('./md/zh/bm-info-window.md'),
-        meta: {
-          lang: 'zh'
-        }
-      }
-    ]
-  },
-  {
-    path: '/zh/layer',
-    name: '图层',
-    component: CateView,
-    meta: {
-      lang: 'zh'
-    },
-    children: [
-      {
-        path: 'tile',
-        component: () => import('./md/zh/bm-tile.md'),
-        name: '瓦片图层',
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'traffic',
-        component: () => import('./md/zh/bm-traffic.md'),
-        name: '交通流量图层',
-        meta: {
-          lang: 'zh'
-        }
-      }
-    ]
-  },
-  {
-    path: '/zh/search',
-    name: '检索',
-    component: CateView,
-    meta: {
-      lang: 'zh'
-    },
-    children: [
-      {
-        path: 'local-search',
-        name: '地区检索',
-        component: () => import('./md/zh/bm-local-search.md'),
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'transit',
-        name: '公交路线规划',
-        component: () => import('./md/zh/bm-transit.md'),
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'walking',
-        name: '步行路线规划',
-        component: () => import('./md/zh/bm-walking.md'),
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'driving',
-        name: '驾车路线规划',
-        component: () => import('./md/zh/bm-driving.md'),
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'bus',
-        name: '公交路线检索',
-        component: () => import('./md/zh/bm-bus.md'),
-        meta: {
-          lang: 'zh'
-        }
-      }
-    ]
-  },
-  {
-    path: '/zh/context-menu',
-    name: '菜单',
-    component: CateView,
-    meta: {
-      lang: 'zh'
-    },
-    children: [
-      {
-        path: 'menu',
-        name: '上下文菜单',
-        component: () => import('./md/zh/bm-context-menu.md'),
-        meta: {
-          lang: 'zh'
-        }
-      },
-      {
-        path: 'item',
-        name: '菜单项',
-        component: () => import('./md/zh/bm-context-menu-item.md'),
-        meta: {
-          lang: 'zh'
-        }
-      }
-    ]
-  },
-  {
-    path: '/zh/other',
-    name: '其它',
-    component: CateView,
-    meta: {
-      lang: 'zh'
-    },
-    children: [
-      {
-        path: 'menu',
-        name: '行政区划',
-        component: () => import('./md/zh/bm-boundary.md'),
-        meta: {
-          lang: 'zh'
-        }
-      }
-    ]
-  },
-  {
-    // 英文首页
-    path: '/en/index',
-    name: 'VUE BAIDU MAP',
-    component: () => import('./md/en/index.md'),
-    meta: {
-      hidden: true,
-      lang: 'en'
-    }
-  },
-  {
-    // 开始
-    path: '/en/start',
-    component: CateView,
-    name: 'Get Start',
-    meta: {
-      lang: 'en'
-    },
-    children: [
-      {
-        path: 'installation',
-        component: () => import('./md/en/start-installation.md'),
-        name: 'Installation',
-        meta: {
-          lang: 'en'
-        }
-      },
-      {
-        path: 'usage',
-        component: () => import('./md/en/start-usage.md'),
-        name: 'Usage',
-        meta: {
-          lang: 'en'
-        }
-      },
-      {
-        path: 'base',
-        component: () => import('./md/en/start-base.md'),
-        name: 'Base',
-        meta: {
-          lang: 'en'
-        }
-      }
-    ]
-  },
-  {
-    path: '/en/map',
-    name: 'Map',
-    component: CateView,
-    meta: {
-      lang: 'en'
-    },
-    children: [
-      {
-        path: 'baidu-map',
-        component: () => import('./md/en/baidu-map.md'),
-        name: 'Map Container',
-        meta: {
-          lang: 'en'
-        }
-      },
-      {
-        path: 'bm-view',
-        component: () => import('./md/en/bm-view.md'),
-        name: 'Map View',
-        meta: {
-          lang: 'en'
-        }
-      }
-    ]
-  }
+  ...genRouteMap(routeMap, 'zh'),
+  ...genRouteMap(routeMap, 'en')
 ]
