@@ -86,8 +86,8 @@ export default {
     icon: {
       deep: true,
       handler (val) {
-        const {BMap} = this
-        this.originInstance.setIcon(createIcon(BMap, val))
+        const {BMap, originInstance} = this
+        originInstance && originInstance.setIcon(createIcon(BMap, val))
       }
     },
     massClear (val) {
