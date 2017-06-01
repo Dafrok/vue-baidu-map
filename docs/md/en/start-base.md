@@ -167,6 +167,7 @@ Describes an icon.
   opts: {
     anchor: Size,
     imageOffset: Size,
+    imageSize: Size,
     infoWindowAnchor: Size,
     printImageUrl: String
   }

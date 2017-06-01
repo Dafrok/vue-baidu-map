@@ -22,6 +22,7 @@ export function createIcon (BMap, options = {}) {
   const {url, size, opts = {}} = options
   return new BMap.Icon(url, createSize(BMap, size), {
     anchor: opts.anchor && createSize(BMap, opts.anchor),
+    imageSize: opts.imageSize && createSize(BMap, opts.imageSize),
     imageOffset: opts.imageOffset && createSize(BMap, opts.imageOffset),
     infoWindowAnchor: opts.infoWindowAnchor && createSize(BMap, opts.infoWindowAnchor),
     printImageUrl: opts.printImageUrl
