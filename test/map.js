@@ -31,13 +31,4 @@ describe('Map', () => {
       }
     })
   })
-
-  // it('render map with bm-view component', done => {
-  //   const App = createApp()
-  //   App.$on('ready', ({BMap, map}) => {
-  //     expect(map.loaded).equal(true)
-  //     expect(BMap).equal(global.BMap)
-  //     done()
-  //   })
-  // })
 })

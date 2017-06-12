@@ -5,7 +5,7 @@ branches:
   only: master
 script:
   - npm run lint
-  - npm test
+  # - npm test
   - npm run build:docs
 after_script:
   - cp ./docs/favicon.png ./dist/
