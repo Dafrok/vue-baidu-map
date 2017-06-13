@@ -6,8 +6,8 @@
 
 |属性名|类型|默认值|描述|
 |------|:---:|:---:|----|
-|anchor|ControlAnchor|undefined|控件停靠位置|
-|offset|Size|undefined|控件偏移值|
+|anchor|ControlAnchor||控件停靠位置|
+|offset|Size||控件偏移值|
 
 ## 事件
 |事件名|参数|描述|

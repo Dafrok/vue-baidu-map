@@ -5,9 +5,9 @@
 
 |属性名|类型|默认值|描述|
 |------|:---:|:---:|----|
-|anchor|ControlAnchor|undefined|控件停靠位置|
-|offset|Size|undefined|控件偏移值|
-|copyright|Array|undefined|版权信息列表|
+|anchor|ControlAnchor||控件停靠位置|
+|offset|Size||控件偏移值|
+|copyright|Array||版权信息列表|
 
 ## 示例
 

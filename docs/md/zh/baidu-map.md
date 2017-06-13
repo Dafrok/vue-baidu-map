@@ -9,11 +9,11 @@
 
 |属性名|类型|默认值|描述|
 |------|:----:|:---:|---|
-|ak|String|undefined|百度地图开发者平台申请的密钥，仅在局部注册组件时声明。|
-|center|Point, String|undefined|定位, 可使用如“广州市海珠区”的地区字符串，也可以使用对象如 {lng: 116.404, lat: 39.915} 表示经纬度|
-|zoom|Number|undefined|缩放等级|
-|min-zoom|Number|undefined|最小缩放级别|
-|max-zoom|Number|undefined|最大缩放级别|
+|ak|String||百度地图开发者平台申请的密钥，仅在局部注册组件时声明。|
+|center|Point, String||定位, 可使用如“广州市海珠区”的地区字符串，也可以使用对象如 {lng: 116.404, lat: 39.915} 表示经纬度|
+|zoom|Number||缩放等级|
+|min-zoom|Number||最小缩放级别|
+|max-zoom|Number||最大缩放级别|
 |high-resolution|Boolean|true|高分屏模式 该项仅在地图组件挂载时加载一次|
 |map-click|Boolean|true|允许点击 该项仅在地图组件挂载时加载一次|
 |map-type|Number|global.BMAP_NORMAL_MAP|地图类型|
@@ -25,7 +25,7 @@
 |continuous-zoom|Boolean|false|允许无级缩放|
 |pinch-to-zoom|Boolean|true|允许双指缩放|
 |auto-resize|Boolean|true|允许自适应容器尺寸|
-|theme|Array|undefined|自定义主题|
+|theme|Array||自定义主题|
 
 ## 事件
 |事件名|参数|描述|

@@ -6,9 +6,9 @@
 
 |属性名|类型|默认值|描述|
 |------|:---:|:---:|----|
-|anchor|ControlAnchor|undefined|控件停靠位置|
-|offset|Size|undefined|控件偏移值|
-|size|Size|undefined|缩略地图控件的大小|
+|anchor|ControlAnchor||控件停靠位置|
+|offset|Size||控件偏移值|
+|size|Size||缩略地图控件的大小|
 |isOpen|Boolean|false|缩略地图添加到地图后的开合状态|
 
 ## 事件

@@ -8,16 +8,16 @@
 
 |属性名|类型 |默认值|描述|
 |------|:---:|:----:|----|
-|location|String, Point, None|undefined|location表示检索区域，其类型可为空、坐标点或城市名称的字符串。当参数为空时，检索位置由当前地图中心点确定，且搜索结果的标注将自动加载到地图上，并支持调整地图视野层级；当参数为坐标时，检索位置由该点所在位置确定；当参数为城市名称时，检索会在该城市内进行。|
-|bounds|Bounds|undefined|限定检索的矩形区域。如果区域超出当前 location，将不会产生检索结果。当与 nearby 属性同时，以 nearby 的查询结果为准。|
-|nearby|{center: Point, radius: Number}|undefined|限定检索的圆形区域，参数为由圆心和半径组成的对象。如果区域超出当前 location，将不会产生检索结果。当与 bounds 属性同时，以 nearby 的查询结果为准。|
-|keyword|String, Array|undefined|搜索关键字。当keyword为数组时将同时执行多关键字的查询，最多支持10个关键字。|
-|forceLocal|Boolean|undefined|表示是否将搜索范围约束在当前城市|
-|customData|CustomData|undefined|表示检索lbs云服务的数据|
+|location|String, Point, None||location表示检索区域，其类型可为空、坐标点或城市名称的字符串。当参数为空时，检索位置由当前地图中心点确定，且搜索结果的标注将自动加载到地图上，并支持调整地图视野层级；当参数为坐标时，检索位置由该点所在位置确定；当参数为城市名称时，检索会在该城市内进行。|
+|bounds|Bounds||限定检索的矩形区域。如果区域超出当前 location，将不会产生检索结果。当与 nearby 属性同时，以 nearby 的查询结果为准。|
+|nearby|{center: Point, radius: Number}||限定检索的圆形区域，参数为由圆心和半径组成的对象。如果区域超出当前 location，将不会产生检索结果。当与 bounds 属性同时，以 nearby 的查询结果为准。|
+|keyword|String, Array||搜索关键字。当keyword为数组时将同时执行多关键字的查询，最多支持10个关键字。|
+|forceLocal|Boolean||表示是否将搜索范围约束在当前城市|
+|customData|CustomData||表示检索lbs云服务的数据|
 |panel|Boolean|true|是否选展现检索结果面板。|
-|pageCapacity|Number|undefined|设置每页容量，取值范围：1 - 100，对于多关键字检索，每页容量表示每个关键字返回结果的数量（例如当用2个关键字检索时，实际结果数量范围为：2 - 200）。此值只对下一次检索有效|
-|autoViewport|Boolean|undefined|检索结束后是否自动调整地图视野。|
-|selectFirstResult|Boolean|undefined|是否选择第一个检索结果。|
+|pageCapacity|Number||设置每页容量，取值范围：1 - 100，对于多关键字检索，每页容量表示每个关键字返回结果的数量（例如当用2个关键字检索时，实际结果数量范围为：2 - 200）。此值只对下一次检索有效|
+|autoViewport|Boolean||检索结束后是否自动调整地图视野。|
+|selectFirstResult|Boolean||是否选择第一个检索结果。|
 
 ## 事件
 

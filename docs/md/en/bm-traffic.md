@@ -6,7 +6,7 @@
 
 |name|type|default|description|
 |------|:---:|:---:|----|
-|predictDate|PredictDate|undefined|Predict date of traffic.|
+|predictDate|PredictDate||Predict date of traffic.|
 
 ## Examples
 

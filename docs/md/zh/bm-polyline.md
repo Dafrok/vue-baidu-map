@@ -9,9 +9,9 @@
 |属性名|类型|默认值|描述|
 |------|:---:|:---:|----|
 |path|Array[Point]|[]|构成折线的点|
-|strokeColor|String|undefined|折线颜色|
-|strokeWeight|Number|undefined|折线的宽度，以像素为单位|
-|strokeOpacity|Number|undefined|折线的透明度，取值范围0 - 1|
+|strokeColor|String||折线颜色|
+|strokeWeight|Number||折线的宽度，以像素为单位|
+|strokeOpacity|Number||折线的透明度，取值范围0 - 1|
 |strokeStyle|String|'solid'|折线的样式，solid或dashed|
 |enableMassClear|Boolean|true|是否在调用map.clearOverlays清除此覆盖物|
 |enableEditing|Boolean|false|是否启用线编辑|

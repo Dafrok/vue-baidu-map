@@ -6,7 +6,7 @@
 
 |属性名|类型|默认值|描述|
 |------|:---:|:---:|----|
-|predictDate|PredictDate|undefined|预测日期|
+|predictDate|PredictDate||预测日期|
 
 ## 示例
 

@@ -8,11 +8,11 @@
 
 |属性名|类型|默认值|描述|
 |------|:---:|:---:|----|
-|bounds|Bounds|undefined|地面覆盖区域|
-|opacity|Number|undefined|图层透明度|
-|imageURL|String|undefined|图层地址|
-|displayOnMinLevel|Number|undefined|图层显示的最小级别|
-|displayOnMaxLevel|Number|undefined|图层显示的最大级别|
+|bounds|Bounds||地面覆盖区域|
+|opacity|Number||图层透明度|
+|imageURL|String||图层地址|
+|displayOnMinLevel|Number||图层显示的最小级别|
+|displayOnMaxLevel|Number||图层显示的最大级别|
 
 
 ## 事件

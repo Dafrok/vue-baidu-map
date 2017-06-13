@@ -8,7 +8,7 @@
 
 |name|type|default|description|
 |------|:---:|:---:|----|
-|width|Number|undefined|Menu width.|
+|width|Number||Menu width.|
 
 ## Events
 

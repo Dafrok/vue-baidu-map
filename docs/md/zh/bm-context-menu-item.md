@@ -9,8 +9,8 @@
 |属性名|类型|默认值|描述|
 |------|:---:|:---:|----|
 |callback|Function|new Function|点击菜单时执行的回调函数，第一个参数为 {BMap, map, target, pixel, point}|
-|text|String|undefined|指定此菜单项的文本|
-|iconUrl|String|undefined|指定此菜单项的icon URL（大小为17px*17px）|
+|text|String||指定此菜单项的文本|
+|iconUrl|String||指定此菜单项的icon URL（大小为17px*17px）|
 |disabled|Boolean|false|是否禁用菜单项|
 |seperator|Boolean|false|是否是分隔线（此属性为真时，其它属性会被忽略）|
 
