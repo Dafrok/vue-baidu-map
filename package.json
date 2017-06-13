@@ -43,6 +43,7 @@
     "bulma": "^0.3.0",
     "chai": "^4.0.2",
     "css-loader": "^0.26.1",
+    "electron-stream": "^5.0.4",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-loader": "^1.7.1",
