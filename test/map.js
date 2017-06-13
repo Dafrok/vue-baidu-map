@@ -17,7 +17,7 @@ describe('Map', () => {
         }
       }
     })
-  })
+  }).timeout(5000)
 
   it('load map component with ak', done => {
     createApp({
@@ -30,5 +30,5 @@ describe('Map', () => {
         }
       }
     })
-  })
+  }).timeout(5000)
 })
