@@ -182,9 +182,9 @@ export default {
         :scroll-wheel-zoom="true"
         :center="center"
         :zoom="zoom"
-        @moving="syncCenter"
-        @moveend="syncCenter"
-        @zoomend="syncZoom">
+        @moving="syncCenterAndZoom"
+        @moveend="syncCenterAndZoom"
+        @zoomend="syncCenterAndZoom">
     </baidu-map>
   <div>
 </template>
@@ -201,12 +201,10 @@ export default {
     }
   },
   methods: {
-    syncCenter (e) {
+    syncCenterAndZoom (e) {
       const {lng, lat} = e.target.getCenter()
       this.center.lng = lng
       this.center.lat = lat
-    },
-    syncZoom (e) {
       this.zoom = e.target.getZoom()
     }
   }
@@ -216,7 +214,7 @@ export default {
 
 #### Preview
 <doc-preview>
-  <baidu-map class="map" :scroll-wheel-zoom="true" :center="center" :zoom="zoom" @moving="syncCenter" @moveend="syncCenter" @zoomend="syncZoom">
+  <baidu-map class="map" :scroll-wheel-zoom="true" :center="center" :zoom="zoom" @moving="syncCenterAndZoom" @moveend="syncCenterAndZoom" @zoomend="syncCenterAndZoom">
   </baidu-map>
   <div class="toolbar">
     <table>
@@ -267,12 +265,10 @@ export default {
     }
   },
   methods: {
-    syncCenter (e) {
+     syncCenterAndZoom (e) {
       const {lng, lat} = e.target.getCenter()
       this.center.lng = lng
       this.center.lat = lat
-    },
-    syncZoom (e) {
       this.zoom = e.target.getZoom()
     }
   }
