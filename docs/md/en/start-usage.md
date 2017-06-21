@@ -109,6 +109,6 @@ export default {
 ## Preview
 
 <doc-preview>
-  <baidu-map class="map">
+  <baidu-map class="map" center="北京" :zoom="15">
   </baidu-map>
 </doc-preview>
