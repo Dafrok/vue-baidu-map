@@ -12,7 +12,7 @@ module.exports = function(config) {
     ],
     preprocessors: {
       'test/map.js': ['webpack'],
-      'src/index.js': ['coverage']
+      '*.js': ['coverage']
     },
     plugins: [
       'karma-mocha',
