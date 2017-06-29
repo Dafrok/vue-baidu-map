@@ -23,15 +23,16 @@ export default {
   },
   methods: {
     load () {
-      const {BMap, map, _instance} = this
+      const {BMap, map} = this
+      const self = this
       this.originInstance = new BMap.CityListControl({
         anchor: global[this.anchor],
         offset: this.offset,
         onChangeBefore () {
-          _instance.$emit('changeBefore')
+          self.$emit('changeBefore')
         },
         onChangeAfter () {
-          _instance.$emit('changeAfter')
+          self.$emit('changeAfter')
         }
       })
       map.addControl(this.originInstance)
