@@ -18,7 +18,7 @@ export default {
     load () {
       const {BMap, map, anchor, offset} = this
       this.originInstance = new BMap.PanoramaControl({
-        anchor: global[this.anchor],
+        anchor: global[anchor],
         offset
       })
       map.addControl(this.originInstance)
