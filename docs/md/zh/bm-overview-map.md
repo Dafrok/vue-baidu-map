@@ -26,7 +26,7 @@
 ```html
 <template>
   <baidu-map class="map">
-    <bm-overview-map anchor="BMAP_ANCHOR_BOTTOM_RIGHT"></bm-overview-map>
+    <bm-overview-map anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :isOpen="true"></bm-overview-map>
   </baidu-map>
 </template>
 ```
@@ -34,6 +34,6 @@
 #### 预览
 <doc-preview>
   <baidu-map class="map">
-    <bm-overview-map anchor="BMAP_ANCHOR_BOTTOM_RIGHT"></bm-overview-map>
+    <bm-overview-map anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :isOpen="true"></bm-overview-map>
   </baidu-map>
 </doc-preview>
