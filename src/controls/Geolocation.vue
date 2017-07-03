@@ -42,12 +42,12 @@ export default {
   },
   methods: {
     load () {
-      const {BMap, map} = this
+      const {BMap, map, anchor, showAddressBar, autoLocation, locationIcon} = this
       this.originInstance = new BMap.GeolocationControl({
-        anchor: global[this.anchor],
-        showAddressBar: this.showAddressBar,
-        enableAutoLocation: this.autoLocation,
-        locationIcon: this.locationIcon
+        anchor: global[anchor],
+        showAddressBar,
+        enableAutoLocation: autoLocation,
+        locationIcon
       })
       bindEvents.call(this, this.originInstance)
       map.addControl(this.originInstance)

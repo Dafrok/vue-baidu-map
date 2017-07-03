@@ -22,16 +22,14 @@ export default {
   },
   methods: {
     load () {
-      const {BMap, map} = this
+      const {BMap, map, anchor, offset, type} = this
       const mapTypes = []
-      this.mapTypes && this.mapTypes.forEach(item => {
-        mapTypes.push(global[item])
-      })
+      this.mapTypes && this.mapTypes.forEach(item => mapTypes.push(global[item]))
       this.originInstance = new BMap.MapTypeControl({
-        anchor: global[this.anchor],
-        offset: this.offset,
-        type: global[this.type],
-        mapTypes: mapTypes
+        anchor: global[anchor],
+        offset,
+        type: global[type],
+        mapTypes
       })
       map.addControl(this.originInstance)
     }

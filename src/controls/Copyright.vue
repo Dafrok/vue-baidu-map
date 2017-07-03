@@ -19,12 +19,12 @@ export default {
   },
   methods: {
     load () {
-      const {BMap, map} = this
+      const {BMap, map, offset, anchor, updateCopyrightList} = this
       this.originInstance = new BMap.CopyrightControl({
-        anchor: global[this.anchor],
-        offset: this.offset
+        anchor: global[anchor],
+        offset
       })
-      this.updateCopyrightList()
+      updateCopyrightList()
       map.addControl(this.originInstance)
     },
     updateCopyrightList () {

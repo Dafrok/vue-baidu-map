@@ -39,13 +39,13 @@ export default {
   },
   methods: {
     load () {
-      const {BMap, map} = this
+      const {BMap, map, anchor, offset, type, showZoomInfo, enableGeolocation} = this
       this.originInstance = new BMap.NavigationControl({
-        anchor: global[this.anchor],
-        offset: this.offset,
-        type: this.type,
-        showZoomInfo: this.showZoomInfo,
-        enableGeolocation: this.enableGeolocation
+        anchor: global[anchor],
+        offset,
+        type,
+        showZoomInfo,
+        enableGeolocation
       })
       map.addControl(this.originInstance)
     }

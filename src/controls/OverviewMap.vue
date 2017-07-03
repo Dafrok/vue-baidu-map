@@ -1,4 +1,5 @@
 <script>
+import {createSize} from '@/base/factory.js'
 import commonMixin from '@/base/mixins/common.js'
 import bindEvents from '@/base/bindEvent.js'
 
@@ -36,16 +37,16 @@ export default {
   },
   methods: {
     load () {
-      const {BMap, map} = this
+      const {BMap, map, isOpen, size, offset, anchor} = this
       const mapTypes = []
       this.mapTypes && this.mapTypes.forEach(item => {
         mapTypes.push(global[item])
       })
       this.originInstance = new BMap.OverviewMapControl({
-        anchor: global[this.anchor],
-        offset: this.offset,
-        size: this.size,
-        isOpen: this.isOpen
+        anchor: global[anchor],
+        offset,
+        size: createSize(BMap, size),
+        isOpen
       })
       bindEvents.call(this, this.originInstance)
       map.addControl(this.originInstance)

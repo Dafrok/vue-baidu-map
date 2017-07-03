@@ -23,11 +23,11 @@ export default {
   },
   methods: {
     load () {
-      const {BMap, map} = this
+      const {BMap, map, anchor, offset} = this
       const self = this
       this.originInstance = new BMap.CityListControl({
-        anchor: global[this.anchor],
-        offset: this.offset,
+        anchor: global[anchor],
+        offset,
         onChangeBefore () {
           self.$emit('changeBefore')
         },

@@ -23,10 +23,10 @@ export default {
   },
   methods: {
     load () {
-      const {BMap, map} = this
+      const {BMap, map, anchor, offset} = this
       this.originInstance = new BMap.ScaleControl({
-        anchor: global[this.anchor],
-        offset: this.offset
+        anchor: global[anchor],
+        offset
       })
       map.addControl(this.originInstance)
     }
