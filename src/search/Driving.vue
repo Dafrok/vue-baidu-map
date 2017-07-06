@@ -138,7 +138,7 @@ export default {
           autoViewport,
           highlightMode
         },
-        policy: policy,
+        policy: global[policy],
         onSearchComplete (e) {
           instance.$emit('searchcomplete', e)
         },

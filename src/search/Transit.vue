@@ -96,8 +96,8 @@ export default {
           autoViewport,
           highlightMode
         },
-        policy: policy,
-        pageCapacity: pageCapacity,
+        policy: global[policy],
+        pageCapacity,
         onSearchComplete (e) {
           instance.$emit('searchcomplete', e)
         },
