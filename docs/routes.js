@@ -354,6 +354,14 @@ const routeMap = [
           en: 'Boundary'
         },
         component: 'bm-boundary'
+      },
+      {
+        path: 'auto-complete',
+        name: {
+          zh: '自动填充',
+          en: 'Auto Complete'
+        },
+        component: 'bm-auto-complete'
       }
     ]
   }

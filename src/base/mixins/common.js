@@ -39,8 +39,14 @@ class Mixin {
       unload () {
         const {map, originInstance} = this
         try {
-          prop.type === 'search' && originInstance.clearResults()
-          map[types[prop.type].unload](originInstance)
+          switch (prop.type) {
+            case 'search':
+              return originInstance.clearResults()
+            case 'autoComplete':
+              return originInstance.dispose()
+            default:
+              map[types[prop.type].unload](originInstance)
+          }
         } catch (e) {}
       }
     }

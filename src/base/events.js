@@ -107,5 +107,9 @@ export default {
   'bm-ground': [
     'click',
     'dblclick'
+  ],
+  'bm-auto-complete': [
+    'onconfirm',
+    'onhighlight'
   ]
 }

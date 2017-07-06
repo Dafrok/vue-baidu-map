@@ -30,8 +30,6 @@
 |restore|event{type, target}|信息窗口还原时触发此事件|
 |clickclose|event{type, target}|点击信息窗口的关闭按钮时触发此事件|
 
-
-
 ## 示例
 
 ### 在地图中添加一个信息窗体

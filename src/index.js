@@ -26,6 +26,7 @@ import BmBus from './search/Bus.vue'
 import BmTile from './layers/Tile.vue'
 import BmTraffic from './layers/Traffic.vue'
 import BmBoundary from './others/Boundary.vue'
+import BmAutoComplete from './others/AutoComplete.vue'
 
 export default {
   install (Vue, options) {
@@ -65,6 +66,7 @@ export default {
     Vue.component('bm-tile', BmTile)
     Vue.component('bm-traffic', BmTraffic)
 
+    Vue.component('bm-auto-complete', BmAutoComplete)
     Vue.component('bm-boundary', BmBoundary)
   }
 }
@@ -76,5 +78,5 @@ export {
   BmContextMenu, BmContextMenuItem,
   BmLocalSearch, BmTransit, BmWalking, BmDriving, BmBus,
   BmTile, BmTraffic,
-  BmBoundary
+  BmBoundary, BmAutoComplete
 }
