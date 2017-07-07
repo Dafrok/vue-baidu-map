@@ -40,6 +40,13 @@ export default {
         location: location || map,
         onSearchComplete: e => this.$emit('searchcomplete', e)
       })
+
+      // Support v-model
+      this.originInstance.addEventListener('onconfirm', e => {
+        const val = e.item.value
+        this.$emit('input', val.province + val.city + val.district + val.street + val.business)
+      })
+
       bindEvents.call(this, this.originInstance)
     }
   }
