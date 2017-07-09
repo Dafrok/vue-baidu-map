@@ -1,9 +1,15 @@
 <template lang="md">
 
-# 自动填充
+# 自动填充（不推荐）
 
-`BmAutoComplete` 默认渲染一个 `input` 元素。你可以在该组件的 slot 中定义自己的表单组件来替代它。\
-如果您对检索框有更高级的 UI 定制需求，推荐使用 [百度地图 Web API](http://lbsyun.baidu.com/index.php?title=webapi/guide/webservice-placeapi) 进行查询，将返回的数据配合您自定义的 UI 组件进行开发。
+`BmAutoComplete` 组件默认渲染一个 `input` 元素。你可以在该组件的 slot 中定义自己的表单组件来替代它。
+
+## 注意事项
+
+1. AutoComplete 类是一个百度地图 JS API 官方 **不推荐** 使用的核心类，因为它的定制性较差。
+2. 如果您对检索框有高级的 UI 定制需求，官方 **推荐** 使用 [百度地图 Web API](http://lbsyun.baidu.com/index.php?title=webapi/guide/webservice-placeapi) 进行查询，将返回的数据配合您自定义的 UI 组件进行开发。
+3. 自动填充组件弹出的检索框有时会被其它层覆盖，此时需要手动 CSS 类 `.tangram-suggestion-main`，并指定 `z-index` 属性加以调整。
+4. 此组件可能在 1.0.0 版本中移除，并在其它组件库中使用更好的方式实现。
 
 ## 属性
 
@@ -20,44 +26,59 @@
 |searchcomplete|AutocompleteResult|在input框中输入字符后，发起列表检索，完成后的回调函数。|
 |confirm|{type,target,item}|回车选中某条记录后触发 item : { index : 1 /*高亮的记录，所属返回结果的index*/ ,value : {}/*结果数据，见AutocompleteResultPoi*/ }|
 |highlight|{type,target,fromitem,toitem}|键盘或者鼠标移动，某条记录高亮之后，触发 fromitem: { /*上一条记录的信息*/ index : 2 /*高亮的记录，所属返回结果的index*/ ,value : {}/*结果数据，见AutocompleteResultPoi*/ }, toitem : {/*当前记录的信息，与fromitem结构一致*/}|
-|sugZIndex|
+
+## CSS 钩子
+
+|类名|描述|
+|---|---|
+|tangram-suggestion-main|检索框的 CSS 类|
 
 ## 示例
 
-### 为地图设置一个自动填充的检索框
+### 自定义控件、自动填充、本地检索组件的配合使用
 
 #### 代码
 
 ```html
-<baidu-map class="map" :center="{lng: 116.403765, lat: 39.914850}" :zoom="11">
+<baidu-map :center="{lng: 116.403765, lat: 39.914850}" :zoom="11">
+  <bm-view class="map"></bm-view>
+  <bm-control :offset="{width: '10px', height: '10px'}">
+    <bm-auto-complete v-model="keyword">
+      <search-box placeholder="请输入地名关键字"></search-field> <!-- 这里指代一个自定义搜索框组件 -->
+    </bm-auto-complete>
+  </bm-control>
+  <bm-local-search :keyword="keyword" :auto-viewport="true" ></bm-local-search>
 </baidu-map>
+
+<script>
+export default {
+  data () {
+    return {
+      keyword: ''
+    }
+  }
+}
+</script>
+
+<style>
+.tangram-suggestion-main {
+  z-index: 1;
+}
+</style>
 ```
 
 #### 预览
 
 <doc-preview>
-  <baidu-map :center="{lng: 116.403765, lat: 39.914850}" :zoom="11">
-  <div class="toolbar">
-    <table>
-      <thead>
-        <tr>
-          <th>关键词</th>
-        <tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <bm-auto-complete @confirm="confirm">
-              <text-field></text-field>
-            </bm-auto-complete>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-    <bm-view class="map"></bm-view>
-    <bm-local-search :keyword="keyword" :auto-viewport="true" ></bm-local-search>
-  </baidu-map>
+<baidu-map :center="{lng: 116.403765, lat: 39.914850}" :zoom="11">
+  <bm-view class="map"></bm-view>
+  <bm-control :offset="{width: '10px', height: '10px'}">
+    <bm-auto-complete v-model="keyword">
+      <text-field placeholder="请输入地名关键字"></text-field>
+    </bm-auto-complete>
+  </bm-control>
+  <bm-local-search :keyword="keyword" :auto-viewport="true" ></bm-local-search>
+</baidu-map>
 </doc-preview>
 </template>
 
@@ -67,12 +88,11 @@ export default {
     return {
       keyword: ''
     }
-  },
-  methods: {
-    confirm (e) {
-      const val = e.item.value
-      this.keyword = val.province +  val.city +  val.district +  val.street +  val.business;
-    }
   }
 }
 </script>
+
+<style lang="stylus">
+.tangram-suggestion-main
+  z-index 1
+</style>
