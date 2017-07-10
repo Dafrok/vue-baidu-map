@@ -119,9 +119,9 @@ export default {
     },
     load () {
       const instance = this
-      const {map, BMap, search, pageCapacity, autoViewport, selectFirstResult, highlightMode, location} = this
+      const {map, BMap, search, pageCapacity, autoViewport, selectFirstResult, highlightMode, location, originInstance} = this
       const _location = location ? isPoint(location) ? createPoint(BMap, location) : location : map
-      this.originInstance = new BMap.LocalSearch(_location, {
+      const route = this.originInstance = new BMap.LocalSearch(_location, {
         onMarkersSet (e) {
           instance.$emit('markersset', e)
         },
@@ -132,6 +132,9 @@ export default {
           instance.$emit('resultshtmlset', e)
         },
         onSearchComplete (e) {
+          if (originInstance && originInstance !== route) {
+            originInstance.clearResults()
+          }
           instance.$emit('searchcomplete', e)
         },
         pageCapacity: pageCapacity,

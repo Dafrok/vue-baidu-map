@@ -85,9 +85,9 @@ export default {
     },
     load () {
       const instance = this
-      const {map, BMap, location, policy, pageCapacity, selectFirstResult, autoViewport, highlightMode, search, start, end} = this
+      const {map, BMap, location, policy, pageCapacity, selectFirstResult, autoViewport, highlightMode, search, start, end, originInstance} = this
       const _location = location ? isPoint(location) ? createPoint(BMap, location) : location : map
-      this.originInstance = new BMap.TransitRoute(_location, {
+      const route = this.originInstance = new BMap.TransitRoute(_location, {
         renderOptions: {
           map,
           // panel: panel && this.$el,
@@ -99,6 +99,9 @@ export default {
         policy: global[policy],
         pageCapacity,
         onSearchComplete (e) {
+          if (originInstance && originInstance !== route) {
+            originInstance.clearResults()
+          }
           instance.$emit('searchcomplete', e)
         },
         onMarkersSet (e) {
