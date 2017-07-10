@@ -76,9 +76,9 @@ export default {
     },
     load () {
       const instance = this
-      const {map, BMap, location, selectFirstResult, autoViewport, highlightMode, search, start, end} = this
+      const {map, BMap, location, selectFirstResult, autoViewport, highlightMode, search, start, end, originInstance} = this
       const _location = location ? isPoint(location) ? createPoint(BMap, location) : location : map
-      this.originInstance = new BMap.WalkingRoute(_location, {
+      const route = this.originInstance = new BMap.WalkingRoute(_location, {
         renderOptions: {
           map,
           // panel: panel && this.$el,
@@ -88,6 +88,9 @@ export default {
           highlightMode
         },
         onSearchComplete (e) {
+          if (originInstance && originInstance !== route) {
+            originInstance.clearResults()
+          }
           instance.$emit('searchcomplete', e)
         },
         onMarkersSet (e) {

@@ -104,7 +104,7 @@ export default {
     //   this.reload()
     // },
     policy (val) {
-      this.originInstance.setPolicy(global[val])
+      this.reload()
     },
     autoViewport () {
       this.reload()
@@ -127,9 +127,9 @@ export default {
     },
     load () {
       const instance = this
-      const {map, BMap, location, policy, selectFirstResult, autoViewport, highlightMode, search, start, end, startCity, endCity, waypoints} = this
+      const {map, BMap, location, policy, selectFirstResult, autoViewport, highlightMode, search, start, end, startCity, endCity, waypoints, originInstance} = this
       const _location = location ? isPoint(location) ? createPoint(BMap, location) : location : map
-      this.originInstance = new BMap.DrivingRoute(_location, {
+      const route = this.originInstance = new BMap.DrivingRoute(_location, {
         renderOptions: {
           map,
           // panel: panel && this.$el,
@@ -140,6 +140,9 @@ export default {
         },
         policy: global[policy],
         onSearchComplete (e) {
+          if (originInstance && originInstance !== route) {
+            originInstance.clearResults()
+          }
           instance.$emit('searchcomplete', e)
         },
         onMarkersSet (e) {

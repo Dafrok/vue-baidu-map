@@ -59,9 +59,9 @@ export default {
     },
     load () {
       const instance = this
-      const {location, selectFirstResult, autoViewport, highlightMode, keyword, search, BMap, map} = this
+      const {location, selectFirstResult, autoViewport, highlightMode, keyword, search, BMap, map, originInstance} = this
       const _location = location ? isPoint(location) ? createPoint(BMap, location) : location : map
-      this.originInstance = new BMap.BusLineSearch(_location, {
+      const route = this.originInstance = new BMap.BusLineSearch(_location, {
         renderOptions: {
           map,
           panel: this.$el,
@@ -70,9 +70,15 @@ export default {
           highlightMode
         },
         onGetBusListComplete (e) {
+          if (originInstance && originInstance !== route) {
+            originInstance.clearResults()
+          }
           instance.$emit('getbuslistcomplete', e)
         },
         onGetBusLineComplete (e) {
+          if (originInstance && originInstance !== route) {
+            originInstance.clearResults()
+          }
           instance.$emit('getbuslinecomplete', e)
         },
         onBusListHtmlSet (e) {
