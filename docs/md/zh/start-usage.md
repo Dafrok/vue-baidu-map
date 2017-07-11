@@ -57,6 +57,16 @@ export default {
 </style>
 ```
 
+### CDN全局注册
+
+```html
+<script>
+Vue.use(VueBaiduMap.default, {
+  ak: 'YOUR_APP_KEY'
+})
+</script>
+```
+
 ## 常见问题
 
 - `BaiduMap` 组件容器本身是一个空的块级元素，如果容器不定义高度，百度地图将渲染在一个高度为 0 不可见的容器内。

@@ -57,6 +57,16 @@ export default {
 </style>
 ```
 
+### CDN Registration
+
+```html
+<script>
+Vue.use(VueBaiduMap.default, {
+  ak: 'YOUR_APP_KEY'
+})
+</script>
+```
+
 ## Q&A
 
 - `BaiduMap` component is an empty block level element. If it doesn't declare its height, the map view will be invisible.
