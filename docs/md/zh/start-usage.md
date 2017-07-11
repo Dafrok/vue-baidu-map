@@ -57,7 +57,7 @@ export default {
 </style>
 ```
 
-### CDN全局注册
+### CDN 全局注册
 
 ```html
 <script>
