@@ -109,8 +109,8 @@ export default {
   methods: {
     handler ({BMap, map}) {
       console.log(BMap, map)
-      this.lng = 116.404
-      this.lat = 39.915
+      this.center.lng = 116.404
+      this.center.lat = 39.915
     }
   }
 }
