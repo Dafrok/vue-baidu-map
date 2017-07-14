@@ -108,8 +108,8 @@ export default {
   },
   methods: {
     handler () {
-      this.lng = 116.404
-      this.lat = 39.915
+      this.center.lng = 116.404
+      this.center.lat = 39.915
     }
   }
 }
