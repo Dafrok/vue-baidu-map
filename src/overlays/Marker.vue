@@ -118,7 +118,7 @@ export default {
       this.reload()
     },
     animation (val) {
-      this.setAnimation(global[val])
+      this.originInstance.setAnimation(global[val])
     },
     top (val) {
       this.originInstance.setTop(val)
