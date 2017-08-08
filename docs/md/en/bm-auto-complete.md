@@ -44,7 +44,7 @@
   <bm-view class="map"></bm-view>
   <bm-control :offset="{width: '10px', height: '10px'}">
     <bm-auto-complete v-model="keyword">
-      <search-box placeholder="Keywords"></search-field> <!-- This is a custom search box component -->
+      <search-field placeholder="Keywords"></search-field> <!-- This is a custom search box component -->
     </bm-auto-complete>
   </bm-control>
   <bm-local-search :keyword="keyword" :auto-viewport="true" ></bm-local-search>

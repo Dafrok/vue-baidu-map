@@ -44,7 +44,7 @@
   <bm-view class="map"></bm-view>
   <bm-control :offset="{width: '10px', height: '10px'}">
     <bm-auto-complete v-model="keyword">
-      <search-box placeholder="请输入地名关键字"></search-field> <!-- 这里指代一个自定义搜索框组件 -->
+      <search-field placeholder="请输入地名关键字"></search-field> <!-- 这里指代一个自定义搜索框组件 -->
     </bm-auto-complete>
   </bm-control>
   <bm-local-search :keyword="keyword" :auto-viewport="true" ></bm-local-search>
