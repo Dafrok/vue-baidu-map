@@ -4,7 +4,7 @@ div(v-show="panel")
 
 <script>
 import {createPoint} from '@/base/factory.js'
-import {isPoint} from '@/base/util.js'
+import {isPoint, getPosition} from '@/base/util.js'
 import commonMixin from '@/base/mixins/common.js'
 
 export default {
@@ -48,14 +48,14 @@ export default {
     start: {
       handler (val) {
         const {originInstance, end, BMap} = this
-        originInstance.search(isPoint(val) ? createPoint(BMap, val) : val, end)
+        originInstance.search(getPosition(BMap, val), getPosition(BMap, end))
       },
       deep: true
     },
     end: {
       handler (val) {
         const {originInstance, start, BMap} = this
-        originInstance.search(start, isPoint(val) ? createPoint(BMap, val) : val)
+        originInstance.search(getPosition(BMap, start), getPosition(BMap, val))
       },
       deep: true
     },
