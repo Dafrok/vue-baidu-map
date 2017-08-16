@@ -1,11 +1,15 @@
+<template lang="pug">
+  div
+    slot
+</template>
 <script>
-import commonMixin from '@/base/mixins/common.js'
-import bindEvents from '@/base/bindEvent.js'
-import {createPoint} from '@/base/factory.js'
+import commonMixin from '../base/mixins/common.js'
+import bindEvents from '../base/bindEvent.js'
+import {createPoint} from '../base/factory.js'
 
 export default {
   name: 'bm-circle',
-  render () {},
+//  render () {},  render () {},
   mixins: [commonMixin('overlay')],
   props: {
     center: {
