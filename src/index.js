@@ -16,6 +16,7 @@ import BmCircle from './overlays/Circle.vue'
 import BmGround from './overlays/Ground.vue'
 import BmLabel from './overlays/Label.vue'
 import BmInfoWindow from './overlays/InfoWindow.vue'
+import FreeOverlay from './overlays/FreeOverlay.vue'
 import BmContextMenu from './context-menu/Menu.vue'
 import BmContextMenuItem from './context-menu/Item.vue'
 import BmLocalSearch from './search/LocalSearch.vue'
@@ -68,6 +69,7 @@ export default {
 
     Vue.component('bm-auto-complete', BmAutoComplete)
     Vue.component('bm-boundary', BmBoundary)
+    Vue.component('bm-free-overlay', FreeOverlay)
   }
 }
 
@@ -78,5 +80,5 @@ export {
   BmContextMenu, BmContextMenuItem,
   BmLocalSearch, BmTransit, BmWalking, BmDriving, BmBus,
   BmTile, BmTraffic,
-  BmBoundary, BmAutoComplete
+  BmBoundary, BmAutoComplete, FreeOverlay
 }
