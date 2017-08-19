@@ -234,6 +234,14 @@ const routeMap = [
           zh: '信息窗体',
           en: 'Info Window'
         }
+      },
+      {
+        path: 'overlay',
+        component: 'bm-overlay',
+        name: {
+          zh: '自定义覆盖物',
+          en: 'Custom Overlay'
+        }
       }
     ]
   },

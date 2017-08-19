@@ -32,4 +32,3 @@
     <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-navigation>
   </baidu-map>
 </doc-preview>
-  

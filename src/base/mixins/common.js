@@ -13,14 +13,15 @@ const types = {
   }
 }
 
-const getParent = $component => $component.abstract ? getParent($component.$parent) : $component
+const getParent = $component => ($component.abstract || $component.$el === $component.$children[0].$el) ? getParent($component.$parent) : $component
 
 class Mixin {
   constructor (prop) {
     this.methods = {
       ready () {
-        const BMap = this.BMap = this.$parent.BMap
-        const map = this.map = this.$parent.map
+        const $parent = getParent(this.$parent)
+        const BMap = this.BMap = $parent.BMap
+        const map = this.map = $parent.map
         this.load()
         this.$emit('ready', {
           BMap,
@@ -51,9 +52,10 @@ class Mixin {
       }
     }
     this.mounted = function () {
-      const map = getParent(this.$parent).map
+      const $parent = getParent(this.$parent)
+      const map = $parent.map
       const {ready} = this
-      map ? ready() : this.$parent.$on('ready', ready)
+      map ? ready() : $parent.$on('ready', ready)
     }
     this.beforeDestroy = function () {
       this.unload()

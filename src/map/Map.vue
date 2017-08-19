@@ -9,7 +9,7 @@ import bindEvents from '../base/bindEvent.js'
 import {checkType} from '@/base/util.js'
 
 export default {
-  name: 'bm-view',
+  name: 'bm-map',
   props: {
     ak: {
       type: String
