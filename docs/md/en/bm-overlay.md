@@ -24,6 +24,7 @@
 ```html
 <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
   <bm-overlay
+    pane="labelPane"
     :class="{sample: true, active}"
     @draw="draw"
     @mouseover.native="active = true"
@@ -74,6 +75,7 @@ export default {
 <doc-preview>
   <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
     <bm-overlay
+      pane="labelPane"
       :class="{sample: true, active}"
       @draw="draw"
       @mouseover.native="active = true"
