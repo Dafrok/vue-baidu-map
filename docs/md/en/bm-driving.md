@@ -31,7 +31,43 @@
 
 ## Examples
 
-### Search driving route planning on the map
+### Search driving route with three waypoints
+
+#### Code
+
+```html
+<template>
+  <baidu-map>
+    <bm-view class="map">
+    </bm-view>
+    <bm-driving
+      start="新街口"
+      end="新街口"
+      startCity="北京"
+      endCity="南京"
+      :auto-viewport="true"
+      :waypoints="['呼和浩特', {lng: 112.53, lat: 37.87}, '陕西兵马俑']"></bm-driving>
+  </baidu-map>
+</template>
+```
+
+#### Preview
+
+<doc-preview>
+<baidu-map>
+  <bm-view class="map">
+  </bm-view>
+  <bm-driving
+    start="新街口"
+    end="新街口"
+    startCity="北京"
+    endCity="南京"
+    :auto-viewport="true"
+    :waypoints="['呼和浩特', {lng: 112.53, lat: 37.87}, '陕西兵马俑']"></bm-driving>
+</baidu-map>
+</doc-preview>
+
+### Search driving route with different policies
 
 #### Code
 

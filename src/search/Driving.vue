@@ -53,56 +53,56 @@ export default {
     },
     start: {
       handler (val) {
-        const {originInstance, end, startCity, endCity, waypoints, BMap} = this
+        const {originInstance, end, startCity, endCity, waypoints, BMap, getWaypoints} = this
         originInstance.search(getPosition(BMap, val), getPosition(BMap, end), {
           startCity,
           endCity,
-          waypoints
+          waypoints: getWaypoints(waypoints)
         })
       },
       deep: true
     },
     end: {
       handler (val) {
-        const {originInstance, start, startCity, endCity, waypoints, BMap} = this
+        const {originInstance, start, startCity, endCity, waypoints, BMap, getWaypoints} = this
         originInstance.search(getPosition(BMap, start), getPosition(BMap, val), {
           startCity,
           endCity,
-          waypoints
+          waypoints: getWaypoints(waypoints)
         })
       },
       deep: true
     },
     startCity (val) {
-      const {originInstance, start, end, endCity, waypoints} = this
+      const {originInstance, start, end, endCity, waypoints, getWaypoints} = this
       originInstance.search(start, end, {
         val,
         endCity,
-        waypoints
+        waypoints: getWaypoints(waypoints)
       })
     },
     endCity (val) {
-      const {originInstance, start, end, startCity, waypoints} = this
+      const {originInstance, start, end, startCity, waypoints, getWaypoints} = this
       originInstance.search(start, end, {
         startCity,
         val,
-        waypoints
+        waypoints: getWaypoints(waypoints)
       })
     },
     waypoints: {
       handler (val) {
-        const {originInstance, start, end, startCity, endCity} = this
+        const {originInstance, start, end, startCity, endCity, getWaypoints} = this
         originInstance.search(start, end, {
           startCity,
           endCity,
-          val
+          waypoints: getWaypoints(val)
         })
       },
       deep: true
     },
-    // panel () {
-    //   this.reload()
-    // },
+    panel () {
+      this.reload()
+    },
     policy (val) {
       this.reload()
     },
@@ -118,16 +118,22 @@ export default {
   },
   methods: {
     search (start, end, {startCity, endCity, waypoints}) {
-      const {originInstance} = this
+      const {originInstance, getWaypoints} = this
       originInstance.search(start, end, {
         startCity,
         endCity,
-        waypoints
+        waypoints: getWaypoints(waypoints)
       })
+    },
+    getWaypoints (waypoints) {
+      const {BMap} = this
+      if (waypoints) {
+        return waypoints.map(position => getPosition(BMap, position))
+      }
     },
     load () {
       const instance = this
-      const {map, BMap, location, policy, selectFirstResult, autoViewport, highlightMode, search, start, end, startCity, endCity, waypoints, originInstance} = this
+      const {map, BMap, location, policy, selectFirstResult, autoViewport, highlightMode, search, start, end, startCity, endCity, waypoints, originInstance, getWaypoints} = this
       const _location = location ? isPoint(location) ? createPoint(BMap, location) : location : map
       const route = this.originInstance = new BMap.DrivingRoute(_location, {
         renderOptions: {
@@ -158,10 +164,10 @@ export default {
           instance.$emit('resultshtmlset', e)
         }
       })
-      search(isPoint(start) ? createPoint(BMap, start) : start, isPoint(end) ? createPoint(BMap, end) : end, {
+      search(getPosition(BMap, start), getPosition(BMap, end), {
         startCity,
         endCity,
-        waypoints
+        waypoints: getWaypoints(waypoints)
       })
     }
   }

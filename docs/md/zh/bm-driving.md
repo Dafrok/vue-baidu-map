@@ -31,7 +31,44 @@
 
 ## 示例
 
-### 查询北京新街口途径昭君墓和陕西兵马俑到达南京新街口的驾车路线规划
+
+### 查询北京新街口途径三点到达南京新街口的驾车路线规划
+
+#### 代码
+
+```html
+<template>
+  <baidu-map>
+    <bm-view class="map">
+    </bm-view>
+    <bm-driving
+      start="新街口"
+      end="新街口"
+      startCity="北京"
+      endCity="南京"
+      :auto-viewport="true"
+      :waypoints="['呼和浩特', {lng: 112.53, lat: 37.87}, '陕西兵马俑']"></bm-driving>
+  </baidu-map>
+</template>
+```
+
+#### 预览
+
+<doc-preview>
+<baidu-map>
+  <bm-view class="map">
+  </bm-view>
+  <bm-driving
+    start="新街口"
+    end="新街口"
+    startCity="北京"
+    endCity="南京"
+    :auto-viewport="true"
+    :waypoints="['呼和浩特', {lng: 112.53, lat: 37.87}, '陕西兵马俑']"></bm-driving>
+</baidu-map>
+</doc-preview>
+
+### 更换驾车策略
 
 #### 代码
 

@@ -56,9 +56,9 @@ export default {
       },
       deep: true
     },
-    // panel () {
-    //   this.reload()
-    // },
+    panel () {
+      this.reload()
+    },
     autoViewport (val) {
       this.reload()
     },
