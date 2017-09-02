@@ -1,10 +1,9 @@
-<template>
-<div class="text-field">
-  <label>
-    <div v-text="label" class="label"></div>
-    <div class="input"><input :value="value" :placeholder="placeholder" :pattern="pattern" @input="$emit('input', $event.target.value)"></div>
-  </label>
-</div>
+<template lang="pug">
+div.text-field
+  label
+    div.label(v-text="label")
+    div.input
+      input(:value="value", :placeholder="placeholder", :pattern="pattern", @input="$emit('input', $event.target.value)")
 </template>
 
 <script>
