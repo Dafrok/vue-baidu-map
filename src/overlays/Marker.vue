@@ -57,30 +57,26 @@ export default {
   watch: {
     'position.lng' (val, oldVal) {
       const {BMap, originInstance} = this
-      const lng = parseFloat(val)
-      if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
-        originInstance.setPosition(new BMap.Point(lng, this.position.lat))
+      if (val !== oldVal && val >= -180 && val <= 180) {
+        originInstance.setPosition(new BMap.Point(val, this.position.lat))
       }
     },
     'position.lat' (val, oldVal) {
       const {BMap, originInstance} = this
-      const lat = parseFloat(val)
-      if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
-        originInstance.setPosition(new BMap.Point(this.position.lng, lat))
+      if (val !== oldVal && val >= -74 && val <= 74) {
+        originInstance.setPosition(new BMap.Point(this.position.lng, val))
       }
     },
     'offset.width' (val, oldVal) {
       const {BMap, originInstance} = this
-      const width = parseFloat(val)
-      if (val.toString() !== oldVal.toString()) {
-        originInstance.setOffset(new BMap.Size(width, this.offset.height))
+      if (val !== oldVal) {
+        originInstance.setOffset(new BMap.Size(val, this.offset.height))
       }
     },
     'offset.height' (val, oldVal) {
       const {BMap, originInstance} = this
-      const height = parseFloat(val)
-      if (val.toString() !== oldVal.toString()) {
-        originInstance.setOffset(new BMap.Size(this.offset.width, height))
+      if (val !== oldVal) {
+        originInstance.setOffset(new BMap.Size(this.offset.width, val))
       }
     },
     icon: {
