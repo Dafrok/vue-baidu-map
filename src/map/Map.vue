@@ -18,7 +18,7 @@ export default {
       type: [Object, String]
     },
     zoom: {
-      // type: Number
+      type: Number
     },
     minZoom: {
       type: Number
@@ -75,38 +75,27 @@ export default {
   },
   watch: {
     center (val, oldVal) {
-      const {map, BMap} = this
+      const {map, zoom} = this
       if (checkType(val) === 'String' && val !== oldVal) {
-        map.setCenter(val)
-      } else if (checkType(oldVal) === 'String' && checkType(val) === 'Object') {
-        map.setCenter(new BMap.Point(parseFloat(val.lng), parseFloat(val.lat)))
+        map.centerAndZoom(val, zoom)
       }
     },
     'center.lng' (val, oldVal) {
-      const {BMap, map} = this
-      if (checkType(oldVal) === 'Undefined' || checkType(val) === 'Undefined') {
-        return
-      }
-      const lng = parseFloat(val)
-      if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
-        map.setCenter(new BMap.Point(lng, this.center.lat))
+      const {BMap, map, zoom, center} = this
+      if (val !== oldVal && val >= -180 && val <= 180) {
+        map.centerAndZoom(new BMap.Point(val, center.lat), zoom)
       }
     },
     'center.lat' (val, oldVal) {
-      const {BMap, map} = this
-      if (checkType(oldVal) === 'Undefined' || checkType(val) === 'Undefined') {
-        return
-      }
-      const lat = parseFloat(val)
-      if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
-        map.setCenter(new BMap.Point(this.center.lng, lat))
+      const {BMap, map, zoom, center} = this
+      if (val !== oldVal && val >= -74 && val <= 74) {
+        map.centerAndZoom(new BMap.Point(center.lng, val), zoom)
       }
     },
     zoom (val, oldVal) {
       const {map} = this
-      const zoom = parseFloat(val)
-      if (val.toString() !== oldVal.toString() && zoom >= 3 && zoom <= 19) {
-        map.setZoom(zoom)
+      if (val !== oldVal && val >= 3 && val <= 19) {
+        map.setZoom(val)
       }
     },
     minZoom (val) {
@@ -193,6 +182,8 @@ export default {
       theme && map.setMapStyle({styleJson: theme})
       setMapOptions()
       bindEvents.call(this, map)
+      // 此处强行初始化一次地图 回避一个由于错误的 center 字符串导致初始化失败抛出的错误
+      map.centerAndZoom(new BMap.Point(), 3)
       map.centerAndZoom(getCenterPoint(), maxZoom || zoom || 3)
       this.$emit('ready', {BMap, map})
     },
@@ -231,7 +222,7 @@ export default {
       }
     }
   },
-  created () {
+  mounted () {
     const {getMapScript, initMap} = this
     getMapScript()
       .then(initMap)
