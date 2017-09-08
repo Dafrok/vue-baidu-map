@@ -36,7 +36,7 @@ module.exports = {
       {
         test: /\.vue$/,
         use: ['vue-loader', 'eslint-loader'],
-        exclude: /_cache/
+        exclude: [/_cache/]
       },
       {
         test: /\.js$/,

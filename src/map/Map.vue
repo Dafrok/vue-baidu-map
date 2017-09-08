@@ -188,6 +188,7 @@ export default {
       this.$emit('ready', {BMap, map})
       // Debug
       // global.map = map
+      // global.mapComponent = this
     },
     getCenterPoint () {
       const {center, BMap} = this
@@ -222,12 +223,18 @@ export default {
       } else {
         return global.BMap._preloader
       }
+    },
+    reset () {
+      const {getMapScript, initMap} = this
+      getMapScript()
+        .then(initMap)
     }
   },
+  activated () {
+    this.reset()
+  },
   mounted () {
-    const {getMapScript, initMap} = this
-    getMapScript()
-      .then(initMap)
+    this.reset()
   },
   data () {
     return {
