@@ -36,7 +36,7 @@ section.index
       box-shadow 0 0 3px #3f51b5
       color white
       border-radius 100px
-      margin 0 10px
+      margin 10px
       padding 10px
       background #3f51b5
       text-decoration none
