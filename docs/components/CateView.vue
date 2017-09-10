@@ -24,13 +24,14 @@ router-view
         margin-top 0
         padding-top 0 
 
-  h1, h2, h3, h4, h5, h6 
+  h1, h2, h3, h4, h5, h6
     margin 20px 0 10px
-    padding 0
+    padding 5px 0
     font-weight bold
     -webkit-font-smoothing antialiased
     cursor text
     position relative 
+    line-height 1
     &:hover a.anchor
       text-decoration none 
     tt, code 
@@ -45,16 +46,15 @@ router-view
   h2 
     font-size 24px
     border-bottom 1px solid #ccc
-    color black 
-    line-height 32px
+    color black
 
-  h3 
+  h3
     font-size 18px 
 
-  h4 
+  h4
     font-size 16px 
 
-  h5 
+  h5
     font-size 14px 
 
   h6 
@@ -111,12 +111,14 @@ router-view
     & > :last-child 
       margin-bottom 0 
 
-  .doc-table 
-    padding 0
-    border-collapse collapse 
+  .doc-table
+    table
+      min-width 600px
+      padding 0
+      border-collapse collapse 
     tr
       background-color white
-      margin 0table
+      margin 0
       padding 0 
       &:nth-child(2n + 1) 
         td
@@ -124,12 +126,13 @@ router-view
       th 
         font-weight bold
         margin 0
-        padding 6px 13px
+        padding 10px 13px
         border-bottom 1px solid #eee
       td
         margin 0
-        padding 6px 13px 
+        padding 10px 13px 
       th, td
+        min-width 100px
         &:first-child
           margin-top 0
         &:last-child
