@@ -178,14 +178,16 @@ export default {
       }
       const map = new BMap.Map($el, {enableHighResolution: this.highResolution, enableMapClick: this.mapClick})
       this.map = map
-      const {setMapOptions, maxZoom, zoom, getCenterPoint, theme} = this
+      const {setMapOptions, zoom, getCenterPoint, theme} = this
       theme && map.setMapStyle({styleJson: theme})
       setMapOptions()
       bindEvents.call(this, map)
       // 此处强行初始化一次地图 回避一个由于错误的 center 字符串导致初始化失败抛出的错误
-      map.centerAndZoom(new BMap.Point(), 3)
-      map.centerAndZoom(getCenterPoint(), maxZoom || zoom || 3)
+      map.reset()
+      map.centerAndZoom(getCenterPoint(), zoom)
       this.$emit('ready', {BMap, map})
+      // Debug
+      // global.map = map
     },
     getCenterPoint () {
       const {center, BMap} = this
