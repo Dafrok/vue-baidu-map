@@ -72,7 +72,7 @@ export default {
 <doc-preview>
 <baidu-map :center="{lng: 116.403765, lat: 39.914850}" :zoom="11">
   <bm-view class="map"></bm-view>
-  <bm-control :offset="{width: '10px', height: '10px'}">
+  <bm-control :offset="{width: 10, height: 10}">
     <bm-auto-complete v-model="keyword">
       <text-field placeholder="Keywords"></text-field>
     </bm-auto-complete>

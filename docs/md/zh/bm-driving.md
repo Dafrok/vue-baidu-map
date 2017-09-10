@@ -81,6 +81,8 @@
       start="天通苑北"
       end="宋家庄地铁站"
       :auto-viewport="true"
+      policy="BMAP_DRIVING_POLICY_LEAST_DISTANCE"
+      :panel="false"
       location="北京"
       :waypoints="['西二旗']">
     </bm-driving>
@@ -92,17 +94,17 @@
 
 <doc-preview>
 <div class="toolbar">
-  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" @click="leastDistance">
+  <md-button class="md-raised md-primary" @click="leastDistance">
     最短距离
-  </button>
-  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" @click="leastTime">
+  </md-button>
+  <md-button class="md-raised md-primary" @click="leastTime">
     最短时间
-  </button>
+  </md-button>
 </div>
 <baidu-map>
   <bm-view class="map">
   </bm-view>
-  <bm-driving start="天通苑北" end="宋家庄地铁站" :auto-viewport="true" location="北京" :policy="policy" :waypoints="['西二旗']"></bm-driving>
+  <bm-driving :panel="false" start="天通苑北" end="宋家庄地铁站" :auto-viewport="true" location="北京" :policy="policy" :waypoints="['西二旗']"></bm-driving>
 </baidu-map>
 </doc-preview>
 </template>

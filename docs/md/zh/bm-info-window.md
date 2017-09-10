@@ -79,20 +79,24 @@ export default {
       <button @click="clear">Clear</button>
     </bm-info-window>
   </baidu-map>
-  <div class="toolbar">
-    <table>
-      <thead>
-        <tr>
-          <th><label><input type="checkbox" v-model="infoWindow.show">信息窗体内容</label></th>
-        <tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><text-field v-model="infoWindow.contents"></text-field></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <md-table>
+    <md-table-header>
+      <md-table-head>开关</md-table-head>
+      <md-table-head>内容</md-table-head>
+    </md-table-header>
+    <md-table-body>
+      <md-table-row>
+        <md-table-cell>
+          <md-switch v-model="infoWindow.show" class="md-primary"></md-switch>
+        </md-table-cell>
+        <md-table-cell>
+          <md-input-container>
+            <md-textarea v-model="infoWindow.contents"></md-textarea>
+          </md-input-container>
+        </md-table-cell>
+      </md-table-row>
+    </md-table-body>
+  </md-table>
 </doc-preview>
 
 </template>

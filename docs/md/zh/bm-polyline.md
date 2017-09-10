@@ -72,27 +72,31 @@ export default {
   <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" :scroll-wheel-zoom="true">
     <bm-polyline :path="polylinePath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolylinePath"></bm-polyline>
   </baidu-map>
-  <div class="toolbar">
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>经度</th>
-          <th>纬度</th>
-        <tr>
-      </thead>
-      <tbody>
-        <tr v-for="(point, index) in polylinePath" class="list-line">
-          <td v-text="`坐标${index + 1}`"></td>
-          <td><text-field pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="point.lng"></text-field></td>
-          <td><text-field pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="point.lat"></text-field></td>
-        </tr>
-      </tbody>
-    </table>
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" @click="addPolylinePoint">
-      添加一个坐标
-    </button>
-  </div>
+  <md-table>
+    <md-table-header>
+      <md-table-head>坐标</md-table-head>
+      <md-table-head>经度</md-table-head>
+      <md-table-head>纬度</md-table-head>
+    </md-table-header>
+    <md-table-body>
+      <md-table-row v-for="(point, index) in polylinePath" :key="index">
+        <md-table-cell>{{`坐标-${index + 1}`}}</md-table-cell>
+        <md-table-cell>
+          <md-input-container>
+            <md-input v-model.number="point.lng" md-inline></md-input>
+          </md-input-container>
+        </md-table-cell>
+        <md-table-cell>
+          <md-input-container>
+            <md-input v-model.number="point.lat" md-inline></md-input>
+          </md-input-container>
+        </md-table-cell>
+      </md-table-row>
+    </md-table-body>
+  </md-table>
+  <md-button @click="addPolylinePoint" class="md-raised md-primary">
+    添加一个坐标点
+  </md-button>
 </doc-preview>
 </template>
 

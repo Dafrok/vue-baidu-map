@@ -64,22 +64,26 @@ export default {
 <baidu-map>
   <bm-view class="map">
   </bm-view>
-  <div class="toolbar">
-    <table>
-      <thead>
-        <tr>
-          <th>Keyword</th>
-          <th>Location</th>
-        <tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><text-field v-model="location"></text-field></td>
-          <td><text-field v-model="keyword"></text-field></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <md-table>
+    <md-table-header>
+      <md-table-head>Keyword</md-table-head>
+      <md-table-head>Location</md-table-head>
+    </md-table-header>
+    <md-table-body>
+      <md-table-row>
+        <md-table-cell>
+          <md-input-container>
+            <md-input v-model="keyword"></md-input>
+          </md-input-container>
+        </md-table-cell>
+        <md-table-cell>
+          <md-input-container>
+            <md-input v-model="location"></md-input>
+          </md-input-container>
+        </md-table-cell>
+      </md-table-row>
+    </md-table-body>
+  </md-table>
   <bm-local-search :keyword="keyword" :auto-viewport="true" :location="location"></bm-local-search>
 </doc-preview>
 </baidu-map>

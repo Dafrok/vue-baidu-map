@@ -4,8 +4,8 @@ router-view
 
 <style lang="stylus">
 .markdown-body
-  table
-    width 100%
+  // table
+  //   width 100%
   a
     color #4183C4
     &.absent
@@ -61,7 +61,7 @@ router-view
     color #777777
     font-size 14px 
 
-  p, blockquote, ul, ol, dl, li, table, pre 
+  p, blockquote, ul, ol, dl, li, /*table*/, pre 
     margin 15px 0 
 
   hr 
@@ -111,24 +111,22 @@ router-view
     & > :last-child 
       margin-bottom 0 
 
-  table 
+  .doc-table 
     padding 0
     border-collapse collapse 
-    tr 
-      border-top 1px solid #ccc
+    tr
       background-color white
-      margin 0
+      margin 0table
       padding 0 
-      &:nth-child(2n) 
-        background-color #f8f8f8 
+      &:nth-child(2n + 1) 
+        td
+          background-color #f8f8f8 
       th 
         font-weight bold
-        border 1px solid #ccc
         margin 0
         padding 6px 13px
-        background #ccc
-      td 
-        border 1px solid #ccc
+        border-bottom 1px solid #eee
+      td
         margin 0
         padding 6px 13px 
       th, td
@@ -136,7 +134,6 @@ router-view
           margin-top 0
         &:last-child
           margin-bottom 0 
-
   img 
     max-width 100% 
 
@@ -255,7 +252,7 @@ router-view
     
   
   @media print 
-    table, pre 
+    /*table, */pre 
       page-break-inside avoid
     pre 
       word-wrap break-word

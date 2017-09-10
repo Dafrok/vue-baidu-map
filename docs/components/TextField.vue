@@ -24,8 +24,7 @@ export default {
     font-size 0
     overflow hidden
     box-sizing border-box
-    border-radius 3px
-    border 1px solid #ccc
+    border 1px solid #36c
     box-shadow 0 0 2px silver inset
     background white
     height 2rem

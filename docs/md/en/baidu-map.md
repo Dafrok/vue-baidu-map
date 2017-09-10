@@ -216,23 +216,32 @@ export default {
 <doc-preview>
   <baidu-map class="map" :scroll-wheel-zoom="true" :center="center" :zoom="zoom" @moving="syncCenterAndZoom" @moveend="syncCenterAndZoom" @zoomend="syncCenterAndZoom">
   </baidu-map>
-  <div class="toolbar">
-    <table>
-      <thead>
-        <tr><th>Longitude</th><th>Latitude</th><th>Zoom</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><text-field v-model.number="center.lng" pattern="-?[0-9]*(\.[0-9]+)?" label="经度"></text-field></th>
-          <td><text-field v-model.number="center.lat" pattern="-?[0-9]*(\.[0-9]+)?" label="纬度"></text-field></td>
-          <td><text-field v-model.number="zoom" pattern="-?[0-9]*(\.[0-9]+)?" label="缩放"></text-field></td>
-        </tr>
-      </tbody>
-    </table>
-    
-    
-    
-  </div>
+  <md-table>
+    <md-table-header>
+      <md-table-head>Longitude</md-table-head>
+      <md-table-head>Latitude</md-table-head>
+      <md-table-head>Zoom</md-table-head>
+    </md-table-header>
+    <md-table-body>
+      <md-table-row>
+        <md-table-cell>
+          <md-input-container>
+            <md-input v-model.number="center.lng" md-inline></md-input>
+          </md-input-container>
+        </md-table-cell>
+        <md-table-cell>
+          <md-input-container>
+            <md-input v-model.number="center.lat" md-inline></md-input>
+          </md-input-container>
+        </md-table-cell>
+        <md-table-cell>
+          <md-input-container>
+            <md-input v-model.number="zoom" md-inline></md-input>
+          </md-input-container>
+        </md-table-cell>
+      </md-table-row>
+    </md-table-body>
+  </md-table>
 </doc-preview>
 </template>
 

@@ -75,27 +75,31 @@ export default {
   <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
     <bm-polygon :path="polygonPath" stroke-color="blue" :stroke-opacity="0.5" :fill-opacity="0.5" :editing="true" @lineupdate="updatePolygonPath"></bm-polygon>
   </baidu-map>
-  <div class="toolbar">
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>经度</th>
-          <th>纬度</th>
-        <tr>
-      </thead>
-      <tbody>
-        <tr v-for="(point, index) in polygonPath" class="list-line">
-          <td v-text="`坐标${index + 1}`"></td>
-          <td><text-field pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="point.lng"></text-field></td>
-          <td><text-field pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="point.lat"></text-field></td>
-        </tr>
-      </tbody>
-    </table>
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" @click="addPolygonPoint">
-      添加一个坐标
-    </button>
-  </div>
+  <md-table>
+    <md-table-header>
+      <md-table-head>坐标</md-table-head>
+      <md-table-head>经度</md-table-head>
+      <md-table-head>纬度</md-table-head>
+    </md-table-header>
+    <md-table-body>
+      <md-table-row v-for="(point, index) in polygonPath" :key="index">
+        <md-table-cell>{{`坐标-${index + 1}`}}</md-table-cell>
+        <md-table-cell>
+          <md-input-container>
+            <md-input v-model.number="point.lng" md-inline></md-input>
+          </md-input-container>
+        </md-table-cell>
+        <md-table-cell>
+          <md-input-container>
+            <md-input v-model.number="point.lat" md-inline></md-input>
+          </md-input-container>
+        </md-table-cell>
+      </md-table-row>
+    </md-table-body>
+  </md-table>
+  <md-button class="md-raised md-primary" @click="addPolygonPoint">
+    添加一个坐标点
+  </md-button>
 </doc-preview>
 </template>
 

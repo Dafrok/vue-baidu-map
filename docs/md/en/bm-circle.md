@@ -75,24 +75,32 @@ export default {
   <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
     <bm-circle :center="circlePath.center" :radius="circlePath.radius" @lineupdate="updateCirclePath" :editing="true"></bm-circle>
   </baidu-map>
-  <div class="toolbar">
-    <table>
-      <thead>
-        <tr>
-          <th>Center Longitude</th>
-          <th>Center Latitude</th>
-          <th>Radius</th>
-        <tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><text-field pattern="-?[0-9]*(\.[0-9]+)?" v-model.number="circlePath.center.lng"></text-field></td>
-          <td><text-field pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="circlePath.center.lat"></text-field></td>
-          <td><text-field pattern="-?[0-9]*(\.[0-9]+)?"v-model.number="circlePath.radius"></text-field></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <md-table>
+    <md-table-header>
+      <md-table-head>Longitude</md-table-head>
+      <md-table-head>Latitude</md-table-head>
+      <md-table-head>Radius</md-table-head>
+    </md-table-header>
+    <md-table-body>
+      <md-table-row>
+        <md-table-cell>
+          <md-input-container>
+            <md-input v-model.number="circlePath.center.lng" md-inline></md-input>
+          </md-input-container>
+        </md-table-cell>
+        <md-table-cell>
+          <md-input-container>
+            <md-input v-model.number="circlePath.center.lat" md-inline></md-input>
+          </md-input-container>
+        </md-table-cell>
+        <md-table-cell>
+          <md-input-container>
+            <md-input v-model.number="circlePath.radius" md-inline></md-input>
+          </md-input-container>
+        </md-table-cell>
+      </md-table-row>
+    </md-table-body>
+  </md-table>  
 </doc-preview>
 </template>
 

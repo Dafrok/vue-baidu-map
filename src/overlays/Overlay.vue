@@ -45,7 +45,7 @@ export default {
           })
         }
       }
-      var overlay = new CustomOverlay()
+      const overlay = new CustomOverlay()
       map.addOverlay(overlay)
     }
   }

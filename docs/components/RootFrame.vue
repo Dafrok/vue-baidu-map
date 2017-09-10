@@ -79,6 +79,12 @@ export default {
   },
   mounted () {
     this.$router.afterEach(route => {
+      this.$nextTick(() => {
+        const $table = [].filter.call(this.$el.getElementsByTagName('table'), $t => !~$t.parentNode.classList.value.indexOf('md-table'))
+        $table.forEach($t => {
+          $t.outerHTML = `<div class="doc-table md-table md-theme-default md-whiteframe md-whiteframe-1dp">${$t.outerHTML}</div>`
+        })
+      })
       const meta = this.$route.meta || {}
       this.$emit('changeLang', meta.lang)
       document.body.scrollTop = 0
