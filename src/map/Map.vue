@@ -194,7 +194,7 @@ export default {
       const {center, BMap} = this
       switch (checkType(center)) {
         case 'String': return center
-        case 'Object': return new BMap.Point(parseFloat(center.lng), parseFloat(center.lat))
+        case 'Object': return new BMap.Point(center.lng, center.lat)
         default: return new BMap.Point()
       }
     },
