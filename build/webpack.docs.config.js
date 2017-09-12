@@ -14,9 +14,7 @@ module.exports = {
     ],
     resource: [
       'prismjs/themes/prism-tomorrow.css',
-      'docs/fonts/iconfont.css',
-      'material-design-icons/iconfont/material-icons.css',
-      'material-design-lite/material.min.css'
+      'docs/fonts/iconfont.css'
     ],
     vendor: [
       'docs/components/App.vue',
