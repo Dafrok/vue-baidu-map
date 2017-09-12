@@ -22,7 +22,7 @@ module.exports = {
       'docs/components/App.vue',
       'docs/components/CateView.vue',
       'docs/components/DocPreview.vue',
-      'docs/components/Drawer.vue',
+      'docs/components/Navigator.vue',
       'docs/components/RootFrame.vue'
     ]
   },

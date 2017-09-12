@@ -13,7 +13,7 @@ This component is mainly used to control the layout. In addition to being able t
 #### Code
 ```html
 <doc-preview>
-  <baidu-map class="map">
+  <baidu-map class="map" center="北京">
     <p style="text-indent: 20px; line-height: 60px;">The following is a Baidu map instance rendered using the `BmView` component</p>
     <bm-view style="position: absolute; top: 60px; bottom: 20px; left: 20px; right: 20px"></bm-view>
   </baidu-map>
@@ -22,7 +22,7 @@ This component is mainly used to control the layout. In addition to being able t
 
 #### Preview
 <doc-preview>
-  <baidu-map class="map">
+  <baidu-map class="map" center="北京">
     <p style="text-indent: 20px; line-height: 60px;">
 The following is a Baidu map instance rendered using the `BmView` component</p>
     <bm-view style="position: absolute; top: 60px; bottom: 20px; left: 20px; right: 20px"></bm-view>

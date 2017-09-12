@@ -36,7 +36,7 @@
 ```html
 <template>
 <baidu-map>
-  <bm-view class="map">
+  <bm-view class="map" center="北京">
   </bm-view>
   <bm-transit start="百度大厦" end="北京邮电大学西门" :auto-viewport="true" location="北京"></bm-transit>
 </baidu-map>
@@ -46,7 +46,7 @@
 #### 预览
 <doc-preview>
 <baidu-map>
-  <bm-view class="map">
+  <bm-view class="map" center="北京">
   </bm-view>
   <bm-transit start="百度大厦" end="北京邮电大学西门" :auto-viewport="true" location="北京"></bm-transit>
 </baidu-map>

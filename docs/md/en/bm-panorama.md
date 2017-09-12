@@ -17,7 +17,7 @@
 
 ```html
 <template>
-  <baidu-map class="map">
+  <baidu-map class="map" center="北京">
     <bm-panorama></bm-panorama>
   </baidu-map>
 </template>
@@ -25,7 +25,7 @@
 
 #### Preview
 <doc-preview>
-  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+  <baidu-map class="map" center="北京">
     <bm-panorama></bm-panorama>
   </baidu-map>
 </doc-preview>

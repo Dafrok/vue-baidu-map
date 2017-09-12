@@ -1,37 +1,62 @@
 <template lang="pug">
-div.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header
-  header.mdl-layout__header
-    .mdl-layout__header-row
-      span.mdl-layout-title(v-text="title") VUE BAIDU MAP
-      .mdl-layout-spacer
-      .mdl-navigation
-        router-link(:to="`/${otherLang}/index`", @click="changeLang").mdl-button.mdl-js-button.mdl-button--icon
-          i.material-icons.iconfont.icon-zhongyingwenqiehuan-xianshizhongyingwen
-        a.mdl-button.mdl-js-button.mdl-button--icon(href="https://github.com/Dafrok/vue-baidu-map")
-          i.material-icons.iconfont.icon-github
-  div.mdl-layout__drawer(@click="close", ref="drawer")
-    router-link(:to="`/`").logo
-      img(src="//dafrok.github.io/vue-baidu-map/favicon.png")
-    slot(name="navigation")
-  main.mdl-layout__content(ref="main")
-    .page-content
-      slot(name="page-content")
+div
+  md-toolbar.md-right.top
+    .md-toolbar-container
+      md-button.menu-button.md-icon-button(@click="$refs.sidenav.toggle()")
+        md-icon menu
+      span.md-title(v-text="title") VUE BAIDU MAP
+      md-button.md-icon-button
+        router-link.link(:to="`/${otherLang}/index`", @click="changeLang")
+        md-icon(md-iconset="iconfont icon-zhongyingwenqiehuan-xianshizhongyingwen")
+      md-button.md-icon-button(href="https://github.com/Dafrok/vue-baidu-map")
+        md-icon(md-iconset="iconfont icon-github")
+  md-sidenav.md-left.md-fixed.main-nav(ref="sidenav")
+    md-toolbar(md-theme="white").logo
+      router-link.link(:to="`/`")
+        img(src="//dafrok.github.io/vue-baidu-map/favicon.png")
+        div Vue Baidu Map
+    slot(name="side-nav")
+  .page-content(ref="main")
+    slot(name="page-content")
 </template>
 
 <style lang="stylus" scoped>
-.logo {
-  display: block;
-  text-align: center;
-  margin-top: 1rem;
-  transition: all .3s;
-  &:hover {
-    transform: scale(1.1);
-  }
-  img {
-    width: 70px;
-    height: 70px;
-  }
-}
+.top
+  position fixed
+  top 0
+  left 0
+  right 0
+  z-index 2
+.logo
+  font-size 1.5rem
+  border-bottom 1px solid rgba(0,0,0,.12)
+  height 12rem
+  justify-content center
+  text-align center
+  a.link:hover
+    text-decoration none
+  img
+    width 90px
+    margin-bottom 1rem
+.md-icon-button
+  a.link
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    z-index 1
+    display block
+    opacity 0
+.md-title
+  flex 1
+.page-content
+  padding-top 64px
+@media(min-width: 1281px)
+  .md-title
+    margin-left 8px!important
+  .top
+    left 304px
 </style>
 
 <script>
@@ -45,10 +70,6 @@ export default {
   methods: {
     changeLang () {
       this.$emit('changeLang', this.otherLang)
-    },
-    close () {
-      document.querySelector('.mdl-layout__obfuscator').classList.remove('is-visible')
-      this.$refs.drawer.classList.remove('is-visible')
     }
   },
   computed: {
@@ -62,6 +83,7 @@ export default {
       this.$emit('changeLang', meta.lang)
       this.$refs.main.scrollTop = 0
       this.title = route.name
+      this.$refs.sidenav.close()
     })
   }
 }

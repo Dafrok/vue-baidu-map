@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Mon Jun 12 2017 12:01:58 GMT+0800 (CST)
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
     basePath: '',
     frameworks: ['mocha'],

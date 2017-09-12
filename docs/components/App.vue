@@ -1,25 +1,19 @@
 <template lang="pug">
 div
   router-view(v-show="isIndex")
-  root-frame(v-show="!isIndex", :lang="lang", @changeLang="changeLang")
-    drawer(slot="navigation")
-      nav
-        div.cate(v-for="route in routeMap", v-if="route.name")
-          .mdl-list__item.title(v-text="route.name")
-          router-link.mdl-navigation__link.sub(v-for="subRoute in route.children",  :to="`${route.path}/${subRoute.path}`", v-text="subRoute.name")
+  root-frame.root(v-show="!isIndex", :lang="lang", @changeLang="changeLang")
+    navigator(:lang="lang", slot="side-nav")
     router-view(slot="page-content").doc.markdown-body
 </template>
 
 <script>
-import routeMap from '../routes.js'
-
 import RootFrame from './RootFrame.vue'
-import Drawer from './Drawer.vue'
+import Navigator from './Navigator.vue'
 
 export default {
   components: {
-    RootFrame,
-    Drawer
+    Navigator,
+    RootFrame
   },
   data () {
     return {
@@ -39,15 +33,6 @@ export default {
   computed: {
     isIndex () {
       return this.$route.fullPath === '/'
-    },
-    routeMap () {
-      const ret = []
-      for (const route of routeMap) {
-        if (!route.meta || (route.meta && !route.meta.hidden && route.meta.lang === this.lang)) {
-          ret.push(route)
-        }
-      }
-      return ret
     }
   }
 }
@@ -101,28 +86,19 @@ h2 {
   img
     max-width: none!important
     background: none!important
+  svg
+    max-width initial
 
-.toolbar
-  padding 1rem
-  font-size 0
-    font-size 1rem
-  table
-    thead
-      tr
-        th
-          color white
-          background #69c
-          border-color #69c
-
-.mdl-list__item {
-  &.title {
-    background-color: #f2f2f2;
-    color: #555;
-  }
-}
-.mdl-layout__drawer .mdl-navigation .mdl-navigation__link.is-active {
-  font-weight: 700;
-  color: #3f51b5;
-  border-right: 2px solid #3f51b5;
-}
+@media(min-width: 1281px)
+  .md-sidenav-backdrop
+    display none
+  .root
+    padding-left 304px
+  .main-nav
+    .md-sidenav-content
+      box-shadow 0 1px 5px rgba(0,0,0,.2), 0 2px 2px rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12)
+      pointer-events auto!important
+      transform translate3D(0, 0, 0)!important
+  .menu-button
+    display none!important
 </style>

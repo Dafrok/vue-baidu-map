@@ -53,8 +53,8 @@ export default {
 <style>
 .sample {
   width: 120px;
-  height: 20px;
-  line-height: 20px;
+  height: 40px;
+  line-height: 40px;
   background: rgba(0,0,0,0.5);
   overflow: hidden;
   box-shadow: 0 0 5px #000;
@@ -118,8 +118,8 @@ export default {
 <style>
 .sample {
   width: 120px;
-  height: 20px;
-  line-height: 20px;
+  height: 40px;
+  line-height: 40px;
   background: rgba(0,0,0,0.5);
   overflow: hidden;
   box-shadow: 0 0 5px #000;
@@ -232,11 +232,9 @@ export default {
 <style lang="stylus">
 .sample
   width 120px
-  height 20px
-  line-height 20px
+  height 40px
   background rgba(0, 0, 0, .5)
   overflow hidden
-  box-shadow 0 0 5px black
   color white
   text-align center
   padding 10px

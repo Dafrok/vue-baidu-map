@@ -24,7 +24,7 @@
 
 ```html
 <template>
-  <baidu-map class="map">
+  <baidu-map class="map" class="map" style="height: 500px" center="北京">
     <bm-city-list anchor="BMAP_ANCHOR_TOP_LEFT"></bm-city-list>
   </baidu-map>
 </template>
@@ -33,7 +33,7 @@
 #### Preview
 
 <doc-preview>
-  <baidu-map class="map">
+  <baidu-map class="map" class="map" style="height: 500px" center="北京">
     <bm-city-list anchor="BMAP_ANCHOR_TOP_LEFT"></bm-city-list>
   </baidu-map>
 </doc-preview>
