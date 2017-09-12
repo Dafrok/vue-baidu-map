@@ -107,10 +107,10 @@ export default {
       map.setMaxZoom(val)
     },
     highResolution () {
-      // Require remount component
+      this.reset()
     },
     mapClick () {
-      // Require remount component
+      this.reset()
     },
     mapType (val) {
       const {map} = this
