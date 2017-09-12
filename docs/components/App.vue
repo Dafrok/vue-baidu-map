@@ -25,11 +25,6 @@ export default {
       this.lang = lang
     }
   },
-  mounted () {
-    this.$router.afterEach(route => {
-      this.$nextTick(global.componentHandler.upgradeDom)
-    })
-  },
   computed: {
     isIndex () {
       return this.$route.fullPath === '/'

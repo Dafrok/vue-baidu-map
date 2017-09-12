@@ -46,6 +46,7 @@ router-view
     font-size 24px
     border-bottom 1px solid #ccc
     color black 
+    line-height 32px
 
   h3 
     font-size 18px 

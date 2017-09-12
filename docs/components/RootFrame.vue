@@ -16,7 +16,7 @@ div
         img(src="//dafrok.github.io/vue-baidu-map/favicon.png")
         div Vue Baidu Map
     slot(name="side-nav")
-  .page-content(ref="main")
+  .page-content
     slot(name="page-content")
 </template>
 
@@ -81,7 +81,7 @@ export default {
     this.$router.afterEach(route => {
       const meta = this.$route.meta || {}
       this.$emit('changeLang', meta.lang)
-      this.$refs.main.scrollTop = 0
+      document.body.scrollTop = 0
       this.title = route.name
       this.$refs.sidenav.close()
     })
