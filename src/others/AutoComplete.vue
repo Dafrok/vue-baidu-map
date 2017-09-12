@@ -17,6 +17,12 @@ export default {
     },
     location: {
       type: String
+    },
+    sugStyle: {
+      type: Object,
+      default () {
+        return {}
+      }
     }
   },
   watch: {
@@ -29,7 +35,7 @@ export default {
   },
   methods: {
     load () {
-      const {BMap, map, $el, types, location} = this
+      const {BMap, map, $el, types, location, sugStyle} = this
       const input = $el.querySelector('input')
       if (!input) {
         return
@@ -38,7 +44,15 @@ export default {
         input,
         types,
         location: location || map,
-        onSearchComplete: e => this.$emit('searchcomplete', e)
+        onSearchComplete: e => {
+          const $sugs = document.querySelectorAll('.tangram-suggestion-main')
+          for (const $sug of $sugs) {
+            for (const name in sugStyle) {
+              $sug.style[name] = sugStyle[name].toString()
+            }
+          }
+          this.$emit('searchcomplete', e)
+        }
       })
 
       // Support v-model

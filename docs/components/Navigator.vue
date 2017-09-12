@@ -1,6 +1,6 @@
 <template lang="pug">
 md-list
-  md-list-item(v-for="route in routeMap", v-if="route.name", :md-expand-multiple="true")
+  md-list-item(v-for="route in routeMap", v-if="route.name")
     span(v-text="route.name")
     md-list-expand
       md-list

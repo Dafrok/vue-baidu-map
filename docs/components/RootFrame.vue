@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  md-toolbar.md-right.top
+  md-whiteframe(md-tag="md-toolbar").top
     .md-toolbar-container
       md-button.menu-button.md-icon-button(@click="$refs.sidenav.toggle()")
         md-icon menu
