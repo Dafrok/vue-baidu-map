@@ -10,7 +10,7 @@ module.exports = {
       'vue',
       'vue-router',
       'prismjs',
-      'material-design-lite/material.min.js'
+      'vue-material'
     ],
     resource: [
       'prismjs/themes/prism-tomorrow.css',
