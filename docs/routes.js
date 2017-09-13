@@ -54,6 +54,14 @@ const routeMap = [
         }
       },
       {
+        path: 'third-party',
+        component: 'start-third-party',
+        name: {
+          zh: '第三方组件',
+          en: 'Third Party Components'
+        }
+      },
+      {
         path: 'base',
         component: 'start-base',
         name: {
