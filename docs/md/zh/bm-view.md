@@ -13,18 +13,18 @@
 #### 代码
 ```html
 <doc-preview>
-  <baidu-map class="map" center="北京">
-    <p style="text-indent: 20px; line-height: 60px;">以下是使用 `bm-view` 组件渲染的百度地图实例</p>
-    <bm-view style="position: absolute; top: 60px; bottom: 20px; left: 20px; right: 20px"></bm-view>
+  <baidu-map class="map" style="display: flex; flex-direction: column" center="北京">
+    <p style="padding: 0 10px;">以下是使用 `bm-view` 组件渲染的百度地图实例</p>
+    <bm-view style="width: 100%; height:100px; flex: 1"></bm-view>
   </baidu-map>
 </doc-preview>
 ```
 
 #### 预览
 <doc-preview>
-  <baidu-map class="map" center="北京">
-    <p style="text-indent: 20px; line-height: 60px;">以下是使用 `bm-view` 组件渲染的百度地图实例</p>
-    <bm-view style="position: absolute; top: 60px; bottom: 20px; left: 20px; right: 20px"></bm-view>
+  <baidu-map class="map" style="display: flex; flex-direction: column" center="北京">
+    <p style="padding: 0 10px;">以下是使用 `bm-view` 组件渲染的百度地图实例</p>
+    <bm-view style="width: 100%; height:100px; flex: 1"></bm-view>
   </baidu-map>
 </doc-preview>
 

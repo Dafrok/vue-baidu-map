@@ -83,6 +83,8 @@ h2 {
     background: none!important
   svg
     max-width initial
+  canvas
+    max-width initial
 
 @media(min-width: 1281px)
   .md-sidenav-backdrop
