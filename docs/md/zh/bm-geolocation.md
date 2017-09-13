@@ -5,7 +5,7 @@
 ## 属性
 
 |属性名|类型|默认值|描述|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |anchor|ControlAnchor||控件停靠位置|
 |offset|Size||控件偏移值|
 |showAddressBar|Boolean||是否显示定位信息面板。默认显示定位信息面板|
@@ -14,7 +14,7 @@
 
 ## 事件
 |事件名|参数|描述|
-|------|:---:|----|
+|------|-----|----|
 |locationSuccess|{point, AddressComponent}|定位成功后触发此事件|
 |locationError|{StatusCode}|定位失败后触发此事件|
 

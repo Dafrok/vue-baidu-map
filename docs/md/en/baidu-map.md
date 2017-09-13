@@ -8,7 +8,7 @@ The container is an empty DOM node which used to mount other components or DOM n
 ## Instance Properties
 
 |name|type|default|description|
-|------|:----:|:---:|---|
+|------|------|-----|---|
 |ak|String||Baidu map developer platform application key. Valid only when registered locally.|
 |center|Point, String||Center coordinate of the map.|
 |zoom|Number||Zoom level of the map.|
@@ -30,7 +30,7 @@ The container is an empty DOM node which used to mount other components or DOM n
 ## Events
 
 |name|parameter|description|
-|---|:----:|---|
+|---|------|---|
 |click|{type, target, point, pixel, overlay}|Triggers when you click the map on the left mouse button.|
 |dblclick|{type, target, pixel, point}|Triggers when you double click the map on the left mouse button.|
 |rightclick|{type, target, point, pixel, overlay}|Triggers when you click the map on the right mouse button.|

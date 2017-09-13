@@ -7,7 +7,7 @@
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |bounds|Bounds||Ground cover bounds.|
 |opacity|Number||Overlay opacity.|
 |imageURL|String||Overlay image url.|
@@ -18,7 +18,7 @@
 ## Events
 
 |name|parameter|description|
-|------|:--:|----|
+|------|----|----|
 |click|event{type, target, point, pixel}|Triggers when click on the ground overlay.|
 |dblclick|event{type, target, point, pixel}|Triggers when double click on the ground overlay.|
 

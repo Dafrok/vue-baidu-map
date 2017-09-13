@@ -7,13 +7,13 @@
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |width|Number||Menu width.|
 
 ## Events
 
 |name|parameter|description|
-|------|:--:|----|
+|------|----|----|
 |open|event{type, target, point, pixel}|Triggers when opening the context menu.|
 |close|event{type, target, point, pixel}|Triggers when closing the context menu.|
 

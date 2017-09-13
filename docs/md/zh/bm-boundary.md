@@ -7,7 +7,7 @@
 ## 属性
 
 |属性名|类型|默认值|描述|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |name|String||行政区划名称|
 |strokeColor|String||折线颜色|
 |strokeWeight|Number||折线的宽度，以像素为单位|
@@ -21,7 +21,7 @@
 ## 事件
 
 |事件名|参数|描述|
-|------|:--:|----|
+|------|----|----|
 |click|event{type, target, point, pixel}|点击行政区划后会触发此事件|
 |dblclick|event{type, target, point, pixel}|双击行政区划后会触发此事件|
 |mousedown|event{type, target, point, pixel}|鼠标在行政区划上按下触发此事件|

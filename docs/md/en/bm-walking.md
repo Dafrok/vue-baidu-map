@@ -7,7 +7,7 @@
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:----:|----|
+|------|-----|------|----|
 |location|String, Point, None||Search area. The type can be empty, coordinate point or city name.|
 |start|String, Point, LocalResultPoi||The starting point, the type can be a keyword, a coordinate point (supported by version 1.1), or a LocalSearchPoi instance.|
 |end|String, Point, LocalResultPoi||The end point, the type can be a keyword, a coordinate point (supported by version 1.1), or a LocalSearchPoi instance.|
@@ -18,7 +18,7 @@
 ## Events
 
 |name|parameter|description|
-|------|:--:|----|
+|------|----|----|
 |markersset|{pois: Array}|Triggers when markers are set.|
 |infohtmlset|{poi: LocalResultPoi}|Triggers when info windows are set.|
 |resultshtmlset|{container: HTMLElement}|Triggers when the result panel is set.|

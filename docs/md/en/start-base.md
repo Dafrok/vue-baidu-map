@@ -3,7 +3,7 @@
 ## Global Component Event
 
 |name|parameter|description|
-|---|:----:|---|
+|---|------|---|
 |ready |{BMap, map}|Triggers when Baidu Map is ready. It returns a core class of Baidu Map and a instance which is binding on the component `BaiduMap`. Please **DON'T** access the core class and the instance in lifecycle.|
 
 ## Constants

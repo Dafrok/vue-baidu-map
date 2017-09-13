@@ -7,7 +7,7 @@
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |center|Point||The centre of circle.|
 |radius|Number||The radius of circle.|
 |strokeColor|String||Circle stroke color.|
@@ -23,7 +23,7 @@
 ## Events
 
 |name|parameter|description|
-|------|:--:|----|
+|------|----|----|
 |click|event{type, target, point, pixel}|Triggers when click on the circle.|
 |dblclick|event{type, target, point, pixel}|Triggers when double click on the circle.|
 |mousedown|event{type, target, point, pixel}|Triggers when the mouse is pressed down on the circle.|

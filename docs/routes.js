@@ -372,6 +372,24 @@ const routeMap = [
         component: 'bm-auto-complete'
       }
     ]
+  },
+  {
+    path: 'bmaplib',
+    name: {
+      zh: '第三方组件',
+      en: 'Third Party'
+    },
+    component: CateView,
+    children: [
+      {
+        path: 'markerclusterer',
+        name: {
+          zh: '点聚合',
+          en: 'Marker Clusterer'
+        },
+        component: 'bml-marker-clusterer'
+      }
+    ]
   }
 ]
 

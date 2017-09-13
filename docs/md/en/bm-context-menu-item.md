@@ -7,7 +7,7 @@
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |callback|Function|new Function|The callback function of clicking the menu item. The parameter of callback is `{BMap, map, target, pixel, point}`.|
 |text|String||The text of the menu item.|
 |iconUrl|String||The icon of the menu item. (size: 17 * 17)|

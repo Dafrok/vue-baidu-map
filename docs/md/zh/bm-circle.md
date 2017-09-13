@@ -7,7 +7,7 @@
 ## 属性
 
 |属性名|类型|默认值|描述|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |center|Point||圆心，单位为米|
 |radius|Number||半径，单位为米|
 |strokeColor|String||折线颜色|
@@ -23,7 +23,7 @@
 ## 事件
 
 |事件名|参数|描述|
-|------|:--:|----|
+|------|----|----|
 |click|event{type, target, point, pixel}|鼠标点击圆形后会触发此事件|
 |dblclick|event{type, target, point, pixel}|鼠标双击圆形后会触发此事件|
 |mousedown|event{type, target, point, pixel}|鼠标在圆形上按下触发此事件|

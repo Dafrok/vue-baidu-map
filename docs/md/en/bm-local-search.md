@@ -7,7 +7,7 @@
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:----:|----|
+|------|-----|------|----|
 |location|String, Point, None||Search area. The type can be empty, coordinate point or city name.|
 |bounds|Bounds||Limit the search for a square area. No results if the exceeds the current location.|
 |nearby|{center: Point, radius: Number}||Limit the search for a circle area. No results if the exceeds the current location.|
@@ -22,7 +22,7 @@
 ## Events
 
 |name|parameter|description|
-|------|:--:|----|
+|------|----|----|
 |markersset|{pois: Array}|Triggers when markers are set.|
 |infohtmlset|{poi: LocalResultPoi}|Triggers when info windows are set.|
 |resultshtmlset|{container: HTMLElement}|Triggers when the result panel is set.|

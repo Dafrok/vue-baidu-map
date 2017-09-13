@@ -7,7 +7,7 @@ The `BmBoundary` component rendered by and inherits from the` bm-polygon` compon
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |name|String||Name of the boundary.|
 |strokeColor|String||Polygon stroke color.|
 |strokeWeight|Number||Polygon stroke width.|
@@ -21,7 +21,7 @@ The `BmBoundary` component rendered by and inherits from the` bm-polygon` compon
 ## Events
 
 |name|parameter|description|
-|------|:--:|----|
+|------|----|----|
 |click|event{type, target, point, pixel}|Triggers when click on the boundary.|
 |dblclick|event{type, target, point, pixel}|Triggers when double click on the boundary.|
 |mousedown|event{type, target, point, pixel}|Triggers when the mouse is pressed down on the boundary.|

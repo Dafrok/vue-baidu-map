@@ -29,6 +29,8 @@ import BmTraffic from './layers/Traffic.vue'
 import BmBoundary from './others/Boundary.vue'
 import BmAutoComplete from './others/AutoComplete.vue'
 
+import BmlMarkerClusterer from './extra/MarkerClusterer.vue'
+
 export default {
   install (Vue, options) {
     const {ak} = options
@@ -81,4 +83,8 @@ export {
   BmLocalSearch, BmTransit, BmWalking, BmDriving, BmBus,
   BmTile, BmTraffic,
   BmBoundary, BmAutoComplete
+}
+
+export {
+  BmlMarkerClusterer
 }

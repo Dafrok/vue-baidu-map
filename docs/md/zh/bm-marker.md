@@ -7,7 +7,7 @@
 ## 属性
 
 |属性名|类型|默认值|描述|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |position|Size||标注的位置|
 |offset|Size||标注的位置偏移值|
 |icon|Icon||标注所用的图标对象|
@@ -24,7 +24,7 @@
 ## 事件
 
 |事件名|参数|描述|
-|------|:--:|----|
+|------|----|----|
 |click|event{type, target}|点击标注图标后会触发此事件|
 |dblclick|event{type, target, point,pixel}|双击标注图标后会触发此事件|
 |mousedown|event{type, target, point,pixel}|鼠标在标注图上按下触发此事件|

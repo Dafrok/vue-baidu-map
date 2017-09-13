@@ -14,7 +14,7 @@
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |location|String, Map, Point|map|Set the range of the returned result.|
 |types|'city', None||The response data type. 'city' or none.|
 |sugStyle|Object|{}|Fix styles of the suggestion popup.|
@@ -22,7 +22,7 @@
 ## Events
 
 |name|parameter|description|
-|------|:--:|----|
+|------|----|----|
 |searchcomplete|AutocompleteResult|Triggers when after searching.|
 |confirm|{type,target,item}|Triggers when select an item.|
 |highlight|{type,target,fromitem,toitem}|Triggers when highlight an item.|

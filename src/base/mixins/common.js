@@ -45,10 +45,17 @@ class Mixin {
               return originInstance.clearResults()
             case 'autoComplete':
               return originInstance.dispose()
+            case 'markerClusterer':
+              return originInstance.clearMarkers()
             default:
               map[types[prop.type].unload](originInstance)
           }
         } catch (e) {}
+      }
+    }
+    this.computed = {
+      renderByParent () {
+        return this.$parent.preventChildrenRender
       }
     }
     this.mounted = function () {
@@ -58,7 +65,11 @@ class Mixin {
       map ? ready() : $parent.$on('ready', ready)
     }
     this.beforeDestroy = function () {
-      this.unload()
+      const {unload, renderByParent, $parent} = this
+      if (renderByParent) {
+        $parent.reload()
+      }
+      unload()
     }
   }
 }

@@ -8,7 +8,7 @@
 ## 实例属性
 
 |属性名|类型|默认值|描述|
-|------|:----:|:---:|---|
+|------|------|-----|---|
 |ak|String||百度地图开发者平台申请的密钥，仅在局部注册组件时声明。|
 |center|Point, String||定位, 可使用如“广州市海珠区”的地区字符串，也可以使用对象如 {lng: 116.404, lat: 39.915} 表示经纬度|
 |zoom|Number||缩放等级|
@@ -29,7 +29,7 @@
 
 ## 事件
 |事件名|参数|描述|
-|---|:----:|---|
+|---|------|---|
 |click|{type, target, point, pixel, overlay}|左键单击地图时触发此事件。 当双击时，产生的事件序列为： click click dblclick|
 |dblclick|{type, target, pixel, point}|鼠标双击地图时会触发此事件|
 |rightclick|{type, target, point, pixel, overlay}|右键单击地图时触发此事件。 当双击时，产生的事件序列为： rightclick rightclick rightdblclick|

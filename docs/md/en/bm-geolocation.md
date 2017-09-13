@@ -5,7 +5,7 @@
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |anchor|ControlAnchor||The location of the control.|
 |offset|Size||The offset of the control.|
 |showAddressBar|Boolean||Whether show address bar or not.|
@@ -15,7 +15,7 @@
 ## Events
 
 |事件名|参数|描述|
-|------|:---:|----|
+|------|-----|----|
 |locationSuccess|{point, AddressComponent}|Triggers when locationing is successful.|
 |locationError|{StatusCode}|Triggers when locationing is failed.|
 

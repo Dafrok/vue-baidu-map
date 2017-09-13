@@ -5,13 +5,13 @@
 ## 属性
 
 |属性名|类型|默认值|描述|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |pane|String||自定义覆盖物所在[容器](http://lbsyun.baidu.com/cms/jsapi/class/jsapi_reference.html#a3b1)。包含 `floatPane`、`markerMouseTarget`、`floatShadow`、`labelPane`、`markerPane`、`markerShadow`、`mapPane` 共 7 种合法值|
 
 ## 事件
 
 |事件名|参数|描述|
-|------|:---:|----|
+|------|-----|----|
 |initialize|event{BMap, map, el, overlay}|覆盖物初始化时触发此事件|
 |draw|event{BMap, map, el, overlay}|地图发生改变时触发此事件|
 

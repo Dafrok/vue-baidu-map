@@ -8,7 +8,7 @@ If your browser supports the `MutationObserver` function, the size of the info w
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |show|Boolean|false|Whether the info window is opened or not.|
 |position|Point||Position of the info window.|
 |width|Number||Width of the info window. Ranges: 0, 220 - 730.|
@@ -24,7 +24,7 @@ If your browser supports the `MutationObserver` function, the size of the info w
 ## Events
 
 |name|parameter|description|
-|------|:--:|----|
+|------|----|----|
 |close|event{type, target, point}|Triggers when the info window is closed.|
 |open|event{type, target, point}|Triggers when the info window is opened.|
 |maximize|event{type, target}|Triggers when the info window is maximized.|

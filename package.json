@@ -85,5 +85,8 @@
   },
   "peerDependencies": {
     "vue": "^2.1.8"
+  },
+  "dependencies": {
+    "bmaplib.markerclusterer": "^1.0.6"
   }
 }

@@ -6,7 +6,7 @@
 
 ## Instance Properties
 |name|type|default|description|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |path|Array[Point]|[]|The points that makes the polyline.|
 |strokeColor|String||Polyline stroke color.|
 |strokeWeight|Number||Polyline stroke width.|
@@ -19,7 +19,7 @@
 ## Events
 
 |name|parameter|description|
-|------|:--:|----|
+|------|----|----|
 |click|event{type, target, point, pixel}|Triggers when click on the polyline.|
 |dblclick|event{type, target, point, pixel}|Triggers when double click on the polyline.|
 |mousedown|event{type, target, point, pixel}|Triggers when the mouse is pressed down on the polyline.|

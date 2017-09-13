@@ -5,7 +5,7 @@
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |anchor|ControlAnchor||The location of the control.|
 |offset|Size||The offset of the control.|
 |type|NavigationControlType||The type of the control.|

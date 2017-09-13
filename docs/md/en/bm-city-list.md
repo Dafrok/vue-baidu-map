@@ -5,13 +5,13 @@
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |anchor|ControlAnchor||The location of the control.|
 |offset|Size||The offset of the control.|
 
 ## Events
 |name|parameter|description|
-|------|:---:|----|
+|------|-----|----|
 |changeBefore||Triggers before switching the city.|
 |changeAfter||Triggers after switching the city.|
 

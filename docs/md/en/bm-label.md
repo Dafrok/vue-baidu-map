@@ -7,7 +7,7 @@
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |content|String||Contents of the label.|
 |title|String||Title of the label.|
 |labelStyle|Object||Style of the label.|
@@ -19,7 +19,7 @@
 ## Events
 
 |name|parameter|description|
-|------|:--:|----|
+|------|----|----|
 |click|event{type, target, point, pixel}|Triggers when click on the label.|
 |dblclick|event{type, target, point, pixel}|Triggers when double click on the label.|
 |mousedown|event{type, target, point, pixel}|Triggers when the mouse is pressed down on the label.|

@@ -7,7 +7,7 @@
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:----:|----|
+|------|-----|------|----|
 |location|String, Point, None||Search area. The type can be empty, coordinate point or city name.|
 |keyword|String||Keyword of buslines.|
 |panel|Boolean|true|Whether to show the result panel.|
@@ -17,7 +17,7 @@
 ## Events
 
 |name|parameter|description|
-|------|:--:|----|
+|------|----|----|
 |getbuslistcomplete|{rs: BusListResult}|Triggers when the search of buses is completed.|
 |getbuslinecomplete|{rs: BusLine|Triggers when the search of buslines is completed.|
 |buslisthtmlset|{container: HTMLElement}|Triggers when the list of buses is rendered.|

@@ -7,7 +7,7 @@
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |position|Size||The position of the marker.|
 |offset|Size||The offset of the marker.|
 |icon|Icon||The marker icon.|
@@ -24,7 +24,7 @@
 ## Events
 
 |name|parameter|description|
-|------|:--:|----|
+|------|----|----|
 |click|event{type, target}|Triggers when clicking on the marker.|
 |dblclick|event{type, target, point,pixel}|Triggers when double clicking on the marker.|
 |mousedown|event{type, target, point,pixel}|Triggers when press down the mouse on the marker.|

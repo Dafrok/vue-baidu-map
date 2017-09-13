@@ -7,7 +7,7 @@
 ## 属性
 
 |属性名|类型|默认值|描述|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |content|String||文本标注的内容|
 |title|String||当鼠标移至标注上时显示此字段|
 |labelStyle|Object||文本标注的样式|
@@ -19,7 +19,7 @@
 ## 事件
 
 |事件名|参数|描述|
-|------|:--:|----|
+|------|----|----|
 |click|event{type, target, point, pixel}|点击折线后会触发此事件|
 |dblclick|event{type, target, point, pixel}|双击折线后会触发此事件|
 |mousedown|event{type, target, point, pixel}|鼠标在折线上按下触发此事件|

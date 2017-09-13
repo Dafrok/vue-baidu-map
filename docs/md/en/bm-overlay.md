@@ -5,13 +5,13 @@
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |pane|String||The [pane](http://lbsyun.baidu.com/cms/jsapi/class/jsapi_reference.html#a3b1) which contains the overlay. Allow `floatPane` , `markerMouseTarget` , `floatShadow` , `labelPane` , `markerPane` , `markerShadow` , `mapPane` for 7 legal values.|
 
 ## Events
 
 |name|parameter|description|
-|------|:---:|----|
+|------|-----|----|
 |initialize|event{BMap, map, el, overlay}|Triggers when the overlay is initialized.|
 |draw|event{BMap, map, el, overlay}|Triggers when the map changes.|
 

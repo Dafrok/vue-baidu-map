@@ -7,7 +7,7 @@
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |path|Array[Point]|[]|The points that makes the polygon.|
 |strokeColor|String||Polygon stroke color.|
 |strokeWeight|Number||Polygon stroke width.|
@@ -22,7 +22,7 @@
 ## Events
 
 |name|parameter|description|
-|------|:--:|----|
+|------|----|----|
 |click|event{type, target, point, pixel}|Triggers when click on the polygon.|
 |dblclick|event{type, target, point, pixel}|Triggers when double click on the polygon.|
 |mousedown|event{type, target, point, pixel}|Triggers when the mouse is pressed down on the polygon.|

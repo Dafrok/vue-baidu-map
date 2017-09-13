@@ -5,7 +5,7 @@
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |predictDate|PredictDate||Predict date of traffic.|
 
 ## Examples

@@ -128,6 +128,7 @@ router-view
         margin 0
         padding 10px 13px
         border-bottom 1px solid #eee
+        text-align left
       td
         margin 0
         padding 10px 13px 

@@ -5,7 +5,7 @@
 ## Instance Properties
 
 |name|type|default|description|
-|------|:---:|:---:|----|
+|------|-----|-----|----|
 |transparentPng|Boolean||Whether or not a PNG with transparent information is used.|
 |tileUrlTemplate|String||Specify a tile URL template that can be expanded for each tile request to reference a unique tile based on an existing tile coordinate system. The format of the template should be `http://yourhost/tile?x={X}&y={Y}&z={Z}.png` , X is longitude, Y is latitude and Z is zoom level.|
 |copyright|Copyright||Copyright message.|
