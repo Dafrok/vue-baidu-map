@@ -30,6 +30,7 @@ import BmBoundary from './others/Boundary.vue'
 import BmAutoComplete from './others/AutoComplete.vue'
 
 import BmlMarkerClusterer from './extra/MarkerClusterer.vue'
+import BmlLushu from './extra/Lushu.vue'
 
 export default {
   install (Vue, options) {
@@ -86,5 +87,6 @@ export {
 }
 
 export {
-  BmlMarkerClusterer
+  BmlMarkerClusterer,
+  BmlLushu
 }

@@ -44,6 +44,7 @@ class Mixin {
             case 'search':
               return originInstance.clearResults()
             case 'autoComplete':
+            case 'lushu':
               return originInstance.dispose()
             case 'markerClusterer':
               return originInstance.clearMarkers()
