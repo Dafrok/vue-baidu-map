@@ -77,6 +77,7 @@ export default {
       const {originInstance, infoWindow} = this
       val && infoWindow ? originInstance.showInfoWindow() : originInstance.hideInfoWindow()
       originInstance._opts.defaultContent = val
+      originInstance._overlay && originInstance._overlay.setHtml(val)
     },
     autoView (val) {
       const {originInstance, content} = this
