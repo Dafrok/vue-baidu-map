@@ -3,9 +3,10 @@ router-view
 </template>
 
 <style lang="stylus">
+.md-theme-default .markdown-body pre code
+  background-color: inherit;
+  color: inherit;
 .markdown-body
-  // table
-  //   width 100%
   a
     color #4183C4
     &.absent
@@ -218,16 +219,7 @@ router-view
     padding 0
     white-space pre
     border none
-    background transparent 
-
-  .highlight pre
-    background-color #f8f8f8
-    border 1px solid #ccc
-    font-size 13px
-    line-height 19px
-    overflow auto
-    padding 6px 10px
-    border-radius 3px 
+    background transparent
 
   pre 
     // background-color #f8f8f8
@@ -245,19 +237,12 @@ router-view
     font-size 0.83em
     vertical-align super
     line-height 0
-  
-  * 
-    -webkit-print-color-adjust exact
-  
-  @media screen and (min-width 914px) 
-    body 
-        width 854px
-        margin0 auto
-    
-  
-  @media print 
-    /*table, */pre 
-      page-break-inside avoid
-    pre 
-      word-wrap break-word
+
+// * 
+//   -webkit-print-color-adjust exact
+// @media print 
+//   /*table, */pre 
+//     page-break-inside avoid
+//   pre 
+//     word-wrap break-word
 </style>

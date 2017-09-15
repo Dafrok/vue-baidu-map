@@ -10,8 +10,6 @@ import VueMaterial from 'vue-material'
 import Prism from 'prismjs'
 
 import 'prismjs/themes/prism-tomorrow.css'
-// import 'material-design-lite/material.min.css'
-// import 'material-design-lite/material.min.js'
 import 'material-design-icons/iconfont/material-icons.css'
 import 'vue-material/dist/vue-material.css'
 import './fonts/iconfont.css'

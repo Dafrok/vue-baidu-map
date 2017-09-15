@@ -57,9 +57,9 @@ export default {
     <bm-marker v-for="marker of markers" :position="marker" @dragend="updateMarker($event, marker)" :dragging="true"></bm-marker>
   <bml-marker-clusterer>
 </baidu-map>
-<md-button class="md-raised md-primary" @click="addMarker">添加一个随机点</md-button>
-<md-button class="md-raised md-primary" @click="removeMarker">删除上一个点</md-button>
-<md-button class="md-raised md-primary" @click="changeStyles">更换皮肤</md-button>
+<md-button class="md-raised md-primary" @click="addMarker">Add Marker</md-button>
+<md-button class="md-raised md-primary" @click="removeMarker">Remove Marker</md-button>
+<md-button class="md-raised md-primary" @click="changeStyles">Change Styles</md-button>
 </doc-preview>
 
 <script>
