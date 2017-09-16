@@ -16,7 +16,6 @@ module.exports = function (config) {
     },
     plugins: [
       'karma-mocha',
-      'karma-nightmare',
       'karma-coverage',
       'karma-webpack'
     ],
@@ -38,7 +37,7 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: false,
-    browsers: ['Nightmare'],
+    browsers: [/*'Nightmare'*/],
     singleRun: true,
     concurrency: Infinity
   })
