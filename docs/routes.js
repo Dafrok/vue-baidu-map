@@ -384,7 +384,7 @@ const routeMap = [
   {
     path: 'bmaplib',
     name: {
-      zh: '第三方组件',
+      zh: '第三方组件库',
       en: 'Third Party'
     },
     component: CateView,
@@ -396,6 +396,14 @@ const routeMap = [
           en: 'Marker Clusterer'
         },
         component: 'bml-marker-clusterer'
+      },
+      {
+        path: 'lushu',
+        name: {
+          zh: '路书',
+          en: 'LuShu'
+        },
+        component: 'bml-lushu'
       }
     ]
   }
