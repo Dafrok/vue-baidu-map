@@ -46,6 +46,7 @@ export default {
         }
       }
       const overlay = new CustomOverlay()
+      this.originInstance = overlay
       map.addOverlay(overlay)
     }
   }
