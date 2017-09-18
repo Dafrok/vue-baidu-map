@@ -38,20 +38,21 @@
     @stop="reset"
     :path="path"
     :icon="icon"
-    :rotation="true"
-    :play="true">
+    :play="play"
+    :rotation="true">
   </bml-lushu>
 </baidu-map>
 </template>
 
 <script>
-import BmlLushu from '@/extra/Lushu.vue'
+import {BmlLushu} from 'vue-baidu-map'
 export default {
   components: {
     BmlLushu
   },
   data () {
     return {
+      play: true,
       path: [],
       icon: {
         url: 'http://api.map.baidu.com/library/LuShu/1.2/examples/car.png',

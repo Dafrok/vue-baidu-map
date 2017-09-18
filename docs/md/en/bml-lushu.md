@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import BmlLushu from '@/extra/Lushu.vue'
+import {BmlLushu} from 'vue-baidu-map'
 export default {
   components: {
     BmlLushu
