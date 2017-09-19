@@ -1,6 +1,6 @@
 # Custom Overlay
 
-`BmOverlay` is a highly customized component, it redraws with the `draw` event. The recommended usage is to wrap the `BmOverlay` component with the same redraw logic.
+`BmOverlay` is a highly customized component, it redraws with the `draw` event. The recommended usage is to wrap the `BmOverlay` component with the same redraw logic. The custom overlay triggers the `draw` method to redraw only if the map changes. Manually excute the` reload` instance method of `BmOverlay` if needed.
 
 ## Instance Properties
 
@@ -43,7 +43,7 @@ export default {
   methods: {
     draw ({el, BMap, map}) {
       const pixel = map.pointToOverlayPixel(new BMap.Point(116.404, 39.915))
-      el.style.left = pixel.x - 70 + 'px'
+      el.style.left = pixel.x - 60 + 'px'
       el.style.top = pixel.y - 20 + 'px'
     }
   }
@@ -53,11 +53,9 @@ export default {
 <style>
 .sample {
   width: 120px;
-  height: 20px;
-  line-height: 20px;
+  height: 40px;
   background: rgba(0,0,0,0.5);
   overflow: hidden;
-  box-shadow: 0 0 5px #000;
   color: #fff;
   text-align: center;
   padding: 10px;
@@ -67,6 +65,7 @@ export default {
   background: rgba(0,0,0,0.75);
   color: #fff;
 }
+
 </style>
 ```
 
@@ -94,6 +93,7 @@ export default {
 ```html
 <template>
   <bm-overlay
+    ref="customOverlay"
     :class="{sample: true, active}"
     pane="labelPane"
     @draw="draw">
@@ -104,11 +104,19 @@ export default {
 <script>
 export default {
   props: ['text', 'position', 'active'],
+  watch: {
+    position: {
+      handler () {
+        this.$refs.customOverlay.reload()
+      },
+      deep: true
+    }
+  },
   methods: {
     draw ({el, BMap, map}) {
       const {lng, lat} = this.position
       const pixel = map.pointToOverlayPixel(new BMap.Point(lng, lat))
-      el.style.left = pixel.x - 70 + 'px'
+      el.style.left = pixel.x - 60 + 'px'
       el.style.top = pixel.y - 20 + 'px'
     }
   }
@@ -118,11 +126,9 @@ export default {
 <style>
 .sample {
   width: 120px;
-  height: 20px;
-  line-height: 20px;
+  height: 40px;
   background: rgba(0,0,0,0.5);
   overflow: hidden;
-  box-shadow: 0 0 5px #000;
   color: #fff;
   text-align: center;
   padding: 10px;
@@ -168,14 +174,35 @@ export default {
 #### Preview
 
 <doc-preview>
-  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+  <baidu-map :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+    <bm-view class="map"></bm-view>
     <my-overlay
-      :position="{lng: 116.404, lat: 39.915}"
+      :position="{lng: position.lng, lat: position.lat}"
       text="天安门上太阳升"
       :active="active"
       @mouseover.native="active = true"
       @mouseleave.native="active = false">
     </my-overlay>
+    <md-table>
+      <md-table-header>
+        <md-table-head>Overlay Longitude</md-table-head>
+        <md-table-head>Overlay Latitude</md-table-head>
+      </md-table-header>
+      <md-table-body>
+        <md-table-row>
+          <md-table-cell>
+            <md-input-container>
+              <md-input v-model="position.lng"></md-input>
+            </md-input-container>
+          </md-table-cell>
+          <md-table-cell>
+            <md-input-container>
+              <md-input v-model="position.lat"></md-input>
+            </md-input-container>
+          </md-table-cell>
+        </md-table-row>
+      </md-table-body>
+    </md-table>
   </baidu-map>
 </doc-preview>
 
@@ -194,17 +221,26 @@ const MyOverlay = Vue.extend({
       },
       on: {
         draw: this.draw
-      }
+      },
+      ref: 'customOverlay'
     }, [
       h('div', this.text)
     ])
+  },
+  watch: {
+    position: {
+      handler () {
+        this.$refs.customOverlay.reload()
+      },
+      deep: true
+    }
   },
   props: ['text', 'position', 'active'],
   methods: {
     draw ({el, BMap, map}) {
       const {lng, lat} = this.position
       const pixel = map.pointToOverlayPixel(new BMap.Point(lng, lat))
-      el.style.left = pixel.x - 70 + 'px'
+      el.style.left = pixel.x - 60 + 'px'
       el.style.top = pixel.y - 20 + 'px'
     }
   }
@@ -213,7 +249,11 @@ const MyOverlay = Vue.extend({
 export default {
   data () {
     return {
-      active: false
+      active: false,
+      position: {
+        lng: 116.404,
+        lat: 39.915
+      }
     }
   },
   components: {
@@ -222,7 +262,7 @@ export default {
   methods: {
     draw ({el, BMap, map}) {
       const pixel = map.pointToOverlayPixel(new BMap.Point(116.404, 39.915))
-      el.style.left = pixel.x - 70 + 'px'
+      el.style.left = pixel.x - 60 + 'px'
       el.style.top = pixel.y - 20 + 'px'
     }
   }
@@ -232,11 +272,9 @@ export default {
 <style lang="stylus">
 .sample
   width 120px
-  height 20px
-  line-height 20px
+  height 40px
   background rgba(0, 0, 0, .5)
   overflow hidden
-  box-shadow 0 0 5px black
   color white
   text-align center
   padding 10px

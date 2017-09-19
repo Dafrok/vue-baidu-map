@@ -1,6 +1,6 @@
 # 自定义覆盖物
 
-`BmOverlay` 自定义覆盖物组件是一个高度订制化的组件，通过 `draw` 事件进行覆盖物的重绘。推荐的使用方法是将重绘逻辑相同的 `BmOverlay` 进行二次封装。
+`BmOverlay` 自定义覆盖物组件是一个高度订制化的组件，通过 `draw` 事件进行覆盖物的重绘。推荐的使用方法是将重绘逻辑相同的 `BmOverlay` 进行二次封装。自定义覆盖物仅在地图发生变化时触发 `draw` 方法重绘覆盖物视图，若需要定制数据视图同步策略，请手动触发 `BmOverlay` 的 `reload` 实例方法。
 
 ## 属性
 
@@ -43,7 +43,7 @@ export default {
   methods: {
     draw ({el, BMap, map}) {
       const pixel = map.pointToOverlayPixel(new BMap.Point(116.404, 39.915))
-      el.style.left = pixel.x - 70 + 'px'
+      el.style.left = pixel.x - 60 + 'px'
       el.style.top = pixel.y - 20 + 'px'
     }
   }
@@ -94,6 +94,7 @@ export default {
 ```html
 <template>
   <bm-overlay
+    ref="customOverlay"
     :class="{sample: true, active}"
     pane="labelPane"
     @draw="draw">
@@ -104,11 +105,19 @@ export default {
 <script>
 export default {
   props: ['text', 'position', 'active'],
+  watch: {
+    position: {
+      handler () {
+        this.$refs.customOverlay.reload()
+      },
+      deep: true
+    }
+  },
   methods: {
     draw ({el, BMap, map}) {
       const {lng, lat} = this.position
       const pixel = map.pointToOverlayPixel(new BMap.Point(lng, lat))
-      el.style.left = pixel.x - 70 + 'px'
+      el.style.left = pixel.x - 60 + 'px'
       el.style.top = pixel.y - 20 + 'px'
     }
   }
@@ -168,14 +177,35 @@ export default {
 #### 预览
 
 <doc-preview>
-  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+  <baidu-map :center="{lng: 116.404, lat: 39.915}" :zoom="15">
+    <bm-view class="map"></bm-view>
     <my-overlay
-      :position="{lng: 116.404, lat: 39.915}"
+      :position="{lng: position.lng, lat: position.lat}"
       text="天安门上太阳升"
       :active="active"
       @mouseover.native="active = true"
       @mouseleave.native="active = false">
     </my-overlay>
+    <md-table>
+      <md-table-header>
+        <md-table-head>覆盖物经度</md-table-head>
+        <md-table-head>覆盖物纬度</md-table-head>
+      </md-table-header>
+      <md-table-body>
+        <md-table-row>
+          <md-table-cell>
+            <md-input-container>
+              <md-input v-model="position.lng"></md-input>
+            </md-input-container>
+          </md-table-cell>
+          <md-table-cell>
+            <md-input-container>
+              <md-input v-model="position.lat"></md-input>
+            </md-input-container>
+          </md-table-cell>
+        </md-table-row>
+      </md-table-body>
+    </md-table>
   </baidu-map>
 </doc-preview>
 
@@ -194,17 +224,26 @@ const MyOverlay = Vue.extend({
       },
       on: {
         draw: this.draw
-      }
+      },
+      ref: 'customOverlay'
     }, [
       h('div', this.text)
     ])
+  },
+  watch: {
+    position: {
+      handler () {
+        this.$refs.customOverlay.reload()
+      },
+      deep: true
+    }
   },
   props: ['text', 'position', 'active'],
   methods: {
     draw ({el, BMap, map}) {
       const {lng, lat} = this.position
       const pixel = map.pointToOverlayPixel(new BMap.Point(lng, lat))
-      el.style.left = pixel.x - 70 + 'px'
+      el.style.left = pixel.x - 60 + 'px'
       el.style.top = pixel.y - 20 + 'px'
     }
   }
@@ -213,7 +252,11 @@ const MyOverlay = Vue.extend({
 export default {
   data () {
     return {
-      active: false
+      active: false,
+      position: {
+        lng: 116.404,
+        lat: 39.915
+      }
     }
   },
   components: {
@@ -222,7 +265,7 @@ export default {
   methods: {
     draw ({el, BMap, map}) {
       const pixel = map.pointToOverlayPixel(new BMap.Point(116.404, 39.915))
-      el.style.left = pixel.x - 70 + 'px'
+      el.style.left = pixel.x - 60 + 'px'
       el.style.top = pixel.y - 20 + 'px'
     }
   }
