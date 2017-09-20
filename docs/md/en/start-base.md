@@ -1,10 +1,18 @@
 # Base
 
-## Global Component Event
+## Global Component Events
 
 |name|parameter|description|
 |---|------|---|
 |ready |{BMap, map}|Triggers when Baidu Map is ready. It returns a core class of Baidu Map and a instance which is binding on the component `BaiduMap`. Please **DON'T** access the core class and the instance in lifecycle.|
+
+## Global Component Instance Methods
+
+|name|parameter|description|
+|-----|---|---|
+|load||An abstract method that is executed when a component will be load.|
+|unload||An abstract method that is executed when a component will be unload.|
+|reload||Excute the unload method, and then excute load method.|
 
 ## Constants
 
