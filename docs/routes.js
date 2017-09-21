@@ -390,7 +390,7 @@ const routeMap = [
     component: CateView,
     children: [
       {
-        path: 'markerclusterer',
+        path: 'marker-clusterer',
         name: {
           zh: '点聚合',
           en: 'Marker Clusterer'
