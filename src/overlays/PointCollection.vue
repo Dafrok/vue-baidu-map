@@ -27,6 +27,38 @@ export default {
     }
   },
   watch: {
+    shape (val) {
+      const {originInstance, color, size} = this
+      originInstance.setStyles({
+        shape: global[val],
+        color,
+        size: global[size]
+      })
+    },
+    size (val) {
+      const {originInstance, color, shape} = this
+      originInstance.setStyles({
+        shape: global[shape],
+        color,
+        size: global[val]
+      })
+    },
+    color (val) {
+      const {originInstance, shape, size} = this
+      originInstance.setStyles({
+        shape: global[shape],
+        color: val,
+        size: global[size]
+      })
+    },
+    points: {
+      deep: true,
+      handler (val) {
+        const {originInstance} = this
+        originInstance.clear()
+        originInstance.setPoints(val)
+      }
+    }
   },
   methods: {
     load () {
