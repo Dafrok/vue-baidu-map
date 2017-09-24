@@ -111,5 +111,10 @@ export default {
   'bm-auto-complete': [
     'onconfirm',
     'onhighlight'
+  ],
+  'bm-point-collection': [
+    'click',
+    'mouseover',
+    'mouseout'
   ]
 }

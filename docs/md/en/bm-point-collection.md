@@ -1,31 +1,31 @@
 <template lang="md">
 
-# 海量点
+# Point Collection
 
 `BmPointCollection`
 
-## 属性
+## Instance Properties
 
-|属性名|类型|默认值|描述|
+|name|type|default|description|
 |------|-----|-----|----|
-|points|Array[Point]|[]|地图上展示的点坐标集合|
-|shape|[ShapeType](http://lbsyun.baidu.com/cms/jsapi/class/jsapi_reference.html#a3b22)|BMAP_POINT_SHAPE_CIRCLE|坐标点形状|
-|size|[SizeType](http://lbsyun.baidu.com/cms/jsapi/class/jsapi_reference.html#a3b23)|BMAP_POINT_SIZE_NORMAL|坐标点尺寸|
-|color|String||坐标点颜色|
+|points|Array[Point]|[]|The collections of points displayed on the map.|
+|shape|[ShapeType](http://lbsyun.baidu.com/cms/jsapi/class/jsapi_reference.html#a3b22)|BMAP_POINT_SHAPE_CIRCLE|Shape of the points.|
+|size|[SizeType](http://lbsyun.baidu.com/cms/jsapi/class/jsapi_reference.html#a3b23)|BMAP_POINT_SIZE_NORMAL|Size of the points.|
+|color|String||Color of the points.|
 
-## 事件
+## Events
 
-|事件名|参数|描述|
+|name|parameter|description|
 |------|----|----|
-|click|event{currentTarget, point, returnValue, target, type}|点击折线后会触发此事件|
-|mouseout|event{currentTarget, point, returnValue, target, type}|鼠标离开折线时触发此事件|
-|mouseover|event{currentTarget, point, returnValue, target, type}|当鼠标进入折线区域时会触发此事件|
+|click|event{currentTarget, point, returnValue, target, type}|Triggers when click on the point.|
+|mouseout|event{type, target, point, pixel}|Triggers when the mouse leaves the point.|
+|mouseover|event{type, target, point, pixel}|Triggers when the mouse enters the point.|
 
-## 示例
+## Examples
 
-### 添加 1000 个随机点
+### Add 1000 random points
 
-#### 代码
+#### Code
 
 ```html
 <template>
@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     clickHandler (e) {
-      alert(`单击点的坐标为：${e.point.lng}, ${e.point.lat}`);
+      alert(`${e.point.lng}, ${e.point.lat}`);
     },
     addPoints () {
       const points = [];
@@ -58,7 +58,7 @@ export default {
 </script>
 ```
 
-#### 预览
+#### Preview
 
 <doc-preview>
   <baidu-map class="map" @ready="addPoints" :center="{lng: 105.000, lat: 38.000}" :zoom="4">
@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     clickHandler (e) {
-      alert(`单击点的坐标为：${e.point.lng}, ${e.point.lat}`);
+      alert(`${e.point.lng}, ${e.point.lat}`);
     },
     addPoints () {
       const points = [];
