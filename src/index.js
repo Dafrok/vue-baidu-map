@@ -10,6 +10,7 @@ import BmCityList from './controls/CityList.vue'
 import BmPanorama from './controls/Panorama.vue'
 import BmControl from './controls/Control.vue'
 import BmMarker from './overlays/Marker.vue'
+import BmPointCollection from './overlays/PointCollection.vue'
 import BmPolyline from './overlays/Polyline.vue'
 import BmPolygon from './overlays/Polygon.vue'
 import BmCircle from './overlays/Circle.vue'
@@ -51,6 +52,7 @@ export default {
     Vue.component('bm-control', BmControl)
 
     Vue.component('bm-marker', BmMarker)
+    Vue.component('bm-point-collection', BmPointCollection)
     Vue.component('bm-polyline', BmPolyline)
     Vue.component('bm-polygon', BmPolygon)
     Vue.component('bm-circle', BmCircle)
@@ -79,7 +81,7 @@ export default {
 export {
   BaiduMap, BmView,
   BmScale, BmNavigation, BmMapType, BmOverviewMap, BmGeolocation, BmCopyright, BmCityList, BmPanorama, BmControl,
-  BmMarker, BmPolyline, BmPolygon, BmCircle, BmGround, BmLabel, BmInfoWindow, BmOverlay,
+  BmMarker, BmPointCollection, BmPolyline, BmPolygon, BmCircle, BmGround, BmLabel, BmInfoWindow, BmOverlay,
   BmContextMenu, BmContextMenuItem,
   BmLocalSearch, BmTransit, BmWalking, BmDriving, BmBus,
   BmTile, BmTraffic,
