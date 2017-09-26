@@ -196,6 +196,14 @@ const routeMap = [
         }
       },
       {
+        path: 'point-collection',
+        component: 'bm-point-collection',
+        name: {
+          zh: '海量点',
+          en: 'Point Collection'
+        }
+      },
+      {
         path: 'polyline',
         component: 'bm-polyline',
         name: {
@@ -390,7 +398,7 @@ const routeMap = [
     component: CateView,
     children: [
       {
-        path: 'markerclusterer',
+        path: 'marker-clusterer',
         name: {
           zh: '点聚合',
           en: 'Marker Clusterer'
@@ -405,6 +413,14 @@ const routeMap = [
         },
         component: 'bml-lushu'
       }
+      // {
+      //   path: 'curve-line',
+      //   name: {
+      //     zh: '弧线',
+      //     en: 'Curve Line'
+      //   },
+      //   component: 'bml-curve-line'
+      // }
     ]
   }
 ]

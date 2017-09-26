@@ -44,7 +44,7 @@ export default {
       })
       this.originInstance = new BMap.OverviewMapControl({
         anchor: global[anchor],
-        offset,
+        offset: createSize(BMap, offset),
         size: createSize(BMap, size),
         isOpen
       })

@@ -1,5 +1,6 @@
 <script>
 import commonMixin from '@/base/mixins/common.js'
+import {createSize} from '@/base/factory.js'
 
 export default {
   name: 'bm-city-list',
@@ -27,7 +28,7 @@ export default {
       const self = this
       this.originInstance = new BMap.CityListControl({
         anchor: global[anchor],
-        offset,
+        offset: offset && createSize(BMap, offset),
         onChangeBefore () {
           self.$emit('changeBefore')
         },

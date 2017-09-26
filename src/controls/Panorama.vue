@@ -1,5 +1,6 @@
 <script>
 import commonMixin from '@/base/mixins/common.js'
+import {createSize} from '@/base/factory.js'
 
 export default {
   name: 'bm-panorama',
@@ -19,7 +20,7 @@ export default {
       const {BMap, map, anchor, offset} = this
       this.originInstance = new BMap.PanoramaControl({
         anchor: global[anchor],
-        offset
+        offset: offset && createSize(BMap, offset)
       })
       map.addControl(this.originInstance)
     }

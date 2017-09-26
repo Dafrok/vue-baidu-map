@@ -1,5 +1,6 @@
 <script>
 import commonMixin from '@/base/mixins/common.js'
+import {createSize} from '@/base/factory.js'
 
 export default {
   name: 'bm-copyright',
@@ -22,7 +23,7 @@ export default {
       const {BMap, map, offset, anchor, updateCopyrightList} = this
       this.originInstance = new BMap.CopyrightControl({
         anchor: global[anchor],
-        offset
+        offset: offset && createSize(BMap, offset)
       })
       updateCopyrightList()
       map.addControl(this.originInstance)

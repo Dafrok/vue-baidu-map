@@ -1,5 +1,6 @@
 <script>
 import commonMixin from '@/base/mixins/common.js'
+import {createSize} from '@/base/factory.js'
 
 export default {
   name: 'bm-map-type',
@@ -27,7 +28,7 @@ export default {
       this.mapTypes && this.mapTypes.forEach(item => mapTypes.push(global[item]))
       this.originInstance = new BMap.MapTypeControl({
         anchor: global[anchor],
-        offset,
+        offset: offset && createSize(BMap, offset),
         type: global[type],
         mapTypes
       })

@@ -1,7 +1,7 @@
 <script>
 import commonMixin from '@/base/mixins/common.js'
 import bindEvents from '@/base/bindEvent.js'
-import {createIcon} from '@/base/factory.js'
+import {createIcon, createSize} from '@/base/factory.js'
 
 export default {
   name: 'bm-geolocation',
@@ -43,11 +43,12 @@ export default {
   },
   methods: {
     load () {
-      const {BMap, map, anchor, showAddressBar, autoLocation, locationIcon} = this
+      const {BMap, map, anchor, showAddressBar, autoLocation, locationIcon, offset} = this
       this.originInstance = new BMap.GeolocationControl({
         anchor: global[anchor],
         showAddressBar,
         enableAutoLocation: autoLocation,
+        offset: offset && createSize(BMap, offset),
         locationIcon: locationIcon && createIcon(BMap, locationIcon)
       })
       bindEvents.call(this, this.originInstance)
