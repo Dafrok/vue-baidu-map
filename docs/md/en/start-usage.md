@@ -70,24 +70,27 @@ Vue.use(VueBaiduMap.default, {
 ## Q&A
 
 - `BaiduMap` component is an empty block level element. If it doesn't declare its height, the map view will be invisible.
+- `BaiduMap` component cannot render maps without `center` and `zoom`. But if `center` is a legal place name string, `BaiduMap` will automatically adjust the value of` zoom` according to the name.
 - If you need to update your model, just do it in the callback of the global component event `ready`.
 
 ### Wrong Way
 
 ```html
 <template>
-  <baidu-map :center="center"></baidu-map>
+  <baidu-map :center="center" :zoom="zoom"></baidu-map>
 </template>
 <script>
 export default {
   data () {
     return {
-      center: {lng: 0, lat: 0}
+      center: {lng: 0, lat: 0},
+      zoom: 3
     }
   },
   mounted () {
     this.lng = 116.404
     this.lat = 39.915
+    this.zoom = 15
   }
 }
 </script>
@@ -97,20 +100,22 @@ export default {
 
 ```html
 <template>
-  <baidu-map :center="center" @ready="handler"></baidu-map>
+  <baidu-map :center="center" :zoom="zoom" @ready="handler"></baidu-map>
 </template>
 <script>
 export default {
   data () {
     return {
-      center: {lng: 0, lat: 0}
+      center: {lng: 0, lat: 0},
+      zoom: 3
     }
   },
   methods: {
-    handler ({BMap, map}) {
+    handler ({BMap, map}) {
       console.log(BMap, map)
       this.center.lng = 116.404
       this.center.lat = 39.915
+      this.zoom = 15
     }
   }
 }
