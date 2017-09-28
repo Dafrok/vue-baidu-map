@@ -63,7 +63,6 @@ export default {
   methods: {
     load () {
       const {BMap, map, points, shape, color, size} = this
-      console.log(shape)
       const overlay = this.originInstance = new BMap.PointCollection(points.map(p => createPoint(BMap, p)), {
         shape: global[shape],
         color,
