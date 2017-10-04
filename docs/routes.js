@@ -412,6 +412,14 @@ const routeMap = [
           en: 'LuShu'
         },
         component: 'bml-lushu'
+      },
+      {
+        path: 'heatmap',
+        name: {
+          zh: '热力图',
+          en: 'Heatmap'
+        },
+        component: 'bml-heatmap'
       }
       // {
       //   path: 'curve-line',

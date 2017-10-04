@@ -32,6 +32,7 @@ import BmAutoComplete from './others/AutoComplete.vue'
 
 import BmlMarkerClusterer from './extra/MarkerClusterer.vue'
 import BmlLushu from './extra/Lushu.vue'
+import BmlHeatmap from './extra/Heatmap.vue'
 
 export default {
   install (Vue, options) {
@@ -90,5 +91,6 @@ export {
 
 export {
   BmlMarkerClusterer,
-  BmlLushu
+  BmlLushu,
+  BmlHeatmap
 }
