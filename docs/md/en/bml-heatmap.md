@@ -25,7 +25,7 @@
 </baidu-map>
 
 <script>
-import BmlHeatmap from '@/extra/Heatmap.vue'
+import {BmlHeatmap} from 'vue-baidu-map'
 
 export default {
   components: {
