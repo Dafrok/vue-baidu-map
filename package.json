@@ -86,6 +86,6 @@
   "dependencies": {
     "bmaplib.heatmap": "^1.0.0",
     "bmaplib.lushu": "^1.0.5",
-    "bmaplib.markerclusterer": "^1.0.6"
+    "bmaplib.markerclusterer": "^1.0.7"
   }
 }
