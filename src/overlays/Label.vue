@@ -17,7 +17,10 @@ export default {
     offset: {},
     position: {},
     labelStyle: {},
-    zIndex: {},
+    zIndex: {
+      type: Number,
+      default: 0
+    },
     massClear: {
       type: Boolean,
       default: true
