@@ -55,12 +55,8 @@ export default {
       },
       deep: true
     },
-    keyword (val) {
-      const {originInstance, forceLocal, customData} = this
-      originInstance && originInstance.search(val, {
-        forceLocal,
-        customData
-      })
+    keyword () {
+      this.search()
     },
     bounds: {
       handler (val) {
