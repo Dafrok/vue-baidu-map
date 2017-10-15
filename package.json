@@ -84,6 +84,7 @@
     "vue": "^2.1.8"
   },
   "dependencies": {
+    "bmaplib.curveline": "^1.0.0",
     "bmaplib.heatmap": "^1.0.0",
     "bmaplib.lushu": "^1.0.5",
     "bmaplib.markerclusterer": "^1.0.7"
