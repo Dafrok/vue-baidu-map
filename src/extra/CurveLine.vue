@@ -4,13 +4,25 @@ import commonMixin from '@/base/mixins/common.js'
 import bindEvents from '@/base/bindEvent.js'
 import {createPoint} from '@/base/factory.js'
 
+const eventList = [
+  'click',
+  'dblclick',
+  'mousedown',
+  'mouseup',
+  'mouseout',
+  'mouseover',
+  'remove',
+  'lineupdate'
+]
+
 export default {
   name: 'bml-curve-line',
   render () {},
   mixins: [commonMixin('overlay')],
   props: {
     points: {
-      type: Array
+      type: Array,
+      default: Array
     },
     strokeColor: {
       type: String
@@ -79,7 +91,7 @@ export default {
       editing ? overlay.enableEditing() : overlay.disableEditing()
       this.originInstance = overlay
       map.addOverlay(overlay)
-      bindEvents.call(this, overlay)
+      bindEvents.call(this, overlay, eventList)
     }
   }
 }
