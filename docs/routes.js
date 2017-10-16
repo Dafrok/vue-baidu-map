@@ -420,15 +420,15 @@ const routeMap = [
           en: 'Heatmap'
         },
         component: 'bml-heatmap'
+      },
+      {
+        path: 'curve-line',
+        name: {
+          zh: '弧线',
+          en: 'Curve Line'
+        },
+        component: 'bml-curve-line'
       }
-      // {
-      //   path: 'curve-line',
-      //   name: {
-      //     zh: '弧线',
-      //     en: 'Curve Line'
-      //   },
-      //   component: 'bml-curve-line'
-      // }
     ]
   }
 ]
