@@ -85,7 +85,7 @@
   },
   "dependencies": {
     "bmaplib.curveline": "^1.0.0",
-    "bmaplib.heatmap": "^1.0.0",
+    "bmaplib.heatmap": "^1.0.1",
     "bmaplib.lushu": "^1.0.5",
     "bmaplib.markerclusterer": "^1.0.7"
   }
