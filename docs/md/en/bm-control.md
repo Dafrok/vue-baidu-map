@@ -71,6 +71,9 @@ export default {
 import DistanceTool from 'bmaplib.distancetool'
 
 export default {
+  unmount () {
+    distanceTool && distanceTool.close()
+  },
   methods: {
     setDistanceToolInstance ({map}) {
       this.distanceTool = new DistanceTool(map, {lineStroke : 2})
@@ -104,6 +107,9 @@ export default {
     return {
       zoom: 10
     }
+  },
+  unmount () {
+    distanceTool && distanceTool.close()
   },
   methods: {
     setDistanceToolInstance ({map}) {
