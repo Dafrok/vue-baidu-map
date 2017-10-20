@@ -105,16 +105,16 @@ export default {
       this.reload()
     },
     draggingCursor (val) {
-      this.setDraggingCursor(val)
+      this.originInstance.setDraggingCursor(val)
     },
     rotation (val) {
-      this.setRotation(val)
+      this.originInstance.setRotation(val)
     },
     shadow (val) {
-      this.setShadow(val)
+      this.originInstance.setShadow(val)
     },
     title (val) {
-      this.setTitle(val)
+      this.originInstance.setTitle(val)
     },
     label (val) {
       this.reload()
