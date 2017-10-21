@@ -120,7 +120,6 @@ export default {
     },
     addPolygonPoint () {
       this.polygonPath.push({lng: 116.404, lat: 39.915})
-      this.$nextTick(global.componentHandler.upgradeDom)
     }
   }
 }

@@ -117,7 +117,6 @@ export default {
     },
     addPolylinePoint () {
       this.polylinePath.push({lng: 116.404, lat: 39.915})
-      this.$nextTick(global.componentHandler.upgradeDom)
     }
   }
 }
