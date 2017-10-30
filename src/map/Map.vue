@@ -216,6 +216,7 @@ export default {
           const $script = document.createElement('script')
           global.document.body.appendChild($script)
           $script.src = `https://api.map.baidu.com/api?v=2.0&ak=${ak}&callback=_initBaiduMap`
+          console.log('tjn!!!!!!!!!!!!!!!!!!!!!');
         })
         return global.BMap._preloader
       } else if (!global.BMap._preloader) {
