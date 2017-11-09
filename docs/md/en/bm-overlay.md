@@ -97,7 +97,7 @@ export default {
     :class="{sample: true, active}"
     pane="labelPane"
     @draw="draw">
-    <div v-text="text"></div>
+    <div v-text="text" @click="handleClick"></div>
   </bm-overlay>
 </template>
 
@@ -113,6 +113,9 @@ export default {
     }
   },
   methods: {
+    handleClick () {
+      global.alert('Well done.')
+    },
     draw ({el, BMap, map}) {
       const {lng, lat} = this.position
       const pixel = map.pointToOverlayPixel(new BMap.Point(lng, lat))
@@ -148,7 +151,7 @@ export default {
   <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15">
     <my-overlay
       :position="{lng: 116.404, lat: 39.915}"
-      text="天安门上太阳升"
+      text="Click Me"
       :active="active"
       @mouseover.native="active = true"
       @mouseleave.native="active = false">
@@ -178,7 +181,7 @@ export default {
     <bm-view class="map"></bm-view>
     <my-overlay
       :position="{lng: position.lng, lat: position.lat}"
-      text="天安门上太阳升"
+      text="Click Me"
       :active="active"
       @mouseover.native="active = true"
       @mouseleave.native="active = false">
@@ -207,44 +210,7 @@ export default {
 </doc-preview>
 
 <script>
-import Vue from 'vue'
-
-const MyOverlay = Vue.extend({
-  render (h) {
-    return h('bm-overlay', {
-      class: {
-        sample: true,
-        active: this.active
-      },
-      props: {
-        pane: 'labelPane'
-      },
-      on: {
-        draw: this.draw
-      },
-      ref: 'customOverlay'
-    }, [
-      h('div', this.text)
-    ])
-  },
-  watch: {
-    position: {
-      handler () {
-        this.$refs.customOverlay.reload()
-      },
-      deep: true
-    }
-  },
-  props: ['text', 'position', 'active'],
-  methods: {
-    draw ({el, BMap, map}) {
-      const {lng, lat} = this.position
-      const pixel = map.pointToOverlayPixel(new BMap.Point(lng, lat))
-      el.style.left = pixel.x - 60 + 'px'
-      el.style.top = pixel.y - 20 + 'px'
-    }
-  }
-})
+import MyOverlay from 'docs/components/MyOverlay.vue'
 
 export default {
   data () {
