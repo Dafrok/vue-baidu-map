@@ -11,7 +11,7 @@
 - [] 提供问题复现用例：
     - 可以是一段代码，务必使用三个连续反引号加语言名称括起进行排版（参考 https://guides.github.com/features/mastering-markdown/）
     - 也可以是一个在线演示（推荐使用 https://codepen.io）。
-    - 示例：
+    - 格式范例：
 ```vue
 <template>
 <span>hello world</span>
