@@ -1,5 +1,6 @@
 import CateView from './components/CateView.vue'
 import Index from './components/Index.vue'
+import Issues from './components/Issues.vue'
 
 const langs = ['zh', 'en']
 
@@ -437,6 +438,14 @@ export default [
   {
     path: '/',
     component: Index
+  },
+  {
+    path: '/issues',
+    name: 'ISSUE',
+    component: Issues,
+    meta: {
+      hidden: true
+    }
   },
   ...langs.reduce((map, lang) => map.concat(genRouteMap(routeMap, lang)), [])
 ]
