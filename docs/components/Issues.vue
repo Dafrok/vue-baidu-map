@@ -1,20 +1,32 @@
 <template lang="pug">
-md-layout
-  md-layout
-    md-tabs(@change="changeType")
-      md-tab(:md-label="type.label" v-for="type in formTypes") 
-        form(novalidate)
-          md-input-container(v-for="item in type.items")
-            label(v-text="item.label")
-            md-input(v-if="item.type === 'input'" v-model="formData[type.name][item.name]")
-            md-textarea(v-if="item.type === 'textarea'" v-model="formData[type.name][item.name]")
-          md-button.md-raised.md-primary(@click="openIssue") 提交
-  md-layout
-    article.md-preview
-      pre(v-text="preview")
+md-layout.issues
+  md-layout.issues-card
+    md-dialog-alert(
+      md-content="表单信息不完整！"
+      md-ok-text="确定"
+      ref="dialog")
+    md-whiteframe
+      md-tabs(@change="changeType")
+        md-tab(:md-label="type.label" v-for="type in formTypes")
+          form
+            md-input-container(v-for="item in type.items")
+              label(v-text="item.label")
+              md-input(v-if="item.type === 'input'" v-model="formData[type.name][item.name]", :required="true")
+              md-textarea(v-if="item.type === 'textarea'" v-model="formData[type.name][item.name]")
+            md-button.md-raised.md-primary(@click="openIssue") 提交
+  md-layout.issues-card
+    md-whiteframe
+      md-toolbar
+        span.md-title 预览
+      article.md-preview.markdown-body(v-html="preview")
 </template>
 
 <script>
+import MarkdownIt from 'markdown-it'
+const md = new MarkdownIt({
+  html: true
+})
+
 const formTypes = {
   bug: {
     label: 'BUG 反馈',
@@ -138,11 +150,27 @@ export default {
     changeType (i) {
       this.issueType = i
     },
+    openDialog (ref) {
+      this.$refs[ref].open()
+    },
+    closeDialog (ref) {
+      this.$refs[ref].close()
+    },
     openIssue () {
+      let isValid = true
+      const {issueType, content, formTypes, formData, openDialog} = this
+      const data = formData[formTypes[issueType].name]
+      for (const key in data) {
+        if (!data[key]) {
+          isValid = false
+        }
+      }
+      const url = 'https://github.com/Dafrok/vue-baidu-map/issues/new?title=' + encodeURIComponent(data.title) + '&body=' + encodeURIComponent(content)
+      isValid ? global.open(url) : openDialog('dialog')
     }
   },
   computed: {
-    preview () {
+    content () {
       let lines = []
       const {formTypes, issueType, formData} = this
       const formType = formTypes[issueType]
@@ -165,18 +193,27 @@ export default {
       })
       lines.push(`<!-- Created by issues bot. DO NOT REMOVE. -->`)
       return lines.join('\n')
+    },
+    preview () {
+      return md.render(this.content)
     }
   }
 }
 </script>
 
 <style lang="stylus">
-.md-preview
-  display block
-  flex 1
-  background #f9f9f9
-  pre
-    border none
-.doc
-  padding 0
+.issues
+  .issues-card
+    padding 20px 10px
+    flex 1
+    .md-whiteframe
+      flex 1
+  .md-preview
+    display block
+    flex 1
+    padding 10px
+    pre
+      background #eee
+  .doc
+    padding 0
 </style>
