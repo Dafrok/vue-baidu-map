@@ -1,28 +1,7 @@
 <!--
 
-为减少沟通成本，务必认真阅读下列内容，不满足条件的 ISSUE 将被立即关闭。
+注意：请使用 https://dafrok.github.io/vue-baidu-map/#/issues 创建新 ISSUE
 
-在使用中遇到问题请按照以下步骤进行检查：
-
-- [] 查看 ISSUE 中是否有人提过相同的问题。
-- [] 参照文档中的示例代码做对比，示例是否有同样的问题，你的代码与示例哪里不一样。
-- [] 如果视图层输出不符合预期，请使用尝试检查组件库与百度地图 JS API 使用相同的参数时的输出是否相同，如果不同请提供您所使用的参数。
-- [] 提供你的组件库版本号、vue 版本号、浏览器版本号以及完整的异常信息。
-- [] 提供问题复现用例：
-    - 可以是一段代码，务必使用三个连续反引号加语言名称括起进行排版（参考 https://guides.github.com/features/mastering-markdown/）
-    - 也可以是一个在线演示（推荐使用 https://codepen.io）。
-    - 格式范例：
-```vue
-<template>
-<span>hello world</span>
-</template>
-
-<script>
-export default {}
-</script>
-```
-- [] 定位出问题的点，具体加入了哪个参数 / 哪行代码 / 做了哪些操作能使问题复现。
-
-百度地图组件库是百度地图 JS API 的一个视图逻辑的抽象，不涉及任何核心业务逻辑。如果您的问题不满足前三项条件，请移步官方社区 http://bbs.lbsyun.baidu.com/forum.php 进行反馈。
+不符合条件的 ISSUE 将被机器人自动关闭！
 
 -->
