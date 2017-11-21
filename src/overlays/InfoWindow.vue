@@ -40,7 +40,8 @@ export default {
       type: Boolean
     },
     closeOnClick: {
-      type: Boolean
+      type: Boolean,
+      default: true
     },
     message: {
       type: String
