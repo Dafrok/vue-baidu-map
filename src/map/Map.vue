@@ -230,10 +230,14 @@ export default {
         .then(initMap)
     }
   },
+  deactivated () {
+    this._toReady = false
+  },
   activated () {
-    this.reset()
+    !this._toReady && this.reset()
   },
   mounted () {
+    this._toReady = true
     this.reset()
   },
   data () {
