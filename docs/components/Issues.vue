@@ -38,6 +38,10 @@ const formTypes = {
         label: '现象描述',
         type: 'textarea'
       },
+      errMsg: {
+        label: '完整异常信息',
+        type: 'textarea'
+      },
       demo: '在线示例 / 仓库 URL',
       code: {
         label: '复现用例',
@@ -59,6 +63,10 @@ const formTypes = {
       demo: '在线示例 URL',
       description: {
         label: '功能描述',
+        type: 'textarea'
+      },
+      usage: {
+        label: '用法示例',
         type: 'textarea'
       }
     }
@@ -87,6 +95,7 @@ const typesOrder = [
       'depVer',
       'packageVer',
       'description',
+      'errMsg',
       'demo',
       'code',
       'expect',
@@ -97,7 +106,8 @@ const typesOrder = [
     name: 'featrue',
     items: [
       'demo',
-      'description'
+      'description',
+      'usage'
     ]
   },
   {
