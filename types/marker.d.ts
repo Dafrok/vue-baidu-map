@@ -1,4 +1,13 @@
-import { Point, Size, Icon } from './base/common'
+import { Point, Size, Icon, Animation } from './base/common'
+
+interface Label {
+  content: string
+  opts: {
+    offset: Size
+    position: Point
+    enableMassClear: boolean
+  }
+}
 
 export declare class Marker {
   position: Point
@@ -12,5 +21,23 @@ export declare class Marker {
    * @default false
    */
   dragging: boolean
-  
+  /**
+   * @default true
+   */
+  clicking: boolean
+  /**
+   * @default false
+   */
+  raiseOnDrag: boolean
+  draggingCursor: string
+  rotation: number
+  shadow: Icon
+  title: string
+  label: Label
+  animation: Animation | null
+  /**
+   * @default false
+   */
+  top: boolean
+  zIndex: number
 }

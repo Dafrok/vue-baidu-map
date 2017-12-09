@@ -11,15 +11,15 @@ import { Copyright } from './copyright'
 import { CityList } from './city-list'
 import { Panorama } from './panorama'
 import { Control } from './control'
-// import { Marker } from './marker'
-// import { PointCollection } from './point-collection'
-// import { Polyline } from './polyline'
-// import { Polygon } from './polygon'
-// import { Circle } from './circle'
-// import { Ground } from './ground'
-// import { Label } from './label'
-// import { InfoWindow } from './info-window'
-// import { Overlay } from './overlay'
+import { Marker } from './marker'
+import { PointCollection } from './point-collection'
+import { Polyline } from './polyline'
+import { Polygon } from './polygon'
+import { Circle } from './circle'
+import { Ground } from './ground'
+import { Label } from './label'
+import { InfoWindow } from './info-window'
+import { Overlay } from './overlay'
 // import { ContextMenu } from './menu'
 // import { ContextMenuItem } from './item'
 // import { LocalSearch } from './local-search'
@@ -63,15 +63,15 @@ export class BmCopyright extends Copyright {}
 export class BmCityList extends CityList {}
 export class BmPanorama extends Panorama {}
 export class BmControl extends Control {}
-// export class BmMarker extends Marker {}
-// export class BmPointCollection extends PointCollection {}
-// export class BmPolyline extends Polyline {}
-// export class BmPolygon extends Polygon {}
-// export class BmCircle extends Circle {}
-// export class BmGround extends Ground {}
-// export class BmLabel extends Label {}
-// export class BmInfoWindow extends InfoWindow {}
-// export class BmOverlay extends Overlay {}
+export class BmMarker extends Marker {}
+export class BmPointCollection extends PointCollection {}
+export class BmPolyline extends Polyline {}
+export class BmPolygon extends Polygon {}
+export class BmCircle extends Circle {}
+export class BmGround extends Ground {}
+export class BmLabel extends Label {}
+export class BmInfoWindow extends InfoWindow {}
+export class BmOverlay extends Overlay {}
 // export class BmContextMenu extends ContextMenu {}
 // export class BmContextMenuItem extends ContextMenuItem {}
 // export class BmLocalSearch extends LocalSearch {}

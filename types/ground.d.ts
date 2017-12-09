@@ -1,12 +1,24 @@
-export type ControlAnchor = 
-'BMAP_ANCHOR_TOP_LEFT' 
-| 'BMAP_ANCHOR_TOP_RIGHT'
-| 'BMAP_ANCHOR_BOTTOM_LEFT'
-| 'BMAP_ANCHOR_BOTTOM_RIGHT'
+import { Bounds } from './base/common'
 
-export type Size = { width: number, height: number }
-
-export declare class Scale {
-anchor: ControlAnchor
-offset: Size
+export declare class Ground {
+  /**
+   * 设置图层显示的矩形区域
+   */
+  bounds: Bounds
+  /**
+   * 设置图层的透明度
+   */
+  opacity: number
+  /**
+   * 图层地址
+   */
+  imageURL: string
+  /**
+   * 设置图层显示的最小级别
+   */
+  displayOnMinLevel: number
+  /**
+   * 设置图层显示的最大级别
+   */
+  displayOnMaxLevel: number
 }
