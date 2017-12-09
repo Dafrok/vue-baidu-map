@@ -8,7 +8,7 @@
 
 |属性名|类型|默认值|描述|
 |------|-----|-----|----|
-|position|Size||标注的位置|
+|position|Point||标注的位置|
 |offset|Size||标注的位置偏移值|
 |icon|Icon||标注所用的图标对象|
 |massClear|Boolean|true|是否在调用map.clearOverlays清除此覆盖物|

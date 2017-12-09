@@ -8,7 +8,7 @@
 
 |name|type|default|description|
 |------|-----|-----|----|
-|position|Size||The position of the marker.|
+|position|Point||The position of the marker.|
 |offset|Size||The offset of the marker.|
 |icon|Icon||The marker icon.|
 |massClear|Boolean|true|Whether remove this overlay or not when `map.clearOverlays` is called.|

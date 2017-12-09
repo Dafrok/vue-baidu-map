@@ -16,7 +16,7 @@
 |max-zoom|Number||最大缩放级别|
 |high-resolution|Boolean|true|高分屏模式 该项仅在地图组件挂载时加载一次|
 |map-click|Boolean|true|允许点击 该项仅在地图组件挂载时加载一次|
-|map-type|Number|global.BMAP_NORMAL_MAP|地图类型|
+|map-type|String|global.BMAP_NORMAL_MAP|地图类型|
 |dragging|Boolean|true|允许拖拽|
 |scroll-wheel-zoom|Boolean|false|允许鼠标滚轮缩放|
 |double-click-zoom|Boolean|true|允许双击缩放|
