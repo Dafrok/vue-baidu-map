@@ -20,15 +20,15 @@ import { Ground } from './ground'
 import { Label } from './label'
 import { InfoWindow } from './info-window'
 import { Overlay } from './overlay'
-// import { ContextMenu } from './menu'
-// import { ContextMenuItem } from './item'
-// import { LocalSearch } from './local-search'
-// import { Transit } from './transit'
-// import { Walking } from './walking'
-// import { Driving } from './driving'
-// import { Bus } from './bus'
-// import { Tile } from './tile'
-// import { Traffic } from './traffic'
+import { Menu } from './menu'
+import { Item } from './item'
+import { LocalSearch } from './local-search'
+import { Transit } from './transit'
+import { Walking } from './walking'
+import { Driving } from './driving'
+import { Bus } from './bus'
+import { Tile } from './tile'
+import { Traffic } from './traffic'
 // import { Boundary } from './boundary'
 // import { AutoComplete } from './auto-complete'
 
@@ -72,14 +72,14 @@ export class BmGround extends Ground {}
 export class BmLabel extends Label {}
 export class BmInfoWindow extends InfoWindow {}
 export class BmOverlay extends Overlay {}
-// export class BmContextMenu extends ContextMenu {}
-// export class BmContextMenuItem extends ContextMenuItem {}
-// export class BmLocalSearch extends LocalSearch {}
-// export class BmTransit extends Transit {}
-// export class BmWalking extends Walking {}
-// export class BmDriving extends Driving {}
-// export class BmBus extends Bus {}
-// export class BmTile extends Tile {}
-// export class BmTraffic extends Traffic {}
+export class BmContextMenu extends Menu {}
+export class BmContextMenuItem extends Item {}
+export class BmLocalSearch extends LocalSearch {}
+export class BmTransit extends Transit {}
+export class BmWalking extends Walking {}
+export class BmDriving extends Driving {}
+export class BmBus extends Bus {}
+export class BmTile extends Tile {}
+export class BmTraffic extends Traffic {}
 // export class BmBoundary extends Boundary {}
 // export class BmAutoComplete extends AutoComplete {}

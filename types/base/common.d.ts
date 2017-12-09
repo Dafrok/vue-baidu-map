@@ -37,6 +37,17 @@ export type SizeType =
   | 'BMAP_POINT_SIZE_BIGGER' // 宽高为20px*20px
   | 'BMAP_POINT_SIZE_HUGE' // 宽高为30px*30px
 
+export type TransitPolicy =
+  'BMAP_TRANSIT_POLICY_LEAST_TIME' // 最少时间
+  | 'BMAP_TRANSIT_POLICY_LEAST_TRANSFER' // 最少换乘
+  | 'BMAP_TRANSIT_POLICY_LEAST_WALKING' // 最少步行
+  | 'BMAP_TRANSIT_POLICY_AVOID_SUBWAYS' // 不乘地铁
+
+export type DrivingPolicy =
+  'BMAP_DRIVING_POLICY_LEAST_TIME' // 最少时间
+  | 'BMAP_DRIVING_POLICY_LEAST_DISTANCE' // 最短距离
+  | 'BMAP_DRIVING_POLICY_AVOID_HIGHWAYS' // 避开高速
+  
 export type Size = { width: number, height: number }
 
 export type Point = { lng: number, lat: number }
@@ -63,4 +74,33 @@ export interface Icon {
 export interface Bounds {
   sw: Point
   ne: Point
+}
+
+export interface Copyright {
+  id: number
+  content: string
+  bounds?: Bounds
+}
+
+export interface PredictDate {
+  // 预测日期，取值1到7，表示周一到周日
+  weekday: number
+  // 预测小时数，取值0到23，表示当日的0点到23点
+  hour: number
+}
+
+// 详见：http://lbsyun.baidu.com/cms/jsapi/class/jsapi_reference.html#a7b5
+interface LocalResultPoi {
+  title: string
+  point: Point
+  url: string
+  address: string
+  city: string
+  phoneNumber: string
+  postcode: string
+  type: any
+  isAccurate: boolean
+  province: string
+  tags: string[]
+  detailUrl: string
 }
