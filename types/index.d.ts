@@ -29,8 +29,8 @@ import { Driving } from './driving'
 import { Bus } from './bus'
 import { Tile } from './tile'
 import { Traffic } from './traffic'
-// import { Boundary } from './boundary'
-// import { AutoComplete } from './auto-complete'
+import { Boundary } from './boundary'
+import { AutoComplete } from './auto-complete'
 
 export interface InstallationOptions {
   /**
@@ -81,5 +81,5 @@ export class BmDriving extends Driving {}
 export class BmBus extends Bus {}
 export class BmTile extends Tile {}
 export class BmTraffic extends Traffic {}
-// export class BmBoundary extends Boundary {}
-// export class BmAutoComplete extends AutoComplete {}
+export class BmBoundary extends Boundary {}
+export class BmAutoComplete extends AutoComplete {}
