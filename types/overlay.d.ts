@@ -9,5 +9,8 @@ type MapPanes =
   | 'mapPane' // 折线、多边形等矢量图形所在的容器
 
 export declare class Overlay {
+  /**
+   * 自定义覆盖物所在容器。
+   */
   pane: MapPanes
 }

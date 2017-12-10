@@ -1,21 +1,22 @@
 
+
 export type ControlAnchor = 
-  'BMAP_ANCHOR_TOP_LEFT' 
-  | 'BMAP_ANCHOR_TOP_RIGHT'
-  | 'BMAP_ANCHOR_BOTTOM_LEFT'
-  | 'BMAP_ANCHOR_BOTTOM_RIGHT'
+  'BMAP_ANCHOR_TOP_LEFT' // 控件将定位到地图的左上角
+  | 'BMAP_ANCHOR_TOP_RIGHT' // 控件将定位到地图的右上角
+  | 'BMAP_ANCHOR_BOTTOM_LEFT' // 控件将定位到地图的左下角
+  | 'BMAP_ANCHOR_BOTTOM_RIGHT' // 控件将定位到地图的右下角
 
 export type MapType = 
-  'BMAP_NORMAL_MAP' 
-  | 'BMAP_PERSPECTIVE_MAP'
-  | 'BMAP_SATELLITE_MAP'
-  | 'BMAP_HYBRID_MAP'
+  'BMAP_NORMAL_MAP' // 此地图类型展示普通街道视图  
+  | 'BMAP_PERSPECTIVE_MAP' // 此地图类型展示透视图像视图  
+  | 'BMAP_SATELLITE_MAP' // 此地图类型展示卫星视图  
+  | 'BMAP_HYBRID_MAP' // 此地图类型展示卫星和路网的混合视图  
 
 export type NavigationControlType = 
-  'BMAP_NAVIGATION_CONTROL_LARGE'
-  | 'BMAP_NAVIGATION_CONTROL_SMALL'
-  | 'BMAP_NAVIGATION_CONTROL_PAN'
-  | 'BMAP_NAVIGATION_CONTROL_ZOOM'
+  'BMAP_NAVIGATION_CONTROL_LARGE' // 标准的平移缩放控件（包括平移、缩放按钮和滑块）  
+  | 'BMAP_NAVIGATION_CONTROL_SMALL' // 仅包含平移和缩放按钮  
+  | 'BMAP_NAVIGATION_CONTROL_PAN' // 仅包含平移按钮  
+  | 'BMAP_NAVIGATION_CONTROL_ZOOM' // 仅包含缩放按钮
 
 export type Animation = 
   'BMAP_ANIMATION_DROP' // 坠落动画  
@@ -48,8 +49,19 @@ export type DrivingPolicy =
   | 'BMAP_DRIVING_POLICY_LEAST_DISTANCE' // 最短距离
   | 'BMAP_DRIVING_POLICY_AVOID_HIGHWAYS' // 避开高速
   
+export type MapTypeControlType =
+  'BMAP_MAPTYPE_CONTROL_HORIZONTAL' // 按钮水平方式展示，默认采用此类型展示
+  | 'BMAP_MAPTYPE_CONTROL_DROPDOWN' // 按钮呈下拉列表方式展示
+  | 'BMAP_MAPTYPE_CONTROL_MAP	' // 以图片方式展示类型控件，设置该类型后无法指定maptypes属性
+
+/**
+ * 以像素表示一个矩形区域的大小。
+ */  
 export type Size = { width: number, height: number }
 
+/**
+ * 表示一个地理坐标点
+ */
 export type Point = { lng: number, lat: number }
 
 export interface IconOptions {
@@ -76,6 +88,9 @@ export interface Bounds {
   ne: Point
 }
 
+/**
+ * 表示一条版权信息
+ */
 export interface Copyright {
   id: number
   content: string
