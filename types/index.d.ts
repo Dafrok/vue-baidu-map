@@ -31,6 +31,10 @@ import { Tile } from './tile'
 import { Traffic } from './traffic'
 import { Boundary } from './boundary'
 import { AutoComplete } from './auto-complete'
+import { MarkerClusterer } from './marker-clusterer'
+import { Heatmap } from './heatmap'
+import { Lushu } from './lushu'
+import { CurveLine } from './curve-line'
 
 export interface InstallationOptions {
   /**
@@ -83,3 +87,7 @@ export class BmTile extends Tile {}
 export class BmTraffic extends Traffic {}
 export class BmBoundary extends Boundary {}
 export class BmAutoComplete extends AutoComplete {}
+export class BmlMarkerClusterer extends MarkerClusterer {}
+export class BmlLushu extends Lushu {}
+export class BmlHeatmap extends Heatmap {}
+export class BmlCurveLine extends CurveLine {}
