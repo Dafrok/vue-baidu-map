@@ -19,7 +19,7 @@ export default {
       type: Number
     },
     minClusterSize: {
-      type: Number
+      type: Object
     },
     styles: {
       type: Array,
