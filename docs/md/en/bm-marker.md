@@ -19,6 +19,7 @@
 |rotation|Number||Rotation degree.|
 |shadow|Icon||Shadow icon.|
 |title|String||The title of the marker.|
+|label|Label||The label of the marker.|
 |animation|String||Animation effects.|
 |top|Boolean|false|Set whether the marker is at the top of others.|
 |zIndex|Number|0|Set z-index of the marker.|

@@ -13,9 +13,9 @@
 |strokeWeight|Number||折线的宽度，以像素为单位|
 |strokeOpacity|Number||折线的透明度，取值范围0 - 1|
 |strokeStyle|String|'solid'|折线的样式，solid或dashed|
-|enableMassClear|Boolean|true|是否在调用map.clearOverlays清除此覆盖物|
-|enableEditing|Boolean|false|是否启用线编辑|
-|enableClicking|Boolean|true|是否响应点击事件|
+|massClear|Boolean|true|是否在调用map.clearOverlays清除此覆盖物|
+|editing|Boolean|false|是否启用线编辑|
+|clicking|Boolean|true|是否响应点击事件|
 
 ## 事件
 

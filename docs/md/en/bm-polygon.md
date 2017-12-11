@@ -15,9 +15,9 @@
 |strokeStyle|String|'solid'|Polygon stroke style. `'solid'` or `'dashed'`.|
 |fillColor|String||Polygon fill color.|
 |fillOpacity|Number||Polygon fill opacity.|
-|enableMassClear|Boolean|true|Whether remove this overlay or not when `map.clearOverlays` is called.|
-|enableEditing|Boolean|false|Enable editing the polygon.|
-|enableClicking|Boolean|true|Whether to respond to a click event.|
+|massClear|Boolean|true|Whether remove this overlay or not when `map.clearOverlays` is called.|
+|editing|Boolean|false|Enable editing the polygon.|
+|clicking|Boolean|true|Whether to respond to a click event.|
 
 ## Events
 
