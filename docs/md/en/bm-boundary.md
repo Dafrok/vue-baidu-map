@@ -15,8 +15,8 @@ The `BmBoundary` component rendered by and inherits from the` bm-polygon` compon
 |strokeStyle|String|'solid'|Polygon stroke style. `'solid'` or `'dashed'`.|
 |fillColor|String||Polygon fill color.|
 |fillOpacity|Number||Polygon fill opacity.|
-|enableMassClear|Boolean|true|Whether remove this overlay or not when `map.clearOverlays` is called.|
-|enableClicking|Boolean|true|Whether to respond to a click event.|
+|massClear|Boolean|true|Whether remove this overlay or not when `map.clearOverlays` is called.|
+|clicking|Boolean|true|Whether to respond to a click event.|
 
 ## Events
 

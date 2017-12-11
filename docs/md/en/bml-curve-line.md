@@ -13,9 +13,9 @@
 |strokeWeight|Number||Polyline stroke width.|
 |strokeOpacity|Number||Polyline stroke opacity.|
 |strokeStyle|String|'solid'|Polyline stroke style. `'solid'` or `'dashed'`.|
-|enableMassClear|Boolean|true|Whether remove this overlay or not when `map.clearOverlays` is called.|
-|enableEditing|Boolean|false|Enable editing the polyline.|
-|enableClicking|Boolean|true|Whether to respond to a click event.|
+|massClear|Boolean|true|Whether remove this overlay or not when `map.clearOverlays` is called.|
+|editing|Boolean|false|Enable editing the polyline.|
+|clicking|Boolean|true|Whether to respond to a click event.|
 
 ## Events
 

@@ -8,7 +8,7 @@
 
 |name|type|default|description|
 |------|-----|-----|----|
-|position|Size||The position of the marker.|
+|position|Point||The position of the marker.|
 |offset|Size||The offset of the marker.|
 |icon|Icon||The marker icon.|
 |massClear|Boolean|true|Whether remove this overlay or not when `map.clearOverlays` is called.|
@@ -19,6 +19,7 @@
 |rotation|Number||Rotation degree.|
 |shadow|Icon||Shadow icon.|
 |title|String||The title of the marker.|
+|label|Label||The label of the marker.|
 |animation|String||Animation effects.|
 |top|Boolean|false|Set whether the marker is at the top of others.|
 |zIndex|Number|0|Set z-index of the marker.|

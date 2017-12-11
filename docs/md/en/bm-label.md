@@ -14,7 +14,7 @@
 |offset|Size||Offset of the label.|
 |position|Point||Position of the label.|
 |zIndex|Number||Z-index of the label.|
-|enableMassClear|Boolean|true|Whether remove this overlay or not when `map.clearOverlays` is called.|
+|massClear|Boolean|true|Whether remove this overlay or not when `map.clearOverlays` is called.|
 
 ## Events
 

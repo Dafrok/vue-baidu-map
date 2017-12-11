@@ -8,7 +8,7 @@
 
 |属性名|类型|默认值|描述|
 |------|-----|-----|----|
-|position|Size||标注的位置|
+|position|Point||标注的位置|
 |offset|Size||标注的位置偏移值|
 |icon|Icon||标注所用的图标对象|
 |massClear|Boolean|true|是否在调用map.clearOverlays清除此覆盖物|
@@ -19,6 +19,7 @@
 |rotation|Number||旋转角度|
 |shadow|Icon||阴影图标|
 |title|String||鼠标移到marker上的显示内容|
+|label|Label||为标注添加文本标注|
 |animation|String||动画效果|
 |top|Boolean|false|将标注置于其他标注之上。默认情况下，纬度较低的标注会覆盖在纬度较高的标注之上，从而形成一种立体效果。通过此方法可使某个标注覆盖在其他所有标注之上。注意：如果在多个标注对象上调用此方法，则这些标注依旧按照纬度产生默认的覆盖效果。|
 |zIndex|Number|0|设置覆盖物的zIndex|
