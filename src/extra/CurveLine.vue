@@ -66,6 +66,9 @@ export default {
     strokeWeight (val) {
       this.originInstance.setStrokeOpacity(val)
     },
+    strokeStyle (val) {
+      this.originInstance.setStrokeStyle(val)
+    },
     editing (val) {
       val ? this.originInstance.enableEditing() : this.originInstance.disableEditing()
     },
