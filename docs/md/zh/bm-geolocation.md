@@ -15,7 +15,7 @@
 ## 事件
 |事件名|参数|描述|
 |------|-----|----|
-|locationSuccess|{point, AddressComponent}|定位成功后触发此事件|
+|locationSuccess|{point, AddressComponent, marker}|定位成功后触发此事件|
 |locationError|{StatusCode}|定位失败后触发此事件|
 
 ## 示例

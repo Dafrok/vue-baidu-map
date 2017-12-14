@@ -14,9 +14,9 @@
 
 ## Events
 
-|事件名|参数|描述|
+|name|parameter|description|
 |------|-----|----|
-|locationSuccess|{point, AddressComponent}|Triggers when locationing is successful.|
+|locationSuccess|{point, AddressComponent, marker}|Triggers when locationing is successful.|
 |locationError|{StatusCode}|Triggers when locationing is failed.|
 
 ## Examples
