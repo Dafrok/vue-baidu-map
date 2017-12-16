@@ -8,7 +8,7 @@
 
 |属性名|类型|默认值|描述|
 |------|-----|-----|----|
-|center|Point||圆心，单位为米|
+|center|Point||圆心，是圆形中心点坐标|
 |radius|Number||半径，单位为米|
 |strokeColor|String||折线颜色|
 |strokeWeight|Number||折线的宽度，以像素为单位|
