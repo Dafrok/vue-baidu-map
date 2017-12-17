@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import BaiduMap from '@/index.js'
+// import BaiduMap from '@/index.js'
 
 export const createApp = ({template = `<baidu-map></baidu-map>`, methods = {}}) => {
   const $root = document.createElement('div')
