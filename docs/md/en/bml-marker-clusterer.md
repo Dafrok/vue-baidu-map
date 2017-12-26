@@ -23,7 +23,7 @@
 <baidu-map class="map" center="中国">
   <bml-marker-clusterer :averageCenter="true">
     <bm-marker v-for="marker of markers" :position="{lng: marker.lng, lat: marker.lat}"></bm-marker>
-  <bml-marker-clusterer>
+  </bml-marker-clusterer>
 </baidu-map>
 </template>
 
