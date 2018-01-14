@@ -179,6 +179,9 @@ export default {
       autoResize ? map.enableAutoResize() : map.disableAutoResize()
     },
     init (BMap) {
+      if (this.map) {
+        return
+      }
       let $el = this.$refs.view
       for (let $node of this.$slots.default || []) {
         if ($node.componentOptions && $node.componentOptions.tag === 'bm-view') {
@@ -240,14 +243,7 @@ export default {
         .then(initMap)
     }
   },
-  deactivated () {
-    this._toReady = false
-  },
-  activated () {
-    !this._toReady && this.reset()
-  },
   mounted () {
-    this._toReady = true
     this.reset()
   },
   data () {

@@ -34,6 +34,9 @@ export default {
 </script>
 
 <style lang="stylus">
+::-webkit-scrollbar
+  width 0
+
 h1.title {
   .logo {
     width: 2.5rem;
