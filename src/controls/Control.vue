@@ -27,7 +27,7 @@ export default {
         this.defaultOffset = createSize(BMap, offset)
       }
       Control.prototype = new BMap.Control()
-      Control.prototype.initialize = map => map.getContainer().appendChild($el), $el
+      Control.prototype.initialize = map => map.getContainer().appendChild($el)
       this.originInstance = new Control(anchor, offset)
       map.addControl(this.originInstance)
     }
