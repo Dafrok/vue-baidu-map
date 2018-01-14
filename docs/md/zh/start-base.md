@@ -220,6 +220,17 @@
 }
 ```
 
+### MapStyle
+
+该类用于设置地图样式，使用对象字面量形式表示。
+
+```javascript
+{
+  features: Array,
+  style: String
+}
+```
+
 ## 参考
 
 > [百度地图官方文档](http://lbsyun.baidu.com/cms/jsapi/reference/jsapi_reference.html)

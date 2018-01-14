@@ -1,4 +1,4 @@
-import { MapType, Point } from './base/common'
+import { MapType, Point, MapStyle } from './base/common'
 
 export declare class Map {
   /**
@@ -78,6 +78,10 @@ export declare class Map {
   autoResize: boolean
   /**
    * 自定义主题
+   */
+  mapStyle: MapStyle
+  /**
+   * 自定义主题的 StyleJSON alias
    */
   theme: any[]
 }

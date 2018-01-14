@@ -220,6 +220,17 @@ Describes a predict date of traffic flow.
 }
 ```
 
+### MapStyle
+
+Describe a custom style of map.
+
+```javascript
+{
+  features: Array,
+  style: String
+}
+```
+
 ## Reference
 
 > [Official Documentation](http://lbsyun.baidu.com/cms/jsapi/reference/jsapi_reference.html)

@@ -25,7 +25,8 @@
 |continuous-zoom|Boolean|false|允许无级缩放|
 |pinch-to-zoom|Boolean|true|允许双指缩放|
 |auto-resize|Boolean|true|允许自适应容器尺寸|
-|theme|Array||自定义主题|
+|mapStyle|MapStyle||自定义地图样式主题|
+|~~theme~~|Array||自定义主题，是 `mapStyle.styleJson` 属性的别名，可能会在下一个主版本中 **移除** ，不推荐使用|
 
 ## 事件
 |事件名|参数|描述|

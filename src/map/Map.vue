@@ -71,6 +71,9 @@ export default {
     },
     theme: {
       type: Array
+    },
+    mapStyle: {
+      type: Object
     }
   },
   watch: {
@@ -151,6 +154,13 @@ export default {
     theme (val) {
       const {map} = this
       map.setMapStyle({styleJson: val})
+    },
+    mapStyle: {
+      handler (val) {
+        const {map, theme} = this
+        !theme && map.setMapStyle(val)
+      },
+      deep: true
     }
   },
   methods: {
@@ -178,8 +188,8 @@ export default {
       }
       const map = new BMap.Map($el, {enableHighResolution: this.highResolution, enableMapClick: this.mapClick})
       this.map = map
-      const {setMapOptions, zoom, getCenterPoint, theme} = this
-      theme && map.setMapStyle({styleJson: theme})
+      const {setMapOptions, zoom, getCenterPoint, theme, mapStyle} = this
+      theme ? map.setMapStyle({styleJson: theme}) : map.setMapStyle(mapStyle)
       setMapOptions()
       bindEvents.call(this, map)
       // 此处强行初始化一次地图 回避一个由于错误的 center 字符串导致初始化失败抛出的错误

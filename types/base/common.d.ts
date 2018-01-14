@@ -119,3 +119,9 @@ interface LocalResultPoi {
   tags: string[]
   detailUrl: string
 }
+
+export interface MapStyle {
+  style: string,
+  featrues: any[],
+  styleJson: any[]
+}

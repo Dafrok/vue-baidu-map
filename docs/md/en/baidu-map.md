@@ -26,6 +26,9 @@ The container is an empty DOM node which used to mount other components or DOM n
 |pinch-to-zoom|Boolean|true|Allow pinch to zoom.|
 |auto-resize|Boolean|true|Allow auto resize.|
 |theme|Array||Set custom themes.|
+|mapStyle|MapStyle||Set custom styles of the map.|
+|~~theme~~|Array||Custom theme as an alias of `mapStyle.styleJson`, it might be **REMOVED** in the next major version, not be recommended.|
+
 
 ## Events
 
