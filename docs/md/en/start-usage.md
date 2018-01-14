@@ -33,6 +33,7 @@ Vue.use(BaiduMap, {
 ### Local Registration
 
 A locally registered `BaiduMap` component **must** declare the `ak` attribute.
+All components are stored in the `vue-baidu-map / components` folder.
 
 ```html
 <template>
@@ -41,7 +42,7 @@ A locally registered `BaiduMap` component **must** declare the `ak` attribute.
 </template>
 
 <script>
-import {BaiduMap} from 'vue-baidu-map'
+import {BaiduMap} from 'vue-baidu-map/components/Map/Map.vue'
 export default {
   components: {
     BaiduMap

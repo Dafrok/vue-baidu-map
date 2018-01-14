@@ -33,6 +33,7 @@ Vue.use(BaiduMap, {
 ### 局部注册
 
 如果有按需引入组件的需要，可以选择局部注册百度地图组件，这将减少工程打包后的容量尺寸。局部注册的 `BaiduMap` 组件**必须**声明 `ak` 属性。
+所有的独立组件均存放在 `vue-baidu-map/components` 文件夹下，按需引用即可。
 
 ```html
 <template>
@@ -41,7 +42,7 @@ Vue.use(BaiduMap, {
 </template>
 
 <script>
-import {BaiduMap} from 'vue-baidu-map'
+import {BaiduMap} from 'vue-baidu-map/components/Map/Map.vue'
 export default {
   components: {
     BaiduMap
