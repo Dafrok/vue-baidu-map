@@ -113,14 +113,14 @@
 
 ```html
 <template>
-  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" :theme="theme">
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" :mapStyle="{styleJson: styleJson}">
   </baidu-map>
 </template>
 <script>
 export default {
   data () {
     return {
-      theme: [
+      styleJson: [
         {
           "featureType": "all",
           "elementType": "geometry",
@@ -145,7 +145,7 @@ export default {
 
 #### 预览
 <doc-preview>
-  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" :theme="theme">
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" :mapStyle="{styleJson: styleJson}">
   </baidu-map>
 </doc-preview>
 
@@ -253,7 +253,7 @@ export default {
         lat: 39.915
       },
       zoom: 15,
-      theme: [
+      styleJson: [
         {
           "featureType": "all",
           "elementType": "geometry",
