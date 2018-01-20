@@ -1,6 +1,8 @@
 # Custom Control
 
-`BmControl`
+`BmControl` component allows developers to customize the controls.
+
+Due to the mouse wheel scaling featrue of Baidu Map, scrolling a DOM element with mouse wheel in a custom control component will not to work. It can be resolved by stopping the propagation of `wheel` event.
 
 ## Instance Properties
 
