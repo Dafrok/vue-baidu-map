@@ -45,33 +45,33 @@ export default {
   },
   watch: {
     'center.lng' (val, oldVal) {
-      const {BMap, originInstance, isEditing, disableEditing, enableEditing, center} = this
+      const {BMap, originInstance, isEditing, disableEditing, enableEditing, center, editing} = this
       if (!isEditing) {
         disableEditing()
         const lng = val
         if (val.toString() !== oldVal.toString() && lng >= -180 && lng <= 180) {
           originInstance.setCenter(createPoint(BMap, {lng, lat: center.lat}))
         }
-        enableEditing()
+        editing && enableEditing()
       }
     },
     'center.lat' (val, oldVal) {
-      const {BMap, originInstance, isEditing, disableEditing, enableEditing, center} = this
+      const {BMap, originInstance, isEditing, disableEditing, enableEditing, center, editing} = this
       if (!isEditing) {
         disableEditing()
         const lat = val
         if (val.toString() !== oldVal.toString() && lat >= -74 && lat <= 74) {
           originInstance.setCenter(createPoint(BMap, {lng: center.lng, lat}))
         }
-        enableEditing()
+        editing && enableEditing()
       }
     },
     radius (val, oldVal) {
-      const {originInstance, isEditing, disableEditing, enableEditing} = this
+      const {originInstance, isEditing, disableEditing, enableEditing, editing} = this
       if (!isEditing) {
         disableEditing()
         originInstance.setRadius(val)
-        enableEditing()
+        editing && enableEditing()
       }
     },
     strokeColor (val) {
