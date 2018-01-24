@@ -90,6 +90,7 @@ export default {
       handler (val) {
         const {BMap, originInstance} = this
         originInstance && originInstance.setIcon(createIcon(BMap, val))
+        originInstance && originInstance.setRotation(this.rotation)
       }
     },
     massClear (val) {
