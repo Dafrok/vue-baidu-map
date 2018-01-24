@@ -88,8 +88,9 @@ export default {
     icon: {
       deep: true,
       handler (val) {
-        const {BMap, originInstance} = this
+        const {BMap, originInstance, rotation} = this
         originInstance && originInstance.setIcon(createIcon(BMap, val))
+        rotation && originInstance && originInstance.setRotation(rotation)
       }
     },
     massClear (val) {
