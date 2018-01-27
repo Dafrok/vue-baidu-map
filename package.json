@@ -89,7 +89,7 @@
     "bmaplib.curveline": "^1.0.0",
     "bmaplib.heatmap": "^1.0.4",
     "bmaplib.lushu": "^1.0.7",
-    "bmaplib.markerclusterer": "^1.0.9",
+    "bmaplib.markerclusterer": "^1.0.10",
     "markdown-it": "^8.4.0"
   }
 }
