@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './components/index.js',
   output: {
     path: path.resolve(__dirname, './'),
     filename: '../index.js',
@@ -23,7 +23,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, '../src')
+      '@': path.resolve(__dirname, '../components')
     }
   }
 }

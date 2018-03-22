@@ -34,6 +34,7 @@ Vue.use(BaiduMap, {
 
 A locally registered `BaiduMap` component **must** declare the `ak` attribute.
 All components are stored in the `vue-baidu-map / components` folder.
+As es6 module can't be run directly in most browsers, if importing component causes some runtime errors, please check the webpack's loader configuration whethor the `include` and `exclude` options hits this library.
 
 ```html
 <template>
@@ -42,7 +43,7 @@ All components are stored in the `vue-baidu-map / components` folder.
 </template>
 
 <script>
-import {BaiduMap} from 'vue-baidu-map/components/Map/Map.vue'
+import {BaiduMap} from 'vue-baidu-map/components/map/Map.vue'
 export default {
   components: {
     BaiduMap
