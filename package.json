@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build:docs": "webpack -p --config ./build/webpack.docs.config.js",
-    "build": "webpack -p --config ./build/webpack.prod.config.js && node ./build/compiler.js",
+    "build": "webpack -p --config ./build/webpack.prod.config.js",
     "dev": "webpack-dev-server --content-base docs --config ./build/webpack.docs.config.js --hot --inline",
     "deploy": "npm run build && npm run build:docs",
     "test": "karma start",
