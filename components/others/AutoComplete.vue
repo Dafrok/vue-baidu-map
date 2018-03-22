@@ -5,8 +5,8 @@ span
 </template>
 
 <script>
-import commonMixin from '@/base/mixins/common.js'
-import bindEvents from '@/base/bindEvent.js'
+import commonMixin from '../base/mixins/common.js'
+import bindEvents from '../base/bindEvent.js'
 
 export default {
   name: 'bm-autocomplete',

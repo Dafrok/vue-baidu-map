@@ -20,10 +20,5 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
-  },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, '../components')
-    }
   }
 }

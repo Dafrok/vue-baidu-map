@@ -1,7 +1,7 @@
 <script>
-import {createSize} from '@/base/factory.js'
-import commonMixin from '@/base/mixins/common.js'
-import bindEvents from '@/base/bindEvent.js'
+import {createSize} from '../base/factory.js'
+import commonMixin from '../base/mixins/common.js'
+import bindEvents from '../base/bindEvent.js'
 
 export default {
   name: 'bm-overview-map',

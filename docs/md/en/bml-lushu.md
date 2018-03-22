@@ -125,7 +125,7 @@ export default {
 </doc-preview>
 
 <script>
-import BmlLushu from '@/extra/Lushu.vue'
+import BmlLushu from '../../../components/extra/Lushu.vue'
 export default {
   components: {
     BmlLushu

@@ -1,5 +1,5 @@
 <script>
-import commonMixin from '@/base/mixins/common.js'
+import commonMixin from '../base/mixins/common.js'
 
 export default {
   name: 'bm-triffic',

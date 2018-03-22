@@ -5,8 +5,8 @@ span
 
 <script>
 import MarkerClusterer from 'bmaplib.markerclusterer'
-import {createSize} from '@/base/factory.js'
-import commonMixin from '@/base/mixins/common.js'
+import {createSize} from '../base/factory.js'
+import commonMixin from '../base/mixins/common.js'
 
 export default {
   name: 'bml-marker-cluseter',

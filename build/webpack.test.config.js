@@ -23,7 +23,6 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, '../components'),
       vue: 'vue/dist/vue.js'
     }
   }

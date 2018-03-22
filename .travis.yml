@@ -14,7 +14,7 @@ branches:
 script:
   - npm run lint
   - npm test
-  # - npm run build:docs
+  - npm run build:docs
 # after_script:
 #   - cp ./docs/favicon.png ./dist/
 #   - cd dist

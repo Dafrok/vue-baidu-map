@@ -1,7 +1,7 @@
 <script>
-import BmPolygon from '@/overlays/Polygon.vue'
-import commonMixin from '@/base/mixins/common.js'
-import abstractMixin from '@/base/mixins/abstract.js'
+import BmPolygon from '../overlays/Polygon.vue'
+import commonMixin from '../base/mixins/common.js'
+import abstractMixin from '../base/mixins/abstract.js'
 
 export default {
   abstract: true,

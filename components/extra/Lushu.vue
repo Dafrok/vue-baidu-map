@@ -1,7 +1,7 @@
 <script>
 /*eslint-disable*/
-import commonMixin from '@/base/mixins/common.js'
-import {createIcon} from '@/base/factory.js'
+import commonMixin from '../base/mixins/common.js'
+import {createIcon} from '../base/factory.js'
 import Lushu from 'bmaplib.lushu'
 
 export default {

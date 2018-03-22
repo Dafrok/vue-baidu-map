@@ -102,7 +102,7 @@ export default {
 </template>
 
 <script>
-import BmlCurveLine from '@/extra/CurveLine.vue'
+import BmlCurveLine from '../../../components/extra/CurveLine.vue'
 export default {
   components: {
     BmlCurveLine

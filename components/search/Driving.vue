@@ -3,9 +3,9 @@ div(v-show="panel")
 </template>
 
 <script>
-import {createPoint} from '@/base/factory.js'
-import {isPoint, getPosition} from '@/base/util.js'
-import commonMixin from '@/base/mixins/common.js'
+import {createPoint} from '../base/factory.js'
+import {isPoint, getPosition} from '../base/util.js'
+import commonMixin from '../base/mixins/common.js'
 
 export default {
   name: 'bm-driving',

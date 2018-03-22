@@ -1,7 +1,7 @@
 <script>
-import commonMixin from '@/base/mixins/common.js'
-import bindEvents from '@/base/bindEvent.js'
-import {createIcon, createSize} from '@/base/factory.js'
+import commonMixin from '../base/mixins/common.js'
+import bindEvents from '../base/bindEvent.js'
+import {createIcon, createSize} from '../base/factory.js'
 
 export default {
   name: 'bm-geolocation',

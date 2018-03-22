@@ -63,7 +63,7 @@ export default {
 </doc-preview>
 
 <script>
-import {BmlMarkerClusterer} from '@/index.js'
+import {BmlMarkerClusterer} from '../../../components/index.js'
 export default {
   data () {
     return {

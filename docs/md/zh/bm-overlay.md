@@ -163,7 +163,7 @@ export default {
 </template>
 
 <script>
-import MyOverlay from '@/MyOverlay.vue'
+import MyOverlay from '../../components/MyOverlay.vue'
 export default {
   data () {
     return {

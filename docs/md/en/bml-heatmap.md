@@ -53,7 +53,7 @@ export default {
 </baidu-map>
 
 <script>
-import BmlHeatmap from '@/extra/Heatmap.vue'
+import BmlHeatmap from '../../../components/extra/Heatmap.vue'
 
 export default {
   components: {

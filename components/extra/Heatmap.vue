@@ -1,5 +1,5 @@
 <script>
-import commonMixin from '@/base/mixins/common.js'
+import commonMixin from '../base/mixins/common.js'
 import Heatmap from 'bmaplib.heatmap'
 
 export default {
