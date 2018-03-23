@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import * as Vue from 'vue'
 
 import { Map } from './map'
 import { MapView } from './map-view'
