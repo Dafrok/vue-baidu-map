@@ -73,6 +73,25 @@ const routeMap = [
     ]
   },
   {
+    // 指南
+    path: 'guide',
+    component: CateView,
+    name: {
+      zh: '指南',
+      en: 'Guide'
+    },
+    children: [
+      {
+        path: 'painting',
+        component: 'guide-painting',
+        name: {
+          zh: '图形绘制',
+          en: 'Painting'
+        }
+      }
+    ]
+  },
+  {
     path: 'map',
     name: {
       zh: '地图',
