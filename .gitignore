@@ -42,4 +42,4 @@ dist
 # coverage
 coverage
 
-index.js
+/index.js
