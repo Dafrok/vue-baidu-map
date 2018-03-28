@@ -43,7 +43,7 @@ As ES module can't be run directly in most browsers, if importing component caus
 </template>
 
 <script>
-import {BaiduMap} from 'vue-baidu-map/components/map/Map.vue'
+import BaiduMap from 'vue-baidu-map/components/map/Map.vue'
 export default {
   components: {
     BaiduMap

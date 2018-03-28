@@ -43,7 +43,7 @@ Vue.use(BaiduMap, {
 </template>
 
 <script>
-import {BaiduMap} from 'vue-baidu-map/components/Map/Map.vue'
+import BaiduMap from 'vue-baidu-map/components/Map/Map.vue'
 export default {
   components: {
     BaiduMap
