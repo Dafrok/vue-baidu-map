@@ -1,6 +1,7 @@
-<template lang="pug">
-span
-  slot
+<template>
+<span>
+  <slot></slot>
+</span>
 </template>
 <script>
 export default {

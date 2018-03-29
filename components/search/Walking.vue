@@ -1,5 +1,7 @@
-<template lang="pug">
-div(v-show="panel")
+<template>
+<div v-show="panel">
+  <slot></slot>
+</div>
 </template>
 
 <script>

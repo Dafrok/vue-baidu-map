@@ -1,7 +1,9 @@
-<template lang="pug">
-div
-  div(v-if="!hasBmView", ref="view", style="width: 100%; height: 100%")
-  slot
+<template>
+<div>
+  <div v-if="!hasBmView" ref="view" style="width: 100%; height: 100%">
+  </div>
+  <slot></slot>
+</div>
 </template>
 
 <script>

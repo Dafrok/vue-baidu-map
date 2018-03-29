@@ -1,7 +1,9 @@
-<template lang="pug">
-span
-  slot
-    input
+<template>
+<span>
+  <slot>
+    <input>
+  </slot>
+</span>
 </template>
 
 <script>
