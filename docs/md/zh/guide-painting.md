@@ -2,7 +2,7 @@
 
 ## 说明
 
-由于 MVVM 数据驱动视图的特型，地图中的图形绘制不再需要使用 `BMapLib.DrawingManager` 等第三方工具库来实现。
+由于 MVVM 数据驱动视图的特性，地图中的图形绘制不再需要使用 `BMapLib.DrawingManager` 等第三方工具库来实现。
 
 ## 示例
 
