@@ -117,30 +117,32 @@ Baidu Map instance allows users to set a custom theme.
 
 ```html
 <template>
-  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" :mapStyle="{styleJson: styleJson}">
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" :mapStyle="mapStyle">
   </baidu-map>
 </template>
 <script>
 export default {
   data () {
     return {
-      styleJson: [
-        {
-          "featureType": "all",
-          "elementType": "geometry",
-          "stylers": {
-              "hue": "#007fff",
-              "saturation": 89
+      mapStyle: {
+        styleJson: [
+          {
+            "featureType": "all",
+            "elementType": "geometry",
+            "stylers": {
+                "hue": "#007fff",
+                "saturation": 89
+            }
+          },
+          {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": {
+                "color": "#ffffff"
+            }
           }
-        },
-        {
-          "featureType": "water",
-          "elementType": "all",
-          "stylers": {
-              "color": "#ffffff"
-          }
-        }
-      ]
+        ]
+      }
     }
   }
 }
@@ -149,7 +151,7 @@ export default {
 
 #### Preview
 <doc-preview>
-  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" :mapStyle="{styleJson: styleJson}">
+  <baidu-map class="map" :center="{lng: 116.404, lat: 39.915}" :zoom="15" :mapStyle="mapStyle">
   </baidu-map>
 </doc-preview>
 
@@ -257,23 +259,25 @@ export default {
         lat: 39.915
       },
       zoom: 15,
-      styleJson: [
-        {
-          "featureType": "all",
-          "elementType": "geometry",
-          "stylers": {
-              "hue": "#007fff",
-              "saturation": 89
+      mapStyle: {
+        styleJson: [
+          {
+            "featureType": "all",
+            "elementType": "geometry",
+            "stylers": {
+                "hue": "#007fff",
+                "saturation": 89
+            }
+          },
+          {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": {
+                "color": "#ffffff"
+            }
           }
-        },
-        {
-          "featureType": "water",
-          "elementType": "all",
-          "stylers": {
-              "color": "#ffffff"
-          }
-        }
-      ]
+        ]
+      }
     }
   },
   methods: {
