@@ -157,25 +157,28 @@ export default {
       const {map} = this
       map.setMapStyle({styleJson: val})
     },
-    'mapStyle.features' (val, oldVal) {
-        const {style, styleJson} = this.mapStyle
+    'mapStyle.features': {
+      handler (val, oldVal) {
+        const {map, style, styleJson} = this.mapStyle
         map.setMapStyle({
           styleJson,
           features: val,
           style
         })
+      },
+      deep: true
     },
     'mapStyle.style' (val, oldVal) {
-        const {features, styleJson} = this.mapStyle
-        map.setMapStyle({
-          styleJson,
-          features,
-          style: val
-        })
+      const {map, features, styleJson} = this.mapStyle
+      map.setMapStyle({
+        styleJson,
+        features,
+        style: val
+      })
     },
     'mapStyle.styleJson': {
       handler (val, oldVal) {
-        const {features, style} = this.mapStyle
+        const {map, features, style} = this.mapStyle
         map.setMapStyle({
           styleJson: val,
           features,
