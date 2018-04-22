@@ -1,4 +1,5 @@
 dist
 docs
+_docs
 coverage
 .babelrc
