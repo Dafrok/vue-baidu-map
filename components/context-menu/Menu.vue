@@ -16,11 +16,19 @@ export default {
   },
   mixins: [commonMixin('contextMenu')],
   methods: {
+    removeItem (item) {
+      if (item.originInstance) {
+        this.originInstance.removeItem(item.originInstance)
+      } else {
+        this.load()
+      }
+    },
     load () {
       const {width, BMap, map, $parent} = this
-      const menu = this.originInstance = new BMap.ContextMenu()
       const parent = this.parent = $parent.originInstance || map
-      for (let item of this.$children) {
+      parent.removeContextMenu(this.originInstance)
+      const menu = this.originInstance = new BMap.ContextMenu()
+      for (const item of this.$children) {
         if (item.seperator) {
           menu.addSeparator()
           continue
@@ -39,6 +47,7 @@ export default {
           iconUrl: item.iconUrl
         })
         item.disabled ? menuItem.disable() : menuItem.enable()
+        item.originInstance = menuItem
         menu.addItem(menuItem)
       }
       parent.addContextMenu(menu)

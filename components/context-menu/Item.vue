@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     reload () {
-      this.$parent.map && this.$parent.reload()
+      this.$parent.map && this.$parent.load()
     }
   },
   watch: {
@@ -53,7 +53,7 @@ export default {
     }
   },
   destroyed () {
-    this.reload()
+    this.$parent.removeItem(this)
   },
   mounted () {
     this.reload()
