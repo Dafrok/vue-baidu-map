@@ -16,13 +16,6 @@ export default {
   },
   mixins: [commonMixin('contextMenu')],
   methods: {
-    removeItem (item) {
-      if (item.originInstance) {
-        this.originInstance.removeItem(item.originInstance)
-      } else {
-        this.load()
-      }
-    },
     load () {
       const {width, BMap, map, $parent} = this
       const parent = this.parent = $parent.originInstance || map

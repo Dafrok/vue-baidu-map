@@ -53,7 +53,7 @@ export default {
     }
   },
   destroyed () {
-    this.$parent.removeItem(this)
+    this.reload()
   },
   mounted () {
     this.reload()
