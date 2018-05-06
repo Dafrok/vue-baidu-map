@@ -15,6 +15,14 @@ const types = {
 
 const getParent = $component => ($component.abstract || $component.$el === $component.$children[0].$el) ? getParent($component.$parent) : $component
 
+function destroyInstance () {
+  const {unload, renderByParent, $parent} = this
+  if (renderByParent) {
+    $parent.reload()
+  }
+  unload()
+}
+
 class Mixin {
   constructor (prop) {
     this.methods = {
@@ -65,13 +73,8 @@ class Mixin {
       const {ready} = this
       map ? ready() : $parent.$on('ready', ready)
     }
-    this.beforeDestroy = function () {
-      const {unload, renderByParent, $parent} = this
-      if (renderByParent) {
-        $parent.reload()
-      }
-      unload()
-    }
+    this.destroyed = destroyInstance
+    this.beforeDestroy = destroyInstance
   }
 }
 
