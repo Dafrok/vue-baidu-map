@@ -44,7 +44,7 @@ export default {
       this.originInstance = new BMap.NavigationControl({
         anchor: global[anchor],
         offset: offset && createSize(BMap, offset),
-        type,
+        type: global[type],
         showZoomInfo,
         enableGeolocation
       })
