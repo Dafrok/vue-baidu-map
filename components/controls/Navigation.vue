@@ -14,7 +14,7 @@ export default {
       type: Object
     },
     type: {
-      type: Object
+      type: String
     },
     showZoomInfo: {
       type: Boolean
