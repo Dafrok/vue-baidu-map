@@ -8,7 +8,7 @@
 |------|-----|------|----|
 |gridSize|Size||网格大小|
 |maxZoom|Number||聚合的最大缩放级别|
-|minClusterSize|Size||单个聚合的最小数量|
+|minClusterSize|Number||单个聚合的最小数量|
 |styles|Array[{url, size, opt_anchor, textColor, opt_textSize}]|[]|聚合的样式风格集合|
 |averageCenter|Boolean|false|单个聚合的落脚点是否是聚合内所有标记的平均中心|
 

@@ -8,7 +8,7 @@
 |------|-----|------|----|
 |gridSize|Size||The grid size of every clusters.|
 |maxZoom|Number||The maximum zoom level.|
-|minClusterSize|Size||The minimum number of a single cluster.|
+|minClusterSize|Number||The minimum number of a single cluster.|
 |styles|Array[{url, size, opt_anchor, textColor, opt_textSize}]|[]|Custom style of the clusters.|
 |averageCenter|Boolean|false|Whether a single cluster is the average center of all markers.|
 
