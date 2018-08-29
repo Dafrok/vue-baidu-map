@@ -20,13 +20,13 @@
 
 |事件名|参数|描述|
 |------|----|----|
-|click|event{type, target, point, pixel}|点击折线后会触发此事件|
-|dblclick|event{type, target, point, pixel}|双击折线后会触发此事件|
-|mousedown|event{type, target, point, pixel}|鼠标在折线上按下触发此事件|
-|mouseup|event{type, target, point, pixel}|鼠标在折线释放触发此事件|
-|mouseout|event{type, target, point, pixel}|鼠标离开折线时触发此事件|
-|mouseover|event{type, target, point, pixel}|当鼠标进入折线区域时会触发此事件|
-|remove|event{type, target}|移除折线时触发|
+|click|event{type, target, point, pixel}|点击标签后会触发此事件|
+|dblclick|event{type, target, point, pixel}|双击标签后会触发此事件|
+|mousedown|event{type, target, point, pixel}|鼠标在标签上按下触发此事件|
+|mouseup|event{type, target, point, pixel}|鼠标在标签释放触发此事件|
+|mouseout|event{type, target, point, pixel}|鼠标离开标签时触发此事件|
+|mouseover|event{type, target, point, pixel}|当鼠标进入标签区域时会触发此事件|
+|remove|event{type, target}|移除标签时触发|
 |lineupdate|event{type, target}|覆盖物的属性发生变化时触发|
 
 
