@@ -17,9 +17,9 @@
 
 |事件名|参数|描述|
 |------|----|----|
-|click|event{currentTarget, point, returnValue, target, type}|点击折线后会触发此事件|
-|mouseout|event{currentTarget, point, returnValue, target, type}|鼠标离开折线时触发此事件|
-|mouseover|event{currentTarget, point, returnValue, target, type}|当鼠标进入折线区域时会触发此事件|
+|click|event{currentTarget, point, returnValue, target, type}|点击坐标点后会触发此事件|
+|mouseout|event{currentTarget, point, returnValue, target, type}|鼠标离开坐标点时触发此事件|
+|mouseover|event{currentTarget, point, returnValue, target, type}|当鼠标进入坐标点区域时会触发此事件|
 
 ## 示例
 
