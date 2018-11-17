@@ -59,7 +59,7 @@ export default {
       this.originInstance.setStrokeOpacity(val)
     },
     strokeWeight (val) {
-      this.originInstance.setStrokeOpacity(val)
+      this.originInstance.setStrokeWeight(val)
     },
     strokeStyle (val) {
       this.originInstance.setStrokeStyle(val)
