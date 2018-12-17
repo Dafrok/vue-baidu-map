@@ -29,12 +29,14 @@ export default {
     load () {
       const {BMap, name} = this
       const bd = new BMap.Boundary()
-      if (data.boundaries.length) {
-            this.path = data.boundaries
-                            .reduce((pre, cur) => pre.length < cur.length ? cur : pre)
-                            .split(';')
-                            .map(point => (([lng, lat]) => ({lng, lat}))(point.split(',').map(p => +p)))
-      }
+      bd.get(name, data => {
+        if (data.boundaries.length) {
+              this.path = data.boundaries
+                              .reduce((pre, cur) => pre.length < cur.length ? cur : pre)
+                              .split(';')
+                              .map(point => (([lng, lat]) => ({lng, lat}))(point.split(',').map(p => +p)))
+        }
+      })
     }
   }
 }
