@@ -30,8 +30,12 @@ export default {
       const {BMap, name} = this
       const bd = new BMap.Boundary()
       bd.get(name, data => {
-        this.path = (data.boundaries[0] || []).split(';')
-          .map(point => (([lng, lat]) => ({lng, lat}))(point.split(',').map(p => +p)))
+        if (data.boundaries.length) {
+          this.path = data.boundaries
+            .reduce((pre, cur) => pre.length < cur.length ? cur : pre)
+            .split(';')
+            .map(point => (([lng, lat]) => ({lng, lat}))(point.split(',').map(p => +p)))
+        }
       })
     }
   }
