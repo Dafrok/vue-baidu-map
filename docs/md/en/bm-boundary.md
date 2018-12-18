@@ -45,8 +45,34 @@ The `BmBoundary` component rendered by and inherits from the` bm-polygon` compon
 #### Preview
 
 <doc-preview>
-  <baidu-map class="map" :center="{lng: 116.403765, lat: 39.914850}" :zoom="11">
-    <bm-boundary name="北京市海淀区" :strokeWeight="2" strokeColor="blue"></bm-boundary>
+<doc-preview>
+  <baidu-map class="map" :center="{lng: 109.49384, lat: 26.84204}" :zoom="11">
+    <bm-boundary :name="name" :strokeWeight="2" strokeColor="blue"></bm-boundary>
   </baidu-map>
+  <md-table>
+    <md-table-header>
+      <md-table-head>Boundary Name</md-table-head>
+    </md-table-header>
+    <md-table-body>
+      <md-table-row>
+        <md-table-cell>
+          <md-input-container>
+            <md-input v-model="name" md-inline></md-input>
+          </md-input-container>
+        </md-table-cell>
+      </md-table-row>
+    </md-table-body>
+  </md-table>
+</doc-preview>
 </doc-preview>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      name: '湖南省'
+    }
+  }
+}
+</script>
