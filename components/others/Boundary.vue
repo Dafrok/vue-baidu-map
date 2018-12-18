@@ -31,10 +31,10 @@ export default {
       const bd = new BMap.Boundary()
       bd.get(name, data => {
         if (data.boundaries.length) {
-              this.path = data.boundaries
-                              .reduce((pre, cur) => pre.length < cur.length ? cur : pre)
-                              .split(';')
-                              .map(point => (([lng, lat]) => ({lng, lat}))(point.split(',').map(p => +p)))
+          this.path = data.boundaries
+            .reduce((pre, cur) => pre.length < cur.length ? cur : pre)
+            .split(';')
+            .map(point => (([lng, lat]) => ({lng, lat}))(point.split(',').map(p => +p)))
         }
       })
     }
