@@ -12,7 +12,8 @@
     "dev": "webpack-dev-server --content-base docs --config ./build/webpack.docs.config.js --hot --inline",
     "deploy": "npm run build && npm run build:docs",
     "test": "karma start",
-    "lint": "eslint --ext .js,.vue src docs build"
+    "lint": "eslint --ext .js,.vue src docs build",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
