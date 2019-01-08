@@ -1,7 +1,7 @@
 <template>
 <span>
   <slot></slot>
-</span>  
+</span>
 </template>
 
 <script>
@@ -10,7 +10,7 @@ import {createSize} from '../base/factory.js'
 import commonMixin from '../base/mixins/common.js'
 
 export default {
-  name: 'bml-marker-cluseter',
+  name: 'bml-marker-clusterer',
   mixins: [commonMixin('markerClusterer')],
   props: {
     gridSize: {
