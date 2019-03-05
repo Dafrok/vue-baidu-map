@@ -19,7 +19,9 @@ export default {
     load () {
       const {width, BMap, map, $parent} = this
       const parent = this.parent = $parent.originInstance || map
-      parent.removeContextMenu(this.originInstance)
+      if (this.originInstance) {
+        parent.removeContextMenu(this.originInstance)
+      }
       const menu = this.originInstance = new BMap.ContextMenu()
       for (const item of this.$children) {
         if (item.seperator) {
