@@ -10,13 +10,13 @@
       :fill-color="fillColor"
       :mass-clear="massClear"
       :clicking="clicking"
-      @click="$emit('click')"
-      @dblclick="$emit('dblclick')"
-      @mousedown="$emit('mousedown')"
-      @mouseup="$emit('mouseup')"
-      @mouseout="$emit('mouseout')"
-      @mouseover="$emit('mouseover')"
-      @remove="$emit('remove')"
+      @click="$emit('click', $event)"
+      @dblclick="$emit('dblclick', $event)"
+      @mousedown="$emit('mousedown', $event)"
+      @mouseup="$emit('mouseup', $event)"
+      @mouseout="$emit('mouseout', $event)"
+      @mouseover="$emit('mouseover', $event)"
+      @remove="$emit('remove', $event)"
     />
   </div>
 </template>
