@@ -7,6 +7,8 @@
       :stroke-color="strokeColor"
       :stroke-weight="strokeWeight"
       :stroke-opacity="strokeOpacity"
+      :stroke-style="strokeStyle"
+      :fill-opacity="fillOpacity"
       :fill-color="fillColor"
       :mass-clear="massClear"
       :clicking="clicking"
