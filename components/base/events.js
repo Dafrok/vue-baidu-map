@@ -1,5 +1,5 @@
 export default {
-  'baidu-map': [
+  'bm-map': [
     'click',
     'dblclick',
     'rightclick',
@@ -108,7 +108,7 @@ export default {
     'click',
     'dblclick'
   ],
-  'bm-auto-complete': [
+  'bm-autocomplete': [
     'onconfirm',
     'onhighlight'
   ],
