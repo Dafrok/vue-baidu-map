@@ -65,9 +65,9 @@ export type Size = { width: number, height: number }
 export type Point = { lng: number, lat: number }
 
 /**
- * 此类用于设置polyline上的符号显示。 // TODO symbol
+ * 此类用于设置polyline上的符号显示。
  */
-// export type IconSequence = { symbol: MapSymbol, offset: string, repeat: string, fixedRotation: boolean }
+export type IconSequence = { symbol: any, offset: string, repeat: string, fixedRotation?: boolean }
 
 export interface IconOptions {
   anchor: Size
