@@ -34,10 +34,22 @@ export default {
     editing: {
       type: Boolean,
       default: false
+    },
+    icons: {
+      type: Array,
+      default () {
+        return []
+      }
     }
   },
   watch: {
     path: {
+      handler (val, oldVal) {
+        this.reload()
+      },
+      deep: true
+    },
+    icons: {
       handler (val, oldVal) {
         this.reload()
       },
@@ -67,7 +79,7 @@ export default {
   },
   methods: {
     load () {
-      const {BMap, map, path, strokeColor, strokeWeight, strokeOpacity, strokeStyle, editing, massClear, clicking} = this
+      const {BMap, map, path, strokeColor, strokeWeight, strokeOpacity, strokeStyle, editing, massClear, clicking, icons} = this
       const overlay = new BMap.Polyline(path.map(item => createPoint(BMap, {lng: item.lng, lat: item.lat})), {
         strokeColor,
         strokeWeight,
@@ -75,7 +87,8 @@ export default {
         strokeStyle,
         enableEditing: editing,
         enableMassClear: massClear,
-        enableClicking: clicking
+        enableClicking: clicking,
+        icons
       })
       this.originInstance = overlay
       map.addOverlay(overlay)

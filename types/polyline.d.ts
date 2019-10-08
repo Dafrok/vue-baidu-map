@@ -34,4 +34,9 @@ export declare class Polyline {
    * @default false
    */
   editing: boolean
+  /**
+   * 设置折线的点数组
+   * @default []
+   */
+  icons: Point[]
 }

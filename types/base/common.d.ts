@@ -1,29 +1,29 @@
 
 
-export type ControlAnchor = 
+export type ControlAnchor =
   'BMAP_ANCHOR_TOP_LEFT' // 控件将定位到地图的左上角
   | 'BMAP_ANCHOR_TOP_RIGHT' // 控件将定位到地图的右上角
   | 'BMAP_ANCHOR_BOTTOM_LEFT' // 控件将定位到地图的左下角
   | 'BMAP_ANCHOR_BOTTOM_RIGHT' // 控件将定位到地图的右下角
 
-export type MapType = 
-  'BMAP_NORMAL_MAP' // 此地图类型展示普通街道视图  
-  | 'BMAP_PERSPECTIVE_MAP' // 此地图类型展示透视图像视图  
-  | 'BMAP_SATELLITE_MAP' // 此地图类型展示卫星视图  
-  | 'BMAP_HYBRID_MAP' // 此地图类型展示卫星和路网的混合视图  
+export type MapType =
+  'BMAP_NORMAL_MAP' // 此地图类型展示普通街道视图
+  | 'BMAP_PERSPECTIVE_MAP' // 此地图类型展示透视图像视图
+  | 'BMAP_SATELLITE_MAP' // 此地图类型展示卫星视图
+  | 'BMAP_HYBRID_MAP' // 此地图类型展示卫星和路网的混合视图
 
-export type NavigationControlType = 
-  'BMAP_NAVIGATION_CONTROL_LARGE' // 标准的平移缩放控件（包括平移、缩放按钮和滑块）  
-  | 'BMAP_NAVIGATION_CONTROL_SMALL' // 仅包含平移和缩放按钮  
-  | 'BMAP_NAVIGATION_CONTROL_PAN' // 仅包含平移按钮  
+export type NavigationControlType =
+  'BMAP_NAVIGATION_CONTROL_LARGE' // 标准的平移缩放控件（包括平移、缩放按钮和滑块）
+  | 'BMAP_NAVIGATION_CONTROL_SMALL' // 仅包含平移和缩放按钮
+  | 'BMAP_NAVIGATION_CONTROL_PAN' // 仅包含平移按钮
   | 'BMAP_NAVIGATION_CONTROL_ZOOM' // 仅包含缩放按钮
 
-export type Animation = 
-  'BMAP_ANIMATION_DROP' // 坠落动画  
+export type Animation =
+  'BMAP_ANIMATION_DROP' // 坠落动画
   | 'BMAP_ANIMATION_BOUNCE' // 跳动动画
 
 export type ShapeType =
-  'BMAP_POINT_SHAPE_CIRCLE' // 圆形，为默认形状  
+  'BMAP_POINT_SHAPE_CIRCLE' // 圆形，为默认形状
   | 'BMAP_POINT_SHAPE_STAR' // 星形
   | 'BMAP_POINT_SHAPE_SQUARE' // 方形
   | 'BMAP_POINT_SHAPE_RHOMBUS' // 菱形
@@ -48,7 +48,7 @@ export type DrivingPolicy =
   'BMAP_DRIVING_POLICY_LEAST_TIME' // 最少时间
   | 'BMAP_DRIVING_POLICY_LEAST_DISTANCE' // 最短距离
   | 'BMAP_DRIVING_POLICY_AVOID_HIGHWAYS' // 避开高速
-  
+
 export type MapTypeControlType =
   'BMAP_MAPTYPE_CONTROL_HORIZONTAL' // 按钮水平方式展示，默认采用此类型展示
   | 'BMAP_MAPTYPE_CONTROL_DROPDOWN' // 按钮呈下拉列表方式展示
@@ -56,13 +56,18 @@ export type MapTypeControlType =
 
 /**
  * 以像素表示一个矩形区域的大小。
- */  
+ */
 export type Size = { width: number, height: number }
 
 /**
  * 表示一个地理坐标点
  */
 export type Point = { lng: number, lat: number }
+
+/**
+ * 此类用于设置polyline上的符号显示。 // TODO symbol
+ */
+// export type IconSequence = { symbol: MapSymbol, offset: string, repeat: string, fixedRotation: boolean }
 
 export interface IconOptions {
   anchor: Size
