@@ -1,7 +1,7 @@
 <script>
 import commonMixin from '../base/mixins/common.js'
 import bindEvents from '../base/bindEvent.js'
-import {createPoint} from '../base/factory.js'
+import {createPoint, createIconSequence} from '../base/factory.js'
 
 export default {
   name: 'bm-polyline',
@@ -77,9 +77,17 @@ export default {
       this.reload()
     }
   },
+  computed: {
+    iconSequences () {
+      const {BMap, icons} = this
+      return icons.map(item => {
+        return createIconSequence(BMap, item)
+      })
+    }
+  },
   methods: {
     load () {
-      const {BMap, map, path, strokeColor, strokeWeight, strokeOpacity, strokeStyle, editing, massClear, clicking, icons} = this
+      const {BMap, map, path, strokeColor, strokeWeight, strokeOpacity, strokeStyle, editing, massClear, clicking, iconSequences} = this
       const overlay = new BMap.Polyline(path.map(item => createPoint(BMap, {lng: item.lng, lat: item.lat})), {
         strokeColor,
         strokeWeight,
@@ -88,7 +96,7 @@ export default {
         enableEditing: editing,
         enableMassClear: massClear,
         enableClicking: clicking,
-        icons
+        icons: iconSequences
       })
       this.originInstance = overlay
       map.addOverlay(overlay)

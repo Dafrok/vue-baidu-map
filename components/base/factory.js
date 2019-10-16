@@ -37,3 +37,27 @@ export function createLabel (BMap, options = {}) {
     enableMassClear: opts.enableMassClear
   })
 }
+
+export function createSymbol (BMap, options = {}) {
+  const {path, opts} = options
+  return new BMap.Symbol(global[path] || path, {
+    anchor: opts.anchor && createSize(BMap, opts.anchor),
+    fillColor: opts.fillColor,
+    fillOpacity: opts.fillOpacity,
+    scale: opts.scale,
+    rotation: opts.rotation,
+    strokeColor: opts.strokeColor,
+    strokeOpacity: opts.strokeOpacity,
+    strokeWeight: opts.strokeWeight
+  })
+}
+
+export function createIconSequence (BMap, options = {}) {
+  const {symbol, offset, repeat, fixedRotation} = options
+  return new BMap.IconSequence(
+    symbol && createSymbol(BMap, symbol),
+    offset,
+    repeat,
+    fixedRotation
+  )
+}
