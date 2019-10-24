@@ -16,6 +16,9 @@ export default {
     ak: {
       type: String
     },
+    version:{
+      type:String
+    },
     center: {
       type: [Object, String]
     },
@@ -260,7 +263,7 @@ export default {
           }
           const $script = document.createElement('script')
           global.document.body.appendChild($script)
-          $script.src = `https://api.map.baidu.com/api?v=2.0&ak=${ak}&callback=_initBaiduMap`
+          $script.src = `https://api.map.baidu.com/api?v=${version}&ak=${ak}&callback=_initBaiduMap`
         })
         return global.BMap._preloader
       } else if (!global.BMap._preloader) {
