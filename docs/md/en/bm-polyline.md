@@ -15,6 +15,7 @@
 |massClear|Boolean|true|Whether remove this overlay or not when `map.clearOverlays` is called.|
 |editing|Boolean|false|Enable editing the polyline.|
 |clicking|Boolean|true|Whether to respond to a click event.|
+|icons|Array[IconSequence]|[]|The icons of the polyline.|
 
 ## Events
 

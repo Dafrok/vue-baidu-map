@@ -16,6 +16,7 @@
 |massClear|Boolean|true|是否在调用map.clearOverlays清除此覆盖物|
 |editing|Boolean|false|是否启用线编辑|
 |clicking|Boolean|true|是否响应点击事件|
+|icons|Array[IconSequence]|[]|贴合折线的图标|
 
 ## 事件
 

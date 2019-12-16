@@ -1,4 +1,4 @@
-import { Point } from './base/common'
+import { IconSequence, Point } from './base/common'
 
 export declare class Polyline {
   /**
@@ -34,4 +34,9 @@ export declare class Polyline {
    * @default false
    */
   editing: boolean
+  /**
+   * 设置折线的点数组
+   * @default []
+   */
+  icons: IconSequence[]
 }
