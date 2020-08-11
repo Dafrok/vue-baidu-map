@@ -15,7 +15,7 @@ script:
   - npm run lint
   # - npm test
   - npm run build:docs
-after_script:
+after_success:
   - cp ./docs/favicon.png ./dist/
   - cd dist
   - git init
