@@ -1,3 +1,4 @@
+import { BaiduMapComponent } from './base/component'
 import { Point, Size, Icon } from './base/common'
 
 interface LandmarkPois {
@@ -7,7 +8,7 @@ interface LandmarkPois {
   pauseTime: number
 }
 
-export declare class Lushu {
+export declare class Lushu extends BaiduMapComponent {
   /**
    * 是否行进
    * @default true

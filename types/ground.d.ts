@@ -1,6 +1,7 @@
+import { BaiduMapComponent } from './base/component'
 import { Bounds } from './base/common'
 
-export declare class Ground {
+export declare class Ground extends BaiduMapComponent {
   /**
    * 设置图层显示的矩形区域
    */

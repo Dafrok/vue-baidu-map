@@ -15,6 +15,7 @@
     "lint": "eslint --ext .js,.vue src docs build",
     "prepublishOnly": "npm run build"
   },
+  "types": "types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dafrok/vue-baidu-map.git"

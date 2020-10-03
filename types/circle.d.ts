@@ -1,6 +1,7 @@
+import { BaiduMapComponent } from './base/component'
 import { Point } from './base/common'
 
-export declare class Circle {
+export declare class Circle extends BaiduMapComponent {
   center: Point
   /**
    * 设置圆形的半径，单位为米

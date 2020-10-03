@@ -1,3 +1,4 @@
+import { BaiduMapComponent } from './base/component'
 
 type MapPanes = 
   'floatPane' // 信息窗口所在的容器  
@@ -8,7 +9,7 @@ type MapPanes =
   | 'markerShadow' // 标注阴影所在的容器
   | 'mapPane' // 折线、多边形等矢量图形所在的容器
 
-export declare class Overlay {
+export declare class Overlay extends BaiduMapComponent {
   /**
    * 自定义覆盖物所在容器。
    */

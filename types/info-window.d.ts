@@ -1,6 +1,7 @@
+import { BaiduMapComponent } from './base/component'
 import { Point, Size } from './base/common'
 
-export declare class InfoWindow {
+export declare class InfoWindow extends BaiduMapComponent {
   /**
    * @default false
    */

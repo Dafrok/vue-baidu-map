@@ -1,6 +1,7 @@
+import { BaiduMapComponent } from './base/component'
 import { Point } from './base/common'
 
-export declare class Polygon {
+export declare class Polygon extends BaiduMapComponent {
   /**
    * 设置多边型的点数组
    * @default []

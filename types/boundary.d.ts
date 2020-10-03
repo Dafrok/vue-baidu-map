@@ -1,5 +1,6 @@
+import { BaiduMapComponent } from './base/component'
 
-export declare class Boundary {
+export declare class Boundary extends BaiduMapComponent {
   /**
    * 行政区划名称
    */

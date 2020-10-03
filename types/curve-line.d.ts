@@ -1,6 +1,7 @@
+import { BaiduMapComponent } from './base/component'
 import { Point } from './base/common'
 
-export declare class CurveLine {
+export declare class CurveLine extends BaiduMapComponent {
   /**
    * 构成弧线的关键点
    */

@@ -1,6 +1,7 @@
+import { BaiduMapComponent } from './base/component'
 import { MapType, Point, MapStyle } from './base/common'
 
-export declare class Map {
+export declare class Map extends BaiduMapComponent {
   /**
    * 百度地图开发者平台申请的密钥，仅在局部注册组件时声明。
    */

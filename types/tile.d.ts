@@ -1,6 +1,7 @@
+import { BaiduMapComponent } from './base/component'
 import { Copyright } from './base/common'
 
-export declare class Tile {
+export declare class Tile extends BaiduMapComponent {
   /**
    * 是否使用了带有透明信息的PNG。
    * 由于IE6不支持PNG透明，因此需要特殊处理
