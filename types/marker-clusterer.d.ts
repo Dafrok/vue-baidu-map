@@ -1,6 +1,7 @@
+import { BaiduMapComponent } from './base/component'
 import { Point, Size, Icon, Animation } from './base/common'
 
-export declare class MarkerClusterer {
+export declare class MarkerClusterer extends BaiduMapComponent {
   /**
    * 网格大小
    */

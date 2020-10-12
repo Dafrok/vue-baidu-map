@@ -1,6 +1,7 @@
+import { BaiduMapComponent } from './base/component'
 import { Point } from './base/common'
 
-export declare class Bus {
+export declare class Bus extends BaiduMapComponent {
   /**
    * location表示检索区域，其类型可为空、坐标点或城市名称的字符串。当参数为空时，
    * 检索位置由当前地图中心点确定，且搜索结果的标注将自动加载到地图上，并支持调整地图视野层级；

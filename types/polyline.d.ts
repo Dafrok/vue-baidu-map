@@ -1,6 +1,7 @@
+import { BaiduMapComponent } from './base/component'
 import { IconSequence, Point } from './base/common'
 
-export declare class Polyline {
+export declare class Polyline extends BaiduMapComponent {
   /**
    * 设置折线的点数组
    * @default []

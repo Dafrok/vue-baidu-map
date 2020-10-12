@@ -1,6 +1,7 @@
+import { BaiduMapComponent } from './base/component'
 import { Point, ShapeType, SizeType } from './base/common'
 
-export declare class PointCollection {
+export declare class PointCollection extends BaiduMapComponent {
   /**
    * 设置要在地图上展示的点坐标集合
    * @default []

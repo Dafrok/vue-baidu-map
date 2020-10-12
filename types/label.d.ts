@@ -1,6 +1,7 @@
+import { BaiduMapComponent } from './base/component'
 import { Point, Size } from './base/common'
 
-export declare class Label {
+export declare class Label extends BaiduMapComponent {
   /**
    * 设置文本标注的内容。支持HTML
    */

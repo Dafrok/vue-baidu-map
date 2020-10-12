@@ -1,3 +1,4 @@
+import { BaiduMapComponent } from './base/component'
 import { Point, Size, Icon, Animation } from './base/common'
 
 interface Label {
@@ -9,7 +10,7 @@ interface Label {
   }
 }
 
-export declare class Marker {
+export declare class Marker extends BaiduMapComponent {
   /**
    * 标注的位置
    */

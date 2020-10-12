@@ -1,8 +1,9 @@
 import { Point } from "./base/common";
 import { Map } from "./map";
+import { BaiduMapComponent } from './base/component'
 
 
-export declare class AutoComplete {
+export declare class AutoComplete extends BaiduMapComponent {
   /**
    * 返回数据类型。两种设置方式，第一种为默认值（即设置值为空），将返回所有数据。
    * 如地图初始化为北京，在输入框中输入“小”，输入框下会出现包含“小”关键字的多种类型（如餐饮、地名等）的提示词条。
