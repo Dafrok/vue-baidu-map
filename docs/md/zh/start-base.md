@@ -157,8 +157,8 @@
 
 ```javascript
 {
-  sw: Number,
-  ne: Number
+  sw: Point,
+  ne: Point
 }
 ```
 

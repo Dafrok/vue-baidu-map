@@ -157,8 +157,8 @@ Describes a region of the map on the area surrounded by the southwest and northe
 
 ```javascript
 {
-  sw: Number,
-  ne: Number
+  sw: Point,
+  ne: Point
 }
 ```
 
