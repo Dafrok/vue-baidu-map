@@ -47,7 +47,7 @@
     "bulma": "^0.3.0",
     "chai": "^4.0.2",
     "css-loader": "^0.26.1",
-    "eslint": "^3.19.0",
+    "eslint": "^4.18.2",
     "eslint-config-standard": "^10.2.1",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-html": "^2.0.1",
