@@ -1,3 +1,4 @@
+
 <template>
 <div>
   <slot></slot>
@@ -47,6 +48,7 @@ export default {
         }
       }
       const overlay = new CustomOverlay()
+      overlay.__overLayoutKey__ = 'overlay'
       this.originInstance = overlay
       map.addOverlay(overlay)
     }

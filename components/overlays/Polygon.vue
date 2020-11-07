@@ -43,6 +43,10 @@ export default {
     editing: {
       type: Boolean,
       default: false
+    },
+    isBoundary: {
+      type: Boolean,
+      default: false
     }
   },
   watch: {
@@ -94,6 +98,8 @@ export default {
         enableMassClear: massClear,
         enableClicking: clicking
       })
+      // Boundary 范围不需要指定类别
+      if (!this.isBoundary) overlay.__overLayoutKey__ = 'polygon'
       this.originInstance = overlay
       map.addOverlay(overlay)
       bindEvents.call(this, overlay)

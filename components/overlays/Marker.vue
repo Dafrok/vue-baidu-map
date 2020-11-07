@@ -146,6 +146,7 @@ export default {
         shadow,
         title
       })
+      overlay.__overLayoutKey__ = 'marker'
       this.originInstance = overlay
       label && overlay && overlay.setLabel(createLabel(BMap, label))
       overlay.setTop(top)

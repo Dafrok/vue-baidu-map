@@ -156,6 +156,7 @@ export default {
         enableMassClear: massClear,
         enableClicking: clicking
       })
+      overlay.__overLayoutKey__ = 'circle'
       this.originInstance = overlay
       map.addOverlay(overlay)
       bindEvents.call(this, overlay)

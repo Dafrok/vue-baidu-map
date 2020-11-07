@@ -65,7 +65,8 @@ export default {
     'mouseout',
     'mouseover',
     'remove',
-    'lineupdate'
+    'lineupdate',
+    'rightclick'
   ],
   'bm-polygon': [
     'click',
@@ -75,7 +76,8 @@ export default {
     'mouseout',
     'mouseover',
     'remove',
-    'lineupdate'
+    'lineupdate',
+    'rightclick'
   ],
   'bm-circle': [
     'click',
@@ -85,7 +87,8 @@ export default {
     'mouseout',
     'mouseover',
     'remove',
-    'lineupdate'
+    'lineupdate',
+    'rightclick'
   ],
   'bm-label': [
     'click',
