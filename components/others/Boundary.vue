@@ -1,7 +1,6 @@
 <template>
   <div v-if="paths.length">
     <bm-polygon
-      isBoundary
       v-for="(path, index) of paths"
       :key="index"
       :path="path"
@@ -13,6 +12,7 @@
       :fill-color="fillColor"
       :mass-clear="massClear"
       :clicking="clicking"
+      overLayoutKey="boundary"
       @click="$emit('click', $event)"
       @dblclick="$emit('dblclick', $event)"
       @mousedown="$emit('mousedown', $event)"

@@ -44,9 +44,9 @@ export default {
       type: Boolean,
       default: false
     },
-    isBoundary: {
-      type: Boolean,
-      default: false
+    overLayoutKey: {
+      type: String,
+      default: 'polygon'
     }
   },
   watch: {
@@ -86,7 +86,7 @@ export default {
   },
   methods: {
     load () {
-      const {BMap, map, path, strokeColor, strokeWeight, strokeOpacity, strokeStyle, fillColor, fillOpacity, editing, massClear, clicking} = this
+      const {BMap, map, path, strokeColor, strokeWeight, strokeOpacity, strokeStyle, fillColor, fillOpacity, editing, massClear, clicking, overLayoutKey} = this
       const overlay = new BMap.Polygon(path.map(item => createPoint(BMap, {lng: item.lng, lat: item.lat})), {
         strokeColor,
         strokeWeight,
@@ -98,8 +98,7 @@ export default {
         enableMassClear: massClear,
         enableClicking: clicking
       })
-      // Boundary 范围不需要指定类别
-      if (!this.isBoundary) overlay.__overLayoutKey__ = 'polygon'
+      overlay.__overLayoutKey__ = overLayoutKey
       this.originInstance = overlay
       map.addOverlay(overlay)
       bindEvents.call(this, overlay)

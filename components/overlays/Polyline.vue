@@ -34,6 +34,10 @@ export default {
     editing: {
       type: Boolean,
       default: false
+    },
+    overLayoutKey: {
+      type: String,
+      default: 'polyline'
     }
   },
   watch: {
@@ -67,7 +71,7 @@ export default {
   },
   methods: {
     load () {
-      const {BMap, map, path, strokeColor, strokeWeight, strokeOpacity, strokeStyle, editing, massClear, clicking} = this
+      const {BMap, map, path, strokeColor, strokeWeight, strokeOpacity, strokeStyle, editing, massClear, clicking, overLayoutKey} = this
       const overlay = new BMap.Polyline(path.map(item => createPoint(BMap, {lng: item.lng, lat: item.lat})), {
         strokeColor,
         strokeWeight,
@@ -77,6 +81,7 @@ export default {
         enableMassClear: massClear,
         enableClicking: clicking
       })
+      overlay.__overLayoutKey__ = overLayoutKey
       this.originInstance = overlay
       map.addOverlay(overlay)
       bindEvents.call(this, overlay)

@@ -41,6 +41,10 @@ export default {
     editing: {
       type: Boolean,
       default: false
+    },
+    overLayoutKey: {
+      type: String,
+      default: 'circle'
     }
   },
   watch: {
@@ -144,7 +148,7 @@ export default {
       }, 0)
     },
     load () {
-      const {BMap, map, center, radius, strokeColor, strokeWeight, strokeOpacity, strokeStyle, fillColor, fillOpacity, editing, massClear, clicking, enableEditing, disableEditing, getEditingKey, editingKey} = this
+      const {BMap, map, center, radius, strokeColor, strokeWeight, strokeOpacity, strokeStyle, fillColor, fillOpacity, editing, massClear, clicking, enableEditing, disableEditing, getEditingKey, editingKey, overLayoutKey} = this
       const overlay = new BMap.Circle(createPoint(BMap, {lng: center.lng, lat: center.lat}), radius, {
         strokeColor,
         strokeWeight,
@@ -156,7 +160,7 @@ export default {
         enableMassClear: massClear,
         enableClicking: clicking
       })
-      overlay.__overLayoutKey__ = 'circle'
+      overlay.__overLayoutKey__ = overLayoutKey
       this.originInstance = overlay
       map.addOverlay(overlay)
       bindEvents.call(this, overlay)
