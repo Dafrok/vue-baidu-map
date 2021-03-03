@@ -67,7 +67,7 @@
     "material-design-icons": "^3.0.1",
     "mocha": "^3.4.2",
     "prismjs": "^1.6.0",
-    "pug": "^2.0.0-beta6",
+    "pug": "^3.0.1",
     "requirejs": "^2.3.3",
     "rmdir": "^1.2.0",
     "roboto-fontface": "^0.7.0",
