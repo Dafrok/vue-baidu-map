@@ -112,8 +112,13 @@ export default {
     rotation (val) {
       this.originInstance.setRotation(val)
     },
-    shadow (val) {
-      this.originInstance.setShadow(val)
+    shadow: {
+      deep: true,
+      handler (val) {
+        const {BMap, originInstance, rotation} = this
+        originInstance && originInstance.setShadow(createIcon(BMap, val))
+        rotation && originInstance && originInstance.setRotation(rotation)
+      }
     },
     title (val) {
       this.originInstance.setTitle(val)
