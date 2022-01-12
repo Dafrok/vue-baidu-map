@@ -92,6 +92,6 @@
     "bmaplib.heatmap": "^1.0.4",
     "bmaplib.lushu": "^1.0.7",
     "bmaplib.markerclusterer": "^1.0.13",
-    "markdown-it": "^8.4.0"
+    "markdown-it": "^12.3.2"
   }
 }
