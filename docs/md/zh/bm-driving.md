@@ -18,6 +18,7 @@
 |panel|Boolean|true|是否选展现检索结果面板。|
 |autoViewport|Boolean||检索结束后是否自动调整地图视野。|
 |selectFirstResult|Boolean||是否选择第一个检索结果。|
+|dragging|Boolean||是否支持起终点支持拖动|
 
 ## 事件
 
@@ -47,7 +48,8 @@
       startCity="北京"
       endCity="南京"
       :auto-viewport="true"
-      :waypoints="['呼和浩特', {lng: 112.53, lat: 37.87}, '陕西兵马俑']"></bm-driving>
+      :waypoints="['呼和浩特', {lng: 112.53, lat: 37.87}, '陕西兵马俑']"
+      :dragging="true"></bm-driving>
   </baidu-map>
 </template>
 ```
@@ -64,7 +66,8 @@
     startCity="北京"
     endCity="南京"
     :auto-viewport="true"
-    :waypoints="['呼和浩特', {lng: 112.53, lat: 37.87}, '陕西兵马俑']"></bm-driving>
+    :waypoints="['呼和浩特', {lng: 112.53, lat: 37.87}, '陕西兵马俑']"
+    :dragging="true"></bm-driving>
 </baidu-map>
 </doc-preview>
 

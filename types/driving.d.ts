@@ -45,4 +45,8 @@ export declare class Driving extends BaiduMapComponent {
    * 是否选择第一个检索结果。
    */
   selectFirstResult: boolean
+  /**
+   * 是否支持起终点支持拖动。
+   */
+   dragging: boolean
 }
