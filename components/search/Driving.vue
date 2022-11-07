@@ -43,6 +43,10 @@ export default {
     },
     selectFirstResult: {
       type: Boolean
+    },
+    dragging: {
+      type: Boolean,
+      default: false
     }
   },
   watch: {
@@ -135,7 +139,7 @@ export default {
     },
     load () {
       const instance = this
-      const {map, BMap, location, policy, selectFirstResult, autoViewport, highlightMode, search, start, end, startCity, endCity, waypoints, originInstance, getWaypoints} = this
+      const {map, BMap, location, policy, selectFirstResult, autoViewport, highlightMode, search, start, end, startCity, endCity, waypoints, originInstance, getWaypoints, dragging} = this
       const _location = location ? isPoint(location) ? createPoint(BMap, location) : location : map
       const route = this.originInstance = new BMap.DrivingRoute(_location, {
         renderOptions: {
@@ -144,7 +148,8 @@ export default {
           panel: this.$el,
           selectFirstResult,
           autoViewport,
-          highlightMode
+          highlightMode,
+          enableDragging: dragging
         },
         policy: global[policy],
         onSearchComplete (e) {
