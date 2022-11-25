@@ -16,6 +16,20 @@ export default {
     ak: {
       type: String
     },
+    /**
+     * 自定义的百度地图API地址，对于某些有私有化部署百度地图服务的公司，可以在这里制定api，不指定则默认使用“https://api.map.baidu.com/api”
+     */
+    apiSrc: {
+      type: String,
+      default: 'https://api.map.baidu.com/api',
+    },
+    /**
+     * 自定义版本号，默认为2.0
+     */
+    apiVersion: {
+      type: String,
+      default: '2.0',
+    },
     center: {
       type: [Object, String]
     },
@@ -260,7 +274,7 @@ export default {
           }
           const $script = document.createElement('script')
           global.document.body.appendChild($script)
-          $script.src = `https://api.map.baidu.com/api?v=2.0&ak=${ak}&callback=_initBaiduMap`
+          $script.src = `${this.apiSrc}?v=${this.apiVersion}&ak=${ak}&callback=_initBaiduMap`
         })
         return global.BMap._preloader
       } else if (!global.BMap._preloader) {
